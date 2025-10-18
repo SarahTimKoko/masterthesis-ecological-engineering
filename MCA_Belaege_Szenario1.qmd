@@ -3,6 +3,7 @@ title: "MCA_Belaege"
 format: html
 editor: visual
 ---
+
 # Libraries laden
 
 ```{r}
@@ -13,8 +14,6 @@ library(ggplot2)
 library(forcats)
 
 ```
-
-
 
 ```{r}
 
@@ -61,7 +60,6 @@ df_weights <- df_weights_raw %>%
   # Wählt nur die Spalten aus, die wir für die MCA brauchen.
   select(R_Spaltenname, Gewicht, group_id)
 ```
-
 
 ```{r}
 
@@ -143,7 +141,6 @@ ggsave("check_02_normierte_scores.png", plot = plot_normiert, width = 10, height
 
 
 ```
-
 
 # MCA
 
@@ -307,4 +304,3 @@ ggsave("mca_detail_gruppen.png", plot = plot_mca_stacked, width = 11, height = 7
 
 
 ```
-

@@ -6,23 +6,23 @@ The results of this project is automatically deployed to <https://sarahtimkoko.g
 
 ## Project Structure
 
-- `R/` - R scripts
-- `data/raw` - raw data
-- `data/tidy` - clean data
-- `output/` - figures, tables, results
-- `\_site/` - generated html site
-- `\_site.yml` - R Markdown site configuration
-- `renv.lock` - environment lock file
+-   `R/` - R scripts
+-   `data/raw` - raw data
+-   `data/tidy` - clean data
+-   `output/` - figures, tables, results
+-   `\_site/` - generated html site
+-   `\_site.yml` - R Markdown site configuration
+-   `renv.lock` - environment lock file
 
 ## Set up
 
-```r
+``` r
 install.packages("renv")
 ```
 
 ## Usage
 
-```r
+``` r
 # Load environment
 renv::restore()
 
@@ -33,6 +33,4 @@ source("R/utils.R")
 # Render page
 
 Rscript -e 'rmarkdown::render\_site()'
-
 ```
-
