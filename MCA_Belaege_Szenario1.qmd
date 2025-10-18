@@ -1,6 +1,11 @@
 ---
 title: "MCA Belaege Szenario 1"
-format: html
+author: "Sarah Pfeiffer"
+date: today
+format: 
+    html:
+        toc: true
+        code-fold: false
 
 ---
 
@@ -189,7 +194,7 @@ print(plot_normiert)
 ggsave("02_export/plots/check_02_normierte_scores.png", plot = plot_normiert, width = 10, height = 7)
 ```
 
-##.7. MCA Berechnung
+## 7. MCA Berechnung
 
 Ziel: Berechnung der besten geeigneten Beläge auf Basis Kriterienbewertung
 
@@ -215,7 +220,7 @@ print(df_mca_total)
 
 ```
 
-# Darstellung
+## 8. Darstellung
 
 Ziel: visualisierung der Ergebnisse 
 
@@ -284,7 +289,7 @@ ggsave("02_export/plots/mca_detail_gruppen.png", plot = plot_mca_stacked, width 
 
 ```
 
-## Ergebnisstabellen exportieren
+## 9. Ergebnisstabellen exportieren
 
 ```{r}
 

@@ -13,9 +13,9 @@ website:
         text: "MCA Beläge"
 format:
   html:
-    theme: cosmo
+    theme: darky
     toc: true
-    code-fold: true
+    code-fold: false
     code-tools: true
 
 execute:

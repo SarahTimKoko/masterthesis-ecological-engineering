@@ -1,10 +1,11 @@
 ---
 title: "Master Thesis Ecological Engineering"
+author: "Sarah Pfeiffer"
 date: today
 format: 
     html:
         toc: false
-        code-fold: true
+        code-fold: false
 ---
 
 # Welcome
