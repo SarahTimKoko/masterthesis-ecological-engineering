@@ -1,0 +1,12 @@
+﻿Kategorien-Ebene;Original Kriterium;R-Spaltenname;Gewicht (Gi​);Begründung (Bezug zur Forschung);;;;;;;;;;;;;;;;;;;;;
+1. Lebenszyklus & Konfliktvermeidung (Total: 0.45);;;;H1 & H2: Minimierung der Eingriffe, Langlebigkeit.;;;;;;;;;;;;;;;;;;;;;
+A. Langlebigkeit;Lange Lebensdauer der Materialien;LD_Jahre;0.25;Zentral für die Reduktion von Sanierungszyklen (H1).;;;;;;;;;;;;;;;;;;;;;
+B. Konfliktvermeidung;Wurzelkonflikt / Platzverhältnisse;Wurzel_Konflikt_Score;0.15;Vermeidung von Schäden und Not-Eingriffen (H2).;;;;;;;;;;;;;;;;;;;;;
+C. Flexibilität;Zusatzkapazitäten (Reserven);Reserven_Score;0.05;Vermeidung künftiger Eingriffe durch einfache Nachrüstung.;;;;;;;;;;;;;;;;;;;;;
+2. Ökologie & Ressourceneffizienz (Total: 0.35);;;;H3: Anwendung des Vermeidungsprinzips.;;;;;;;;;;;;;;;;;;;;;
+D. Kreislaufwirtschaft;Recyclingfähigkeit;Recycling_Quote_pct;0.20;Höchste Priorität im Ökologie-Block (Schonung Primärrohstoffe).;;;;;;;;;;;;;;;;;;;;;
+E. Energiebilanz;Geringer Energieaufwand;Graue_Energie_kWh;0.15;Reduktion der Primärenergie und CO2​ (Vermeidungsprinzip).;;;;;;;;;;;;;;;;;;;;;
+3. Betrieb & Wirtschaftlichkeit (Total: 0.20);;;;Ziel 4/5: Optimierung der Prozesse und Risikomanagement.;;;;;;;;;;;;;;;;;;;;;
+F. Wirtschaftlichkeit;Kosten-Nutzen (LCC);LCC_Kosten_CHF_a;0.10;Minimierung der Kosten über den gesamten Lebenszyklus.;;;;;;;;;;;;;;;;;;;;;
+G. Risikomanagement;Frühzeitige Schadenserkennung;Ueberwachung_Score;0.10;Vermeidung ungeplanter, teurer Not- und Reparatureingriffe.;;;;;;;;;;;;;;;;;;;;;
+GESAMT-SUMME;;;1.00;;;;;;;;;;;;;;;;;;;;;;

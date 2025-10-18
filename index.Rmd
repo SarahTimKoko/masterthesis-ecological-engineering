@@ -1,0 +1,37 @@
+---
+title: "My R Markdown Site"
+output: html_document
+---
+
+# Welcome
+
+This is my first R Markdown page!
+
+## Scatter Plot Example
+
+Here's a demonstration of creating a scatter plot using ggplot2:
+
+```{r scatter_plot}
+# Load required library
+library(ggplot2)
+
+# Create sample data
+set.seed(123)
+data <- data.frame(
+  x = rnorm(100),
+  y = rnorm(100),
+  group = factor(rep(c("A", "B"), each = 50))
+)
+
+# Create scatter plot
+ggplot(data, aes(x = x, y = y, color = group)) +
+  geom_point(size = 3, alpha = 0.7) +
+  theme_minimal() +
+  labs(
+    title = "Sample Scatter Plot",
+    x = "X Variable",
+    y = "Y Variable",
+    color = "Group"
+  ) +
+  scale_color_brewer(palette = "Set1")
+```

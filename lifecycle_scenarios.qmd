@@ -1,0 +1,165 @@
+---
+title: "lifecycle_scenarios"
+format: html
+editor: visual
+---
+
+# Packete Installieren
+
+```{r}
+library("tidyverse")
+library("ggplot2")
+
+```
+
+# Allgemeine Infos
+* Events = wann erneuert wird.
+* Lifelines = wie lange etwas „lebt“.
+* g1 = Zeitverlauf visualisiert (Gantt).
+* g2 = Anzahl Eingriffe zusammengezählt (Balkendiagramm)
+
+
+# Parameter definieren
+200 Jahre Zeithorizont
+
+```{r}
+horizon   <- 200                          # Betrachtungszeitraum in Jahren
+lifetimes <- c(
+  Asphalt         = 20,
+  Pflaster        = 40,
+  Chaussierung    = 15,
+  Abwasser        = 80,
+  Regenwasser     = 80,
+  Frischwasser    = 80,
+  Elektrorohre    = 80,
+  Elektroleitungen = 50,
+  Fernwaerme      = 60,
+  Telekom         = 50,
+  Baumart1        = 80,
+  Baumart2        = 100
+)  # Lebensdauer in Jahre pro Komponente
+
+
+```
+
+# Funktionen und Berechnungen 
+
+ggT--> grösster gemeinsamer Teiler (gcd)
+kgV--> kleinstes gemeinsames Vielfaches (kgV) aller Lebenszyklen
+
+
+
+
+```{r}
+gcd <- function(a, b) if (b == 0) abs(a) else gcd(b, a %% b)
+lcm_vec <- function(x) Reduce(function(a, b) a * b / gcd(a, b), as.integer(x))
+
+lifelines_one <- function(lifetime, horizon){
+  starts <- seq(0, horizon - lifetime, by = lifetime)
+  tibble(start = starts, end = pmin(starts + lifetime, horizon))
+}
+
+# Unkoordinierte Eingriffe (jede Komponente für sich)
+events_uncoordinated <- function(lifetimes, horizon){
+  tibble(component = names(lifetimes),
+         lifetime  = as.numeric(lifetimes)) |>
+    rowwise() |>
+    mutate(year = list(seq(lifetime, horizon, by = lifetime))) |>
+    unnest(year) |>
+    mutate(scenario = "Unkoordiniert") |>
+    ungroup()
+}
+
+# Voll-Koordiniert: alle Komponenten gleichzeitig
+events_fully_coordinated <- function(lifetimes, horizon){
+  kgv <- lcm_vec(lifetimes)
+  years <- if (kgv <= horizon) seq(kgv, horizon, by = kgv) else horizon
+  expand.grid(component = names(lifetimes), year = years) |> 
+    as_tibble() |>
+    mutate(scenario = "Koordiniert (alle)")
+}
+
+# Lebenslinien vorbereiten
+lifelines_df <- function(lifetimes, horizon, scenario){
+  map2_dfr(names(lifetimes), lifetimes, ~ lifelines_one(.y, horizon) |>
+             mutate(component = .x, cycle = row_number(), scenario = scenario))
+}
+
+# Daten erzeugen -----------------------------------------------
+events_un <- events_uncoordinated(lifetimes, horizon)
+lines_un  <- lifelines_df(lifetimes, horizon, "Unkoordiniert")
+
+events_co <- events_fully_coordinated(lifetimes, horizon)
+lines_co  <- lifelines_df(lifetimes, horizon, "Koordiniert (alle)")
+
+events_all <- bind_rows(events_un, events_co)
+lines_all  <- bind_rows(lines_un, lines_co)
+
+# Farbpalette
+comp_colors <- c(
+  Asphalt      = "#1b9e77",
+  Pflaster     = "#d95f02",
+  Chaussierung = "#7570b3",
+  Abwasser     = "#66a61e",
+  Regenwasser  = "#e7298a",
+  Frischwasser = "#e6ab02",
+  Elektro      = "#a6761d",
+  Fernwaerme   = "#666666",
+  Telekom      = "#1f78b4",
+  LSA          = "#b2df8a",
+  Baumart1     = "#fb9a99",
+  Baumart2     = "#cab2d6"
+)
+
+# 1) Lebenslinien-Plot ----------------------------------------
+g1 <- ggplot(lines_all, aes(x = start, xend = end, y = component, yend = component)) +
+  geom_segment(linewidth = 4, lineend = "butt") +
+  geom_vline(data = events_all,
+             aes(xintercept = year, color = component),
+             linetype = 3, linewidth = 0.6, alpha = 0.8, show.legend = TRUE) +
+  facet_wrap(~scenario, ncol = 1, scales = "free_y") +
+  scale_x_continuous(breaks = seq(0, horizon, by = 20), limits = c(0, horizon)) +
+  scale_color_manual(values = comp_colors) +
+  labs(x = "Jahre", y = "Komponente",
+       title = "Lebenslinien über 200 Jahre",
+       subtitle = "Unkoordiniert vs. voll koordinierte Erneuerung",
+       color = "Eingriff von") +
+  theme_minimal(base_size = 12)
+
+# 2) Kumulierte Eingriffe --------------------------------------
+counts <- events_all |>
+  count(scenario, component, name = "interventions") |>
+  group_by(scenario) |>
+  mutate(total = sum(interventions)) |>
+  ungroup()
+
+g2 <- ggplot(counts, aes(x = scenario, y = interventions, fill = component)) +
+  geom_col(position = "stack") +
+  geom_text(aes(label = interventions),
+            position = position_stack(vjust = 0.5),
+            color = "white", size = 3) +
+  scale_fill_manual(values = comp_colors) +
+  labs(x = NULL, y = "Anzahl Erneuerungen (200 Jahre)",
+       title = "Kumulierte Eingriffe nach Komponente und Szenario",
+       fill = "Komponente") +
+  theme_minimal(base_size = 12)
+
+# Balkendiagramm: Anzahl Eingriffe je Szenario
+g3 <- ggplot(counts, aes(x = scenario, y = interventions, fill = scenario)) +
+  geom_col(width = 0.5, show.legend = FALSE) +
+  geom_text(aes(label = interventions), vjust = -0.5, size = 5) +
+  scale_fill_manual(values = c("Unkoordiniert" = "grey60", "Koordiniert (alle)" = "steelblue")) +
+  labs(x = "", y = "Anzahl Eingriffe",
+       title = "Vergleich der Gesamtanzahl Eingriffe",
+       subtitle = "Über 200 Jahre im Viererfeld-Projekt") +
+  theme_minimal(base_size = 12)
+
+# Anzeigen
+print(g1)
+print(g2)
+print(g3)
+
+```
+
+
+```{r}

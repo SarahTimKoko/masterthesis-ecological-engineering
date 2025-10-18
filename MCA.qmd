@@ -1,0 +1,127 @@
+---
+title: "MCA"
+format: html
+editor: visual
+---
+
+Setup und Daten-Import
+
+```{r}
+
+# Masterarbeit: MCA_Berechnung.R
+# Führt die Multi-Kriterien-Analyse für alle Komponenten durch.
+# Autor: Dein Name
+# Datum: Aktuelles Datum
+
+library(tidyverse)
+library(readr)
+library(ggplot2)
+
+# --- 1. DATEN-IMPORT ---
+# ACHTUNG: Stelle sicher, dass diese Dateien im selben Ordner liegen!
+df_belaege <- read_csv("Rohdaten_Matrix_Belaege.csv")
+df_baeume <- read_csv("Rohdaten_Matrix_Baeume.csv")
+df_leitungen <- read_csv("Rohdaten_Matrix_Leitungen.csv")
+
+weights_belaege <- read_csv("Gewichtung_Belaege.csv")
+weights_baeume <- read_csv("Gewichtung_Baeume.csv")
+weights_leitungen <- read_csv("Gewichtung_Leitungen.csv")
+
+# --- 2. HILFSFUNKTIONEN ---
+
+prepare_weights <- function(df_weights, data_df) {
+  # Spaltennamen bereinigen und Gewicht und R-Spaltenname extrahieren (Annahme Spalte 2 & 5)
+  df_weights_clean <- df_weights
+  names(df_weights_clean)[2] <- "R_Spaltenname"
+  names(df_weights_clean)[5] <- "Gewicht"
+  
+  weighted_cols <- df_weights_clean$R_Spaltenname[df_weights_clean$Gewicht > 0]
+  weighted_cols <- intersect(weighted_cols, names(data_df))
+  
+  weights_vector <- df_weights_clean$Gewicht[match(weighted_cols, df_weights_clean$R_Spaltenname)]
+  names(weights_vector) <- weighted_cols
+  
+  return(weights_vector)
+}
+
+perform_mca <- function(data_df, weights_vector, id_col, ld_col = "LD_Jahre") {
+  weighted_cols <- names(weights_vector)
+  mca_data <- data_df
+  
+  # Daten in Zahlen umwandeln und Normieren
+  for (col_name in weighted_cols) {
+    if (!col_name %in% names(mca_data)) next
+    
+    mca_data[[col_name]] <- as.numeric(mca_data[[col_name]])
+    
+    is_min_target <- any(str_detect(col_name, c("_CHF", "_kg", "_kWh", "Kosten", "Graue", "CO2", "Initial_Kosten", "Unterhalt")))
+    
+    min_val <- min(mca_data[[col_name]], na.rm = TRUE)
+    max_val <- max(mca_data[[col_name]], na.rm = TRUE)
+    range_val <- max_val - min_val
+    norm_col <- paste0(col_name, "_N")
+    
+    if (range_val == 0) { mca_data[[norm_col]] <- 0 
+    } else if (is_min_target) {
+      mca_data[[norm_col]] <- (max_val - mca_data[[col_name]]) / range_val
+    } else {
+      mca_data[[norm_col]] <- (mca_data[[col_name]] - min_val) / range_val
+    }
+  }
+  
+  # Berechnung des Gesamtbewertungsindex 
+  mca_data$Gesamtindex <- 0
+  for (col_name in weighted_cols) {
+    if (!col_name %in% names(mca_data)) next
+    weight <- weights_vector[col_name]
+    norm_col <- paste0(col_name, "_N")
+    mca_data$Gesamtindex <- mca_data$Gesamtindex + (mca_data[[norm_col]] * weight)
+  }
+  
+  output_cols <- unique(c(id_col, "Gesamtindex", ld_col, "Belagsart", "Leitungstyp", "Rigolen_Volumen_m3"))
+  result_df <- mca_data[order(mca_data$Gesamtindex, decreasing = TRUE), output_cols[output_cols %in% names(mca_data)]]
+  return(result_df)
+}
+
+# --- 3. DATEN-VORBEREITUNG UND BERECHNUNG ---
+
+weights_belaege_v <- prepare_weights(weights_belaege, df_belaege)
+weights_baeume_v <- prepare_weights(weights_baeume, df_baeume)
+weights_leitungen_v <- prepare_weights(weights_leitungen, df_leitungen)
+
+# Filterung Bäume (Hard Filter)
+df_baeume_filtered <- df_baeume %>%
+  mutate(Filter_Stadtbaum = as.numeric(Filter_Stadtbaum)) %>% 
+  filter(Filter_Stadtbaum == 1) 
+
+# MCA-Berechnung
+result_belaege <- perform_mca(df_belaege, weights_belaege_v, "Option_ID") 
+result_baeume <- perform_mca(df_baeume_filtered, weights_baeume_v, "Baumart", ld_col = "Lebensdauer in Städten [a]")
+result_leitungen <- perform_mca(df_leitungen, weights_leitungen_v, "Option_ID") 
+
+# --- 4. SELEKTION UND OUTPUT ---
+
+# Beläge (Beste pro Kategorie)
+best_sicker <- result_belaege %>% filter(Belagsart == "Sickerbelag") %>% head(1)
+best_asphalt <- result_belaege %>% filter(Belagsart == "Asphalt") %>% head(1)
+best_pflaster <- result_belaege %>% filter(Belagsart == "Pflasterbelag") %>% head(1)
+best_belaege_combined <- bind_rows(best_sicker, best_asphalt, best_pflaster)
+
+# Bäume & Leitungen
+best_baum <- result_baeume %>% head(1)
+best_abwasser <- result_leitungen %>% filter(Leitungstyp == "Abwasserleitung") %>% head(1)
+
+# Speichern der Ergebnisse
+write_csv(result_belaege, "MCA_Ergebnis_Belaege.csv")
+write_csv(result_baeume, "MCA_Ergebnis_Baeume.csv")
+write_csv(result_leitungen, "MCA_Ergebnis_Leitungen.csv")
+
+cat("--- MCA ERFOLGREICH ABGESCHLOSSEN ---")
+cat("\nBeste Belagsoptionen pro Kategorie:\n"); print(best_belaege_combined %>% select(Option_ID, Belagsart, Gesamtindex, LD_Jahre))
+cat("\nBeste Baumoption:\n"); print(best_baum %>% select(Baumart, Gesamtindex, LD_Jahre = `Lebensdauer in Städten [a]`))
+cat("\nBeste Abwasserleitung:\n"); print(best_abwasser %>% select(Option_ID, Gesamtindex, LD_Jahre))
+
+```
+
+
+```{r}

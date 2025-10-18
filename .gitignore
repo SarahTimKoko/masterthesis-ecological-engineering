@@ -1,0 +1,18 @@
+# R environment / session files
+.Rhistory
+.RData
+.Rproj.user
+.Ruserdata
+
+# renv library
+renv/library/
+
+# Outputs and site files
+output/
+_site/
+*.html
+*.pdf
+
+# Mac / Windows hidden files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,303 @@
+---
+title: "lifecycle_scenarios_3"
+format: html
+editor: visual
+---
+
+Asphalt-Varianten (Konventionell, Sicker, Hell, Selbstheilend)
+
+Szenarien (unkoordiniert vs. koordiniert mit Bündelung – nur nach vorne; k = 0/2/5/10)
+
+KPIs (Eingriffe, Bauphasen, Coordination Score, Anteil_gebuendelt_pct, Baumfällungen)
+
+Scoring der Asphaltvarianten (Versickerung, Unterhalt, Energie/Umwelt) inkl. Gewichten
+
+Plots: Timeline-Dotplots + KPI-Kacheln
+
+Batch-Vergleich über alle Asphaltvarianten
+
+----------
+
+„Nur nach vorne“: Im koordinierten Szenario werden Ereignisse bis zu k Jahre vorgezogen, wenn ein bestehendes Baujahr in diesem Fenster liegt (keine Verschiebung nach hinten).
+
+Coordination_Score = Bauphasen_un ÷ Bauphasen_ko.
+
+Anteil_gebuendelt_pct = Anteil koord. Baujahre mit >1 gleichzeitigen Eingriffen.
+
+Baumfaellungen = End-of-Life-Ereignisse der Baumarten im Horizont (z. B. bei 200 J: Baumart1 80→ Jahre 80 & 160; Baumart2 100→ 100 & 200).
+
+
+```{r}
+# ============================================================
+# Szenarienmodell Viererfeld – Koordination & Asphalt-Scoring
+# ============================================================
+
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+library(purrr)
+library(tibble)
+
+# -------------------- Parameter -----------------------------
+horizon   <- 200                  # Betrachtungshorizont (Jahre)
+k_values  <- c(0, 2, 5, 10)       # Koordinationsfenster (nur nach vorne)
+tree_components <- c("Baumart1", "Baumart2")
+
+# -------------------- Asphalt-Varianten ---------------------
+# Lebensdauer-Annahmen (mittlere Praxiswerte aus deinen Spannen)
+asphalt_variants <- list(
+  "Konventionell"   = 20,  # 15–20 -> 20
+  "Sickerasphalt"   = 12,  # 8–15  -> 12
+  "Heller Asphalt"  = 20,  # ≈ Standard
+  "Selbstheilend"   = 35   # 30–40 -> 35
+)
+
+# Lifetimes-Vektor für eine gewählte Asphaltvariante
+make_lifetimes <- function(asphalt_variant = "Konventionell"){
+  stopifnot(asphalt_variant %in% names(asphalt_variants))
+  c(
+    Asphalt      = asphalt_variants[[asphalt_variant]],
+    Pflaster     = 40,
+    Chaussierung = 15,
+    Abwasser     = 80,
+    Regenwasser  = 80,
+    Frischwasser = 80,
+    Elektro      = 60,
+    Fernwaerme   = 40,
+    Telekom      = 50,
+    LSA          = 30,
+    Baumart1     = 80,
+    Baumart2     = 100
+  )
+}
+
+# Farben (fixe Palette je Komponente)
+make_colors <- function(lts){
+  default_cols <- c(
+    Asphalt      = "#1b9e77",
+    Pflaster     = "#d95f02",
+    Chaussierung = "#7570b3",
+    Abwasser     = "#66a61e",
+    Regenwasser  = "#e7298a",
+    Frischwasser = "#e6ab02",
+    Elektro      = "#a6761d",
+    Fernwaerme   = "#666666",
+    Telekom      = "#1f78b4",
+    LSA          = "#b2df8a",
+    Baumart1     = "#fb9a99",
+    Baumart2     = "#cab2d6"
+  )
+  default_cols[names(lts)]
+}
+
+# -------------------- Event-Generatoren ---------------------
+# Unkoordiniert: reine Wiederholungen je Lebensdauer
+events_uncoordinated <- function(lifetimes, horizon){
+  map2_dfr(names(lifetimes), lifetimes, ~{
+    years <- seq(.y, horizon, by = .y)
+    tibble(component = .x, year = years)
+  })
+}
+
+# Koordiniert: Bündelung mit Fenster k (nur nach vorne!)
+# Logik: Ereignisse können bis zu k Jahre VORgezogen werden,
+# indem sie an ein bestehendes "Baujahr" andocken, falls y - b <= k.
+events_coordinated <- function(lifetimes, horizon, k = 0){
+  # alle "natürlichen" Ereignisse erzeugen
+  base <- events_uncoordinated(lifetimes, horizon) |>
+    arrange(year)
+
+  bundle_years <- numeric(0)
+  out <- vector("list", nrow(base))
+  idx <- 1
+
+  for(i in seq_len(nrow(base))){
+    comp <- base$component[i]
+    y    <- base$year[i]
+
+    # existiert bereits ein Baujahr b, das maximal k Jahre vor y liegt?
+    # d.h. y - b <= k  und b <= y
+    candidates <- bundle_years[bundle_years <= y & (y - bundle_years) <= k]
+
+    if(length(candidates) > 0){
+      b <- max(candidates)     # an das jüngste passende Baujahr andocken (VORziehen)
+    } else {
+      b <- y                   # neues Baujahr starten
+      bundle_years <- c(bundle_years, b)
+    }
+    out[[idx]] <- tibble(component = comp, year = b)
+    idx <- idx + 1
+  }
+
+  bind_rows(out)
+}
+
+# Komplettes Szenario
+run_scenario <- function(lifetimes, horizon, k = 0){
+  E_un <- events_uncoordinated(lifetimes, horizon) %>% mutate(scenario = "Unkoordiniert")
+  E_k  <- events_coordinated(lifetimes, horizon, k) %>% mutate(scenario = "Koordiniert")
+  list(E_un = E_un, E_k = E_k)
+}
+
+# -------------------- KPIs ---------------------------------
+compute_kpis <- function(E_un, E_k){
+  eingriffe_un <- nrow(E_un)
+  eingriffe_ko <- nrow(E_k)  # identisch zu UN, Kontrolle
+  baujahre_un  <- n_distinct(E_un$year)
+  baujahre_ko  <- n_distinct(E_k$year)
+
+  # Anteil gebündelter Jahre: % der koord. Jahre mit >1 Maßnahme
+  share_rate <- E_k |>
+    count(year, name = "n_at_year") |>
+    summarise(rate = mean(n_at_year > 1)) |>
+    pull(rate)
+
+  # Baumfällungen = Anzahl End-of-Life-Ereignisse Baumart1/2 im Horizont
+  baumfaellungen <- E_un |>
+    filter(component %in% tree_components) |>
+    nrow()
+
+  tibble(
+    Eingriffe_un = eingriffe_un,
+    Eingriffe_ko = eingriffe_ko,
+    Bauphasen_un = baujahre_un,
+    Bauphasen_ko = baujahre_ko,
+    Coordination_Score = round(baujahre_un / baujahre_ko, 2),
+    Anteil_gebuendelt_pct = round(100 * share_rate, 1),
+    Baumfaellungen = baumfaellungen
+  )
+}
+
+# -------------------- Asphalt-Scoring (0–5) ----------------
+# Scores gemäß deiner qualitativen Bewertung
+asphalt_scoring <- tribble(
+  ~Variante,          ~Versickerung, ~Unterhalt, ~Energie_Umwelt, ~Begruendung_kurz,
+  "Konventionell",             0,           4,              3,  "dicht; pflegearm; Bitumen energieintensiv, gut rezyklierbar",
+  "Sickerasphalt",             5,           2,              2,  "sehr pervious; hoher Reinigungsbedarf; kurze Standzeit, Recycling limitiert",
+  "Heller Asphalt",            0,           4,              4,  "dicht; pflegearm; Hitzereduktion verbessert Bilanz ggü. Standard",
+  "Selbstheilend",             0,           5,              4,  "dicht; sehr wenige Eingriffe; hohe Herstellenergie, lange Standzeit"
+)
+
+# Gewichte (Summe = 1) – anpassbar
+weights <- c(Versickerung = 0.4, Unterhalt = 0.2, Energie_Umwelt = 0.4)
+
+asphalt_scoring <- asphalt_scoring |>
+  mutate(
+    Gesamt_score = Versickerung * weights["Versickerung"] +
+                   Unterhalt   * weights["Unterhalt"] +
+                   Energie_Umwelt * weights["Energie_Umwelt"]
+  ) |>
+  arrange(desc(Gesamt_score)) |>
+  mutate(Rang = row_number())
+
+# -------------------- Plots --------------------------------
+plot_timeline <- function(res, lifetimes, horizon, k){
+  comp_colors <- make_colors(lifetimes)
+
+  stats <- bind_rows(res$E_un, res$E_k) %>%
+    group_by(scenario) %>%
+    summarise(
+      Eingriffe = n(),
+      Bauphasen = n_distinct(year),
+      .groups = "drop"
+    )
+
+  # Baumfällungen (identisch un/ko)
+  baumfaellungen <- res$E_un %>% filter(component %in% tree_components) %>% nrow()
+
+  subt <- paste0(
+    "Unkoordiniert: ", stats$Eingriffe[stats$scenario=="Unkoordiniert"], " Eingriffe, ",
+    stats$Bauphasen[stats$scenario=="Unkoordiniert"], " Bauphasen | ",
+    "Koordiniert: ", stats$Eingriffe[stats$scenario=="Koordiniert"], " Eingriffe, ",
+    stats$Bauphasen[stats$scenario=="Koordiniert"], " Bauphasen",
+    "    ·    Baumfällungen (Horizont): ", baumfaellungen
+  )
+
+  bind_rows(res$E_un, res$E_k) %>%
+    mutate(component = factor(component, levels = names(lifetimes))) %>%
+    ggplot(aes(x = year, y = component, color = component)) +
+    geom_point(size = 2.6, alpha = 0.9) +
+    facet_wrap(~scenario, ncol = 2) +
+    scale_color_manual(values = comp_colors, guide = "none") +
+    scale_x_continuous(breaks = seq(0, horizon, by = 10), limits = c(0, horizon)) +
+    labs(
+      x = "Jahr", y = NULL,
+      title = paste0("Eingriffs-Timeline (Baujahre) – k=", k, " (nur Vorziehen)"),
+      subtitle = subt
+    ) +
+    theme_minimal(base_size = 12)
+}
+
+plot_kpis <- function(kpis){
+  kpis_long <- kpis %>%
+    select(Variante, Szenario, Bauphasen_un, Bauphasen_ko, Eingriffe_un, Eingriffe_ko,
+           Coordination_Score, Anteil_gebuendelt_pct, Baumfaellungen) %>%
+    pivot_longer(-c(Variante, Szenario), names_to = "KPI", values_to = "Wert")
+
+  ggplot(kpis_long, aes(x = Szenario, y = Wert, fill = Szenario)) +
+    geom_col(position = "dodge", width = 0.6, show.legend = FALSE) +
+    facet_grid(KPI ~ Variante, scales = "free_y") +
+    labs(
+      x = NULL, y = NULL,
+      title = "KPI-Vergleich nach Asphalt-Variante und Bündelungsfenster (±k, nur Vorziehen)",
+      subtitle = "Anteil_gebuendelt_pct = % der koordinierten Baujahre, in denen >1 Komponente gleichzeitig erneuert wird"
+    ) +
+    theme_minimal(base_size = 12)
+}
+
+plot_asphalt_scores <- function(tbl_scores){
+  ggplot(tbl_scores, aes(x = reorder(Variante, Gesamt_score),
+                         y = Gesamt_score, fill = Variante)) +
+    geom_col(width = 0.65, show.legend = FALSE) +
+    coord_flip() +
+    labs(
+      x = NULL, y = "Gesamtscore (0–5)",
+      title = "Bewertung der Asphaltvarianten",
+      subtitle = paste0(
+        "Gewichtungen – Versickerung: ", weights["Versickerung"],
+        " | Unterhalt: ", weights["Unterhalt"],
+        " | Energie/Umwelt: ", weights["Energie_Umwelt"]
+      )
+    ) +
+    theme_minimal(base_size = 12)
+}
+
+# -------------------- Läufe --------------------------------
+# A) Beispiel: eine aktive Variante setzen und anzeigen
+active_asphalt <- "Selbstheilend"
+lifetimes <- make_lifetimes(active_asphalt)
+
+# Ergebnisse für alle k für die aktive Variante
+results_active <- map(k_values, ~run_scenario(lifetimes, horizon, k = .x)) %>%
+  set_names(paste0("k=", k_values))
+
+# KPIs je k (aktive Variante)
+kpis_active <- imap_dfr(results_active, ~compute_kpis(.x$E_un, .x$E_k) %>%
+                          mutate(Szenario = .y, Variante = active_asphalt, .before = 1))
+
+# Plots (Beispiel k=5)
+print(plot_timeline(results_active[["k=5"]], lifetimes, horizon, k = 5))
+print(plot_kpis(kpis_active))
+
+# B) Batch: alle Asphaltvarianten × k
+kpis_all <- map_dfr(names(asphalt_variants), function(v){
+  lt <- make_lifetimes(v)
+  res_list <- map(k_values, ~run_scenario(lt, horizon, k = .x)) %>%
+    set_names(paste0("k=", k_values))
+  imap_dfr(res_list, ~compute_kpis(.x$E_un, .x$E_k) %>%
+             mutate(Szenario = .y, Variante = v, .before = 1))
+})
+
+# KPI-Plot für alle Varianten
+print(plot_kpis(kpis_all))
+
+# C) Scoring-Tabelle & Plot
+print(asphalt_scoring)
+print(plot_asphalt_scores(asphalt_scoring))
+
+
+
+
+
+```
+

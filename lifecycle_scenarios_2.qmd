@@ -1,0 +1,187 @@
+---
+title: "lifecycle_scenarios_2"
+format: html
+editor: visual
+---
+Die Bündelung mit einem Fenster von ±k Jahren bedeutet, dass geplante Erneuerungen von Leitungen und Belägen, die innerhalb von k Jahren auseinanderliegen, in einem gemeinsamen Baujahr zusammengeführt werden, wodurch bei k = 0 nur exakte Gleichzeitigkeit, bei k = 5 eine Bündelung innerhalb von fünf Jahren und bei k = 10 innerhalb von zehn Jahren erfolgt.
+
+k = 0 Jahre: Erneuerungen werden nur bei exakter zeitlicher Übereinstimmung gebündelt.
+
+k = 5 Jahre: Erneuerungen innerhalb eines Fensters von ±5 Jahren werden zusammengelegt, wodurch Eingriffe reduziert werden.
+
+k = 10 Jahre: Ein breiteres Bündelungsfenster erlaubt es, Massnahmen bis zu ±10 Jahre zu verschieben, wodurch maximale Koordination erreicht wird – allerdings mit potenziell grösseren Abweichungen vom optimalen Erneuerungszeitpunkt.
+
+Tabelle expected_events: 
+
+Coordination Score
+
+* Definition: Verhältnis der Bauphasen unkoordiniert ÷ koordiniert.
+* Interpretation:
+** Wert = 1 → keine Verbesserung durch Koordination (beide Szenarien haben gleich viele Baujahre).
+** Wert > 1 → Koordination reduziert die Anzahl Baujahre, also weniger Störungen im Quartier.
+
+Anteil_gebündelt_pct
+
+* Definition: Prozentsatz der Jahre im koordinierten Szenario, in denen mehr als eine Komponente gleichzeitig erneuert wird.
+* Interpretation:
+** 0 % → keine Bündelung, jede Komponente wird isoliert bearbeitet.
+** 100 % → alle Eingriffe fallen immer in die gleichen Jahre (maximale Bündelung).
+
+```{r}
+# ============================================================
+# Szenarienmodell Viererfeld – Koordination von Lebenszyklen
+# ============================================================
+
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+library(purrr)
+
+# -------------------- Parameter -----------------------------
+horizon <- 150   # Betrachtungshorizont in Jahren
+
+# Lebensdauern (Jahre) – Beispielwerte für alle Komponenten
+lifetimes <- c(
+  Asphalt = 20,
+  Pflaster = 40,
+  Chaussierung = 15,
+  Abwasser = 80,
+  Regenwasser = 80,
+  Frischwasser = 80,
+  Elektro = 60,
+  Fernwärme = 40,
+  Telekom = 50,
+  LSA = 50,
+  Baumart1 = 100,
+  Baumart2 = 80
+)
+
+comp_colors <- RColorBrewer::brewer.pal(n = length(lifetimes), name = "Paired")
+
+# -------------------- Hilfsfunktionen -----------------------
+
+# Erwartete Erneuerungsjahre unkoordiniert
+events_uncoordinated <- function(lifetimes, horizon){
+  map2_dfr(names(lifetimes), lifetimes, ~{
+    years <- seq(.y, horizon, by = .y)
+    tibble(component = .x, year = years)
+  })
+}
+
+# Erwartete Erneuerungsjahre koordiniert (mit Bündelung ±k, nur nach vorne)
+events_coordinated <- function(lifetimes, horizon, k = 0){
+  comps <- names(lifetimes)
+  events <- tibble(component = character(), year = numeric())
+  
+  for(comp in comps){
+    years <- seq(lifetimes[comp], horizon, by = lifetimes[comp])
+    for(y in years){
+      # Prüfen, ob es bereits einen Eingriff ±k Jahre davor gibt
+      match <- events %>% filter(abs(year - y) <= k)
+      if(nrow(match) > 0){
+        # auf den nächsten Eingriff nach vorne verschieben
+        new_y <- max(match$year)
+        events <- bind_rows(events, tibble(component = comp, year = new_y))
+      } else {
+        events <- bind_rows(events, tibble(component = comp, year = y))
+      }
+    }
+  }
+  events
+}
+
+# Wrapper: Ergebnisse für Szenario (unkoordiniert + koordiniert)
+scenario_results <- function(lifetimes, horizon, k = 0){
+  E_un <- events_uncoordinated(lifetimes, horizon) %>% mutate(scenario = "Unkoordiniert")
+  E_k  <- events_coordinated(lifetimes, horizon, k) %>% mutate(scenario = "Koordiniert")
+  list(E_un = E_un, E_k = E_k)
+}
+
+# KPI-Berechnung
+calc_kpis <- function(E_un, E_k, k){
+  tibble(
+    Szenario = paste0("k=", k),
+    Eingriffe_un = nrow(E_un),
+    Eingriffe_ko = nrow(E_k),
+    Bauphasen_un = n_distinct(E_un$year),
+    Bauphasen_ko = n_distinct(E_k$year),
+    Coordination_Score = nrow(E_un) / nrow(E_k),
+    Anteil_gebuendelt_pct = mean(table(E_k$year) > 1) * 100,
+    Baumfaellungen = sum(E_k$component %in% c("Baumart1", "Baumart2"))
+  )
+}
+
+# -------------------- Szenarien laufen lassen ----------------
+k_values <- c(0, 2, 5, 10)
+results <- map(k_values, ~scenario_results(lifetimes, horizon, k = .x)) %>%
+  set_names(paste0("k=", k_values))
+
+# KPIs für alle k
+kpis <- map2_dfr(results, k_values, ~calc_kpis(.x$E_un, .x$E_k, .y))
+
+# -------------------- Plots ---------------------------------
+
+# Timeline-Dotplot mit KPI-Infos
+plot_timeline <- function(res, k){
+  stats <- bind_rows(res$E_un, res$E_k) %>%
+    group_by(scenario) %>%
+    summarise(
+      Eingriffe = n(),
+      Bauphasen = n_distinct(year),
+      .groups = "drop"
+    )
+  
+  subt <- paste0(
+    "Unkoordiniert: ", stats$Eingriffe[stats$scenario=="Unkoordiniert"], " Eingriffe, ",
+    stats$Bauphasen[stats$scenario=="Unkoordiniert"], " Bauphasen | ",
+    "Koordiniert: ", stats$Eingriffe[stats$scenario=="Koordiniert"], " Eingriffe, ",
+    stats$Bauphasen[stats$scenario=="Koordiniert"], " Bauphasen"
+  )
+  
+  bind_rows(res$E_un, res$E_k) %>%
+    mutate(component = factor(component, levels = names(lifetimes))) %>%
+    ggplot(aes(x = year, y = component, color = component)) +
+    geom_point(size = 2.6, alpha = 0.9) +
+    facet_wrap(~scenario, ncol = 2) +
+    scale_color_manual(values = comp_colors, guide = "none") +
+    scale_x_continuous(breaks = seq(0, horizon, by = 10), limits = c(0, horizon)) +
+    labs(
+      x = "Jahr", y = NULL,
+      title = paste0("Eingriffs-Timeline (Baujahre) – k=", k),
+      subtitle = subt
+    ) +
+    theme_minimal(base_size = 12)
+}
+
+# KPI-Kacheln
+plot_kpis <- function(kpis){
+  kpis_long <- kpis %>%
+    select(Szenario, Bauphasen_un, Bauphasen_ko, Eingriffe_un, Eingriffe_ko,
+           Coordination_Score, Anteil_gebuendelt_pct, Baumfaellungen) %>%
+    pivot_longer(-Szenario, names_to = "KPI", values_to = "Wert")
+  
+  ggplot(kpis_long, aes(x = Szenario, y = Wert, fill = Szenario)) +
+    geom_col(position = "dodge", width = 0.6, show.legend = FALSE) +
+    facet_wrap(~KPI, scales = "free_y") +
+    labs(
+      x = NULL, y = NULL,
+      title = "KPI-Vergleich über Bündelungsfenster (±k Jahre)",
+      subtitle = "Anteil_gebuendelt_pct = % der Baujahre, in denen >1 Komponente gleichzeitig erneuert wird"
+    ) +
+    theme_minimal(base_size = 12)
+}
+
+# -------------------- Anzeigen ------------------------------
+# Print Timeline
+print(plot_timeline(results[["k=0"]], k = 0))
+print(plot_timeline(results[["k=2"]], k = 2))
+print(plot_timeline(results[["k=5"]], k = 5))
+print(plot_timeline(results[["k=10"]], k = 10))
+
+
+# KPI-Kacheln für alle k
+print(plot_kpis(kpis))
+
+
+```
+

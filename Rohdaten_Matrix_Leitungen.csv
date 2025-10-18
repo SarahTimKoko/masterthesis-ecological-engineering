@@ -1,0 +1,52 @@
+﻿Leitungstyp;Material;Unterteilung der Materialien;Lebensdauer;Materialkosten;Primärenergie [MJ/kg];CO2 Emissionen [kg CO2e/kg];Recycling [%];Überwachungsmassnahmen 
+Abwasser;PP (Polypropylen, Umhüllungsklasse 4);; ~ 100;niedrig;83.5;5.33;0;TV-Inspektion (Kamera), Dichtheitsprüfung (DIN EN 1610)
+Abwasser;PE 100 RC;; ~ 100;niedrig;85.6;5.29;0;TV-Inspektion (Kamera), Dichtheitsprüfung (DIN EN 1610)
+Regenwasser;PP (Polypropylen, Umhüllungsklasse 4);; ~ 100;niedrig;83.5;5.33;0;TV-Inspektion (Kamera), Dichtheitsprüfung (DIN EN 1610)
+Regenwasser;PE 100 RC;; ~ 100;niedrig;85.6;5.29;0;TV-Inspektion (Kamera), Dichtheitsprüfung (DIN EN 1610)
+Wasser;PE 100-RC;; ~ 100;niedrig;85.6;5.29;0;TV-Inspektion (Kamera), Dichtheitsprüfung (DIN EN 1610)
+Wasser;GGG (diktiles Gusseisen);; ~ 100;mittel;28.6;2.05;85-95;Lecküberwachung / Drucküberwachung / Rohrnetz-Überwachung (SCADA)
+Wasser;Stahlleitungen/FZM (ab DN 400);;50-100;hoch;25.3;2;80-90;Lecküberwachung / Drucküberwachung / Rohrnetz-Überwachung (SCADA)
+Fernwärme;Stahlrohr + PUR-Isolation + PE-Mantel (KMR);; ~ 50;sehr hoch;215;13.97;60-70;Feuchte-/Leckwarnsystem im KMR-Mantel (Überwachungsdraht)
+;;Stahlrohr;;;25.3;2;80-90;
+;;PUR-Isolation;;;104.1;6.68;0;
+;;PE-Mantel (KMR);;;85.6;5.29;0;
+Elektro;HDPE-Rohrblöcke mit Kupfer- / Aluminiumkabeln;; ~ 50;hoch;287.1;17.68;50-60;Strom-, Isolations- und Temperaturüberwachung
+;;HDPE-Rohrblöcke;;;85.6;5.29;0;
+;;Kupferkabel;;;44;3.43;60-80;
+;;Aluminiumkabel;;;157.5;8.96;50-70;
+Telekommunikation;Glasfaserkabel mit Kunststoffabschirmung in Rohrverbänden;;25-40;niedrig;102;6.1;0;Signal-/Dämpfungsüberwachung über OTDR
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+Hard Facts;Dimensionierung nach Leistungsbedarf, Einhaltung von Abständen, Normen und Gesetze;;;;;;;
+;;;;;;;;
+;Berücksichtigung enger Platzverhältnisse;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+Herleitung;;;;;;;;
+Material;Die heute gängigen Materialien für Werkleitungen wurden auf Grundlage der Fachliteratur (Horlacher & Helbig 2018, 2024), der ewb-Werknormen sowie ergänzender Fachinterviews bestimmt.;;;;;;;
+Lebensdauer;Die Lebensdauern der Rohrleitungssysteme wurden gemäss Horlacher & Helbig (2018, 2024) angesetzt. Kunststoffrohre aus PE 100 RC und PP erreichen bei ordnungsgemäßer Verlegung und Beanspruchung eine Nutzungsdauer von rund 100 Jahren. Für duktiles Gusseisen und Stahlleitungen werden in Abhängigkeit von Korrosionsschutz und Umhüllung vergleichbare oder leicht niedrigere Werte angegeben (50–100 Jahre). Fernwärme-Kunststoffmantelrohre (KMR) weisen aufgrund thermischer Beanspruchung eine typische Lebensdauer von etwa 50 Jahren auf.;;;;;;;
+Materialkosten;Die Kosteneinstufung der Werkstoffe erfolgte nach Horlacher & Helbig (2018, 2024). Kunststoffrohre (PE, PP) weisen die geringsten Materialkosten auf, während metallische und verbundisolierte Systeme (GGG, Stahl, KMR) höhere bis sehr hohe Kosten verursachen. Glasfaser- und Elektroleitungssysteme liegen kostenmäßig im mittleren Bereich.;;;;;;;
+Primärenergie [MJ/kg];Die Werte zur Primärenergie stammen aus der KBOB-Datenbank 2009/1:2022 (v7.0). Sie geben den gesamten Energieaufwand der Materialherstellung „cradle-to-gate“ in MJ/kg an;;;;;;;
+CO2 Emissionen [kg CO2e/kg];Die CO₂-Äquivalente (kg CO₂e/kg) basieren ebenfalls auf der KBOB-Datenbank und beschreiben das Treibhauspotenzial der Produktion jedes Werkstoffs;;;;;;;
+Recycling;;;;;;;;
+Überwachung;"Für alle Werkleitungstypen sind entsprechend ihrer technischen und betrieblichen Anforderungen Überwachungsmaßnahmen vorgesehen. Während im Abwasserbereich visuelle und physische Kontrollen (TV-Inspektion, Dichtheitsprüfung) dominieren, erfolgt die Überwachung von Druck-, Fernwärme-, Elektro- und Kommunikationsleitungen zunehmend kontinuierlich und sensorbasiert (z. B. Druck-, Feuchte- oder Signalüberwachung).
+
+(Quellen: Horlacher & Helbig 2018/2024; VSA-Richtlinien; SVGW W4/W12; AGFW FW 401; ewb Werknormen)";;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;

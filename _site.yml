@@ -1,0 +1,13 @@
+name: "My R Site"
+output_dir: "_site"
+navbar:
+  title: "My Site"
+  left:
+    - text: "Home"
+      href: index.html
+    - text: "Report"
+      href: report.html
+output:
+  html_document:
+    theme: flatly
+    toc: true

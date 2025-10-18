@@ -1,0 +1,48 @@
+﻿Kategorie;Konstante;;Einheit;Bemerkung;Quelle
+Strassenabschnitt;Länge;40;m;Debritstrasse, Standort 1;Eigene Auswahl
+Strassenabschnitt;Breite;14;m;Debritstrasse, Standort 1;Entwurfs Pläne vom 28.10.2024 - Stadt Bern Direktion Tiebau, Verkehr und Stadtgrün
+Bäume;Breite Baumrigole;3;m;Debritstrasse, Standort 1;Entwurfs Pläne vom 28.10.2024 - Stadt Bern Direktion Tiebau, Verkehr und Stadtgrün
+Bäume;Anzahl;6;Anzahl;Debritstrasse, Standort 1;Entwurfs Pläne vom 28.10.2024 - Stadt Bern Direktion Tiebau, Verkehr und Stadtgrün
+Bäume;Wurzelraumvolumen;36;m3;Debritstrasse, Standort 1;Tiefbauamt, Stadt Bern (2024), Bäume über Werkleitungen- öffentliche Abwasserleitungen
+Bäume;Baumrubengrundfläche;>10;m2;Allgemeine Vorgaben;Tiefbauamt, Stadt Bern (2024), Bäume über Werkleitungen- öffentliche Abwasserleitungen
+Bäume;Baumgrubengrundfläche;24;m2;Allgemeine Vorgaben;Tiefbauamt, Stadt Bern (2024), Bäume über Werkleitungen- öffentliche Abwasserleitungen
+Bäume;Baumgruben Tiefe;1.4 m;m;Allgemeine Vorgaben;Entwurfs Pläne vom 28.10.2024 - Stadt Bern Direktion Tiebau, Verkehr und Stadtgrün
+Bäume;Abstand Baummitte zu Abwasser;2.25;m;Allgemeine Vorgaben;Tiefbauamt, Stadt Bern (2024), Bäume über Werkleitungen- öffentliche Abwasserleitungen
+Leitungen;Horizontaler Abstand Wasser <-> Abwasser;>=1.0;m;Allgemeine Vorgaben;Tiefbauamt, Stadt Bern (2023, Vereinbarung Näherbau Siedlungsentwässerung für Fernwärmeprojekte
+Leitungen;Vertikaler Abstand Wasser <-> Abwasser;>=0.2;m;Allgemeine Vorgaben;Tiefbauamt, Stadt Bern (2023, Vereinbarung Näherbau Siedlungsentwässerung für Fernwärmeprojekte
+Leitungen;Horizontaler Abstand Abwasser <-> Fernwärme;>=1.5;m;Allgemeine Vorgaben;Tiefbauamt, Stadt Bern (2023, Vereinbarung Näherbau Siedlungsentwässerung für Fernwärmeprojekte
+;Vertikaler Abstand Abwasser <-> Fernwärme;>=0.3;m;Allgemeine Vorgaben;Tiefbauamt, Stadt Bern (2023, Vereinbarung Näherbau Siedlungsentwässerung für Fernwärmeprojekte
+Leitungen;Horizontaler Abstand Wasser <-> Fernwärme;>=0.4-0.6;m;Allgemeine Vorgaben;ewb 2024, Werknormen Gas und Wasser 
+Leitungen;Vertikaler Abstand Wasser <-> Fernwärme;>=0.3;m;Allgemeine Vorgaben;Tiefbauamt, Stadt Bern (2023, Vereinbarung Näherbau Siedlungsentwässerung für Fernwärmeprojekte, ewb 2024, Werknormen Gas und Wasser 
+Leitungen;Horizontaler Abstand Wasser <->Elektro;>=0.3;m;Allgemeine Vorgaben;ewb 2024, Werknormen Gas und Wasser 
+Leitungen;Vertikaler Abstand Wasser <-> Elektro;>=0.2;m;Allgemeine Vorgaben;ewb 2024, Werknormen Gas und Wasser 
+Leitungen;Tiefe Abwasser;2.3;m;;SV 11, Querschnitt Debritstrasse M1:200, Projektunterlagen von BSB + Partner Ingenieure und Planer AG, Freigabe durch Yannick Meier ewb, Gesamtprojektleiter ewb Viererfeld, 01.10.2025
+;Tiefe Regenwasser;1.8;m;;SV 11, Querschnitt Debritstrasse M1:200, Projektunterlagen von BSB + Partner Ingenieure und Planer AG, Freigabe durch Yannick Meier ewb, Gesamtprojektleiter ewb Viererfeld, 01.10.2026
+;Tiefe Wasser;1.5;m;;SV 11, Querschnitt Debritstrasse M1:200, Projektunterlagen von BSB + Partner Ingenieure und Planer AG, Freigabe durch Yannick Meier ewb, Gesamtprojektleiter ewb Viererfeld, 01.10.2027
+;Tiefe Fernwärme;1.3;m;;SV 11, Querschnitt Debritstrasse M1:200, Projektunterlagen von BSB + Partner Ingenieure und Planer AG, Freigabe durch Yannick Meier ewb, Gesamtprojektleiter ewb Viererfeld, 01.10.2028
+;Tiefe Elektro;0.8;m;;SV 11, Querschnitt Debritstrasse M1:200, Projektunterlagen von BSB + Partner Ingenieure und Planer AG, Freigabe durch Yannick Meier ewb, Gesamtprojektleiter ewb Viererfeld, 01.10.2029
+Leitungen;Nutzungsdauer Abwasserleitungen;80;a;Technische Nutzungsdauer Abwasserleitungen nach Tiefbauamt Bern;Tiefbauamt, Stadt Bern (2024), Bäume über Werkleitungen- öffentliche Abwasserleitungen
+;;;;;
+Beläge;Breite Sickerbelag ;2;m;leicht befahrbar (ev. für Lieferungen), wird nicht gross genutzt, nicht unbedingt barrierefrei;Eigene Auswahl auf Basis Entwurfs Pläne vom 28.10.2024 - Stadt Bern Direktion Tiebau, Verkehr und Stadtgrün
+Beläge;Breite Aphaltbelag;4;m;gering befahrene Strasse (Velo, Lieferdienste, Abfallbewirtschaftung), Rollkomfort (barrierefrei);Eigene Auswahl auf Basis Entwurfs Pläne vom 28.10.2024 - Stadt Bern Direktion Tiebau, Verkehr und Stadtgrün
+Beläge;Breite Pflasterbelag;2;m;für Fussgänger, sollte barrierefrei sein;Eigene Auswahl auf Basis Entwurfs Pläne vom 28.10.2024 - Stadt Bern Direktion Tiebau, Verkehr und Stadtgrün
+Beläge;Breite Sickeral;;;;
+;;;;;
+;;;;;
+;;;;;
+;;;;;
+;;;;;
+;;;;;
+;;;;;
+;;;;;
+;;;;;
+;;;;;
+;;;;;
+;;;;;
+;;;;;
+;;;;;
+;;;;;
+;;;;;
+;;;;;
+;;;;;
+;;;;;

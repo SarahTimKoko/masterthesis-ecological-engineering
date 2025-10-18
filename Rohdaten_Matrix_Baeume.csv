@@ -1,0 +1,76 @@
+﻿Baumkategorie;Baumart;Lebensdauer in Städte [a];Klimaangepasst;geeignet als Stadtbaum;Kronenbreite (ausgewachsen) [m];Biodiversitäts Index [1-5];Multifunktionalität - Kühlung [°C];Multifunktionalität - CO2​-Bindung [kg CO₂/a];Multifunktionalität - Regenwasserspeicherung [l/d];Grösse Baumrigolen [m³];Pflegeaufwand;
+Grosskronige Arten;Quercus robur (Stieleiche);80-120;hoch;bedingt;15-20;4.7;4-6; ~ 50;250-400;38;mässig;
+Grosskronige Arten;Quercus petraea (Traubeneiche);80-120;hoch;gut;15-20;4.4;4-6; ~ 50;250-400;38;mässig;
+Grosskronige Arten;Tilia tomentosa (Silber-Linde);70-90;sehr hoch;sehr gut;15-20;3.6;4-6;  ~50;250-400;38;gering;
+Mittelgrosse Arten;Tilia cordata (Winterlinde);60-100;hoch;sehr gut;12-15;4.4;2-4; ~ 40;150-250;38;gering;
+Grosskronige Arten;Tilia × europaea ‘Pallida’ (Kaiser-Linde, Holländische Linde);80-120;hoch;sehr gut;12-18;4;4-6; ~ 50;250-400;38;mässig;
+Mittelgrosse Arten;Liquidambar styraciflua ‘Worplesdon’ (Amberbaum);60-80;hoch;bedingt;8-10;1.4;2-4; ~ 40;120-250;24;gering;
+Kleine Arten;Ulmus ‘New Horizon’ (Hybridulme);80-120;sehr hoch;sehr gut;5-6;2.3;1-2; ~ 25;80-150;13;mässig;
+Kleine Arten;Acer campestre Elsrijk (Feldahorn);60-100;sehr hoch;sehr gut;4-6;4.3;1-2; ~ 25;80-150;13;gering;
+Mittelgrosse Arten;Celtis australis (Südlicher Zürgelbaum);70-100;sehr hoch;gut;10-15;2.2;2-4; ~ 40;150-250;38;gering;
+Mittelgrosse Arten;Ostrya carpinifolia (Hopfenbuche);60-100;sehr hoch;sehr gut;8-12;2.4;2-4; ~ 40;150-250;24;gering;
+Kleine Arten;Sorbus aria ‘Magnifica’ (Mehlbeere);60-90;hoch;sehr gut;4-7;4.1;1-2; ~ 25;80-150;13;gering;
+Kleine Arten;Sorbus latifolia ‘Henk Vink’ (Breitblättrige Mehlbeere);70-100;hoch;gut;4-6;3.1;1-2; ~ 25;80-150;13;gering;
+Mittelgrosse Arten;Gleditsia triacanthos ‘Skyline’ (dornenlos);60-100;sehr hoch;sehr gut;10-15;1.9;2-4; ~ 40;150-250;38;gering;
+Mittelgrosse Arten;Juglans nigra (Schwarznuss);70-100;mittel;bedingt;8-10;2.7;2-4; ~ 40;150-250;24;hoch;
+Kleine Arten;Prunus padus ‘Schloss Tiefurt’ (Traubenkirsche);50-80;mittel;gut;6-8;4.1;1-2; ~ 25;80-150;13;hoch;
+Kleine Arten;Malus tschonoskii (Woll-Apfel);60-100;mittel;bedingt;2-4;2.8;1-2; ~ 25;80-150;6;hoch;
+Mittelgrosse Arten;Corylus colurna (Baumhasel);60-100;sehr hoch;sehr gut;8-12;2.4;2-4;~ 40;150-250;24;gering;
+;;;;;;;;;;;;
+;;;;;;;;;;;;
+Herleitung;;;;;;;;;;;;
+Lebensdauer;Zur Abschätzung der urbanen Lebensdauer wurden die potenziellen Artenlebensdauern der gewählten Bäume gemäss Roloff (2019) in langlebig, mittelalt, kurzlebig eingeteilt und mit einem Reduktionsfaktor von 0.25 (für Stadtbäume) nach Blaser et al. (2023) korrigiert, basierend auf den Befunden von Roloff (2013) und der Fachplanung Stadtbäume Zürich (2022);;;;;;;;;;;
+Klimaangepasst;"Die Bewertung der Klimaanpassungsfähigkeit erfolgte auf Basis der
+GALK-Strassenbaumliste (2022/2024), die die Eignung der Arten unter urbanen Stressbedingungen systematisch erfasst.
+Ergänzend wurden physiologische Merkmale wie Trockenstressresistenz, Transpirationskontrolle und Wurzelsystem nach
+Roloff (2013) berücksichtigt.
+Für die Verifizierung der lokalen Standorttauglichkeit diente die Fachplanung Stadtbäume Zürich (2022).
+Arten mit hoher Trockenheits- und Hitzeverträglichkeit sowie stabiler Stadtvitalität wurden als hoch bis sehr hoch klimaangepasst eingestuft.";;;;;;;;;;;
+geeignet als Stadtbaum;"Die Eignung der Baumarten als Stadtbäume wurde auf Basis der
+GALK-Strassenbaumliste (2022 / 2024) beurteilt, die Vitalität, Anpassungsfähigkeit und Strukturverträglichkeit unter städtischen Bedingungen dokumentiert.
+Ergänzend erfolgte eine lokale Plausibilisierung anhand der Fachplanung Stadtbäume Zürich (2022)
+und der Strassenbaumliste Grünstadt Zürich (2021).
+Arten mit stabiler Vitalität, geringer Wurzelkonfliktneigung und hoher Stressresistenz wurden als gut bis sehr gut geeignet eingestuft.";;;;;;;;;;;
+Kronenbreite [m];Die Kronenbreiten wurden primär aus der GALK-Strassenbaumliste (Angabe „Breite“ je Art/Sorte) übernommen. Ergänzend wurden sortenspezifische Steckbriefe und Praxiswerte aus „Zukunftsbäume für die Stadt“ (GALK 2022) herangezogen und mit der Strassenbaumliste der Stadt Zürich (2021) abgeglichen.;;;;;;;;;;;
+Biodiversitäts Index [1-5];Abgeleitet von Sandra Gloor & Margrith Göldi Hofbauer (2018), Stadt Zürich (2021): „Biodiversitätsindex 2021 für Stadtbäume im Klimawandel“, Forschungsbericht von Grün Stadt Zürich & WSL (2021);;;;;;;;;;;
+Multifunktionalität - Kühlung [°C] ;"Die Kühlleistung der Baumarten wurde auf Basis der globalen Meta-Analyse von Li et al. (2024) kategorisiert und mit lokalen empirischen Messungen aus Schubert (2021), Blaser et al. (2023) und der Fachplanung Stadtbäume Zürich (2022) verifiziert.
+Für mitteleuropäische Stadtstrukturen (LCZ 4–6) beträgt die typische Temperaturabsenkung unter grosskronigen Baumarten –4 bis –6 °C, bei mittelgrossen Arten –2 bis –4 °C, und bei kleineren Arten –1 bis –2 °C.
+Die Einstufung berücksichtigt sowohl Transpirationseigenschaften als auch Kronenvolumen und Blattdichte.";;;;;;;;;;;
+Multifunktionalität - CO2​-Bindung [kg CO₂/a];"Die jährliche CO₂-Bindungsleistung der Baumarten wurde gemäss Blaser et al. (2023) und Gardi et al. (2016) abgeschätzt und nach Kronenbreite skaliert.
+Der Referenzwert für einen ausgewachsenen, grosskronigen Stadtbaum beträgt rund 50 kg CO₂ pro Jahr (Blaser et al. 2023).
+Mittlere Arten wurden entsprechend ihrem Kronenvolumen mit 30–45 kg CO₂/a, kleinere Obst- und Waldbaumarten mit 20–35 kg CO₂/a bewertet.
+Diese Werte liegen im Bereich internationaler Vergleichsstudien (Nowak & Crane 2002) und basieren auf realen Stadtbaumdaten aus Bern (Gardi et al. 2016)";;;;;;;;;;;
+Multifunktionalität - Regenwasserspeicherung [l/d];"Die Regenwasserspeicherung wurde aus empirischen Messungen und praxisbezogenen Richtwerten abgeleitet.
+Rahman et al. (2019) bestimmten für städtische Bäume in München tägliche Transpirationsraten zwischen 13 l/Tag (Robinia pseudoacacia) und 50 l/Tag (Tilia cordata).
+Diese Werte entsprechen gut den Schweizer Referenzwerten von Schubert (2021), die eine Wasseraufnahme von rund 30 m³ pro Baum und Jahr (≈ 80–400 l/Tag) angibt.
+Zur Kategorisierung der Baumarten wurde die Kronengrösse und Verdunstungsleistung berücksichtigt:
+
+Grosskronige Arten: 250–400 l H₂O/Tag
+Mittelgrosse Arten: 150–250 l H₂O/Tag
+Kleine Arten: 80–150 l H₂O/Tag
+
+Diese Spanne berücksichtigt sowohl Transpiration als auch Interzeption (Niederschlagsrückhalt auf der Krone).";;;;;;;;;;;
+Grösse Baumrigolen [m³];"Das erforderliche Bodenvorlumen der Baumrigolen wurde in Anlehnung an die Guidelines on Soil Volume for Urban Trees (GLTMS, 2015) festgelegt.
+Je nach Kronendurchmesser gelten folgende Richtwerte:
+Small < 5 m → 6 m³, Medium 5–8 m → 13 m³, Large 8–12 m → 24 m³, Very large > 12 m → 38 m³";;;;;;;;;;;
+Pflegeaufwand;"Der Pflegeaufwand wurde anhand artspezifischer Merkmale nach Roloff (2013) beurteilt.
+Entscheidende Faktoren sind das Kompartimentierungsvermögen, das Austriebsverhalten, die Kronenarchitektur und die Holzanatomie (vgl. Roloff 2013, S. 128–135).
+Arten mit hoher Abschottungsleistung und stabilem Kronenaufbau gelten als pflegeleicht,
+während ringporige oder austriebsfreudige Arten als pflegeintensiver eingestuft werden.";;;;;;;;;;;
+;;;;;;;;;;;;
+;;;;;;;;;;;;
+;;;;;;;;;;;;
+;;;;;;;;;;;;
+;;;;;;;;;;;;
+;;;;;;;;;;;;
+;;;;;;;;;;;;
+;;;;;;;;;;;;
+;;;;;;;;;;;;
+;;;;;;;;;;;;
+;;;;;;;;;;;;
+;;;;;;;;;;;;
+;;;;;;;;;;;;
+;;;;;;;;;;;;
+;;;;;;;;;;;;
+;;;;;;;;;;;;
+;;;;;;;;;;;;

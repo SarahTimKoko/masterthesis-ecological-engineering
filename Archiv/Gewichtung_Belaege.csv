@@ -1,0 +1,17 @@
+﻿Kategorien-Ebene;Original Kriterium (Deutsch);R-Spaltenname;Gewicht (Gi​);Begründung (Bezug zur Forschung)
+1. Ökologie & Kreislaufwirtschaft (Total: 0.40);;;;H3: Anwendung des Vermeidungsprinzips (Ressourcenschonung).
+A. Materialbilanz;CO2​-Emissionen;CO2_Aeq_kg;0.12;Reduktion von CO2​-Emissionen (Primäreffekt).
+;Graue Energie;Graue_Energie_kWh;0.1;Vermeidung von hohem Energieaufwand bei der Herstellung.
+B. Kreislauf;Recyclingfähigkeit;Recycling_Quote_pct;0.1;Schonung von Primärrohstoffen.
+;Lokale Materialien;Lokal_Anteil_pct;0.08;Vermeidung von Transportemissionen.
+2. Langlebigkeit & Flexibilität (Total: 0.35);;;;H1 & H2: Vermeidung unnötiger Sanierungen und Komplikationen.
+C. Langlebigkeit;Lange Lebensdauer;LD_Jahre;0.25;Maximierung der Nutzungsdauer, Reduktion von Sanierungszyklen (H1).
+D. Flexibilität;Modulare Erneuerbarkeit;Modular_Score;0.05;Effizienz bei Reparaturen/Sanierung (Vermeidung von Vollsanierungen).
+;Koordinierbare Eingriffe m. Leitungen/Bäumen;Synergie_Score;0.05;Minimierung von Kollisionen und Aufwand bei Leitungsarbeiten (H2).
+3. Funktionserhalt & Betrieb (Total: 0.25);;;;Multifunktionalität (Schwammstadt) und Betriebswirtschaft.
+E. Schwammstadt-Funktion;Hohe Versickerungs-Leistung [ψ];Versickerung_Score;0.08;Schlüsselkriterium der Schwammstadt-Funktionalität.
+F. Komfort & Betrieb;Multifunktionalität (Kühlung/Albedo);Albedo_Score;0.05;Beitrag zur Hitzeminderung.
+;Barrierefreiheit;Barrierefrei_Score;0.04;Gewährleistung der sozialen Funktionalität.
+;Befahrbarkeit;Befahrbarkeit_Score;0.03;Gewährleistung der statischen/dynamischen Nutzung.
+;Unterhaltskosten;Unterhalt_CHF_a;0.05;Operative Kosten über den Lebenszyklus.
+GESAMT-SUMME (12 gewichtete Kriterien);;;1;
