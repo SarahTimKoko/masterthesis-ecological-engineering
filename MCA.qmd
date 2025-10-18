@@ -122,6 +122,3 @@ cat("\nBeste Baumoption:\n"); print(best_baum %>% select(Baumart, Gesamtindex, L
 cat("\nBeste Abwasserleitung:\n"); print(best_abwasser %>% select(Option_ID, Gesamtindex, LD_Jahre))
 
 ```
-
-
-```{r}

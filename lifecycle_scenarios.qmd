@@ -13,13 +13,14 @@ library("ggplot2")
 ```
 
 # Allgemeine Infos
-* Events = wann erneuert wird.
-* Lifelines = wie lange etwas „lebt“.
-* g1 = Zeitverlauf visualisiert (Gantt).
-* g2 = Anzahl Eingriffe zusammengezählt (Balkendiagramm)
 
+-   Events = wann erneuert wird.
+-   Lifelines = wie lange etwas „lebt“.
+-   g1 = Zeitverlauf visualisiert (Gantt).
+-   g2 = Anzahl Eingriffe zusammengezählt (Balkendiagramm)
 
 # Parameter definieren
+
 200 Jahre Zeithorizont
 
 ```{r}
@@ -42,13 +43,9 @@ lifetimes <- c(
 
 ```
 
-# Funktionen und Berechnungen 
+# Funktionen und Berechnungen
 
-ggT--> grösster gemeinsamer Teiler (gcd)
-kgV--> kleinstes gemeinsames Vielfaches (kgV) aller Lebenszyklen
-
-
-
+ggT--\> grösster gemeinsamer Teiler (gcd) kgV--\> kleinstes gemeinsames Vielfaches (kgV) aller Lebenszyklen
 
 ```{r}
 gcd <- function(a, b) if (b == 0) abs(a) else gcd(b, a %% b)
@@ -160,6 +157,3 @@ print(g2)
 print(g3)
 
 ```
-
-
-```{r}
