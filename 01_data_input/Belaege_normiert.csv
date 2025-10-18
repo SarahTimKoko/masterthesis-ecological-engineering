@@ -1,4 +1,4 @@
-﻿Belagskategorie;Option_ID;lebensdauer;versickerung;oberflaechentemperatur;befahrbarkeit;kosten;unterhalt;co2;graueEnergie;recyclingfaehigkeit;lokaleMaterialien;modulareErneuerbarkeit;barrierefreiheit
+﻿belagskategorie;option;lebensdauer;versickerung;oberflaechentemperatur;befahrbarkeit;kosten;unterhalt;co2;graueEnergie;recyclingfaehigkeit;lokaleMaterialien;modulareErneuerbarkeit;barrierefreiheit
 Asphalt;Recyclingasphalt;22.5;1;58.4;5;100;4;45;295;0.3;1;1;5
 Asphalt;Sickerasphalt;27.5;0.35;55.5;3;100;6.5;60;345;0.2;0.65;1;3
 Asphalt;Heller Asphalt;17.5;1;54;5;110;4;50;331;0.3;0.6;1;5

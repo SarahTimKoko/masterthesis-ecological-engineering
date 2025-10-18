@@ -1,10 +1,14 @@
 ---
-title: "MCA_Belaege"
+title: "MCA Belaege Szenario 1"
 format: html
-editor: visual
+
 ---
 
-# Libraries laden
+# Masterarbeit: MCA-Pipeline Beläge - Szenario 1
+
+Ziel: Wahl der besten Beläge nach MCA Berechnung
+
+## Libraries laden
 
 ```{r}
 
@@ -12,97 +16,94 @@ library(tidyverse)
 library(readr)
 library(ggplot2)
 library(forcats)
+library(ggplot2)
 
 ```
 
+## 1. Daten Importieren
+
+Einlesen der Rohdaten für Belaege und Gewichtung für Szenario 1
+
 ```{r}
 
-# Masterarbeit: MCA-Pipeline Beläge (Validation Run)
-# Ziel: MCA-Berechnung, Join der Daten mit Gewichten und Wide-to-Long-Transformation.
-
-# --- 1. DATEN-IMPORT ---
-# Ziel: Sauberes Einlesen der CSV-Dateien.
-
-
-# Liest die Rohdaten ein.
-# Wir nutzen read_delim, da die Spalten mit Semikolon (;) getrennt sind
-# und Dezimalzahlen Punkte (.) verwenden (Standardeinstellung).
 df_belaege_raw <- read_delim(
-  "Belaege_normiert.csv",
+  "01_data_input/Belaege_normiert.csv",
   delim = ";"
 )
 
 # Liest die Gewichtungen ein (gleiches Format).
 df_weights_raw <- read_delim(
-  "Belaege_Gewichtung.csv",
+  "01_data_input/Belaege_Gewichtung_Szenario1.csv",
   delim = ";"
 )
 ```
 
+## 2. Daten bereinigen und harmonisieren
+
+Ziel: Daten für den Join und die MCA vorbereiten.
+
 ```{r}
-# --- 2. DATENHARMONISIERUNG ---
-# Ziel: Daten für den Join und die MCA vorbereiten.
 
 # A. Bereinigung der Rohdaten (Belaege_normiert.csv)
 # Wählt die Identifikations-Spalten (ID) zuerst aus
 # und nimmt alle restlichen Spalten (everything()) danach.
 df_belaege <- df_belaege_raw %>%
-  select(Belagskategorie, Option_ID, everything()) 
+  select(belagskategorie, option, everything()) 
 
 # B. Bereinigung der Gewichtungen (Belaege_Gewichtung.csv)
 df_weights <- df_weights_raw %>%
   # Benennt die Spalten um, damit sie im nächsten Schritt
-  # einfach gejoined (R_Spaltenname) und berechnet (Gewicht) werden können.
+  # einfach gejoined (bewertungskategorie) und berechnet (Gewicht) werden können.
   rename(
-    R_Spaltenname = criterion_id,
-    Gewicht = total_weight
+    bewertungskategorie = criterion_id,
+    gewicht = total_weight
   ) %>%
   # Wählt nur die Spalten aus, die wir für die MCA brauchen.
-  select(R_Spaltenname, Gewicht, group_id)
+  select(bewertungskategorie, gewicht, group_id)
 ```
 
+## 3. Datentransformation
+
+Ziel: Transformation der Tabelle df_belaege von Wide-to-Long und anschliessende Verknüpfung mit der Tabelle df_weights über join
+
 ```{r}
-
-# --- 3. WIDE-TO-LONG-TRANSFORMATION und JOIN ---
-
 # 3.1 Wide-to-Long: Transformation der Rohdaten
 # Ziel: Die Kriterien-Spalten (z.B. lebensdauer, kosten) in Zeilen umwandeln,
-# damit wir sie mit der Gewichtungstabelle verknüpfen können.
+# damit sie mit der Gewichtungstabelle verknüpft werden kann.
+
 df_belaege_long <- df_belaege %>%
   pivot_longer(
     # Wählt alle Spalten von 'lebensdauer' bis 'barrierefreiheit' aus.
     cols = c(lebensdauer:barrierefreiheit), 
-    # Die Spaltennamen (z.B. "lebensdauer") kommen in die neue Spalte "R_Spaltenname".
-    names_to = "R_Spaltenname", 
-    # Die Werte (z.B. 22.5) kommen in die neue Spalte "Wert".
-    values_to = "Wert"
+    # Die Spaltennamen (z.B. "lebensdauer") kommen in die neue Spalte "bewertungskategorie".
+    names_to = "bewertungskategorie", 
+    # Die Werte (z.B. 22.5) kommen in die neue Spalte "wert".
+    values_to = "wert"
   )
 
 # 3.2 JOIN: Verknüpfung der Long-Tabelle mit der Gewichtungstabelle
 # Ziel: Jede Kriteriums-Zeile (z.B. "lebensdauer") mit ihrem 
 # entsprechenden Gewicht (z.B. 0.1) anreichern.
+
 df_belaege_joined <- df_belaege_long %>%
   # Verknüpft die 'df_belaege_long' (linke Tabelle) mit 'df_weights' (rechte Tabelle).
-  # Die Verknüpfung ("der Schlüssel") ist die Spalte "R_Spaltenname",
+  # Die Verknüpfung ("der Schlüssel") ist die Spalte "bewertungskategorie",
   # die jetzt in beiden Tabellen identisch heisst.
-  left_join(df_weights, by = "R_Spaltenname")
+  left_join(df_weights, by = "bewertungskategorie")
 
 
 ```
 
-# Explorative Datenanalyse
+## 4. Explorative Datenanalyse
+
+Ziel: Die Verteilung der Rohwerte pro Kriterium ansehen.
+Dies zeigt, warum eine Normierung (Block 4) zwingend notwendig ist,
+da die Skalen (Jahre, CHF, kg) völlig unterschiedlich sind.
 
 ```{r}
 
-# --- 3.5 VISUALISIERUNG: Rohwerte prüfen ---
-# Ziel: Die Verteilung der Rohwerte pro Kriterium ansehen.
-# Dies zeigt, warum eine Normierung (Block 4) zwingend notwendig ist,
-# da die Skalen (Jahre, CHF, kg) völlig unterschiedlich sind.
-
-library(ggplot2)
-
 # Boxplot der Rohwerte
-plot_rohwerte <- ggplot(df_belaege_joined, aes(x = R_Spaltenname, y = Wert)) +
+plot_rohwerte <- ggplot(df_belaege_joined, aes(x = bewertungskategorie, y = wert)) +
   geom_boxplot() +
   # coord_flip() dreht die Achsen, damit die Namen lesbar sind
   coord_flip() +
@@ -115,74 +116,63 @@ plot_rohwerte <- ggplot(df_belaege_joined, aes(x = R_Spaltenname, y = Wert)) +
   theme_minimal()
 
 print(plot_rohwerte)
-ggsave("check_01_rohwerte_verteilung.png", plot = plot_rohwerte, width = 10, height = 7)
-
-# --- 4.5VISUALISIERUNG: Normierte Scores prüfen ---
-# Ziel: Überprüfen, ob die Min-Max-Skalierung (Block 4.2) funktioniert hat.
-
+ggsave("02_export/plots/check_01_rohwerte_verteilung.png", plot = plot_rohwerte, width = 10, height = 7)
 
 ```
 
-# MCA
+## 5. MCA - Normalisierung
 
-Normalisierung
+Ziel: Normalisierung
+Die Wert-Spalte (Jahre, CHF, etc.) muss auf eine einheitliche Skala (0-1) gebracht werden
 
 ```{r}
 
-# --- 4. NORMALIZE (Value Scaling) ---
-# WICHTIG: Wir MÜSSEN die 'Wert'-Spalte (Jahre, CHF, etc.) auf eine 
-# einheitliche Skala (z.B. 0-1) bringen. Das ist die eigentliche Normierung 
-# der MCA.
+# 5.1 Definieren, welche Kriterien 'schlechter' sind, wenn sie 'höher' sind
 
-# 4.1 Definieren, welche Kriterien 'schlechter' sind, wenn sie 'höher' sind
-# z.B. Kosten, CO2, Unterhalt...
-# BITTE PRÜFE DIESE LISTE!
 kriterien_lower_is_better <- c(
-  "Kosten_Initial_CHF", 
-  "Unterhalt_CHF_a", 
-  "CO2_Aeq_kg", 
-  "Graue_Energie_kwh",
-  "Albedo_Score" # Annahme: Hohe Temp (hoher Score) ist schlecht?
+  "kosten", 
+  "unterhalt", 
+  "co2", 
+  "graueEnergie",
+  "oberflächentemperatur" 
 )
 
-# 4.2 Min-Max-Skalierung (Normierung)
-# Wir gruppieren nach Kriterium, finden Min/Max und skalieren dann.
+# 5.2 Min-Max-Skalierung (Normierung)
+# Gruppieren nach Kriterium, Min/Max finden und skalieren
+
 df_belaege_normalized <- df_belaege_joined %>%
-  # Stellt sicher, dass NAs für die Berechnung ignoriert werden
-  filter(!is.na(Wert)) %>% 
-  group_by(R_Spaltenname) %>%
+  filter(!is.na(wert)) %>% # Stellt sicher, dass NAs für die Berechnung ignoriert werden
+  group_by(bewertungskategorie) %>%
   # 1. Min und Max für jedes Kriterium finden
   mutate(
-    Min_Wert = min(Wert, na.rm = TRUE),
-    Max_Wert = max(Wert, na.rm = TRUE)
+    min_wert = min(wert, na.rm = TRUE),
+    max_wert = max(wert, na.rm = TRUE)
   ) %>%
   ungroup() %>%
   # 2. Skalieren auf 0-1
   mutate(
     # Sonderfall: Wenn Min und Max gleich sind (nur ein Wert), setze Score auf 1
-    Score_Normiert = case_when(
-      (Max_Wert - Min_Wert) == 0 ~ 1,
+    score_normiert = case_when(
+      (max_wert - min_wert) == 0 ~ 1,
       
       # Normale Skalierung (higher is better)
-      !(R_Spaltenname %in% kriterien_lower_is_better) ~ (Wert - Min_Wert) / (Max_Wert - Min_Wert),
+      !(bewertungskategorie %in% kriterien_lower_is_better) ~ (wert - min_wert) / (max_wert - min_wert),
       
       # Invertierte Skalierung (lower is better)
-      R_Spaltenname %in% kriterien_lower_is_better ~ 1 - ((Wert - Min_Wert) / (Max_Wert - Min_Wert))
+      bewertungskategorie %in% kriterien_lower_is_better ~ 1 - ((wert - min_wert) / (max_wert - min_wert))
     )
   )
 
 
-
-
-
-
 ```
 
-# Exporative Datenanalyse
+## 6. Explorative Datenanalyse
+
+Ziel: Überprüfen, ob die Min-Max-Skalierung (Block 5.2) funktioniert hat.
 
 ```{r}
 # Boxplot der normierten Scores
-plot_normiert <- ggplot(df_belaege_normalized, aes(x = R_Spaltenname, y = Score_Normiert)) +
+plot_normiert <- ggplot(df_belaege_normalized, aes(x = bewertungskategorie, y = score_normiert)) +
   geom_boxplot() +
   coord_flip() +
   # Setzt die Y-Achse fix auf 0 bis 1
@@ -196,63 +186,52 @@ plot_normiert <- ggplot(df_belaege_normalized, aes(x = R_Spaltenname, y = Score_
   theme_minimal()
 
 print(plot_normiert)
-ggsave("check_02_normierte_scores.png", plot = plot_normiert, width = 10, height = 7)
+ggsave("02_export/plots/check_02_normierte_scores.png", plot = plot_normiert, width = 10, height = 7)
 ```
 
-# MCA Berechnung
+##.7. MCA Berechnung
+
+Ziel: Berechnung der besten geeigneten Beläge auf Basis Kriterienbewertung
 
 ```{r}
 
-# --- 5. MCA-BERECHNUNG ---
-
-# 5.1 Berechnung des gewichteten Scores (Normierter Score * Gewicht)
+# 7.1 Berechnung des gewichteten Scores (Normierter Score * Gewicht)
 df_mca_calculated <- df_belaege_normalized %>%
   mutate(
-    MCA_Score_Kriterium = Score_Normiert * Gewicht
+    MCA_score_kriterium = score_normiert * gewicht
   )
 
-# 5.2 Aggregation: Aufsummieren der gewichteten Scores pro Option
+# 7.2 Aggregation: Aufsummieren der gewichteten Scores pro Option
 df_mca_total <- df_mca_calculated %>%
-  group_by(Belagskategorie, Option_ID) %>%
+  group_by(belagskategorie, option) %>%
   summarise(
-    # Wichtig: na.rm = TRUE, falls einige Kriterien/Gewichte NAs hatten
-    MCA_Gesamtscore = sum(MCA_Score_Kriterium, na.rm = TRUE)
+      MCA_gesamtscore = sum(MCA_score_kriterium, na.rm = TRUE)  # Wichtig: na.rm = TRUE, falls einige Kriterien/Gewichte NAs hatten
   ) %>%
-  # Sortieren, um die besten Optionen oben zu sehen
-  arrange(desc(MCA_Gesamtscore))
+  arrange(desc(MCA_gesamtscore))  # Sortieren, um die besten Optionen oben zu sehen
 
 # Anzeigen der Ergebnisse
 print("--- MCA Gesamtergebnis (sortiert) ---")
 print(df_mca_total)
 
-# Optional: Anzeigen der Details
-# print("--- Details der Berechnung (Beispiel) ---")
-# df_mca_calculated %>% 
-#   select(Option_ID, R_Spaltenname, Wert, Score_Normiert, Gewicht, MCA_Score_Kriterium) %>%
-#   arrange(Option_ID) %>%
-#   print(n = 20)
-
-
-
 ```
 
 # Darstellung
 
+Ziel: visualisierung der Ergebnisse 
+
 ```{r}
 
-# --- 6. VISUALISIERUNG DER ERGEBNISSE ---
-
-# ---
 # Plot 1: Gesamtergebnis (Ranking)
 # Ein horizontales Balkendiagramm, sortiert nach dem besten Gesamtscore.
 # ---
 
-# WICHTIG: fct_reorder() sortiert die Y-Achse (Option_ID) basierend auf dem
+# WICHTIG: fct_reorder() sortiert die Y-Achse (option) basierend auf dem
 # Wert des Gesamtscores. Ohne dies würde ggplot alphabetisch sortieren.
+
 plot_mca_total <- ggplot(df_mca_total, 
-       aes(x = MCA_Gesamtscore, 
-           y = fct_reorder(Option_ID, MCA_Gesamtscore),
-           fill = Belagskategorie)) +
+       aes(x = MCA_gesamtscore, 
+           y = fct_reorder(option, MCA_gesamtscore),
+           fill = belagskategorie)) +
   geom_col() +
   labs(
     title = "MCA Ergebnis: Rangliste der Belagsoptionen",
@@ -264,29 +243,28 @@ plot_mca_total <- ggplot(df_mca_total,
   theme_minimal() +
   theme(legend.position = "top")
 
-# Anzeigen (optional) und Speichern
+# Anzeigen und Speichern
 print(plot_mca_total)
-ggsave("mca_gesamtergebnis.png", plot = plot_mca_total, width = 10, height = 7)
+ggsave("02_export/plots/mca_gesamtergebnis.png", plot = plot_mca_total, width = 10, height = 7)
 
 
-# ---
 # Plot 2: Detail-Zusammensetzung (Gestapeltes Diagramm)
 # Zeigt, wie sich der Gesamtscore aus den Kriteriengruppen zusammensetzt.
 # ---
 
 # 1. Daten vorbereiten: Scores pro Gruppe aggregieren
 df_mca_groups <- df_mca_calculated %>%
-  group_by(Belagskategorie, Option_ID, group_id) %>%
-  summarise(Gruppen_Score = sum(MCA_Score_Kriterium, na.rm = TRUE)) %>%
+  group_by(belagskategorie, option, group_id) %>%
+  summarise(gruppen_score = sum(MCA_score_kriterium, na.rm = TRUE)) %>%
   ungroup() %>%
-  # Wichtig: Wir holen uns den Gesamtscore wieder dazu,
-  # damit wir die Sortierung von Plot 1 übernehmen können.
-  left_join(df_mca_total, by = c("Belagskategorie", "Option_ID"))
+  # Wichtig: Den Gesamtscore wieder dazu holen,
+  # damit die Sortierung von Plot 1 übernommen werden kann.
+  left_join(df_mca_total, by = c("belagskategorie", "option"))
 
 # 2. Gestapeltes Diagramm plotten
 plot_mca_stacked <- ggplot(df_mca_groups, 
-       aes(x = Gruppen_Score, 
-           y = fct_reorder(Option_ID, MCA_Gesamtscore), 
+       aes(x = gruppen_score, 
+           y = fct_reorder(option, MCA_gesamtscore), 
            fill = group_id)) +
   geom_col(position = "stack") +
   labs(
@@ -299,10 +277,38 @@ plot_mca_stacked <- ggplot(df_mca_groups,
   theme_minimal() +
   theme(legend.position = "top")
 
-# Anzeigen (optional) und Speichern
+# Anzeigen und Speichern
 print(plot_mca_stacked)
-ggsave("mca_detail_gruppen.png", plot = plot_mca_stacked, width = 11, height = 7)
-
+ggsave("02_export/plots/mca_detail_gruppen.png", plot = plot_mca_stacked, width = 11, height = 7)
 
 
 ```
+
+## Ergebnisstabellen exportieren
+
+```{r}
+
+# 1. Speichern der finalen MCA-Rangliste (das Wichtigste)
+# df_mca_total ist der Data Frame, der in Block 7.2 erstellt wurde
+write_csv2(
+  df_mca_total,
+  file = "02_export/tables/mca_rangliste_belaege.csv"
+)
+
+# 2. Speichern der kompletten Berechnungs-Details (für den Anhang)
+# df_mca_calculated ist der Data Frame aus Block 7.1
+write_csv2(
+  df_mca_calculated,
+  file = "02_export/tables/mca_details_berechnung_belaege.csv"
+)
+
+# 3. (Optional) Speichern der normierten Werte (Qualitätskontrolle)
+# df_belaege_normalized ist der Data Frame aus Block 5.2)
+write_csv2(
+  df_belaege_normalized,
+  file = "02_export/tables/mca_normierte_werte_belaege.csv"
+)
+
+
+```
+
