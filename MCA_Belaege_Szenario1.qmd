@@ -120,25 +120,6 @@ ggsave("check_01_rohwerte_verteilung.png", plot = plot_rohwerte, width = 10, hei
 # --- 4.5VISUALISIERUNG: Normierte Scores prüfen ---
 # Ziel: Überprüfen, ob die Min-Max-Skalierung (Block 4.2) funktioniert hat.
 
-# Boxplot der normierten Scores
-plot_normiert <- ggplot(df_belaege_normalized, aes(x = R_Spaltenname, y = Score_Normiert)) +
-  geom_boxplot() +
-  coord_flip() +
-  # Setzt die Y-Achse fix auf 0 bis 1
-  scale_y_continuous(limits = c(0, 1)) +
-  labs(
-    title = "Verteilung der normierten Scores (nach Normierung)",
-    subtitle = "Qualitätskontrolle: Alle Kriterien sollten jetzt auf 0-1 skaliert sein.",
-    x = "Kriterium",
-    y = "Normierter Score (0-1)"
-  ) +
-  theme_minimal()
-
-print(plot_normiert)
-ggsave("check_02_normierte_scores.png", plot = plot_normiert, width = 10, height = 7)
-
-
-
 
 ```
 
@@ -195,6 +176,27 @@ df_belaege_normalized <- df_belaege_joined %>%
 
 
 
+```
+
+# Exporative Datenanalyse
+
+```{r}
+# Boxplot der normierten Scores
+plot_normiert <- ggplot(df_belaege_normalized, aes(x = R_Spaltenname, y = Score_Normiert)) +
+  geom_boxplot() +
+  coord_flip() +
+  # Setzt die Y-Achse fix auf 0 bis 1
+  scale_y_continuous(limits = c(0, 1)) +
+  labs(
+    title = "Verteilung der normierten Scores (nach Normierung)",
+    subtitle = "Qualitätskontrolle: Alle Kriterien sollten jetzt auf 0-1 skaliert sein.",
+    x = "Kriterium",
+    y = "Normierter Score (0-1)"
+  ) +
+  theme_minimal()
+
+print(plot_normiert)
+ggsave("check_02_normierte_scores.png", plot = plot_normiert, width = 10, height = 7)
 ```
 
 # MCA Berechnung
