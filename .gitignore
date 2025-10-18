@@ -7,12 +7,22 @@
 # renv library
 renv/library/
 
-# Outputs and site files
-output/
+# Quarto and output files
+/.quarto/
+**/*.quarto_ipynb
 _site/
+_freeze/
 *.html
 *.pdf
 
-# Mac / Windows hidden files
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*~
+
+# OS specific
 .DS_Store
 Thumbs.db
+desktop.ini

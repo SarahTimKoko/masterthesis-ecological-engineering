@@ -1,8 +1,0 @@
----
-title: "My R Markdown Report"
-output: html_document
----
-
-# Welcome
-
-This is my first R Markdown report!
