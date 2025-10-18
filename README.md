@@ -34,3 +34,16 @@ source("R/utils.R")
 
 Rscript -e 'rmarkdown::render\_site()'
 ```
+
+## Install new package with renv
+
+```r
+renv::install("<package>")
+```
+
+After installing the package and checking that your code works, you should call 
+```r
+renv::snapshot()
+``` 
+to record the latest package versions in your lockfile. 
+
