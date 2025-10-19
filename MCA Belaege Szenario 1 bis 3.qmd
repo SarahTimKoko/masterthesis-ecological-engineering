@@ -115,7 +115,9 @@ df_belaege_joined <- df_belaege_long %>%
   # Verknüpft die 'df_belaege_long' (linke Tabelle) mit 'df_weights' (rechte Tabelle).
   # Die Verknüpfung ("der Schlüssel") ist die Spalte "bewertungskategorie",
   # die jetzt in beiden Tabellen identisch heisst.
-  left_join(df_weights, by = "bewertungskategorie")
+  left_join(df_weights, by = "bewertungskategorie",# Diese Zeile sagt R, dass wir den Many-to-Many-Join erwarten
+            relationship = "many-to-many" 
+  )
 
 
 ```
