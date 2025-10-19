@@ -1,0 +1,31 @@
+szenario;belagskategorie;option;MCA_gesamtscore
+Szenario 1: Ausgewogen;Sickerbeläge;Chaussierung;0,697099867724868
+Szenario 1: Ausgewogen;Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);0,609496575828543
+Szenario 1: Ausgewogen;Sickerbeläge;Rasengittersteine;0,540406908665105
+Szenario 1: Ausgewogen;Sickerbeläge;Kiesrasen;0,534160526025280
+Szenario 1: Ausgewogen;Asphalt;Recyclingasphalt;0,503975409836066
+Szenario 1: Ausgewogen;Pflaster;Natursteinpflaster (6-10 mm Fugen);0,477809190657551
+Szenario 1: Ausgewogen;Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);0,476367546956686
+Szenario 1: Ausgewogen;Asphalt;Heller Asphalt;0,426847309945671
+Szenario 1: Ausgewogen;Asphalt;Selbstheilender Asphalt;0,391446428571429
+Szenario 1: Ausgewogen;Asphalt;Sickerasphalt;0,273487832560578
+Szenario 2: Kreislauf;Sickerbeläge;Chaussierung;0,850125661375661
+Szenario 2: Kreislauf;Sickerbeläge;Kiesrasen;0,684546848264061
+Szenario 2: Kreislauf;Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);0,586744021006316
+Szenario 2: Kreislauf;Sickerbeläge;Rasengittersteine;0,525444964871194
+Szenario 2: Kreislauf;Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);0,523436575946822
+Szenario 2: Kreislauf;Pflaster;Natursteinpflaster (6-10 mm Fugen);0,506730872345626
+Szenario 2: Kreislauf;Asphalt;Recyclingasphalt;0,434221311475410
+Szenario 2: Kreislauf;Asphalt;Heller Asphalt;0,312608457723212
+Szenario 2: Kreislauf;Asphalt;Sickerasphalt;0,214807949715737
+Szenario 2: Kreislauf;Asphalt;Selbstheilender Asphalt;0,213867857142857
+Szenario 3: Langlebigkeit;Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);0,646861383152367
+Szenario 3: Langlebigkeit;Sickerbeläge;Chaussierung;0,596028439153439
+Szenario 3: Langlebigkeit;Asphalt;Selbstheilender Asphalt;0,592892857142857
+Szenario 3: Langlebigkeit;Asphalt;Recyclingasphalt;0,545737704918033
+Szenario 3: Langlebigkeit;Sickerbeläge;Rasengittersteine;0,526899882903981
+Szenario 3: Langlebigkeit;Pflaster;Natursteinpflaster (6-10 mm Fugen);0,509556050355231
+Szenario 3: Langlebigkeit;Asphalt;Heller Asphalt;0,487087676136856
+Szenario 3: Langlebigkeit;Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);0,460740817129137
+Szenario 3: Langlebigkeit;Sickerbeläge;Kiesrasen;0,386084892642270
+Szenario 3: Langlebigkeit;Asphalt;Sickerasphalt;0,359631647761771

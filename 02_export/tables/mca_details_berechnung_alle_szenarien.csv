@@ -1,0 +1,361 @@
+belagskategorie;option;bewertungskategorie;wert;szenario;gewicht;group_id;min_wert;max_wert;score_normiert;MCA_score_kriterium
+Asphalt;Recyclingasphalt;lebensdauer;22,50;Szenario 1: Ausgewogen;0,100;langlebigkeit_wirtschaftlichkeit;15,0;50,0;0,2142857142857143;0,021428571428571429
+Asphalt;Recyclingasphalt;lebensdauer;22,50;Szenario 2: Kreislauf;0,060;langlebigkeit_wirtschaftlichkeit;15,0;50,0;0,2142857142857143;0,012857142857142855
+Asphalt;Recyclingasphalt;lebensdauer;22,50;Szenario 3: Langlebigkeit;0,200;langlebigkeit_wirtschaftlichkeit;15,0;50,0;0,2142857142857143;0,042857142857142858
+Asphalt;Recyclingasphalt;versickerung;1,00;Szenario 1: Ausgewogen;0,075;multifunktionale_nutzungsqualitaet;0,2;1,0;1,0000000000000000;0,074999999999999997
+Asphalt;Recyclingasphalt;versickerung;1,00;Szenario 2: Kreislauf;0,030;multifunktionale_nutzungsqualitaet;0,2;1,0;1,0000000000000000;0,029999999999999999
+Asphalt;Recyclingasphalt;versickerung;1,00;Szenario 3: Langlebigkeit;0,075;multifunktionale_nutzungsqualitaet;0,2;1,0;1,0000000000000000;0,074999999999999997
+Asphalt;Recyclingasphalt;oberflaechentemperatur;58,40;Szenario 1: Ausgewogen;0,075;multifunktionale_nutzungsqualitaet;26,0;58,4;0,0000000000000000;0,000000000000000000
+Asphalt;Recyclingasphalt;oberflaechentemperatur;58,40;Szenario 2: Kreislauf;0,030;multifunktionale_nutzungsqualitaet;26,0;58,4;0,0000000000000000;0,000000000000000000
+Asphalt;Recyclingasphalt;oberflaechentemperatur;58,40;Szenario 3: Langlebigkeit;0,075;multifunktionale_nutzungsqualitaet;26,0;58,4;0,0000000000000000;0,000000000000000000
+Asphalt;Recyclingasphalt;befahrbarkeit;5,00;Szenario 1: Ausgewogen;0,050;multifunktionale_nutzungsqualitaet;1,0;5,0;1,0000000000000000;0,050000000000000003
+Asphalt;Recyclingasphalt;befahrbarkeit;5,00;Szenario 2: Kreislauf;0,020;multifunktionale_nutzungsqualitaet;1,0;5,0;1,0000000000000000;0,020000000000000000
+Asphalt;Recyclingasphalt;befahrbarkeit;5,00;Szenario 3: Langlebigkeit;0,050;multifunktionale_nutzungsqualitaet;1,0;5,0;1,0000000000000000;0,050000000000000003
+Asphalt;Recyclingasphalt;kosten;100,00;Szenario 1: Ausgewogen;0,075;langlebigkeit_wirtschaftlichkeit;50,0;350,0;0,8333333333333334;0,062500000000000000
+Asphalt;Recyclingasphalt;kosten;100,00;Szenario 2: Kreislauf;0,045;langlebigkeit_wirtschaftlichkeit;50,0;350,0;0,8333333333333334;0,037499999999999999
+Asphalt;Recyclingasphalt;kosten;100,00;Szenario 3: Langlebigkeit;0,150;langlebigkeit_wirtschaftlichkeit;50,0;350,0;0,8333333333333334;0,125000000000000000
+Asphalt;Recyclingasphalt;unterhalt;4,00;Szenario 1: Ausgewogen;0,075;langlebigkeit_wirtschaftlichkeit;2,0;9,0;0,7142857142857143;0,053571428571428568
+Asphalt;Recyclingasphalt;unterhalt;4,00;Szenario 2: Kreislauf;0,045;langlebigkeit_wirtschaftlichkeit;2,0;9,0;0,7142857142857143;0,032142857142857140
+Asphalt;Recyclingasphalt;unterhalt;4,00;Szenario 3: Langlebigkeit;0,150;langlebigkeit_wirtschaftlichkeit;2,0;9,0;0,7142857142857143;0,107142857142857137
+Asphalt;Recyclingasphalt;co2;45,00;Szenario 1: Ausgewogen;0,180;umweltbelastung;17,5;72,5;0,5000000000000000;0,089999999999999997
+Asphalt;Recyclingasphalt;co2;45,00;Szenario 2: Kreislauf;0,210;umweltbelastung;17,5;72,5;0,5000000000000000;0,104999999999999996
+Asphalt;Recyclingasphalt;co2;45,00;Szenario 3: Langlebigkeit;0,090;umweltbelastung;17,5;72,5;0,5000000000000000;0,044999999999999998
+Asphalt;Recyclingasphalt;graueEnergie;295,00;Szenario 1: Ausgewogen;0,120;umweltbelastung;70,0;375,0;0,2622950819672131;0,031475409836065567
+Asphalt;Recyclingasphalt;graueEnergie;295,00;Szenario 2: Kreislauf;0,140;umweltbelastung;70,0;375,0;0,2622950819672131;0,036721311475409836
+Asphalt;Recyclingasphalt;graueEnergie;295,00;Szenario 3: Langlebigkeit;0,060;umweltbelastung;70,0;375,0;0,2622950819672131;0,015737704918032783
+Asphalt;Recyclingasphalt;recyclingfaehigkeit;0,30;Szenario 1: Ausgewogen;0,080;kreislauffaehigkeit;0,2;1,0;0,1250000000000000;0,009999999999999998
+Asphalt;Recyclingasphalt;recyclingfaehigkeit;0,30;Szenario 2: Kreislauf;0,160;kreislauffaehigkeit;0,2;1,0;0,1250000000000000;0,019999999999999997
+Asphalt;Recyclingasphalt;recyclingfaehigkeit;0,30;Szenario 3: Langlebigkeit;0,040;kreislauffaehigkeit;0,2;1,0;0,1250000000000000;0,004999999999999999
+Asphalt;Recyclingasphalt;lokaleMaterialien;1,00;Szenario 1: Ausgewogen;0,060;kreislauffaehigkeit;0,4;1,0;1,0000000000000000;0,059999999999999998
+Asphalt;Recyclingasphalt;lokaleMaterialien;1,00;Szenario 2: Kreislauf;0,120;kreislauffaehigkeit;0,4;1,0;1,0000000000000000;0,119999999999999996
+Asphalt;Recyclingasphalt;lokaleMaterialien;1,00;Szenario 3: Langlebigkeit;0,030;kreislauffaehigkeit;0,4;1,0;1,0000000000000000;0,029999999999999999
+Asphalt;Recyclingasphalt;modulareErneuerbarkeit;1,00;Szenario 1: Ausgewogen;0,060;kreislauffaehigkeit;1,0;5,0;0,0000000000000000;0,000000000000000000
+Asphalt;Recyclingasphalt;modulareErneuerbarkeit;1,00;Szenario 2: Kreislauf;0,120;kreislauffaehigkeit;1,0;5,0;0,0000000000000000;0,000000000000000000
+Asphalt;Recyclingasphalt;modulareErneuerbarkeit;1,00;Szenario 3: Langlebigkeit;0,030;kreislauffaehigkeit;1,0;5,0;0,0000000000000000;0,000000000000000000
+Asphalt;Recyclingasphalt;barrierefreiheit;5,00;Szenario 1: Ausgewogen;0,050;multifunktionale_nutzungsqualitaet;1,0;5,0;1,0000000000000000;0,050000000000000003
+Asphalt;Recyclingasphalt;barrierefreiheit;5,00;Szenario 2: Kreislauf;0,020;multifunktionale_nutzungsqualitaet;1,0;5,0;1,0000000000000000;0,020000000000000000
+Asphalt;Recyclingasphalt;barrierefreiheit;5,00;Szenario 3: Langlebigkeit;0,050;multifunktionale_nutzungsqualitaet;1,0;5,0;1,0000000000000000;0,050000000000000003
+Asphalt;Sickerasphalt;lebensdauer;27,50;Szenario 1: Ausgewogen;0,100;langlebigkeit_wirtschaftlichkeit;15,0;50,0;0,3571428571428572;0,035714285714285719
+Asphalt;Sickerasphalt;lebensdauer;27,50;Szenario 2: Kreislauf;0,060;langlebigkeit_wirtschaftlichkeit;15,0;50,0;0,3571428571428572;0,021428571428571429
+Asphalt;Sickerasphalt;lebensdauer;27,50;Szenario 3: Langlebigkeit;0,200;langlebigkeit_wirtschaftlichkeit;15,0;50,0;0,3571428571428572;0,071428571428571438
+Asphalt;Sickerasphalt;versickerung;0,35;Szenario 1: Ausgewogen;0,075;multifunktionale_nutzungsqualitaet;0,2;1,0;0,1874999999999999;0,014062499999999995
+Asphalt;Sickerasphalt;versickerung;0,35;Szenario 2: Kreislauf;0,030;multifunktionale_nutzungsqualitaet;0,2;1,0;0,1874999999999999;0,005624999999999998
+Asphalt;Sickerasphalt;versickerung;0,35;Szenario 3: Langlebigkeit;0,075;multifunktionale_nutzungsqualitaet;0,2;1,0;0,1874999999999999;0,014062499999999995
+Asphalt;Sickerasphalt;oberflaechentemperatur;55,50;Szenario 1: Ausgewogen;0,075;multifunktionale_nutzungsqualitaet;26,0;58,4;0,0895061728395061;0,006712962962962960
+Asphalt;Sickerasphalt;oberflaechentemperatur;55,50;Szenario 2: Kreislauf;0,030;multifunktionale_nutzungsqualitaet;26,0;58,4;0,0895061728395061;0,002685185185185184
+Asphalt;Sickerasphalt;oberflaechentemperatur;55,50;Szenario 3: Langlebigkeit;0,075;multifunktionale_nutzungsqualitaet;26,0;58,4;0,0895061728395061;0,006712962962962960
+Asphalt;Sickerasphalt;befahrbarkeit;3,00;Szenario 1: Ausgewogen;0,050;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000;0,025000000000000001
+Asphalt;Sickerasphalt;befahrbarkeit;3,00;Szenario 2: Kreislauf;0,020;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000;0,010000000000000000
+Asphalt;Sickerasphalt;befahrbarkeit;3,00;Szenario 3: Langlebigkeit;0,050;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000;0,025000000000000001
+Asphalt;Sickerasphalt;kosten;100,00;Szenario 1: Ausgewogen;0,075;langlebigkeit_wirtschaftlichkeit;50,0;350,0;0,8333333333333334;0,062500000000000000
+Asphalt;Sickerasphalt;kosten;100,00;Szenario 2: Kreislauf;0,045;langlebigkeit_wirtschaftlichkeit;50,0;350,0;0,8333333333333334;0,037499999999999999
+Asphalt;Sickerasphalt;kosten;100,00;Szenario 3: Langlebigkeit;0,150;langlebigkeit_wirtschaftlichkeit;50,0;350,0;0,8333333333333334;0,125000000000000000
+Asphalt;Sickerasphalt;unterhalt;6,50;Szenario 1: Ausgewogen;0,075;langlebigkeit_wirtschaftlichkeit;2,0;9,0;0,3571428571428571;0,026785714285714281
+Asphalt;Sickerasphalt;unterhalt;6,50;Szenario 2: Kreislauf;0,045;langlebigkeit_wirtschaftlichkeit;2,0;9,0;0,3571428571428571;0,016071428571428570
+Asphalt;Sickerasphalt;unterhalt;6,50;Szenario 3: Langlebigkeit;0,150;langlebigkeit_wirtschaftlichkeit;2,0;9,0;0,3571428571428571;0,053571428571428562
+Asphalt;Sickerasphalt;co2;60,00;Szenario 1: Ausgewogen;0,180;umweltbelastung;17,5;72,5;0,2272727272727273;0,040909090909090909
+Asphalt;Sickerasphalt;co2;60,00;Szenario 2: Kreislauf;0,210;umweltbelastung;17,5;72,5;0,2272727272727273;0,047727272727272729
+Asphalt;Sickerasphalt;co2;60,00;Szenario 3: Langlebigkeit;0,090;umweltbelastung;17,5;72,5;0,2272727272727273;0,020454545454545454
+Asphalt;Sickerasphalt;graueEnergie;345,00;Szenario 1: Ausgewogen;0,120;umweltbelastung;70,0;375,0;0,0983606557377049;0,011803278688524590
+Asphalt;Sickerasphalt;graueEnergie;345,00;Szenario 2: Kreislauf;0,140;umweltbelastung;70,0;375,0;0,0983606557377049;0,013770491803278689
+Asphalt;Sickerasphalt;graueEnergie;345,00;Szenario 3: Langlebigkeit;0,060;umweltbelastung;70,0;375,0;0,0983606557377049;0,005901639344262295
+Asphalt;Sickerasphalt;recyclingfaehigkeit;0,20;Szenario 1: Ausgewogen;0,080;kreislauffaehigkeit;0,2;1,0;0,0000000000000000;0,000000000000000000
+Asphalt;Sickerasphalt;recyclingfaehigkeit;0,20;Szenario 2: Kreislauf;0,160;kreislauffaehigkeit;0,2;1,0;0,0000000000000000;0,000000000000000000
+Asphalt;Sickerasphalt;recyclingfaehigkeit;0,20;Szenario 3: Langlebigkeit;0,040;kreislauffaehigkeit;0,2;1,0;0,0000000000000000;0,000000000000000000
+Asphalt;Sickerasphalt;lokaleMaterialien;0,65;Szenario 1: Ausgewogen;0,060;kreislauffaehigkeit;0,4;1,0;0,4166666666666667;0,025000000000000001
+Asphalt;Sickerasphalt;lokaleMaterialien;0,65;Szenario 2: Kreislauf;0,120;kreislauffaehigkeit;0,4;1,0;0,4166666666666667;0,050000000000000003
+Asphalt;Sickerasphalt;lokaleMaterialien;0,65;Szenario 3: Langlebigkeit;0,030;kreislauffaehigkeit;0,4;1,0;0,4166666666666667;0,012500000000000001
+Asphalt;Sickerasphalt;modulareErneuerbarkeit;1,00;Szenario 1: Ausgewogen;0,060;kreislauffaehigkeit;1,0;5,0;0,0000000000000000;0,000000000000000000
+Asphalt;Sickerasphalt;modulareErneuerbarkeit;1,00;Szenario 2: Kreislauf;0,120;kreislauffaehigkeit;1,0;5,0;0,0000000000000000;0,000000000000000000
+Asphalt;Sickerasphalt;modulareErneuerbarkeit;1,00;Szenario 3: Langlebigkeit;0,030;kreislauffaehigkeit;1,0;5,0;0,0000000000000000;0,000000000000000000
+Asphalt;Sickerasphalt;barrierefreiheit;3,00;Szenario 1: Ausgewogen;0,050;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000;0,025000000000000001
+Asphalt;Sickerasphalt;barrierefreiheit;3,00;Szenario 2: Kreislauf;0,020;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000;0,010000000000000000
+Asphalt;Sickerasphalt;barrierefreiheit;3,00;Szenario 3: Langlebigkeit;0,050;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000;0,025000000000000001
+Asphalt;Heller Asphalt;lebensdauer;17,50;Szenario 1: Ausgewogen;0,100;langlebigkeit_wirtschaftlichkeit;15,0;50,0;0,0714285714285714;0,007142857142857143
+Asphalt;Heller Asphalt;lebensdauer;17,50;Szenario 2: Kreislauf;0,060;langlebigkeit_wirtschaftlichkeit;15,0;50,0;0,0714285714285714;0,004285714285714285
+Asphalt;Heller Asphalt;lebensdauer;17,50;Szenario 3: Langlebigkeit;0,200;langlebigkeit_wirtschaftlichkeit;15,0;50,0;0,0714285714285714;0,014285714285714285
+Asphalt;Heller Asphalt;versickerung;1,00;Szenario 1: Ausgewogen;0,075;multifunktionale_nutzungsqualitaet;0,2;1,0;1,0000000000000000;0,074999999999999997
+Asphalt;Heller Asphalt;versickerung;1,00;Szenario 2: Kreislauf;0,030;multifunktionale_nutzungsqualitaet;0,2;1,0;1,0000000000000000;0,029999999999999999
+Asphalt;Heller Asphalt;versickerung;1,00;Szenario 3: Langlebigkeit;0,075;multifunktionale_nutzungsqualitaet;0,2;1,0;1,0000000000000000;0,074999999999999997
+Asphalt;Heller Asphalt;oberflaechentemperatur;54,00;Szenario 1: Ausgewogen;0,075;multifunktionale_nutzungsqualitaet;26,0;58,4;0,1358024691358024;0,010185185185185181
+Asphalt;Heller Asphalt;oberflaechentemperatur;54,00;Szenario 2: Kreislauf;0,030;multifunktionale_nutzungsqualitaet;26,0;58,4;0,1358024691358024;0,004074074074074072
+Asphalt;Heller Asphalt;oberflaechentemperatur;54,00;Szenario 3: Langlebigkeit;0,075;multifunktionale_nutzungsqualitaet;26,0;58,4;0,1358024691358024;0,010185185185185181
+Asphalt;Heller Asphalt;befahrbarkeit;5,00;Szenario 1: Ausgewogen;0,050;multifunktionale_nutzungsqualitaet;1,0;5,0;1,0000000000000000;0,050000000000000003
+Asphalt;Heller Asphalt;befahrbarkeit;5,00;Szenario 2: Kreislauf;0,020;multifunktionale_nutzungsqualitaet;1,0;5,0;1,0000000000000000;0,020000000000000000
+Asphalt;Heller Asphalt;befahrbarkeit;5,00;Szenario 3: Langlebigkeit;0,050;multifunktionale_nutzungsqualitaet;1,0;5,0;1,0000000000000000;0,050000000000000003
+Asphalt;Heller Asphalt;kosten;110,00;Szenario 1: Ausgewogen;0,075;langlebigkeit_wirtschaftlichkeit;50,0;350,0;0,8000000000000000;0,059999999999999998
+Asphalt;Heller Asphalt;kosten;110,00;Szenario 2: Kreislauf;0,045;langlebigkeit_wirtschaftlichkeit;50,0;350,0;0,8000000000000000;0,035999999999999997
+Asphalt;Heller Asphalt;kosten;110,00;Szenario 3: Langlebigkeit;0,150;langlebigkeit_wirtschaftlichkeit;50,0;350,0;0,8000000000000000;0,119999999999999996
+Asphalt;Heller Asphalt;unterhalt;4,00;Szenario 1: Ausgewogen;0,075;langlebigkeit_wirtschaftlichkeit;2,0;9,0;0,7142857142857143;0,053571428571428568
+Asphalt;Heller Asphalt;unterhalt;4,00;Szenario 2: Kreislauf;0,045;langlebigkeit_wirtschaftlichkeit;2,0;9,0;0,7142857142857143;0,032142857142857140
+Asphalt;Heller Asphalt;unterhalt;4,00;Szenario 3: Langlebigkeit;0,150;langlebigkeit_wirtschaftlichkeit;2,0;9,0;0,7142857142857143;0,107142857142857137
+Asphalt;Heller Asphalt;co2;50,00;Szenario 1: Ausgewogen;0,180;umweltbelastung;17,5;72,5;0,4090909090909091;0,073636363636363625
+Asphalt;Heller Asphalt;co2;50,00;Szenario 2: Kreislauf;0,210;umweltbelastung;17,5;72,5;0,4090909090909091;0,085909090909090893
+Asphalt;Heller Asphalt;co2;50,00;Szenario 3: Langlebigkeit;0,090;umweltbelastung;17,5;72,5;0,4090909090909091;0,036818181818181812
+Asphalt;Heller Asphalt;graueEnergie;331,00;Szenario 1: Ausgewogen;0,120;umweltbelastung;70,0;375,0;0,1442622950819672;0,017311475409836064
+Asphalt;Heller Asphalt;graueEnergie;331,00;Szenario 2: Kreislauf;0,140;umweltbelastung;70,0;375,0;0,1442622950819672;0,020196721311475409
+Asphalt;Heller Asphalt;graueEnergie;331,00;Szenario 3: Langlebigkeit;0,060;umweltbelastung;70,0;375,0;0,1442622950819672;0,008655737704918032
+Asphalt;Heller Asphalt;recyclingfaehigkeit;0,30;Szenario 1: Ausgewogen;0,080;kreislauffaehigkeit;0,2;1,0;0,1250000000000000;0,009999999999999998
+Asphalt;Heller Asphalt;recyclingfaehigkeit;0,30;Szenario 2: Kreislauf;0,160;kreislauffaehigkeit;0,2;1,0;0,1250000000000000;0,019999999999999997
+Asphalt;Heller Asphalt;recyclingfaehigkeit;0,30;Szenario 3: Langlebigkeit;0,040;kreislauffaehigkeit;0,2;1,0;0,1250000000000000;0,004999999999999999
+Asphalt;Heller Asphalt;lokaleMaterialien;0,60;Szenario 1: Ausgewogen;0,060;kreislauffaehigkeit;0,4;1,0;0,3333333333333333;0,019999999999999993
+Asphalt;Heller Asphalt;lokaleMaterialien;0,60;Szenario 2: Kreislauf;0,120;kreislauffaehigkeit;0,4;1,0;0,3333333333333333;0,039999999999999987
+Asphalt;Heller Asphalt;lokaleMaterialien;0,60;Szenario 3: Langlebigkeit;0,030;kreislauffaehigkeit;0,4;1,0;0,3333333333333333;0,009999999999999997
+Asphalt;Heller Asphalt;modulareErneuerbarkeit;1,00;Szenario 1: Ausgewogen;0,060;kreislauffaehigkeit;1,0;5,0;0,0000000000000000;0,000000000000000000
+Asphalt;Heller Asphalt;modulareErneuerbarkeit;1,00;Szenario 2: Kreislauf;0,120;kreislauffaehigkeit;1,0;5,0;0,0000000000000000;0,000000000000000000
+Asphalt;Heller Asphalt;modulareErneuerbarkeit;1,00;Szenario 3: Langlebigkeit;0,030;kreislauffaehigkeit;1,0;5,0;0,0000000000000000;0,000000000000000000
+Asphalt;Heller Asphalt;barrierefreiheit;5,00;Szenario 1: Ausgewogen;0,050;multifunktionale_nutzungsqualitaet;1,0;5,0;1,0000000000000000;0,050000000000000003
+Asphalt;Heller Asphalt;barrierefreiheit;5,00;Szenario 2: Kreislauf;0,020;multifunktionale_nutzungsqualitaet;1,0;5,0;1,0000000000000000;0,020000000000000000
+Asphalt;Heller Asphalt;barrierefreiheit;5,00;Szenario 3: Langlebigkeit;0,050;multifunktionale_nutzungsqualitaet;1,0;5,0;1,0000000000000000;0,050000000000000003
+Asphalt;Selbstheilender Asphalt;lebensdauer;42,50;Szenario 1: Ausgewogen;0,100;langlebigkeit_wirtschaftlichkeit;15,0;50,0;0,7857142857142857;0,078571428571428570
+Asphalt;Selbstheilender Asphalt;lebensdauer;42,50;Szenario 2: Kreislauf;0,060;langlebigkeit_wirtschaftlichkeit;15,0;50,0;0,7857142857142857;0,047142857142857139
+Asphalt;Selbstheilender Asphalt;lebensdauer;42,50;Szenario 3: Langlebigkeit;0,200;langlebigkeit_wirtschaftlichkeit;15,0;50,0;0,7857142857142857;0,157142857142857140
+Asphalt;Selbstheilender Asphalt;versickerung;1,00;Szenario 1: Ausgewogen;0,075;multifunktionale_nutzungsqualitaet;0,2;1,0;1,0000000000000000;0,074999999999999997
+Asphalt;Selbstheilender Asphalt;versickerung;1,00;Szenario 2: Kreislauf;0,030;multifunktionale_nutzungsqualitaet;0,2;1,0;1,0000000000000000;0,029999999999999999
+Asphalt;Selbstheilender Asphalt;versickerung;1,00;Szenario 3: Langlebigkeit;0,075;multifunktionale_nutzungsqualitaet;0,2;1,0;1,0000000000000000;0,074999999999999997
+Asphalt;Selbstheilender Asphalt;oberflaechentemperatur;58,40;Szenario 1: Ausgewogen;0,075;multifunktionale_nutzungsqualitaet;26,0;58,4;0,0000000000000000;0,000000000000000000
+Asphalt;Selbstheilender Asphalt;oberflaechentemperatur;58,40;Szenario 2: Kreislauf;0,030;multifunktionale_nutzungsqualitaet;26,0;58,4;0,0000000000000000;0,000000000000000000
+Asphalt;Selbstheilender Asphalt;oberflaechentemperatur;58,40;Szenario 3: Langlebigkeit;0,075;multifunktionale_nutzungsqualitaet;26,0;58,4;0,0000000000000000;0,000000000000000000
+Asphalt;Selbstheilender Asphalt;befahrbarkeit;5,00;Szenario 1: Ausgewogen;0,050;multifunktionale_nutzungsqualitaet;1,0;5,0;1,0000000000000000;0,050000000000000003
+Asphalt;Selbstheilender Asphalt;befahrbarkeit;5,00;Szenario 2: Kreislauf;0,020;multifunktionale_nutzungsqualitaet;1,0;5,0;1,0000000000000000;0,020000000000000000
+Asphalt;Selbstheilender Asphalt;befahrbarkeit;5,00;Szenario 3: Langlebigkeit;0,050;multifunktionale_nutzungsqualitaet;1,0;5,0;1,0000000000000000;0,050000000000000003
+Asphalt;Selbstheilender Asphalt;kosten;138,50;Szenario 1: Ausgewogen;0,075;langlebigkeit_wirtschaftlichkeit;50,0;350,0;0,7050000000000001;0,052875000000000005
+Asphalt;Selbstheilender Asphalt;kosten;138,50;Szenario 2: Kreislauf;0,045;langlebigkeit_wirtschaftlichkeit;50,0;350,0;0,7050000000000001;0,031725000000000003
+Asphalt;Selbstheilender Asphalt;kosten;138,50;Szenario 3: Langlebigkeit;0,150;langlebigkeit_wirtschaftlichkeit;50,0;350,0;0,7050000000000001;0,105750000000000011
+Asphalt;Selbstheilender Asphalt;unterhalt;2,00;Szenario 1: Ausgewogen;0,075;langlebigkeit_wirtschaftlichkeit;2,0;9,0;1,0000000000000000;0,074999999999999997
+Asphalt;Selbstheilender Asphalt;unterhalt;2,00;Szenario 2: Kreislauf;0,045;langlebigkeit_wirtschaftlichkeit;2,0;9,0;1,0000000000000000;0,044999999999999998
+Asphalt;Selbstheilender Asphalt;unterhalt;2,00;Szenario 3: Langlebigkeit;0,150;langlebigkeit_wirtschaftlichkeit;2,0;9,0;1,0000000000000000;0,149999999999999994
+Asphalt;Selbstheilender Asphalt;co2;72,50;Szenario 1: Ausgewogen;0,180;umweltbelastung;17,5;72,5;0,0000000000000000;0,000000000000000000
+Asphalt;Selbstheilender Asphalt;co2;72,50;Szenario 2: Kreislauf;0,210;umweltbelastung;17,5;72,5;0,0000000000000000;0,000000000000000000
+Asphalt;Selbstheilender Asphalt;co2;72,50;Szenario 3: Langlebigkeit;0,090;umweltbelastung;17,5;72,5;0,0000000000000000;0,000000000000000000
+Asphalt;Selbstheilender Asphalt;graueEnergie;375,00;Szenario 1: Ausgewogen;0,120;umweltbelastung;70,0;375,0;0,0000000000000000;0,000000000000000000
+Asphalt;Selbstheilender Asphalt;graueEnergie;375,00;Szenario 2: Kreislauf;0,140;umweltbelastung;70,0;375,0;0,0000000000000000;0,000000000000000000
+Asphalt;Selbstheilender Asphalt;graueEnergie;375,00;Szenario 3: Langlebigkeit;0,060;umweltbelastung;70,0;375,0;0,0000000000000000;0,000000000000000000
+Asphalt;Selbstheilender Asphalt;recyclingfaehigkeit;0,20;Szenario 1: Ausgewogen;0,080;kreislauffaehigkeit;0,2;1,0;0,0000000000000000;0,000000000000000000
+Asphalt;Selbstheilender Asphalt;recyclingfaehigkeit;0,20;Szenario 2: Kreislauf;0,160;kreislauffaehigkeit;0,2;1,0;0,0000000000000000;0,000000000000000000
+Asphalt;Selbstheilender Asphalt;recyclingfaehigkeit;0,20;Szenario 3: Langlebigkeit;0,040;kreislauffaehigkeit;0,2;1,0;0,0000000000000000;0,000000000000000000
+Asphalt;Selbstheilender Asphalt;lokaleMaterialien;0,50;Szenario 1: Ausgewogen;0,060;kreislauffaehigkeit;0,4;1,0;0,1666666666666666;0,009999999999999997
+Asphalt;Selbstheilender Asphalt;lokaleMaterialien;0,50;Szenario 2: Kreislauf;0,120;kreislauffaehigkeit;0,4;1,0;0,1666666666666666;0,019999999999999993
+Asphalt;Selbstheilender Asphalt;lokaleMaterialien;0,50;Szenario 3: Langlebigkeit;0,030;kreislauffaehigkeit;0,4;1,0;0,1666666666666666;0,004999999999999998
+Asphalt;Selbstheilender Asphalt;modulareErneuerbarkeit;1,00;Szenario 1: Ausgewogen;0,060;kreislauffaehigkeit;1,0;5,0;0,0000000000000000;0,000000000000000000
+Asphalt;Selbstheilender Asphalt;modulareErneuerbarkeit;1,00;Szenario 2: Kreislauf;0,120;kreislauffaehigkeit;1,0;5,0;0,0000000000000000;0,000000000000000000
+Asphalt;Selbstheilender Asphalt;modulareErneuerbarkeit;1,00;Szenario 3: Langlebigkeit;0,030;kreislauffaehigkeit;1,0;5,0;0,0000000000000000;0,000000000000000000
+Asphalt;Selbstheilender Asphalt;barrierefreiheit;5,00;Szenario 1: Ausgewogen;0,050;multifunktionale_nutzungsqualitaet;1,0;5,0;1,0000000000000000;0,050000000000000003
+Asphalt;Selbstheilender Asphalt;barrierefreiheit;5,00;Szenario 2: Kreislauf;0,020;multifunktionale_nutzungsqualitaet;1,0;5,0;1,0000000000000000;0,020000000000000000
+Asphalt;Selbstheilender Asphalt;barrierefreiheit;5,00;Szenario 3: Langlebigkeit;0,050;multifunktionale_nutzungsqualitaet;1,0;5,0;1,0000000000000000;0,050000000000000003
+Pflaster;Natursteinpflaster (6-10 mm Fugen);lebensdauer;50,00;Szenario 1: Ausgewogen;0,100;langlebigkeit_wirtschaftlichkeit;15,0;50,0;1,0000000000000000;0,100000000000000006
+Pflaster;Natursteinpflaster (6-10 mm Fugen);lebensdauer;50,00;Szenario 2: Kreislauf;0,060;langlebigkeit_wirtschaftlichkeit;15,0;50,0;1,0000000000000000;0,059999999999999998
+Pflaster;Natursteinpflaster (6-10 mm Fugen);lebensdauer;50,00;Szenario 3: Langlebigkeit;0,200;langlebigkeit_wirtschaftlichkeit;15,0;50,0;1,0000000000000000;0,200000000000000011
+Pflaster;Natursteinpflaster (6-10 mm Fugen);versickerung;0,60;Szenario 1: Ausgewogen;0,075;multifunktionale_nutzungsqualitaet;0,2;1,0;0,4999999999999999;0,037499999999999992
+Pflaster;Natursteinpflaster (6-10 mm Fugen);versickerung;0,60;Szenario 2: Kreislauf;0,030;multifunktionale_nutzungsqualitaet;0,2;1,0;0,4999999999999999;0,014999999999999998
+Pflaster;Natursteinpflaster (6-10 mm Fugen);versickerung;0,60;Szenario 3: Langlebigkeit;0,075;multifunktionale_nutzungsqualitaet;0,2;1,0;0,4999999999999999;0,037499999999999992
+Pflaster;Natursteinpflaster (6-10 mm Fugen);oberflaechentemperatur;47,50;Szenario 1: Ausgewogen;0,075;multifunktionale_nutzungsqualitaet;26,0;58,4;0,3364197530864197;0,025231481481481476
+Pflaster;Natursteinpflaster (6-10 mm Fugen);oberflaechentemperatur;47,50;Szenario 2: Kreislauf;0,030;multifunktionale_nutzungsqualitaet;26,0;58,4;0,3364197530864197;0,010092592592592591
+Pflaster;Natursteinpflaster (6-10 mm Fugen);oberflaechentemperatur;47,50;Szenario 3: Langlebigkeit;0,075;multifunktionale_nutzungsqualitaet;26,0;58,4;0,3364197530864197;0,025231481481481476
+Pflaster;Natursteinpflaster (6-10 mm Fugen);befahrbarkeit;3,00;Szenario 1: Ausgewogen;0,050;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000;0,025000000000000001
+Pflaster;Natursteinpflaster (6-10 mm Fugen);befahrbarkeit;3,00;Szenario 2: Kreislauf;0,020;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000;0,010000000000000000
+Pflaster;Natursteinpflaster (6-10 mm Fugen);befahrbarkeit;3,00;Szenario 3: Langlebigkeit;0,050;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000;0,025000000000000001
+Pflaster;Natursteinpflaster (6-10 mm Fugen);kosten;350,00;Szenario 1: Ausgewogen;0,075;langlebigkeit_wirtschaftlichkeit;50,0;350,0;0,0000000000000000;0,000000000000000000
+Pflaster;Natursteinpflaster (6-10 mm Fugen);kosten;350,00;Szenario 2: Kreislauf;0,045;langlebigkeit_wirtschaftlichkeit;50,0;350,0;0,0000000000000000;0,000000000000000000
+Pflaster;Natursteinpflaster (6-10 mm Fugen);kosten;350,00;Szenario 3: Langlebigkeit;0,150;langlebigkeit_wirtschaftlichkeit;50,0;350,0;0,0000000000000000;0,000000000000000000
+Pflaster;Natursteinpflaster (6-10 mm Fugen);unterhalt;5,00;Szenario 1: Ausgewogen;0,075;langlebigkeit_wirtschaftlichkeit;2,0;9,0;0,5714285714285714;0,042857142857142851
+Pflaster;Natursteinpflaster (6-10 mm Fugen);unterhalt;5,00;Szenario 2: Kreislauf;0,045;langlebigkeit_wirtschaftlichkeit;2,0;9,0;0,5714285714285714;0,025714285714285710
+Pflaster;Natursteinpflaster (6-10 mm Fugen);unterhalt;5,00;Szenario 3: Langlebigkeit;0,150;langlebigkeit_wirtschaftlichkeit;2,0;9,0;0,5714285714285714;0,085714285714285701
+Pflaster;Natursteinpflaster (6-10 mm Fugen);co2;60,00;Szenario 1: Ausgewogen;0,180;umweltbelastung;17,5;72,5;0,2272727272727273;0,040909090909090909
+Pflaster;Natursteinpflaster (6-10 mm Fugen);co2;60,00;Szenario 2: Kreislauf;0,210;umweltbelastung;17,5;72,5;0,2272727272727273;0,047727272727272729
+Pflaster;Natursteinpflaster (6-10 mm Fugen);co2;60,00;Szenario 3: Langlebigkeit;0,090;umweltbelastung;17,5;72,5;0,2272727272727273;0,020454545454545454
+Pflaster;Natursteinpflaster (6-10 mm Fugen);graueEnergie;270,00;Szenario 1: Ausgewogen;0,120;umweltbelastung;70,0;375,0;0,3442622950819673;0,041311475409836068
+Pflaster;Natursteinpflaster (6-10 mm Fugen);graueEnergie;270,00;Szenario 2: Kreislauf;0,140;umweltbelastung;70,0;375,0;0,3442622950819673;0,048196721311475420
+Pflaster;Natursteinpflaster (6-10 mm Fugen);graueEnergie;270,00;Szenario 3: Langlebigkeit;0,060;umweltbelastung;70,0;375,0;0,3442622950819673;0,020655737704918034
+Pflaster;Natursteinpflaster (6-10 mm Fugen);recyclingfaehigkeit;1,00;Szenario 1: Ausgewogen;0,080;kreislauffaehigkeit;0,2;1,0;1,0000000000000000;0,080000000000000002
+Pflaster;Natursteinpflaster (6-10 mm Fugen);recyclingfaehigkeit;1,00;Szenario 2: Kreislauf;0,160;kreislauffaehigkeit;0,2;1,0;1,0000000000000000;0,160000000000000003
+Pflaster;Natursteinpflaster (6-10 mm Fugen);recyclingfaehigkeit;1,00;Szenario 3: Langlebigkeit;0,040;kreislauffaehigkeit;0,2;1,0;1,0000000000000000;0,040000000000000001
+Pflaster;Natursteinpflaster (6-10 mm Fugen);lokaleMaterialien;0,40;Szenario 1: Ausgewogen;0,060;kreislauffaehigkeit;0,4;1,0;0,0000000000000000;0,000000000000000000
+Pflaster;Natursteinpflaster (6-10 mm Fugen);lokaleMaterialien;0,40;Szenario 2: Kreislauf;0,120;kreislauffaehigkeit;0,4;1,0;0,0000000000000000;0,000000000000000000
+Pflaster;Natursteinpflaster (6-10 mm Fugen);lokaleMaterialien;0,40;Szenario 3: Langlebigkeit;0,030;kreislauffaehigkeit;0,4;1,0;0,0000000000000000;0,000000000000000000
+Pflaster;Natursteinpflaster (6-10 mm Fugen);modulareErneuerbarkeit;5,00;Szenario 1: Ausgewogen;0,060;kreislauffaehigkeit;1,0;5,0;1,0000000000000000;0,059999999999999998
+Pflaster;Natursteinpflaster (6-10 mm Fugen);modulareErneuerbarkeit;5,00;Szenario 2: Kreislauf;0,120;kreislauffaehigkeit;1,0;5,0;1,0000000000000000;0,119999999999999996
+Pflaster;Natursteinpflaster (6-10 mm Fugen);modulareErneuerbarkeit;5,00;Szenario 3: Langlebigkeit;0,030;kreislauffaehigkeit;1,0;5,0;1,0000000000000000;0,029999999999999999
+Pflaster;Natursteinpflaster (6-10 mm Fugen);barrierefreiheit;3,00;Szenario 1: Ausgewogen;0,050;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000;0,025000000000000001
+Pflaster;Natursteinpflaster (6-10 mm Fugen);barrierefreiheit;3,00;Szenario 2: Kreislauf;0,020;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000;0,010000000000000000
+Pflaster;Natursteinpflaster (6-10 mm Fugen);barrierefreiheit;3,00;Szenario 3: Langlebigkeit;0,050;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000;0,025000000000000001
+Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);lebensdauer;35,00;Szenario 1: Ausgewogen;0,100;langlebigkeit_wirtschaftlichkeit;15,0;50,0;0,5714285714285714;0,057142857142857141
+Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);lebensdauer;35,00;Szenario 2: Kreislauf;0,060;langlebigkeit_wirtschaftlichkeit;15,0;50,0;0,5714285714285714;0,034285714285714280
+Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);lebensdauer;35,00;Szenario 3: Langlebigkeit;0,200;langlebigkeit_wirtschaftlichkeit;15,0;50,0;0,5714285714285714;0,114285714285714282
+Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);versickerung;1,00;Szenario 1: Ausgewogen;0,075;multifunktionale_nutzungsqualitaet;0,2;1,0;1,0000000000000000;0,074999999999999997
+Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);versickerung;1,00;Szenario 2: Kreislauf;0,030;multifunktionale_nutzungsqualitaet;0,2;1,0;1,0000000000000000;0,029999999999999999
+Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);versickerung;1,00;Szenario 3: Langlebigkeit;0,075;multifunktionale_nutzungsqualitaet;0,2;1,0;1,0000000000000000;0,074999999999999997
+Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);oberflaechentemperatur;57,50;Szenario 1: Ausgewogen;0,075;multifunktionale_nutzungsqualitaet;26,0;58,4;0,0277777777777778;0,002083333333333334
+Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);oberflaechentemperatur;57,50;Szenario 2: Kreislauf;0,030;multifunktionale_nutzungsqualitaet;26,0;58,4;0,0277777777777778;0,000833333333333334
+Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);oberflaechentemperatur;57,50;Szenario 3: Langlebigkeit;0,075;multifunktionale_nutzungsqualitaet;26,0;58,4;0,0277777777777778;0,002083333333333334
+Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);befahrbarkeit;4,00;Szenario 1: Ausgewogen;0,050;multifunktionale_nutzungsqualitaet;1,0;5,0;0,7500000000000000;0,037500000000000006
+Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);befahrbarkeit;4,00;Szenario 2: Kreislauf;0,020;multifunktionale_nutzungsqualitaet;1,0;5,0;0,7500000000000000;0,014999999999999999
+Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);befahrbarkeit;4,00;Szenario 3: Langlebigkeit;0,050;multifunktionale_nutzungsqualitaet;1,0;5,0;0,7500000000000000;0,037500000000000006
+Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);kosten;100,00;Szenario 1: Ausgewogen;0,075;langlebigkeit_wirtschaftlichkeit;50,0;350,0;0,8333333333333334;0,062500000000000000
+Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);kosten;100,00;Szenario 2: Kreislauf;0,045;langlebigkeit_wirtschaftlichkeit;50,0;350,0;0,8333333333333334;0,037499999999999999
+Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);kosten;100,00;Szenario 3: Langlebigkeit;0,150;langlebigkeit_wirtschaftlichkeit;50,0;350,0;0,8333333333333334;0,125000000000000000
+Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);unterhalt;4,00;Szenario 1: Ausgewogen;0,075;langlebigkeit_wirtschaftlichkeit;2,0;9,0;0,7142857142857143;0,053571428571428568
+Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);unterhalt;4,00;Szenario 2: Kreislauf;0,045;langlebigkeit_wirtschaftlichkeit;2,0;9,0;0,7142857142857143;0,032142857142857140
+Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);unterhalt;4,00;Szenario 3: Langlebigkeit;0,150;langlebigkeit_wirtschaftlichkeit;2,0;9,0;0,7142857142857143;0,107142857142857137
+Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);co2;55,00;Szenario 1: Ausgewogen;0,180;umweltbelastung;17,5;72,5;0,3181818181818182;0,057272727272727281
+Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);co2;55,00;Szenario 2: Kreislauf;0,210;umweltbelastung;17,5;72,5;0,3181818181818182;0,066818181818181832
+Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);co2;55,00;Szenario 3: Langlebigkeit;0,090;umweltbelastung;17,5;72,5;0,3181818181818182;0,028636363636363640
+Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);graueEnergie;135,00;Szenario 1: Ausgewogen;0,120;umweltbelastung;70,0;375,0;0,7868852459016393;0,094426229508196721
+Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);graueEnergie;135,00;Szenario 2: Kreislauf;0,140;umweltbelastung;70,0;375,0;0,7868852459016393;0,110163934426229515
+Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);graueEnergie;135,00;Szenario 3: Langlebigkeit;0,060;umweltbelastung;70,0;375,0;0,7868852459016393;0,047213114754098361
+Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);recyclingfaehigkeit;0,40;Szenario 1: Ausgewogen;0,080;kreislauffaehigkeit;0,2;1,0;0,2500000000000000;0,020000000000000000
+Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);recyclingfaehigkeit;0,40;Szenario 2: Kreislauf;0,160;kreislauffaehigkeit;0,2;1,0;0,2500000000000000;0,040000000000000001
+Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);recyclingfaehigkeit;0,40;Szenario 3: Langlebigkeit;0,040;kreislauffaehigkeit;0,2;1,0;0,2500000000000000;0,010000000000000000
+Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);lokaleMaterialien;0,80;Szenario 1: Ausgewogen;0,060;kreislauffaehigkeit;0,4;1,0;0,6666666666666667;0,040000000000000001
+Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);lokaleMaterialien;0,80;Szenario 2: Kreislauf;0,120;kreislauffaehigkeit;0,4;1,0;0,6666666666666667;0,080000000000000002
+Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);lokaleMaterialien;0,80;Szenario 3: Langlebigkeit;0,030;kreislauffaehigkeit;0,4;1,0;0,6666666666666667;0,020000000000000000
+Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);modulareErneuerbarkeit;5,00;Szenario 1: Ausgewogen;0,060;kreislauffaehigkeit;1,0;5,0;1,0000000000000000;0,059999999999999998
+Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);modulareErneuerbarkeit;5,00;Szenario 2: Kreislauf;0,120;kreislauffaehigkeit;1,0;5,0;1,0000000000000000;0,119999999999999996
+Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);modulareErneuerbarkeit;5,00;Szenario 3: Langlebigkeit;0,030;kreislauffaehigkeit;1,0;5,0;1,0000000000000000;0,029999999999999999
+Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);barrierefreiheit;5,00;Szenario 1: Ausgewogen;0,050;multifunktionale_nutzungsqualitaet;1,0;5,0;1,0000000000000000;0,050000000000000003
+Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);barrierefreiheit;5,00;Szenario 2: Kreislauf;0,020;multifunktionale_nutzungsqualitaet;1,0;5,0;1,0000000000000000;0,020000000000000000
+Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);barrierefreiheit;5,00;Szenario 3: Langlebigkeit;0,050;multifunktionale_nutzungsqualitaet;1,0;5,0;1,0000000000000000;0,050000000000000003
+Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);lebensdauer;30,00;Szenario 1: Ausgewogen;0,100;langlebigkeit_wirtschaftlichkeit;15,0;50,0;0,4285714285714285;0,042857142857142858
+Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);lebensdauer;30,00;Szenario 2: Kreislauf;0,060;langlebigkeit_wirtschaftlichkeit;15,0;50,0;0,4285714285714285;0,025714285714285710
+Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);lebensdauer;30,00;Szenario 3: Langlebigkeit;0,200;langlebigkeit_wirtschaftlichkeit;15,0;50,0;0,4285714285714285;0,085714285714285715
+Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);versickerung;0,35;Szenario 1: Ausgewogen;0,075;multifunktionale_nutzungsqualitaet;0,2;1,0;0,1874999999999999;0,014062499999999995
+Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);versickerung;0,35;Szenario 2: Kreislauf;0,030;multifunktionale_nutzungsqualitaet;0,2;1,0;0,1874999999999999;0,005624999999999998
+Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);versickerung;0,35;Szenario 3: Langlebigkeit;0,075;multifunktionale_nutzungsqualitaet;0,2;1,0;0,1874999999999999;0,014062499999999995
+Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);oberflaechentemperatur;50,00;Szenario 1: Ausgewogen;0,075;multifunktionale_nutzungsqualitaet;26,0;58,4;0,2592592592592592;0,019444444444444438
+Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);oberflaechentemperatur;50,00;Szenario 2: Kreislauf;0,030;multifunktionale_nutzungsqualitaet;26,0;58,4;0,2592592592592592;0,007777777777777776
+Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);oberflaechentemperatur;50,00;Szenario 3: Langlebigkeit;0,075;multifunktionale_nutzungsqualitaet;26,0;58,4;0,2592592592592592;0,019444444444444438
+Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);befahrbarkeit;3,00;Szenario 1: Ausgewogen;0,050;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000;0,025000000000000001
+Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);befahrbarkeit;3,00;Szenario 2: Kreislauf;0,020;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000;0,010000000000000000
+Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);befahrbarkeit;3,00;Szenario 3: Langlebigkeit;0,050;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000;0,025000000000000001
+Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);kosten;125,00;Szenario 1: Ausgewogen;0,075;langlebigkeit_wirtschaftlichkeit;50,0;350,0;0,7500000000000000;0,056249999999999994
+Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);kosten;125,00;Szenario 2: Kreislauf;0,045;langlebigkeit_wirtschaftlichkeit;50,0;350,0;0,7500000000000000;0,033750000000000002
+Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);kosten;125,00;Szenario 3: Langlebigkeit;0,150;langlebigkeit_wirtschaftlichkeit;50,0;350,0;0,7500000000000000;0,112499999999999989
+Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);unterhalt;7,00;Szenario 1: Ausgewogen;0,075;langlebigkeit_wirtschaftlichkeit;2,0;9,0;0,2857142857142857;0,021428571428571425
+Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);unterhalt;7,00;Szenario 2: Kreislauf;0,045;langlebigkeit_wirtschaftlichkeit;2,0;9,0;0,2857142857142857;0,012857142857142855
+Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);unterhalt;7,00;Szenario 3: Langlebigkeit;0,150;langlebigkeit_wirtschaftlichkeit;2,0;9,0;0,2857142857142857;0,042857142857142851
+Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);co2;50,00;Szenario 1: Ausgewogen;0,180;umweltbelastung;17,5;72,5;0,4090909090909091;0,073636363636363625
+Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);co2;50,00;Szenario 2: Kreislauf;0,210;umweltbelastung;17,5;72,5;0,4090909090909091;0,085909090909090893
+Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);co2;50,00;Szenario 3: Langlebigkeit;0,090;umweltbelastung;17,5;72,5;0,4090909090909091;0,036818181818181812
+Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);graueEnergie;175,00;Szenario 1: Ausgewogen;0,120;umweltbelastung;70,0;375,0;0,6557377049180328;0,078688524590163941
+Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);graueEnergie;175,00;Szenario 2: Kreislauf;0,140;umweltbelastung;70,0;375,0;0,6557377049180328;0,091803278688524614
+Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);graueEnergie;175,00;Szenario 3: Langlebigkeit;0,060;umweltbelastung;70,0;375,0;0,6557377049180328;0,039344262295081971
+Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);recyclingfaehigkeit;0,40;Szenario 1: Ausgewogen;0,080;kreislauffaehigkeit;0,2;1,0;0,2500000000000000;0,020000000000000000
+Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);recyclingfaehigkeit;0,40;Szenario 2: Kreislauf;0,160;kreislauffaehigkeit;0,2;1,0;0,2500000000000000;0,040000000000000001
+Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);recyclingfaehigkeit;0,40;Szenario 3: Langlebigkeit;0,040;kreislauffaehigkeit;0,2;1,0;0,2500000000000000;0,010000000000000000
+Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);lokaleMaterialien;0,80;Szenario 1: Ausgewogen;0,060;kreislauffaehigkeit;0,4;1,0;0,6666666666666667;0,040000000000000001
+Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);lokaleMaterialien;0,80;Szenario 2: Kreislauf;0,120;kreislauffaehigkeit;0,4;1,0;0,6666666666666667;0,080000000000000002
+Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);lokaleMaterialien;0,80;Szenario 3: Langlebigkeit;0,030;kreislauffaehigkeit;0,4;1,0;0,6666666666666667;0,020000000000000000
+Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);modulareErneuerbarkeit;5,00;Szenario 1: Ausgewogen;0,060;kreislauffaehigkeit;1,0;5,0;1,0000000000000000;0,059999999999999998
+Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);modulareErneuerbarkeit;5,00;Szenario 2: Kreislauf;0,120;kreislauffaehigkeit;1,0;5,0;1,0000000000000000;0,119999999999999996
+Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);modulareErneuerbarkeit;5,00;Szenario 3: Langlebigkeit;0,030;kreislauffaehigkeit;1,0;5,0;1,0000000000000000;0,029999999999999999
+Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);barrierefreiheit;3,00;Szenario 1: Ausgewogen;0,050;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000;0,025000000000000001
+Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);barrierefreiheit;3,00;Szenario 2: Kreislauf;0,020;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000;0,010000000000000000
+Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);barrierefreiheit;3,00;Szenario 3: Langlebigkeit;0,050;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000;0,025000000000000001
+Sickerbeläge;Chaussierung;lebensdauer;17,50;Szenario 1: Ausgewogen;0,100;langlebigkeit_wirtschaftlichkeit;15,0;50,0;0,0714285714285714;0,007142857142857143
+Sickerbeläge;Chaussierung;lebensdauer;17,50;Szenario 2: Kreislauf;0,060;langlebigkeit_wirtschaftlichkeit;15,0;50,0;0,0714285714285714;0,004285714285714285
+Sickerbeläge;Chaussierung;lebensdauer;17,50;Szenario 3: Langlebigkeit;0,200;langlebigkeit_wirtschaftlichkeit;15,0;50,0;0,0714285714285714;0,014285714285714285
+Sickerbeläge;Chaussierung;versickerung;0,50;Szenario 1: Ausgewogen;0,075;multifunktionale_nutzungsqualitaet;0,2;1,0;0,3749999999999999;0,028124999999999994
+Sickerbeläge;Chaussierung;versickerung;0,50;Szenario 2: Kreislauf;0,030;multifunktionale_nutzungsqualitaet;0,2;1,0;0,3749999999999999;0,011249999999999998
+Sickerbeläge;Chaussierung;versickerung;0,50;Szenario 3: Langlebigkeit;0,075;multifunktionale_nutzungsqualitaet;0,2;1,0;0,3749999999999999;0,028124999999999994
+Sickerbeläge;Chaussierung;oberflaechentemperatur;46,50;Szenario 1: Ausgewogen;0,075;multifunktionale_nutzungsqualitaet;26,0;58,4;0,3672839506172839;0,027546296296296294
+Sickerbeläge;Chaussierung;oberflaechentemperatur;46,50;Szenario 2: Kreislauf;0,030;multifunktionale_nutzungsqualitaet;26,0;58,4;0,3672839506172839;0,011018518518518518
+Sickerbeläge;Chaussierung;oberflaechentemperatur;46,50;Szenario 3: Langlebigkeit;0,075;multifunktionale_nutzungsqualitaet;26,0;58,4;0,3672839506172839;0,027546296296296294
+Sickerbeläge;Chaussierung;befahrbarkeit;1,00;Szenario 1: Ausgewogen;0,050;multifunktionale_nutzungsqualitaet;1,0;5,0;0,0000000000000000;0,000000000000000000
+Sickerbeläge;Chaussierung;befahrbarkeit;1,00;Szenario 2: Kreislauf;0,020;multifunktionale_nutzungsqualitaet;1,0;5,0;0,0000000000000000;0,000000000000000000
+Sickerbeläge;Chaussierung;befahrbarkeit;1,00;Szenario 3: Langlebigkeit;0,050;multifunktionale_nutzungsqualitaet;1,0;5,0;0,0000000000000000;0,000000000000000000
+Sickerbeläge;Chaussierung;kosten;50,00;Szenario 1: Ausgewogen;0,075;langlebigkeit_wirtschaftlichkeit;50,0;350,0;1,0000000000000000;0,074999999999999997
+Sickerbeläge;Chaussierung;kosten;50,00;Szenario 2: Kreislauf;0,045;langlebigkeit_wirtschaftlichkeit;50,0;350,0;1,0000000000000000;0,044999999999999998
+Sickerbeläge;Chaussierung;kosten;50,00;Szenario 3: Langlebigkeit;0,150;langlebigkeit_wirtschaftlichkeit;50,0;350,0;1,0000000000000000;0,149999999999999994
+Sickerbeläge;Chaussierung;unterhalt;3,00;Szenario 1: Ausgewogen;0,075;langlebigkeit_wirtschaftlichkeit;2,0;9,0;0,8571428571428572;0,064285714285714293
+Sickerbeläge;Chaussierung;unterhalt;3,00;Szenario 2: Kreislauf;0,045;langlebigkeit_wirtschaftlichkeit;2,0;9,0;0,8571428571428572;0,038571428571428576
+Sickerbeläge;Chaussierung;unterhalt;3,00;Szenario 3: Langlebigkeit;0,150;langlebigkeit_wirtschaftlichkeit;2,0;9,0;0,8571428571428572;0,128571428571428586
+Sickerbeläge;Chaussierung;co2;17,50;Szenario 1: Ausgewogen;0,180;umweltbelastung;17,5;72,5;1,0000000000000000;0,179999999999999993
+Sickerbeläge;Chaussierung;co2;17,50;Szenario 2: Kreislauf;0,210;umweltbelastung;17,5;72,5;1,0000000000000000;0,209999999999999992
+Sickerbeläge;Chaussierung;co2;17,50;Szenario 3: Langlebigkeit;0,090;umweltbelastung;17,5;72,5;1,0000000000000000;0,089999999999999997
+Sickerbeläge;Chaussierung;graueEnergie;70,00;Szenario 1: Ausgewogen;0,120;umweltbelastung;70,0;375,0;1,0000000000000000;0,119999999999999996
+Sickerbeläge;Chaussierung;graueEnergie;70,00;Szenario 2: Kreislauf;0,140;umweltbelastung;70,0;375,0;1,0000000000000000;0,140000000000000013
+Sickerbeläge;Chaussierung;graueEnergie;70,00;Szenario 3: Langlebigkeit;0,060;umweltbelastung;70,0;375,0;1,0000000000000000;0,059999999999999998
+Sickerbeläge;Chaussierung;recyclingfaehigkeit;1,00;Szenario 1: Ausgewogen;0,080;kreislauffaehigkeit;0,2;1,0;1,0000000000000000;0,080000000000000002
+Sickerbeläge;Chaussierung;recyclingfaehigkeit;1,00;Szenario 2: Kreislauf;0,160;kreislauffaehigkeit;0,2;1,0;1,0000000000000000;0,160000000000000003
+Sickerbeläge;Chaussierung;recyclingfaehigkeit;1,00;Szenario 3: Langlebigkeit;0,040;kreislauffaehigkeit;0,2;1,0;1,0000000000000000;0,040000000000000001
+Sickerbeläge;Chaussierung;lokaleMaterialien;0,95;Szenario 1: Ausgewogen;0,060;kreislauffaehigkeit;0,4;1,0;0,9166666666666666;0,054999999999999993
+Sickerbeläge;Chaussierung;lokaleMaterialien;0,95;Szenario 2: Kreislauf;0,120;kreislauffaehigkeit;0,4;1,0;0,9166666666666666;0,109999999999999987
+Sickerbeläge;Chaussierung;lokaleMaterialien;0,95;Szenario 3: Langlebigkeit;0,030;kreislauffaehigkeit;0,4;1,0;0,9166666666666666;0,027499999999999997
+Sickerbeläge;Chaussierung;modulareErneuerbarkeit;5,00;Szenario 1: Ausgewogen;0,060;kreislauffaehigkeit;1,0;5,0;1,0000000000000000;0,059999999999999998
+Sickerbeläge;Chaussierung;modulareErneuerbarkeit;5,00;Szenario 2: Kreislauf;0,120;kreislauffaehigkeit;1,0;5,0;1,0000000000000000;0,119999999999999996
+Sickerbeläge;Chaussierung;modulareErneuerbarkeit;5,00;Szenario 3: Langlebigkeit;0,030;kreislauffaehigkeit;1,0;5,0;1,0000000000000000;0,029999999999999999
+Sickerbeläge;Chaussierung;barrierefreiheit;1,00;Szenario 1: Ausgewogen;0,050;multifunktionale_nutzungsqualitaet;1,0;5,0;0,0000000000000000;0,000000000000000000
+Sickerbeläge;Chaussierung;barrierefreiheit;1,00;Szenario 2: Kreislauf;0,020;multifunktionale_nutzungsqualitaet;1,0;5,0;0,0000000000000000;0,000000000000000000
+Sickerbeläge;Chaussierung;barrierefreiheit;1,00;Szenario 3: Langlebigkeit;0,050;multifunktionale_nutzungsqualitaet;1,0;5,0;0,0000000000000000;0,000000000000000000
+Sickerbeläge;Kiesrasen;lebensdauer;15,00;Szenario 1: Ausgewogen;0,100;langlebigkeit_wirtschaftlichkeit;15,0;50,0;0,0000000000000000;0,000000000000000000
+Sickerbeläge;Kiesrasen;lebensdauer;15,00;Szenario 2: Kreislauf;0,060;langlebigkeit_wirtschaftlichkeit;15,0;50,0;0,0000000000000000;0,000000000000000000
+Sickerbeläge;Kiesrasen;lebensdauer;15,00;Szenario 3: Langlebigkeit;0,200;langlebigkeit_wirtschaftlichkeit;15,0;50,0;0,0000000000000000;0,000000000000000000
+Sickerbeläge;Kiesrasen;versickerung;0,20;Szenario 1: Ausgewogen;0,075;multifunktionale_nutzungsqualitaet;0,2;1,0;0,0000000000000000;0,000000000000000000
+Sickerbeläge;Kiesrasen;versickerung;0,20;Szenario 2: Kreislauf;0,030;multifunktionale_nutzungsqualitaet;0,2;1,0;0,0000000000000000;0,000000000000000000
+Sickerbeläge;Kiesrasen;versickerung;0,20;Szenario 3: Langlebigkeit;0,075;multifunktionale_nutzungsqualitaet;0,2;1,0;0,0000000000000000;0,000000000000000000
+Sickerbeläge;Kiesrasen;oberflaechentemperatur;49,00;Szenario 1: Ausgewogen;0,075;multifunktionale_nutzungsqualitaet;26,0;58,4;0,2901234567901234;0,021759259259259256
+Sickerbeläge;Kiesrasen;oberflaechentemperatur;49,00;Szenario 2: Kreislauf;0,030;multifunktionale_nutzungsqualitaet;26,0;58,4;0,2901234567901234;0,008703703703703701
+Sickerbeläge;Kiesrasen;oberflaechentemperatur;49,00;Szenario 3: Langlebigkeit;0,075;multifunktionale_nutzungsqualitaet;26,0;58,4;0,2901234567901234;0,021759259259259256
+Sickerbeläge;Kiesrasen;befahrbarkeit;3,00;Szenario 1: Ausgewogen;0,050;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000;0,025000000000000001
+Sickerbeläge;Kiesrasen;befahrbarkeit;3,00;Szenario 2: Kreislauf;0,020;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000;0,010000000000000000
+Sickerbeläge;Kiesrasen;befahrbarkeit;3,00;Szenario 3: Langlebigkeit;0,050;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000;0,025000000000000001
+Sickerbeläge;Kiesrasen;kosten;95,00;Szenario 1: Ausgewogen;0,075;langlebigkeit_wirtschaftlichkeit;50,0;350,0;0,8500000000000000;0,063750000000000001
+Sickerbeläge;Kiesrasen;kosten;95,00;Szenario 2: Kreislauf;0,045;langlebigkeit_wirtschaftlichkeit;50,0;350,0;0,8500000000000000;0,038249999999999999
+Sickerbeläge;Kiesrasen;kosten;95,00;Szenario 3: Langlebigkeit;0,150;langlebigkeit_wirtschaftlichkeit;50,0;350,0;0,8500000000000000;0,127500000000000002
+Sickerbeläge;Kiesrasen;unterhalt;9,00;Szenario 1: Ausgewogen;0,075;langlebigkeit_wirtschaftlichkeit;2,0;9,0;0,0000000000000000;0,000000000000000000
+Sickerbeläge;Kiesrasen;unterhalt;9,00;Szenario 2: Kreislauf;0,045;langlebigkeit_wirtschaftlichkeit;2,0;9,0;0,0000000000000000;0,000000000000000000
+Sickerbeläge;Kiesrasen;unterhalt;9,00;Szenario 3: Langlebigkeit;0,150;langlebigkeit_wirtschaftlichkeit;2,0;9,0;0,0000000000000000;0,000000000000000000
+Sickerbeläge;Kiesrasen;co2;25,00;Szenario 1: Ausgewogen;0,180;umweltbelastung;17,5;72,5;0,8636363636363636;0,155454545454545456
+Sickerbeläge;Kiesrasen;co2;25,00;Szenario 2: Kreislauf;0,210;umweltbelastung;17,5;72,5;0,8636363636363636;0,181363636363636366
+Sickerbeläge;Kiesrasen;co2;25,00;Szenario 3: Langlebigkeit;0,090;umweltbelastung;17,5;72,5;0,8636363636363636;0,077727272727272728
+Sickerbeläge;Kiesrasen;graueEnergie;100,00;Szenario 1: Ausgewogen;0,120;umweltbelastung;70,0;375,0;0,9016393442622951;0,108196721311475411
+Sickerbeläge;Kiesrasen;graueEnergie;100,00;Szenario 2: Kreislauf;0,140;umweltbelastung;70,0;375,0;0,9016393442622951;0,126229508196721324
+Sickerbeläge;Kiesrasen;graueEnergie;100,00;Szenario 3: Langlebigkeit;0,060;umweltbelastung;70,0;375,0;0,9016393442622951;0,054098360655737705
+Sickerbeläge;Kiesrasen;recyclingfaehigkeit;1,00;Szenario 1: Ausgewogen;0,080;kreislauffaehigkeit;0,2;1,0;1,0000000000000000;0,080000000000000002
+Sickerbeläge;Kiesrasen;recyclingfaehigkeit;1,00;Szenario 2: Kreislauf;0,160;kreislauffaehigkeit;0,2;1,0;1,0000000000000000;0,160000000000000003
+Sickerbeläge;Kiesrasen;recyclingfaehigkeit;1,00;Szenario 3: Langlebigkeit;0,040;kreislauffaehigkeit;0,2;1,0;1,0000000000000000;0,040000000000000001
+Sickerbeläge;Kiesrasen;lokaleMaterialien;0,90;Szenario 1: Ausgewogen;0,060;kreislauffaehigkeit;0,4;1,0;0,8333333333333334;0,050000000000000003
+Sickerbeläge;Kiesrasen;lokaleMaterialien;0,90;Szenario 2: Kreislauf;0,120;kreislauffaehigkeit;0,4;1,0;0,8333333333333334;0,100000000000000006
+Sickerbeläge;Kiesrasen;lokaleMaterialien;0,90;Szenario 3: Langlebigkeit;0,030;kreislauffaehigkeit;0,4;1,0;0,8333333333333334;0,025000000000000001
+Sickerbeläge;Kiesrasen;modulareErneuerbarkeit;3,00;Szenario 1: Ausgewogen;0,060;kreislauffaehigkeit;1,0;5,0;0,5000000000000000;0,029999999999999999
+Sickerbeläge;Kiesrasen;modulareErneuerbarkeit;3,00;Szenario 2: Kreislauf;0,120;kreislauffaehigkeit;1,0;5,0;0,5000000000000000;0,059999999999999998
+Sickerbeläge;Kiesrasen;modulareErneuerbarkeit;3,00;Szenario 3: Langlebigkeit;0,030;kreislauffaehigkeit;1,0;5,0;0,5000000000000000;0,014999999999999999
+Sickerbeläge;Kiesrasen;barrierefreiheit;1,00;Szenario 1: Ausgewogen;0,050;multifunktionale_nutzungsqualitaet;1,0;5,0;0,0000000000000000;0,000000000000000000
+Sickerbeläge;Kiesrasen;barrierefreiheit;1,00;Szenario 2: Kreislauf;0,020;multifunktionale_nutzungsqualitaet;1,0;5,0;0,0000000000000000;0,000000000000000000
+Sickerbeläge;Kiesrasen;barrierefreiheit;1,00;Szenario 3: Langlebigkeit;0,050;multifunktionale_nutzungsqualitaet;1,0;5,0;0,0000000000000000;0,000000000000000000
+Sickerbeläge;Rasengittersteine;lebensdauer;25,00;Szenario 1: Ausgewogen;0,100;langlebigkeit_wirtschaftlichkeit;15,0;50,0;0,2857142857142857;0,028571428571428571
+Sickerbeläge;Rasengittersteine;lebensdauer;25,00;Szenario 2: Kreislauf;0,060;langlebigkeit_wirtschaftlichkeit;15,0;50,0;0,2857142857142857;0,017142857142857140
+Sickerbeläge;Rasengittersteine;lebensdauer;25,00;Szenario 3: Langlebigkeit;0,200;langlebigkeit_wirtschaftlichkeit;15,0;50,0;0,2857142857142857;0,057142857142857141
+Sickerbeläge;Rasengittersteine;versickerung;0,40;Szenario 1: Ausgewogen;0,075;multifunktionale_nutzungsqualitaet;0,2;1,0;0,2500000000000000;0,018749999999999999
+Sickerbeläge;Rasengittersteine;versickerung;0,40;Szenario 2: Kreislauf;0,030;multifunktionale_nutzungsqualitaet;0,2;1,0;0,2500000000000000;0,007500000000000000
+Sickerbeläge;Rasengittersteine;versickerung;0,40;Szenario 3: Langlebigkeit;0,075;multifunktionale_nutzungsqualitaet;0,2;1,0;0,2500000000000000;0,018749999999999999
+Sickerbeläge;Rasengittersteine;oberflaechentemperatur;26,00;Szenario 1: Ausgewogen;0,075;multifunktionale_nutzungsqualitaet;26,0;58,4;1,0000000000000000;0,074999999999999997
+Sickerbeläge;Rasengittersteine;oberflaechentemperatur;26,00;Szenario 2: Kreislauf;0,030;multifunktionale_nutzungsqualitaet;26,0;58,4;1,0000000000000000;0,029999999999999999
+Sickerbeläge;Rasengittersteine;oberflaechentemperatur;26,00;Szenario 3: Langlebigkeit;0,075;multifunktionale_nutzungsqualitaet;26,0;58,4;1,0000000000000000;0,074999999999999997
+Sickerbeläge;Rasengittersteine;befahrbarkeit;3,00;Szenario 1: Ausgewogen;0,050;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000;0,025000000000000001
+Sickerbeläge;Rasengittersteine;befahrbarkeit;3,00;Szenario 2: Kreislauf;0,020;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000;0,010000000000000000
+Sickerbeläge;Rasengittersteine;befahrbarkeit;3,00;Szenario 3: Langlebigkeit;0,050;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000;0,025000000000000001
+Sickerbeläge;Rasengittersteine;kosten;100,00;Szenario 1: Ausgewogen;0,075;langlebigkeit_wirtschaftlichkeit;50,0;350,0;0,8333333333333334;0,062500000000000000
+Sickerbeläge;Rasengittersteine;kosten;100,00;Szenario 2: Kreislauf;0,045;langlebigkeit_wirtschaftlichkeit;50,0;350,0;0,8333333333333334;0,037499999999999999
+Sickerbeläge;Rasengittersteine;kosten;100,00;Szenario 3: Langlebigkeit;0,150;langlebigkeit_wirtschaftlichkeit;50,0;350,0;0,8333333333333334;0,125000000000000000
+Sickerbeläge;Rasengittersteine;unterhalt;6,00;Szenario 1: Ausgewogen;0,075;langlebigkeit_wirtschaftlichkeit;2,0;9,0;0,4285714285714286;0,032142857142857147
+Sickerbeläge;Rasengittersteine;unterhalt;6,00;Szenario 2: Kreislauf;0,045;langlebigkeit_wirtschaftlichkeit;2,0;9,0;0,4285714285714286;0,019285714285714288
+Sickerbeläge;Rasengittersteine;unterhalt;6,00;Szenario 3: Langlebigkeit;0,150;langlebigkeit_wirtschaftlichkeit;2,0;9,0;0,4285714285714286;0,064285714285714293
+Sickerbeläge;Rasengittersteine;co2;45,00;Szenario 1: Ausgewogen;0,180;umweltbelastung;17,5;72,5;0,5000000000000000;0,089999999999999997
+Sickerbeläge;Rasengittersteine;co2;45,00;Szenario 2: Kreislauf;0,210;umweltbelastung;17,5;72,5;0,5000000000000000;0,104999999999999996
+Sickerbeläge;Rasengittersteine;co2;45,00;Szenario 3: Langlebigkeit;0,090;umweltbelastung;17,5;72,5;0,5000000000000000;0,044999999999999998
+Sickerbeläge;Rasengittersteine;graueEnergie;137,50;Szenario 1: Ausgewogen;0,120;umweltbelastung;70,0;375,0;0,7786885245901639;0,093442622950819662
+Sickerbeläge;Rasengittersteine;graueEnergie;137,50;Szenario 2: Kreislauf;0,140;umweltbelastung;70,0;375,0;0,7786885245901639;0,109016393442622955
+Sickerbeläge;Rasengittersteine;graueEnergie;137,50;Szenario 3: Langlebigkeit;0,060;umweltbelastung;70,0;375,0;0,7786885245901639;0,046721311475409831
+Sickerbeläge;Rasengittersteine;recyclingfaehigkeit;0,40;Szenario 1: Ausgewogen;0,080;kreislauffaehigkeit;0,2;1,0;0,2500000000000000;0,020000000000000000
+Sickerbeläge;Rasengittersteine;recyclingfaehigkeit;0,40;Szenario 2: Kreislauf;0,160;kreislauffaehigkeit;0,2;1,0;0,2500000000000000;0,040000000000000001
+Sickerbeläge;Rasengittersteine;recyclingfaehigkeit;0,40;Szenario 3: Langlebigkeit;0,040;kreislauffaehigkeit;0,2;1,0;0,2500000000000000;0,010000000000000000
+Sickerbeläge;Rasengittersteine;lokaleMaterialien;0,80;Szenario 1: Ausgewogen;0,060;kreislauffaehigkeit;0,4;1,0;0,6666666666666667;0,040000000000000001
+Sickerbeläge;Rasengittersteine;lokaleMaterialien;0,80;Szenario 2: Kreislauf;0,120;kreislauffaehigkeit;0,4;1,0;0,6666666666666667;0,080000000000000002
+Sickerbeläge;Rasengittersteine;lokaleMaterialien;0,80;Szenario 3: Langlebigkeit;0,030;kreislauffaehigkeit;0,4;1,0;0,6666666666666667;0,020000000000000000
+Sickerbeläge;Rasengittersteine;modulareErneuerbarkeit;3,00;Szenario 1: Ausgewogen;0,060;kreislauffaehigkeit;1,0;5,0;0,5000000000000000;0,029999999999999999
+Sickerbeläge;Rasengittersteine;modulareErneuerbarkeit;3,00;Szenario 2: Kreislauf;0,120;kreislauffaehigkeit;1,0;5,0;0,5000000000000000;0,059999999999999998
+Sickerbeläge;Rasengittersteine;modulareErneuerbarkeit;3,00;Szenario 3: Langlebigkeit;0,030;kreislauffaehigkeit;1,0;5,0;0,5000000000000000;0,014999999999999999
+Sickerbeläge;Rasengittersteine;barrierefreiheit;3,00;Szenario 1: Ausgewogen;0,050;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000;0,025000000000000001
+Sickerbeläge;Rasengittersteine;barrierefreiheit;3,00;Szenario 2: Kreislauf;0,020;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000;0,010000000000000000
+Sickerbeläge;Rasengittersteine;barrierefreiheit;3,00;Szenario 3: Langlebigkeit;0,050;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000;0,025000000000000001
