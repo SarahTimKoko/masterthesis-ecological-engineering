@@ -1,0 +1,121 @@
+belagskategorie;option;bewertungskategorie;wert;gewicht;group_id;min_wert;max_wert;score_normiert
+Asphalt;Recyclingasphalt;lebensdauer;22,50;0,100;langlebigkeit_wirtschaftlichkeit;15,0;50,0;0,2142857142857143
+Asphalt;Recyclingasphalt;versickerung;1,00;0,075;multifunktionale_nutzungsqualitaet;0,2;1,0;1,0000000000000000
+Asphalt;Recyclingasphalt;oberflaechentemperatur;58,40;0,075;multifunktionale_nutzungsqualitaet;26,0;58,4;0,0000000000000000
+Asphalt;Recyclingasphalt;befahrbarkeit;5,00;0,050;multifunktionale_nutzungsqualitaet;1,0;5,0;1,0000000000000000
+Asphalt;Recyclingasphalt;kosten;100,00;0,075;langlebigkeit_wirtschaftlichkeit;50,0;350,0;0,8333333333333334
+Asphalt;Recyclingasphalt;unterhalt;4,00;0,075;langlebigkeit_wirtschaftlichkeit;2,0;9,0;0,7142857142857143
+Asphalt;Recyclingasphalt;co2;45,00;0,180;umweltbelastung;17,5;72,5;0,5000000000000000
+Asphalt;Recyclingasphalt;graueEnergie;295,00;0,120;umweltbelastung;70,0;375,0;0,2622950819672131
+Asphalt;Recyclingasphalt;recyclingfaehigkeit;0,30;0,080;kreislauffaehigkeit;0,2;1,0;0,1250000000000000
+Asphalt;Recyclingasphalt;lokaleMaterialien;1,00;0,060;kreislauffaehigkeit;0,4;1,0;1,0000000000000000
+Asphalt;Recyclingasphalt;modulareErneuerbarkeit;1,00;0,060;kreislauffaehigkeit;1,0;5,0;0,0000000000000000
+Asphalt;Recyclingasphalt;barrierefreiheit;5,00;0,050;multifunktionale_nutzungsqualitaet;1,0;5,0;1,0000000000000000
+Asphalt;Sickerasphalt;lebensdauer;27,50;0,100;langlebigkeit_wirtschaftlichkeit;15,0;50,0;0,3571428571428572
+Asphalt;Sickerasphalt;versickerung;0,35;0,075;multifunktionale_nutzungsqualitaet;0,2;1,0;0,1874999999999999
+Asphalt;Sickerasphalt;oberflaechentemperatur;55,50;0,075;multifunktionale_nutzungsqualitaet;26,0;58,4;0,0895061728395061
+Asphalt;Sickerasphalt;befahrbarkeit;3,00;0,050;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000
+Asphalt;Sickerasphalt;kosten;100,00;0,075;langlebigkeit_wirtschaftlichkeit;50,0;350,0;0,8333333333333334
+Asphalt;Sickerasphalt;unterhalt;6,50;0,075;langlebigkeit_wirtschaftlichkeit;2,0;9,0;0,3571428571428571
+Asphalt;Sickerasphalt;co2;60,00;0,180;umweltbelastung;17,5;72,5;0,2272727272727273
+Asphalt;Sickerasphalt;graueEnergie;345,00;0,120;umweltbelastung;70,0;375,0;0,0983606557377049
+Asphalt;Sickerasphalt;recyclingfaehigkeit;0,20;0,080;kreislauffaehigkeit;0,2;1,0;0,0000000000000000
+Asphalt;Sickerasphalt;lokaleMaterialien;0,65;0,060;kreislauffaehigkeit;0,4;1,0;0,4166666666666667
+Asphalt;Sickerasphalt;modulareErneuerbarkeit;1,00;0,060;kreislauffaehigkeit;1,0;5,0;0,0000000000000000
+Asphalt;Sickerasphalt;barrierefreiheit;3,00;0,050;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000
+Asphalt;Heller Asphalt;lebensdauer;17,50;0,100;langlebigkeit_wirtschaftlichkeit;15,0;50,0;0,0714285714285714
+Asphalt;Heller Asphalt;versickerung;1,00;0,075;multifunktionale_nutzungsqualitaet;0,2;1,0;1,0000000000000000
+Asphalt;Heller Asphalt;oberflaechentemperatur;54,00;0,075;multifunktionale_nutzungsqualitaet;26,0;58,4;0,1358024691358024
+Asphalt;Heller Asphalt;befahrbarkeit;5,00;0,050;multifunktionale_nutzungsqualitaet;1,0;5,0;1,0000000000000000
+Asphalt;Heller Asphalt;kosten;110,00;0,075;langlebigkeit_wirtschaftlichkeit;50,0;350,0;0,8000000000000000
+Asphalt;Heller Asphalt;unterhalt;4,00;0,075;langlebigkeit_wirtschaftlichkeit;2,0;9,0;0,7142857142857143
+Asphalt;Heller Asphalt;co2;50,00;0,180;umweltbelastung;17,5;72,5;0,4090909090909091
+Asphalt;Heller Asphalt;graueEnergie;331,00;0,120;umweltbelastung;70,0;375,0;0,1442622950819672
+Asphalt;Heller Asphalt;recyclingfaehigkeit;0,30;0,080;kreislauffaehigkeit;0,2;1,0;0,1250000000000000
+Asphalt;Heller Asphalt;lokaleMaterialien;0,60;0,060;kreislauffaehigkeit;0,4;1,0;0,3333333333333333
+Asphalt;Heller Asphalt;modulareErneuerbarkeit;1,00;0,060;kreislauffaehigkeit;1,0;5,0;0,0000000000000000
+Asphalt;Heller Asphalt;barrierefreiheit;5,00;0,050;multifunktionale_nutzungsqualitaet;1,0;5,0;1,0000000000000000
+Asphalt;Selbstheilender Asphalt;lebensdauer;42,50;0,100;langlebigkeit_wirtschaftlichkeit;15,0;50,0;0,7857142857142857
+Asphalt;Selbstheilender Asphalt;versickerung;1,00;0,075;multifunktionale_nutzungsqualitaet;0,2;1,0;1,0000000000000000
+Asphalt;Selbstheilender Asphalt;oberflaechentemperatur;58,40;0,075;multifunktionale_nutzungsqualitaet;26,0;58,4;0,0000000000000000
+Asphalt;Selbstheilender Asphalt;befahrbarkeit;5,00;0,050;multifunktionale_nutzungsqualitaet;1,0;5,0;1,0000000000000000
+Asphalt;Selbstheilender Asphalt;kosten;138,50;0,075;langlebigkeit_wirtschaftlichkeit;50,0;350,0;0,7050000000000001
+Asphalt;Selbstheilender Asphalt;unterhalt;2,00;0,075;langlebigkeit_wirtschaftlichkeit;2,0;9,0;1,0000000000000000
+Asphalt;Selbstheilender Asphalt;co2;72,50;0,180;umweltbelastung;17,5;72,5;0,0000000000000000
+Asphalt;Selbstheilender Asphalt;graueEnergie;375,00;0,120;umweltbelastung;70,0;375,0;0,0000000000000000
+Asphalt;Selbstheilender Asphalt;recyclingfaehigkeit;0,20;0,080;kreislauffaehigkeit;0,2;1,0;0,0000000000000000
+Asphalt;Selbstheilender Asphalt;lokaleMaterialien;0,50;0,060;kreislauffaehigkeit;0,4;1,0;0,1666666666666666
+Asphalt;Selbstheilender Asphalt;modulareErneuerbarkeit;1,00;0,060;kreislauffaehigkeit;1,0;5,0;0,0000000000000000
+Asphalt;Selbstheilender Asphalt;barrierefreiheit;5,00;0,050;multifunktionale_nutzungsqualitaet;1,0;5,0;1,0000000000000000
+Pflaster;Natursteinpflaster (6-10 mm Fugen);lebensdauer;50,00;0,100;langlebigkeit_wirtschaftlichkeit;15,0;50,0;1,0000000000000000
+Pflaster;Natursteinpflaster (6-10 mm Fugen);versickerung;0,60;0,075;multifunktionale_nutzungsqualitaet;0,2;1,0;0,4999999999999999
+Pflaster;Natursteinpflaster (6-10 mm Fugen);oberflaechentemperatur;47,50;0,075;multifunktionale_nutzungsqualitaet;26,0;58,4;0,3364197530864197
+Pflaster;Natursteinpflaster (6-10 mm Fugen);befahrbarkeit;3,00;0,050;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000
+Pflaster;Natursteinpflaster (6-10 mm Fugen);kosten;350,00;0,075;langlebigkeit_wirtschaftlichkeit;50,0;350,0;0,0000000000000000
+Pflaster;Natursteinpflaster (6-10 mm Fugen);unterhalt;5,00;0,075;langlebigkeit_wirtschaftlichkeit;2,0;9,0;0,5714285714285714
+Pflaster;Natursteinpflaster (6-10 mm Fugen);co2;60,00;0,180;umweltbelastung;17,5;72,5;0,2272727272727273
+Pflaster;Natursteinpflaster (6-10 mm Fugen);graueEnergie;270,00;0,120;umweltbelastung;70,0;375,0;0,3442622950819673
+Pflaster;Natursteinpflaster (6-10 mm Fugen);recyclingfaehigkeit;1,00;0,080;kreislauffaehigkeit;0,2;1,0;1,0000000000000000
+Pflaster;Natursteinpflaster (6-10 mm Fugen);lokaleMaterialien;0,40;0,060;kreislauffaehigkeit;0,4;1,0;0,0000000000000000
+Pflaster;Natursteinpflaster (6-10 mm Fugen);modulareErneuerbarkeit;5,00;0,060;kreislauffaehigkeit;1,0;5,0;1,0000000000000000
+Pflaster;Natursteinpflaster (6-10 mm Fugen);barrierefreiheit;3,00;0,050;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000
+Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);lebensdauer;35,00;0,100;langlebigkeit_wirtschaftlichkeit;15,0;50,0;0,5714285714285714
+Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);versickerung;1,00;0,075;multifunktionale_nutzungsqualitaet;0,2;1,0;1,0000000000000000
+Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);oberflaechentemperatur;57,50;0,075;multifunktionale_nutzungsqualitaet;26,0;58,4;0,0277777777777778
+Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);befahrbarkeit;4,00;0,050;multifunktionale_nutzungsqualitaet;1,0;5,0;0,7500000000000000
+Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);kosten;100,00;0,075;langlebigkeit_wirtschaftlichkeit;50,0;350,0;0,8333333333333334
+Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);unterhalt;4,00;0,075;langlebigkeit_wirtschaftlichkeit;2,0;9,0;0,7142857142857143
+Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);co2;55,00;0,180;umweltbelastung;17,5;72,5;0,3181818181818182
+Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);graueEnergie;135,00;0,120;umweltbelastung;70,0;375,0;0,7868852459016393
+Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);recyclingfaehigkeit;0,40;0,080;kreislauffaehigkeit;0,2;1,0;0,2500000000000000
+Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);lokaleMaterialien;0,80;0,060;kreislauffaehigkeit;0,4;1,0;0,6666666666666667
+Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);modulareErneuerbarkeit;5,00;0,060;kreislauffaehigkeit;1,0;5,0;1,0000000000000000
+Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);barrierefreiheit;5,00;0,050;multifunktionale_nutzungsqualitaet;1,0;5,0;1,0000000000000000
+Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);lebensdauer;30,00;0,100;langlebigkeit_wirtschaftlichkeit;15,0;50,0;0,4285714285714285
+Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);versickerung;0,35;0,075;multifunktionale_nutzungsqualitaet;0,2;1,0;0,1874999999999999
+Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);oberflaechentemperatur;50,00;0,075;multifunktionale_nutzungsqualitaet;26,0;58,4;0,2592592592592592
+Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);befahrbarkeit;3,00;0,050;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000
+Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);kosten;125,00;0,075;langlebigkeit_wirtschaftlichkeit;50,0;350,0;0,7500000000000000
+Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);unterhalt;7,00;0,075;langlebigkeit_wirtschaftlichkeit;2,0;9,0;0,2857142857142857
+Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);co2;50,00;0,180;umweltbelastung;17,5;72,5;0,4090909090909091
+Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);graueEnergie;175,00;0,120;umweltbelastung;70,0;375,0;0,6557377049180328
+Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);recyclingfaehigkeit;0,40;0,080;kreislauffaehigkeit;0,2;1,0;0,2500000000000000
+Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);lokaleMaterialien;0,80;0,060;kreislauffaehigkeit;0,4;1,0;0,6666666666666667
+Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);modulareErneuerbarkeit;5,00;0,060;kreislauffaehigkeit;1,0;5,0;1,0000000000000000
+Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);barrierefreiheit;3,00;0,050;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000
+Sickerbeläge;Chaussierung;lebensdauer;17,50;0,100;langlebigkeit_wirtschaftlichkeit;15,0;50,0;0,0714285714285714
+Sickerbeläge;Chaussierung;versickerung;0,50;0,075;multifunktionale_nutzungsqualitaet;0,2;1,0;0,3749999999999999
+Sickerbeläge;Chaussierung;oberflaechentemperatur;46,50;0,075;multifunktionale_nutzungsqualitaet;26,0;58,4;0,3672839506172839
+Sickerbeläge;Chaussierung;befahrbarkeit;1,00;0,050;multifunktionale_nutzungsqualitaet;1,0;5,0;0,0000000000000000
+Sickerbeläge;Chaussierung;kosten;50,00;0,075;langlebigkeit_wirtschaftlichkeit;50,0;350,0;1,0000000000000000
+Sickerbeläge;Chaussierung;unterhalt;3,00;0,075;langlebigkeit_wirtschaftlichkeit;2,0;9,0;0,8571428571428572
+Sickerbeläge;Chaussierung;co2;17,50;0,180;umweltbelastung;17,5;72,5;1,0000000000000000
+Sickerbeläge;Chaussierung;graueEnergie;70,00;0,120;umweltbelastung;70,0;375,0;1,0000000000000000
+Sickerbeläge;Chaussierung;recyclingfaehigkeit;1,00;0,080;kreislauffaehigkeit;0,2;1,0;1,0000000000000000
+Sickerbeläge;Chaussierung;lokaleMaterialien;0,95;0,060;kreislauffaehigkeit;0,4;1,0;0,9166666666666666
+Sickerbeläge;Chaussierung;modulareErneuerbarkeit;5,00;0,060;kreislauffaehigkeit;1,0;5,0;1,0000000000000000
+Sickerbeläge;Chaussierung;barrierefreiheit;1,00;0,050;multifunktionale_nutzungsqualitaet;1,0;5,0;0,0000000000000000
+Sickerbeläge;Kiesrasen;lebensdauer;15,00;0,100;langlebigkeit_wirtschaftlichkeit;15,0;50,0;0,0000000000000000
+Sickerbeläge;Kiesrasen;versickerung;0,20;0,075;multifunktionale_nutzungsqualitaet;0,2;1,0;0,0000000000000000
+Sickerbeläge;Kiesrasen;oberflaechentemperatur;49,00;0,075;multifunktionale_nutzungsqualitaet;26,0;58,4;0,2901234567901234
+Sickerbeläge;Kiesrasen;befahrbarkeit;3,00;0,050;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000
+Sickerbeläge;Kiesrasen;kosten;95,00;0,075;langlebigkeit_wirtschaftlichkeit;50,0;350,0;0,8500000000000000
+Sickerbeläge;Kiesrasen;unterhalt;9,00;0,075;langlebigkeit_wirtschaftlichkeit;2,0;9,0;0,0000000000000000
+Sickerbeläge;Kiesrasen;co2;25,00;0,180;umweltbelastung;17,5;72,5;0,8636363636363636
+Sickerbeläge;Kiesrasen;graueEnergie;100,00;0,120;umweltbelastung;70,0;375,0;0,9016393442622951
+Sickerbeläge;Kiesrasen;recyclingfaehigkeit;1,00;0,080;kreislauffaehigkeit;0,2;1,0;1,0000000000000000
+Sickerbeläge;Kiesrasen;lokaleMaterialien;0,90;0,060;kreislauffaehigkeit;0,4;1,0;0,8333333333333334
+Sickerbeläge;Kiesrasen;modulareErneuerbarkeit;3,00;0,060;kreislauffaehigkeit;1,0;5,0;0,5000000000000000
+Sickerbeläge;Kiesrasen;barrierefreiheit;1,00;0,050;multifunktionale_nutzungsqualitaet;1,0;5,0;0,0000000000000000
+Sickerbeläge;Rasengittersteine;lebensdauer;25,00;0,100;langlebigkeit_wirtschaftlichkeit;15,0;50,0;0,2857142857142857
+Sickerbeläge;Rasengittersteine;versickerung;0,40;0,075;multifunktionale_nutzungsqualitaet;0,2;1,0;0,2500000000000000
+Sickerbeläge;Rasengittersteine;oberflaechentemperatur;26,00;0,075;multifunktionale_nutzungsqualitaet;26,0;58,4;1,0000000000000000
+Sickerbeläge;Rasengittersteine;befahrbarkeit;3,00;0,050;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000
+Sickerbeläge;Rasengittersteine;kosten;100,00;0,075;langlebigkeit_wirtschaftlichkeit;50,0;350,0;0,8333333333333334
+Sickerbeläge;Rasengittersteine;unterhalt;6,00;0,075;langlebigkeit_wirtschaftlichkeit;2,0;9,0;0,4285714285714286
+Sickerbeläge;Rasengittersteine;co2;45,00;0,180;umweltbelastung;17,5;72,5;0,5000000000000000
+Sickerbeläge;Rasengittersteine;graueEnergie;137,50;0,120;umweltbelastung;70,0;375,0;0,7786885245901639
+Sickerbeläge;Rasengittersteine;recyclingfaehigkeit;0,40;0,080;kreislauffaehigkeit;0,2;1,0;0,2500000000000000
+Sickerbeläge;Rasengittersteine;lokaleMaterialien;0,80;0,060;kreislauffaehigkeit;0,4;1,0;0,6666666666666667
+Sickerbeläge;Rasengittersteine;modulareErneuerbarkeit;3,00;0,060;kreislauffaehigkeit;1,0;5,0;0,5000000000000000
+Sickerbeläge;Rasengittersteine;barrierefreiheit;3,00;0,050;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000
