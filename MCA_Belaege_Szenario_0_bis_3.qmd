@@ -36,7 +36,7 @@ library(tidytext)
 
 ## 1. Daten Importieren
 
-Einlesen der Rohdaten für Belaege und Gewichtung für Szenario 1 bis 3
+Einlesen der Rohdaten für Belaege und Gewichtung für Szenario 0 bis 3
 
 ```{r}
 
@@ -69,7 +69,7 @@ weights_s3_raw <- read_delim(
 
 ## 2. Daten bereinigen und harmonisieren
 
-Ziel: Daten für den Join und die MCA vorbereiten.
+Ziel: Daten für den Join und die MCA Berechnung vorbereiten.
 
 ```{r}
 
