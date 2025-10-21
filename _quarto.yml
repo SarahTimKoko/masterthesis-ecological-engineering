@@ -9,8 +9,8 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - href: MCA Belaege Szenario 1 bis 3.qmd
-        text: "MCA Beläge Szenario 1 bis 3"
+      - href: MCA_Belaege_Szenario_0_bis_3.qmd
+        text: "MCA Szenarien - Beläge"
 format:
   html:
     theme: darky
