@@ -1,13 +1,13 @@
-﻿group_id;group_label;group_weight;criterion_id;criterion_label;within_group_weight;total_weight
-umweltbelastung;Vermeidung von Umweltbelastung;0.15;co2;CO2-Emissionen;0.6;0.09
-umweltbelastung;Vermeidung von Umweltbelastung;0.15;graueEnergie;Graue Energie;0.4;0.06
-langlebigkeit_wirtschaftlichkeit;Langlebigkeit und Wirtschaftlichkeit;0.5;lebensdauer;Lebensdauer;0.4;0.2
-langlebigkeit_wirtschaftlichkeit;Langlebigkeit und Wirtschaftlichkeit;0.5;unterhalt;Unterhalt;0.3;0.15
-langlebigkeit_wirtschaftlichkeit;Langlebigkeit und Wirtschaftlichkeit;0.5;kosten;Kosten;0.3;0.15
-multifunktionale_nutzungsqualitaet;Multifunktionale Nutzungsqualität;0.25;versickerung;Versickerungsleistung;0.3;0.075
-multifunktionale_nutzungsqualitaet;Multifunktionale Nutzungsqualität;0.25;oberflaechentemperatur;Oberflächentemperatur;0.3;0.075
-multifunktionale_nutzungsqualitaet;Multifunktionale Nutzungsqualität;0.25;befahrbarkeit;Befahrbarkeit;0.2;0.05
-multifunktionale_nutzungsqualitaet;Multifunktionale Nutzungsqualität;0.25;barrierefreiheit;Barrierefreiheit;0.2;0.05
-kreislauffaehigkeit;Kreislauffähigkeit;0.1;recyclingfaehigkeit;Recyclingfähigkeit;0.4;0.04
-kreislauffaehigkeit;Kreislauffähigkeit;0.1;lokaleMaterialien;Lokale Materialien;0.3;0.03
-kreislauffaehigkeit;Kreislauffähigkeit;0.1;modulareErneuerbarkeit;Modulare Erneuerbarkeit;0.3;0.03
+﻿group_id;group_label;group_weight;criterion_id;criterion_label;within_group_weight;
+umweltbelastung;Vermeidung von Umweltbelastung;0.05;co2;CO2-Emissionen;0.5;
+umweltbelastung;Vermeidung von Umweltbelastung;0.05;graueEnergie;Graue Energie;0.5;
+langlebigkeit_wirtschaftlichkeit;Langlebigkeit und Wirtschaftlichkeit;0.8;lebensdauer;Lebensdauer;0.5;
+langlebigkeit_wirtschaftlichkeit;Langlebigkeit und Wirtschaftlichkeit;0.8;unterhalt;Unterhalt;0.25;
+langlebigkeit_wirtschaftlichkeit;Langlebigkeit und Wirtschaftlichkeit;0.8;kosten;Kosten;0.25;
+multifunktionale_nutzungsqualitaet;Multifunktionale Nutzungsqualität;0.1;versickerung;Versickerungsleistung;0.25;
+multifunktionale_nutzungsqualitaet;Multifunktionale Nutzungsqualität;0.1;oberflaechentemperatur;Oberflächentemperatur;0.25;
+multifunktionale_nutzungsqualitaet;Multifunktionale Nutzungsqualität;0.1;befahrbarkeit;Befahrbarkeit;0.25;
+multifunktionale_nutzungsqualitaet;Multifunktionale Nutzungsqualität;0.1;barrierefreiheit;Barrierefreiheit;0.25;
+kreislauffaehigkeit;Kreislauffähigkeit;0.05;recyclingfaehigkeit;Recyclingfähigkeit;0.333333333;
+kreislauffaehigkeit;Kreislauffähigkeit;0.05;lokaleMaterialien;Lokale Materialien;0.333333333;
+kreislauffaehigkeit;Kreislauffähigkeit;0.05;modulareErneuerbarkeit;Modulare Erneuerbarkeit;0.333333333;

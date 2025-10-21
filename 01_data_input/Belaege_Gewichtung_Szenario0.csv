@@ -1,0 +1,13 @@
+﻿group_id;group_label;group_weight;criterion_id;criterion_label;within_group_weight
+umweltbelastung;Vermeidung von Umweltbelastung;0.1;co2;CO2-Emissionen;0.5
+umweltbelastung;Vermeidung von Umweltbelastung;0.1;graueEnergie;Graue Energie;0.5
+langlebigkeit_wirtschaftlichkeit;Langlebigkeit und Wirtschaftlichkeit;0.4;lebensdauer;Lebensdauer;0.5
+langlebigkeit_wirtschaftlichkeit;Langlebigkeit und Wirtschaftlichkeit;0.4;unterhalt;Unterhalt;0.25
+langlebigkeit_wirtschaftlichkeit;Langlebigkeit und Wirtschaftlichkeit;0.4;kosten;Kosten;0.25
+multifunktionale_nutzungsqualitaet;Multifunktionale Nutzungsqualität;0.4;versickerung;Versickerungsleistung;0.25
+multifunktionale_nutzungsqualitaet;Multifunktionale Nutzungsqualität;0.4;oberflaechentemperatur;Oberflächentemperatur;0.25
+multifunktionale_nutzungsqualitaet;Multifunktionale Nutzungsqualität;0.4;befahrbarkeit;Befahrbarkeit;0.25
+multifunktionale_nutzungsqualitaet;Multifunktionale Nutzungsqualität;0.4;barrierefreiheit;Barrierefreiheit;0.25
+kreislauffaehigkeit;Kreislauffähigkeit;0.1;recyclingfaehigkeit;Recyclingfähigkeit;0.333333333
+kreislauffaehigkeit;Kreislauffähigkeit;0.1;lokaleMaterialien;Lokale Materialien;0.333333333
+kreislauffaehigkeit;Kreislauffähigkeit;0.1;modulareErneuerbarkeit;Modulare Erneuerbarkeit;0.333333333
