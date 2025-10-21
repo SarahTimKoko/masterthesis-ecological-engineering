@@ -1,5 +1,5 @@
 ---
-title: "MCA Belaege Szenario 1 bis 3"
+title: "MCA Belaege Szenario 0 bis 3"
 author: "Sarah Pfeiffer"
 date: today
 format: 
@@ -21,7 +21,6 @@ library(tidyverse)
 library(readr)
 library(ggplot2)
 library(forcats)
-library(ggplot2)
 library(tidytext)
 
 ```
@@ -40,7 +39,11 @@ df_belaege_raw <- read_delim(
   delim = ";"
 )
 
-# Liest die Gewichtungen für ALLE DREI Szenarien ein
+# Liest die Gewichtungen für alle vier Szenarien ein
+weights_s0_raw <- read_delim(
+  "01_data_input/Belaege_Gewichtung_Szenario0.csv",
+  delim = ";"
+)
 weights_s1_raw <- read_delim(
   "01_data_input/Belaege_Gewichtung_Szenario1.csv",
   delim = ";"
@@ -67,24 +70,32 @@ df_belaege <- df_belaege_raw %>%
 
 # B. Bereinigung der Gewichtungen (ALLE SZENARIEN)
 # Wir fügen den Roh-Dateien die Szenario-Namen hinzu
+df_weights_s0 <- weights_s0_raw %>%
+  mutate(szenario = "Szenario 0: Baseline (IST)")
 df_weights_s1 <- weights_s1_raw %>%
-  mutate(szenario = "Szenario 1: Ausgewogen")
-
+  mutate(szenario = "Szenario 1: Forschungsfokus")
 df_weights_s2 <- weights_s2_raw %>%
-  mutate(szenario = "Szenario 2: Kreislauf")
-
+  mutate(szenario = "Szenario 2: Radikale Vermeidung")
 df_weights_s3 <- weights_s3_raw %>%
-  mutate(szenario = "Szenario 3: Langlebigkeit")
+  mutate(szenario = "Szenario 3: Radikaler Lebenszyklus")
 
-# Jetzt binden wir sie zu EINER finalen Gewichtungs-Tabelle zusammen
-df_weights <- bind_rows(df_weights_s1, df_weights_s2, df_weights_s3) %>%
-  # Die restliche Bereinigung (Umbenennen, Auswählen) 
-  # passiert für alle drei Szenarien auf einmal
-  rename(
-    bewertungskategorie = criterion_id,
-    gewicht = total_weight
-  ) %>%
-  select(szenario, bewertungskategorie, gewicht, group_id)
+# Jetzt binden wir sie zu einer finalen Gewichtungs-Tabelle zusammen
+df_weights <- bind_rows(df_weights_s0, df_weights_s1, df_weights_s2, df_weights_s3) %>%
+
+# Berechne das Gesamtgewicht (gewicht) aus den Rohspalten,
+mutate(
+  gewicht = group_weight * within_group_weight
+) %>%
+ 
+# umbenennen für den Join
+rename(
+  bewertungskategorie = criterion_id
+) %>%
+  
+# Auswählen der Spalten, die der Rest des Skripts braucht
+select(szenario, bewertungskategorie, gewicht, group_id)
+
+print(df_weights, n = 48)
 
 ```
 
@@ -150,8 +161,9 @@ ggsave("02_export/plots/check_01_rohwerte_verteilung.png", plot = plot_rohwerte,
 
 ## 5. MCA - Normalisierung
 
-Ziel: Normalisierung
-Die Wert-Spalte (Jahre, CHF, etc.) muss auf eine einheitliche Skala (0-1) gebracht werden
+Ziel: 
+-Normalisierung: Die Wert-Spalte (Jahre, CHF, etc.) muss auf eine einheitliche Skala (0-1) gebracht werden
+-Wie gut ist der entsprechende Belag im entsprechenden Kriterium im Vergleich zu allen anderen Belägen? (Min-Max-Skalierung)
 
 ```{r}
 
@@ -166,31 +178,46 @@ kriterien_lower_is_better <- c(
 )
 
 # 5.2 Min-Max-Skalierung (Normierung)
-# Gruppieren nach Kriterium, Min/Max finden und skalieren
+# Aufgeteilt in zwei Schritte für die Überprüfung
 
-df_belaege_normalized <- df_belaege_joined %>%
-  filter(!is.na(wert)) %>% # Stellt sicher, dass NAs für die Berechnung ignoriert werden
+# Schritt 5.2a: Min/Max-Werte berechnen und in einer Zwischentabelle speichern
+df_belaege_with_minmax <- df_belaege_joined %>%
+  filter(!is.na(wert)) %>% # NAs im Wert ignorieren
+  filter(!is.na(gewicht)) %>% # NAs im Gewicht ignorieren (wichtig!)
   group_by(bewertungskategorie) %>%
   # 1. Min und Max für jedes Kriterium finden
   mutate(
     min_wert = min(wert, na.rm = TRUE),
     max_wert = max(wert, na.rm = TRUE)
   ) %>%
-  ungroup() %>%
+  ungroup()
+
+# Überprüfung der Min/Max-Werte: Erstellt eine kleine, saubere Tabelle, die nur die Min/Max-Werte zeigt
+df_min_max_summary <- df_belaege_with_minmax %>%
+  select(bewertungskategorie, min_wert, max_wert) %>%
+  distinct() # Zeigt jede Kategorie nur einmal an
+
+print("--- Min/Max-Werte pro Kriterium (für Normierung) ---")
+print(df_min_max_summary)
+# --------------------------------------------------------
+
+
+# Schritt 5.2b: Skalierung auf 0-1 berechnen
+# Wir nehmen die Tabelle aus 5.2a und rechnen weiter
+df_belaege_normalized <- df_belaege_with_minmax %>%
   # 2. Skalieren auf 0-1
   mutate(
     # Sonderfall: Wenn Min und Max gleich sind (nur ein Wert), setze Score auf 1
     score_normiert = case_when(
       (max_wert - min_wert) == 0 ~ 1,
       
-      # Normale Skalierung (higher is better)
+      # Normale Skalierung (higher is better), ! bedeutet NICHT in kriterien_lower_is_better Liste enthalten
       !(bewertungskategorie %in% kriterien_lower_is_better) ~ (wert - min_wert) / (max_wert - min_wert),
       
       # Invertierte Skalierung (lower is better)
       bewertungskategorie %in% kriterien_lower_is_better ~ 1 - ((wert - min_wert) / (max_wert - min_wert))
     )
   )
-
 
 ```
 
@@ -219,7 +246,7 @@ ggsave("02_export/plots/check_02_normierte_scores.png", plot = plot_normiert, wi
 
 ## 7. MCA Berechnung
 
-Ziel: Berechnung der besten geeigneten Beläge auf Basis Kriterienbewertung
+Ziel: Berechnung der besten geeigneten Beläge auf Basis Kriterienbewertung (score_normiert * gewicht)
 
 ```{r}
 
@@ -241,9 +268,9 @@ df_mca_total <- df_mca_calculated %>%
   # Wir sortieren erst nach Szenario, dann nach Score
   arrange(szenario, desc(MCA_gesamtscore)) 
 
-# Anzeigen der Ergebnisse (jetzt 30 Zeilen, 10 pro Szenario)
+# Anzeigen der Ergebnisse (jetzt 40 Zeilen, 10 pro Szenario)
 print("--- MCA Gesamtergebnis (sortiert) ---")
-print(df_mca_total, n = 30) # n=30, um alle Ergebnisse zu sehen
+print(df_mca_total, n = 40) # n=40, um alle Ergebnisse zu sehen
 
 ```
 
@@ -254,40 +281,33 @@ Ziel: visualisierung der Ergebnisse
 ```{r}
 
 # Plot 1: Gesamtergebnis (Ranking)
-# ---
-
 plot_mca_total <- ggplot(df_mca_total, 
        aes(x = MCA_gesamtscore, 
-           # Sortiert 'option' anhand von 'MCA_gesamtscore' IN 'szenario'
            y = tidytext::reorder_within(option, MCA_gesamtscore, szenario),
-           # -------------------
            fill = belagskategorie)) +
   geom_col() +
-  # Bereinigt die Y-Achsen-Beschriftung
   tidytext::scale_y_reordered() +
-  # -----------------------
-
-  # 'scales = "free_y"' ist hier entscheidend
+  
+  # facet_wrap erstellt automatisch ein 2x2 Grid für die 4 Szenarien
   facet_wrap(~ szenario, scales = "free_y") + 
-    labs(
+  
+  labs(
     title = "MCA Ergebnis: Rangliste der Belagsoptionen nach Szenario",
     subtitle = "Höherer Score = Bessere Gesamtbewertung (pro Szenario sortiert)",
     x = "MCA Gesamtscore",
-    y = "Belagsoption", # 'scale_y_reordered' sorgt dafür, dass 'option' reicht
+    y = "Belagsoption",
     fill = "Belagskategorie"
   ) +
   theme_minimal() +
   theme(legend.position = "top")
 
-# Anzeigen und Speichern
 print(plot_mca_total)
-ggsave("02_export/plots/mca_gesamtergebnis_alle_szenarien.png", plot = plot_mca_total, width = 14, height = 7)
+# --- ANGEPASSTE DIMENSIONEN (für 2x2 Grid) ---
+ggsave("02_export/plots/mca_gesamtergebnis_alle_szenarien.png", 
+       plot = plot_mca_total, width = 12, height = 10)
+# --------------------------------------------
 
-
-# ---
 # Plot 2: Detail-Zusammensetzung (Gestapeltes Diagramm)
-# ---
-
 # 1. Daten vorbereiten 
 df_mca_groups <- df_mca_calculated %>%
   group_by(szenario, belagskategorie, option, group_id) %>% 
@@ -299,14 +319,14 @@ df_mca_groups <- df_mca_calculated %>%
 plot_mca_stacked <- ggplot(df_mca_groups, 
        aes(x = gruppen_score, 
            y = tidytext::reorder_within(option, MCA_gesamtscore, szenario), 
-           # ----------------------------------
            fill = group_id)) +
   geom_col(position = "stack") +
   tidytext::scale_y_reordered() +
-  # -----------------------
   
+  # facet_wrap erstellt automatisch ein 2x2 Grid
   facet_wrap(~ szenario, scales = "free_y") +
-    labs(
+  
+  labs(
     title = "MCA Detail: Zusammensetzung des Scores nach Szenario",
     subtitle = "Zeigt den Beitrag jeder Kriteriengruppe (pro Szenario sortiert)",
     x = "MCA Score (Anteil)",
@@ -316,9 +336,11 @@ plot_mca_stacked <- ggplot(df_mca_groups,
   theme_minimal() +
   theme(legend.position = "top")
 
-# Anzeigen und Speichern
 print(plot_mca_stacked)
-ggsave("02_export/plots/mca_detail_gruppen_alle_szenarien.png", plot = plot_mca_stacked, width = 15, height = 7)
+# --- ANGEPASSTE DIMENSIONEN (für 2x2 Grid) ---
+ggsave("02_export/plots/mca_detail_gruppen_alle_szenarien.png", 
+       plot = plot_mca_stacked, width = 14, height = 10)
+
 ```
 
 ## 9. Ergebnisstabellen exportieren
