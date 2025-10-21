@@ -1,5 +1,5 @@
 ---
-title: "MCA Belaege Szenario 0 bis 3"
+title: "MCA Anaylse Beläge"
 author: "Sarah Pfeiffer"
 date: today
 format: 
@@ -9,9 +9,18 @@ format:
 
 ---
 
-# Masterarbeit: MCA-Pipeline Beläge - Szenario 1
+## MCA Anaylse für Szenario 0 bis 3
 
-Ziel: Wahl der besten Beläge nach MCA Berechnung
+Ziel: Wahl der besten drei Beläge nach MCA Berechnung
+
+Szenario 0: "Baseline (IST-Analyse)": Simuliert die aktuellen Projektanforderungen (deir IST-Analyse). Der Fokus liegt primär auf Wirtschaftlichkeit (insb. kosten) und hoher Nutzungsqualität (insb. befahrbarkeit und barrierefreiheit). Ökologische Aspekte sind sekundär.
+
+Szenario 1: "Forschungsfokus": Bildet meine zentrale Forschungsfrage (FQ) ab. Dieses Szenario sucht die Balance zwischen den beiden Hauptsäulen meiner Arbeit: dem Lebenszyklus-Fokus (H1/H2) und dem Vermeidungsprinzip (H3).
+
+Szenario 2: "Radikale Vermeidung": Testet Hypothese 3 (H3) im Extrem. Es priorisiert radikal die Kriterien des Vermeidungsprinzips, also Umweltbelastung (co2, graueEnergie) und Kreislauffähigkeit (recyclingfaehigkeit, modulareErneuerbarkeit).
+
+Szenario 3: "Radikaler Lebenszyklus": Testet die Hypothesen 1 und 2 (H1/H2) im Extrem. Es priorisiert radikal die Kriterien der Langlebigkeit & Wirtschaftlichkeit (insb. lebensdauer und unterhalt), um die Anzahl der Sanierungs-Eingriffe über den Zeitstrahl zu minimieren.
+
 
 ## Libraries laden
 
