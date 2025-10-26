@@ -4,10 +4,9 @@ umweltbelastung;Vermeidung von Umweltbelastung;0.45;graueEnergie;Graue Energie;0
 langlebigkeit_wirtschaftlichkeit;Langlebigkeit und Wirtschaftlichkeit;0.05;lebensdauer;Lebensdauer;0.5
 langlebigkeit_wirtschaftlichkeit;Langlebigkeit und Wirtschaftlichkeit;0.05;unterhalt;Unterhalt;0.25
 langlebigkeit_wirtschaftlichkeit;Langlebigkeit und Wirtschaftlichkeit;0.05;kosten;Kosten;0.25
-multifunktionale_nutzungsqualitaet;Multifunktionale Nutzungsqualität;0.05;versickerung;Versickerungsleistung;0.25
-multifunktionale_nutzungsqualitaet;Multifunktionale Nutzungsqualität;0.05;oberflaechentemperatur;Oberflächentemperatur;0.25
-multifunktionale_nutzungsqualitaet;Multifunktionale Nutzungsqualität;0.05;befahrbarkeit;Befahrbarkeit;0.25
-multifunktionale_nutzungsqualitaet;Multifunktionale Nutzungsqualität;0.05;barrierefreiheit;Barrierefreiheit;0.25
+multifunktionale_nutzungsqualitaet;Multifunktionale Nutzungsqualität;0.05;versickerung;Versickerungsleistung;0.333333333
+multifunktionale_nutzungsqualitaet;Multifunktionale Nutzungsqualität;0.05;oberflaechentemperatur;Oberflächentemperatur;0.333333333
+multifunktionale_nutzungsqualitaet;Multifunktionale Nutzungsqualität;0.05;befahrbarkeit;Befahrbarkeit;0.333333333
 kreislauffaehigkeit;Kreislauffähigkeit;0.45;recyclingfaehigkeit;Recyclingfähigkeit;0.333333333
 kreislauffaehigkeit;Kreislauffähigkeit;0.45;lokaleMaterialien;Lokale Materialien;0.333333333
 kreislauffaehigkeit;Kreislauffähigkeit;0.45;modulareErneuerbarkeit;Modulare Erneuerbarkeit;0.333333333

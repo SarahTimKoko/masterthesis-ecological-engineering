@@ -44,7 +44,7 @@ Einlesen der Rohdaten für Belaege und Gewichtung für Szenario 0 bis 3
 
 # Liest die Rohdaten für die Beläge ein
 df_belaege_raw <- read_delim(
-  "01_data_input/Belaege_normiert.csv",
+  "01_data_input/Belaege_tidy.csv",
   delim = ";"
 )
 
@@ -119,11 +119,13 @@ Ziel: Transformation der Tabelle df_belaege von Wide-to-Long und anschliessende 
 
 df_belaege_long <- df_belaege %>%
   pivot_longer(
-    # Wählt alle Spalten von 'lebensdauer' bis 'barrierefreiheit' aus.
-    cols = c(lebensdauer:barrierefreiheit), 
-    # Die Spaltennamen (z.B. "lebensdauer") kommen in die neue Spalte "bewertungskategorie".
+    # Auswahl aller Spalten
+    cols = c(lebensdauer, versickerung, oberflaechentemperatur, 
+             befahrbarkeit, recyclingfaehigkeit, 
+             lokaleMaterialien, modulareErneuerbarkeit, 
+             kosten_100a, unterhalt_100a, co2_100a, graueEnergie_100a), 
+    
     names_to = "bewertungskategorie", 
-    # Die Werte (z.B. 22.5) kommen in die neue Spalte "wert".
     values_to = "wert"
   )
 
@@ -179,10 +181,10 @@ Ziel:
 # 5.1 Definieren, welche Kriterien 'schlechter' sind, wenn sie 'höher' sind
 
 kriterien_lower_is_better <- c(
-  "kosten", 
-  "unterhalt", 
-  "co2", 
-  "graueEnergie",
+  "kosten_100a", 
+  "unterhalt_100a", 
+  "co2_100a", 
+  "graueEnergie_100a",
   "oberflaechentemperatur" 
 )
 

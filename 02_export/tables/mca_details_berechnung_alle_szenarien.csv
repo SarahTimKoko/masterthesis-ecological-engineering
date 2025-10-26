@@ -3,479 +3,279 @@ Asphalt;Recyclingasphalt;lebensdauer;22,50;Szenario 0: Baseline (IST);0,20000000
 Asphalt;Recyclingasphalt;lebensdauer;22,50;Szenario 1: Forschungsfokus;0,20000000000;langlebigkeit_wirtschaftlichkeit;15,0;50,0;0,2142857142857143;0,042857142857142858
 Asphalt;Recyclingasphalt;lebensdauer;22,50;Szenario 2: Radikale Vermeidung;0,02500000000;langlebigkeit_wirtschaftlichkeit;15,0;50,0;0,2142857142857143;0,005357142857142857
 Asphalt;Recyclingasphalt;lebensdauer;22,50;Szenario 3: Radikaler Lebenszyklus;0,40000000000;langlebigkeit_wirtschaftlichkeit;15,0;50,0;0,2142857142857143;0,085714285714285715
-Asphalt;Recyclingasphalt;versickerung;1,00;Szenario 0: Baseline (IST);0,10000000000;multifunktionale_nutzungsqualitaet;0,2;1,0;1,0000000000000000;0,100000000000000006
-Asphalt;Recyclingasphalt;versickerung;1,00;Szenario 1: Forschungsfokus;0,02500000000;multifunktionale_nutzungsqualitaet;0,2;1,0;1,0000000000000000;0,025000000000000001
-Asphalt;Recyclingasphalt;versickerung;1,00;Szenario 2: Radikale Vermeidung;0,01250000000;multifunktionale_nutzungsqualitaet;0,2;1,0;1,0000000000000000;0,012500000000000001
-Asphalt;Recyclingasphalt;versickerung;1,00;Szenario 3: Radikaler Lebenszyklus;0,02500000000;multifunktionale_nutzungsqualitaet;0,2;1,0;1,0000000000000000;0,025000000000000001
-Asphalt;Recyclingasphalt;oberflaechentemperatur;58,40;Szenario 0: Baseline (IST);0,10000000000;multifunktionale_nutzungsqualitaet;26,0;58,4;0,0000000000000000;0,000000000000000000
-Asphalt;Recyclingasphalt;oberflaechentemperatur;58,40;Szenario 1: Forschungsfokus;0,02500000000;multifunktionale_nutzungsqualitaet;26,0;58,4;0,0000000000000000;0,000000000000000000
-Asphalt;Recyclingasphalt;oberflaechentemperatur;58,40;Szenario 2: Radikale Vermeidung;0,01250000000;multifunktionale_nutzungsqualitaet;26,0;58,4;0,0000000000000000;0,000000000000000000
-Asphalt;Recyclingasphalt;oberflaechentemperatur;58,40;Szenario 3: Radikaler Lebenszyklus;0,02500000000;multifunktionale_nutzungsqualitaet;26,0;58,4;0,0000000000000000;0,000000000000000000
-Asphalt;Recyclingasphalt;befahrbarkeit;5,00;Szenario 0: Baseline (IST);0,10000000000;multifunktionale_nutzungsqualitaet;1,0;5,0;1,0000000000000000;0,100000000000000006
-Asphalt;Recyclingasphalt;befahrbarkeit;5,00;Szenario 1: Forschungsfokus;0,02500000000;multifunktionale_nutzungsqualitaet;1,0;5,0;1,0000000000000000;0,025000000000000001
-Asphalt;Recyclingasphalt;befahrbarkeit;5,00;Szenario 2: Radikale Vermeidung;0,01250000000;multifunktionale_nutzungsqualitaet;1,0;5,0;1,0000000000000000;0,012500000000000001
-Asphalt;Recyclingasphalt;befahrbarkeit;5,00;Szenario 3: Radikaler Lebenszyklus;0,02500000000;multifunktionale_nutzungsqualitaet;1,0;5,0;1,0000000000000000;0,025000000000000001
-Asphalt;Recyclingasphalt;kosten;100,00;Szenario 0: Baseline (IST);0,10000000000;langlebigkeit_wirtschaftlichkeit;50,0;350,0;0,8333333333333334;0,083333333333333343
-Asphalt;Recyclingasphalt;kosten;100,00;Szenario 1: Forschungsfokus;0,10000000000;langlebigkeit_wirtschaftlichkeit;50,0;350,0;0,8333333333333334;0,083333333333333343
-Asphalt;Recyclingasphalt;kosten;100,00;Szenario 2: Radikale Vermeidung;0,01250000000;langlebigkeit_wirtschaftlichkeit;50,0;350,0;0,8333333333333334;0,010416666666666668
-Asphalt;Recyclingasphalt;kosten;100,00;Szenario 3: Radikaler Lebenszyklus;0,20000000000;langlebigkeit_wirtschaftlichkeit;50,0;350,0;0,8333333333333334;0,166666666666666685
-Asphalt;Recyclingasphalt;unterhalt;4,00;Szenario 0: Baseline (IST);0,10000000000;langlebigkeit_wirtschaftlichkeit;2,0;9,0;0,7142857142857143;0,071428571428571438
-Asphalt;Recyclingasphalt;unterhalt;4,00;Szenario 1: Forschungsfokus;0,10000000000;langlebigkeit_wirtschaftlichkeit;2,0;9,0;0,7142857142857143;0,071428571428571438
-Asphalt;Recyclingasphalt;unterhalt;4,00;Szenario 2: Radikale Vermeidung;0,01250000000;langlebigkeit_wirtschaftlichkeit;2,0;9,0;0,7142857142857143;0,008928571428571430
-Asphalt;Recyclingasphalt;unterhalt;4,00;Szenario 3: Radikaler Lebenszyklus;0,20000000000;langlebigkeit_wirtschaftlichkeit;2,0;9,0;0,7142857142857143;0,142857142857142877
-Asphalt;Recyclingasphalt;co2;45,00;Szenario 0: Baseline (IST);0,05000000000;umweltbelastung;17,5;72,5;0,5000000000000000;0,025000000000000001
-Asphalt;Recyclingasphalt;co2;45,00;Szenario 1: Forschungsfokus;0,12500000000;umweltbelastung;17,5;72,5;0,5000000000000000;0,062500000000000000
-Asphalt;Recyclingasphalt;co2;45,00;Szenario 2: Radikale Vermeidung;0,22500000000;umweltbelastung;17,5;72,5;0,5000000000000000;0,112500000000000003
-Asphalt;Recyclingasphalt;co2;45,00;Szenario 3: Radikaler Lebenszyklus;0,02500000000;umweltbelastung;17,5;72,5;0,5000000000000000;0,012500000000000001
-Asphalt;Recyclingasphalt;graueEnergie;295,00;Szenario 0: Baseline (IST);0,05000000000;umweltbelastung;70,0;375,0;0,2622950819672131;0,013114754098360654
-Asphalt;Recyclingasphalt;graueEnergie;295,00;Szenario 1: Forschungsfokus;0,12500000000;umweltbelastung;70,0;375,0;0,2622950819672131;0,032786885245901634
-Asphalt;Recyclingasphalt;graueEnergie;295,00;Szenario 2: Radikale Vermeidung;0,22500000000;umweltbelastung;70,0;375,0;0,2622950819672131;0,059016393442622946
-Asphalt;Recyclingasphalt;graueEnergie;295,00;Szenario 3: Radikaler Lebenszyklus;0,02500000000;umweltbelastung;70,0;375,0;0,2622950819672131;0,006557377049180327
-Asphalt;Recyclingasphalt;recyclingfaehigkeit;0,30;Szenario 0: Baseline (IST);0,03333333330;kreislauffaehigkeit;0,2;1,0;0,1250000000000000;0,004166666662500000
-Asphalt;Recyclingasphalt;recyclingfaehigkeit;0,30;Szenario 1: Forschungsfokus;0,08333333325;kreislauffaehigkeit;0,2;1,0;0,1250000000000000;0,010416666656249999
-Asphalt;Recyclingasphalt;recyclingfaehigkeit;0,30;Szenario 2: Radikale Vermeidung;0,14999999985;kreislauffaehigkeit;0,2;1,0;0,1250000000000000;0,018749999981249998
-Asphalt;Recyclingasphalt;recyclingfaehigkeit;0,30;Szenario 3: Radikaler Lebenszyklus;0,01666666665;kreislauffaehigkeit;0,2;1,0;0,1250000000000000;0,002083333331250000
-Asphalt;Recyclingasphalt;lokaleMaterialien;1,00;Szenario 0: Baseline (IST);0,03333333330;kreislauffaehigkeit;0,4;1,0;1,0000000000000000;0,033333333300000004
-Asphalt;Recyclingasphalt;lokaleMaterialien;1,00;Szenario 1: Forschungsfokus;0,08333333325;kreislauffaehigkeit;0,4;1,0;1,0000000000000000;0,083333333250000002
-Asphalt;Recyclingasphalt;lokaleMaterialien;1,00;Szenario 2: Radikale Vermeidung;0,14999999985;kreislauffaehigkeit;0,4;1,0;1,0000000000000000;0,149999999850000010
-Asphalt;Recyclingasphalt;lokaleMaterialien;1,00;Szenario 3: Radikaler Lebenszyklus;0,01666666665;kreislauffaehigkeit;0,4;1,0;1,0000000000000000;0,016666666650000002
-Asphalt;Recyclingasphalt;modulareErneuerbarkeit;1,00;Szenario 0: Baseline (IST);0,03333333330;kreislauffaehigkeit;1,0;5,0;0,0000000000000000;0,000000000000000000
-Asphalt;Recyclingasphalt;modulareErneuerbarkeit;1,00;Szenario 1: Forschungsfokus;0,08333333325;kreislauffaehigkeit;1,0;5,0;0,0000000000000000;0,000000000000000000
-Asphalt;Recyclingasphalt;modulareErneuerbarkeit;1,00;Szenario 2: Radikale Vermeidung;0,14999999985;kreislauffaehigkeit;1,0;5,0;0,0000000000000000;0,000000000000000000
-Asphalt;Recyclingasphalt;modulareErneuerbarkeit;1,00;Szenario 3: Radikaler Lebenszyklus;0,01666666665;kreislauffaehigkeit;1,0;5,0;0,0000000000000000;0,000000000000000000
-Asphalt;Recyclingasphalt;barrierefreiheit;5,00;Szenario 0: Baseline (IST);0,10000000000;multifunktionale_nutzungsqualitaet;1,0;5,0;1,0000000000000000;0,100000000000000006
-Asphalt;Recyclingasphalt;barrierefreiheit;5,00;Szenario 1: Forschungsfokus;0,02500000000;multifunktionale_nutzungsqualitaet;1,0;5,0;1,0000000000000000;0,025000000000000001
-Asphalt;Recyclingasphalt;barrierefreiheit;5,00;Szenario 2: Radikale Vermeidung;0,01250000000;multifunktionale_nutzungsqualitaet;1,0;5,0;1,0000000000000000;0,012500000000000001
-Asphalt;Recyclingasphalt;barrierefreiheit;5,00;Szenario 3: Radikaler Lebenszyklus;0,02500000000;multifunktionale_nutzungsqualitaet;1,0;5,0;1,0000000000000000;0,025000000000000001
+Asphalt;Recyclingasphalt;versickerung;1,00;Szenario 0: Baseline (IST);0,13333333320;multifunktionale_nutzungsqualitaet;0,2;1,0;1,0000000000000000;0,133333333200000015
+Asphalt;Recyclingasphalt;versickerung;1,00;Szenario 1: Forschungsfokus;0,03333333330;multifunktionale_nutzungsqualitaet;0,2;1,0;1,0000000000000000;0,033333333300000004
+Asphalt;Recyclingasphalt;versickerung;1,00;Szenario 2: Radikale Vermeidung;0,01666666665;multifunktionale_nutzungsqualitaet;0,2;1,0;1,0000000000000000;0,016666666650000002
+Asphalt;Recyclingasphalt;versickerung;1,00;Szenario 3: Radikaler Lebenszyklus;0,03333333330;multifunktionale_nutzungsqualitaet;0,2;1,0;1,0000000000000000;0,033333333300000004
+Asphalt;Recyclingasphalt;oberflaechentemperatur;58,40;Szenario 0: Baseline (IST);0,13333333320;multifunktionale_nutzungsqualitaet;26,0;58,4;0,0000000000000000;0,000000000000000000
+Asphalt;Recyclingasphalt;oberflaechentemperatur;58,40;Szenario 1: Forschungsfokus;0,03333333330;multifunktionale_nutzungsqualitaet;26,0;58,4;0,0000000000000000;0,000000000000000000
+Asphalt;Recyclingasphalt;oberflaechentemperatur;58,40;Szenario 2: Radikale Vermeidung;0,01666666665;multifunktionale_nutzungsqualitaet;26,0;58,4;0,0000000000000000;0,000000000000000000
+Asphalt;Recyclingasphalt;oberflaechentemperatur;58,40;Szenario 3: Radikaler Lebenszyklus;0,03333333330;multifunktionale_nutzungsqualitaet;26,0;58,4;0,0000000000000000;0,000000000000000000
+Asphalt;Recyclingasphalt;befahrbarkeit;5,00;Szenario 0: Baseline (IST);0,13333333320;multifunktionale_nutzungsqualitaet;1,0;5,0;1,0000000000000000;0,133333333200000015
+Asphalt;Recyclingasphalt;befahrbarkeit;5,00;Szenario 1: Forschungsfokus;0,03333333330;multifunktionale_nutzungsqualitaet;1,0;5,0;1,0000000000000000;0,033333333300000004
+Asphalt;Recyclingasphalt;befahrbarkeit;5,00;Szenario 2: Radikale Vermeidung;0,01666666665;multifunktionale_nutzungsqualitaet;1,0;5,0;1,0000000000000000;0,016666666650000002
+Asphalt;Recyclingasphalt;befahrbarkeit;5,00;Szenario 3: Radikaler Lebenszyklus;0,03333333330;multifunktionale_nutzungsqualitaet;1,0;5,0;1,0000000000000000;0,033333333300000004
+Asphalt;Recyclingasphalt;recyclingfaehigkeit;2,00;Szenario 0: Baseline (IST);0,03333333330;kreislauffaehigkeit;0,0;2,0;1,0000000000000000;0,033333333300000004
+Asphalt;Recyclingasphalt;recyclingfaehigkeit;2,00;Szenario 1: Forschungsfokus;0,08333333325;kreislauffaehigkeit;0,0;2,0;1,0000000000000000;0,083333333250000002
+Asphalt;Recyclingasphalt;recyclingfaehigkeit;2,00;Szenario 2: Radikale Vermeidung;0,14999999985;kreislauffaehigkeit;0,0;2,0;1,0000000000000000;0,149999999850000010
+Asphalt;Recyclingasphalt;recyclingfaehigkeit;2,00;Szenario 3: Radikaler Lebenszyklus;0,01666666665;kreislauffaehigkeit;0,0;2,0;1,0000000000000000;0,016666666650000002
+Asphalt;Recyclingasphalt;lokaleMaterialien;0,60;Szenario 0: Baseline (IST);0,03333333330;kreislauffaehigkeit;0,4;0,8;0,4999999999999999;0,016666666649999998
+Asphalt;Recyclingasphalt;lokaleMaterialien;0,60;Szenario 1: Forschungsfokus;0,08333333325;kreislauffaehigkeit;0,4;0,8;0,4999999999999999;0,041666666624999994
+Asphalt;Recyclingasphalt;lokaleMaterialien;0,60;Szenario 2: Radikale Vermeidung;0,14999999985;kreislauffaehigkeit;0,4;0,8;0,4999999999999999;0,074999999924999991
+Asphalt;Recyclingasphalt;lokaleMaterialien;0,60;Szenario 3: Radikaler Lebenszyklus;0,01666666665;kreislauffaehigkeit;0,4;0,8;0,4999999999999999;0,008333333324999999
+Asphalt;Recyclingasphalt;modulareErneuerbarkeit;0,00;Szenario 0: Baseline (IST);0,03333333330;kreislauffaehigkeit;0,0;2,0;0,0000000000000000;0,000000000000000000
+Asphalt;Recyclingasphalt;modulareErneuerbarkeit;0,00;Szenario 1: Forschungsfokus;0,08333333325;kreislauffaehigkeit;0,0;2,0;0,0000000000000000;0,000000000000000000
+Asphalt;Recyclingasphalt;modulareErneuerbarkeit;0,00;Szenario 2: Radikale Vermeidung;0,14999999985;kreislauffaehigkeit;0,0;2,0;0,0000000000000000;0,000000000000000000
+Asphalt;Recyclingasphalt;modulareErneuerbarkeit;0,00;Szenario 3: Radikaler Lebenszyklus;0,01666666665;kreislauffaehigkeit;0,0;2,0;0,0000000000000000;0,000000000000000000
 Asphalt;Sickerasphalt;lebensdauer;27,50;Szenario 0: Baseline (IST);0,20000000000;langlebigkeit_wirtschaftlichkeit;15,0;50,0;0,3571428571428572;0,071428571428571438
 Asphalt;Sickerasphalt;lebensdauer;27,50;Szenario 1: Forschungsfokus;0,20000000000;langlebigkeit_wirtschaftlichkeit;15,0;50,0;0,3571428571428572;0,071428571428571438
 Asphalt;Sickerasphalt;lebensdauer;27,50;Szenario 2: Radikale Vermeidung;0,02500000000;langlebigkeit_wirtschaftlichkeit;15,0;50,0;0,3571428571428572;0,008928571428571430
 Asphalt;Sickerasphalt;lebensdauer;27,50;Szenario 3: Radikaler Lebenszyklus;0,40000000000;langlebigkeit_wirtschaftlichkeit;15,0;50,0;0,3571428571428572;0,142857142857142877
-Asphalt;Sickerasphalt;versickerung;0,35;Szenario 0: Baseline (IST);0,10000000000;multifunktionale_nutzungsqualitaet;0,2;1,0;0,1874999999999999;0,018749999999999996
-Asphalt;Sickerasphalt;versickerung;0,35;Szenario 1: Forschungsfokus;0,02500000000;multifunktionale_nutzungsqualitaet;0,2;1,0;0,1874999999999999;0,004687499999999999
-Asphalt;Sickerasphalt;versickerung;0,35;Szenario 2: Radikale Vermeidung;0,01250000000;multifunktionale_nutzungsqualitaet;0,2;1,0;0,1874999999999999;0,002343749999999999
-Asphalt;Sickerasphalt;versickerung;0,35;Szenario 3: Radikaler Lebenszyklus;0,02500000000;multifunktionale_nutzungsqualitaet;0,2;1,0;0,1874999999999999;0,004687499999999999
-Asphalt;Sickerasphalt;oberflaechentemperatur;55,50;Szenario 0: Baseline (IST);0,10000000000;multifunktionale_nutzungsqualitaet;26,0;58,4;0,0895061728395061;0,008950617283950612
-Asphalt;Sickerasphalt;oberflaechentemperatur;55,50;Szenario 1: Forschungsfokus;0,02500000000;multifunktionale_nutzungsqualitaet;26,0;58,4;0,0895061728395061;0,002237654320987653
-Asphalt;Sickerasphalt;oberflaechentemperatur;55,50;Szenario 2: Radikale Vermeidung;0,01250000000;multifunktionale_nutzungsqualitaet;26,0;58,4;0,0895061728395061;0,001118827160493827
-Asphalt;Sickerasphalt;oberflaechentemperatur;55,50;Szenario 3: Radikaler Lebenszyklus;0,02500000000;multifunktionale_nutzungsqualitaet;26,0;58,4;0,0895061728395061;0,002237654320987653
-Asphalt;Sickerasphalt;befahrbarkeit;3,00;Szenario 0: Baseline (IST);0,10000000000;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000;0,050000000000000003
-Asphalt;Sickerasphalt;befahrbarkeit;3,00;Szenario 1: Forschungsfokus;0,02500000000;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000;0,012500000000000001
-Asphalt;Sickerasphalt;befahrbarkeit;3,00;Szenario 2: Radikale Vermeidung;0,01250000000;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000;0,006250000000000000
-Asphalt;Sickerasphalt;befahrbarkeit;3,00;Szenario 3: Radikaler Lebenszyklus;0,02500000000;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000;0,012500000000000001
-Asphalt;Sickerasphalt;kosten;100,00;Szenario 0: Baseline (IST);0,10000000000;langlebigkeit_wirtschaftlichkeit;50,0;350,0;0,8333333333333334;0,083333333333333343
-Asphalt;Sickerasphalt;kosten;100,00;Szenario 1: Forschungsfokus;0,10000000000;langlebigkeit_wirtschaftlichkeit;50,0;350,0;0,8333333333333334;0,083333333333333343
-Asphalt;Sickerasphalt;kosten;100,00;Szenario 2: Radikale Vermeidung;0,01250000000;langlebigkeit_wirtschaftlichkeit;50,0;350,0;0,8333333333333334;0,010416666666666668
-Asphalt;Sickerasphalt;kosten;100,00;Szenario 3: Radikaler Lebenszyklus;0,20000000000;langlebigkeit_wirtschaftlichkeit;50,0;350,0;0,8333333333333334;0,166666666666666685
-Asphalt;Sickerasphalt;unterhalt;6,50;Szenario 0: Baseline (IST);0,10000000000;langlebigkeit_wirtschaftlichkeit;2,0;9,0;0,3571428571428571;0,035714285714285712
-Asphalt;Sickerasphalt;unterhalt;6,50;Szenario 1: Forschungsfokus;0,10000000000;langlebigkeit_wirtschaftlichkeit;2,0;9,0;0,3571428571428571;0,035714285714285712
-Asphalt;Sickerasphalt;unterhalt;6,50;Szenario 2: Radikale Vermeidung;0,01250000000;langlebigkeit_wirtschaftlichkeit;2,0;9,0;0,3571428571428571;0,004464285714285714
-Asphalt;Sickerasphalt;unterhalt;6,50;Szenario 3: Radikaler Lebenszyklus;0,20000000000;langlebigkeit_wirtschaftlichkeit;2,0;9,0;0,3571428571428571;0,071428571428571425
-Asphalt;Sickerasphalt;co2;60,00;Szenario 0: Baseline (IST);0,05000000000;umweltbelastung;17,5;72,5;0,2272727272727273;0,011363636363636366
-Asphalt;Sickerasphalt;co2;60,00;Szenario 1: Forschungsfokus;0,12500000000;umweltbelastung;17,5;72,5;0,2272727272727273;0,028409090909090912
-Asphalt;Sickerasphalt;co2;60,00;Szenario 2: Radikale Vermeidung;0,22500000000;umweltbelastung;17,5;72,5;0,2272727272727273;0,051136363636363640
-Asphalt;Sickerasphalt;co2;60,00;Szenario 3: Radikaler Lebenszyklus;0,02500000000;umweltbelastung;17,5;72,5;0,2272727272727273;0,005681818181818183
-Asphalt;Sickerasphalt;graueEnergie;345,00;Szenario 0: Baseline (IST);0,05000000000;umweltbelastung;70,0;375,0;0,0983606557377049;0,004918032786885246
-Asphalt;Sickerasphalt;graueEnergie;345,00;Szenario 1: Forschungsfokus;0,12500000000;umweltbelastung;70,0;375,0;0,0983606557377049;0,012295081967213115
-Asphalt;Sickerasphalt;graueEnergie;345,00;Szenario 2: Radikale Vermeidung;0,22500000000;umweltbelastung;70,0;375,0;0,0983606557377049;0,022131147540983605
-Asphalt;Sickerasphalt;graueEnergie;345,00;Szenario 3: Radikaler Lebenszyklus;0,02500000000;umweltbelastung;70,0;375,0;0,0983606557377049;0,002459016393442623
-Asphalt;Sickerasphalt;recyclingfaehigkeit;0,20;Szenario 0: Baseline (IST);0,03333333330;kreislauffaehigkeit;0,2;1,0;0,0000000000000000;0,000000000000000000
-Asphalt;Sickerasphalt;recyclingfaehigkeit;0,20;Szenario 1: Forschungsfokus;0,08333333325;kreislauffaehigkeit;0,2;1,0;0,0000000000000000;0,000000000000000000
-Asphalt;Sickerasphalt;recyclingfaehigkeit;0,20;Szenario 2: Radikale Vermeidung;0,14999999985;kreislauffaehigkeit;0,2;1,0;0,0000000000000000;0,000000000000000000
-Asphalt;Sickerasphalt;recyclingfaehigkeit;0,20;Szenario 3: Radikaler Lebenszyklus;0,01666666665;kreislauffaehigkeit;0,2;1,0;0,0000000000000000;0,000000000000000000
-Asphalt;Sickerasphalt;lokaleMaterialien;0,65;Szenario 0: Baseline (IST);0,03333333330;kreislauffaehigkeit;0,4;1,0;0,4166666666666667;0,013888888875000002
-Asphalt;Sickerasphalt;lokaleMaterialien;0,65;Szenario 1: Forschungsfokus;0,08333333325;kreislauffaehigkeit;0,4;1,0;0,4166666666666667;0,034722222187500006
-Asphalt;Sickerasphalt;lokaleMaterialien;0,65;Szenario 2: Radikale Vermeidung;0,14999999985;kreislauffaehigkeit;0,4;1,0;0,4166666666666667;0,062499999937500009
-Asphalt;Sickerasphalt;lokaleMaterialien;0,65;Szenario 3: Radikaler Lebenszyklus;0,01666666665;kreislauffaehigkeit;0,4;1,0;0,4166666666666667;0,006944444437500001
-Asphalt;Sickerasphalt;modulareErneuerbarkeit;1,00;Szenario 0: Baseline (IST);0,03333333330;kreislauffaehigkeit;1,0;5,0;0,0000000000000000;0,000000000000000000
-Asphalt;Sickerasphalt;modulareErneuerbarkeit;1,00;Szenario 1: Forschungsfokus;0,08333333325;kreislauffaehigkeit;1,0;5,0;0,0000000000000000;0,000000000000000000
-Asphalt;Sickerasphalt;modulareErneuerbarkeit;1,00;Szenario 2: Radikale Vermeidung;0,14999999985;kreislauffaehigkeit;1,0;5,0;0,0000000000000000;0,000000000000000000
-Asphalt;Sickerasphalt;modulareErneuerbarkeit;1,00;Szenario 3: Radikaler Lebenszyklus;0,01666666665;kreislauffaehigkeit;1,0;5,0;0,0000000000000000;0,000000000000000000
-Asphalt;Sickerasphalt;barrierefreiheit;3,00;Szenario 0: Baseline (IST);0,10000000000;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000;0,050000000000000003
-Asphalt;Sickerasphalt;barrierefreiheit;3,00;Szenario 1: Forschungsfokus;0,02500000000;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000;0,012500000000000001
-Asphalt;Sickerasphalt;barrierefreiheit;3,00;Szenario 2: Radikale Vermeidung;0,01250000000;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000;0,006250000000000000
-Asphalt;Sickerasphalt;barrierefreiheit;3,00;Szenario 3: Radikaler Lebenszyklus;0,02500000000;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000;0,012500000000000001
+Asphalt;Sickerasphalt;versickerung;0,35;Szenario 0: Baseline (IST);0,13333333320;multifunktionale_nutzungsqualitaet;0,2;1,0;0,1874999999999999;0,024999999974999996
+Asphalt;Sickerasphalt;versickerung;0,35;Szenario 1: Forschungsfokus;0,03333333330;multifunktionale_nutzungsqualitaet;0,2;1,0;0,1874999999999999;0,006249999993749999
+Asphalt;Sickerasphalt;versickerung;0,35;Szenario 2: Radikale Vermeidung;0,01666666665;multifunktionale_nutzungsqualitaet;0,2;1,0;0,1874999999999999;0,003124999996874999
+Asphalt;Sickerasphalt;versickerung;0,35;Szenario 3: Radikaler Lebenszyklus;0,03333333330;multifunktionale_nutzungsqualitaet;0,2;1,0;0,1874999999999999;0,006249999993749999
+Asphalt;Sickerasphalt;oberflaechentemperatur;55,50;Szenario 0: Baseline (IST);0,13333333320;multifunktionale_nutzungsqualitaet;26,0;58,4;0,0895061728395061;0,011934156366666662
+Asphalt;Sickerasphalt;oberflaechentemperatur;55,50;Szenario 1: Forschungsfokus;0,03333333330;multifunktionale_nutzungsqualitaet;26,0;58,4;0,0895061728395061;0,002983539091666665
+Asphalt;Sickerasphalt;oberflaechentemperatur;55,50;Szenario 2: Radikale Vermeidung;0,01666666665;multifunktionale_nutzungsqualitaet;26,0;58,4;0,0895061728395061;0,001491769545833333
+Asphalt;Sickerasphalt;oberflaechentemperatur;55,50;Szenario 3: Radikaler Lebenszyklus;0,03333333330;multifunktionale_nutzungsqualitaet;26,0;58,4;0,0895061728395061;0,002983539091666665
+Asphalt;Sickerasphalt;befahrbarkeit;3,00;Szenario 0: Baseline (IST);0,13333333320;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000;0,066666666600000007
+Asphalt;Sickerasphalt;befahrbarkeit;3,00;Szenario 1: Forschungsfokus;0,03333333330;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000;0,016666666650000002
+Asphalt;Sickerasphalt;befahrbarkeit;3,00;Szenario 2: Radikale Vermeidung;0,01666666665;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000;0,008333333325000001
+Asphalt;Sickerasphalt;befahrbarkeit;3,00;Szenario 3: Radikaler Lebenszyklus;0,03333333330;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000;0,016666666650000002
+Asphalt;Sickerasphalt;recyclingfaehigkeit;1,00;Szenario 0: Baseline (IST);0,03333333330;kreislauffaehigkeit;0,0;2,0;0,5000000000000000;0,016666666650000002
+Asphalt;Sickerasphalt;recyclingfaehigkeit;1,00;Szenario 1: Forschungsfokus;0,08333333325;kreislauffaehigkeit;0,0;2,0;0,5000000000000000;0,041666666625000001
+Asphalt;Sickerasphalt;recyclingfaehigkeit;1,00;Szenario 2: Radikale Vermeidung;0,14999999985;kreislauffaehigkeit;0,0;2,0;0,5000000000000000;0,074999999925000005
+Asphalt;Sickerasphalt;recyclingfaehigkeit;1,00;Szenario 3: Radikaler Lebenszyklus;0,01666666665;kreislauffaehigkeit;0,0;2,0;0,5000000000000000;0,008333333325000001
+Asphalt;Sickerasphalt;lokaleMaterialien;0,60;Szenario 0: Baseline (IST);0,03333333330;kreislauffaehigkeit;0,4;0,8;0,4999999999999999;0,016666666649999998
+Asphalt;Sickerasphalt;lokaleMaterialien;0,60;Szenario 1: Forschungsfokus;0,08333333325;kreislauffaehigkeit;0,4;0,8;0,4999999999999999;0,041666666624999994
+Asphalt;Sickerasphalt;lokaleMaterialien;0,60;Szenario 2: Radikale Vermeidung;0,14999999985;kreislauffaehigkeit;0,4;0,8;0,4999999999999999;0,074999999924999991
+Asphalt;Sickerasphalt;lokaleMaterialien;0,60;Szenario 3: Radikaler Lebenszyklus;0,01666666665;kreislauffaehigkeit;0,4;0,8;0,4999999999999999;0,008333333324999999
+Asphalt;Sickerasphalt;modulareErneuerbarkeit;0,00;Szenario 0: Baseline (IST);0,03333333330;kreislauffaehigkeit;0,0;2,0;0,0000000000000000;0,000000000000000000
+Asphalt;Sickerasphalt;modulareErneuerbarkeit;0,00;Szenario 1: Forschungsfokus;0,08333333325;kreislauffaehigkeit;0,0;2,0;0,0000000000000000;0,000000000000000000
+Asphalt;Sickerasphalt;modulareErneuerbarkeit;0,00;Szenario 2: Radikale Vermeidung;0,14999999985;kreislauffaehigkeit;0,0;2,0;0,0000000000000000;0,000000000000000000
+Asphalt;Sickerasphalt;modulareErneuerbarkeit;0,00;Szenario 3: Radikaler Lebenszyklus;0,01666666665;kreislauffaehigkeit;0,0;2,0;0,0000000000000000;0,000000000000000000
 Asphalt;Heller Asphalt;lebensdauer;17,50;Szenario 0: Baseline (IST);0,20000000000;langlebigkeit_wirtschaftlichkeit;15,0;50,0;0,0714285714285714;0,014285714285714285
 Asphalt;Heller Asphalt;lebensdauer;17,50;Szenario 1: Forschungsfokus;0,20000000000;langlebigkeit_wirtschaftlichkeit;15,0;50,0;0,0714285714285714;0,014285714285714285
 Asphalt;Heller Asphalt;lebensdauer;17,50;Szenario 2: Radikale Vermeidung;0,02500000000;langlebigkeit_wirtschaftlichkeit;15,0;50,0;0,0714285714285714;0,001785714285714286
 Asphalt;Heller Asphalt;lebensdauer;17,50;Szenario 3: Radikaler Lebenszyklus;0,40000000000;langlebigkeit_wirtschaftlichkeit;15,0;50,0;0,0714285714285714;0,028571428571428571
-Asphalt;Heller Asphalt;versickerung;1,00;Szenario 0: Baseline (IST);0,10000000000;multifunktionale_nutzungsqualitaet;0,2;1,0;1,0000000000000000;0,100000000000000006
-Asphalt;Heller Asphalt;versickerung;1,00;Szenario 1: Forschungsfokus;0,02500000000;multifunktionale_nutzungsqualitaet;0,2;1,0;1,0000000000000000;0,025000000000000001
-Asphalt;Heller Asphalt;versickerung;1,00;Szenario 2: Radikale Vermeidung;0,01250000000;multifunktionale_nutzungsqualitaet;0,2;1,0;1,0000000000000000;0,012500000000000001
-Asphalt;Heller Asphalt;versickerung;1,00;Szenario 3: Radikaler Lebenszyklus;0,02500000000;multifunktionale_nutzungsqualitaet;0,2;1,0;1,0000000000000000;0,025000000000000001
-Asphalt;Heller Asphalt;oberflaechentemperatur;54,00;Szenario 0: Baseline (IST);0,10000000000;multifunktionale_nutzungsqualitaet;26,0;58,4;0,1358024691358024;0,013580246913580242
-Asphalt;Heller Asphalt;oberflaechentemperatur;54,00;Szenario 1: Forschungsfokus;0,02500000000;multifunktionale_nutzungsqualitaet;26,0;58,4;0,1358024691358024;0,003395061728395060
-Asphalt;Heller Asphalt;oberflaechentemperatur;54,00;Szenario 2: Radikale Vermeidung;0,01250000000;multifunktionale_nutzungsqualitaet;26,0;58,4;0,1358024691358024;0,001697530864197530
-Asphalt;Heller Asphalt;oberflaechentemperatur;54,00;Szenario 3: Radikaler Lebenszyklus;0,02500000000;multifunktionale_nutzungsqualitaet;26,0;58,4;0,1358024691358024;0,003395061728395060
-Asphalt;Heller Asphalt;befahrbarkeit;5,00;Szenario 0: Baseline (IST);0,10000000000;multifunktionale_nutzungsqualitaet;1,0;5,0;1,0000000000000000;0,100000000000000006
-Asphalt;Heller Asphalt;befahrbarkeit;5,00;Szenario 1: Forschungsfokus;0,02500000000;multifunktionale_nutzungsqualitaet;1,0;5,0;1,0000000000000000;0,025000000000000001
-Asphalt;Heller Asphalt;befahrbarkeit;5,00;Szenario 2: Radikale Vermeidung;0,01250000000;multifunktionale_nutzungsqualitaet;1,0;5,0;1,0000000000000000;0,012500000000000001
-Asphalt;Heller Asphalt;befahrbarkeit;5,00;Szenario 3: Radikaler Lebenszyklus;0,02500000000;multifunktionale_nutzungsqualitaet;1,0;5,0;1,0000000000000000;0,025000000000000001
-Asphalt;Heller Asphalt;kosten;110,00;Szenario 0: Baseline (IST);0,10000000000;langlebigkeit_wirtschaftlichkeit;50,0;350,0;0,8000000000000000;0,080000000000000016
-Asphalt;Heller Asphalt;kosten;110,00;Szenario 1: Forschungsfokus;0,10000000000;langlebigkeit_wirtschaftlichkeit;50,0;350,0;0,8000000000000000;0,080000000000000016
-Asphalt;Heller Asphalt;kosten;110,00;Szenario 2: Radikale Vermeidung;0,01250000000;langlebigkeit_wirtschaftlichkeit;50,0;350,0;0,8000000000000000;0,010000000000000002
-Asphalt;Heller Asphalt;kosten;110,00;Szenario 3: Radikaler Lebenszyklus;0,20000000000;langlebigkeit_wirtschaftlichkeit;50,0;350,0;0,8000000000000000;0,160000000000000031
-Asphalt;Heller Asphalt;unterhalt;4,00;Szenario 0: Baseline (IST);0,10000000000;langlebigkeit_wirtschaftlichkeit;2,0;9,0;0,7142857142857143;0,071428571428571438
-Asphalt;Heller Asphalt;unterhalt;4,00;Szenario 1: Forschungsfokus;0,10000000000;langlebigkeit_wirtschaftlichkeit;2,0;9,0;0,7142857142857143;0,071428571428571438
-Asphalt;Heller Asphalt;unterhalt;4,00;Szenario 2: Radikale Vermeidung;0,01250000000;langlebigkeit_wirtschaftlichkeit;2,0;9,0;0,7142857142857143;0,008928571428571430
-Asphalt;Heller Asphalt;unterhalt;4,00;Szenario 3: Radikaler Lebenszyklus;0,20000000000;langlebigkeit_wirtschaftlichkeit;2,0;9,0;0,7142857142857143;0,142857142857142877
-Asphalt;Heller Asphalt;co2;50,00;Szenario 0: Baseline (IST);0,05000000000;umweltbelastung;17,5;72,5;0,4090909090909091;0,020454545454545454
-Asphalt;Heller Asphalt;co2;50,00;Szenario 1: Forschungsfokus;0,12500000000;umweltbelastung;17,5;72,5;0,4090909090909091;0,051136363636363633
-Asphalt;Heller Asphalt;co2;50,00;Szenario 2: Radikale Vermeidung;0,22500000000;umweltbelastung;17,5;72,5;0,4090909090909091;0,092045454545454541
-Asphalt;Heller Asphalt;co2;50,00;Szenario 3: Radikaler Lebenszyklus;0,02500000000;umweltbelastung;17,5;72,5;0,4090909090909091;0,010227272727272727
-Asphalt;Heller Asphalt;graueEnergie;331,00;Szenario 0: Baseline (IST);0,05000000000;umweltbelastung;70,0;375,0;0,1442622950819672;0,007213114754098360
-Asphalt;Heller Asphalt;graueEnergie;331,00;Szenario 1: Forschungsfokus;0,12500000000;umweltbelastung;70,0;375,0;0,1442622950819672;0,018032786885245899
-Asphalt;Heller Asphalt;graueEnergie;331,00;Szenario 2: Radikale Vermeidung;0,22500000000;umweltbelastung;70,0;375,0;0,1442622950819672;0,032459016393442619
-Asphalt;Heller Asphalt;graueEnergie;331,00;Szenario 3: Radikaler Lebenszyklus;0,02500000000;umweltbelastung;70,0;375,0;0,1442622950819672;0,003606557377049180
-Asphalt;Heller Asphalt;recyclingfaehigkeit;0,30;Szenario 0: Baseline (IST);0,03333333330;kreislauffaehigkeit;0,2;1,0;0,1250000000000000;0,004166666662500000
-Asphalt;Heller Asphalt;recyclingfaehigkeit;0,30;Szenario 1: Forschungsfokus;0,08333333325;kreislauffaehigkeit;0,2;1,0;0,1250000000000000;0,010416666656249999
-Asphalt;Heller Asphalt;recyclingfaehigkeit;0,30;Szenario 2: Radikale Vermeidung;0,14999999985;kreislauffaehigkeit;0,2;1,0;0,1250000000000000;0,018749999981249998
-Asphalt;Heller Asphalt;recyclingfaehigkeit;0,30;Szenario 3: Radikaler Lebenszyklus;0,01666666665;kreislauffaehigkeit;0,2;1,0;0,1250000000000000;0,002083333331250000
-Asphalt;Heller Asphalt;lokaleMaterialien;0,60;Szenario 0: Baseline (IST);0,03333333330;kreislauffaehigkeit;0,4;1,0;0,3333333333333333;0,011111111100000000
-Asphalt;Heller Asphalt;lokaleMaterialien;0,60;Szenario 1: Forschungsfokus;0,08333333325;kreislauffaehigkeit;0,4;1,0;0,3333333333333333;0,027777777749999996
-Asphalt;Heller Asphalt;lokaleMaterialien;0,60;Szenario 2: Radikale Vermeidung;0,14999999985;kreislauffaehigkeit;0,4;1,0;0,3333333333333333;0,049999999949999992
-Asphalt;Heller Asphalt;lokaleMaterialien;0,60;Szenario 3: Radikaler Lebenszyklus;0,01666666665;kreislauffaehigkeit;0,4;1,0;0,3333333333333333;0,005555555550000000
-Asphalt;Heller Asphalt;modulareErneuerbarkeit;1,00;Szenario 0: Baseline (IST);0,03333333330;kreislauffaehigkeit;1,0;5,0;0,0000000000000000;0,000000000000000000
-Asphalt;Heller Asphalt;modulareErneuerbarkeit;1,00;Szenario 1: Forschungsfokus;0,08333333325;kreislauffaehigkeit;1,0;5,0;0,0000000000000000;0,000000000000000000
-Asphalt;Heller Asphalt;modulareErneuerbarkeit;1,00;Szenario 2: Radikale Vermeidung;0,14999999985;kreislauffaehigkeit;1,0;5,0;0,0000000000000000;0,000000000000000000
-Asphalt;Heller Asphalt;modulareErneuerbarkeit;1,00;Szenario 3: Radikaler Lebenszyklus;0,01666666665;kreislauffaehigkeit;1,0;5,0;0,0000000000000000;0,000000000000000000
-Asphalt;Heller Asphalt;barrierefreiheit;5,00;Szenario 0: Baseline (IST);0,10000000000;multifunktionale_nutzungsqualitaet;1,0;5,0;1,0000000000000000;0,100000000000000006
-Asphalt;Heller Asphalt;barrierefreiheit;5,00;Szenario 1: Forschungsfokus;0,02500000000;multifunktionale_nutzungsqualitaet;1,0;5,0;1,0000000000000000;0,025000000000000001
-Asphalt;Heller Asphalt;barrierefreiheit;5,00;Szenario 2: Radikale Vermeidung;0,01250000000;multifunktionale_nutzungsqualitaet;1,0;5,0;1,0000000000000000;0,012500000000000001
-Asphalt;Heller Asphalt;barrierefreiheit;5,00;Szenario 3: Radikaler Lebenszyklus;0,02500000000;multifunktionale_nutzungsqualitaet;1,0;5,0;1,0000000000000000;0,025000000000000001
+Asphalt;Heller Asphalt;versickerung;1,00;Szenario 0: Baseline (IST);0,13333333320;multifunktionale_nutzungsqualitaet;0,2;1,0;1,0000000000000000;0,133333333200000015
+Asphalt;Heller Asphalt;versickerung;1,00;Szenario 1: Forschungsfokus;0,03333333330;multifunktionale_nutzungsqualitaet;0,2;1,0;1,0000000000000000;0,033333333300000004
+Asphalt;Heller Asphalt;versickerung;1,00;Szenario 2: Radikale Vermeidung;0,01666666665;multifunktionale_nutzungsqualitaet;0,2;1,0;1,0000000000000000;0,016666666650000002
+Asphalt;Heller Asphalt;versickerung;1,00;Szenario 3: Radikaler Lebenszyklus;0,03333333330;multifunktionale_nutzungsqualitaet;0,2;1,0;1,0000000000000000;0,033333333300000004
+Asphalt;Heller Asphalt;oberflaechentemperatur;54,00;Szenario 0: Baseline (IST);0,13333333320;multifunktionale_nutzungsqualitaet;26,0;58,4;0,1358024691358024;0,018106995866666659
+Asphalt;Heller Asphalt;oberflaechentemperatur;54,00;Szenario 1: Forschungsfokus;0,03333333330;multifunktionale_nutzungsqualitaet;26,0;58,4;0,1358024691358024;0,004526748966666665
+Asphalt;Heller Asphalt;oberflaechentemperatur;54,00;Szenario 2: Radikale Vermeidung;0,01666666665;multifunktionale_nutzungsqualitaet;26,0;58,4;0,1358024691358024;0,002263374483333332
+Asphalt;Heller Asphalt;oberflaechentemperatur;54,00;Szenario 3: Radikaler Lebenszyklus;0,03333333330;multifunktionale_nutzungsqualitaet;26,0;58,4;0,1358024691358024;0,004526748966666665
+Asphalt;Heller Asphalt;befahrbarkeit;5,00;Szenario 0: Baseline (IST);0,13333333320;multifunktionale_nutzungsqualitaet;1,0;5,0;1,0000000000000000;0,133333333200000015
+Asphalt;Heller Asphalt;befahrbarkeit;5,00;Szenario 1: Forschungsfokus;0,03333333330;multifunktionale_nutzungsqualitaet;1,0;5,0;1,0000000000000000;0,033333333300000004
+Asphalt;Heller Asphalt;befahrbarkeit;5,00;Szenario 2: Radikale Vermeidung;0,01666666665;multifunktionale_nutzungsqualitaet;1,0;5,0;1,0000000000000000;0,016666666650000002
+Asphalt;Heller Asphalt;befahrbarkeit;5,00;Szenario 3: Radikaler Lebenszyklus;0,03333333330;multifunktionale_nutzungsqualitaet;1,0;5,0;1,0000000000000000;0,033333333300000004
+Asphalt;Heller Asphalt;recyclingfaehigkeit;1,00;Szenario 0: Baseline (IST);0,03333333330;kreislauffaehigkeit;0,0;2,0;0,5000000000000000;0,016666666650000002
+Asphalt;Heller Asphalt;recyclingfaehigkeit;1,00;Szenario 1: Forschungsfokus;0,08333333325;kreislauffaehigkeit;0,0;2,0;0,5000000000000000;0,041666666625000001
+Asphalt;Heller Asphalt;recyclingfaehigkeit;1,00;Szenario 2: Radikale Vermeidung;0,14999999985;kreislauffaehigkeit;0,0;2,0;0,5000000000000000;0,074999999925000005
+Asphalt;Heller Asphalt;recyclingfaehigkeit;1,00;Szenario 3: Radikaler Lebenszyklus;0,01666666665;kreislauffaehigkeit;0,0;2,0;0,5000000000000000;0,008333333325000001
+Asphalt;Heller Asphalt;lokaleMaterialien;0,40;Szenario 0: Baseline (IST);0,03333333330;kreislauffaehigkeit;0,4;0,8;0,0000000000000000;0,000000000000000000
+Asphalt;Heller Asphalt;lokaleMaterialien;0,40;Szenario 1: Forschungsfokus;0,08333333325;kreislauffaehigkeit;0,4;0,8;0,0000000000000000;0,000000000000000000
+Asphalt;Heller Asphalt;lokaleMaterialien;0,40;Szenario 2: Radikale Vermeidung;0,14999999985;kreislauffaehigkeit;0,4;0,8;0,0000000000000000;0,000000000000000000
+Asphalt;Heller Asphalt;lokaleMaterialien;0,40;Szenario 3: Radikaler Lebenszyklus;0,01666666665;kreislauffaehigkeit;0,4;0,8;0,0000000000000000;0,000000000000000000
+Asphalt;Heller Asphalt;modulareErneuerbarkeit;0,00;Szenario 0: Baseline (IST);0,03333333330;kreislauffaehigkeit;0,0;2,0;0,0000000000000000;0,000000000000000000
+Asphalt;Heller Asphalt;modulareErneuerbarkeit;0,00;Szenario 1: Forschungsfokus;0,08333333325;kreislauffaehigkeit;0,0;2,0;0,0000000000000000;0,000000000000000000
+Asphalt;Heller Asphalt;modulareErneuerbarkeit;0,00;Szenario 2: Radikale Vermeidung;0,14999999985;kreislauffaehigkeit;0,0;2,0;0,0000000000000000;0,000000000000000000
+Asphalt;Heller Asphalt;modulareErneuerbarkeit;0,00;Szenario 3: Radikaler Lebenszyklus;0,01666666665;kreislauffaehigkeit;0,0;2,0;0,0000000000000000;0,000000000000000000
 Asphalt;Selbstheilender Asphalt;lebensdauer;42,50;Szenario 0: Baseline (IST);0,20000000000;langlebigkeit_wirtschaftlichkeit;15,0;50,0;0,7857142857142857;0,157142857142857140
 Asphalt;Selbstheilender Asphalt;lebensdauer;42,50;Szenario 1: Forschungsfokus;0,20000000000;langlebigkeit_wirtschaftlichkeit;15,0;50,0;0,7857142857142857;0,157142857142857140
 Asphalt;Selbstheilender Asphalt;lebensdauer;42,50;Szenario 2: Radikale Vermeidung;0,02500000000;langlebigkeit_wirtschaftlichkeit;15,0;50,0;0,7857142857142857;0,019642857142857142
 Asphalt;Selbstheilender Asphalt;lebensdauer;42,50;Szenario 3: Radikaler Lebenszyklus;0,40000000000;langlebigkeit_wirtschaftlichkeit;15,0;50,0;0,7857142857142857;0,314285714285714279
-Asphalt;Selbstheilender Asphalt;versickerung;1,00;Szenario 0: Baseline (IST);0,10000000000;multifunktionale_nutzungsqualitaet;0,2;1,0;1,0000000000000000;0,100000000000000006
-Asphalt;Selbstheilender Asphalt;versickerung;1,00;Szenario 1: Forschungsfokus;0,02500000000;multifunktionale_nutzungsqualitaet;0,2;1,0;1,0000000000000000;0,025000000000000001
-Asphalt;Selbstheilender Asphalt;versickerung;1,00;Szenario 2: Radikale Vermeidung;0,01250000000;multifunktionale_nutzungsqualitaet;0,2;1,0;1,0000000000000000;0,012500000000000001
-Asphalt;Selbstheilender Asphalt;versickerung;1,00;Szenario 3: Radikaler Lebenszyklus;0,02500000000;multifunktionale_nutzungsqualitaet;0,2;1,0;1,0000000000000000;0,025000000000000001
-Asphalt;Selbstheilender Asphalt;oberflaechentemperatur;58,40;Szenario 0: Baseline (IST);0,10000000000;multifunktionale_nutzungsqualitaet;26,0;58,4;0,0000000000000000;0,000000000000000000
-Asphalt;Selbstheilender Asphalt;oberflaechentemperatur;58,40;Szenario 1: Forschungsfokus;0,02500000000;multifunktionale_nutzungsqualitaet;26,0;58,4;0,0000000000000000;0,000000000000000000
-Asphalt;Selbstheilender Asphalt;oberflaechentemperatur;58,40;Szenario 2: Radikale Vermeidung;0,01250000000;multifunktionale_nutzungsqualitaet;26,0;58,4;0,0000000000000000;0,000000000000000000
-Asphalt;Selbstheilender Asphalt;oberflaechentemperatur;58,40;Szenario 3: Radikaler Lebenszyklus;0,02500000000;multifunktionale_nutzungsqualitaet;26,0;58,4;0,0000000000000000;0,000000000000000000
-Asphalt;Selbstheilender Asphalt;befahrbarkeit;5,00;Szenario 0: Baseline (IST);0,10000000000;multifunktionale_nutzungsqualitaet;1,0;5,0;1,0000000000000000;0,100000000000000006
-Asphalt;Selbstheilender Asphalt;befahrbarkeit;5,00;Szenario 1: Forschungsfokus;0,02500000000;multifunktionale_nutzungsqualitaet;1,0;5,0;1,0000000000000000;0,025000000000000001
-Asphalt;Selbstheilender Asphalt;befahrbarkeit;5,00;Szenario 2: Radikale Vermeidung;0,01250000000;multifunktionale_nutzungsqualitaet;1,0;5,0;1,0000000000000000;0,012500000000000001
-Asphalt;Selbstheilender Asphalt;befahrbarkeit;5,00;Szenario 3: Radikaler Lebenszyklus;0,02500000000;multifunktionale_nutzungsqualitaet;1,0;5,0;1,0000000000000000;0,025000000000000001
-Asphalt;Selbstheilender Asphalt;kosten;138,50;Szenario 0: Baseline (IST);0,10000000000;langlebigkeit_wirtschaftlichkeit;50,0;350,0;0,7050000000000001;0,070500000000000007
-Asphalt;Selbstheilender Asphalt;kosten;138,50;Szenario 1: Forschungsfokus;0,10000000000;langlebigkeit_wirtschaftlichkeit;50,0;350,0;0,7050000000000001;0,070500000000000007
-Asphalt;Selbstheilender Asphalt;kosten;138,50;Szenario 2: Radikale Vermeidung;0,01250000000;langlebigkeit_wirtschaftlichkeit;50,0;350,0;0,7050000000000001;0,008812500000000001
-Asphalt;Selbstheilender Asphalt;kosten;138,50;Szenario 3: Radikaler Lebenszyklus;0,20000000000;langlebigkeit_wirtschaftlichkeit;50,0;350,0;0,7050000000000001;0,141000000000000014
-Asphalt;Selbstheilender Asphalt;unterhalt;2,00;Szenario 0: Baseline (IST);0,10000000000;langlebigkeit_wirtschaftlichkeit;2,0;9,0;1,0000000000000000;0,100000000000000006
-Asphalt;Selbstheilender Asphalt;unterhalt;2,00;Szenario 1: Forschungsfokus;0,10000000000;langlebigkeit_wirtschaftlichkeit;2,0;9,0;1,0000000000000000;0,100000000000000006
-Asphalt;Selbstheilender Asphalt;unterhalt;2,00;Szenario 2: Radikale Vermeidung;0,01250000000;langlebigkeit_wirtschaftlichkeit;2,0;9,0;1,0000000000000000;0,012500000000000001
-Asphalt;Selbstheilender Asphalt;unterhalt;2,00;Szenario 3: Radikaler Lebenszyklus;0,20000000000;langlebigkeit_wirtschaftlichkeit;2,0;9,0;1,0000000000000000;0,200000000000000011
-Asphalt;Selbstheilender Asphalt;co2;72,50;Szenario 0: Baseline (IST);0,05000000000;umweltbelastung;17,5;72,5;0,0000000000000000;0,000000000000000000
-Asphalt;Selbstheilender Asphalt;co2;72,50;Szenario 1: Forschungsfokus;0,12500000000;umweltbelastung;17,5;72,5;0,0000000000000000;0,000000000000000000
-Asphalt;Selbstheilender Asphalt;co2;72,50;Szenario 2: Radikale Vermeidung;0,22500000000;umweltbelastung;17,5;72,5;0,0000000000000000;0,000000000000000000
-Asphalt;Selbstheilender Asphalt;co2;72,50;Szenario 3: Radikaler Lebenszyklus;0,02500000000;umweltbelastung;17,5;72,5;0,0000000000000000;0,000000000000000000
-Asphalt;Selbstheilender Asphalt;graueEnergie;375,00;Szenario 0: Baseline (IST);0,05000000000;umweltbelastung;70,0;375,0;0,0000000000000000;0,000000000000000000
-Asphalt;Selbstheilender Asphalt;graueEnergie;375,00;Szenario 1: Forschungsfokus;0,12500000000;umweltbelastung;70,0;375,0;0,0000000000000000;0,000000000000000000
-Asphalt;Selbstheilender Asphalt;graueEnergie;375,00;Szenario 2: Radikale Vermeidung;0,22500000000;umweltbelastung;70,0;375,0;0,0000000000000000;0,000000000000000000
-Asphalt;Selbstheilender Asphalt;graueEnergie;375,00;Szenario 3: Radikaler Lebenszyklus;0,02500000000;umweltbelastung;70,0;375,0;0,0000000000000000;0,000000000000000000
-Asphalt;Selbstheilender Asphalt;recyclingfaehigkeit;0,20;Szenario 0: Baseline (IST);0,03333333330;kreislauffaehigkeit;0,2;1,0;0,0000000000000000;0,000000000000000000
-Asphalt;Selbstheilender Asphalt;recyclingfaehigkeit;0,20;Szenario 1: Forschungsfokus;0,08333333325;kreislauffaehigkeit;0,2;1,0;0,0000000000000000;0,000000000000000000
-Asphalt;Selbstheilender Asphalt;recyclingfaehigkeit;0,20;Szenario 2: Radikale Vermeidung;0,14999999985;kreislauffaehigkeit;0,2;1,0;0,0000000000000000;0,000000000000000000
-Asphalt;Selbstheilender Asphalt;recyclingfaehigkeit;0,20;Szenario 3: Radikaler Lebenszyklus;0,01666666665;kreislauffaehigkeit;0,2;1,0;0,0000000000000000;0,000000000000000000
-Asphalt;Selbstheilender Asphalt;lokaleMaterialien;0,50;Szenario 0: Baseline (IST);0,03333333330;kreislauffaehigkeit;0,4;1,0;0,1666666666666666;0,005555555550000000
-Asphalt;Selbstheilender Asphalt;lokaleMaterialien;0,50;Szenario 1: Forschungsfokus;0,08333333325;kreislauffaehigkeit;0,4;1,0;0,1666666666666666;0,013888888874999998
-Asphalt;Selbstheilender Asphalt;lokaleMaterialien;0,50;Szenario 2: Radikale Vermeidung;0,14999999985;kreislauffaehigkeit;0,4;1,0;0,1666666666666666;0,024999999974999996
-Asphalt;Selbstheilender Asphalt;lokaleMaterialien;0,50;Szenario 3: Radikaler Lebenszyklus;0,01666666665;kreislauffaehigkeit;0,4;1,0;0,1666666666666666;0,002777777775000000
-Asphalt;Selbstheilender Asphalt;modulareErneuerbarkeit;1,00;Szenario 0: Baseline (IST);0,03333333330;kreislauffaehigkeit;1,0;5,0;0,0000000000000000;0,000000000000000000
-Asphalt;Selbstheilender Asphalt;modulareErneuerbarkeit;1,00;Szenario 1: Forschungsfokus;0,08333333325;kreislauffaehigkeit;1,0;5,0;0,0000000000000000;0,000000000000000000
-Asphalt;Selbstheilender Asphalt;modulareErneuerbarkeit;1,00;Szenario 2: Radikale Vermeidung;0,14999999985;kreislauffaehigkeit;1,0;5,0;0,0000000000000000;0,000000000000000000
-Asphalt;Selbstheilender Asphalt;modulareErneuerbarkeit;1,00;Szenario 3: Radikaler Lebenszyklus;0,01666666665;kreislauffaehigkeit;1,0;5,0;0,0000000000000000;0,000000000000000000
-Asphalt;Selbstheilender Asphalt;barrierefreiheit;5,00;Szenario 0: Baseline (IST);0,10000000000;multifunktionale_nutzungsqualitaet;1,0;5,0;1,0000000000000000;0,100000000000000006
-Asphalt;Selbstheilender Asphalt;barrierefreiheit;5,00;Szenario 1: Forschungsfokus;0,02500000000;multifunktionale_nutzungsqualitaet;1,0;5,0;1,0000000000000000;0,025000000000000001
-Asphalt;Selbstheilender Asphalt;barrierefreiheit;5,00;Szenario 2: Radikale Vermeidung;0,01250000000;multifunktionale_nutzungsqualitaet;1,0;5,0;1,0000000000000000;0,012500000000000001
-Asphalt;Selbstheilender Asphalt;barrierefreiheit;5,00;Szenario 3: Radikaler Lebenszyklus;0,02500000000;multifunktionale_nutzungsqualitaet;1,0;5,0;1,0000000000000000;0,025000000000000001
+Asphalt;Selbstheilender Asphalt;versickerung;1,00;Szenario 0: Baseline (IST);0,13333333320;multifunktionale_nutzungsqualitaet;0,2;1,0;1,0000000000000000;0,133333333200000015
+Asphalt;Selbstheilender Asphalt;versickerung;1,00;Szenario 1: Forschungsfokus;0,03333333330;multifunktionale_nutzungsqualitaet;0,2;1,0;1,0000000000000000;0,033333333300000004
+Asphalt;Selbstheilender Asphalt;versickerung;1,00;Szenario 2: Radikale Vermeidung;0,01666666665;multifunktionale_nutzungsqualitaet;0,2;1,0;1,0000000000000000;0,016666666650000002
+Asphalt;Selbstheilender Asphalt;versickerung;1,00;Szenario 3: Radikaler Lebenszyklus;0,03333333330;multifunktionale_nutzungsqualitaet;0,2;1,0;1,0000000000000000;0,033333333300000004
+Asphalt;Selbstheilender Asphalt;oberflaechentemperatur;58,40;Szenario 0: Baseline (IST);0,13333333320;multifunktionale_nutzungsqualitaet;26,0;58,4;0,0000000000000000;0,000000000000000000
+Asphalt;Selbstheilender Asphalt;oberflaechentemperatur;58,40;Szenario 1: Forschungsfokus;0,03333333330;multifunktionale_nutzungsqualitaet;26,0;58,4;0,0000000000000000;0,000000000000000000
+Asphalt;Selbstheilender Asphalt;oberflaechentemperatur;58,40;Szenario 2: Radikale Vermeidung;0,01666666665;multifunktionale_nutzungsqualitaet;26,0;58,4;0,0000000000000000;0,000000000000000000
+Asphalt;Selbstheilender Asphalt;oberflaechentemperatur;58,40;Szenario 3: Radikaler Lebenszyklus;0,03333333330;multifunktionale_nutzungsqualitaet;26,0;58,4;0,0000000000000000;0,000000000000000000
+Asphalt;Selbstheilender Asphalt;befahrbarkeit;5,00;Szenario 0: Baseline (IST);0,13333333320;multifunktionale_nutzungsqualitaet;1,0;5,0;1,0000000000000000;0,133333333200000015
+Asphalt;Selbstheilender Asphalt;befahrbarkeit;5,00;Szenario 1: Forschungsfokus;0,03333333330;multifunktionale_nutzungsqualitaet;1,0;5,0;1,0000000000000000;0,033333333300000004
+Asphalt;Selbstheilender Asphalt;befahrbarkeit;5,00;Szenario 2: Radikale Vermeidung;0,01666666665;multifunktionale_nutzungsqualitaet;1,0;5,0;1,0000000000000000;0,016666666650000002
+Asphalt;Selbstheilender Asphalt;befahrbarkeit;5,00;Szenario 3: Radikaler Lebenszyklus;0,03333333330;multifunktionale_nutzungsqualitaet;1,0;5,0;1,0000000000000000;0,033333333300000004
+Asphalt;Selbstheilender Asphalt;recyclingfaehigkeit;0,00;Szenario 0: Baseline (IST);0,03333333330;kreislauffaehigkeit;0,0;2,0;0,0000000000000000;0,000000000000000000
+Asphalt;Selbstheilender Asphalt;recyclingfaehigkeit;0,00;Szenario 1: Forschungsfokus;0,08333333325;kreislauffaehigkeit;0,0;2,0;0,0000000000000000;0,000000000000000000
+Asphalt;Selbstheilender Asphalt;recyclingfaehigkeit;0,00;Szenario 2: Radikale Vermeidung;0,14999999985;kreislauffaehigkeit;0,0;2,0;0,0000000000000000;0,000000000000000000
+Asphalt;Selbstheilender Asphalt;recyclingfaehigkeit;0,00;Szenario 3: Radikaler Lebenszyklus;0,01666666665;kreislauffaehigkeit;0,0;2,0;0,0000000000000000;0,000000000000000000
+Asphalt;Selbstheilender Asphalt;lokaleMaterialien;0,40;Szenario 0: Baseline (IST);0,03333333330;kreislauffaehigkeit;0,4;0,8;0,0000000000000000;0,000000000000000000
+Asphalt;Selbstheilender Asphalt;lokaleMaterialien;0,40;Szenario 1: Forschungsfokus;0,08333333325;kreislauffaehigkeit;0,4;0,8;0,0000000000000000;0,000000000000000000
+Asphalt;Selbstheilender Asphalt;lokaleMaterialien;0,40;Szenario 2: Radikale Vermeidung;0,14999999985;kreislauffaehigkeit;0,4;0,8;0,0000000000000000;0,000000000000000000
+Asphalt;Selbstheilender Asphalt;lokaleMaterialien;0,40;Szenario 3: Radikaler Lebenszyklus;0,01666666665;kreislauffaehigkeit;0,4;0,8;0,0000000000000000;0,000000000000000000
+Asphalt;Selbstheilender Asphalt;modulareErneuerbarkeit;0,00;Szenario 0: Baseline (IST);0,03333333330;kreislauffaehigkeit;0,0;2,0;0,0000000000000000;0,000000000000000000
+Asphalt;Selbstheilender Asphalt;modulareErneuerbarkeit;0,00;Szenario 1: Forschungsfokus;0,08333333325;kreislauffaehigkeit;0,0;2,0;0,0000000000000000;0,000000000000000000
+Asphalt;Selbstheilender Asphalt;modulareErneuerbarkeit;0,00;Szenario 2: Radikale Vermeidung;0,14999999985;kreislauffaehigkeit;0,0;2,0;0,0000000000000000;0,000000000000000000
+Asphalt;Selbstheilender Asphalt;modulareErneuerbarkeit;0,00;Szenario 3: Radikaler Lebenszyklus;0,01666666665;kreislauffaehigkeit;0,0;2,0;0,0000000000000000;0,000000000000000000
 Pflaster;Natursteinpflaster (6-10 mm Fugen);lebensdauer;50,00;Szenario 0: Baseline (IST);0,20000000000;langlebigkeit_wirtschaftlichkeit;15,0;50,0;1,0000000000000000;0,200000000000000011
 Pflaster;Natursteinpflaster (6-10 mm Fugen);lebensdauer;50,00;Szenario 1: Forschungsfokus;0,20000000000;langlebigkeit_wirtschaftlichkeit;15,0;50,0;1,0000000000000000;0,200000000000000011
 Pflaster;Natursteinpflaster (6-10 mm Fugen);lebensdauer;50,00;Szenario 2: Radikale Vermeidung;0,02500000000;langlebigkeit_wirtschaftlichkeit;15,0;50,0;1,0000000000000000;0,025000000000000001
 Pflaster;Natursteinpflaster (6-10 mm Fugen);lebensdauer;50,00;Szenario 3: Radikaler Lebenszyklus;0,40000000000;langlebigkeit_wirtschaftlichkeit;15,0;50,0;1,0000000000000000;0,400000000000000022
-Pflaster;Natursteinpflaster (6-10 mm Fugen);versickerung;0,60;Szenario 0: Baseline (IST);0,10000000000;multifunktionale_nutzungsqualitaet;0,2;1,0;0,4999999999999999;0,049999999999999996
-Pflaster;Natursteinpflaster (6-10 mm Fugen);versickerung;0,60;Szenario 1: Forschungsfokus;0,02500000000;multifunktionale_nutzungsqualitaet;0,2;1,0;0,4999999999999999;0,012499999999999999
-Pflaster;Natursteinpflaster (6-10 mm Fugen);versickerung;0,60;Szenario 2: Radikale Vermeidung;0,01250000000;multifunktionale_nutzungsqualitaet;0,2;1,0;0,4999999999999999;0,006249999999999999
-Pflaster;Natursteinpflaster (6-10 mm Fugen);versickerung;0,60;Szenario 3: Radikaler Lebenszyklus;0,02500000000;multifunktionale_nutzungsqualitaet;0,2;1,0;0,4999999999999999;0,012499999999999999
-Pflaster;Natursteinpflaster (6-10 mm Fugen);oberflaechentemperatur;47,50;Szenario 0: Baseline (IST);0,10000000000;multifunktionale_nutzungsqualitaet;26,0;58,4;0,3364197530864197;0,033641975308641971
-Pflaster;Natursteinpflaster (6-10 mm Fugen);oberflaechentemperatur;47,50;Szenario 1: Forschungsfokus;0,02500000000;multifunktionale_nutzungsqualitaet;26,0;58,4;0,3364197530864197;0,008410493827160493
-Pflaster;Natursteinpflaster (6-10 mm Fugen);oberflaechentemperatur;47,50;Szenario 2: Radikale Vermeidung;0,01250000000;multifunktionale_nutzungsqualitaet;26,0;58,4;0,3364197530864197;0,004205246913580246
-Pflaster;Natursteinpflaster (6-10 mm Fugen);oberflaechentemperatur;47,50;Szenario 3: Radikaler Lebenszyklus;0,02500000000;multifunktionale_nutzungsqualitaet;26,0;58,4;0,3364197530864197;0,008410493827160493
-Pflaster;Natursteinpflaster (6-10 mm Fugen);befahrbarkeit;3,00;Szenario 0: Baseline (IST);0,10000000000;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000;0,050000000000000003
-Pflaster;Natursteinpflaster (6-10 mm Fugen);befahrbarkeit;3,00;Szenario 1: Forschungsfokus;0,02500000000;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000;0,012500000000000001
-Pflaster;Natursteinpflaster (6-10 mm Fugen);befahrbarkeit;3,00;Szenario 2: Radikale Vermeidung;0,01250000000;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000;0,006250000000000000
-Pflaster;Natursteinpflaster (6-10 mm Fugen);befahrbarkeit;3,00;Szenario 3: Radikaler Lebenszyklus;0,02500000000;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000;0,012500000000000001
-Pflaster;Natursteinpflaster (6-10 mm Fugen);kosten;350,00;Szenario 0: Baseline (IST);0,10000000000;langlebigkeit_wirtschaftlichkeit;50,0;350,0;0,0000000000000000;0,000000000000000000
-Pflaster;Natursteinpflaster (6-10 mm Fugen);kosten;350,00;Szenario 1: Forschungsfokus;0,10000000000;langlebigkeit_wirtschaftlichkeit;50,0;350,0;0,0000000000000000;0,000000000000000000
-Pflaster;Natursteinpflaster (6-10 mm Fugen);kosten;350,00;Szenario 2: Radikale Vermeidung;0,01250000000;langlebigkeit_wirtschaftlichkeit;50,0;350,0;0,0000000000000000;0,000000000000000000
-Pflaster;Natursteinpflaster (6-10 mm Fugen);kosten;350,00;Szenario 3: Radikaler Lebenszyklus;0,20000000000;langlebigkeit_wirtschaftlichkeit;50,0;350,0;0,0000000000000000;0,000000000000000000
-Pflaster;Natursteinpflaster (6-10 mm Fugen);unterhalt;5,00;Szenario 0: Baseline (IST);0,10000000000;langlebigkeit_wirtschaftlichkeit;2,0;9,0;0,5714285714285714;0,057142857142857141
-Pflaster;Natursteinpflaster (6-10 mm Fugen);unterhalt;5,00;Szenario 1: Forschungsfokus;0,10000000000;langlebigkeit_wirtschaftlichkeit;2,0;9,0;0,5714285714285714;0,057142857142857141
-Pflaster;Natursteinpflaster (6-10 mm Fugen);unterhalt;5,00;Szenario 2: Radikale Vermeidung;0,01250000000;langlebigkeit_wirtschaftlichkeit;2,0;9,0;0,5714285714285714;0,007142857142857143
-Pflaster;Natursteinpflaster (6-10 mm Fugen);unterhalt;5,00;Szenario 3: Radikaler Lebenszyklus;0,20000000000;langlebigkeit_wirtschaftlichkeit;2,0;9,0;0,5714285714285714;0,114285714285714282
-Pflaster;Natursteinpflaster (6-10 mm Fugen);co2;60,00;Szenario 0: Baseline (IST);0,05000000000;umweltbelastung;17,5;72,5;0,2272727272727273;0,011363636363636366
-Pflaster;Natursteinpflaster (6-10 mm Fugen);co2;60,00;Szenario 1: Forschungsfokus;0,12500000000;umweltbelastung;17,5;72,5;0,2272727272727273;0,028409090909090912
-Pflaster;Natursteinpflaster (6-10 mm Fugen);co2;60,00;Szenario 2: Radikale Vermeidung;0,22500000000;umweltbelastung;17,5;72,5;0,2272727272727273;0,051136363636363640
-Pflaster;Natursteinpflaster (6-10 mm Fugen);co2;60,00;Szenario 3: Radikaler Lebenszyklus;0,02500000000;umweltbelastung;17,5;72,5;0,2272727272727273;0,005681818181818183
-Pflaster;Natursteinpflaster (6-10 mm Fugen);graueEnergie;270,00;Szenario 0: Baseline (IST);0,05000000000;umweltbelastung;70,0;375,0;0,3442622950819673;0,017213114754098365
-Pflaster;Natursteinpflaster (6-10 mm Fugen);graueEnergie;270,00;Szenario 1: Forschungsfokus;0,12500000000;umweltbelastung;70,0;375,0;0,3442622950819673;0,043032786885245908
-Pflaster;Natursteinpflaster (6-10 mm Fugen);graueEnergie;270,00;Szenario 2: Radikale Vermeidung;0,22500000000;umweltbelastung;70,0;375,0;0,3442622950819673;0,077459016393442631
-Pflaster;Natursteinpflaster (6-10 mm Fugen);graueEnergie;270,00;Szenario 3: Radikaler Lebenszyklus;0,02500000000;umweltbelastung;70,0;375,0;0,3442622950819673;0,008606557377049183
-Pflaster;Natursteinpflaster (6-10 mm Fugen);recyclingfaehigkeit;1,00;Szenario 0: Baseline (IST);0,03333333330;kreislauffaehigkeit;0,2;1,0;1,0000000000000000;0,033333333300000004
-Pflaster;Natursteinpflaster (6-10 mm Fugen);recyclingfaehigkeit;1,00;Szenario 1: Forschungsfokus;0,08333333325;kreislauffaehigkeit;0,2;1,0;1,0000000000000000;0,083333333250000002
-Pflaster;Natursteinpflaster (6-10 mm Fugen);recyclingfaehigkeit;1,00;Szenario 2: Radikale Vermeidung;0,14999999985;kreislauffaehigkeit;0,2;1,0;1,0000000000000000;0,149999999850000010
-Pflaster;Natursteinpflaster (6-10 mm Fugen);recyclingfaehigkeit;1,00;Szenario 3: Radikaler Lebenszyklus;0,01666666665;kreislauffaehigkeit;0,2;1,0;1,0000000000000000;0,016666666650000002
-Pflaster;Natursteinpflaster (6-10 mm Fugen);lokaleMaterialien;0,40;Szenario 0: Baseline (IST);0,03333333330;kreislauffaehigkeit;0,4;1,0;0,0000000000000000;0,000000000000000000
-Pflaster;Natursteinpflaster (6-10 mm Fugen);lokaleMaterialien;0,40;Szenario 1: Forschungsfokus;0,08333333325;kreislauffaehigkeit;0,4;1,0;0,0000000000000000;0,000000000000000000
-Pflaster;Natursteinpflaster (6-10 mm Fugen);lokaleMaterialien;0,40;Szenario 2: Radikale Vermeidung;0,14999999985;kreislauffaehigkeit;0,4;1,0;0,0000000000000000;0,000000000000000000
-Pflaster;Natursteinpflaster (6-10 mm Fugen);lokaleMaterialien;0,40;Szenario 3: Radikaler Lebenszyklus;0,01666666665;kreislauffaehigkeit;0,4;1,0;0,0000000000000000;0,000000000000000000
-Pflaster;Natursteinpflaster (6-10 mm Fugen);modulareErneuerbarkeit;5,00;Szenario 0: Baseline (IST);0,03333333330;kreislauffaehigkeit;1,0;5,0;1,0000000000000000;0,033333333300000004
-Pflaster;Natursteinpflaster (6-10 mm Fugen);modulareErneuerbarkeit;5,00;Szenario 1: Forschungsfokus;0,08333333325;kreislauffaehigkeit;1,0;5,0;1,0000000000000000;0,083333333250000002
-Pflaster;Natursteinpflaster (6-10 mm Fugen);modulareErneuerbarkeit;5,00;Szenario 2: Radikale Vermeidung;0,14999999985;kreislauffaehigkeit;1,0;5,0;1,0000000000000000;0,149999999850000010
-Pflaster;Natursteinpflaster (6-10 mm Fugen);modulareErneuerbarkeit;5,00;Szenario 3: Radikaler Lebenszyklus;0,01666666665;kreislauffaehigkeit;1,0;5,0;1,0000000000000000;0,016666666650000002
-Pflaster;Natursteinpflaster (6-10 mm Fugen);barrierefreiheit;3,00;Szenario 0: Baseline (IST);0,10000000000;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000;0,050000000000000003
-Pflaster;Natursteinpflaster (6-10 mm Fugen);barrierefreiheit;3,00;Szenario 1: Forschungsfokus;0,02500000000;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000;0,012500000000000001
-Pflaster;Natursteinpflaster (6-10 mm Fugen);barrierefreiheit;3,00;Szenario 2: Radikale Vermeidung;0,01250000000;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000;0,006250000000000000
-Pflaster;Natursteinpflaster (6-10 mm Fugen);barrierefreiheit;3,00;Szenario 3: Radikaler Lebenszyklus;0,02500000000;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000;0,012500000000000001
+Pflaster;Natursteinpflaster (6-10 mm Fugen);versickerung;0,60;Szenario 0: Baseline (IST);0,13333333320;multifunktionale_nutzungsqualitaet;0,2;1,0;0,4999999999999999;0,066666666599999994
+Pflaster;Natursteinpflaster (6-10 mm Fugen);versickerung;0,60;Szenario 1: Forschungsfokus;0,03333333330;multifunktionale_nutzungsqualitaet;0,2;1,0;0,4999999999999999;0,016666666649999998
+Pflaster;Natursteinpflaster (6-10 mm Fugen);versickerung;0,60;Szenario 2: Radikale Vermeidung;0,01666666665;multifunktionale_nutzungsqualitaet;0,2;1,0;0,4999999999999999;0,008333333324999999
+Pflaster;Natursteinpflaster (6-10 mm Fugen);versickerung;0,60;Szenario 3: Radikaler Lebenszyklus;0,03333333330;multifunktionale_nutzungsqualitaet;0,2;1,0;0,4999999999999999;0,016666666649999998
+Pflaster;Natursteinpflaster (6-10 mm Fugen);oberflaechentemperatur;47,50;Szenario 0: Baseline (IST);0,13333333320;multifunktionale_nutzungsqualitaet;26,0;58,4;0,3364197530864197;0,044855967033333333
+Pflaster;Natursteinpflaster (6-10 mm Fugen);oberflaechentemperatur;47,50;Szenario 1: Forschungsfokus;0,03333333330;multifunktionale_nutzungsqualitaet;26,0;58,4;0,3364197530864197;0,011213991758333333
+Pflaster;Natursteinpflaster (6-10 mm Fugen);oberflaechentemperatur;47,50;Szenario 2: Radikale Vermeidung;0,01666666665;multifunktionale_nutzungsqualitaet;26,0;58,4;0,3364197530864197;0,005606995879166667
+Pflaster;Natursteinpflaster (6-10 mm Fugen);oberflaechentemperatur;47,50;Szenario 3: Radikaler Lebenszyklus;0,03333333330;multifunktionale_nutzungsqualitaet;26,0;58,4;0,3364197530864197;0,011213991758333333
+Pflaster;Natursteinpflaster (6-10 mm Fugen);befahrbarkeit;3,00;Szenario 0: Baseline (IST);0,13333333320;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000;0,066666666600000007
+Pflaster;Natursteinpflaster (6-10 mm Fugen);befahrbarkeit;3,00;Szenario 1: Forschungsfokus;0,03333333330;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000;0,016666666650000002
+Pflaster;Natursteinpflaster (6-10 mm Fugen);befahrbarkeit;3,00;Szenario 2: Radikale Vermeidung;0,01666666665;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000;0,008333333325000001
+Pflaster;Natursteinpflaster (6-10 mm Fugen);befahrbarkeit;3,00;Szenario 3: Radikaler Lebenszyklus;0,03333333330;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000;0,016666666650000002
+Pflaster;Natursteinpflaster (6-10 mm Fugen);recyclingfaehigkeit;2,00;Szenario 0: Baseline (IST);0,03333333330;kreislauffaehigkeit;0,0;2,0;1,0000000000000000;0,033333333300000004
+Pflaster;Natursteinpflaster (6-10 mm Fugen);recyclingfaehigkeit;2,00;Szenario 1: Forschungsfokus;0,08333333325;kreislauffaehigkeit;0,0;2,0;1,0000000000000000;0,083333333250000002
+Pflaster;Natursteinpflaster (6-10 mm Fugen);recyclingfaehigkeit;2,00;Szenario 2: Radikale Vermeidung;0,14999999985;kreislauffaehigkeit;0,0;2,0;1,0000000000000000;0,149999999850000010
+Pflaster;Natursteinpflaster (6-10 mm Fugen);recyclingfaehigkeit;2,00;Szenario 3: Radikaler Lebenszyklus;0,01666666665;kreislauffaehigkeit;0,0;2,0;1,0000000000000000;0,016666666650000002
+Pflaster;Natursteinpflaster (6-10 mm Fugen);lokaleMaterialien;0,80;Szenario 0: Baseline (IST);0,03333333330;kreislauffaehigkeit;0,4;0,8;1,0000000000000000;0,033333333300000004
+Pflaster;Natursteinpflaster (6-10 mm Fugen);lokaleMaterialien;0,80;Szenario 1: Forschungsfokus;0,08333333325;kreislauffaehigkeit;0,4;0,8;1,0000000000000000;0,083333333250000002
+Pflaster;Natursteinpflaster (6-10 mm Fugen);lokaleMaterialien;0,80;Szenario 2: Radikale Vermeidung;0,14999999985;kreislauffaehigkeit;0,4;0,8;1,0000000000000000;0,149999999850000010
+Pflaster;Natursteinpflaster (6-10 mm Fugen);lokaleMaterialien;0,80;Szenario 3: Radikaler Lebenszyklus;0,01666666665;kreislauffaehigkeit;0,4;0,8;1,0000000000000000;0,016666666650000002
+Pflaster;Natursteinpflaster (6-10 mm Fugen);modulareErneuerbarkeit;2,00;Szenario 0: Baseline (IST);0,03333333330;kreislauffaehigkeit;0,0;2,0;1,0000000000000000;0,033333333300000004
+Pflaster;Natursteinpflaster (6-10 mm Fugen);modulareErneuerbarkeit;2,00;Szenario 1: Forschungsfokus;0,08333333325;kreislauffaehigkeit;0,0;2,0;1,0000000000000000;0,083333333250000002
+Pflaster;Natursteinpflaster (6-10 mm Fugen);modulareErneuerbarkeit;2,00;Szenario 2: Radikale Vermeidung;0,14999999985;kreislauffaehigkeit;0,0;2,0;1,0000000000000000;0,149999999850000010
+Pflaster;Natursteinpflaster (6-10 mm Fugen);modulareErneuerbarkeit;2,00;Szenario 3: Radikaler Lebenszyklus;0,01666666665;kreislauffaehigkeit;0,0;2,0;1,0000000000000000;0,016666666650000002
 Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);lebensdauer;35,00;Szenario 0: Baseline (IST);0,20000000000;langlebigkeit_wirtschaftlichkeit;15,0;50,0;0,5714285714285714;0,114285714285714282
 Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);lebensdauer;35,00;Szenario 1: Forschungsfokus;0,20000000000;langlebigkeit_wirtschaftlichkeit;15,0;50,0;0,5714285714285714;0,114285714285714282
 Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);lebensdauer;35,00;Szenario 2: Radikale Vermeidung;0,02500000000;langlebigkeit_wirtschaftlichkeit;15,0;50,0;0,5714285714285714;0,014285714285714285
 Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);lebensdauer;35,00;Szenario 3: Radikaler Lebenszyklus;0,40000000000;langlebigkeit_wirtschaftlichkeit;15,0;50,0;0,5714285714285714;0,228571428571428564
-Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);versickerung;1,00;Szenario 0: Baseline (IST);0,10000000000;multifunktionale_nutzungsqualitaet;0,2;1,0;1,0000000000000000;0,100000000000000006
-Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);versickerung;1,00;Szenario 1: Forschungsfokus;0,02500000000;multifunktionale_nutzungsqualitaet;0,2;1,0;1,0000000000000000;0,025000000000000001
-Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);versickerung;1,00;Szenario 2: Radikale Vermeidung;0,01250000000;multifunktionale_nutzungsqualitaet;0,2;1,0;1,0000000000000000;0,012500000000000001
-Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);versickerung;1,00;Szenario 3: Radikaler Lebenszyklus;0,02500000000;multifunktionale_nutzungsqualitaet;0,2;1,0;1,0000000000000000;0,025000000000000001
-Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);oberflaechentemperatur;57,50;Szenario 0: Baseline (IST);0,10000000000;multifunktionale_nutzungsqualitaet;26,0;58,4;0,0277777777777778;0,002777777777777779
-Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);oberflaechentemperatur;57,50;Szenario 1: Forschungsfokus;0,02500000000;multifunktionale_nutzungsqualitaet;26,0;58,4;0,0277777777777778;0,000694444444444445
-Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);oberflaechentemperatur;57,50;Szenario 2: Radikale Vermeidung;0,01250000000;multifunktionale_nutzungsqualitaet;26,0;58,4;0,0277777777777778;0,000347222222222222
-Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);oberflaechentemperatur;57,50;Szenario 3: Radikaler Lebenszyklus;0,02500000000;multifunktionale_nutzungsqualitaet;26,0;58,4;0,0277777777777778;0,000694444444444445
-Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);befahrbarkeit;4,00;Szenario 0: Baseline (IST);0,10000000000;multifunktionale_nutzungsqualitaet;1,0;5,0;0,7500000000000000;0,075000000000000011
-Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);befahrbarkeit;4,00;Szenario 1: Forschungsfokus;0,02500000000;multifunktionale_nutzungsqualitaet;1,0;5,0;0,7500000000000000;0,018750000000000003
-Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);befahrbarkeit;4,00;Szenario 2: Radikale Vermeidung;0,01250000000;multifunktionale_nutzungsqualitaet;1,0;5,0;0,7500000000000000;0,009375000000000001
-Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);befahrbarkeit;4,00;Szenario 3: Radikaler Lebenszyklus;0,02500000000;multifunktionale_nutzungsqualitaet;1,0;5,0;0,7500000000000000;0,018750000000000003
-Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);kosten;100,00;Szenario 0: Baseline (IST);0,10000000000;langlebigkeit_wirtschaftlichkeit;50,0;350,0;0,8333333333333334;0,083333333333333343
-Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);kosten;100,00;Szenario 1: Forschungsfokus;0,10000000000;langlebigkeit_wirtschaftlichkeit;50,0;350,0;0,8333333333333334;0,083333333333333343
-Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);kosten;100,00;Szenario 2: Radikale Vermeidung;0,01250000000;langlebigkeit_wirtschaftlichkeit;50,0;350,0;0,8333333333333334;0,010416666666666668
-Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);kosten;100,00;Szenario 3: Radikaler Lebenszyklus;0,20000000000;langlebigkeit_wirtschaftlichkeit;50,0;350,0;0,8333333333333334;0,166666666666666685
-Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);unterhalt;4,00;Szenario 0: Baseline (IST);0,10000000000;langlebigkeit_wirtschaftlichkeit;2,0;9,0;0,7142857142857143;0,071428571428571438
-Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);unterhalt;4,00;Szenario 1: Forschungsfokus;0,10000000000;langlebigkeit_wirtschaftlichkeit;2,0;9,0;0,7142857142857143;0,071428571428571438
-Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);unterhalt;4,00;Szenario 2: Radikale Vermeidung;0,01250000000;langlebigkeit_wirtschaftlichkeit;2,0;9,0;0,7142857142857143;0,008928571428571430
-Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);unterhalt;4,00;Szenario 3: Radikaler Lebenszyklus;0,20000000000;langlebigkeit_wirtschaftlichkeit;2,0;9,0;0,7142857142857143;0,142857142857142877
-Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);co2;55,00;Szenario 0: Baseline (IST);0,05000000000;umweltbelastung;17,5;72,5;0,3181818181818182;0,015909090909090911
-Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);co2;55,00;Szenario 1: Forschungsfokus;0,12500000000;umweltbelastung;17,5;72,5;0,3181818181818182;0,039772727272727279
-Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);co2;55,00;Szenario 2: Radikale Vermeidung;0,22500000000;umweltbelastung;17,5;72,5;0,3181818181818182;0,071590909090909108
-Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);co2;55,00;Szenario 3: Radikaler Lebenszyklus;0,02500000000;umweltbelastung;17,5;72,5;0,3181818181818182;0,007954545454545455
-Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);graueEnergie;135,00;Szenario 0: Baseline (IST);0,05000000000;umweltbelastung;70,0;375,0;0,7868852459016393;0,039344262295081971
-Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);graueEnergie;135,00;Szenario 1: Forschungsfokus;0,12500000000;umweltbelastung;70,0;375,0;0,7868852459016393;0,098360655737704916
-Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);graueEnergie;135,00;Szenario 2: Radikale Vermeidung;0,22500000000;umweltbelastung;70,0;375,0;0,7868852459016393;0,177049180327868844
-Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);graueEnergie;135,00;Szenario 3: Radikaler Lebenszyklus;0,02500000000;umweltbelastung;70,0;375,0;0,7868852459016393;0,019672131147540985
-Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);recyclingfaehigkeit;0,40;Szenario 0: Baseline (IST);0,03333333330;kreislauffaehigkeit;0,2;1,0;0,2500000000000000;0,008333333325000001
-Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);recyclingfaehigkeit;0,40;Szenario 1: Forschungsfokus;0,08333333325;kreislauffaehigkeit;0,2;1,0;0,2500000000000000;0,020833333312500001
-Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);recyclingfaehigkeit;0,40;Szenario 2: Radikale Vermeidung;0,14999999985;kreislauffaehigkeit;0,2;1,0;0,2500000000000000;0,037499999962500002
-Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);recyclingfaehigkeit;0,40;Szenario 3: Radikaler Lebenszyklus;0,01666666665;kreislauffaehigkeit;0,2;1,0;0,2500000000000000;0,004166666662500000
-Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);lokaleMaterialien;0,80;Szenario 0: Baseline (IST);0,03333333330;kreislauffaehigkeit;0,4;1,0;0,6666666666666667;0,022222222200000006
-Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);lokaleMaterialien;0,80;Szenario 1: Forschungsfokus;0,08333333325;kreislauffaehigkeit;0,4;1,0;0,6666666666666667;0,055555555500000006
-Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);lokaleMaterialien;0,80;Szenario 2: Radikale Vermeidung;0,14999999985;kreislauffaehigkeit;0,4;1,0;0,6666666666666667;0,099999999900000011
-Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);lokaleMaterialien;0,80;Szenario 3: Radikaler Lebenszyklus;0,01666666665;kreislauffaehigkeit;0,4;1,0;0,6666666666666667;0,011111111100000003
-Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);modulareErneuerbarkeit;5,00;Szenario 0: Baseline (IST);0,03333333330;kreislauffaehigkeit;1,0;5,0;1,0000000000000000;0,033333333300000004
-Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);modulareErneuerbarkeit;5,00;Szenario 1: Forschungsfokus;0,08333333325;kreislauffaehigkeit;1,0;5,0;1,0000000000000000;0,083333333250000002
-Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);modulareErneuerbarkeit;5,00;Szenario 2: Radikale Vermeidung;0,14999999985;kreislauffaehigkeit;1,0;5,0;1,0000000000000000;0,149999999850000010
-Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);modulareErneuerbarkeit;5,00;Szenario 3: Radikaler Lebenszyklus;0,01666666665;kreislauffaehigkeit;1,0;5,0;1,0000000000000000;0,016666666650000002
-Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);barrierefreiheit;5,00;Szenario 0: Baseline (IST);0,10000000000;multifunktionale_nutzungsqualitaet;1,0;5,0;1,0000000000000000;0,100000000000000006
-Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);barrierefreiheit;5,00;Szenario 1: Forschungsfokus;0,02500000000;multifunktionale_nutzungsqualitaet;1,0;5,0;1,0000000000000000;0,025000000000000001
-Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);barrierefreiheit;5,00;Szenario 2: Radikale Vermeidung;0,01250000000;multifunktionale_nutzungsqualitaet;1,0;5,0;1,0000000000000000;0,012500000000000001
-Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);barrierefreiheit;5,00;Szenario 3: Radikaler Lebenszyklus;0,02500000000;multifunktionale_nutzungsqualitaet;1,0;5,0;1,0000000000000000;0,025000000000000001
+Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);versickerung;1,00;Szenario 0: Baseline (IST);0,13333333320;multifunktionale_nutzungsqualitaet;0,2;1,0;1,0000000000000000;0,133333333200000015
+Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);versickerung;1,00;Szenario 1: Forschungsfokus;0,03333333330;multifunktionale_nutzungsqualitaet;0,2;1,0;1,0000000000000000;0,033333333300000004
+Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);versickerung;1,00;Szenario 2: Radikale Vermeidung;0,01666666665;multifunktionale_nutzungsqualitaet;0,2;1,0;1,0000000000000000;0,016666666650000002
+Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);versickerung;1,00;Szenario 3: Radikaler Lebenszyklus;0,03333333330;multifunktionale_nutzungsqualitaet;0,2;1,0;1,0000000000000000;0,033333333300000004
+Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);oberflaechentemperatur;57,50;Szenario 0: Baseline (IST);0,13333333320;multifunktionale_nutzungsqualitaet;26,0;58,4;0,0277777777777778;0,003703703700000002
+Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);oberflaechentemperatur;57,50;Szenario 1: Forschungsfokus;0,03333333330;multifunktionale_nutzungsqualitaet;26,0;58,4;0,0277777777777778;0,000925925925000001
+Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);oberflaechentemperatur;57,50;Szenario 2: Radikale Vermeidung;0,01666666665;multifunktionale_nutzungsqualitaet;26,0;58,4;0,0277777777777778;0,000462962962500000
+Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);oberflaechentemperatur;57,50;Szenario 3: Radikaler Lebenszyklus;0,03333333330;multifunktionale_nutzungsqualitaet;26,0;58,4;0,0277777777777778;0,000925925925000001
+Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);befahrbarkeit;4,00;Szenario 0: Baseline (IST);0,13333333320;multifunktionale_nutzungsqualitaet;1,0;5,0;0,7500000000000000;0,099999999900000011
+Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);befahrbarkeit;4,00;Szenario 1: Forschungsfokus;0,03333333330;multifunktionale_nutzungsqualitaet;1,0;5,0;0,7500000000000000;0,024999999975000003
+Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);befahrbarkeit;4,00;Szenario 2: Radikale Vermeidung;0,01666666665;multifunktionale_nutzungsqualitaet;1,0;5,0;0,7500000000000000;0,012499999987500001
+Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);befahrbarkeit;4,00;Szenario 3: Radikaler Lebenszyklus;0,03333333330;multifunktionale_nutzungsqualitaet;1,0;5,0;0,7500000000000000;0,024999999975000003
+Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);recyclingfaehigkeit;1,00;Szenario 0: Baseline (IST);0,03333333330;kreislauffaehigkeit;0,0;2,0;0,5000000000000000;0,016666666650000002
+Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);recyclingfaehigkeit;1,00;Szenario 1: Forschungsfokus;0,08333333325;kreislauffaehigkeit;0,0;2,0;0,5000000000000000;0,041666666625000001
+Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);recyclingfaehigkeit;1,00;Szenario 2: Radikale Vermeidung;0,14999999985;kreislauffaehigkeit;0,0;2,0;0,5000000000000000;0,074999999925000005
+Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);recyclingfaehigkeit;1,00;Szenario 3: Radikaler Lebenszyklus;0,01666666665;kreislauffaehigkeit;0,0;2,0;0,5000000000000000;0,008333333325000001
+Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);lokaleMaterialien;0,60;Szenario 0: Baseline (IST);0,03333333330;kreislauffaehigkeit;0,4;0,8;0,4999999999999999;0,016666666649999998
+Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);lokaleMaterialien;0,60;Szenario 1: Forschungsfokus;0,08333333325;kreislauffaehigkeit;0,4;0,8;0,4999999999999999;0,041666666624999994
+Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);lokaleMaterialien;0,60;Szenario 2: Radikale Vermeidung;0,14999999985;kreislauffaehigkeit;0,4;0,8;0,4999999999999999;0,074999999924999991
+Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);lokaleMaterialien;0,60;Szenario 3: Radikaler Lebenszyklus;0,01666666665;kreislauffaehigkeit;0,4;0,8;0,4999999999999999;0,008333333324999999
+Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);modulareErneuerbarkeit;2,00;Szenario 0: Baseline (IST);0,03333333330;kreislauffaehigkeit;0,0;2,0;1,0000000000000000;0,033333333300000004
+Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);modulareErneuerbarkeit;2,00;Szenario 1: Forschungsfokus;0,08333333325;kreislauffaehigkeit;0,0;2,0;1,0000000000000000;0,083333333250000002
+Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);modulareErneuerbarkeit;2,00;Szenario 2: Radikale Vermeidung;0,14999999985;kreislauffaehigkeit;0,0;2,0;1,0000000000000000;0,149999999850000010
+Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);modulareErneuerbarkeit;2,00;Szenario 3: Radikaler Lebenszyklus;0,01666666665;kreislauffaehigkeit;0,0;2,0;1,0000000000000000;0,016666666650000002
 Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);lebensdauer;30,00;Szenario 0: Baseline (IST);0,20000000000;langlebigkeit_wirtschaftlichkeit;15,0;50,0;0,4285714285714285;0,085714285714285715
 Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);lebensdauer;30,00;Szenario 1: Forschungsfokus;0,20000000000;langlebigkeit_wirtschaftlichkeit;15,0;50,0;0,4285714285714285;0,085714285714285715
 Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);lebensdauer;30,00;Szenario 2: Radikale Vermeidung;0,02500000000;langlebigkeit_wirtschaftlichkeit;15,0;50,0;0,4285714285714285;0,010714285714285714
 Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);lebensdauer;30,00;Szenario 3: Radikaler Lebenszyklus;0,40000000000;langlebigkeit_wirtschaftlichkeit;15,0;50,0;0,4285714285714285;0,171428571428571430
-Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);versickerung;0,35;Szenario 0: Baseline (IST);0,10000000000;multifunktionale_nutzungsqualitaet;0,2;1,0;0,1874999999999999;0,018749999999999996
-Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);versickerung;0,35;Szenario 1: Forschungsfokus;0,02500000000;multifunktionale_nutzungsqualitaet;0,2;1,0;0,1874999999999999;0,004687499999999999
-Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);versickerung;0,35;Szenario 2: Radikale Vermeidung;0,01250000000;multifunktionale_nutzungsqualitaet;0,2;1,0;0,1874999999999999;0,002343749999999999
-Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);versickerung;0,35;Szenario 3: Radikaler Lebenszyklus;0,02500000000;multifunktionale_nutzungsqualitaet;0,2;1,0;0,1874999999999999;0,004687499999999999
-Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);oberflaechentemperatur;50,00;Szenario 0: Baseline (IST);0,10000000000;multifunktionale_nutzungsqualitaet;26,0;58,4;0,2592592592592592;0,025925925925925922
-Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);oberflaechentemperatur;50,00;Szenario 1: Forschungsfokus;0,02500000000;multifunktionale_nutzungsqualitaet;26,0;58,4;0,2592592592592592;0,006481481481481480
-Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);oberflaechentemperatur;50,00;Szenario 2: Radikale Vermeidung;0,01250000000;multifunktionale_nutzungsqualitaet;26,0;58,4;0,2592592592592592;0,003240740740740740
-Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);oberflaechentemperatur;50,00;Szenario 3: Radikaler Lebenszyklus;0,02500000000;multifunktionale_nutzungsqualitaet;26,0;58,4;0,2592592592592592;0,006481481481481480
-Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);befahrbarkeit;3,00;Szenario 0: Baseline (IST);0,10000000000;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000;0,050000000000000003
-Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);befahrbarkeit;3,00;Szenario 1: Forschungsfokus;0,02500000000;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000;0,012500000000000001
-Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);befahrbarkeit;3,00;Szenario 2: Radikale Vermeidung;0,01250000000;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000;0,006250000000000000
-Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);befahrbarkeit;3,00;Szenario 3: Radikaler Lebenszyklus;0,02500000000;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000;0,012500000000000001
-Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);kosten;125,00;Szenario 0: Baseline (IST);0,10000000000;langlebigkeit_wirtschaftlichkeit;50,0;350,0;0,7500000000000000;0,075000000000000011
-Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);kosten;125,00;Szenario 1: Forschungsfokus;0,10000000000;langlebigkeit_wirtschaftlichkeit;50,0;350,0;0,7500000000000000;0,075000000000000011
-Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);kosten;125,00;Szenario 2: Radikale Vermeidung;0,01250000000;langlebigkeit_wirtschaftlichkeit;50,0;350,0;0,7500000000000000;0,009375000000000001
-Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);kosten;125,00;Szenario 3: Radikaler Lebenszyklus;0,20000000000;langlebigkeit_wirtschaftlichkeit;50,0;350,0;0,7500000000000000;0,150000000000000022
-Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);unterhalt;7,00;Szenario 0: Baseline (IST);0,10000000000;langlebigkeit_wirtschaftlichkeit;2,0;9,0;0,2857142857142857;0,028571428571428571
-Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);unterhalt;7,00;Szenario 1: Forschungsfokus;0,10000000000;langlebigkeit_wirtschaftlichkeit;2,0;9,0;0,2857142857142857;0,028571428571428571
-Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);unterhalt;7,00;Szenario 2: Radikale Vermeidung;0,01250000000;langlebigkeit_wirtschaftlichkeit;2,0;9,0;0,2857142857142857;0,003571428571428571
-Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);unterhalt;7,00;Szenario 3: Radikaler Lebenszyklus;0,20000000000;langlebigkeit_wirtschaftlichkeit;2,0;9,0;0,2857142857142857;0,057142857142857141
-Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);co2;50,00;Szenario 0: Baseline (IST);0,05000000000;umweltbelastung;17,5;72,5;0,4090909090909091;0,020454545454545454
-Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);co2;50,00;Szenario 1: Forschungsfokus;0,12500000000;umweltbelastung;17,5;72,5;0,4090909090909091;0,051136363636363633
-Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);co2;50,00;Szenario 2: Radikale Vermeidung;0,22500000000;umweltbelastung;17,5;72,5;0,4090909090909091;0,092045454545454541
-Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);co2;50,00;Szenario 3: Radikaler Lebenszyklus;0,02500000000;umweltbelastung;17,5;72,5;0,4090909090909091;0,010227272727272727
-Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);graueEnergie;175,00;Szenario 0: Baseline (IST);0,05000000000;umweltbelastung;70,0;375,0;0,6557377049180328;0,032786885245901641
-Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);graueEnergie;175,00;Szenario 1: Forschungsfokus;0,12500000000;umweltbelastung;70,0;375,0;0,6557377049180328;0,081967213114754106
-Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);graueEnergie;175,00;Szenario 2: Radikale Vermeidung;0,22500000000;umweltbelastung;70,0;375,0;0,6557377049180328;0,147540983606557402
-Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);graueEnergie;175,00;Szenario 3: Radikaler Lebenszyklus;0,02500000000;umweltbelastung;70,0;375,0;0,6557377049180328;0,016393442622950821
-Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);recyclingfaehigkeit;0,40;Szenario 0: Baseline (IST);0,03333333330;kreislauffaehigkeit;0,2;1,0;0,2500000000000000;0,008333333325000001
-Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);recyclingfaehigkeit;0,40;Szenario 1: Forschungsfokus;0,08333333325;kreislauffaehigkeit;0,2;1,0;0,2500000000000000;0,020833333312500001
-Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);recyclingfaehigkeit;0,40;Szenario 2: Radikale Vermeidung;0,14999999985;kreislauffaehigkeit;0,2;1,0;0,2500000000000000;0,037499999962500002
-Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);recyclingfaehigkeit;0,40;Szenario 3: Radikaler Lebenszyklus;0,01666666665;kreislauffaehigkeit;0,2;1,0;0,2500000000000000;0,004166666662500000
-Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);lokaleMaterialien;0,80;Szenario 0: Baseline (IST);0,03333333330;kreislauffaehigkeit;0,4;1,0;0,6666666666666667;0,022222222200000006
-Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);lokaleMaterialien;0,80;Szenario 1: Forschungsfokus;0,08333333325;kreislauffaehigkeit;0,4;1,0;0,6666666666666667;0,055555555500000006
-Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);lokaleMaterialien;0,80;Szenario 2: Radikale Vermeidung;0,14999999985;kreislauffaehigkeit;0,4;1,0;0,6666666666666667;0,099999999900000011
-Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);lokaleMaterialien;0,80;Szenario 3: Radikaler Lebenszyklus;0,01666666665;kreislauffaehigkeit;0,4;1,0;0,6666666666666667;0,011111111100000003
-Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);modulareErneuerbarkeit;5,00;Szenario 0: Baseline (IST);0,03333333330;kreislauffaehigkeit;1,0;5,0;1,0000000000000000;0,033333333300000004
-Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);modulareErneuerbarkeit;5,00;Szenario 1: Forschungsfokus;0,08333333325;kreislauffaehigkeit;1,0;5,0;1,0000000000000000;0,083333333250000002
-Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);modulareErneuerbarkeit;5,00;Szenario 2: Radikale Vermeidung;0,14999999985;kreislauffaehigkeit;1,0;5,0;1,0000000000000000;0,149999999850000010
-Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);modulareErneuerbarkeit;5,00;Szenario 3: Radikaler Lebenszyklus;0,01666666665;kreislauffaehigkeit;1,0;5,0;1,0000000000000000;0,016666666650000002
-Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);barrierefreiheit;3,00;Szenario 0: Baseline (IST);0,10000000000;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000;0,050000000000000003
-Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);barrierefreiheit;3,00;Szenario 1: Forschungsfokus;0,02500000000;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000;0,012500000000000001
-Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);barrierefreiheit;3,00;Szenario 2: Radikale Vermeidung;0,01250000000;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000;0,006250000000000000
-Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);barrierefreiheit;3,00;Szenario 3: Radikaler Lebenszyklus;0,02500000000;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000;0,012500000000000001
+Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);versickerung;0,35;Szenario 0: Baseline (IST);0,13333333320;multifunktionale_nutzungsqualitaet;0,2;1,0;0,1874999999999999;0,024999999974999996
+Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);versickerung;0,35;Szenario 1: Forschungsfokus;0,03333333330;multifunktionale_nutzungsqualitaet;0,2;1,0;0,1874999999999999;0,006249999993749999
+Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);versickerung;0,35;Szenario 2: Radikale Vermeidung;0,01666666665;multifunktionale_nutzungsqualitaet;0,2;1,0;0,1874999999999999;0,003124999996874999
+Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);versickerung;0,35;Szenario 3: Radikaler Lebenszyklus;0,03333333330;multifunktionale_nutzungsqualitaet;0,2;1,0;0,1874999999999999;0,006249999993749999
+Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);oberflaechentemperatur;50,00;Szenario 0: Baseline (IST);0,13333333320;multifunktionale_nutzungsqualitaet;26,0;58,4;0,2592592592592592;0,034567901199999994
+Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);oberflaechentemperatur;50,00;Szenario 1: Forschungsfokus;0,03333333330;multifunktionale_nutzungsqualitaet;26,0;58,4;0,2592592592592592;0,008641975299999998
+Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);oberflaechentemperatur;50,00;Szenario 2: Radikale Vermeidung;0,01666666665;multifunktionale_nutzungsqualitaet;26,0;58,4;0,2592592592592592;0,004320987649999999
+Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);oberflaechentemperatur;50,00;Szenario 3: Radikaler Lebenszyklus;0,03333333330;multifunktionale_nutzungsqualitaet;26,0;58,4;0,2592592592592592;0,008641975299999998
+Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);befahrbarkeit;3,00;Szenario 0: Baseline (IST);0,13333333320;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000;0,066666666600000007
+Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);befahrbarkeit;3,00;Szenario 1: Forschungsfokus;0,03333333330;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000;0,016666666650000002
+Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);befahrbarkeit;3,00;Szenario 2: Radikale Vermeidung;0,01666666665;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000;0,008333333325000001
+Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);befahrbarkeit;3,00;Szenario 3: Radikaler Lebenszyklus;0,03333333330;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000;0,016666666650000002
+Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);recyclingfaehigkeit;1,00;Szenario 0: Baseline (IST);0,03333333330;kreislauffaehigkeit;0,0;2,0;0,5000000000000000;0,016666666650000002
+Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);recyclingfaehigkeit;1,00;Szenario 1: Forschungsfokus;0,08333333325;kreislauffaehigkeit;0,0;2,0;0,5000000000000000;0,041666666625000001
+Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);recyclingfaehigkeit;1,00;Szenario 2: Radikale Vermeidung;0,14999999985;kreislauffaehigkeit;0,0;2,0;0,5000000000000000;0,074999999925000005
+Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);recyclingfaehigkeit;1,00;Szenario 3: Radikaler Lebenszyklus;0,01666666665;kreislauffaehigkeit;0,0;2,0;0,5000000000000000;0,008333333325000001
+Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);lokaleMaterialien;0,60;Szenario 0: Baseline (IST);0,03333333330;kreislauffaehigkeit;0,4;0,8;0,4999999999999999;0,016666666649999998
+Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);lokaleMaterialien;0,60;Szenario 1: Forschungsfokus;0,08333333325;kreislauffaehigkeit;0,4;0,8;0,4999999999999999;0,041666666624999994
+Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);lokaleMaterialien;0,60;Szenario 2: Radikale Vermeidung;0,14999999985;kreislauffaehigkeit;0,4;0,8;0,4999999999999999;0,074999999924999991
+Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);lokaleMaterialien;0,60;Szenario 3: Radikaler Lebenszyklus;0,01666666665;kreislauffaehigkeit;0,4;0,8;0,4999999999999999;0,008333333324999999
+Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);modulareErneuerbarkeit;2,00;Szenario 0: Baseline (IST);0,03333333330;kreislauffaehigkeit;0,0;2,0;1,0000000000000000;0,033333333300000004
+Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);modulareErneuerbarkeit;2,00;Szenario 1: Forschungsfokus;0,08333333325;kreislauffaehigkeit;0,0;2,0;1,0000000000000000;0,083333333250000002
+Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);modulareErneuerbarkeit;2,00;Szenario 2: Radikale Vermeidung;0,14999999985;kreislauffaehigkeit;0,0;2,0;1,0000000000000000;0,149999999850000010
+Pflaster;Ökopflaster (sickerfähig, 6-10 mm Fugen);modulareErneuerbarkeit;2,00;Szenario 3: Radikaler Lebenszyklus;0,01666666665;kreislauffaehigkeit;0,0;2,0;1,0000000000000000;0,016666666650000002
 Sickerbeläge;Chaussierung;lebensdauer;17,50;Szenario 0: Baseline (IST);0,20000000000;langlebigkeit_wirtschaftlichkeit;15,0;50,0;0,0714285714285714;0,014285714285714285
 Sickerbeläge;Chaussierung;lebensdauer;17,50;Szenario 1: Forschungsfokus;0,20000000000;langlebigkeit_wirtschaftlichkeit;15,0;50,0;0,0714285714285714;0,014285714285714285
 Sickerbeläge;Chaussierung;lebensdauer;17,50;Szenario 2: Radikale Vermeidung;0,02500000000;langlebigkeit_wirtschaftlichkeit;15,0;50,0;0,0714285714285714;0,001785714285714286
 Sickerbeläge;Chaussierung;lebensdauer;17,50;Szenario 3: Radikaler Lebenszyklus;0,40000000000;langlebigkeit_wirtschaftlichkeit;15,0;50,0;0,0714285714285714;0,028571428571428571
-Sickerbeläge;Chaussierung;versickerung;0,50;Szenario 0: Baseline (IST);0,10000000000;multifunktionale_nutzungsqualitaet;0,2;1,0;0,3749999999999999;0,037499999999999999
-Sickerbeläge;Chaussierung;versickerung;0,50;Szenario 1: Forschungsfokus;0,02500000000;multifunktionale_nutzungsqualitaet;0,2;1,0;0,3749999999999999;0,009375000000000000
-Sickerbeläge;Chaussierung;versickerung;0,50;Szenario 2: Radikale Vermeidung;0,01250000000;multifunktionale_nutzungsqualitaet;0,2;1,0;0,3749999999999999;0,004687500000000000
-Sickerbeläge;Chaussierung;versickerung;0,50;Szenario 3: Radikaler Lebenszyklus;0,02500000000;multifunktionale_nutzungsqualitaet;0,2;1,0;0,3749999999999999;0,009375000000000000
-Sickerbeläge;Chaussierung;oberflaechentemperatur;46,50;Szenario 0: Baseline (IST);0,10000000000;multifunktionale_nutzungsqualitaet;26,0;58,4;0,3672839506172839;0,036728395061728390
-Sickerbeläge;Chaussierung;oberflaechentemperatur;46,50;Szenario 1: Forschungsfokus;0,02500000000;multifunktionale_nutzungsqualitaet;26,0;58,4;0,3672839506172839;0,009182098765432098
-Sickerbeläge;Chaussierung;oberflaechentemperatur;46,50;Szenario 2: Radikale Vermeidung;0,01250000000;multifunktionale_nutzungsqualitaet;26,0;58,4;0,3672839506172839;0,004591049382716049
-Sickerbeläge;Chaussierung;oberflaechentemperatur;46,50;Szenario 3: Radikaler Lebenszyklus;0,02500000000;multifunktionale_nutzungsqualitaet;26,0;58,4;0,3672839506172839;0,009182098765432098
-Sickerbeläge;Chaussierung;befahrbarkeit;1,00;Szenario 0: Baseline (IST);0,10000000000;multifunktionale_nutzungsqualitaet;1,0;5,0;0,0000000000000000;0,000000000000000000
-Sickerbeläge;Chaussierung;befahrbarkeit;1,00;Szenario 1: Forschungsfokus;0,02500000000;multifunktionale_nutzungsqualitaet;1,0;5,0;0,0000000000000000;0,000000000000000000
-Sickerbeläge;Chaussierung;befahrbarkeit;1,00;Szenario 2: Radikale Vermeidung;0,01250000000;multifunktionale_nutzungsqualitaet;1,0;5,0;0,0000000000000000;0,000000000000000000
-Sickerbeläge;Chaussierung;befahrbarkeit;1,00;Szenario 3: Radikaler Lebenszyklus;0,02500000000;multifunktionale_nutzungsqualitaet;1,0;5,0;0,0000000000000000;0,000000000000000000
-Sickerbeläge;Chaussierung;kosten;50,00;Szenario 0: Baseline (IST);0,10000000000;langlebigkeit_wirtschaftlichkeit;50,0;350,0;1,0000000000000000;0,100000000000000006
-Sickerbeläge;Chaussierung;kosten;50,00;Szenario 1: Forschungsfokus;0,10000000000;langlebigkeit_wirtschaftlichkeit;50,0;350,0;1,0000000000000000;0,100000000000000006
-Sickerbeläge;Chaussierung;kosten;50,00;Szenario 2: Radikale Vermeidung;0,01250000000;langlebigkeit_wirtschaftlichkeit;50,0;350,0;1,0000000000000000;0,012500000000000001
-Sickerbeläge;Chaussierung;kosten;50,00;Szenario 3: Radikaler Lebenszyklus;0,20000000000;langlebigkeit_wirtschaftlichkeit;50,0;350,0;1,0000000000000000;0,200000000000000011
-Sickerbeläge;Chaussierung;unterhalt;3,00;Szenario 0: Baseline (IST);0,10000000000;langlebigkeit_wirtschaftlichkeit;2,0;9,0;0,8571428571428572;0,085714285714285729
-Sickerbeläge;Chaussierung;unterhalt;3,00;Szenario 1: Forschungsfokus;0,10000000000;langlebigkeit_wirtschaftlichkeit;2,0;9,0;0,8571428571428572;0,085714285714285729
-Sickerbeläge;Chaussierung;unterhalt;3,00;Szenario 2: Radikale Vermeidung;0,01250000000;langlebigkeit_wirtschaftlichkeit;2,0;9,0;0,8571428571428572;0,010714285714285716
-Sickerbeläge;Chaussierung;unterhalt;3,00;Szenario 3: Radikaler Lebenszyklus;0,20000000000;langlebigkeit_wirtschaftlichkeit;2,0;9,0;0,8571428571428572;0,171428571428571458
-Sickerbeläge;Chaussierung;co2;17,50;Szenario 0: Baseline (IST);0,05000000000;umweltbelastung;17,5;72,5;1,0000000000000000;0,050000000000000003
-Sickerbeläge;Chaussierung;co2;17,50;Szenario 1: Forschungsfokus;0,12500000000;umweltbelastung;17,5;72,5;1,0000000000000000;0,125000000000000000
-Sickerbeläge;Chaussierung;co2;17,50;Szenario 2: Radikale Vermeidung;0,22500000000;umweltbelastung;17,5;72,5;1,0000000000000000;0,225000000000000006
-Sickerbeläge;Chaussierung;co2;17,50;Szenario 3: Radikaler Lebenszyklus;0,02500000000;umweltbelastung;17,5;72,5;1,0000000000000000;0,025000000000000001
-Sickerbeläge;Chaussierung;graueEnergie;70,00;Szenario 0: Baseline (IST);0,05000000000;umweltbelastung;70,0;375,0;1,0000000000000000;0,050000000000000003
-Sickerbeläge;Chaussierung;graueEnergie;70,00;Szenario 1: Forschungsfokus;0,12500000000;umweltbelastung;70,0;375,0;1,0000000000000000;0,125000000000000000
-Sickerbeläge;Chaussierung;graueEnergie;70,00;Szenario 2: Radikale Vermeidung;0,22500000000;umweltbelastung;70,0;375,0;1,0000000000000000;0,225000000000000006
-Sickerbeläge;Chaussierung;graueEnergie;70,00;Szenario 3: Radikaler Lebenszyklus;0,02500000000;umweltbelastung;70,0;375,0;1,0000000000000000;0,025000000000000001
-Sickerbeläge;Chaussierung;recyclingfaehigkeit;1,00;Szenario 0: Baseline (IST);0,03333333330;kreislauffaehigkeit;0,2;1,0;1,0000000000000000;0,033333333300000004
-Sickerbeläge;Chaussierung;recyclingfaehigkeit;1,00;Szenario 1: Forschungsfokus;0,08333333325;kreislauffaehigkeit;0,2;1,0;1,0000000000000000;0,083333333250000002
-Sickerbeläge;Chaussierung;recyclingfaehigkeit;1,00;Szenario 2: Radikale Vermeidung;0,14999999985;kreislauffaehigkeit;0,2;1,0;1,0000000000000000;0,149999999850000010
-Sickerbeläge;Chaussierung;recyclingfaehigkeit;1,00;Szenario 3: Radikaler Lebenszyklus;0,01666666665;kreislauffaehigkeit;0,2;1,0;1,0000000000000000;0,016666666650000002
-Sickerbeläge;Chaussierung;lokaleMaterialien;0,95;Szenario 0: Baseline (IST);0,03333333330;kreislauffaehigkeit;0,4;1,0;0,9166666666666666;0,030555555525000003
-Sickerbeläge;Chaussierung;lokaleMaterialien;0,95;Szenario 1: Forschungsfokus;0,08333333325;kreislauffaehigkeit;0,4;1,0;0,9166666666666666;0,076388888812500000
-Sickerbeläge;Chaussierung;lokaleMaterialien;0,95;Szenario 2: Radikale Vermeidung;0,14999999985;kreislauffaehigkeit;0,4;1,0;0,9166666666666666;0,137499999862500000
-Sickerbeläge;Chaussierung;lokaleMaterialien;0,95;Szenario 3: Radikaler Lebenszyklus;0,01666666665;kreislauffaehigkeit;0,4;1,0;0,9166666666666666;0,015277777762500002
-Sickerbeläge;Chaussierung;modulareErneuerbarkeit;5,00;Szenario 0: Baseline (IST);0,03333333330;kreislauffaehigkeit;1,0;5,0;1,0000000000000000;0,033333333300000004
-Sickerbeläge;Chaussierung;modulareErneuerbarkeit;5,00;Szenario 1: Forschungsfokus;0,08333333325;kreislauffaehigkeit;1,0;5,0;1,0000000000000000;0,083333333250000002
-Sickerbeläge;Chaussierung;modulareErneuerbarkeit;5,00;Szenario 2: Radikale Vermeidung;0,14999999985;kreislauffaehigkeit;1,0;5,0;1,0000000000000000;0,149999999850000010
-Sickerbeläge;Chaussierung;modulareErneuerbarkeit;5,00;Szenario 3: Radikaler Lebenszyklus;0,01666666665;kreislauffaehigkeit;1,0;5,0;1,0000000000000000;0,016666666650000002
-Sickerbeläge;Chaussierung;barrierefreiheit;1,00;Szenario 0: Baseline (IST);0,10000000000;multifunktionale_nutzungsqualitaet;1,0;5,0;0,0000000000000000;0,000000000000000000
-Sickerbeläge;Chaussierung;barrierefreiheit;1,00;Szenario 1: Forschungsfokus;0,02500000000;multifunktionale_nutzungsqualitaet;1,0;5,0;0,0000000000000000;0,000000000000000000
-Sickerbeläge;Chaussierung;barrierefreiheit;1,00;Szenario 2: Radikale Vermeidung;0,01250000000;multifunktionale_nutzungsqualitaet;1,0;5,0;0,0000000000000000;0,000000000000000000
-Sickerbeläge;Chaussierung;barrierefreiheit;1,00;Szenario 3: Radikaler Lebenszyklus;0,02500000000;multifunktionale_nutzungsqualitaet;1,0;5,0;0,0000000000000000;0,000000000000000000
+Sickerbeläge;Chaussierung;versickerung;0,50;Szenario 0: Baseline (IST);0,13333333320;multifunktionale_nutzungsqualitaet;0,2;1,0;0,3749999999999999;0,049999999949999999
+Sickerbeläge;Chaussierung;versickerung;0,50;Szenario 1: Forschungsfokus;0,03333333330;multifunktionale_nutzungsqualitaet;0,2;1,0;0,3749999999999999;0,012499999987500000
+Sickerbeläge;Chaussierung;versickerung;0,50;Szenario 2: Radikale Vermeidung;0,01666666665;multifunktionale_nutzungsqualitaet;0,2;1,0;0,3749999999999999;0,006249999993750000
+Sickerbeläge;Chaussierung;versickerung;0,50;Szenario 3: Radikaler Lebenszyklus;0,03333333330;multifunktionale_nutzungsqualitaet;0,2;1,0;0,3749999999999999;0,012499999987500000
+Sickerbeläge;Chaussierung;oberflaechentemperatur;46,50;Szenario 0: Baseline (IST);0,13333333320;multifunktionale_nutzungsqualitaet;26,0;58,4;0,3672839506172839;0,048971193366666665
+Sickerbeläge;Chaussierung;oberflaechentemperatur;46,50;Szenario 1: Forschungsfokus;0,03333333330;multifunktionale_nutzungsqualitaet;26,0;58,4;0,3672839506172839;0,012242798341666666
+Sickerbeläge;Chaussierung;oberflaechentemperatur;46,50;Szenario 2: Radikale Vermeidung;0,01666666665;multifunktionale_nutzungsqualitaet;26,0;58,4;0,3672839506172839;0,006121399170833333
+Sickerbeläge;Chaussierung;oberflaechentemperatur;46,50;Szenario 3: Radikaler Lebenszyklus;0,03333333330;multifunktionale_nutzungsqualitaet;26,0;58,4;0,3672839506172839;0,012242798341666666
+Sickerbeläge;Chaussierung;befahrbarkeit;1,00;Szenario 0: Baseline (IST);0,13333333320;multifunktionale_nutzungsqualitaet;1,0;5,0;0,0000000000000000;0,000000000000000000
+Sickerbeläge;Chaussierung;befahrbarkeit;1,00;Szenario 1: Forschungsfokus;0,03333333330;multifunktionale_nutzungsqualitaet;1,0;5,0;0,0000000000000000;0,000000000000000000
+Sickerbeläge;Chaussierung;befahrbarkeit;1,00;Szenario 2: Radikale Vermeidung;0,01666666665;multifunktionale_nutzungsqualitaet;1,0;5,0;0,0000000000000000;0,000000000000000000
+Sickerbeläge;Chaussierung;befahrbarkeit;1,00;Szenario 3: Radikaler Lebenszyklus;0,03333333330;multifunktionale_nutzungsqualitaet;1,0;5,0;0,0000000000000000;0,000000000000000000
+Sickerbeläge;Chaussierung;recyclingfaehigkeit;2,00;Szenario 0: Baseline (IST);0,03333333330;kreislauffaehigkeit;0,0;2,0;1,0000000000000000;0,033333333300000004
+Sickerbeläge;Chaussierung;recyclingfaehigkeit;2,00;Szenario 1: Forschungsfokus;0,08333333325;kreislauffaehigkeit;0,0;2,0;1,0000000000000000;0,083333333250000002
+Sickerbeläge;Chaussierung;recyclingfaehigkeit;2,00;Szenario 2: Radikale Vermeidung;0,14999999985;kreislauffaehigkeit;0,0;2,0;1,0000000000000000;0,149999999850000010
+Sickerbeläge;Chaussierung;recyclingfaehigkeit;2,00;Szenario 3: Radikaler Lebenszyklus;0,01666666665;kreislauffaehigkeit;0,0;2,0;1,0000000000000000;0,016666666650000002
+Sickerbeläge;Chaussierung;lokaleMaterialien;0,80;Szenario 0: Baseline (IST);0,03333333330;kreislauffaehigkeit;0,4;0,8;1,0000000000000000;0,033333333300000004
+Sickerbeläge;Chaussierung;lokaleMaterialien;0,80;Szenario 1: Forschungsfokus;0,08333333325;kreislauffaehigkeit;0,4;0,8;1,0000000000000000;0,083333333250000002
+Sickerbeläge;Chaussierung;lokaleMaterialien;0,80;Szenario 2: Radikale Vermeidung;0,14999999985;kreislauffaehigkeit;0,4;0,8;1,0000000000000000;0,149999999850000010
+Sickerbeläge;Chaussierung;lokaleMaterialien;0,80;Szenario 3: Radikaler Lebenszyklus;0,01666666665;kreislauffaehigkeit;0,4;0,8;1,0000000000000000;0,016666666650000002
+Sickerbeläge;Chaussierung;modulareErneuerbarkeit;2,00;Szenario 0: Baseline (IST);0,03333333330;kreislauffaehigkeit;0,0;2,0;1,0000000000000000;0,033333333300000004
+Sickerbeläge;Chaussierung;modulareErneuerbarkeit;2,00;Szenario 1: Forschungsfokus;0,08333333325;kreislauffaehigkeit;0,0;2,0;1,0000000000000000;0,083333333250000002
+Sickerbeläge;Chaussierung;modulareErneuerbarkeit;2,00;Szenario 2: Radikale Vermeidung;0,14999999985;kreislauffaehigkeit;0,0;2,0;1,0000000000000000;0,149999999850000010
+Sickerbeläge;Chaussierung;modulareErneuerbarkeit;2,00;Szenario 3: Radikaler Lebenszyklus;0,01666666665;kreislauffaehigkeit;0,0;2,0;1,0000000000000000;0,016666666650000002
 Sickerbeläge;Kiesrasen;lebensdauer;15,00;Szenario 0: Baseline (IST);0,20000000000;langlebigkeit_wirtschaftlichkeit;15,0;50,0;0,0000000000000000;0,000000000000000000
 Sickerbeläge;Kiesrasen;lebensdauer;15,00;Szenario 1: Forschungsfokus;0,20000000000;langlebigkeit_wirtschaftlichkeit;15,0;50,0;0,0000000000000000;0,000000000000000000
 Sickerbeläge;Kiesrasen;lebensdauer;15,00;Szenario 2: Radikale Vermeidung;0,02500000000;langlebigkeit_wirtschaftlichkeit;15,0;50,0;0,0000000000000000;0,000000000000000000
 Sickerbeläge;Kiesrasen;lebensdauer;15,00;Szenario 3: Radikaler Lebenszyklus;0,40000000000;langlebigkeit_wirtschaftlichkeit;15,0;50,0;0,0000000000000000;0,000000000000000000
-Sickerbeläge;Kiesrasen;versickerung;0,20;Szenario 0: Baseline (IST);0,10000000000;multifunktionale_nutzungsqualitaet;0,2;1,0;0,0000000000000000;0,000000000000000000
-Sickerbeläge;Kiesrasen;versickerung;0,20;Szenario 1: Forschungsfokus;0,02500000000;multifunktionale_nutzungsqualitaet;0,2;1,0;0,0000000000000000;0,000000000000000000
-Sickerbeläge;Kiesrasen;versickerung;0,20;Szenario 2: Radikale Vermeidung;0,01250000000;multifunktionale_nutzungsqualitaet;0,2;1,0;0,0000000000000000;0,000000000000000000
-Sickerbeläge;Kiesrasen;versickerung;0,20;Szenario 3: Radikaler Lebenszyklus;0,02500000000;multifunktionale_nutzungsqualitaet;0,2;1,0;0,0000000000000000;0,000000000000000000
-Sickerbeläge;Kiesrasen;oberflaechentemperatur;49,00;Szenario 0: Baseline (IST);0,10000000000;multifunktionale_nutzungsqualitaet;26,0;58,4;0,2901234567901234;0,029012345679012341
-Sickerbeläge;Kiesrasen;oberflaechentemperatur;49,00;Szenario 1: Forschungsfokus;0,02500000000;multifunktionale_nutzungsqualitaet;26,0;58,4;0,2901234567901234;0,007253086419753085
-Sickerbeläge;Kiesrasen;oberflaechentemperatur;49,00;Szenario 2: Radikale Vermeidung;0,01250000000;multifunktionale_nutzungsqualitaet;26,0;58,4;0,2901234567901234;0,003626543209876543
-Sickerbeläge;Kiesrasen;oberflaechentemperatur;49,00;Szenario 3: Radikaler Lebenszyklus;0,02500000000;multifunktionale_nutzungsqualitaet;26,0;58,4;0,2901234567901234;0,007253086419753085
-Sickerbeläge;Kiesrasen;befahrbarkeit;3,00;Szenario 0: Baseline (IST);0,10000000000;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000;0,050000000000000003
-Sickerbeläge;Kiesrasen;befahrbarkeit;3,00;Szenario 1: Forschungsfokus;0,02500000000;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000;0,012500000000000001
-Sickerbeläge;Kiesrasen;befahrbarkeit;3,00;Szenario 2: Radikale Vermeidung;0,01250000000;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000;0,006250000000000000
-Sickerbeläge;Kiesrasen;befahrbarkeit;3,00;Szenario 3: Radikaler Lebenszyklus;0,02500000000;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000;0,012500000000000001
-Sickerbeläge;Kiesrasen;kosten;95,00;Szenario 0: Baseline (IST);0,10000000000;langlebigkeit_wirtschaftlichkeit;50,0;350,0;0,8500000000000000;0,085000000000000006
-Sickerbeläge;Kiesrasen;kosten;95,00;Szenario 1: Forschungsfokus;0,10000000000;langlebigkeit_wirtschaftlichkeit;50,0;350,0;0,8500000000000000;0,085000000000000006
-Sickerbeläge;Kiesrasen;kosten;95,00;Szenario 2: Radikale Vermeidung;0,01250000000;langlebigkeit_wirtschaftlichkeit;50,0;350,0;0,8500000000000000;0,010625000000000001
-Sickerbeläge;Kiesrasen;kosten;95,00;Szenario 3: Radikaler Lebenszyklus;0,20000000000;langlebigkeit_wirtschaftlichkeit;50,0;350,0;0,8500000000000000;0,170000000000000012
-Sickerbeläge;Kiesrasen;unterhalt;9,00;Szenario 0: Baseline (IST);0,10000000000;langlebigkeit_wirtschaftlichkeit;2,0;9,0;0,0000000000000000;0,000000000000000000
-Sickerbeläge;Kiesrasen;unterhalt;9,00;Szenario 1: Forschungsfokus;0,10000000000;langlebigkeit_wirtschaftlichkeit;2,0;9,0;0,0000000000000000;0,000000000000000000
-Sickerbeläge;Kiesrasen;unterhalt;9,00;Szenario 2: Radikale Vermeidung;0,01250000000;langlebigkeit_wirtschaftlichkeit;2,0;9,0;0,0000000000000000;0,000000000000000000
-Sickerbeläge;Kiesrasen;unterhalt;9,00;Szenario 3: Radikaler Lebenszyklus;0,20000000000;langlebigkeit_wirtschaftlichkeit;2,0;9,0;0,0000000000000000;0,000000000000000000
-Sickerbeläge;Kiesrasen;co2;25,00;Szenario 0: Baseline (IST);0,05000000000;umweltbelastung;17,5;72,5;0,8636363636363636;0,043181818181818182
-Sickerbeläge;Kiesrasen;co2;25,00;Szenario 1: Forschungsfokus;0,12500000000;umweltbelastung;17,5;72,5;0,8636363636363636;0,107954545454545456
-Sickerbeläge;Kiesrasen;co2;25,00;Szenario 2: Radikale Vermeidung;0,22500000000;umweltbelastung;17,5;72,5;0,8636363636363636;0,194318181818181834
-Sickerbeläge;Kiesrasen;co2;25,00;Szenario 3: Radikaler Lebenszyklus;0,02500000000;umweltbelastung;17,5;72,5;0,8636363636363636;0,021590909090909091
-Sickerbeläge;Kiesrasen;graueEnergie;100,00;Szenario 0: Baseline (IST);0,05000000000;umweltbelastung;70,0;375,0;0,9016393442622951;0,045081967213114756
-Sickerbeläge;Kiesrasen;graueEnergie;100,00;Szenario 1: Forschungsfokus;0,12500000000;umweltbelastung;70,0;375,0;0,9016393442622951;0,112704918032786885
-Sickerbeläge;Kiesrasen;graueEnergie;100,00;Szenario 2: Radikale Vermeidung;0,22500000000;umweltbelastung;70,0;375,0;0,9016393442622951;0,202868852459016397
-Sickerbeläge;Kiesrasen;graueEnergie;100,00;Szenario 3: Radikaler Lebenszyklus;0,02500000000;umweltbelastung;70,0;375,0;0,9016393442622951;0,022540983606557378
-Sickerbeläge;Kiesrasen;recyclingfaehigkeit;1,00;Szenario 0: Baseline (IST);0,03333333330;kreislauffaehigkeit;0,2;1,0;1,0000000000000000;0,033333333300000004
-Sickerbeläge;Kiesrasen;recyclingfaehigkeit;1,00;Szenario 1: Forschungsfokus;0,08333333325;kreislauffaehigkeit;0,2;1,0;1,0000000000000000;0,083333333250000002
-Sickerbeläge;Kiesrasen;recyclingfaehigkeit;1,00;Szenario 2: Radikale Vermeidung;0,14999999985;kreislauffaehigkeit;0,2;1,0;1,0000000000000000;0,149999999850000010
-Sickerbeläge;Kiesrasen;recyclingfaehigkeit;1,00;Szenario 3: Radikaler Lebenszyklus;0,01666666665;kreislauffaehigkeit;0,2;1,0;1,0000000000000000;0,016666666650000002
-Sickerbeläge;Kiesrasen;lokaleMaterialien;0,90;Szenario 0: Baseline (IST);0,03333333330;kreislauffaehigkeit;0,4;1,0;0,8333333333333334;0,027777777750000003
-Sickerbeläge;Kiesrasen;lokaleMaterialien;0,90;Szenario 1: Forschungsfokus;0,08333333325;kreislauffaehigkeit;0,4;1,0;0,8333333333333334;0,069444444375000011
-Sickerbeläge;Kiesrasen;lokaleMaterialien;0,90;Szenario 2: Radikale Vermeidung;0,14999999985;kreislauffaehigkeit;0,4;1,0;0,8333333333333334;0,124999999875000017
-Sickerbeläge;Kiesrasen;lokaleMaterialien;0,90;Szenario 3: Radikaler Lebenszyklus;0,01666666665;kreislauffaehigkeit;0,4;1,0;0,8333333333333334;0,013888888875000002
-Sickerbeläge;Kiesrasen;modulareErneuerbarkeit;3,00;Szenario 0: Baseline (IST);0,03333333330;kreislauffaehigkeit;1,0;5,0;0,5000000000000000;0,016666666650000002
-Sickerbeläge;Kiesrasen;modulareErneuerbarkeit;3,00;Szenario 1: Forschungsfokus;0,08333333325;kreislauffaehigkeit;1,0;5,0;0,5000000000000000;0,041666666625000001
-Sickerbeläge;Kiesrasen;modulareErneuerbarkeit;3,00;Szenario 2: Radikale Vermeidung;0,14999999985;kreislauffaehigkeit;1,0;5,0;0,5000000000000000;0,074999999925000005
-Sickerbeläge;Kiesrasen;modulareErneuerbarkeit;3,00;Szenario 3: Radikaler Lebenszyklus;0,01666666665;kreislauffaehigkeit;1,0;5,0;0,5000000000000000;0,008333333325000001
-Sickerbeläge;Kiesrasen;barrierefreiheit;1,00;Szenario 0: Baseline (IST);0,10000000000;multifunktionale_nutzungsqualitaet;1,0;5,0;0,0000000000000000;0,000000000000000000
-Sickerbeläge;Kiesrasen;barrierefreiheit;1,00;Szenario 1: Forschungsfokus;0,02500000000;multifunktionale_nutzungsqualitaet;1,0;5,0;0,0000000000000000;0,000000000000000000
-Sickerbeläge;Kiesrasen;barrierefreiheit;1,00;Szenario 2: Radikale Vermeidung;0,01250000000;multifunktionale_nutzungsqualitaet;1,0;5,0;0,0000000000000000;0,000000000000000000
-Sickerbeläge;Kiesrasen;barrierefreiheit;1,00;Szenario 3: Radikaler Lebenszyklus;0,02500000000;multifunktionale_nutzungsqualitaet;1,0;5,0;0,0000000000000000;0,000000000000000000
+Sickerbeläge;Kiesrasen;versickerung;0,20;Szenario 0: Baseline (IST);0,13333333320;multifunktionale_nutzungsqualitaet;0,2;1,0;0,0000000000000000;0,000000000000000000
+Sickerbeläge;Kiesrasen;versickerung;0,20;Szenario 1: Forschungsfokus;0,03333333330;multifunktionale_nutzungsqualitaet;0,2;1,0;0,0000000000000000;0,000000000000000000
+Sickerbeläge;Kiesrasen;versickerung;0,20;Szenario 2: Radikale Vermeidung;0,01666666665;multifunktionale_nutzungsqualitaet;0,2;1,0;0,0000000000000000;0,000000000000000000
+Sickerbeläge;Kiesrasen;versickerung;0,20;Szenario 3: Radikaler Lebenszyklus;0,03333333330;multifunktionale_nutzungsqualitaet;0,2;1,0;0,0000000000000000;0,000000000000000000
+Sickerbeläge;Kiesrasen;oberflaechentemperatur;49,00;Szenario 0: Baseline (IST);0,13333333320;multifunktionale_nutzungsqualitaet;26,0;58,4;0,2901234567901234;0,038683127533333334
+Sickerbeläge;Kiesrasen;oberflaechentemperatur;49,00;Szenario 1: Forschungsfokus;0,03333333330;multifunktionale_nutzungsqualitaet;26,0;58,4;0,2901234567901234;0,009670781883333333
+Sickerbeläge;Kiesrasen;oberflaechentemperatur;49,00;Szenario 2: Radikale Vermeidung;0,01666666665;multifunktionale_nutzungsqualitaet;26,0;58,4;0,2901234567901234;0,004835390941666667
+Sickerbeläge;Kiesrasen;oberflaechentemperatur;49,00;Szenario 3: Radikaler Lebenszyklus;0,03333333330;multifunktionale_nutzungsqualitaet;26,0;58,4;0,2901234567901234;0,009670781883333333
+Sickerbeläge;Kiesrasen;befahrbarkeit;3,00;Szenario 0: Baseline (IST);0,13333333320;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000;0,066666666600000007
+Sickerbeläge;Kiesrasen;befahrbarkeit;3,00;Szenario 1: Forschungsfokus;0,03333333330;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000;0,016666666650000002
+Sickerbeläge;Kiesrasen;befahrbarkeit;3,00;Szenario 2: Radikale Vermeidung;0,01666666665;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000;0,008333333325000001
+Sickerbeläge;Kiesrasen;befahrbarkeit;3,00;Szenario 3: Radikaler Lebenszyklus;0,03333333330;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000;0,016666666650000002
+Sickerbeläge;Kiesrasen;recyclingfaehigkeit;1,00;Szenario 0: Baseline (IST);0,03333333330;kreislauffaehigkeit;0,0;2,0;0,5000000000000000;0,016666666650000002
+Sickerbeläge;Kiesrasen;recyclingfaehigkeit;1,00;Szenario 1: Forschungsfokus;0,08333333325;kreislauffaehigkeit;0,0;2,0;0,5000000000000000;0,041666666625000001
+Sickerbeläge;Kiesrasen;recyclingfaehigkeit;1,00;Szenario 2: Radikale Vermeidung;0,14999999985;kreislauffaehigkeit;0,0;2,0;0,5000000000000000;0,074999999925000005
+Sickerbeläge;Kiesrasen;recyclingfaehigkeit;1,00;Szenario 3: Radikaler Lebenszyklus;0,01666666665;kreislauffaehigkeit;0,0;2,0;0,5000000000000000;0,008333333325000001
+Sickerbeläge;Kiesrasen;lokaleMaterialien;0,80;Szenario 0: Baseline (IST);0,03333333330;kreislauffaehigkeit;0,4;0,8;1,0000000000000000;0,033333333300000004
+Sickerbeläge;Kiesrasen;lokaleMaterialien;0,80;Szenario 1: Forschungsfokus;0,08333333325;kreislauffaehigkeit;0,4;0,8;1,0000000000000000;0,083333333250000002
+Sickerbeläge;Kiesrasen;lokaleMaterialien;0,80;Szenario 2: Radikale Vermeidung;0,14999999985;kreislauffaehigkeit;0,4;0,8;1,0000000000000000;0,149999999850000010
+Sickerbeläge;Kiesrasen;lokaleMaterialien;0,80;Szenario 3: Radikaler Lebenszyklus;0,01666666665;kreislauffaehigkeit;0,4;0,8;1,0000000000000000;0,016666666650000002
+Sickerbeläge;Kiesrasen;modulareErneuerbarkeit;1,00;Szenario 0: Baseline (IST);0,03333333330;kreislauffaehigkeit;0,0;2,0;0,5000000000000000;0,016666666650000002
+Sickerbeläge;Kiesrasen;modulareErneuerbarkeit;1,00;Szenario 1: Forschungsfokus;0,08333333325;kreislauffaehigkeit;0,0;2,0;0,5000000000000000;0,041666666625000001
+Sickerbeläge;Kiesrasen;modulareErneuerbarkeit;1,00;Szenario 2: Radikale Vermeidung;0,14999999985;kreislauffaehigkeit;0,0;2,0;0,5000000000000000;0,074999999925000005
+Sickerbeläge;Kiesrasen;modulareErneuerbarkeit;1,00;Szenario 3: Radikaler Lebenszyklus;0,01666666665;kreislauffaehigkeit;0,0;2,0;0,5000000000000000;0,008333333325000001
 Sickerbeläge;Rasengittersteine;lebensdauer;25,00;Szenario 0: Baseline (IST);0,20000000000;langlebigkeit_wirtschaftlichkeit;15,0;50,0;0,2857142857142857;0,057142857142857141
 Sickerbeläge;Rasengittersteine;lebensdauer;25,00;Szenario 1: Forschungsfokus;0,20000000000;langlebigkeit_wirtschaftlichkeit;15,0;50,0;0,2857142857142857;0,057142857142857141
 Sickerbeläge;Rasengittersteine;lebensdauer;25,00;Szenario 2: Radikale Vermeidung;0,02500000000;langlebigkeit_wirtschaftlichkeit;15,0;50,0;0,2857142857142857;0,007142857142857143
 Sickerbeläge;Rasengittersteine;lebensdauer;25,00;Szenario 3: Radikaler Lebenszyklus;0,40000000000;langlebigkeit_wirtschaftlichkeit;15,0;50,0;0,2857142857142857;0,114285714285714282
-Sickerbeläge;Rasengittersteine;versickerung;0,40;Szenario 0: Baseline (IST);0,10000000000;multifunktionale_nutzungsqualitaet;0,2;1,0;0,2500000000000000;0,025000000000000001
-Sickerbeläge;Rasengittersteine;versickerung;0,40;Szenario 1: Forschungsfokus;0,02500000000;multifunktionale_nutzungsqualitaet;0,2;1,0;0,2500000000000000;0,006250000000000000
-Sickerbeläge;Rasengittersteine;versickerung;0,40;Szenario 2: Radikale Vermeidung;0,01250000000;multifunktionale_nutzungsqualitaet;0,2;1,0;0,2500000000000000;0,003125000000000000
-Sickerbeläge;Rasengittersteine;versickerung;0,40;Szenario 3: Radikaler Lebenszyklus;0,02500000000;multifunktionale_nutzungsqualitaet;0,2;1,0;0,2500000000000000;0,006250000000000000
-Sickerbeläge;Rasengittersteine;oberflaechentemperatur;26,00;Szenario 0: Baseline (IST);0,10000000000;multifunktionale_nutzungsqualitaet;26,0;58,4;1,0000000000000000;0,100000000000000006
-Sickerbeläge;Rasengittersteine;oberflaechentemperatur;26,00;Szenario 1: Forschungsfokus;0,02500000000;multifunktionale_nutzungsqualitaet;26,0;58,4;1,0000000000000000;0,025000000000000001
-Sickerbeläge;Rasengittersteine;oberflaechentemperatur;26,00;Szenario 2: Radikale Vermeidung;0,01250000000;multifunktionale_nutzungsqualitaet;26,0;58,4;1,0000000000000000;0,012500000000000001
-Sickerbeläge;Rasengittersteine;oberflaechentemperatur;26,00;Szenario 3: Radikaler Lebenszyklus;0,02500000000;multifunktionale_nutzungsqualitaet;26,0;58,4;1,0000000000000000;0,025000000000000001
-Sickerbeläge;Rasengittersteine;befahrbarkeit;3,00;Szenario 0: Baseline (IST);0,10000000000;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000;0,050000000000000003
-Sickerbeläge;Rasengittersteine;befahrbarkeit;3,00;Szenario 1: Forschungsfokus;0,02500000000;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000;0,012500000000000001
-Sickerbeläge;Rasengittersteine;befahrbarkeit;3,00;Szenario 2: Radikale Vermeidung;0,01250000000;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000;0,006250000000000000
-Sickerbeläge;Rasengittersteine;befahrbarkeit;3,00;Szenario 3: Radikaler Lebenszyklus;0,02500000000;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000;0,012500000000000001
-Sickerbeläge;Rasengittersteine;kosten;100,00;Szenario 0: Baseline (IST);0,10000000000;langlebigkeit_wirtschaftlichkeit;50,0;350,0;0,8333333333333334;0,083333333333333343
-Sickerbeläge;Rasengittersteine;kosten;100,00;Szenario 1: Forschungsfokus;0,10000000000;langlebigkeit_wirtschaftlichkeit;50,0;350,0;0,8333333333333334;0,083333333333333343
-Sickerbeläge;Rasengittersteine;kosten;100,00;Szenario 2: Radikale Vermeidung;0,01250000000;langlebigkeit_wirtschaftlichkeit;50,0;350,0;0,8333333333333334;0,010416666666666668
-Sickerbeläge;Rasengittersteine;kosten;100,00;Szenario 3: Radikaler Lebenszyklus;0,20000000000;langlebigkeit_wirtschaftlichkeit;50,0;350,0;0,8333333333333334;0,166666666666666685
-Sickerbeläge;Rasengittersteine;unterhalt;6,00;Szenario 0: Baseline (IST);0,10000000000;langlebigkeit_wirtschaftlichkeit;2,0;9,0;0,4285714285714286;0,042857142857142864
-Sickerbeläge;Rasengittersteine;unterhalt;6,00;Szenario 1: Forschungsfokus;0,10000000000;langlebigkeit_wirtschaftlichkeit;2,0;9,0;0,4285714285714286;0,042857142857142864
-Sickerbeläge;Rasengittersteine;unterhalt;6,00;Szenario 2: Radikale Vermeidung;0,01250000000;langlebigkeit_wirtschaftlichkeit;2,0;9,0;0,4285714285714286;0,005357142857142858
-Sickerbeläge;Rasengittersteine;unterhalt;6,00;Szenario 3: Radikaler Lebenszyklus;0,20000000000;langlebigkeit_wirtschaftlichkeit;2,0;9,0;0,4285714285714286;0,085714285714285729
-Sickerbeläge;Rasengittersteine;co2;45,00;Szenario 0: Baseline (IST);0,05000000000;umweltbelastung;17,5;72,5;0,5000000000000000;0,025000000000000001
-Sickerbeläge;Rasengittersteine;co2;45,00;Szenario 1: Forschungsfokus;0,12500000000;umweltbelastung;17,5;72,5;0,5000000000000000;0,062500000000000000
-Sickerbeläge;Rasengittersteine;co2;45,00;Szenario 2: Radikale Vermeidung;0,22500000000;umweltbelastung;17,5;72,5;0,5000000000000000;0,112500000000000003
-Sickerbeläge;Rasengittersteine;co2;45,00;Szenario 3: Radikaler Lebenszyklus;0,02500000000;umweltbelastung;17,5;72,5;0,5000000000000000;0,012500000000000001
-Sickerbeläge;Rasengittersteine;graueEnergie;137,50;Szenario 0: Baseline (IST);0,05000000000;umweltbelastung;70,0;375,0;0,7786885245901639;0,038934426229508198
-Sickerbeläge;Rasengittersteine;graueEnergie;137,50;Szenario 1: Forschungsfokus;0,12500000000;umweltbelastung;70,0;375,0;0,7786885245901639;0,097336065573770489
-Sickerbeläge;Rasengittersteine;graueEnergie;137,50;Szenario 2: Radikale Vermeidung;0,22500000000;umweltbelastung;70,0;375,0;0,7786885245901639;0,175204918032786872
-Sickerbeläge;Rasengittersteine;graueEnergie;137,50;Szenario 3: Radikaler Lebenszyklus;0,02500000000;umweltbelastung;70,0;375,0;0,7786885245901639;0,019467213114754099
-Sickerbeläge;Rasengittersteine;recyclingfaehigkeit;0,40;Szenario 0: Baseline (IST);0,03333333330;kreislauffaehigkeit;0,2;1,0;0,2500000000000000;0,008333333325000001
-Sickerbeläge;Rasengittersteine;recyclingfaehigkeit;0,40;Szenario 1: Forschungsfokus;0,08333333325;kreislauffaehigkeit;0,2;1,0;0,2500000000000000;0,020833333312500001
-Sickerbeläge;Rasengittersteine;recyclingfaehigkeit;0,40;Szenario 2: Radikale Vermeidung;0,14999999985;kreislauffaehigkeit;0,2;1,0;0,2500000000000000;0,037499999962500002
-Sickerbeläge;Rasengittersteine;recyclingfaehigkeit;0,40;Szenario 3: Radikaler Lebenszyklus;0,01666666665;kreislauffaehigkeit;0,2;1,0;0,2500000000000000;0,004166666662500000
-Sickerbeläge;Rasengittersteine;lokaleMaterialien;0,80;Szenario 0: Baseline (IST);0,03333333330;kreislauffaehigkeit;0,4;1,0;0,6666666666666667;0,022222222200000006
-Sickerbeläge;Rasengittersteine;lokaleMaterialien;0,80;Szenario 1: Forschungsfokus;0,08333333325;kreislauffaehigkeit;0,4;1,0;0,6666666666666667;0,055555555500000006
-Sickerbeläge;Rasengittersteine;lokaleMaterialien;0,80;Szenario 2: Radikale Vermeidung;0,14999999985;kreislauffaehigkeit;0,4;1,0;0,6666666666666667;0,099999999900000011
-Sickerbeläge;Rasengittersteine;lokaleMaterialien;0,80;Szenario 3: Radikaler Lebenszyklus;0,01666666665;kreislauffaehigkeit;0,4;1,0;0,6666666666666667;0,011111111100000003
-Sickerbeläge;Rasengittersteine;modulareErneuerbarkeit;3,00;Szenario 0: Baseline (IST);0,03333333330;kreislauffaehigkeit;1,0;5,0;0,5000000000000000;0,016666666650000002
-Sickerbeläge;Rasengittersteine;modulareErneuerbarkeit;3,00;Szenario 1: Forschungsfokus;0,08333333325;kreislauffaehigkeit;1,0;5,0;0,5000000000000000;0,041666666625000001
-Sickerbeläge;Rasengittersteine;modulareErneuerbarkeit;3,00;Szenario 2: Radikale Vermeidung;0,14999999985;kreislauffaehigkeit;1,0;5,0;0,5000000000000000;0,074999999925000005
-Sickerbeläge;Rasengittersteine;modulareErneuerbarkeit;3,00;Szenario 3: Radikaler Lebenszyklus;0,01666666665;kreislauffaehigkeit;1,0;5,0;0,5000000000000000;0,008333333325000001
-Sickerbeläge;Rasengittersteine;barrierefreiheit;3,00;Szenario 0: Baseline (IST);0,10000000000;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000;0,050000000000000003
-Sickerbeläge;Rasengittersteine;barrierefreiheit;3,00;Szenario 1: Forschungsfokus;0,02500000000;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000;0,012500000000000001
-Sickerbeläge;Rasengittersteine;barrierefreiheit;3,00;Szenario 2: Radikale Vermeidung;0,01250000000;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000;0,006250000000000000
-Sickerbeläge;Rasengittersteine;barrierefreiheit;3,00;Szenario 3: Radikaler Lebenszyklus;0,02500000000;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000;0,012500000000000001
+Sickerbeläge;Rasengittersteine;versickerung;0,40;Szenario 0: Baseline (IST);0,13333333320;multifunktionale_nutzungsqualitaet;0,2;1,0;0,2500000000000000;0,033333333300000004
+Sickerbeläge;Rasengittersteine;versickerung;0,40;Szenario 1: Forschungsfokus;0,03333333330;multifunktionale_nutzungsqualitaet;0,2;1,0;0,2500000000000000;0,008333333325000001
+Sickerbeläge;Rasengittersteine;versickerung;0,40;Szenario 2: Radikale Vermeidung;0,01666666665;multifunktionale_nutzungsqualitaet;0,2;1,0;0,2500000000000000;0,004166666662500000
+Sickerbeläge;Rasengittersteine;versickerung;0,40;Szenario 3: Radikaler Lebenszyklus;0,03333333330;multifunktionale_nutzungsqualitaet;0,2;1,0;0,2500000000000000;0,008333333325000001
+Sickerbeläge;Rasengittersteine;oberflaechentemperatur;26,00;Szenario 0: Baseline (IST);0,13333333320;multifunktionale_nutzungsqualitaet;26,0;58,4;1,0000000000000000;0,133333333200000015
+Sickerbeläge;Rasengittersteine;oberflaechentemperatur;26,00;Szenario 1: Forschungsfokus;0,03333333330;multifunktionale_nutzungsqualitaet;26,0;58,4;1,0000000000000000;0,033333333300000004
+Sickerbeläge;Rasengittersteine;oberflaechentemperatur;26,00;Szenario 2: Radikale Vermeidung;0,01666666665;multifunktionale_nutzungsqualitaet;26,0;58,4;1,0000000000000000;0,016666666650000002
+Sickerbeläge;Rasengittersteine;oberflaechentemperatur;26,00;Szenario 3: Radikaler Lebenszyklus;0,03333333330;multifunktionale_nutzungsqualitaet;26,0;58,4;1,0000000000000000;0,033333333300000004
+Sickerbeläge;Rasengittersteine;befahrbarkeit;3,00;Szenario 0: Baseline (IST);0,13333333320;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000;0,066666666600000007
+Sickerbeläge;Rasengittersteine;befahrbarkeit;3,00;Szenario 1: Forschungsfokus;0,03333333330;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000;0,016666666650000002
+Sickerbeläge;Rasengittersteine;befahrbarkeit;3,00;Szenario 2: Radikale Vermeidung;0,01666666665;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000;0,008333333325000001
+Sickerbeläge;Rasengittersteine;befahrbarkeit;3,00;Szenario 3: Radikaler Lebenszyklus;0,03333333330;multifunktionale_nutzungsqualitaet;1,0;5,0;0,5000000000000000;0,016666666650000002
+Sickerbeläge;Rasengittersteine;recyclingfaehigkeit;1,00;Szenario 0: Baseline (IST);0,03333333330;kreislauffaehigkeit;0,0;2,0;0,5000000000000000;0,016666666650000002
+Sickerbeläge;Rasengittersteine;recyclingfaehigkeit;1,00;Szenario 1: Forschungsfokus;0,08333333325;kreislauffaehigkeit;0,0;2,0;0,5000000000000000;0,041666666625000001
+Sickerbeläge;Rasengittersteine;recyclingfaehigkeit;1,00;Szenario 2: Radikale Vermeidung;0,14999999985;kreislauffaehigkeit;0,0;2,0;0,5000000000000000;0,074999999925000005
+Sickerbeläge;Rasengittersteine;recyclingfaehigkeit;1,00;Szenario 3: Radikaler Lebenszyklus;0,01666666665;kreislauffaehigkeit;0,0;2,0;0,5000000000000000;0,008333333325000001
+Sickerbeläge;Rasengittersteine;lokaleMaterialien;0,80;Szenario 0: Baseline (IST);0,03333333330;kreislauffaehigkeit;0,4;0,8;1,0000000000000000;0,033333333300000004
+Sickerbeläge;Rasengittersteine;lokaleMaterialien;0,80;Szenario 1: Forschungsfokus;0,08333333325;kreislauffaehigkeit;0,4;0,8;1,0000000000000000;0,083333333250000002
+Sickerbeläge;Rasengittersteine;lokaleMaterialien;0,80;Szenario 2: Radikale Vermeidung;0,14999999985;kreislauffaehigkeit;0,4;0,8;1,0000000000000000;0,149999999850000010
+Sickerbeläge;Rasengittersteine;lokaleMaterialien;0,80;Szenario 3: Radikaler Lebenszyklus;0,01666666665;kreislauffaehigkeit;0,4;0,8;1,0000000000000000;0,016666666650000002
+Sickerbeläge;Rasengittersteine;modulareErneuerbarkeit;1,00;Szenario 0: Baseline (IST);0,03333333330;kreislauffaehigkeit;0,0;2,0;0,5000000000000000;0,016666666650000002
+Sickerbeläge;Rasengittersteine;modulareErneuerbarkeit;1,00;Szenario 1: Forschungsfokus;0,08333333325;kreislauffaehigkeit;0,0;2,0;0,5000000000000000;0,041666666625000001
+Sickerbeläge;Rasengittersteine;modulareErneuerbarkeit;1,00;Szenario 2: Radikale Vermeidung;0,14999999985;kreislauffaehigkeit;0,0;2,0;0,5000000000000000;0,074999999925000005
+Sickerbeläge;Rasengittersteine;modulareErneuerbarkeit;1,00;Szenario 3: Radikaler Lebenszyklus;0,01666666665;kreislauffaehigkeit;0,0;2,0;0,5000000000000000;0,008333333325000001
