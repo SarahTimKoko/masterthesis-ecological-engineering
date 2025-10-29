@@ -11,6 +11,8 @@ website:
         text: Home
       - href: MCA_Belaege_Szenario_0_bis_3.qmd
         text: "MCA Szenarien - Beläge"
+      - href: MCA_Baeume_Szenario_0_bis_3.qmd
+        text: "MCA Szenarien - Bäume"
 format:
   html:
     theme: darky

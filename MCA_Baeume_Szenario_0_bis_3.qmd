@@ -12,10 +12,10 @@ format:
 
 Ziel: Wahl der besten drei Bäume pro Szenario nach MCA Berechnung.
 
-**Szenario 0:** "Baseline (IST-Analyse)": Simuliert die aktuellen Projektanforderungen. Fokus auf Wirtschaftlichkeit und Nutzungsqualität.
-**Szenario 1:** "Forschungsfokus": Balanciert Lebenszyklus-Fokus (H1/H2) und Vermeidungsprinzip (H3).
-**Szenario 2:** "Radikale Vermeidung": Testet Hypothese 3 (H3) im Extrem (Fokus Umwelt & Kreislauf).
-**Szenario 3:** "Radikaler Lebenszyklus": Testet Hypothesen 1 & 2 (H1/H2) im Extrem (Fokus Langlebigkeit).
+- **Szenario 0:** "Baseline (IST-Analyse)": Simuliert die aktuellen Projektanforderungen. Fokus auf Wirtschaftlichkeit und Nutzungsqualität.
+- **Szenario 1:** "Forschungsfokus": Balanciert Lebenszyklus-Fokus (H1/H2) und Vermeidungsprinzip (H3).
+- **Szenario 2:** "Radikale Vermeidung": Testet Hypothese 3 (H3) im Extrem (Fokus Umwelt & Kreislauf).
+- **Szenario 3:** "Radikaler Lebenszyklus": Testet Hypothesen 1 & 2 (H1/H2) im Extrem (Fokus Langlebigkeit).
 
 ## Libraries laden
 
