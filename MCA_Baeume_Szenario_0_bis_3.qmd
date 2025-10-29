@@ -265,12 +265,12 @@ Ziel: visualisierung der Ergebnisse
 
 ```{r}
 
-#| label: fig-mca-plots-baeume-vertical-wide
-#| fig.width: 10   # --- ERHÖHT: Mehr Breite für die Plots ---
-#| fig.height: 25  # (Höhe bleibt, war ja gut)
-#| out.width: "95%" # --- ERHÖHT: Nutzt fast die volle Seitenbreite ---
+#| label: fig-mca-plots-baeume-vertical-large
+#| fig.width: 15   # --- Stark erhöht ---
+#| fig.height: 50  # --- Stark erhöht ---
+#| out.width: "95%"
 #| out.height: "auto"
-#| dpi: 300  
+#| dpi: 300
 
 # Plot 1: Gesamtergebnis (Ranking) für Bäume
 plot_mca_total_baeume <- ggplot(df_mca_total_baeume,
@@ -288,12 +288,15 @@ plot_mca_total_baeume <- ggplot(df_mca_total_baeume,
     fill = "Baumkategorie"
   ) +
   theme_minimal() +
-  theme(legend.position = "top")
+  # Optional: Schriftgrösse leicht reduzieren, falls nötig
+  theme(legend.position = "top"
+        # , axis.text.y = element_text(size = 9) # Einkommentieren bei Bedarf
+        )
 
 print(plot_mca_total_baeume)
-# --- ANGEPASSTE BREITE (für ggsave) ---
+# --- MASSIV ANGEPASSTE DIMENSIONEN ---
 ggsave("02_export/plots/mca_gesamtergebnis_alle_szenarien_baeume_vertical.png",
-       plot = plot_mca_total_baeume, width = 10, height = 20) # width erhöht
+       plot = plot_mca_total_baeume, width = 15, height = 45, units = "in", dpi = 300) # Grösser & explicit units/dpi
 # ------------------------------------
 
 
@@ -321,12 +324,15 @@ plot_mca_stacked_baeume <- ggplot(df_mca_groups_baeume,
     fill = "Kriteriengruppe"
   ) +
   theme_minimal() +
-  theme(legend.position = "top")
+  # Optional: Schriftgrösse leicht reduzieren, falls nötig
+  theme(legend.position = "top"
+        # , axis.text.y = element_text(size = 9) # Einkommentieren bei Bedarf
+        )
 
 print(plot_mca_stacked_baeume)
-# --- ANGEPASSTE BREITE (für ggsave) ---
+# --- MASSIV ANGEPASSTE DIMENSIONEN ---
 ggsave("02_export/plots/mca_detail_gruppen_alle_szenarien_baeume_vertical.png",
-       plot = plot_mca_stacked_baeume, width = 11, height = 20) # width erhöht
+       plot = plot_mca_stacked_baeume, width = 16, height = 45, units = "in", dpi = 300) # Grösser & explicit units/dpi
 # ------------------------------------
 ```
 

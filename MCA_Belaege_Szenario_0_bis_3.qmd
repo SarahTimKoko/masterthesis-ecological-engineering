@@ -291,8 +291,8 @@ Ziel: visualisierung der Ergebnisse
 ```{r}
 
 #| label: fig-mca-plots-vertical
-#| fig.width: 10   # Weniger Breite nötig, da Plots untereinander
-#| fig.height: 25  # MEHR Höhe nötig, da 4 Plots übereinander
+#| fig.width: 11   # Weniger Breite nötig, da Plots untereinander
+#| fig.height: 45  # MEHR Höhe nötig, da 4 Plots übereinander
 #| out.width: "95%" # Etwas kleiner als 95%, um Ränder zu haben
 #| out.height: "auto"
 #| dpi: 300 
@@ -323,7 +323,7 @@ plot_mca_total <- ggplot(df_mca_total,
 print(plot_mca_total)
 # --- ANGEPASSTE DIMENSIONEN (für vertikalen Plot) ---
 ggsave("02_export/plots/mca_gesamtergebnis_alle_szenarien_vertical.png", 
-       plot = plot_mca_total, width = 8, height = 15) # Höhe anpassen!
+       plot = plot_mca_total, width = 11, height = 40) # Höhe anpassen!
 # ----------------------------------------------------
 
 # Plot 2: Detail-Zusammensetzung (Gestapeltes Diagramm)
@@ -359,7 +359,7 @@ plot_mca_stacked <- ggplot(df_mca_groups,
 print(plot_mca_stacked)
 # --- ANGEPASSTE DIMENSIONEN (für vertikalen Plot) ---
 ggsave("02_export/plots/mca_detail_gruppen_alle_szenarien_vertical.png", 
-       plot = plot_mca_stacked, width = 9, height = 15) # Höhe anpassen!
+       plot = plot_mca_stacked, width = 12, height = 40) # Höhe anpassen!
 # ----------------------------------------------------
 
 ```
