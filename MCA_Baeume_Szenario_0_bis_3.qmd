@@ -25,6 +25,10 @@ library(readr)
 library(ggplot2)
 library(forcats)
 library(tidytext)
+
+# RAGG als Grafik-Gerät verwenden
+options(quarto.graphics = "ragg")
+
 ```
 
 ## 1. Daten Importieren
@@ -266,8 +270,8 @@ Ziel: visualisierung der Ergebnisse
 ```{r}
 
 #| label: fig-mca-plots-baeume-vertical-large
-#| fig.width: 15   # --- Stark erhöht ---
-#| fig.height: 50  # --- Stark erhöht ---
+#| fig.width: 11   # --- Stark erhöht ---
+#| fig.height: 30  # --- Stark erhöht ---
 #| out.width: "95%"
 #| out.height: "auto"
 #| dpi: 300
