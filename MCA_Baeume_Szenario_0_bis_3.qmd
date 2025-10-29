@@ -270,6 +270,7 @@ Ziel: visualisierung der Ergebnisse
 #| fig.height: 25  # (Höhe bleibt, war ja gut)
 #| out.width: "95%" # --- ERHÖHT: Nutzt fast die volle Seitenbreite ---
 #| out.height: "auto"
+#| dpi: 300  
 
 # Plot 1: Gesamtergebnis (Ranking) für Bäume
 plot_mca_total_baeume <- ggplot(df_mca_total_baeume,

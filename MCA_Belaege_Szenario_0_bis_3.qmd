@@ -291,10 +291,11 @@ Ziel: visualisierung der Ergebnisse
 ```{r}
 
 #| label: fig-mca-plots-vertical
-#| fig.width: 8   # Weniger Breite nötig, da Plots untereinander
-#| fig.height: 20  # MEHR Höhe nötig, da 4 Plots übereinander
-#| out.width: "90%" # Etwas kleiner als 95%, um Ränder zu haben
+#| fig.width: 10   # Weniger Breite nötig, da Plots untereinander
+#| fig.height: 25  # MEHR Höhe nötig, da 4 Plots übereinander
+#| out.width: "95%" # Etwas kleiner als 95%, um Ränder zu haben
 #| out.height: "auto"
+#| dpi: 300 
 
 # Plot 1: Gesamtergebnis (Ranking)
 plot_mca_total <- ggplot(df_mca_total, 
