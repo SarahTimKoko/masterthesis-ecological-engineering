@@ -267,101 +267,231 @@ print(df_sieger_baeume, n = Inf)
 
 Ziel: visualisierung der Ergebnisse 
 
+### 8.1 Plot: Szenario 0 - Baseline (IST)
+
 ```{r}
 
-#| label: fig-mca-plots-baeume-vertical-large
-#| fig.width: 11   # --- Stark erhöht ---
-#| fig.height: 30  # --- Stark erhöht ---
+#| label: fig-mca-plot-s0-lc
+#| fig.width: 13
+#| fig.height: 9
 #| out.width: "95%"
-#| out.height: "auto"
 #| dpi: 300
 
-# Plot 1: Gesamtergebnis (Ranking) für Bäume
-plot_mca_total_baeume <- ggplot(df_mca_total_baeume,
+# --- Plot 1: Ranking ---
+data_s0 <- df_mca_total_baeume %>% filter(szenario == "Szenario 0: Baseline (IST)")
+
+plot_s0_rank <- ggplot(data_s0,
        aes(x = MCA_gesamtscore,
-           y = tidytext::reorder_within(baumart, MCA_gesamtscore, szenario),
+           # --- GEÄNDERT: Kleinbuchstaben ---
+           y = fct_reorder(baumart, MCA_gesamtscore),
            fill = baumkategorie)) +
+           # -------------------------------
   geom_col() +
-  tidytext::scale_y_reordered() +
-  facet_wrap(~ szenario, scales = "free_y", ncol = 1) +
   labs(
-    title = "MCA Ergebnis: Rangliste der Bäume nach Szenario",
-    subtitle = "Höherer Score = Bessere Gesamtbewertung (pro Szenario sortiert)",
+    title = "MCA Ergebnis Bäume: Szenario 0 - Baseline (IST)",
+    subtitle = "Ranking (Höher = Besser)",
     x = "MCA Gesamtscore",
-    y = "Baumart",
-    fill = "Baumkategorie"
+    # --- GEÄNDERT: Kleinbuchstaben ---
+    y = "baumart",
+    fill = "baumkategorie"
+    # -------------------------------
   ) +
   theme_minimal() +
-  # Optional: Schriftgrösse leicht reduzieren, falls nötig
-  theme(legend.position = "top"
-        # , axis.text.y = element_text(size = 9) # Einkommentieren bei Bedarf
-        )
+  theme(legend.position = "top", axis.text.y = element_text(size = 7))
 
-print(plot_mca_total_baeume)
-# --- MASSIV ANGEPASSTE DIMENSIONEN ---
-ggsave("02_export/plots/mca_gesamtergebnis_alle_szenarien_baeume_vertical.png",
-       plot = plot_mca_total_baeume, width = 15, height = 45, units = "in", dpi = 300) # Grösser & explicit units/dpi
-# ------------------------------------
+print(plot_s0_rank)
+ggsave("02_export/plots/mca_gesamtergebnis_s0_baeume.png",
+       plot = plot_s0_rank, width = 13, height = 9, units = "in", dpi = 300)
 
-
-# Plot 2: Detail-Zusammensetzung für Bäume
-# 1. Daten vorbereiten (keine Änderung)
-df_mca_groups_baeume <- df_mca_calculated_baeume %>%
+# --- Plot 2: Stacked Detail ---
+# --- Datenaufbereitung AUCH mit Kleinbuchstaben ---
+df_mca_groups_baeume_plot <- df_mca_calculated_baeume %>%
+  # Zuerst auf Kleinbuchstaben umbenennen
+  rename(baumkategorie = baumkategorie, baumart = baumart) %>%
   group_by(szenario, baumkategorie, baumart, group_id) %>%
-  summarise(gruppen_score = sum(MCA_score_kriterium, na.rm = TRUE)) %>%
-  ungroup() %>%
+  summarise(gruppen_score = sum(MCA_score_kriterium, na.rm = TRUE), .groups = 'drop') %>%
+  # Join mit df_mca_total_baeume (hat schon Kleinbuchstaben)
   left_join(df_mca_total_baeume, by = c("szenario", "baumkategorie", "baumart"))
 
-# 2. Gestapeltes Diagramm plotten
-plot_mca_stacked_baeume <- ggplot(df_mca_groups_baeume,
+data_s0_groups <- df_mca_groups_baeume_plot %>% filter(szenario == "Szenario 0: Baseline (IST)")
+# ---------------------------------------------
+
+plot_s0_stack <- ggplot(data_s0_groups,
        aes(x = gruppen_score,
-           y = tidytext::reorder_within(baumart, MCA_gesamtscore, szenario),
+           # --- GEÄNDERT: Kleinbuchstaben ---
+           y = fct_reorder(baumart, MCA_gesamtscore),
            fill = group_id)) +
+           # -------------------------------
   geom_col(position = "stack") +
-  tidytext::scale_y_reordered() +
-  facet_wrap(~ szenario, scales = "free_y", ncol = 1) +
   labs(
-    title = "MCA Detail: Zusammensetzung des Scores Bäume nach Szenario",
-    subtitle = "Zeigt den Beitrag jeder Kriteriengruppe (pro Szenario sortiert)",
+    title = "MCA Detail Bäume: Szenario 0 - Baseline (IST)",
+    subtitle = "Zusammensetzung des Scores",
     x = "MCA Score (Anteil)",
+    # --- GEÄNDERT: Kleinbuchstaben ---
     y = "Baumart",
+    # -------------------------------
     fill = "Kriteriengruppe"
   ) +
   theme_minimal() +
-  # Optional: Schriftgrösse leicht reduzieren, falls nötig
-  theme(legend.position = "top"
-        # , axis.text.y = element_text(size = 9) # Einkommentieren bei Bedarf
-        )
+  theme(legend.position = "top", axis.text.y = element_text(size = 7))
 
-print(plot_mca_stacked_baeume)
-# --- MASSIV ANGEPASSTE DIMENSIONEN ---
-ggsave("02_export/plots/mca_detail_gruppen_alle_szenarien_baeume_vertical.png",
-       plot = plot_mca_stacked_baeume, width = 16, height = 45, units = "in", dpi = 300) # Grösser & explicit units/dpi
-# ------------------------------------
+print(plot_s0_stack)
+ggsave("02_export/plots/mca_detail_gruppen_s0_baeume.png",
+       plot = plot_s0_stack, width = 13, height = 9, units = "in", dpi = 300)
+
 ```
 
-## 9. Ergebnisstabellen exportieren
+### 8.2 Plot: Szenario 1 - Forschungsfokus
 
 ```{r}
 
-# 1. Speichern der finalen MCA-Rangliste (alle Bäume, alle Szenarien)
-write_csv2(
-  df_mca_total_baeume,
-  file = "02_export/tables/mca_rangliste_alle_szenarien_baeume.csv"
-)
+#| label: fig-mca-plots-s1-lc
+#| fig.width: 13
+#| fig.height: 9
+#| out.width: "95%"
+#| dpi: 300
 
-# 2. Speichern der kompletten Berechnungs-Details
-write_csv2(
-  df_mca_calculated_baeume,
-  file = "02_export/tables/mca_details_berechnung_alle_szenarien_baeume.csv"
-)
+# --- Plot 1: Ranking ---
+data_s1 <- df_mca_total_baeume %>% filter(szenario == "Szenario 1: Forschungsfokus")
 
-# --- NEU: Speichern der Top-3-Auswahl ---
-write_csv2(
-  df_sieger_baeume,
-  file = "02_export/tables/mca_top3_baeume_pro_szenario.csv"
-)
-# ---------------------------------------
+plot_s1_rank <- ggplot(data_s1,
+       aes(x = MCA_gesamtscore,
+           y = fct_reorder(baumart, MCA_gesamtscore), # lc
+           fill = baumkategorie)) + # lc
+  geom_col() +
+  labs(
+    title = "MCA Ergebnis Bäume: Szenario 1 - Forschungsfokus",
+    subtitle = "Ranking (Höher = Besser)",
+    x = "MCA Gesamtscore", y = "baumart", fill = "baumkategorie" # lc
+  ) +
+  theme_minimal() +
+  theme(legend.position = "top", axis.text.y = element_text(size = 7))
+
+print(plot_s1_rank)
+ggsave("02_export/plots/mca_gesamtergebnis_s1_baeume.png",
+       plot = plot_s1_rank, width = 13, height = 9, units = "in", dpi = 300)
+
+# --- Plot 2: Stacked Detail ---
+data_s1_groups <- df_mca_groups_baeume_plot %>% filter(szenario == "Szenario 1: Forschungsfokus") # Uses df calculated above
+
+plot_s1_stack <- ggplot(data_s1_groups,
+       aes(x = gruppen_score,
+           y = fct_reorder(baumart, MCA_gesamtscore), # lc
+           fill = group_id)) +
+  geom_col(position = "stack") +
+  labs(
+    title = "MCA Detail Bäume: Szenario 1 - Forschungsfokus",
+    subtitle = "Zusammensetzung des Scores",
+     x = "MCA Score (Anteil)", y = "baumart", fill = "Kriteriengruppe" # lc
+  ) +
+  theme_minimal() +
+  theme(legend.position = "top", axis.text.y = element_text(size = 7))
+
+print(plot_s1_stack)
+ggsave("02_export/plots/mca_detail_gruppen_s1_baeume.png",
+       plot = plot_s1_stack, width = 13, height = 9, units = "in", dpi = 300)
+```
+
+
+### 8.3 Plot: Szenario 2 - Radikale Vermeidung
+
+```{r}
+#| label: fig-mca-plots-s2-lc
+#| fig.width: 13
+#| fig.height: 9
+#| out.width: "95%"
+#| dpi: 300
+
+# --- Plot 1: Ranking ---
+data_s2 <- df_mca_total_baeume %>% filter(szenario == "Szenario 2: Radikale Vermeidung")
+
+plot_s2_rank <- ggplot(data_s2,
+       aes(x = MCA_gesamtscore,
+           y = fct_reorder(baumart, MCA_gesamtscore), # lc
+           fill = baumkategorie)) + # lc
+  geom_col() +
+  labs(
+    title = "MCA Ergebnis Bäume: Szenario 2 - Radikale Vermeidung",
+    subtitle = "Ranking (Höher = Besser)",
+    x = "MCA Gesamtscore", y = "baumart", fill = "baumkategorie" # lc
+  ) +
+  theme_minimal() +
+  theme(legend.position = "top", axis.text.y = element_text(size = 7))
+
+print(plot_s2_rank)
+ggsave("02_export/plots/mca_gesamtergebnis_s2_baeume.png",
+       plot = plot_s2_rank, width = 13, height = 9, units = "in", dpi = 300)
+
+# --- Plot 2: Stacked Detail ---
+data_s2_groups <- df_mca_groups_baeume_plot %>% filter(szenario == "Szenario 2: Radikale Vermeidung") # Uses df calculated above
+
+plot_s2_stack <- ggplot(data_s2_groups,
+       aes(x = gruppen_score,
+           y = fct_reorder(baumart, MCA_gesamtscore), # lc
+           fill = group_id)) +
+  geom_col(position = "stack") +
+  labs(
+    title = "MCA Detail Bäume: Szenario 2 - Radikale Vermeidung",
+    subtitle = "Zusammensetzung des Scores",
+    x = "MCA Score (Anteil)", y = "baumart", fill = "Kriteriengruppe" # lc
+  ) +
+  theme_minimal() +
+  theme(legend.position = "top", axis.text.y = element_text(size = 7))
+
+print(plot_s2_stack)
+ggsave("02_export/plots/mca_detail_gruppen_s2_baeume.png",
+       plot = plot_s2_stack, width = 13, height = 9, units = "in", dpi = 300)
+```
+
+### 8.4 Plot: Szenario 3 - Radikaler Lebenszyklus
+
+```{r}
+
+#| label: fig-mca-plots-s3-lc
+#| fig.width: 13
+#| fig.height: 9
+#| out.width: "95%"
+#| dpi: 300
+
+# --- Plot 1: Ranking ---
+data_s3 <- df_mca_total_baeume %>% filter(szenario == "Szenario 3: Radikaler Lebenszyklus")
+
+plot_s3_rank <- ggplot(data_s3,
+       aes(x = MCA_gesamtscore,
+           y = fct_reorder(baumart, MCA_gesamtscore), # lc
+           fill = baumkategorie)) + # lc
+  geom_col() +
+  labs(
+    title = "MCA Ergebnis Bäume: Szenario 3 - Radikaler Lebenszyklus",
+    subtitle = "Ranking (Höher = Besser)",
+     x = "MCA Gesamtscore", y = "Baumart", fill = "Baumkategorie" # lc
+  ) +
+  theme_minimal() +
+  theme(legend.position = "top", axis.text.y = element_text(size = 7))
+
+print(plot_s3_rank)
+ggsave("02_export/plots/mca_gesamtergebnis_s3_baeume.png",
+       plot = plot_s3_rank, width = 13, height = 9, units = "in", dpi = 300)
+
+# --- Plot 2: Stacked Detail ---
+data_s3_groups <- df_mca_groups_baeume_plot %>% filter(szenario == "Szenario 3: Radikaler Lebenszyklus") # Uses df calculated above
+
+plot_s3_stack <- ggplot(data_s3_groups,
+       aes(x = gruppen_score,
+           y = fct_reorder(baumart, MCA_gesamtscore), # lc
+           fill = group_id)) +
+  geom_col(position = "stack") +
+  labs(
+    title = "MCA Detail Bäume: Szenario 3 - Radikaler Lebenszyklus",
+    subtitle = "Zusammensetzung des Scores",
+     x = "MCA Score (Anteil)", y = "Baumart", fill = "Kriteriengruppe" # lc
+  ) +
+  theme_minimal() +
+  theme(legend.position = "top", axis.text.y = element_text(size = 7))
+
+print(plot_s3_stack)
+ggsave("02_export/plots/mca_detail_gruppen_s3_baeume.png",
+       plot = plot_s3_stack, width = 13, height = 9, units = "in", dpi = 300)
 
 ```
 

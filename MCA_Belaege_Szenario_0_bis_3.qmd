@@ -288,81 +288,221 @@ print(df_mca_total, n = 40) # n=40, um alle Ergebnisse zu sehen
 
 Ziel: visualisierung der Ergebnisse 
 
+### 8.1 Plot: Szenario 0 - Baseline (IST)
+
 ```{r}
+```{r}
+#| label: fig-mca-plots-belaege-s0
+#| fig.width: 13 # Breite wie bei Bäumen
+#| fig.height: 8  # Höhe angepasst (weniger Optionen als Bäume)
+#| out.width: "95%"
+#| dpi: 300
 
-#| label: fig-mca-plots-vertical
-#| fig.width: 11   # Weniger Breite nötig, da Plots untereinander
-#| fig.height: 45  # MEHR Höhe nötig, da 4 Plots übereinander
-#| out.width: "95%" # Etwas kleiner als 95%, um Ränder zu haben
-#| out.height: "auto"
-#| dpi: 300 
-
-# Plot 1: Gesamtergebnis (Ranking)
-plot_mca_total <- ggplot(df_mca_total, 
-       aes(x = MCA_gesamtscore, 
-           y = tidytext::reorder_within(option, MCA_gesamtscore, szenario),
-           fill = belagskategorie)) +
-  geom_col() +
-  tidytext::scale_y_reordered() +
-  
-  # --- ÄNDERUNG HIER: ncol = 1 ---
-  # Erzwingt die Anordnung in EINER Spalte (untereinander)
-  facet_wrap(~ szenario, scales = "free_y", ncol = 1) + 
-  # -----------------------------
-  
-  labs(
-    title = "MCA Ergebnis: Rangliste der Belagsoptionen nach Szenario",
-    subtitle = "Höherer Score = Bessere Gesamtbewertung (pro Szenario sortiert)",
-    x = "MCA Gesamtscore",
-    y = "Belagsoption",
-    fill = "Belagskategorie"
-  ) +
-  theme_minimal() +
-  theme(legend.position = "top")
-
-print(plot_mca_total)
-# --- ANGEPASSTE DIMENSIONEN (für vertikalen Plot) ---
-ggsave("02_export/plots/mca_gesamtergebnis_alle_szenarien_vertical.png", 
-       plot = plot_mca_total, width = 11, height = 40) # Höhe anpassen!
+# --- Datenaufbereitung für Stacked Plot (einmalig) ---
+df_mca_groups_belaege_plot <- df_mca_calculated %>%
+  # Ggf. hier auf Kleinbuchstaben umbenennen, falls nötig (siehe Block 7)
+  # rename(belagskategorie = Belagskategorie, option = Option) %>%
+  group_by(szenario, belagskategorie, option, group_id) %>%
+  summarise(gruppen_score = sum(MCA_score_kriterium, na.rm = TRUE), .groups = 'drop') %>%
+  left_join(df_mca_total, by = c("szenario", "belagskategorie", "option"))
 # ----------------------------------------------------
 
-# Plot 2: Detail-Zusammensetzung (Gestapeltes Diagramm)
-# 1. Daten vorbereiten (keine Änderung)
-df_mca_groups <- df_mca_calculated %>%
-  group_by(szenario, belagskategorie, option, group_id) %>% 
-  summarise(gruppen_score = sum(MCA_score_kriterium, na.rm = TRUE)) %>%
-  ungroup() %>%
-  left_join(df_mca_total, by = c("szenario", "belagskategorie", "option"))
+# --- Plot 1: Ranking ---
+data_s0 <- df_mca_total %>% filter(szenario == "Szenario 0: Baseline (IST)")
 
-# 2. Gestapeltes Diagramm plotten
-plot_mca_stacked <- ggplot(df_mca_groups, 
-       aes(x = gruppen_score, 
-           y = tidytext::reorder_within(option, MCA_gesamtscore, szenario), 
+plot_s0_rank <- ggplot(data_s0,
+       aes(x = MCA_gesamtscore,
+           y = fct_reorder(option, MCA_gesamtscore), # lc
+           fill = belagskategorie)) + # lc
+  geom_col() +
+  labs(
+    title = "MCA Ergebnis Beläge: Szenario 0 - Baseline (IST)",
+    subtitle = "Ranking (Höher = Besser)",
+    x = "MCA Gesamtscore", y = "Belagsoption", fill = "Belagskategorie" # lc
+  ) +
+  theme_minimal() +
+  theme(legend.position = "top", axis.text.y = element_text(size = 8)) # Etwas grösser als bei Bäumen?
+
+print(plot_s0_rank)
+ggsave("02_export/plots/mca_gesamtergebnis_s0_belaege.png",
+       plot = plot_s0_rank, width = 13, height = 8, units = "in", dpi = 300)
+
+# --- Plot 2: Stacked Detail ---
+data_s0_groups <- df_mca_groups_belaege_plot %>% filter(szenario == "Szenario 0: Baseline (IST)")
+
+plot_s0_stack <- ggplot(data_s0_groups,
+       aes(x = gruppen_score,
+           y = fct_reorder(option, MCA_gesamtscore), # lc
            fill = group_id)) +
   geom_col(position = "stack") +
-  tidytext::scale_y_reordered() +
-  
-  # --- ÄNDERUNG HIER: ncol = 1 ---
-  facet_wrap(~ szenario, scales = "free_y", ncol = 1) +
-  # -----------------------------
-  
   labs(
-    title = "MCA Detail: Zusammensetzung des Scores nach Szenario",
-    subtitle = "Zeigt den Beitrag jeder Kriteriengruppe (pro Szenario sortiert)",
-    x = "MCA Score (Anteil)",
-    y = "Belagsoption",
-    fill = "Kriteriengruppe"
+    title = "MCA Detail Beläge: Szenario 0 - Baseline (IST)",
+    subtitle = "Zusammensetzung des Scores",
+    x = "MCA Score (Anteil)", y = "Belagsoption", fill = "Kriteriengruppe" # lc
   ) +
   theme_minimal() +
-  theme(legend.position = "top")
+  theme(legend.position = "top", axis.text.y = element_text(size = 8))
 
-print(plot_mca_stacked)
-# --- ANGEPASSTE DIMENSIONEN (für vertikalen Plot) ---
-ggsave("02_export/plots/mca_detail_gruppen_alle_szenarien_vertical.png", 
-       plot = plot_mca_stacked, width = 12, height = 40) # Höhe anpassen!
-# ----------------------------------------------------
+print(plot_s0_stack)
+ggsave("02_export/plots/mca_detail_gruppen_s0_belaege.png",
+       plot = plot_s0_stack, width = 13, height = 8, units = "in", dpi = 300)
+
 
 ```
+
+### 8.2 Plot: Szenario 1 - Forschungsfokus
+
+```{r}
+#| label: fig-mca-plots-belaege-s1
+#| fig.width: 13
+#| fig.height: 8
+#| out.width: "95%"
+#| dpi: 300
+
+# --- Plot 1: Ranking ---
+data_s1 <- df_mca_total %>% filter(szenario == "Szenario 1: Forschungsfokus")
+
+plot_s1_rank <- ggplot(data_s1,
+       aes(x = MCA_gesamtscore,
+           y = fct_reorder(option, MCA_gesamtscore), # lc
+           fill = belagskategorie)) + # lc
+  geom_col() +
+  labs(
+    title = "MCA Ergebnis Beläge: Szenario 1 - Forschungsfokus",
+    subtitle = "Ranking (Höher = Besser)",
+    x = "MCA Gesamtscore", y = "Belagsoption", fill = "Belagskategorie" # lc
+  ) +
+  theme_minimal() +
+  theme(legend.position = "top", axis.text.y = element_text(size = 8))
+
+print(plot_s1_rank)
+ggsave("02_export/plots/mca_gesamtergebnis_s1_belaege.png",
+       plot = plot_s1_rank, width = 13, height = 8, units = "in", dpi = 300)
+
+# --- Plot 2: Stacked Detail ---
+data_s1_groups <- df_mca_groups_belaege_plot %>% filter(szenario == "Szenario 1: Forschungsfokus")
+
+plot_s1_stack <- ggplot(data_s1_groups,
+       aes(x = gruppen_score,
+           y = fct_reorder(option, MCA_gesamtscore), # lc
+           fill = group_id)) +
+  geom_col(position = "stack") +
+  labs(
+    title = "MCA Detail Beläge: Szenario 1 - Forschungsfokus",
+    subtitle = "Zusammensetzung des Scores",
+    x = "MCA Score (Anteil)", y = "Belagsoption", fill = "Kriteriengruppe" # lc
+  ) +
+  theme_minimal() +
+  theme(legend.position = "top", axis.text.y = element_text(size = 8))
+
+print(plot_s1_stack)
+ggsave("02_export/plots/mca_detail_gruppen_s1_belaege.png",
+       plot = plot_s1_stack, width = 13, height = 8, units = "in", dpi = 300)
+```
+
+### 8.3 Plot: Szenario 2 - Radikale Vermeidung
+
+```{r}
+#| label: fig-mca-plots-belaege-s2
+#| fig.width: 13
+#| fig.height: 8
+#| out.width: "95%"
+#| dpi: 300
+
+# --- Plot 1: Ranking ---
+data_s2 <- df_mca_total %>% filter(szenario == "Szenario 2: Radikale Vermeidung")
+
+plot_s2_rank <- ggplot(data_s2,
+       aes(x = MCA_gesamtscore,
+           y = fct_reorder(option, MCA_gesamtscore), # lc
+           fill = belagskategorie)) + # lc
+  geom_col() +
+  labs(
+    title = "MCA Ergebnis Beläge: Szenario 2 - Radikale Vermeidung",
+    subtitle = "Ranking (Höher = Besser)",
+    x = "MCA Gesamtscore", y = "Belagsoption", fill = "Belagskategorie" # lc
+  ) +
+  theme_minimal() +
+  theme(legend.position = "top", axis.text.y = element_text(size = 8))
+
+print(plot_s2_rank)
+ggsave("02_export/plots/mca_gesamtergebnis_s2_belaege.png",
+       plot = plot_s2_rank, width = 13, height = 8, units = "in", dpi = 300)
+
+# --- Plot 2: Stacked Detail ---
+data_s2_groups <- df_mca_groups_belaege_plot %>% filter(szenario == "Szenario 2: Radikale Vermeidung")
+
+plot_s2_stack <- ggplot(data_s2_groups,
+       aes(x = gruppen_score,
+           y = fct_reorder(option, MCA_gesamtscore), # lc
+           fill = group_id)) +
+  geom_col(position = "stack") +
+  labs(
+    title = "MCA Detail Beläge: Szenario 2 - Radikale Vermeidung",
+    subtitle = "Zusammensetzung des Scores",
+    x = "MCA Score (Anteil)", y = "Belagsoption", fill = "Kriteriengruppe" # lc
+  ) +
+  theme_minimal() +
+  theme(legend.position = "top", axis.text.y = element_text(size = 8))
+
+print(plot_s2_stack)
+ggsave("02_export/plots/mca_detail_gruppen_s2_belaege.png",
+       plot = plot_s2_stack, width = 13, height = 8, units = "in", dpi = 300)
+
+
+
+```
+
+### 8.4 Plot: Szenario 3 - Radikaler Lebenszyklus
+
+```{r}
+#| label: fig-mca-plots-belaege-s3
+#| fig.width: 13
+#| fig.height: 8
+#| out.width: "95%"
+#| dpi: 300
+
+# --- Plot 1: Ranking ---
+data_s3 <- df_mca_total %>% filter(szenario == "Szenario 3: Radikaler Lebenszyklus")
+
+plot_s3_rank <- ggplot(data_s3,
+       aes(x = MCA_gesamtscore,
+           y = fct_reorder(option, MCA_gesamtscore), # lc
+           fill = belagskategorie)) + # lc
+  geom_col() +
+  labs(
+    title = "MCA Ergebnis Beläge: Szenario 3 - Radikaler Lebenszyklus",
+    subtitle = "Ranking (Höher = Besser)",
+    x = "MCA Gesamtscore", y = "Belagsoption", fill = "Belagskategorie" # lc
+  ) +
+  theme_minimal() +
+  theme(legend.position = "top", axis.text.y = element_text(size = 8))
+
+print(plot_s3_rank)
+ggsave("02_export/plots/mca_gesamtergebnis_s3_belaege.png",
+       plot = plot_s3_rank, width = 13, height = 8, units = "in", dpi = 300)
+
+# --- Plot 2: Stacked Detail ---
+data_s3_groups <- df_mca_groups_belaege_plot %>% filter(szenario == "Szenario 3: Radikaler Lebenszyklus")
+
+plot_s3_stack <- ggplot(data_s3_groups,
+       aes(x = gruppen_score,
+           y = fct_reorder(option, MCA_gesamtscore), # lc
+           fill = group_id)) +
+  geom_col(position = "stack") +
+  labs(
+    title = "MCA Detail Beläge: Szenario 3 - Radikaler Lebenszyklus",
+    subtitle = "Zusammensetzung des Scores",
+    x = "MCA Score (Anteil)", y = "Belagsoption", fill = "Kriteriengruppe" # lc
+  ) +
+  theme_minimal() +
+  theme(legend.position = "top", axis.text.y = element_text(size = 8))
+
+print(plot_s3_stack)
+ggsave("02_export/plots/mca_detail_gruppen_s3_belaege.png",
+       plot = plot_s3_stack, width = 13, height = 8, units = "in", dpi = 300)
+```
+
 
 ## 9. Ergebnisstabellen exportieren
 
