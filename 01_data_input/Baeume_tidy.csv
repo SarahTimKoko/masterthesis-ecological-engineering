@@ -1,0 +1,25 @@
+﻿baumkategorie;baumart;lebensdauer_mw;klimaangepasst;geeignet_stadtbaum;kronenbreite_mw;biodiversitaet;kuehlung_mw;co2_bindung_mw;regenwasser_mw;groesse_baumrigolen;pflegeaufwand;recyclingpotential
+Grosskronige Arten;Quercus robur (Stieleiche);100;2;1;17.5;4.7;5;50;325;38;2;3
+Grosskronige Arten;Quercus petraea (Traubeneiche);100;2;2;17.5;4.4;5;50;325;38;2;3
+Grosskronige Arten;Tilia tomentosa (Silber-Linde);80;3;3;17.5;3.6;5;50;325;38;3;2
+Mittelgrosse Arten;Tilia cordata (Winterlinde);80;2;3;13.5;4.4;3;37.5;200;38;3;2
+Grosskronige Arten;Tilia × europaea ‘Pallida’ (Kaiser-Linde, Holländische Linde);100;2;3;15;4;5;50;325;38;2;2
+Grosskronige Arten;Acer platanoides (Spitz-Ahorn);60;2;3;15;4.4;5;50;325;38;2;1
+Mittelgrosse Arten;Acer campestre (Feld-Ahorn);60;3;3;10;4.7;3;37.5;200;38;2;1
+Mittelgrosse Arten;Carpinus betulus (Hainbuche);60;2;3;9;4.2;3;37.5;200;38;2;1
+Mittelgrosse Arten;Corylus colurna (Baum-Hasel);60;3;3;9;4.4;3;37.5;200;38;2;1
+Mittelgrosse Arten;Sorbus torminalis (Elsbeere);60;3;3;8.5;4.7;3;37.5;200;38;2;1
+Kleinkronige Arten;Sorbus aria (Mehlbeere);50;2;3;7;4.7;1.5;20;100;38;2;1
+Kleinkronige Arten;Crataegus monogyna (Eingriffeliger Weissdorn);50;3;3;6.5;5;1.5;20;100;38;2;1
+Grosskronige Arten;Celtis australis (Südlicher Zürgelbaum);60;3;3;15;3.5;5;50;325;38;2;1
+Grosskronige Arten;Platanus x hispanica (Gewöhnliche Platane);100;2;3;19;3.2;5;50;325;38;3;1
+Grosskronige Arten;Gleditsia triacanthos f. inermis (Dornenlose Gleditschie);60;3;3;15;3.2;5;50;325;38;3;1
+Grosskronige Arten;Sophora japonica (Japanischer Schnurbaum);60;3;3;15;3.2;5;50;325;38;3;1
+Mittelgrosse Arten;Prunus avium ‘Plena’ (Gefülltblühende Vogel-Kirsche);50;2;2;9;3.8;3;37.5;200;38;3;1
+Kleinkronige Arten;Prunus padus ‘Watereri’ (Traubenkirsche Watereri);50;2;2;7;4;1.5;20;100;38;2;1
+Mittelgrosse Arten;Pyrus calleryana 'Chanticleer' (Stadt-Birne);50;3;3;6;3.2;3;37.5;200;38;2;1
+Kleinkronige Arten;Malus toringo sargentii (Sargents Apfel);40;2;3;6.5;4.2;1.5;20;100;38;2;1
+Kleinkronige Arten;Malus 'Evereste' (Zierapfel Evereste);40;2;3;4.5;4.2;1.5;20;100;38;2;1
+Kleinkronige Arten;Amelanchier lamarckii (Kupfer-Felsenbirne);40;3;3;6.5;4.4;1.5;20;100;38;1;1
+Mittelgrosse Arten;Koelreuteria paniculata (Blasenbaum);50;3;3;8.5;3;3;37.5;200;38;2;1
+Kleinkronige Arten;Acer tataricum subsp. ginnala (Feuer-Ahorn);40;2;3;7;4.4;1.5;20;100;38;2;1

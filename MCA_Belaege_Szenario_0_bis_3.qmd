@@ -119,12 +119,11 @@ Ziel: Transformation der Tabelle df_belaege von Wide-to-Long und anschliessende 
 
 df_belaege_long <- df_belaege %>%
   pivot_longer(
-    # Auswahl aller Spalten
-    cols = c(lebensdauer, versickerung, oberflaechentemperatur, 
-             befahrbarkeit, recyclingfaehigkeit, 
-             lokaleMaterialien, modulareErneuerbarkeit, 
+    # Nimm alle Spalten von 'lebensdauer' bis 'modulareErneuerbarkeit'
+    # und die vier '_100a'-Spalten.
+    cols = c(lebensdauer:modulareErneuerbarkeit, 
              kosten_100a, unterhalt_100a, co2_100a, graueEnergie_100a), 
-    
+    # ---------------------------
     names_to = "bewertungskategorie", 
     values_to = "wert"
   )
@@ -290,12 +289,12 @@ print(df_mca_total, n = 40) # n=40, um alle Ergebnisse zu sehen
 Ziel: visualisierung der Ergebnisse 
 
 ```{r}
-#| label: fig-mca-plots
-#| fig.width: 14
-#| fig.height: 12
-#| out.width: "95%"
-#| out.height: "auto"
 
+#| label: fig-mca-plots-vertical
+#| fig.width: 8   # Weniger Breite nötig, da Plots untereinander
+#| fig.height: 20  # MEHR Höhe nötig, da 4 Plots übereinander
+#| out.width: "90%" # Etwas kleiner als 95%, um Ränder zu haben
+#| out.height: "auto"
 
 # Plot 1: Gesamtergebnis (Ranking)
 plot_mca_total <- ggplot(df_mca_total, 
@@ -305,8 +304,10 @@ plot_mca_total <- ggplot(df_mca_total,
   geom_col() +
   tidytext::scale_y_reordered() +
   
-  # facet_wrap erstellt automatisch ein 2x2 Grid für die 4 Szenarien
-  facet_wrap(~ szenario, scales = "free_y") + 
+  # --- ÄNDERUNG HIER: ncol = 1 ---
+  # Erzwingt die Anordnung in EINER Spalte (untereinander)
+  facet_wrap(~ szenario, scales = "free_y", ncol = 1) + 
+  # -----------------------------
   
   labs(
     title = "MCA Ergebnis: Rangliste der Belagsoptionen nach Szenario",
@@ -319,13 +320,13 @@ plot_mca_total <- ggplot(df_mca_total,
   theme(legend.position = "top")
 
 print(plot_mca_total)
-# --- ANGEPASSTE DIMENSIONEN (für 2x2 Grid) ---
-ggsave("02_export/plots/mca_gesamtergebnis_alle_szenarien.png", 
-       plot = plot_mca_total, width = 12, height = 10)
-# --------------------------------------------
+# --- ANGEPASSTE DIMENSIONEN (für vertikalen Plot) ---
+ggsave("02_export/plots/mca_gesamtergebnis_alle_szenarien_vertical.png", 
+       plot = plot_mca_total, width = 8, height = 15) # Höhe anpassen!
+# ----------------------------------------------------
 
 # Plot 2: Detail-Zusammensetzung (Gestapeltes Diagramm)
-# 1. Daten vorbereiten 
+# 1. Daten vorbereiten (keine Änderung)
 df_mca_groups <- df_mca_calculated %>%
   group_by(szenario, belagskategorie, option, group_id) %>% 
   summarise(gruppen_score = sum(MCA_score_kriterium, na.rm = TRUE)) %>%
@@ -340,8 +341,9 @@ plot_mca_stacked <- ggplot(df_mca_groups,
   geom_col(position = "stack") +
   tidytext::scale_y_reordered() +
   
-  # facet_wrap erstellt automatisch ein 2x2 Grid
-  facet_wrap(~ szenario, scales = "free_y") +
+  # --- ÄNDERUNG HIER: ncol = 1 ---
+  facet_wrap(~ szenario, scales = "free_y", ncol = 1) +
+  # -----------------------------
   
   labs(
     title = "MCA Detail: Zusammensetzung des Scores nach Szenario",
@@ -354,9 +356,10 @@ plot_mca_stacked <- ggplot(df_mca_groups,
   theme(legend.position = "top")
 
 print(plot_mca_stacked)
-# --- ANGEPASSTE DIMENSIONEN (für 2x2 Grid) ---
-ggsave("02_export/plots/mca_detail_gruppen_alle_szenarien.png", 
-       plot = plot_mca_stacked, width = 14, height = 10)
+# --- ANGEPASSTE DIMENSIONEN (für vertikalen Plot) ---
+ggsave("02_export/plots/mca_detail_gruppen_alle_szenarien_vertical.png", 
+       plot = plot_mca_stacked, width = 9, height = 15) # Höhe anpassen!
+# ----------------------------------------------------
 
 ```
 
