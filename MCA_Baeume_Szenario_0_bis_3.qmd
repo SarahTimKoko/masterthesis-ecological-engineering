@@ -10,7 +10,7 @@ format:
 
 ## MCA Analyse für Szenario 0 bis 3
 
-Ziel: Wahl der besten drei Bäume pro Szenario nach MCA Berechnung.
+Ziel: Wahl der besten Bäume pro Szenario nach MCA Berechnung.
 
 - **Szenario 0:** "Baseline (IST-Analyse)": Simuliert die aktuellen Projektanforderungen. Fokus auf Wirtschaftlichkeit und Nutzungsqualität.
 - **Szenario 1:** "Forschungsfokus": Balanciert Lebenszyklus-Fokus (H1/H2) und Vermeidungsprinzip (H3).
@@ -66,9 +66,9 @@ Ziel: Daten für den Join und die MCA Berechnung vorbereiten.
 
 ```{r}
 # A. Bereinigung der Rohdaten (Baeume_tidy.csv)
-# Wähle die relevanten Spalten aus (ggf. anpassen, falls du mehr/weniger Spalten hast)
+# Wähle die relevanten Spalten aus
 df_baeume <- df_baeume_raw %>%
-  select(baumkategorie, baumart, lebensdauer_mw:recyclingpotential) # Annahme der Spaltennamen
+  select(baumkategorie, baumart, lebensdauer_mw:recyclingpotential) 
 
 # B. Bereinigung der Gewichtungen (ALLE SZENARIEN)
 df_weights_s0 <- weights_s0_raw %>%
@@ -80,7 +80,7 @@ df_weights_s2 <- weights_s2_raw %>%
 df_weights_s3 <- weights_s3_raw %>%
   mutate(szenario = "Szenario 3: Radikaler Lebenszyklus")
 
-# Binden zu einer Tabelle und Gesamtgewicht berechnen
+# Zusammenführen zu einer Tabelle und Gesamtgewicht berechnen
 df_weights <- bind_rows(df_weights_s0, df_weights_s1, df_weights_s2, df_weights_s3) %>%
   mutate(
     gewicht = group_weight * within_group_weight
@@ -91,8 +91,7 @@ df_weights <- bind_rows(df_weights_s0, df_weights_s1, df_weights_s2, df_weights_
   select(szenario, bewertungskategorie, gewicht, group_id)
 
 print("--- Finale Gewichtungs-Tabelle Bäume (df_weights) ---")
-print(df_weights, n = 52) # 4 Szenarien * 13 Zeilen (11 Kriterien + 2 leere)
-
+print(df_weights, n = 48) # 4 Szenarien * 12 Zeilen (11 Kriterien + 1 leere)
 
 
 
@@ -106,7 +105,6 @@ Ziel: Transformation der Tabelle df_baeume von Wide-to-Long und Verknüpfung mit
 # 3.1 Wide-to-Long: Transformation der Rohdaten
 df_baeume_long <- df_baeume %>%
   pivot_longer(
-    # --- ANGEPASSTE AUSWAHL FÜR BÄUME ---
     # Nimmt alle Spalten von lebensdauer_mw bis recyclingpotential
     cols = c(lebensdauer_mw:recyclingpotential),
     # ------------------------------------
@@ -156,7 +154,6 @@ Ziel:
 
 ```{r}
 # 5.1 Definieren: Welche Baum-Kriterien sind 'schlechter', wenn sie 'höher' sind?
-# --- ANGEPASSTE LISTE FÜR BÄUME ---
 kriterien_lower_is_better_baeume <- c(
   "pflegeaufwand",
   "groesse_baumrigolen"
@@ -189,12 +186,10 @@ df_baeume_normalized <- df_baeume_with_minmax %>%
   mutate(
     score_normiert = case_when(
       (max_wert - min_wert) == 0 ~ 1,
-      # --- ANGEPASST ---
       !(bewertungskategorie %in% kriterien_lower_is_better_baeume) ~ (wert - min_wert) / (max_wert - min_wert),
       bewertungskategorie %in% kriterien_lower_is_better_baeume ~ 1 - ((wert - min_wert) / (max_wert - min_wert))
-      # ---------------
+      )
     )
-  )
 ```
 
 ## 6. Explorative Datenanalyse
@@ -245,7 +240,7 @@ print("--- MCA Gesamtergebnis Bäume (sortiert) ---")
 print(df_mca_total_baeume, n = Inf) # n = Inf zeigt alle Zeilen
 
 # ---
-# NEU: Block 7.3 - Auswahl der Top 3 Bäume pro Szenario
+# 7.3 - Auswahl der Top 3 Bäume pro Szenario
 # ---
 N_BAEUME_AUSWAEHLEN <- 3
 
@@ -282,7 +277,6 @@ data_s0 <- df_mca_total_baeume %>% filter(szenario == "Szenario 0: Baseline (IST
 
 plot_s0_rank <- ggplot(data_s0,
        aes(x = MCA_gesamtscore,
-           # --- GEÄNDERT: Kleinbuchstaben ---
            y = fct_reorder(baumart, MCA_gesamtscore),
            fill = baumkategorie)) +
            # -------------------------------
@@ -291,7 +285,6 @@ plot_s0_rank <- ggplot(data_s0,
     title = "MCA Ergebnis Bäume: Szenario 0 - Baseline (IST)",
     subtitle = "Ranking (Höher = Besser)",
     x = "MCA Gesamtscore",
-    # --- GEÄNDERT: Kleinbuchstaben ---
     y = "baumart",
     fill = "baumkategorie"
     # -------------------------------
@@ -304,13 +297,10 @@ ggsave("02_export/plots/mca_gesamtergebnis_s0_baeume.png",
        plot = plot_s0_rank, width = 13, height = 9, units = "in", dpi = 300)
 
 # --- Plot 2: Stacked Detail ---
-# --- Datenaufbereitung AUCH mit Kleinbuchstaben ---
 df_mca_groups_baeume_plot <- df_mca_calculated_baeume %>%
-  # Zuerst auf Kleinbuchstaben umbenennen
-  rename(baumkategorie = baumkategorie, baumart = baumart) %>%
   group_by(szenario, baumkategorie, baumart, group_id) %>%
   summarise(gruppen_score = sum(MCA_score_kriterium, na.rm = TRUE), .groups = 'drop') %>%
-  # Join mit df_mca_total_baeume (hat schon Kleinbuchstaben)
+  # Join mit df_mca_total_baeume 
   left_join(df_mca_total_baeume, by = c("szenario", "baumkategorie", "baumart"))
 
 data_s0_groups <- df_mca_groups_baeume_plot %>% filter(szenario == "Szenario 0: Baseline (IST)")
@@ -318,7 +308,6 @@ data_s0_groups <- df_mca_groups_baeume_plot %>% filter(szenario == "Szenario 0: 
 
 plot_s0_stack <- ggplot(data_s0_groups,
        aes(x = gruppen_score,
-           # --- GEÄNDERT: Kleinbuchstaben ---
            y = fct_reorder(baumart, MCA_gesamtscore),
            fill = group_id)) +
            # -------------------------------
@@ -327,9 +316,7 @@ plot_s0_stack <- ggplot(data_s0_groups,
     title = "MCA Detail Bäume: Szenario 0 - Baseline (IST)",
     subtitle = "Zusammensetzung des Scores",
     x = "MCA Score (Anteil)",
-    # --- GEÄNDERT: Kleinbuchstaben ---
     y = "Baumart",
-    # -------------------------------
     fill = "Kriteriengruppe"
   ) +
   theme_minimal() +
