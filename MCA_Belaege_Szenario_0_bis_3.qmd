@@ -282,6 +282,30 @@ df_mca_total <- df_mca_calculated %>%
 print("--- MCA Gesamtergebnis (sortiert) ---")
 print(df_mca_total, n = 40) # n=40, um alle Ergebnisse zu sehen
 
+# 7.3 - Auswahl der "Top 3 Sieger"
+# Ziel: Für jedes der 4 Szenarien die Top 3 Beläge aus dem
+# Gesamtranking auswählen (unabhängig von der Kategorie).
+
+N_BELAEGE_AUSWAEHLEN <- 3
+
+df_sieger_belaege <- df_mca_total %>%
+  group_by(szenario) %>%
+  # Wählt die N besten Beläge innerhalb jedes Szenarios aus
+  slice_max(MCA_gesamtscore, n = N_BELAEGE_AUSWAEHLEN) %>%
+  ungroup() %>%
+  # Ordnen für bessere Lesbarkeit
+  arrange(szenario, desc(MCA_gesamtscore))
+
+# Anzeigen der 12 Sieger-Optionen (4 Szenarien * 3 Beläge)
+print(paste("--- Top", N_BELAEGE_AUSWAEHLEN, "Beläge pro Szenario (für Zeitstrahl-Analyse) ---"))
+print(df_sieger_belaege, n = 12)
+
+# Diese Auswahl auch exportieren
+write_csv2(
+  df_sieger_belaege,
+  file = "02_export/tables/mca_top3_belaege_pro_szenario.csv"
+)
+
 ```
 
 ## 8. Darstellung

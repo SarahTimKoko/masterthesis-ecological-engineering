@@ -1,0 +1,13 @@
+szenario;belagskategorie;option;MCA_gesamtscore
+Szenario 0: Baseline (IST);Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);0,674033373729670
+Szenario 0: Baseline (IST);Asphalt;Selbstheilender Asphalt;0,643317971214730
+Szenario 0: Baseline (IST);Pflaster;Natursteinpflaster (6-10 mm Fugen);0,627216553714667
+Szenario 1: Forschungsfokus;Pflaster;Natursteinpflaster (6-10 mm Fugen);0,781401173047381
+Szenario 1: Forschungsfokus;Sickerbeläge;Chaussierung;0,723556839824897
+Szenario 1: Forschungsfokus;Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);0,723178672952747
+Szenario 2: Radikale Vermeidung;Sickerbeläge;Chaussierung;0,935236673856898
+Szenario 2: Radikale Vermeidung;Pflaster;Natursteinpflaster (6-10 mm Fugen);0,917896303195166
+Szenario 2: Radikale Vermeidung;Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);0,746113145783517
+Szenario 3: Radikaler Lebenszyklus;Asphalt;Selbstheilender Asphalt;0,747394104721651
+Szenario 3: Radikaler Lebenszyklus;Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);0,706328856236264
+Szenario 3: Radikaler Lebenszyklus;Pflaster;Natursteinpflaster (6-10 mm Fugen);0,654775237513286
