@@ -1,0 +1,511 @@
+---
+title: "Zeitstrahl_Analyse"
+author: "Sarah Pfeiffer"
+date: today
+format: 
+    html:
+        toc: true
+        code-fold: false
+
+---
+# Zeitstrahl-Analyse
+Ziel: 
+
+## Libraries Laden
+
+```{r}
+library(tidyverse)
+library(readr)
+library(ggplot2)
+library(forcats) # Für fct_rev()
+library(tidyr)   # Für complete()
+library(purrr)   # Für map()
+
+```
+
+## 1. Daten importieren
+Ziel: Lädt alle 5 CSV-Dateien, die für diese Analyse notwendig sind
+
+```{r}
+# --- A. Input 1: Die "Sieger" (Ergebnis aus MCA) ---
+df_sieger_belaege_roh <- read_csv2("02_export/tables/mca_top3_belaege_pro_szenario.csv")
+df_sieger_baeume_roh  <- read_csv2("02_export/tables/mca_top3_baeume_pro_szenario.csv")
+
+# --- B. Input 2: Die "Stammdaten" (um Lebensdauer zu holen) ---
+df_belaege_stammdaten <- read_delim("01_data_input/Belaege_tidy.csv", delim = ";")
+df_baeume_stammdaten  <- read_delim("01_data_input/Baeume_tidy.csv", delim = ";")
+
+# --- C. Input 3: Die "Konstanten" (Leitungen) ---
+df_leitungen_roh <- read_csv2("01_data_input/Leitungen_IST.csv")
+
+```
+
+## 2. Daten Aufbereiten
+Ziel: Alle Komponenten (Leitungen, Beläge, Bäume) in ein einheitliches Format bringen (szenario, kategorie, komponente, lebensdauer).
+
+```{r}
+# --- Schritt 2.1: Leitungen aufbereiten ---
+# Wählt nur Sanierungen (Grabungen) aus und benennt sie um
+# Verwendet die exakten Spaltennamen aus Leitungen_IST.csv
+
+df_leitungen <- df_leitungen_roh %>%
+  
+  # 1. Filtere nur Zeilen, die einen "Graben" erfordern
+  #    (ignoriert "Kabelzug")
+  filter(Eingriffs_Typ == "Graben") %>%
+  
+  # 2. Erstelle die Standard-Spalten "szenario" und "kategorie"
+  mutate(
+    szenario = "Alle Szenarien", # Leitungen sind in allen Szenarien gleich
+    kategorie = "Leitung"
+  ) %>%
+  
+  # 3. Wähle die Spalten aus, die wir brauchen, und benenne sie um
+  select(
+    szenario,
+    kategorie,
+    komponente = Leitungstyp,
+    lebensdauer = Techn_Nutzungsdauer_a
+  )
+
+# --- Schritt 2.2: Belag-Sieger aufbereiten & Lebensdauer anjoinen ---
+df_sieger_belaege_ld <- df_sieger_belaege_roh %>%
+  # Hole die Lebensdauer aus den Stammdaten
+  left_join(
+    df_belaege_stammdaten %>% select(option, lebensdauer), 
+    by = "option"
+  ) %>%
+  # Bringe ins einheitliche Format
+  select(szenario, kategorie = belagskategorie, komponente = option, lebensdauer)
+
+# --- Schritt 2.3: Baum-Sieger aufbereiten & Lebensdauer anjoinen ---
+df_sieger_baeume_ld <- df_sieger_baeume_roh %>%
+  # Hole die Lebensdauer aus den Stammdaten
+  left_join(
+    df_baeume_stammdaten %>% select(baumart, lebensdauer_mw), 
+    by = "baumart"
+  ) %>%
+  # Bringe ins einheitliche Format
+  select(szenario, kategorie = baumkategorie, komponente = baumart, lebensdauer = lebensdauer_mw)
+
+
+```
+
+## 3. Komponenten bündeln
+Ziel: Eine "Master-Tabelle" erstellen, die Jede Komponente für Jedes Szenario enthält.
+
+```{r}
+# --- Schritt 3.1: Alle "Sieger" (Beläge & Bäume) sammeln ---
+#
+# Ziel: Die 12 Belag-Sieger (3 Beläge * 4 Szenarien) und
+#       die 12 Baum-Sieger (3 Bäume * 4 Szenarien)
+#       in eine Tabelle (24 Zeilen) zusammenfügen.
+#
+df_sieger_komponenten <- bind_rows(
+  df_sieger_belaege_ld,
+  df_sieger_baeume_ld
+)
+
+# --- Schritt 3.2: "Leitungen" für jedes Szenario duplizieren ---
+#
+# Ziel: Wir müssen die 6 Leitungen (AW, RW, etc.) fair mit den
+#       Siegern vergleichen. Im Moment haben die Leitungen das
+#       Szenario "Alle Szenarien". Wir wollen sie 4x klonen, 
+#       eine Kopie für S0, eine für S1, eine für S2, eine für S3.
+#
+
+# 1. Erstelle eine saubere Liste der 4 Zielszenarien (S0, S1, S2, S3).
+#    Wir holen sie aus der Sieger-Tabelle (wo sie 24x vorkommen)
+#    und 'unique()' reduziert sie auf die 4 einzigartigen Namen.
+szenario_liste <- unique(df_sieger_komponenten$szenario)
+
+# 2. Nimm die 6 Leitungen (df_leitungen)...
+df_leitungen_final <- df_leitungen %>%
+  
+  # ...und "vervollständige" (complete) sie für die 'szenario_liste'.
+  # R erstellt jetzt 4 Kopien von jeder Leitung, eine für S0, S1, S2, S3.
+  complete(
+    szenario = szenario_liste,
+    # nesting() stellt sicher, dass die Details (Name, Lebensdauer) 
+    # bei jeder Kopie erhalten bleiben.
+    nesting(kategorie, komponente, lebensdauer)
+  ) %>%
+  
+  # 3. Entferne die ursprüngliche "Alle Szenarien"-Zeile,
+  #    da sie jetzt durch die 24 neuen Zeilen ersetzt wurde.
+  filter(!is.na(szenario)) 
+
+# (Das Ergebnis 'df_leitungen_final' hat jetzt 6 Leitungen * 4 Szenarien = 24 Zeilen)
+
+
+# --- Schritt 3.3: Finale Master-Liste erstellen ---
+#
+# Ziel: Die 24 Leitungs-Zeilen (aus 3.2) und die 24 Sieger-Zeilen
+#       (aus 3.1) zu EINER grossen Tabelle (48 Zeilen) stapeln.
+#
+df_alle_komponenten_final <- bind_rows(
+  df_leitungen_final,
+  df_sieger_komponenten
+)
+
+# --- Überprüfung ---
+print("--- Master-Liste aller Komponenten pro Szenario ---")
+# Die Zahl muss 48 sein:
+# (6 Leitungen * 4 Szenarien) + (3 Beläge * 4 Szenarien) + (3 Bäume * 4 Szenarien)
+# = 24 + 12 + 12 = 48 Zeilen
+print(df_alle_komponenten_final, n = 48)
+
+```
+
+## 4. Sanierungs-Events berechnen
+Ziel: Den 100-Jahres-Zeitstrahl mit allen Sanierungs-Punkten berechnen.
+
+```{r}
+# --- Schritt 4.1: Alle Sanierungs-Events berechnen ---
+zeitstrahl_100_jahre <- df_alle_komponenten_final %>%
+  # Erstellt für jede Komponente eine Liste von Events
+  mutate(sanierungs_jahr = map(lebensdauer, ~ seq(from = 0, to = 100, by = .x))) %>%
+  # Klappt die Listen-Spalte in Zeilen aus
+  unnest(sanierungs_jahr) %>%
+  # Entfernt Events nach Jahr 100
+  filter(sanierungs_jahr <= 100) %>%
+  # Sortieren
+  select(szenario, kategorie, komponente, lebensdauer, sanierungs_jahr) %>%
+  arrange(szenario, komponente, sanierungs_jahr)
+  
+# --- Schritt 4.2: Speichern (Guter Zwischenschritt) ---
+print("--- Zeitstrahl-Event-Liste (langes Format) ---")
+print(zeitstrahl_100_jahre, n = 50)
+
+write_csv2(
+  zeitstrahl_100_jahre,
+  file = "02_export/tables/zeitstrahl_100_jahre_analyse.csv"
+)
+```
+
+## 5. Finale Synthese: Zeitstrahl-Visualisierung
+Ziel: Vergleich der Sanierungs-Szenarien zur Beantwortung von H1 & H2.
+```{r}
+## 5. Finale Synthese: Zeitstrahl-Visualisierung
+
+# Ziel: Vergleich der Sanierungs-Szenarien zur Beantwortung von H1 & H2.
+
+# --- Schritt 5.1: Daten filtern (Dein Code) ---
+# (Dieser Code ist von dir und ist KORREKT)
+
+# Vergleich 1: Baseline vs Forschungsfokus
+df_plot_data_1 <- zeitstrahl_100_jahre %>%
+  filter(szenario %in% c("Szenario 0: Baseline (IST)", 
+                         "Szenario 1: Forschungsfokus"))
+
+# Vergleich 2: Baseline vs Radikale Vermeidung
+df_plot_data_2 <- zeitstrahl_100_jahre %>%
+  filter(szenario %in% c("Szenario 0: Baseline (IST)", 
+                         "Szenario 2: Radikale Vermeidung"))
+
+# Vergleich 3: Baseline vs Radikaler Lebenszyklus
+df_plot_data_3 <- zeitstrahl_100_jahre %>%
+  filter(szenario %in% c("Szenario 0: Baseline (IST)", 
+                         "Szenario 3: Radikaler Lebenszyklus"))
+
+
+# --- Schritt 5.2: Plot 1 (S0 vs S1) ---
+# (Dieser Code ergänzt deinen ggplot-Aufruf)
+
+plot_zeitstrahl_1 <- ggplot(df_plot_data_1, 
+       aes(x = sanierungs_jahr, 
+           y = fct_reorder(komponente, lebensdauer), # Sortiert Y-Achse nach Lebensdauer
+           color = kategorie)) + 
+  
+  geom_point(size = 3.5, alpha = 0.8) + 
+  
+  # Vertikale Linien für Haupt-Events
+  geom_vline(xintercept = 50, linetype = "dashed", color = "gray50") +
+  geom_vline(xintercept = 80, linetype = "dashed", color = "gray50") +
+  
+  # Trennt die Grafik in 2 Plots (S0 vs. S1) untereinander
+  facet_wrap(~ szenario, ncol = 1, scales = "free_y") + 
+  
+  scale_x_continuous(breaks = seq(0, 100, 10), limits = c(-1, 101)) +
+  
+  labs(
+    title = "Synthese 1: Baseline (S0) vs. Forschungsfokus (S1)",
+    subtitle = "Vergleich der Sanierungszyklen (100 Jahre)",
+    x = "Sanierungsjahr",
+    y = "Komponente (sortiert nach Lebensdauer)",
+    color = "Komponenten-Kategorie"
+  ) +
+  theme_minimal() +
+  theme(
+    legend.position = "top",
+    axis.text.y = element_text(size = 8) 
+  )
+
+print(plot_zeitstrahl_1)
+ggsave("02_export/plots/FINALE_SYNTHESE_Zeitstrahl_S0_vs_S1.png", 
+       plot = plot_zeitstrahl_1, width = 12, height = 12)
+
+
+# --- Schritt 5.3: Plot 2 (S0 vs S2) ---
+
+plot_zeitstrahl_2 <- ggplot(df_plot_data_2, 
+       aes(x = sanierungs_jahr, 
+           y = fct_reorder(komponente, lebensdauer),
+           color = kategorie)) + 
+  
+  geom_point(size = 3.5, alpha = 0.8) + 
+  geom_vline(xintercept = 50, linetype = "dashed", color = "gray50") +
+  geom_vline(xintercept = 80, linetype = "dashed", color = "gray50") +
+  facet_wrap(~ szenario, ncol = 1, scales = "free_y") + 
+  scale_x_continuous(breaks = seq(0, 100, 10), limits = c(-1, 101)) +
+  
+  labs(
+    title = "Synthese 2: Baseline (S0) vs. Radikale Vermeidung (S2)",
+    subtitle = "Vergleich der Sanierungszyklen (100 Jahre)",
+    x = "Sanierungsjahr",
+    y = "Komponente (sortiert nach Lebensdauer)",
+    color = "Komponenten-Kategorie"
+  ) +
+  theme_minimal() +
+  theme(
+    legend.position = "top",
+    axis.text.y = element_text(size = 8) 
+  )
+
+print(plot_zeitstrahl_2)
+ggsave("02_export/plots/FINALE_SYNTHESE_Zeitstrahl_S0_vs_S2.png", 
+       plot = plot_zeitstrahl_2, width = 12, height = 12)
+
+
+# --- Schritt 5.4: Plot 3 (S0 vs S3) ---
+
+plot_zeitstrahl_3 <- ggplot(df_plot_data_3, 
+       aes(x = sanierungs_jahr, 
+           y = fct_reorder(komponente, lebensdauer),
+           color = kategorie)) + 
+  
+  geom_point(size = 3.5, alpha = 0.8) + 
+  geom_vline(xintercept = 50, linetype = "dashed", color = "gray50") +
+  geom_vline(xintercept = 80, linetype = "dashed", color = "gray50") +
+  facet_wrap(~ szenario, ncol = 1, scales = "free_y") + 
+  scale_x_continuous(breaks = seq(0, 100, 10), limits = c(-1, 101)) +
+  
+  labs(
+    title = "Synthese 3: Baseline (S0) vs. Radikaler Lebenszyklus (S3)",
+    subtitle = "Vergleich der Sanierungszyklen (100 Jahre)",
+    x = "Sanierungsjahr",
+    y = "Komponente (sortiert nach Lebensdauer)",
+    color = "Komponenten-Kategorie"
+  ) +
+  theme_minimal() +
+  theme(
+    legend.position = "top",
+    axis.text.y = element_text(size = 8) 
+  )
+
+print(plot_zeitstrahl_3)
+ggsave("02_export/plots/FINALE_SYNTHESE_Zeitstrahl_S0_vs_S3.png", 
+       plot = plot_zeitstrahl_3, width = 12, height = 12)
+
+```
+
+## 6. Optimierter Zeitstrahl
+Ziel: Lösungsdarstellung für so wenige Sanierungszyklen wie möglich
+
+```{r}
+## 6. Synthese: Berechnung der optimierten Zeitstrahlen (Alle Szenarien)
+
+# Ziel: Für ALLE 4 Szenarien berechnen, wie die Zyklen
+#       an die Anker-Events (50J & 80J) "herangezogen" (vorgezogen) werden.
+
+# --- Schritt 6.1: Definition der Bündelungs-Logik ---
+df_alle_szenarien <- zeitstrahl_100_jahre # Aus Block 4
+anker_jahre <- c(50, 80)
+toleranz <- 10 # Nur vorziehen (z.B. Jahr 60 -> 50)
+
+# --- Schritt 6.2: Berechne die "Optimierten" Sanierungsjahre ---
+df_optimiert_alle <- df_alle_szenarien %>%
+  mutate(
+    typ = if_else(kategorie == "Leitung", "Fix", "Flexibel"),
+    original_jahr = sanierungs_jahr,
+    
+    sanierungs_jahr_optimiert = case_when(
+      typ == "Fix" ~ original_jahr,
+      original_jahr == 0 ~ 0,
+      # Bündle Events NACH Anker 1 (50)
+      (original_jahr > 50) & ((original_jahr - 50) <= toleranz) ~ 50,
+      # Bündle Events NACH Anker 2 (80)
+      (original_jahr > 80) & ((original_jahr - 80) <= toleranz) ~ 80,
+      # Alle anderen Events bleiben separat
+      TRUE ~ original_jahr
+    )
+  ) %>%
+  # Entferne doppelte Punkte (WICHTIG: pro Szenario!)
+  distinct(szenario, kategorie, komponente, lebensdauer, 
+           sanierungs_jahr_optimiert, .keep_all = TRUE)
+
+print("--- Berechnung der optimierten Events abgeschlossen ---")
+
+
+```
+
+## 7. Visualisierung
+
+```{r}
+## 7. Finale Synthese: Visualisierung der optimierten Zeitstrahlen
+
+# Ziel: Erstelle 4 separate Grafiken, die die Optimierung
+#       für jedes Szenario einzeln zeigen.
+
+### 7.1 Optimierter Zeitstrahl: Szenario 0 (Baseline)
+
+#| label: fig-zeitstrahl-opt-s0
+#| fig.width: 12
+#| fig.height: 8
+#| out.width: "95%"
+#| dpi: 300
+
+# 1. Filtere nur S0
+df_plot_s0 <- df_optimiert_alle %>%
+  filter(szenario == "Szenario 0: Baseline (IST)")
+
+# 2. Erstelle den Plot
+plot_opt_s0 <- ggplot(df_plot_s0, aes(y = fct_reorder(komponente, lebensdauer))) + 
+  geom_point(aes(x = original_jahr), size = 3, color = "gray70", alpha = 0.6) +
+  geom_segment(
+    aes(x = original_jahr, xend = sanierungs_jahr_optimiert, yend = fct_reorder(komponente, lebensdauer)),
+    arrow = arrow(length = unit(0.2, "cm")), color = "darkred",
+    data = . %>% filter(original_jahr != sanierungs_jahr_optimiert) 
+  ) +
+  geom_point(aes(x = sanierungs_jahr_optimiert, color = kategorie), size = 4) +
+  geom_vline(xintercept = anker_jahre, linetype = "dashed", color = "black") +
+  scale_x_continuous(breaks = seq(0, 100, 10), limits = c(-1, 101)) +
+  labs(
+    title = "Lösungs-Ansatz: Optimierter Zeitstrahl Szenario 0 (Baseline)",
+    subtitle = "Flexible Events werden zu Anker-Events (50J & 80J) 'vorgezogen'.",
+    x = "Sanierungsjahr (Optimiert)", y = "Komponente", color = "Komponenten-Kategorie"
+  ) +
+  theme_minimal() +
+  theme(legend.position = "top", axis.text.y = element_text(size = 8))
+
+print(plot_opt_s0)
+ggsave("02_export/plots/FINALE_SYNTHESE_Zeitstrahl_Optimiert_S0.png", 
+       plot = plot_opt_s0, width = 12, height = 8)
+
+
+```
+
+### 7.2 Optimierter Zeitstrahl: Szenario 1 (Forschungsfokus)
+
+```{r}
+#| label: fig-zeitstrahl-opt-s1
+#| fig.width: 12
+#| fig.height: 8
+#| out.width: "95%"
+#| dpi: 300
+
+# 1. Filtere nur S1
+df_plot_s1 <- df_optimiert_alle %>%
+  filter(szenario == "Szenario 1: Forschungsfokus")
+
+# 2. Erstelle den Plot
+plot_opt_s1 <- ggplot(df_plot_s1, aes(y = fct_reorder(komponente, lebensdauer))) + 
+  geom_point(aes(x = original_jahr), size = 3, color = "gray70", alpha = 0.6) +
+  geom_segment(
+    aes(x = original_jahr, xend = sanierungs_jahr_optimiert, yend = fct_reorder(komponente, lebensdauer)),
+    arrow = arrow(length = unit(0.2, "cm")), color = "darkred",
+    data = . %>% filter(original_jahr != sanierungs_jahr_optimiert) 
+  ) +
+  geom_point(aes(x = sanierungs_jahr_optimiert, color = kategorie), size = 4) +
+  geom_vline(xintercept = anker_jahre, linetype = "dashed", color = "black") +
+  scale_x_continuous(breaks = seq(0, 100, 10), limits = c(-1, 101)) +
+  labs(
+    title = "Lösungs-Ansatz: Optimierter Zeitstrahl Szenario 1 (Forschungsfokus)",
+    subtitle = "Flexible Events werden zu Anker-Events (50J & 80J) 'vorgezogen'.",
+    x = "Sanierungsjahr (Optimiert)", y = "Komponente", color = "Komponenten-Kategorie"
+  ) +
+  theme_minimal() +
+  theme(legend.position = "top", axis.text.y = element_text(size = 8))
+
+print(plot_opt_s1)
+ggsave("02_export/plots/FINALE_SYNTHESE_Zeitstrahl_Optimiert_S1.png", 
+       plot = plot_opt_s1, width = 12, height = 8)
+
+
+```
+
+### 7.3 Optimierter Zeitstrahl: Szenario 2 (Radikale Vermeidung)
+
+```{r}
+#| label: fig-zeitstrahl-opt-s2
+#| fig.width: 12
+#| fig.height: 8
+#| out.width: "95%"
+#| dpi: 300
+
+# 1. Filtere nur S2
+df_plot_s2 <- df_optimiert_alle %>%
+  filter(szenario == "Szenario 2: Radikale Vermeidung")
+
+# 2. Erstelle den Plot
+plot_opt_s2 <- ggplot(df_plot_s2, aes(y = fct_reorder(komponente, lebensdauer))) + 
+  geom_point(aes(x = original_jahr), size = 3, color = "gray70", alpha = 0.6) +
+  geom_segment(
+    aes(x = original_jahr, xend = sanierungs_jahr_optimiert, yend = fct_reorder(komponente, lebensdauer)),
+    arrow = arrow(length = unit(0.2, "cm")), color = "darkred",
+    data = . %>% filter(original_jahr != sanierungs_jahr_optimiert) 
+  ) +
+  geom_point(aes(x = sanierungs_jahr_optimiert, color = kategorie), size = 4) +
+  geom_vline(xintercept = anker_jahre, linetype = "dashed", color = "black") +
+  scale_x_continuous(breaks = seq(0, 100, 10), limits = c(-1, 101)) +
+  labs(
+    title = "Lösungs-Ansatz: Optimierter Zeitstrahl Szenario 2 (Radikale Vermeidung)",
+    subtitle = "Flexible Events werden zu Anker-Events (50J & 80J) 'vorgezogen'.",
+    x = "Sanierungsjahr (Optimiert)", y = "Komponente", color = "Komponenten-Kategorie"
+  ) +
+  theme_minimal() +
+  theme(legend.position = "top", axis.text.y = element_text(size = 8))
+
+print(plot_opt_s2)
+ggsave("02_export/plots/FINALE_SYNTHESE_Zeitstrahl_Optimiert_S2.png", 
+       plot = plot_opt_s2, width = 12, height = 8)
+```
+
+### 7.4 Optimierter Zeitstrahl: Szenario 3 (Radikaler Lebenszyklus)
+
+```{r}
+#| label: fig-zeitstrahl-opt-s3
+#| fig.width: 12
+#| fig.height: 8
+#| out.width: "95%"
+#| dpi: 300
+
+# 1. Filtere nur S3
+df_plot_s3 <- df_optimiert_alle %>%
+  filter(szenario == "Szenario 3: Radikaler Lebenszyklus")
+
+# 2. Erstelle den Plot
+plot_opt_s3 <- ggplot(df_plot_s3, aes(y = fct_reorder(komponente, lebensdauer))) + 
+  geom_point(aes(x = original_jahr), size = 3, color = "gray70", alpha = 0.6) +
+  geom_segment(
+    aes(x = original_jahr, xend = sanierungs_jahr_optimiert, yend = fct_reorder(komponente, lebensdauer)),
+    arrow = arrow(length = unit(0.2, "cm")), color = "darkred",
+    data = . %>% filter(original_jahr != sanierungs_jahr_optimiert) 
+  ) +
+  geom_point(aes(x = sanierungs_jahr_optimiert, color = kategorie), size = 4) +
+  geom_vline(xintercept = anker_jahre, linetype = "dashed", color = "black") +
+  scale_x_continuous(breaks = seq(0, 100, 10), limits = c(-1, 101)) +
+  labs(
+    title = "Lösungs-Ansatz: Optimierter Zeitstrahl Szenario 3 (Radikaler Lebenszyklus)",
+    subtitle = "Flexible Events werden zu Anker-Events (50J & 80J) 'vorgezogen'.",
+    x = "Sanierungsjahr (Optimiert)", y = "Komponente", color = "Komponenten-Kategorie"
+  ) +
+  theme_minimal() +
+  theme(legend.position = "top", axis.text.y = element_text(size = 8))
+
+print(plot_opt_s3)
+ggsave("02_export/plots/FINALE_SYNTHESE_Zeitstrahl_Optimiert_S3.png", 
+       plot = plot_opt_s3, width = 12, height = 8)
+
+```
+

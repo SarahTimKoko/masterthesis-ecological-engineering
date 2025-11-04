@@ -1,13 +1,13 @@
 szenario;baumkategorie;baumart;MCA_gesamtscore
-Szenario 0: Baseline (IST);Grosskronige Arten;Quercus petraea (Traubeneiche);0,710634482758621
-Szenario 0: Baseline (IST);Grosskronige Arten;Tilia × europaea ‘Pallida’ (Kaiser-Linde, Holländische Linde);0,682758620689655
-Szenario 0: Baseline (IST);Grosskronige Arten;Quercus robur (Stieleiche);0,677834482758621
-Szenario 1: Forschungsfokus;Grosskronige Arten;Quercus petraea (Traubeneiche);0,665158620689655
-Szenario 1: Forschungsfokus;Grosskronige Arten;Quercus robur (Stieleiche);0,656958620689655
-Szenario 1: Forschungsfokus;Grosskronige Arten;Tilia × europaea ‘Pallida’ (Kaiser-Linde, Holländische Linde);0,545689655172414
-Szenario 2: Radikale Vermeidung;Grosskronige Arten;Quercus petraea (Traubeneiche);0,526329310344828
-Szenario 2: Radikale Vermeidung;Grosskronige Arten;Quercus robur (Stieleiche);0,522229310344828
-Szenario 2: Radikale Vermeidung;Grosskronige Arten;Tilia × europaea ‘Pallida’ (Kaiser-Linde, Holländische Linde);0,304094827586207
-Szenario 3: Radikaler Lebenszyklus;Grosskronige Arten;Quercus petraea (Traubeneiche);0,815158620689655
-Szenario 3: Radikaler Lebenszyklus;Grosskronige Arten;Quercus robur (Stieleiche);0,806958620689655
-Szenario 3: Radikaler Lebenszyklus;Grosskronige Arten;Tilia × europaea ‘Pallida’ (Kaiser-Linde, Holländische Linde);0,795689655172414
+Szenario 0: Baseline (IST);Kleine Arten;Ulmus ‘New Horizon’ (Hybridulme);0,642722540390644
+Szenario 0: Baseline (IST);Grosskronige Arten;Quercus petraea (Traubeneiche);0,617636363636364
+Szenario 0: Baseline (IST);Grosskronige Arten;Tilia × europaea ‘Pallida’ (Kaiser-Linde, Holländische Linde);0,593542319749216
+Szenario 1: Forschungsfokus;Kleine Arten;Ulmus ‘New Horizon’ (Hybridulme);0,631774385097661
+Szenario 1: Forschungsfokus;Grosskronige Arten;Quercus petraea (Traubeneiche);0,566909090909091
+Szenario 1: Forschungsfokus;Mittelgrosse Arten;Juglans nigra (Schwarznuss);0,565442789968652
+Szenario 2: Radikale Vermeidung;Kleine Arten;Ulmus ‘New Horizon’ (Hybridulme);0,517840317548831
+Szenario 2: Radikale Vermeidung;Grosskronige Arten;Quercus petraea (Traubeneiche);0,514704545454545
+Szenario 2: Radikale Vermeidung;Grosskronige Arten;Quercus robur (Stieleiche);0,510250000000000
+Szenario 3: Radikaler Lebenszyklus;Kleine Arten;Ulmus ‘New Horizon’ (Hybridulme);0,759899385097661
+Szenario 3: Radikaler Lebenszyklus;Kleine Arten;Malus tschonoskii (Woll-Apfel);0,653398601398601
+Szenario 3: Radikaler Lebenszyklus;Mittelgrosse Arten;Juglans nigra (Schwarznuss);0,649192789968652

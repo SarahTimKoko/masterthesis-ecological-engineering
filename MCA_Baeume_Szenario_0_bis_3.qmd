@@ -228,16 +228,19 @@ df_mca_calculated_baeume <- df_baeume_normalized %>%
   )
 
 # 7.2 Aggregation pro Baum & Szenario
+# (Verwendet 100% saubere Leerzeichen und Kleinbuchstaben)
 df_mca_total_baeume <- df_mca_calculated_baeume %>%
-  group_by(szenario, baumkategorie, baumart) %>% # <-- Spaltennamen ggf. anpassen
+  group_by(szenario, baumkategorie, baumart) %>%
   summarise(
-    MCA_gesamtscore = sum(MCA_score_kriterium, na.rm = TRUE)
+    MCA_gesamtscore = sum(MCA_score_kriterium, na.rm = TRUE),
+    .groups = 'drop' # Hebt die Gruppierung sauber auf
   ) %>%
-  ungroup() %>%
   arrange(szenario, desc(MCA_gesamtscore))
 
+# Anzeigen der Ergebnisse (sollte jetzt 100 Zeilen haben = 25 Bäume * 4 Szenarien)
 print("--- MCA Gesamtergebnis Bäume (sortiert) ---")
-print(df_mca_total_baeume, n = Inf) # n = Inf zeigt alle Zeilen
+print(df_mca_total_baeume, n = Inf) 
+
 
 # ---
 # 7.3 - Auswahl der Top 3 Bäume pro Szenario
@@ -253,8 +256,6 @@ df_sieger_baeume <- df_mca_total_baeume %>%
 print(paste("--- Top", N_BAEUME_AUSWAEHLEN, "Bäume pro Szenario (für Artenvielfalt) ---"))
 print(df_sieger_baeume, n = Inf)
 # ----------------------------------------------------
-
-
 ```
 
 
@@ -482,6 +483,32 @@ ggsave("02_export/plots/mca_detail_gruppen_s3_baeume.png",
 
 ```
 
+## 9. Ergebnistabellen exportieren
+
+```{r}
+
+# 1. Speichern der finalen MCA-Rangliste (alle Bäume, alle Szenarien)
+write_csv2(
+  df_mca_total_baeume,
+  file = "02_export/tables/mca_rangliste_alle_szenarien_baeume.csv"
+)
+
+# 2. Speichern der kompletten Berechnungs-Details
+write_csv2(
+  df_mca_calculated_baeume,
+  file = "02_export/tables/mca_details_berechnung_alle_szenarien_baeume.csv"
+)
+
+# ---
+# 3. (WICHTIG) Speichern der Top-3-Auswahl für die Zeitstrahl-Analyse
+# ---
+write_csv2(
+  df_sieger_baeume, # Das Objekt, das du in Block 7.3 erstellt hast
+  file = "02_export/tables/mca_top3_baeume_pro_szenario.csv"
+)
+
+
+```
 
 
 
