@@ -13,6 +13,8 @@ website:
         text: "MCA Szenarien - Beläge"
       - href: MCA_Baeume_Szenario_0_bis_3.qmd
         text: "MCA Szenarien - Bäume"
+      - href: Zeitstrahl_Analyse.qmd
+        text: "Sanierungszyklen Zeitstrahl"
 format:
   html:
     theme: darky
