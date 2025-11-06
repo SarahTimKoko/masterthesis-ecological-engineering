@@ -315,7 +315,6 @@ Ziel: visualisierung der Ergebnisse
 ### 8.1 Plot: Szenario 0 - Baseline (IST)
 
 ```{r}
-```{r}
 #| label: fig-mca-plots-belaege-s0
 #| fig.width: 13 # Breite wie bei Bäumen
 #| fig.height: 8  # Höhe angepasst (weniger Optionen als Bäume)
