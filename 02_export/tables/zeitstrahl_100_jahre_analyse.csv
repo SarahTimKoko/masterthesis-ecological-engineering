@@ -18,9 +18,9 @@ Szenario 0: Baseline (IST);Leitung;Elektro (Rohrblock);80,0;0,0
 Szenario 0: Baseline (IST);Leitung;Elektro (Rohrblock);80,0;80,0
 Szenario 0: Baseline (IST);Leitung;Fernwärme;60,0;0,0
 Szenario 0: Baseline (IST);Leitung;Fernwärme;60,0;60,0
-Szenario 0: Baseline (IST);Pflaster;Natursteinpflaster (6-10 mm Fugen);50,0;0,0
-Szenario 0: Baseline (IST);Pflaster;Natursteinpflaster (6-10 mm Fugen);50,0;50,0
-Szenario 0: Baseline (IST);Pflaster;Natursteinpflaster (6-10 mm Fugen);50,0;100,0
+Szenario 0: Baseline (IST);Pflaster;Natursteinpflaster (sickerfähig, 6-10 mm Fugen);45,0;0,0
+Szenario 0: Baseline (IST);Pflaster;Natursteinpflaster (sickerfähig, 6-10 mm Fugen);45,0;45,0
+Szenario 0: Baseline (IST);Pflaster;Natursteinpflaster (sickerfähig, 6-10 mm Fugen);45,0;90,0
 Szenario 0: Baseline (IST);Grosskronige Arten;Quercus petraea (Traubeneiche);100,0;0,0
 Szenario 0: Baseline (IST);Grosskronige Arten;Quercus petraea (Traubeneiche);100,0;100,0
 Szenario 0: Baseline (IST);Leitung;Regenwasser;80,0;0,0
@@ -39,25 +39,22 @@ Szenario 1: Forschungsfokus;Leitung;Abwasser;80,0;80,0
 Szenario 1: Forschungsfokus;Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);35,0;0,0
 Szenario 1: Forschungsfokus;Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);35,0;35,0
 Szenario 1: Forschungsfokus;Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);35,0;70,0
-Szenario 1: Forschungsfokus;Sickerbeläge;Chaussierung;17,5;0,0
-Szenario 1: Forschungsfokus;Sickerbeläge;Chaussierung;17,5;17,5
-Szenario 1: Forschungsfokus;Sickerbeläge;Chaussierung;17,5;35,0
-Szenario 1: Forschungsfokus;Sickerbeläge;Chaussierung;17,5;52,5
-Szenario 1: Forschungsfokus;Sickerbeläge;Chaussierung;17,5;70,0
-Szenario 1: Forschungsfokus;Sickerbeläge;Chaussierung;17,5;87,5
 Szenario 1: Forschungsfokus;Leitung;Elektro (Rohrblock);80,0;0,0
 Szenario 1: Forschungsfokus;Leitung;Elektro (Rohrblock);80,0;80,0
 Szenario 1: Forschungsfokus;Leitung;Fernwärme;60,0;0,0
 Szenario 1: Forschungsfokus;Leitung;Fernwärme;60,0;60,0
 Szenario 1: Forschungsfokus;Mittelgrosse Arten;Juglans nigra (Schwarznuss);85,0;0,0
 Szenario 1: Forschungsfokus;Mittelgrosse Arten;Juglans nigra (Schwarznuss);85,0;85,0
-Szenario 1: Forschungsfokus;Pflaster;Natursteinpflaster (6-10 mm Fugen);50,0;0,0
-Szenario 1: Forschungsfokus;Pflaster;Natursteinpflaster (6-10 mm Fugen);50,0;50,0
-Szenario 1: Forschungsfokus;Pflaster;Natursteinpflaster (6-10 mm Fugen);50,0;100,0
+Szenario 1: Forschungsfokus;Pflaster;Natursteinpflaster (sickerfähig, 6-10 mm Fugen);45,0;0,0
+Szenario 1: Forschungsfokus;Pflaster;Natursteinpflaster (sickerfähig, 6-10 mm Fugen);45,0;45,0
+Szenario 1: Forschungsfokus;Pflaster;Natursteinpflaster (sickerfähig, 6-10 mm Fugen);45,0;90,0
 Szenario 1: Forschungsfokus;Grosskronige Arten;Quercus petraea (Traubeneiche);100,0;0,0
 Szenario 1: Forschungsfokus;Grosskronige Arten;Quercus petraea (Traubeneiche);100,0;100,0
 Szenario 1: Forschungsfokus;Leitung;Regenwasser;80,0;0,0
 Szenario 1: Forschungsfokus;Leitung;Regenwasser;80,0;80,0
+Szenario 1: Forschungsfokus;Asphalt;Selbstheilender Asphalt;42,5;0,0
+Szenario 1: Forschungsfokus;Asphalt;Selbstheilender Asphalt;42,5;42,5
+Szenario 1: Forschungsfokus;Asphalt;Selbstheilender Asphalt;42,5;85,0
 Szenario 1: Forschungsfokus;Kleine Arten;Ulmus ‘New Horizon’ (Hybridulme);100,0;0,0
 Szenario 1: Forschungsfokus;Kleine Arten;Ulmus ‘New Horizon’ (Hybridulme);100,0;100,0
 Szenario 1: Forschungsfokus;Leitung;Wasser;80,0;0,0
@@ -67,19 +64,22 @@ Szenario 2: Radikale Vermeidung;Leitung;Abwasser;80,0;80,0
 Szenario 2: Radikale Vermeidung;Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);35,0;0,0
 Szenario 2: Radikale Vermeidung;Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);35,0;35,0
 Szenario 2: Radikale Vermeidung;Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);35,0;70,0
-Szenario 2: Radikale Vermeidung;Sickerbeläge;Chaussierung;17,5;0,0
-Szenario 2: Radikale Vermeidung;Sickerbeläge;Chaussierung;17,5;17,5
-Szenario 2: Radikale Vermeidung;Sickerbeläge;Chaussierung;17,5;35,0
-Szenario 2: Radikale Vermeidung;Sickerbeläge;Chaussierung;17,5;52,5
-Szenario 2: Radikale Vermeidung;Sickerbeläge;Chaussierung;17,5;70,0
-Szenario 2: Radikale Vermeidung;Sickerbeläge;Chaussierung;17,5;87,5
+Szenario 2: Radikale Vermeidung;Sickerbeläge;Chaussierung;12,5;0,0
+Szenario 2: Radikale Vermeidung;Sickerbeläge;Chaussierung;12,5;12,5
+Szenario 2: Radikale Vermeidung;Sickerbeläge;Chaussierung;12,5;25,0
+Szenario 2: Radikale Vermeidung;Sickerbeläge;Chaussierung;12,5;37,5
+Szenario 2: Radikale Vermeidung;Sickerbeläge;Chaussierung;12,5;50,0
+Szenario 2: Radikale Vermeidung;Sickerbeläge;Chaussierung;12,5;62,5
+Szenario 2: Radikale Vermeidung;Sickerbeläge;Chaussierung;12,5;75,0
+Szenario 2: Radikale Vermeidung;Sickerbeläge;Chaussierung;12,5;87,5
+Szenario 2: Radikale Vermeidung;Sickerbeläge;Chaussierung;12,5;100,0
 Szenario 2: Radikale Vermeidung;Leitung;Elektro (Rohrblock);80,0;0,0
 Szenario 2: Radikale Vermeidung;Leitung;Elektro (Rohrblock);80,0;80,0
 Szenario 2: Radikale Vermeidung;Leitung;Fernwärme;60,0;0,0
 Szenario 2: Radikale Vermeidung;Leitung;Fernwärme;60,0;60,0
-Szenario 2: Radikale Vermeidung;Pflaster;Natursteinpflaster (6-10 mm Fugen);50,0;0,0
-Szenario 2: Radikale Vermeidung;Pflaster;Natursteinpflaster (6-10 mm Fugen);50,0;50,0
-Szenario 2: Radikale Vermeidung;Pflaster;Natursteinpflaster (6-10 mm Fugen);50,0;100,0
+Szenario 2: Radikale Vermeidung;Pflaster;Natursteinpflaster (sickerfähig, 6-10 mm Fugen);45,0;0,0
+Szenario 2: Radikale Vermeidung;Pflaster;Natursteinpflaster (sickerfähig, 6-10 mm Fugen);45,0;45,0
+Szenario 2: Radikale Vermeidung;Pflaster;Natursteinpflaster (sickerfähig, 6-10 mm Fugen);45,0;90,0
 Szenario 2: Radikale Vermeidung;Grosskronige Arten;Quercus petraea (Traubeneiche);100,0;0,0
 Szenario 2: Radikale Vermeidung;Grosskronige Arten;Quercus petraea (Traubeneiche);100,0;100,0
 Szenario 2: Radikale Vermeidung;Grosskronige Arten;Quercus robur (Stieleiche);100,0;0,0
@@ -103,9 +103,9 @@ Szenario 3: Radikaler Lebenszyklus;Mittelgrosse Arten;Juglans nigra (Schwarznuss
 Szenario 3: Radikaler Lebenszyklus;Mittelgrosse Arten;Juglans nigra (Schwarznuss);85,0;85,0
 Szenario 3: Radikaler Lebenszyklus;Kleine Arten;Malus tschonoskii (Woll-Apfel);80,0;0,0
 Szenario 3: Radikaler Lebenszyklus;Kleine Arten;Malus tschonoskii (Woll-Apfel);80,0;80,0
-Szenario 3: Radikaler Lebenszyklus;Pflaster;Natursteinpflaster (6-10 mm Fugen);50,0;0,0
-Szenario 3: Radikaler Lebenszyklus;Pflaster;Natursteinpflaster (6-10 mm Fugen);50,0;50,0
-Szenario 3: Radikaler Lebenszyklus;Pflaster;Natursteinpflaster (6-10 mm Fugen);50,0;100,0
+Szenario 3: Radikaler Lebenszyklus;Pflaster;Natursteinpflaster (sickerfähig, 6-10 mm Fugen);45,0;0,0
+Szenario 3: Radikaler Lebenszyklus;Pflaster;Natursteinpflaster (sickerfähig, 6-10 mm Fugen);45,0;45,0
+Szenario 3: Radikaler Lebenszyklus;Pflaster;Natursteinpflaster (sickerfähig, 6-10 mm Fugen);45,0;90,0
 Szenario 3: Radikaler Lebenszyklus;Leitung;Regenwasser;80,0;0,0
 Szenario 3: Radikaler Lebenszyklus;Leitung;Regenwasser;80,0;80,0
 Szenario 3: Radikaler Lebenszyklus;Asphalt;Selbstheilender Asphalt;42,5;0,0
