@@ -1,101 +1,101 @@
 szenario;baumkategorie;baumart;MCA_gesamtscore
-Szenario 0: Baseline (IST);Kleine Arten;Ulmus ‘New Horizon’ (Hybridulme);0,6427225403906439
-Szenario 0: Baseline (IST);Grosskronige Arten;Quercus petraea (Traubeneiche);0,6176363636363637
-Szenario 0: Baseline (IST);Grosskronige Arten;Tilia × europaea ‘Pallida’ (Kaiser-Linde, Holländische Linde);0,5935423197492163
-Szenario 0: Baseline (IST);Grosskronige Arten;Quercus robur (Stieleiche);0,5820000000000001
-Szenario 0: Baseline (IST);Mittelgrosse Arten;Zelkova serrata (Japanische Zelkove);0,5554482758620690
-Szenario 0: Baseline (IST);Mittelgrosse Arten;Ostrya carpinifolia (Hopfenbuche);0,5494678683385580
-Szenario 0: Baseline (IST);Mittelgrosse Arten;Juglans nigra (Schwarznuss);0,5105211598746081
-Szenario 0: Baseline (IST);Grosskronige Arten;Tilia tomentosa (Silber-Linde);0,5060000000000000
-Szenario 0: Baseline (IST);Mittelgrosse Arten;Corylus colurna (Baumhasel);0,4994678683385581
-Szenario 0: Baseline (IST);Kleine Arten;Acer campestre ‘Elsrijk’ (Feldahorn);0,4901582770677598
-Szenario 0: Baseline (IST);Mittelgrosse Arten;Parrotia persica (Eisenholzbaum);0,4570289968652038
-Szenario 0: Baseline (IST);Mittelgrosse Arten;Gleditsia triacanthos ‘Skyline’ (dornenlos);0,4567210031347962
-Szenario 0: Baseline (IST);Mittelgrosse Arten;Tilia cordata (Winterlinde);0,4563949843260188
-Szenario 0: Baseline (IST);Mittelgrosse Arten;Celtis australis (Südlicher Zürgelbaum);0,4410846394984326
-Szenario 0: Baseline (IST);Kleine Arten;Cornus mas (Kornelkirsche);0,4343592958765373
-Szenario 0: Baseline (IST);Mittelgrosse Arten;Aesculus flava (Gelbe Rosskastanie);0,4294678683385580
-Szenario 0: Baseline (IST);Kleine Arten;Sorbus aria ‘Magnifica’ (Mehlbeere);0,4289043585724621
-Szenario 0: Baseline (IST);Kleine Arten;Prunus padus ‘Schloss Tiefurt’ (Traubenkirsche);0,4138698758138413
-Szenario 0: Baseline (IST);Kleine Arten;Sorbus latifolia ‘Henk Vink’ (Breitblättrige Mehlbeere);0,4127037316132144
-Szenario 0: Baseline (IST);Kleine Arten;Malus tschonoskii (Woll-Apfel);0,3735944055944056
-Szenario 0: Baseline (IST);Grosskronige Arten;Liriodendron tulipifera (Tulpenbaum);0,3644514106583072
-Szenario 0: Baseline (IST);Mittelgrosse Arten;Koelreuteria paniculata (Blasenbaum);0,3409839341692790
-Szenario 0: Baseline (IST);Kleine Arten;Pyrus calleryana ‘Chanticleer’ (Chinesische Zierbirne);0,3352683867856282
-Szenario 0: Baseline (IST);Mittelgrosse Arten;Liquidambar styraciflua ‘Worplesdon’ (Amberbaum);0,3181834975369459
-Szenario 0: Baseline (IST);Kleine Arten;Amelanchier lamarckii (Felsenbirne);0,2616320231492645
-Szenario 1: Forschungsfokus;Kleine Arten;Ulmus ‘New Horizon’ (Hybridulme);0,6317743850976609
-Szenario 1: Forschungsfokus;Grosskronige Arten;Quercus petraea (Traubeneiche);0,5669090909090909
-Szenario 1: Forschungsfokus;Mittelgrosse Arten;Juglans nigra (Schwarznuss);0,5654427899686520
-Szenario 1: Forschungsfokus;Grosskronige Arten;Quercus robur (Stieleiche);0,5580000000000001
-Szenario 1: Forschungsfokus;Mittelgrosse Arten;Zelkova serrata (Japanische Zelkove);0,5138620689655172
-Szenario 1: Forschungsfokus;Kleine Arten;Cornus mas (Kornelkirsche);0,4985898239691343
-Szenario 1: Forschungsfokus;Mittelgrosse Arten;Ostrya carpinifolia (Hopfenbuche);0,4851794670846395
-Szenario 1: Forschungsfokus;Mittelgrosse Arten;Parrotia persica (Eisenholzbaum);0,4620697492163010
-Szenario 1: Forschungsfokus;Grosskronige Arten;Tilia × europaea ‘Pallida’ (Kaiser-Linde, Holländische Linde);0,4483855799373041
-Szenario 1: Forschungsfokus;Kleine Arten;Prunus padus ‘Schloss Tiefurt’ (Traubenkirsche);0,3945612189534604
-Szenario 1: Forschungsfokus;Kleine Arten;Acer campestre ‘Elsrijk’ (Feldahorn);0,3836333192669399
-Szenario 1: Forschungsfokus;Mittelgrosse Arten;Aesculus flava (Gelbe Rosskastanie);0,3801794670846395
-Szenario 1: Forschungsfokus;Kleine Arten;Sorbus latifolia ‘Henk Vink’ (Breitblättrige Mehlbeere);0,3792696829033036
-Szenario 1: Forschungsfokus;Mittelgrosse Arten;Corylus colurna (Baumhasel);0,3601794670846395
-Szenario 1: Forschungsfokus;Kleine Arten;Sorbus aria ‘Magnifica’ (Mehlbeere);0,3533198396431155
-Szenario 1: Forschungsfokus;Kleine Arten;Malus tschonoskii (Woll-Apfel);0,3333986013986014
-Szenario 1: Forschungsfokus;Grosskronige Arten;Liriodendron tulipifera (Tulpenbaum);0,3311128526645768
-Szenario 1: Forschungsfokus;Grosskronige Arten;Tilia tomentosa (Silber-Linde);0,3290000000000000
-Szenario 1: Forschungsfokus;Mittelgrosse Arten;Celtis australis (Südlicher Zürgelbaum);0,3277711598746081
-Szenario 1: Forschungsfokus;Mittelgrosse Arten;Gleditsia triacanthos ‘Skyline’ (dornenlos);0,3166802507836990
-Szenario 1: Forschungsfokus;Mittelgrosse Arten;Tilia cordata (Winterlinde);0,3165987460815047
-Szenario 1: Forschungsfokus;Kleine Arten;Pyrus calleryana ‘Chanticleer’ (Chinesische Zierbirne);0,3163170966964071
-Szenario 1: Forschungsfokus;Mittelgrosse Arten;Liquidambar styraciflua ‘Worplesdon’ (Amberbaum);0,2848583743842365
-Szenario 1: Forschungsfokus;Mittelgrosse Arten;Koelreuteria paniculata (Blasenbaum);0,2188397335423198
-Szenario 1: Forschungsfokus;Kleine Arten;Amelanchier lamarckii (Felsenbirne);0,1404080057873161
-Szenario 2: Radikale Vermeidung;Kleine Arten;Ulmus ‘New Horizon’ (Hybridulme);0,5178403175488305
-Szenario 2: Radikale Vermeidung;Grosskronige Arten;Quercus petraea (Traubeneiche);0,5147045454545455
-Szenario 2: Radikale Vermeidung;Grosskronige Arten;Quercus robur (Stieleiche);0,5102500000000000
-Szenario 2: Radikale Vermeidung;Mittelgrosse Arten;Zelkova serrata (Japanische Zelkove);0,5069310344827587
-Szenario 2: Radikale Vermeidung;Mittelgrosse Arten;Ostrya carpinifolia (Hopfenbuche);0,5061834835423198
-Szenario 2: Radikale Vermeidung;Mittelgrosse Arten;Juglans nigra (Schwarznuss);0,5013151449843261
-Szenario 2: Radikale Vermeidung;Mittelgrosse Arten;Parrotia persica (Eisenholzbaum);0,4946286246081505
-Szenario 2: Radikale Vermeidung;Kleine Arten;Cornus mas (Kornelkirsche);0,4917949119845672
-Szenario 2: Radikale Vermeidung;Grosskronige Arten;Tilia × europaea ‘Pallida’ (Kaiser-Linde, Holländische Linde);0,2929427899686520
-Szenario 2: Radikale Vermeidung;Grosskronige Arten;Tilia tomentosa (Silber-Linde);0,2820000000000000
-Szenario 2: Radikale Vermeidung;Mittelgrosse Arten;Corylus colurna (Baumhasel);0,2811834835423198
-Szenario 2: Radikale Vermeidung;Kleine Arten;Acer campestre ‘Elsrijk’ (Feldahorn);0,2800197846334700
-Szenario 2: Radikale Vermeidung;Mittelgrosse Arten;Gleditsia triacanthos ‘Skyline’ (dornenlos);0,2758401253918495
-Szenario 2: Radikale Vermeidung;Mittelgrosse Arten;Tilia cordata (Winterlinde);0,2757993730407524
-Szenario 2: Radikale Vermeidung;Mittelgrosse Arten;Celtis australis (Südlicher Zürgelbaum);0,2738855799373041
-Szenario 2: Radikale Vermeidung;Mittelgrosse Arten;Aesculus flava (Gelbe Rosskastanie);0,2724334835423198
-Szenario 2: Radikale Vermeidung;Kleine Arten;Sorbus aria ‘Magnifica’ (Mehlbeere);0,2723630448215578
-Szenario 2: Radikale Vermeidung;Kleine Arten;Prunus padus ‘Schloss Tiefurt’ (Traubenkirsche);0,2704837344767302
-Szenario 2: Radikale Vermeidung;Kleine Arten;Sorbus latifolia ‘Henk Vink’ (Breitblättrige Mehlbeere);0,2703379664516518
-Szenario 2: Radikale Vermeidung;Grosskronige Arten;Liriodendron tulipifera (Tulpenbaum);0,2643064263322884
-Szenario 2: Radikale Vermeidung;Kleine Arten;Pyrus calleryana ‘Chanticleer’ (Chinesische Zierbirne);0,2606585483482035
-Szenario 2: Radikale Vermeidung;Mittelgrosse Arten;Liquidambar styraciflua ‘Worplesdon’ (Amberbaum);0,2585229371921182
-Szenario 2: Radikale Vermeidung;Kleine Arten;Malus tschonoskii (Woll-Apfel);0,0466993006993007
-Szenario 2: Radikale Vermeidung;Mittelgrosse Arten;Koelreuteria paniculata (Blasenbaum);0,0426229917711599
-Szenario 2: Radikale Vermeidung;Kleine Arten;Amelanchier lamarckii (Felsenbirne);0,0327040028936581
-Szenario 3: Radikaler Lebenszyklus;Kleine Arten;Ulmus ‘New Horizon’ (Hybridulme);0,7598993850976610
-Szenario 3: Radikaler Lebenszyklus;Kleine Arten;Malus tschonoskii (Woll-Apfel);0,6533986013986014
-Szenario 3: Radikaler Lebenszyklus;Mittelgrosse Arten;Juglans nigra (Schwarznuss);0,6491927899686520
-Szenario 3: Radikaler Lebenszyklus;Grosskronige Arten;Quercus petraea (Traubeneiche);0,6169090909090910
-Szenario 3: Radikaler Lebenszyklus;Grosskronige Arten;Quercus robur (Stieleiche);0,6080000000000000
-Szenario 3: Radikaler Lebenszyklus;Grosskronige Arten;Tilia × europaea ‘Pallida’ (Kaiser-Linde, Holländische Linde);0,5983855799373041
-Szenario 3: Radikaler Lebenszyklus;Kleine Arten;Prunus padus ‘Schloss Tiefurt’ (Traubenkirsche);0,5326862189534604
-Szenario 3: Radikaler Lebenszyklus;Kleine Arten;Cornus mas (Kornelkirsche);0,5185898239691343
-Szenario 3: Radikaler Lebenszyklus;Mittelgrosse Arten;Zelkova serrata (Japanische Zelkove);0,5138620689655172
-Szenario 3: Radikaler Lebenszyklus;Kleine Arten;Sorbus latifolia ‘Henk Vink’ (Breitblättrige Mehlbeere);0,4973946829033036
-Szenario 3: Radikaler Lebenszyklus;Mittelgrosse Arten;Aesculus flava (Gelbe Rosskastanie);0,4939294670846395
-Szenario 3: Radikaler Lebenszyklus;Kleine Arten;Acer campestre ‘Elsrijk’ (Feldahorn);0,4817583192669400
-Szenario 3: Radikaler Lebenszyklus;Mittelgrosse Arten;Ostrya carpinifolia (Hopfenbuche);0,4489294670846395
-Szenario 3: Radikaler Lebenszyklus;Kleine Arten;Sorbus aria ‘Magnifica’ (Mehlbeere);0,4314448396431155
-Szenario 3: Radikaler Lebenszyklus;Mittelgrosse Arten;Parrotia persica (Eisenholzbaum);0,4258197492163009
-Szenario 3: Radikaler Lebenszyklus;Mittelgrosse Arten;Corylus colurna (Baumhasel);0,4239294670846395
-Szenario 3: Radikaler Lebenszyklus;Grosskronige Arten;Liriodendron tulipifera (Tulpenbaum);0,4011128526645768
-Szenario 3: Radikaler Lebenszyklus;Mittelgrosse Arten;Koelreuteria paniculata (Blasenbaum);0,3969647335423198
-Szenario 3: Radikaler Lebenszyklus;Kleine Arten;Pyrus calleryana ‘Chanticleer’ (Chinesische Zierbirne);0,3763170966964071
-Szenario 3: Radikaler Lebenszyklus;Mittelgrosse Arten;Celtis australis (Südlicher Zürgelbaum);0,3677711598746081
-Szenario 3: Radikaler Lebenszyklus;Grosskronige Arten;Tilia tomentosa (Silber-Linde);0,3490000000000000
-Szenario 3: Radikaler Lebenszyklus;Mittelgrosse Arten;Gleditsia triacanthos ‘Skyline’ (dornenlos);0,3366802507836991
-Szenario 3: Radikaler Lebenszyklus;Mittelgrosse Arten;Tilia cordata (Winterlinde);0,3365987460815047
-Szenario 3: Radikaler Lebenszyklus;Mittelgrosse Arten;Liquidambar styraciflua ‘Worplesdon’ (Amberbaum);0,3086083743842365
-Szenario 3: Radikaler Lebenszyklus;Kleine Arten;Amelanchier lamarckii (Felsenbirne);0,2404080057873161
+Szenario 0: Baseline (IST);Kleine Arten;Ulmus ‘New Horizon’ (Hybridulme);0,719612822522305
+Szenario 0: Baseline (IST);Grosskronige Arten;Quercus petraea (Traubeneiche);0,645454545454546
+Szenario 0: Baseline (IST);Mittelgrosse Arten;Ostrya carpinifolia (Hopfenbuche);0,644706112852665
+Szenario 0: Baseline (IST);Mittelgrosse Arten;Zelkova serrata (Japanische Zelkove);0,641091954022989
+Szenario 0: Baseline (IST);Grosskronige Arten;Tilia × europaea ‘Pallida’ (Kaiser-Linde, Holländische Linde);0,630773249738767
+Szenario 0: Baseline (IST);Grosskronige Arten;Quercus robur (Stieleiche);0,600000000000000
+Szenario 0: Baseline (IST);Mittelgrosse Arten;Corylus colurna (Baumhasel);0,594706112852665
+Szenario 0: Baseline (IST);Kleine Arten;Acer campestre ‘Elsrijk’ (Feldahorn);0,568191714894301
+Szenario 0: Baseline (IST);Mittelgrosse Arten;Juglans nigra (Schwarznuss);0,565803291536050
+Szenario 0: Baseline (IST);Grosskronige Arten;Tilia tomentosa (Silber-Linde);0,553333333333333
+Szenario 0: Baseline (IST);Mittelgrosse Arten;Gleditsia triacanthos ‘Skyline’ (dornenlos);0,552001044932079
+Szenario 0: Baseline (IST);Mittelgrosse Arten;Tilia cordata (Winterlinde);0,543328108672936
+Szenario 0: Baseline (IST);Mittelgrosse Arten;Parrotia persica (Eisenholzbaum);0,531748955067921
+Szenario 0: Baseline (IST);Mittelgrosse Arten;Celtis australis (Südlicher Zürgelbaum);0,526546499477534
+Szenario 0: Baseline (IST);Kleine Arten;Sorbus aria ‘Magnifica’ (Mehlbeere);0,496885549795033
+Szenario 0: Baseline (IST);Mittelgrosse Arten;Aesculus flava (Gelbe Rosskastanie);0,494706112852665
+Szenario 0: Baseline (IST);Kleine Arten;Cornus mas (Kornelkirsche);0,482072984486778
+Szenario 0: Baseline (IST);Kleine Arten;Sorbus latifolia ‘Henk Vink’ (Breitblättrige Mehlbeere);0,470009896712483
+Szenario 0: Baseline (IST);Kleine Arten;Prunus padus ‘Schloss Tiefurt’ (Traubenkirsche);0,462057963588136
+Szenario 0: Baseline (IST);Kleine Arten;Malus tschonoskii (Woll-Apfel);0,410442890442890
+Szenario 0: Baseline (IST);Mittelgrosse Arten;Koelreuteria paniculata (Blasenbaum);0,406103056426332
+Szenario 0: Baseline (IST);Kleine Arten;Pyrus calleryana ‘Chanticleer’ (Chinesische Zierbirne);0,391769954183747
+Szenario 0: Baseline (IST);Mittelgrosse Arten;Liquidambar styraciflua ‘Worplesdon’ (Amberbaum);0,382534893267652
+Szenario 0: Baseline (IST);Grosskronige Arten;Liriodendron tulipifera (Tulpenbaum);0,370470219435737
+Szenario 0: Baseline (IST);Kleine Arten;Amelanchier lamarckii (Felsenbirne);0,319648742062535
+Szenario 1: Forschungsfokus;Kleine Arten;Ulmus ‘New Horizon’ (Hybridulme);0,806766186399807
+Szenario 1: Forschungsfokus;Mittelgrosse Arten;Juglans nigra (Schwarznuss);0,804263322884013
+Szenario 1: Forschungsfokus;Mittelgrosse Arten;Zelkova serrata (Japanische Zelkove);0,760272988505747
+Szenario 1: Forschungsfokus;Mittelgrosse Arten;Ostrya carpinifolia (Hopfenbuche);0,733989028213166
+Szenario 1: Forschungsfokus;Mittelgrosse Arten;Parrotia persica (Eisenholzbaum);0,705749738766980
+Szenario 1: Forschungsfokus;Kleine Arten;Cornus mas (Kornelkirsche);0,666287476890925
+Szenario 1: Forschungsfokus;Mittelgrosse Arten;Aesculus flava (Gelbe Rosskastanie);0,621489028213166
+Szenario 1: Forschungsfokus;Mittelgrosse Arten;Corylus colurna (Baumhasel);0,608989028213166
+Szenario 1: Forschungsfokus;Mittelgrosse Arten;Celtis australis (Südlicher Zürgelbaum);0,574136624869383
+Szenario 1: Forschungsfokus;Grosskronige Arten;Quercus petraea (Traubeneiche);0,573863636363636
+Szenario 1: Forschungsfokus;Mittelgrosse Arten;Gleditsia triacanthos ‘Skyline’ (dornenlos);0,565500261233020
+Szenario 1: Forschungsfokus;Mittelgrosse Arten;Tilia cordata (Winterlinde);0,563332027168234
+Szenario 1: Forschungsfokus;Grosskronige Arten;Quercus robur (Stieleiche);0,562500000000000
+Szenario 1: Forschungsfokus;Kleine Arten;Prunus padus ‘Schloss Tiefurt’ (Traubenkirsche);0,562377471666265
+Szenario 1: Forschungsfokus;Kleine Arten;Acer campestre ‘Elsrijk’ (Feldahorn);0,558910909492806
+Szenario 1: Forschungsfokus;Kleine Arten;Sorbus latifolia ‘Henk Vink’ (Breitblättrige Mehlbeere);0,549365454947351
+Szenario 1: Forschungsfokus;Kleine Arten;Sorbus aria ‘Magnifica’ (Mehlbeere);0,526084368217989
+Szenario 1: Forschungsfokus;Mittelgrosse Arten;Liquidambar styraciflua ‘Worplesdon’ (Amberbaum);0,525946223316913
+Szenario 1: Forschungsfokus;Kleine Arten;Malus tschonoskii (Woll-Apfel);0,498379953379953
+Szenario 1: Forschungsfokus;Kleine Arten;Pyrus calleryana ‘Chanticleer’ (Chinesische Zierbirne);0,486211719315168
+Szenario 1: Forschungsfokus;Mittelgrosse Arten;Koelreuteria paniculata (Blasenbaum);0,460119514106583
+Szenario 1: Forschungsfokus;Grosskronige Arten;Tilia × europaea ‘Pallida’ (Kaiser-Linde, Holländische Linde);0,457693312434692
+Szenario 1: Forschungsfokus;Grosskronige Arten;Tilia tomentosa (Silber-Linde);0,340833333333333
+Szenario 1: Forschungsfokus;Grosskronige Arten;Liriodendron tulipifera (Tulpenbaum);0,332617554858934
+Szenario 1: Forschungsfokus;Kleine Arten;Amelanchier lamarckii (Felsenbirne);0,310681416284865
+Szenario 2: Radikale Vermeidung;Mittelgrosse Arten;Ostrya carpinifolia (Hopfenbuche);0,955588264106583
+Szenario 2: Radikale Vermeidung;Mittelgrosse Arten;Zelkova serrata (Japanische Zelkove);0,955136494252874
+Szenario 2: Radikale Vermeidung;Mittelgrosse Arten;Juglans nigra (Schwarznuss);0,945725411442006
+Szenario 2: Radikale Vermeidung;Mittelgrosse Arten;Parrotia persica (Eisenholzbaum);0,941468619383490
+Szenario 2: Radikale Vermeidung;Kleine Arten;Ulmus ‘New Horizon’ (Hybridulme);0,830336218199904
+Szenario 2: Radikale Vermeidung;Kleine Arten;Cornus mas (Kornelkirsche);0,800643738445463
+Szenario 2: Radikale Vermeidung;Mittelgrosse Arten;Corylus colurna (Baumhasel);0,730588264106583
+Szenario 2: Radikale Vermeidung;Mittelgrosse Arten;Gleditsia triacanthos ‘Skyline’ (dornenlos);0,725250130616510
+Szenario 2: Radikale Vermeidung;Mittelgrosse Arten;Tilia cordata (Winterlinde);0,724166013584117
+Szenario 2: Radikale Vermeidung;Mittelgrosse Arten;Celtis australis (Südlicher Zürgelbaum);0,722068312434692
+Szenario 2: Radikale Vermeidung;Mittelgrosse Arten;Aesculus flava (Gelbe Rosskastanie);0,718088264106583
+Szenario 2: Radikale Vermeidung;Mittelgrosse Arten;Liquidambar styraciflua ‘Worplesdon’ (Amberbaum);0,704066861658457
+Szenario 2: Radikale Vermeidung;Kleine Arten;Acer campestre ‘Elsrijk’ (Feldahorn);0,592658579746403
+Szenario 2: Radikale Vermeidung;Kleine Arten;Sorbus aria ‘Magnifica’ (Mehlbeere);0,583745309108994
+Szenario 2: Radikale Vermeidung;Kleine Arten;Sorbus latifolia ‘Henk Vink’ (Breitblättrige Mehlbeere);0,580385852473676
+Szenario 2: Radikale Vermeidung;Kleine Arten;Prunus padus ‘Schloss Tiefurt’ (Traubenkirsche);0,579391860833132
+Szenario 2: Radikale Vermeidung;Kleine Arten;Pyrus calleryana ‘Chanticleer’ (Chinesische Zierbirne);0,570605859657584
+Szenario 2: Radikale Vermeidung;Grosskronige Arten;Quercus petraea (Traubeneiche);0,518181818181818
+Szenario 2: Radikale Vermeidung;Grosskronige Arten;Quercus robur (Stieleiche);0,512500000000000
+Szenario 2: Radikale Vermeidung;Mittelgrosse Arten;Koelreuteria paniculata (Blasenbaum);0,488262882053292
+Szenario 2: Radikale Vermeidung;Kleine Arten;Malus tschonoskii (Woll-Apfel);0,354189976689977
+Szenario 2: Radikale Vermeidung;Kleine Arten;Amelanchier lamarckii (Felsenbirne);0,342840708142432
+Szenario 2: Radikale Vermeidung;Grosskronige Arten;Tilia × europaea ‘Pallida’ (Kaiser-Linde, Holländische Linde);0,297596656217346
+Szenario 2: Radikale Vermeidung;Grosskronige Arten;Tilia tomentosa (Silber-Linde);0,287916666666667
+Szenario 2: Radikale Vermeidung;Grosskronige Arten;Liriodendron tulipifera (Tulpenbaum);0,265058777429467
+Szenario 3: Radikaler Lebenszyklus;Kleine Arten;Ulmus ‘New Horizon’ (Hybridulme);0,796429647938269
+Szenario 3: Radikaler Lebenszyklus;Mittelgrosse Arten;Juglans nigra (Schwarznuss);0,688013322884013
+Szenario 3: Radikaler Lebenszyklus;Kleine Arten;Malus tschonoskii (Woll-Apfel);0,679918414918415
+Szenario 3: Radikaler Lebenszyklus;Grosskronige Arten;Quercus petraea (Traubeneiche);0,623863636363636
+Szenario 3: Radikaler Lebenszyklus;Grosskronige Arten;Quercus robur (Stieleiche);0,612500000000000
+Szenario 3: Radikaler Lebenszyklus;Grosskronige Arten;Tilia × europaea ‘Pallida’ (Kaiser-Linde, Holländische Linde);0,607693312434692
+Szenario 3: Radikaler Lebenszyklus;Kleine Arten;Prunus padus ‘Schloss Tiefurt’ (Traubenkirsche);0,562040933204726
+Szenario 3: Radikaler Lebenszyklus;Mittelgrosse Arten;Zelkova serrata (Japanische Zelkove);0,560272988505747
+Szenario 3: Radikaler Lebenszyklus;Kleine Arten;Cornus mas (Kornelkirsche);0,547825938429387
+Szenario 3: Radikaler Lebenszyklus;Mittelgrosse Arten;Aesculus flava (Gelbe Rosskastanie);0,535239028213166
+Szenario 3: Radikaler Lebenszyklus;Kleine Arten;Sorbus latifolia ‘Henk Vink’ (Breitblättrige Mehlbeere);0,529028916485813
+Szenario 3: Radikaler Lebenszyklus;Kleine Arten;Acer campestre ‘Elsrijk’ (Feldahorn);0,518574371031268
+Szenario 3: Radikaler Lebenszyklus;Mittelgrosse Arten;Ostrya carpinifolia (Hopfenbuche);0,497739028213166
+Szenario 3: Radikaler Lebenszyklus;Mittelgrosse Arten;Corylus colurna (Baumhasel);0,472739028213166
+Szenario 3: Radikaler Lebenszyklus;Mittelgrosse Arten;Parrotia persica (Eisenholzbaum);0,469499738766980
+Szenario 3: Radikaler Lebenszyklus;Kleine Arten;Sorbus aria ‘Magnifica’ (Mehlbeere);0,465747829756450
+Szenario 3: Radikaler Lebenszyklus;Mittelgrosse Arten;Koelreuteria paniculata (Blasenbaum);0,438244514106583
+Szenario 3: Radikaler Lebenszyklus;Mittelgrosse Arten;Celtis australis (Südlicher Zürgelbaum);0,414136624869383
+Szenario 3: Radikaler Lebenszyklus;Kleine Arten;Pyrus calleryana ‘Chanticleer’ (Chinesische Zierbirne);0,407750180853629
+Szenario 3: Radikaler Lebenszyklus;Grosskronige Arten;Liriodendron tulipifera (Tulpenbaum);0,402617554858934
+Szenario 3: Radikaler Lebenszyklus;Mittelgrosse Arten;Gleditsia triacanthos ‘Skyline’ (dornenlos);0,385500261233020
+Szenario 3: Radikaler Lebenszyklus;Mittelgrosse Arten;Tilia cordata (Winterlinde);0,383332027168234
+Szenario 3: Radikaler Lebenszyklus;Grosskronige Arten;Tilia tomentosa (Silber-Linde);0,360833333333333
+Szenario 3: Radikaler Lebenszyklus;Mittelgrosse Arten;Liquidambar styraciflua ‘Worplesdon’ (Amberbaum);0,349696223316913
+Szenario 3: Radikaler Lebenszyklus;Kleine Arten;Amelanchier lamarckii (Felsenbirne);0,272219877823326

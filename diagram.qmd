@@ -1,0 +1,31 @@
+---
+title: "diagram"
+---
+```{r}
+
+```
+
+
+
+```{mermaid}
+%% Dieses Mermaid-Diagramm visualisiert die Position der Masterarbeit
+%% im Spannungsfeld zwischen konventioneller Praxis und visionärer Theorie.
+
+vennDiagram
+    %% Definition der beiden Hauptkreise
+    A[Konventionelle Projekt-Vorgaben (IST-Analyse)
+    - Projektpläne "Viererfeld"
+    - Experteninterviews (Stadt, ewb)
+    - SIA-Normen / Technische Zwänge]
+    B[Visionäres Ideal (SOLL-Kriterien)
+    - Ecological Engineering (Mitsch & Jørgensen)
+    - Vermeidungsprinzip (Schönborn & Junge)
+    - Kreislaufwirtschaft (Buehler et al.)]
+
+    %% Definition der Schnittmenge (Ihre Arbeit)
+    A and B[Masterarbeit:
+    Pragmatische Anwendung im Viererfeld
+    - MCA-Szenarien (S1-S3)
+    - Kriterienkatalog (Synthese aus IST & SOLL)
+    - Lösungs-Plots (Optimierung)]
+```
