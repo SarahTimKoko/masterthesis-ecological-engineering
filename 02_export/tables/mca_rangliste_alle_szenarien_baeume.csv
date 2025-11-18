@@ -21,7 +21,7 @@ Szenario 0: Baseline (IST);Kleine Arten;Sorbus latifolia ‘Henk Vink’ (Breitb
 Szenario 0: Baseline (IST);Kleine Arten;Prunus padus ‘Schloss Tiefurt’ (Traubenkirsche);0,3928271943573668
 Szenario 0: Baseline (IST);Mittelgrosse Arten;Koelreuteria paniculata (Blasenbaum);0,3505475008707767
 Szenario 0: Baseline (IST);Kleine Arten;Malus tschonoskii (Woll-Apfel);0,3412121212121212
-Szenario 0: Baseline (IST);Mittelgrosse Arten;Liquidambar styraciflua ‘Worplesdon’ (Amberbaum);0,3269793377120964
+Szenario 0: Baseline (IST);Mittelgrosse Arten;Liquidambar styraciflua ‘Worplesdon’ (Amberbaum);0,3305507662835249
 Szenario 0: Baseline (IST);Kleine Arten;Pyrus calleryana ‘Chanticleer’ (Chinesische Zierbirne);0,3225391849529781
 Szenario 0: Baseline (IST);Kleine Arten;Amelanchier lamarckii (Felsenbirne);0,2504179728317659
 Szenario 1: Forschungsfokus;Grosskronige Arten;Quercus petraea (Traubeneiche);0,8238636363636364
@@ -41,7 +41,7 @@ Szenario 1: Forschungsfokus;Mittelgrosse Arten;Celtis australis (Südlicher Zür
 Szenario 1: Forschungsfokus;Mittelgrosse Arten;Gleditsia triacanthos ‘Skyline’ (dornenlos);0,4266113723441309
 Szenario 1: Forschungsfokus;Mittelgrosse Arten;Tilia cordata (Winterlinde);0,4244431382793452
 Szenario 1: Forschungsfokus;Kleine Arten;Prunus padus ‘Schloss Tiefurt’ (Traubenkirsche);0,3893005485893417
-Szenario 1: Forschungsfokus;Mittelgrosse Arten;Liquidambar styraciflua ‘Worplesdon’ (Amberbaum);0,3870573344280241
+Szenario 1: Forschungsfokus;Mittelgrosse Arten;Liquidambar styraciflua ‘Worplesdon’ (Amberbaum);0,3879501915708812
 Szenario 1: Forschungsfokus;Kleine Arten;Acer campestre ‘Elsrijk’ (Feldahorn);0,3858339864158830
 Szenario 1: Forschungsfokus;Kleine Arten;Sorbus latifolia ‘Henk Vink’ (Breitblättrige Mehlbeere);0,3762885318704284
 Szenario 1: Forschungsfokus;Kleine Arten;Sorbus aria ‘Magnifica’ (Mehlbeere);0,3530074451410659
@@ -65,7 +65,7 @@ Szenario 2: Radikale Vermeidung;Mittelgrosse Arten;Gleditsia triacanthos ‘Skyl
 Szenario 2: Radikale Vermeidung;Mittelgrosse Arten;Tilia cordata (Winterlinde);0,4741660135841170
 Szenario 2: Radikale Vermeidung;Mittelgrosse Arten;Celtis australis (Südlicher Zürgelbaum);0,4720683124346917
 Szenario 2: Radikale Vermeidung;Mittelgrosse Arten;Aesculus flava (Gelbe Rosskastanie);0,4680882641065831
-Szenario 2: Radikale Vermeidung;Mittelgrosse Arten;Liquidambar styraciflua ‘Worplesdon’ (Amberbaum);0,4540668616584565
+Szenario 2: Radikale Vermeidung;Mittelgrosse Arten;Liquidambar styraciflua ‘Worplesdon’ (Amberbaum);0,4545132902298851
 Szenario 2: Radikale Vermeidung;Kleine Arten;Acer campestre ‘Elsrijk’ (Feldahorn);0,2811201182079415
 Szenario 2: Radikale Vermeidung;Kleine Arten;Sorbus aria ‘Magnifica’ (Mehlbeere);0,2722068475705329
 Szenario 2: Radikale Vermeidung;Kleine Arten;Sorbus latifolia ‘Henk Vink’ (Breitblättrige Mehlbeere);0,2688473909352142
@@ -97,5 +97,5 @@ Szenario 3: Radikaler Lebenszyklus;Mittelgrosse Arten;Celtis australis (Südlich
 Szenario 3: Radikaler Lebenszyklus;Kleine Arten;Pyrus calleryana ‘Chanticleer’ (Chinesische Zierbirne);0,3731347962382445
 Szenario 3: Radikaler Lebenszyklus;Mittelgrosse Arten;Gleditsia triacanthos ‘Skyline’ (dornenlos);0,3577224834552420
 Szenario 3: Radikaler Lebenszyklus;Mittelgrosse Arten;Tilia cordata (Winterlinde);0,3555542493904563
-Szenario 3: Radikaler Lebenszyklus;Mittelgrosse Arten;Liquidambar styraciflua ‘Worplesdon’ (Amberbaum);0,3219184455391352
+Szenario 3: Radikaler Lebenszyklus;Mittelgrosse Arten;Liquidambar styraciflua ‘Worplesdon’ (Amberbaum);0,3228113026819924
 Szenario 3: Radikaler Lebenszyklus;Kleine Arten;Amelanchier lamarckii (Felsenbirne);0,2376044932079415
