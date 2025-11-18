@@ -82,11 +82,11 @@ df_sieger_belaege_ld <- df_sieger_belaege_roh %>%
 df_sieger_baeume_ld <- df_sieger_baeume_roh %>%
   # Hole die Lebensdauer aus den Stammdaten
   left_join(
-    df_baeume_stammdaten %>% select(baumart, lebensdauer_mw), 
+    df_baeume_stammdaten %>% select(baumart, lebensdauer), 
     by = "baumart"
   ) %>%
   # Bringe ins einheitliche Format
-  select(szenario, kategorie = baumkategorie, komponente = baumart, lebensdauer = lebensdauer_mw)
+  select(szenario, kategorie = baumkategorie, komponente = baumart, lebensdauer = lebensdauer)
 
 
 ```

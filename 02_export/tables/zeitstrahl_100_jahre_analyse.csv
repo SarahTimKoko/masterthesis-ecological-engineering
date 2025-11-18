@@ -23,6 +23,8 @@ Szenario 0: Baseline (IST);Pflaster;Natursteinpflaster (sickerfähig, 6-10 mm Fu
 Szenario 0: Baseline (IST);Pflaster;Natursteinpflaster (sickerfähig, 6-10 mm Fugen);45,0;90,0
 Szenario 0: Baseline (IST);Grosskronige Arten;Quercus petraea (Traubeneiche);100,0;0,0
 Szenario 0: Baseline (IST);Grosskronige Arten;Quercus petraea (Traubeneiche);100,0;100,0
+Szenario 0: Baseline (IST);Grosskronige Arten;Quercus robur (Stieleiche);100,0;0,0
+Szenario 0: Baseline (IST);Grosskronige Arten;Quercus robur (Stieleiche);100,0;100,0
 Szenario 0: Baseline (IST);Leitung;Regenwasser;80,0;0,0
 Szenario 0: Baseline (IST);Leitung;Regenwasser;80,0;80,0
 Szenario 0: Baseline (IST);Asphalt;Selbstheilender Asphalt;42,5;0,0
@@ -30,8 +32,6 @@ Szenario 0: Baseline (IST);Asphalt;Selbstheilender Asphalt;42,5;42,5
 Szenario 0: Baseline (IST);Asphalt;Selbstheilender Asphalt;42,5;85,0
 Szenario 0: Baseline (IST);Grosskronige Arten;Tilia × europaea ‘Pallida’ (Kaiser-Linde, Holländische Linde);100,0;0,0
 Szenario 0: Baseline (IST);Grosskronige Arten;Tilia × europaea ‘Pallida’ (Kaiser-Linde, Holländische Linde);100,0;100,0
-Szenario 0: Baseline (IST);Kleine Arten;Ulmus ‘New Horizon’ (Hybridulme);100,0;0,0
-Szenario 0: Baseline (IST);Kleine Arten;Ulmus ‘New Horizon’ (Hybridulme);100,0;100,0
 Szenario 0: Baseline (IST);Leitung;Wasser;80,0;0,0
 Szenario 0: Baseline (IST);Leitung;Wasser;80,0;80,0
 Szenario 1: Forschungsfokus;Leitung;Abwasser;80,0;0,0
@@ -43,20 +43,20 @@ Szenario 1: Forschungsfokus;Leitung;Elektro (Rohrblock);80,0;0,0
 Szenario 1: Forschungsfokus;Leitung;Elektro (Rohrblock);80,0;80,0
 Szenario 1: Forschungsfokus;Leitung;Fernwärme;60,0;0,0
 Szenario 1: Forschungsfokus;Leitung;Fernwärme;60,0;60,0
-Szenario 1: Forschungsfokus;Mittelgrosse Arten;Juglans nigra (Schwarznuss);85,0;0,0
-Szenario 1: Forschungsfokus;Mittelgrosse Arten;Juglans nigra (Schwarznuss);85,0;85,0
 Szenario 1: Forschungsfokus;Pflaster;Natursteinpflaster (sickerfähig, 6-10 mm Fugen);45,0;0,0
 Szenario 1: Forschungsfokus;Pflaster;Natursteinpflaster (sickerfähig, 6-10 mm Fugen);45,0;45,0
 Szenario 1: Forschungsfokus;Pflaster;Natursteinpflaster (sickerfähig, 6-10 mm Fugen);45,0;90,0
 Szenario 1: Forschungsfokus;Grosskronige Arten;Quercus petraea (Traubeneiche);100,0;0,0
 Szenario 1: Forschungsfokus;Grosskronige Arten;Quercus petraea (Traubeneiche);100,0;100,0
+Szenario 1: Forschungsfokus;Grosskronige Arten;Quercus robur (Stieleiche);100,0;0,0
+Szenario 1: Forschungsfokus;Grosskronige Arten;Quercus robur (Stieleiche);100,0;100,0
 Szenario 1: Forschungsfokus;Leitung;Regenwasser;80,0;0,0
 Szenario 1: Forschungsfokus;Leitung;Regenwasser;80,0;80,0
 Szenario 1: Forschungsfokus;Asphalt;Selbstheilender Asphalt;42,5;0,0
 Szenario 1: Forschungsfokus;Asphalt;Selbstheilender Asphalt;42,5;42,5
 Szenario 1: Forschungsfokus;Asphalt;Selbstheilender Asphalt;42,5;85,0
-Szenario 1: Forschungsfokus;Kleine Arten;Ulmus ‘New Horizon’ (Hybridulme);100,0;0,0
-Szenario 1: Forschungsfokus;Kleine Arten;Ulmus ‘New Horizon’ (Hybridulme);100,0;100,0
+Szenario 1: Forschungsfokus;Grosskronige Arten;Tilia × europaea ‘Pallida’ (Kaiser-Linde, Holländische Linde);100,0;0,0
+Szenario 1: Forschungsfokus;Grosskronige Arten;Tilia × europaea ‘Pallida’ (Kaiser-Linde, Holländische Linde);100,0;100,0
 Szenario 1: Forschungsfokus;Leitung;Wasser;80,0;0,0
 Szenario 1: Forschungsfokus;Leitung;Wasser;80,0;80,0
 Szenario 2: Radikale Vermeidung;Leitung;Abwasser;80,0;0,0
@@ -86,8 +86,8 @@ Szenario 2: Radikale Vermeidung;Grosskronige Arten;Quercus robur (Stieleiche);10
 Szenario 2: Radikale Vermeidung;Grosskronige Arten;Quercus robur (Stieleiche);100,0;100,0
 Szenario 2: Radikale Vermeidung;Leitung;Regenwasser;80,0;0,0
 Szenario 2: Radikale Vermeidung;Leitung;Regenwasser;80,0;80,0
-Szenario 2: Radikale Vermeidung;Kleine Arten;Ulmus ‘New Horizon’ (Hybridulme);100,0;0,0
-Szenario 2: Radikale Vermeidung;Kleine Arten;Ulmus ‘New Horizon’ (Hybridulme);100,0;100,0
+Szenario 2: Radikale Vermeidung;Grosskronige Arten;Tilia × europaea ‘Pallida’ (Kaiser-Linde, Holländische Linde);100,0;0,0
+Szenario 2: Radikale Vermeidung;Grosskronige Arten;Tilia × europaea ‘Pallida’ (Kaiser-Linde, Holländische Linde);100,0;100,0
 Szenario 2: Radikale Vermeidung;Leitung;Wasser;80,0;0,0
 Szenario 2: Radikale Vermeidung;Leitung;Wasser;80,0;80,0
 Szenario 3: Radikaler Lebenszyklus;Leitung;Abwasser;80,0;0,0
@@ -99,13 +99,13 @@ Szenario 3: Radikaler Lebenszyklus;Leitung;Elektro (Rohrblock);80,0;0,0
 Szenario 3: Radikaler Lebenszyklus;Leitung;Elektro (Rohrblock);80,0;80,0
 Szenario 3: Radikaler Lebenszyklus;Leitung;Fernwärme;60,0;0,0
 Szenario 3: Radikaler Lebenszyklus;Leitung;Fernwärme;60,0;60,0
-Szenario 3: Radikaler Lebenszyklus;Mittelgrosse Arten;Juglans nigra (Schwarznuss);85,0;0,0
-Szenario 3: Radikaler Lebenszyklus;Mittelgrosse Arten;Juglans nigra (Schwarznuss);85,0;85,0
-Szenario 3: Radikaler Lebenszyklus;Kleine Arten;Malus tschonoskii (Woll-Apfel);80,0;0,0
-Szenario 3: Radikaler Lebenszyklus;Kleine Arten;Malus tschonoskii (Woll-Apfel);80,0;80,0
 Szenario 3: Radikaler Lebenszyklus;Pflaster;Natursteinpflaster (sickerfähig, 6-10 mm Fugen);45,0;0,0
 Szenario 3: Radikaler Lebenszyklus;Pflaster;Natursteinpflaster (sickerfähig, 6-10 mm Fugen);45,0;45,0
 Szenario 3: Radikaler Lebenszyklus;Pflaster;Natursteinpflaster (sickerfähig, 6-10 mm Fugen);45,0;90,0
+Szenario 3: Radikaler Lebenszyklus;Grosskronige Arten;Quercus petraea (Traubeneiche);100,0;0,0
+Szenario 3: Radikaler Lebenszyklus;Grosskronige Arten;Quercus petraea (Traubeneiche);100,0;100,0
+Szenario 3: Radikaler Lebenszyklus;Grosskronige Arten;Quercus robur (Stieleiche);100,0;0,0
+Szenario 3: Radikaler Lebenszyklus;Grosskronige Arten;Quercus robur (Stieleiche);100,0;100,0
 Szenario 3: Radikaler Lebenszyklus;Leitung;Regenwasser;80,0;0,0
 Szenario 3: Radikaler Lebenszyklus;Leitung;Regenwasser;80,0;80,0
 Szenario 3: Radikaler Lebenszyklus;Asphalt;Selbstheilender Asphalt;42,5;0,0

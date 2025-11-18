@@ -105,7 +105,7 @@ Ziel: Transformation der Tabelle df_baeume von Wide-to-Long und Verknüpfung mit
 # 3.1 Wide-to-Long: Transformation der Rohdaten
 df_baeume_long <- df_baeume %>%
   pivot_longer(
-    # Nimmt alle Spalten von lebensdauer_mw bis recyclingpotential
+    # Nimmt alle Spalten von lebensdauer bis recyclingpotential
     cols = c(lebensdauer:recyclingpotential),
     # ------------------------------------
     names_to = "bewertungskategorie",
