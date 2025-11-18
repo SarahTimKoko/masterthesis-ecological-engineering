@@ -1,11 +1,11 @@
-﻿belagskategorie;option;lebensdauer;versickerung;oberflaechentemperatur;befahrbarkeit;kosten_100a;unterhalt_100a;co2_100a;graueEnergie_100a;recyclingfaehigkeit;lokaleMaterialien;modulareErneuerbarkeit
-Asphalt;Recyclingasphalt;22.5;1;58.4;5;500;400;225;1225;2;0.6;0
-Asphalt;Sickerasphalt;12.5;0.35;55.5;3;920;650;480;3280;1;0.6;0
-Asphalt;Heller Asphalt;22.5;1;54;5;550;400;250;1650;1;0.4;0
-Asphalt;Selbstheilender Asphalt;42.5;1;58.4;5;415.5;200;232.5;1350;0;0.4;0
-Pflaster;Natursteinpflaster (sickerfähig, 6-10 mm Fugen);45;0.6;47.5;3;1050;500;165;780;2;0.8;2
-Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);35;1;57.5;4;390;500;135;450;1;0.6;2
-Pflaster;Ökopflastersteine (sickerfähig, 6-10 mm Fugen);30;0.35;46.5;3;500;700;180;600;1;0.6;2
-Sickerbeläge;Chaussierung;12.5;0.5;46.5;1;640;500;224;1000;2;0.8;2
-Sickerbeläge;Kiesrasen;15;0.2;49;3;700;500;210;910;1;0.8;1
-Sickerbeläge;Rasengittersteine;25;0.4;26;3;580;700;212;720;1;0.8;1
+﻿belagskategorie;option;lebensdauer;versickerung;oberflaechentemperatur;befahrbarkeit;kosten;kosten_100a;unterhalt_100a;co2_100a;graueEnergie_100a;recyclingfaehigkeit;lokaleMaterialien;modulareErneuerbarkeit
+Asphalt;Recyclingasphalt;22.5;1;58.4;5;100;500;400;225;1225;2;0.6;0
+Asphalt;Sickerasphalt;12.5;0.35;55.5;3;115;920;650;480;3280;1;0.6;0
+Asphalt;Heller Asphalt;22.5;1;54;5;110;550;400;250;1650;1;0.4;0
+Asphalt;Selbstheilender Asphalt;42.5;1;58.4;5;138.5;415.5;200;232.5;1350;0;0.4;0
+Pflaster;Natursteinpflaster (sickerfähig, 6-10 mm Fugen);45;0.6;47.5;3;350;1050;500;165;780;2;0.8;2
+Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);35;1;57.5;4;130;390;500;135;450;1;0.6;2
+Pflaster;Ökopflastersteine (sickerfähig, 6-10 mm Fugen);30;0.35;46.5;3;125;500;700;180;600;1;0.6;2
+Sickerbeläge;Chaussierung;12.5;0.5;46.5;1;80;640;500;224;1000;2;0.8;2
+Sickerbeläge;Kiesrasen;15;0.2;49;3;100;700;500;210;910;1;0.8;1
+Sickerbeläge;Rasengittersteine;25;0.4;26;3;145;580;700;212;720;1;0.8;1

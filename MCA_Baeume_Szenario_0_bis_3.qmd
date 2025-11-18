@@ -142,6 +142,79 @@ print(plot_rohwerte_baeume)
 ggsave("02_export/plots/check_01_rohwerte_verteilung_baeume.png", plot = plot_rohwerte_baeume, width = 10, height = 7)
 
 
+# -------------------------------------------------------
+# PLOT MIT 4 KRITERIEN (CO2, Kühlung, Regenwasser, Kosten)
+# -------------------------------------------------------
+
+# 1. Daten vorbereiten
+df_plot_tradeoff <- df_baeume_joined %>%
+ filter(bewertungskategorie %in% c("co2_bindung", "kuehlung", "regenwasser", "groesse_baumrigolen")) %>%
+  
+  # Saubere Labels für die Facetten (Titel der 4 Grafiken)
+  mutate(facet_label = case_when(
+    bewertungskategorie == "co2_bindung" ~ "Leistung: CO2-Bindung [kg/a]",
+    bewertungskategorie == "kuehlung" ~ "Leistung: Kühlung [°C]",
+    bewertungskategorie == "regenwasser" ~ "Leistung: Regenwasser [l/Tag]",
+    bewertungskategorie == "groesse_baumrigolen" ~ "Kosten: Grösse Baumrigolen [m³]"
+  )) %>%
+  
+  # Reihenfolge der Facetten erzwingen (Erst Leistung, dann Kosten ganz unten)
+  mutate(facet_label = fct_relevel(facet_label, 
+                                   "Leistung: CO2-Bindung [kg/a]",
+                                   "Leistung: Kühlung [°C]",
+                                   "Leistung: Regenwasser [l/Tag]",
+                                   "Kosten: Grösse Baumrigolen [m³]")) %>%
+
+  # Reihenfolge der Kategorien erzwingen (Gross -> Mittel -> Klein)
+  mutate(baumkategorie = fct_relevel(baumkategorie, 
+                                     "Grosskronige Arten", 
+                                     "Mittelgrosse Arten", 
+                                     "Kleine Arten")) %>%
+  
+  # Sortierung der X-Achse erzwingen
+  arrange(baumkategorie, baumart) %>%
+  mutate(baumart_sortiert = factor(baumart, levels = unique(baumart)))
+
+# 2. Plot erstellen
+plot_tradeoff_4fach <- ggplot(df_plot_tradeoff, 
+       aes(x = baumart_sortiert, 
+           y = wert, 
+           fill = baumkategorie)) +
+  
+  geom_col(width = 0.7) +
+  
+  # Faceting: 4 Grafiken UNTEREINANDER (ncol = 1)
+  facet_wrap(~facet_label, ncol = 1, scales = "free_y") +
+  
+  # Farben: Blautöne
+  scale_fill_manual(values = c(
+    "Grosskronige Arten" = "#084594",   # Dunkelblau
+    "Mittelgrosse Arten" = "#4292c6",   # Mittelblau
+    "Kleine Arten" = "#9ecae1"          # Hellblau
+  )) +
+  
+  labs(
+    title = "Zielkonflikt: Ökologische Leistung vs. Raumbedarf",
+    x = "", 
+    y = "Wert (Einheit siehe Titel)",
+    fill = "Baumkategorie"
+  ) +
+  theme_bw() + 
+  theme(
+    legend.position = "top", 
+    strip.text = element_text(face = "bold", size = 10),
+    axis.text.x = element_text(angle = 45, hjust = 1, size = 7), # Namen schräg
+    panel.grid.major.x = element_blank(),
+    plot.margin = unit(c(0.5, 0.5, 1, 1), "cm")
+  )
+
+
+# 3. Speichern (Extra hoch, damit 4 Grafiken Platz haben)
+print(plot_tradeoff_4fach)
+
+ggsave("02_export/plots/check_03_zielkonflikt_baeume_4fach.png", 
+       plot = plot_tradeoff_4fach, width = 10, height = 14, bg = "white")
+
 ```
 
 

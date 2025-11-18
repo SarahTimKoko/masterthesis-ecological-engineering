@@ -1,11 +1,11 @@
 ﻿baumkategorie;baumart;lebensdauer;klimaangepasst;geeignet_stadtbaum;kronenbreite;biodiversitaet;kuehlung;co2_bindung;regenwasser;groesse_baumrigolen;pflegeaufwand;recyclingpotential
-Grosskronige Arten;Quercus robur (Stieleiche);100;2;1;17.5;4.7;5;5;325;38;2;3
-Grosskronige Arten;Quercus petraea (Traubeneiche);100;2;2;17.5;4.4;5;5;325;38;2;3
-Grosskronige Arten;Tilia tomentosa (Silber-Linde);80;3;3;17.5;3.6;5;5;325;38;3;2
+Grosskronige Arten;Quercus robur (Stieleiche);100;2;1;17.5;4.7;5;50;325;38;2;3
+Grosskronige Arten;Quercus petraea (Traubeneiche);100;2;2;17.5;4.4;5;50;325;38;2;3
+Grosskronige Arten;Tilia tomentosa (Silber-Linde);80;3;3;17.5;3.6;5;50;325;38;3;2
 Mittelgrosse Arten;Tilia cordata (Winterlinde);80;2;3;13.5;4.4;3;37.5;200;38;3;2
-Grosskronige Arten;Tilia × europaea ‘Pallida’ (Kaiser-Linde, Holländische Linde);100;2;3;15;4;5;5;325;38;2;2
-Grosskronige Arten;Liriodendron tulipifera (Tulpenbaum);80;1;1;15;2;5;5;325;38;2;2
-Mittelgrosse Arten;Liquidambar styraciflua ‘Worplesdon’ (Amberbaum);70;2;1;9;1.4;3;37.5;185;24;3;2
+Grosskronige Arten;Tilia × europaea ‘Pallida’ (Kaiser-Linde, Holländische Linde);100;2;3;15;4;5;50;325;38;2;2
+Grosskronige Arten;Liriodendron tulipifera (Tulpenbaum);80;1;1;15;2;5;50;325;38;2;2
+Mittelgrosse Arten;Liquidambar styraciflua ‘Worplesdon’ (Amberbaum);70;2;1;9;1.4;3;37.5;200;24;3;2
 Mittelgrosse Arten;Koelreuteria paniculata (Blasenbaum);75;1;2;6.5;3;3;37.5;200;13;3;1
 Mittelgrosse Arten;Zelkova serrata (Japanische Zelkove);100;2;3;12.5;2.5;3;37.5;200;38;3;3
 Mittelgrosse Arten;Aesculus flava (Gelbe Rosskastanie);80;1;2;10;2.4;3;37.5;200;24;2;2
