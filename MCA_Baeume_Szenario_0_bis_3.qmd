@@ -41,6 +41,8 @@ df_baeume_raw <- read_delim(
   "01_data_input/Baeume_tidy.csv", delim = ";"
 )
 
+df_baeume_raw
+
 # Liest die Gewichtungen für alle vier Szenarien ein
 weights_s0_raw <- read_delim(
   "01_data_input/Baeume_Gewichtung_Szenario0.csv",
@@ -141,37 +143,41 @@ plot_rohwerte_baeume <- ggplot(df_baeume_joined, aes(x = bewertungskategorie, y 
 print(plot_rohwerte_baeume)
 ggsave("02_export/plots/check_01_rohwerte_verteilung_baeume.png", plot = plot_rohwerte_baeume, width = 10, height = 7)
 
-
 # -------------------------------------------------------
-# PLOT MIT 4 KRITERIEN (CO2, Kühlung, Regenwasser, Kosten)
+# PLOT: Zielkonflikt Leistung vs. Kosten 
 # -------------------------------------------------------
 
-# 1. Daten vorbereiten
-df_plot_tradeoff <- df_baeume_joined %>%
- filter(bewertungskategorie %in% c("co2_bindung", "kuehlung", "regenwasser", "groesse_baumrigolen")) %>%
+# 1. Daten vorbereiten (Wir nutzen df_baeume_long aus Block 3.1)
+df_plot_tradeoff <- df_baeume_long %>%
   
-  # Saubere Labels für die Facetten (Titel der 4 Grafiken)
+  # Filtern der 4 relevanten Kriterien
+  filter(bewertungskategorie %in% c("co2_bindung", "kuehlung", "regenwasserspeicherung", "groesse_baumrigolen")) %>%
+  
+  # Sicherheits-Schritt: Wert in Zahl umwandeln
+  mutate(wert = as.numeric(wert)) %>%
+  
+  # Schöne Labels und Einheiten für die Grafik erstellen
   mutate(facet_label = case_when(
-    bewertungskategorie == "co2_bindung" ~ "Leistung: CO2-Bindung [kg/a]",
+    bewertungskategorie == "co2_bindung" ~ "Leistung: CO2-Bindung [kg CO₂/a]",
     bewertungskategorie == "kuehlung" ~ "Leistung: Kühlung [°C]",
-    bewertungskategorie == "regenwasser" ~ "Leistung: Regenwasser [l/Tag]",
+    bewertungskategorie == "regenwasserspeicherung" ~ "Leistung: Regenwasser [l/Tag]",
     bewertungskategorie == "groesse_baumrigolen" ~ "Kosten: Grösse Baumrigolen [m³]"
   )) %>%
   
-  # Reihenfolge der Facetten erzwingen (Erst Leistung, dann Kosten ganz unten)
+  # Reihenfolge der 4 Grafiken erzwingen
   mutate(facet_label = fct_relevel(facet_label, 
-                                   "Leistung: CO2-Bindung [kg/a]",
+                                   "Leistung: CO2-Bindung [kg CO₂/a]",
                                    "Leistung: Kühlung [°C]",
                                    "Leistung: Regenwasser [l/Tag]",
                                    "Kosten: Grösse Baumrigolen [m³]")) %>%
 
-  # Reihenfolge der Kategorien erzwingen (Gross -> Mittel -> Klein)
+  # Reihenfolge der Baum-Kategorien erzwingen
   mutate(baumkategorie = fct_relevel(baumkategorie, 
                                      "Grosskronige Arten", 
                                      "Mittelgrosse Arten", 
                                      "Kleine Arten")) %>%
   
-  # Sortierung der X-Achse erzwingen
+  # Sortierung der X-Achse (Damit die Balken nach Kategorie gruppiert sind)
   arrange(baumkategorie, baumart) %>%
   mutate(baumart_sortiert = factor(baumart, levels = unique(baumart)))
 
@@ -183,8 +189,9 @@ plot_tradeoff_4fach <- ggplot(df_plot_tradeoff,
   
   geom_col(width = 0.7) +
   
-  # Faceting: 4 Grafiken UNTEREINANDER (ncol = 1)
-  facet_wrap(~facet_label, ncol = 1, scales = "free_y") +
+  # Faceting: 4 Grafiken untereinander
+  # scales = "free_y" ist entscheidend für die unterschiedlichen Einheiten!
+  facet_grid(facet_label ~ ., scales = "free_y") + 
   
   # Farben: Blautöne
   scale_fill_manual(values = c(
@@ -195,25 +202,26 @@ plot_tradeoff_4fach <- ggplot(df_plot_tradeoff,
   
   labs(
     title = "Zielkonflikt: Ökologische Leistung vs. Raumbedarf",
+    subtitle = "Vergleich der Baumarten: Hohe Leistung bedingt hohe Kosten (Raum).",
     x = "", 
-    y = "Wert (Einheit siehe Titel)",
+    y = "Wert",
     fill = "Baumkategorie"
   ) +
   theme_bw() + 
   theme(
     legend.position = "top", 
     strip.text = element_text(face = "bold", size = 10),
-    axis.text.x = element_text(angle = 45, hjust = 1, size = 7), # Namen schräg
+    axis.text.x = element_text(angle = 45, hjust = 1, size = 8),
     panel.grid.major.x = element_blank(),
-    plot.margin = unit(c(0.5, 0.5, 1, 1), "cm")
+    plot.margin = unit(c(0.5, 0.5, 5.0, 3.0), "cm")
   )
 
-
-# 3. Speichern (Extra hoch, damit 4 Grafiken Platz haben)
+# 3. Speichern
 print(plot_tradeoff_4fach)
 
 ggsave("02_export/plots/check_03_zielkonflikt_baeume_4fach.png", 
        plot = plot_tradeoff_4fach, width = 10, height = 14, bg = "white")
+
 
 ```
 
