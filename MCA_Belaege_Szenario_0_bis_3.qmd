@@ -169,35 +169,33 @@ print(plot_rohwerte)
 ggsave("02_export/plots/check_01_rohwerte_verteilung.png", plot = plot_rohwerte, width = 10, height = 7)
 
 # -------------------------------------------------------
-# PLOT: 100-Jahres-Bilanz der Beläge (KORRIGIERT V2)
+# PLOT: Lebenszyklus-Bilanz Beläge (FINAL FIX SKALEN)
 # -------------------------------------------------------
 
 # 1. Daten vorbereiten
 df_plot_belaege_100a <- df_belaege_raw %>% 
   select(
-    # Wir nutzen jetzt 'option' und 'belagskategorie' (klein)
-    `option`,                
-    `belagskategorie`,  
-    `kosten`,
-    `kosten_100a`,           
-    `unterhalt_100a`,        
-    `co2_100a`,              
-    `graueEnergie_100a`      
+    belagskategorie,       
+    option,                
+    kosten,                
+    kosten_100a,           
+    unterhalt_100a,        
+    co2_100a,              
+    graueEnergie_100a      
   ) %>%
   
   rename(
-    belag = `option`,             # 'option' wird zu 'belag'
-    kategorie = `belagskategorie` # 'belagskategorie' wird zu 'kategorie'
+    belag = option,
+    kategorie = belagskategorie 
   ) %>%
   
-  # Pivot Longer
   pivot_longer(
     cols = c(kosten, kosten_100a, unterhalt_100a, co2_100a, graueEnergie_100a),
     names_to = "kriterium",
     values_to = "wert"
   ) %>%
   
-  # Labels
+  # Labels definieren
   mutate(facet_label = case_when(
     kriterium == "kosten" ~ "1. Initialkosten [CHF/m²]",
     kriterium == "kosten_100a" ~ "2. Gesamtkosten 100a\n[CHF/m²]",
@@ -206,53 +204,65 @@ df_plot_belaege_100a <- df_belaege_raw %>%
     kriterium == "graueEnergie_100a" ~ "5. Graue Energie 100a\n[kWh/m²]" 
   )) %>%
   
-  # Reihenfolge
+  # Reihenfolge erzwingen
   mutate(facet_label = fct_relevel(facet_label, 
-                                   "1. Initialkosten [CHF/m²]",                                   
+                                   "1. Initialkosten [CHF/m²]",
                                    "2. Gesamtkosten 100a\n[CHF/m²]",
                                    "3. Unterhaltskosten 100a\n[CHF/m²]",
                                    "4. CO2-Emissionen 100a\n[kg CO2-eq/m²]",
-                                   "5. Graue Energie 100a\n[kWh/m²]"))
+                                   "5. Graue Energie 100a\n[kWh/m²]")) %>%
+  
+  # Reihenfolge Kategorie
+  mutate(kategorie = fct_relevel(kategorie, "Asphalt", "Pflaster", "Sickerbeläge")) %>%
+  
+  # Sortierung X-Achse
+  arrange(kategorie, belag) %>%
+  mutate(belag_sortiert = factor(belag, levels = unique(belag)))
 
 # 2. Plot erstellen
 plot_belaege_100a_final <- ggplot(df_plot_belaege_100a, 
-       aes(x = reorder(belag, wert), 
+       aes(x = belag_sortiert, 
            y = wert, 
            fill = kategorie)) + 
   
   geom_col(width = 0.7) +
   
+  # --- FIX: facet_wrap mit 'scales = "free"' und 'ncol = 1' ---
+  # 'ncol = 1': Alle 5 Grafiken untereinander (wie bei den Bäumen)
+  # 'scales = "free"': JEDE Grafik hat ihre eigene Skala (x und y)
   facet_wrap(~facet_label, ncol = 1, scales = "free_y") +
+  # ------------------------------------------------------------
   
-  # --- BLAUTÖNE (angepasst an deine Kategorien) ---
   scale_fill_manual(values = c(
     "Asphalt" = "#084594",        # Dunkelblau
     "Pflaster" = "#4292c6",       # Mittelblau
-    "Sickerbeläge" = "#9ecae1",   # Hellblau
-    "Spezialbeläge" = "#c6dbef"   # Sehr hell (Fallback)
+    "Sickerbeläge" = "#9ecae1"    # Hellblau
   )) +
   
   labs(
     title = "Lebenszyklus-Bilanz: Ökonomie und Ökologie über 100 Jahre",
     subtitle = "Vergleich der kumulierten Werte (inkl. aller Sanierungszyklen).",
     x = "", 
-    y = "Wert (Einheit siehe Titel)",
+    y = "Wert",
     fill = "Belagskategorie"
   ) +
   theme_bw() + 
   theme(
     legend.position = "top", 
     strip.text = element_text(face = "bold", size = 10),
+    # Namen unten schräg stellen
     axis.text.x = element_text(angle = 45, hjust = 1, size = 9, color = "black"),
     panel.grid.major.x = element_blank(),
+    
+    # Rand anpassen (Links mehr Platz)
     plot.margin = unit(c(0.5, 0.5, 0.5, 1.5), "cm")
   )
 
-# 3. Speichern
+# 3. Speichern (Hochformat für 5 Grafiken untereinander)
 print(plot_belaege_100a_final)
 
 ggsave("02_export/plots/check_05_bilanz_100a_belaege_final_blau.png", 
-       plot = plot_belaege_100a_final, width = 10, height = 14, bg = "white")
+       plot = plot_belaege_100a_final, width = 10, height = 16, bg = "white")
 ```
 
 ## 5. MCA - Normalisierung
@@ -628,6 +638,6 @@ write_csv2(
   df_mca_calculated,
   file = "02_export/tables/mca_details_berechnung_alle_szenarien.csv"
 )
-
+ 
 ```
 
