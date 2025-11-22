@@ -65,6 +65,18 @@ weights_s3_raw <- read_delim(
   "01_data_input/Belaege_Gewichtung_Szenario3.csv",
   delim = ";"
 )
+
+# --- PRÜFUNG BLOCK 1 ---
+
+print("--- 1. Check: Spaltennamen Beläge (Sind alle Spaltennamen da?) ---")
+colnames(df_belaege_raw)
+
+print("--- 2. Check: Gewichtung S0 (Wurden Spalten getrennt?) ---")
+head(weights_s0_raw)
+
+print("--- 3. Check: Gewichtung S3 (Zur Sicherheit) ---")
+head(weights_s3_raw)
+
 ```
 
 ## 2. Daten bereinigen und harmonisieren
@@ -106,6 +118,21 @@ select(szenario, bewertungskategorie, gewicht, group_id)
 
 print(df_weights, n = 48)
 
+# --- PRÜFUNG BLOCK 2 ---
+
+print("--- Check: Haben wir die richtigen Namen in den Gewichten? ---")
+# Wir filtern mal nach allem was mit "kosten" zu tun hat
+df_weights %>% 
+  filter(grepl("kosten", bewertungskategorie, ignore.case = TRUE)) %>%
+  select(bewertungskategorie) %>%
+  distinct()
+
+print("--- Check: Stichprobe der Gewichte ---")
+# Zeig mir mal S0 und S3 im Vergleich für Kosten
+df_weights %>% 
+  filter(bewertungskategorie == "initialkosten_100a") %>%
+  select(szenario, gewicht)
+
 ```
 
 ## 3. Datentransformation
@@ -127,6 +154,10 @@ df_belaege_long <- df_belaege %>%
 df_belaege_joined <- df_belaege_long %>%
   left_join(df_weights, by = "bewertungskategorie", relationship = "many-to-many")
 
+df_belaege_joined
+
+# --- PRÜFUNG BLOCK 3 ---
+
 # Wir geben kurz aus, was kein Gewicht hat zur Kontrolle
 missing_weights <- df_belaege_joined %>% 
   filter(is.na(gewicht)) %>% 
@@ -135,6 +166,21 @@ missing_weights <- df_belaege_joined %>%
 
 print("Diese Kriterien haben kein Gewicht (werden nur visualisiert):")
 print(missing_weights)
+
+print("--- Check: Hat 'initialkosten' KEIN Gewicht (NA)? ---")
+df_belaege_joined %>%
+  filter(bewertungskategorie == "initialkosten") %>%
+  select(szenario, bewertungskategorie, gewicht) %>%
+  distinct() %>%
+  head(2) # Sollte NA zeigen (oder leer sein, falls S0)
+
+print("--- Check: Hat 'initialkosten_100a' ein Gewicht? ---")
+df_belaege_joined %>%
+  filter(bewertungskategorie == "initialkosten_100a") %>%
+  filter(szenario == "Szenario 0: Baseline (IST)") %>%
+  select(szenario, bewertungskategorie, gewicht) %>%
+  distinct() %>%
+  head(2) # Sollte 0.1 zeigen
 
 ```
 
@@ -180,9 +226,9 @@ df_plot_belaege_100a <- df_belaege %>%
     names_to = "kriterium", values_to = "wert"
   ) %>%
   mutate(facet_label = case_when(
-    # Hier definieren wir Labels für BEIDE Kostenarten
-    kriterium == "initialkosten" ~ "1. Reine Erstellungskosten (Info)\n[CHF/m²]",
-    kriterium == "initialkosten_100a" ~ "2. Gesamtkosten 100a (Bewertet)\n[CHF/m²]",
+    # Hier definieren wir Labels 
+    kriterium == "initialkosten" ~ "1. Investitionskosten pro Zyklus\n[CHF/m²]",
+    kriterium == "initialkosten_100a" ~ "2. Investitionskosten 100a kumuliert\n[CHF/m²]",
     kriterium == "unterhalt_100a" ~ "3. Unterhaltskosten 100a\n[CHF/m²]",
     kriterium == "co2_100a" ~ "4. CO2-Emissionen 100a\n[kg CO2-eq/m²]",
     kriterium == "graueEnergie_100a" ~ "5. Graue Energie 100a\n[kWh/m²]" 
@@ -213,6 +259,20 @@ plot_belaege_100a_final <- ggplot(df_plot_belaege_100a,
 print(plot_belaege_100a_final)
 ggsave("02_export/plots/check_05_bilanz_100a_belaege_final_blau.png", 
        plot = plot_belaege_100a_final, width = 10, height = 16, bg = "white")
+
+# --- PRÜFUNG BLOCK 4 ---
+
+print("--- Check: Haben wir alle 5 Facetten für den Plot? ---")
+df_plot_belaege_100a %>%
+  count(facet_label)
+
+print("--- Check: Werte-Vergleich am Beispiel 'Recyclingasphalt' ---")
+# Wir schauen uns einen Belag an, um zu sehen, ob Initial < 100a ist
+df_plot_belaege_100a %>%
+  filter(belag == "Recyclingasphalt") %>% # Oder ein anderer Name, falls dieser nicht existiert
+  select(facet_label, wert) %>%
+  arrange(facet_label)
+
 ```
 
 ## 5. MCA - Normalisierung
@@ -249,13 +309,21 @@ df_belaege_normalized <- df_belaege_joined %>%
   ) %>%
   ungroup()
 
+# --- PRÜFUNG BLOCK 5 ---
 
-# Prüfen, ob die Daten jetzt da sind:
-print("--- Check Min/Max ---")
-df_belaege_normalized %>% 
-  select(bewertungskategorie, min_wert, max_wert) %>% 
-  distinct() %>% 
-  print()
+print("--- Check: Sind alle Kriterien da (auch die ohne Gewicht)? ---")
+df_min_max_check <- df_belaege_normalized %>%
+  select(bewertungskategorie, min_wert, max_wert) %>%
+  distinct()
+
+print(df_min_max_check)
+
+print("--- Check: Haben 'initialkosten' einen Score bekommen? ---")
+# Wir testen eine Zeile stichprobenartig
+df_belaege_normalized %>%
+  filter(bewertungskategorie == "initialkosten") %>%
+  select(option, wert, score_normiert) %>%
+  head(3)
 
 # Prüfen, ob der Join geklappt hat (Gewicht da?):
 print("--- Check Gewicht für Kosten ---")
@@ -287,6 +355,18 @@ plot_normiert <- ggplot(df_belaege_normalized, aes(x = bewertungskategorie, y = 
 
 print(plot_normiert)
 ggsave("02_export/plots/check_02_normierte_scores_belaege.png", plot = plot_normiert, width = 10, height = 7)
+
+# --- PRÜFUNG BLOCK 6 ---
+
+print("--- Check: Liegen alle Scores zwischen 0 und 1? ---")
+summary(df_belaege_normalized$score_normiert)
+# Min sollte >= 0.00 sein, Max <= 1.00
+
+print("--- Check: Sind 'initialkosten' im Boxplot-Datensatz enthalten? ---")
+# Wir zählen, wie viele Datenpunkte wir pro Kategorie haben
+df_belaege_normalized %>%
+  filter(bewertungskategorie %in% c("initialkosten", "initialkosten_100a")) %>%
+  count(bewertungskategorie)
 ```
 
 ## 7. MCA Berechnung
@@ -333,6 +413,18 @@ write_csv2(
   df_sieger_belaege,
   file = "02_export/tables/mca_top3_belaege_pro_szenario.csv"
 )
+
+# --- PRÜFUNG BLOCK 7 ---
+
+print("--- Check: Enthält die Berechnung noch Zeilen ohne Gewicht? ---")
+# Sollte 0 Zeilen ergeben
+df_mca_calculated %>% filter(is.na(gewicht)) %>% count()
+
+print("--- Check: Plausibilität Ergebnisse (S0 Baseline) ---")
+# Zeig mir die Top 3 von Szenario 0
+df_sieger_belaege %>% 
+  filter(szenario == "Szenario 0: Baseline (IST)") %>%
+  select(option, MCA_gesamtscore)
 
 ```
 
@@ -552,6 +644,30 @@ plot_s3_stack <- ggplot(data_s3_groups,
 print(plot_s3_stack)
 ggsave("02_export/plots/mca_detail_gruppen_s3_belaege.png",
        plot = plot_s3_stack, width = 13, height = 8, units = "in", dpi = 300)
+
+# --- PRÜFUNG BLOCK 8 ---
+
+print("--- Check 1: Stimmt die Summe der Gruppen mit dem Gesamtscore überein? ---")
+# Wir nehmen stichprobenartig den ersten Eintrag
+check_summe <- df_mca_groups_belaege_plot %>%
+  group_by(szenario, option) %>%
+  summarise(
+    summe_gruppen = sum(gruppen_score), 
+    original_total = mean(MCA_gesamtscore), # Sollte überall gleich sein
+    .groups = "drop"
+  ) %>%
+  mutate(differenz = abs(summe_gruppen - original_total)) %>%
+  arrange(desc(differenz)) %>%
+  head(5)
+
+print(check_summe)
+# Die "differenz" sollte 0 (oder fast 0, z.B. 1e-15 wegen Rundung) sein.
+
+print("--- Check 2: Wurden die Daten für S0 korrekt gefiltert? ---")
+df_mca_groups_belaege_plot %>%
+  filter(szenario == "Szenario 0: Baseline (IST)") %>%
+  select(option, group_id, gruppen_score) %>%
+  head(5)
 ```
 
 
@@ -559,7 +675,7 @@ ggsave("02_export/plots/mca_detail_gruppen_s3_belaege.png",
 
 ```{r}
 
-# 1. Speichern der finalen MCA-Rangliste (alle 30 Zeilen)
+# 1. Speichern der finalen MCA-Rangliste (alle 40 Zeilen)
 write_csv2(
   df_mca_total,
   file = "02_export/tables/mca_rangliste_alle_szenarien.csv"
@@ -570,6 +686,20 @@ write_csv2(
   df_mca_calculated,
   file = "02_export/tables/mca_details_berechnung_alle_szenarien.csv"
 )
+
+# --- PRÜFUNG BLOCK 9 ---
+
+print("--- Check 1: Ist die Rangliste vollständig? (Erwartet: 40 Zeilen) ---")
+# 10 Beläge * 4 Szenarien = 40 Zeilen
+nrow(df_mca_total)
+
+print("--- Check 2: Sind die Details vollständig? ---")
+# Sollte > 300 sein (40 Zeilen * ca. 9-11 Kriterien pro Szenario)
+nrow(df_mca_calculated)
+
+print("--- Check 3: Existiert der Ordner? (Optional) ---")
+# Falls der Ordner nicht existiert, würde write_csv2 einen Fehler werfen.
+dir.exists("02_export/tables")
  
 ```
 
