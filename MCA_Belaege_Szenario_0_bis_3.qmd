@@ -192,48 +192,62 @@ da die Skalen (Jahre, CHF, kg) völlig unterschiedlich sind.
 
 ```{r}
 
-# Boxplot der Rohwerte
-plot_rohwerte <- ggplot(df_belaege_joined, aes(x = bewertungskategorie, y = wert)) +
-  geom_boxplot() +
-  # coord_flip() dreht die Achsen, damit die Namen lesbar sind
-  coord_flip() +
+# Boxplot der Rohwerte (Scientific Style)
+# Hinweis: Da die Einheiten gemischt sind, nutzen wir facet_wrap mit freien Skalen,
+# damit man pro Kriterium überhaupt etwas erkennt.
+plot_rohwerte <- ggplot(df_belaege_joined, aes(y = wert)) +
+  geom_boxplot(fill = "grey95", width = 0.5) +
+  
+  # Facetten für jedes Kriterium, da unterschiedliche Einheiten (CHF vs Jahre)
+  facet_wrap(~bewertungskategorie, scales = "free", ncol = 3) +
+  
   labs(
-    title = "Verteilung der Rohwerte (vor Normierung)",
-    subtitle = "Zeigt die unterschiedlichen Skalen (Einheiten) der Kriterien",
-    x = "Kriterium",
-    y = "Wert (gemischte Einheiten)"
+    title = NULL, # Titel für Word-Beschriftung
+    subtitle = NULL,
+    x = NULL,
+    y = "Rohwert (unterschiedliche Einheiten)"
   ) +
-  theme_minimal()
+  
+  theme_classic(base_size = 11) +
+  
+  theme(
+    # Nur horizontale Gitterlinien im Facet sind hier wichtig (da y = wert vertikal ist)
+    panel.grid.major.y = element_line(color = "grey90", linewidth = 0.2),
+    panel.grid.major.x = element_blank(),
+    
+    # Facetten-Label schön machen
+    strip.background = element_rect(fill = "grey95", color = NA),
+    strip.text = element_text(face = "bold", size = 9),
+    
+    # Achsen-Texte
+    axis.text.x = element_text(size = 8, color = "black"),
+    axis.text.y = element_blank(), # Keine Y-Text nötig im Boxplot ohne Kategorien
+    axis.ticks.y = element_blank()
+  )
 
 print(plot_rohwerte)
-ggsave("02_export/plots/check_01_rohwerte_verteilung.png", plot = plot_rohwerte, width = 10, height = 7)
+ggsave("02_export/plots/check_01_rohwerte_verteilung.png", 
+       plot = plot_rohwerte, width = 10, height = 8, dpi = 300)
 
 # -------------------------------------------------------
-# PLOT B: Lebenszyklus-Bilanz Beläge (100 Jahre)
+# Lebenszyklus-Bilanz Beläge (100 Jahre)
 # -------------------------------------------------------
 
-# 1. Daten vorbereiten
+# 1. Daten vorbereiten (Bleibt gleich)
 df_plot_belaege_100a <- df_belaege %>% 
   select(
     belagskategorie, option,
-    initialkosten,          
-    initialkosten_100a,     
-    unterhalt_100a, co2_100a, graueEnergie_100a
+    initialkosten, initialkosten_100a, unterhalt_100a, co2_100a, graueEnergie_100a
   ) %>%
   rename(belag = option, kategorie = belagskategorie) %>%
-  pivot_longer(
-    cols = where(is.numeric),
-    names_to = "kriterium", values_to = "wert"
-  ) %>%
+  pivot_longer(cols = where(is.numeric), names_to = "kriterium", values_to = "wert") %>%
   mutate(facet_label = case_when(
-    # Hier definieren wir Labels 
-    kriterium == "initialkosten" ~ "1. Investitionskosten pro Zyklus\n[CHF/m²]",
-    kriterium == "initialkosten_100a" ~ "2. Investitionskosten 100a kumuliert\n[CHF/m²]",
-    kriterium == "unterhalt_100a" ~ "3. Unterhaltskosten 100a\n[CHF/m²]",
-    kriterium == "co2_100a" ~ "4. CO2-Emissionen 100a\n[kg CO2-eq/m²]",
-    kriterium == "graueEnergie_100a" ~ "5. Graue Energie 100a\n[kWh/m²]" 
+    kriterium == "initialkosten" ~ "1. Investitionskosten (pro Zyklus) [CHF/m²]",
+    kriterium == "initialkosten_100a" ~ "2. Investitionskosten (100a kumuliert) [CHF/m²]",
+    kriterium == "unterhalt_100a" ~ "3. Unterhaltskosten 100a [CHF/m²]",
+    kriterium == "co2_100a" ~ "4. CO2-Emissionen 100a [kg CO2-eq/m²]",
+    kriterium == "graueEnergie_100a" ~ "5. Graue Energie 100a [kWh/m²]" 
   )) %>%
-  # Wir filtern alles raus, was wir oben im case_when nicht definiert haben
   filter(!is.na(facet_label)) %>%
   mutate(kategorie = fct_relevel(kategorie, "Asphalt", "Pflaster", "Sickerbeläge")) %>%
   mutate(belag_sortiert = reorder(belag, wert))
@@ -241,24 +255,44 @@ df_plot_belaege_100a <- df_belaege %>%
 # 2. Plot erstellen
 plot_belaege_100a_final <- ggplot(df_plot_belaege_100a, 
        aes(x = belag_sortiert, y = wert, fill = kategorie)) + 
-  geom_col(width = 0.7) +
-  # ncol=1 sorgt dafür, dass sie schön untereinander stehen
+  geom_col(width = 0.6) + 
+  
+  # Facetten
   facet_wrap(~facet_label, ncol = 1, scales = "free_y") +
+  
   scale_fill_manual(values = c("Asphalt" = "#084594", "Pflaster" = "#4292c6", "Sickerbeläge" = "#9ecae1")) +
-  labs(
-    title = "Lebenszyklus-Bilanz: Vergleich Initial vs. 100 Jahre",
-    x = "", y = "Wert", fill = "Belagskategorie"
-  ) +
-  theme_bw() + 
+  
+  # Textumbruch x-Achse
+  scale_x_discrete(labels = function(x) stringr::str_wrap(x, width = 20)) +
+  
+  labs(title = NULL, x = NULL, y = "Wert", fill = "Belagskategorie") +
+  
+  theme_classic(base_size = 11) + 
+  
   theme(
-    legend.position = "top", 
-    axis.text.x = element_text(angle = 45, hjust = 1, size = 9),
-    strip.text = element_text(face = "bold")
+    legend.position = "bottom",
+    panel.grid.major.y = element_line(color = "grey90", linewidth = 0.2),
+    panel.grid.major.x = element_blank(),
+    
+    # Schriftgrössen
+    axis.text.x = element_text(angle = 45, hjust = 1, size = 10, color = "black"),
+    axis.text.y = element_text(size = 10, color = "black"),
+    
+    strip.background = element_rect(fill = "grey95", color = NA),
+    strip.text = element_text(face = "bold", size = 11, hjust = 0),
+    
+    # Rand unten grosszügig lassen
+    plot.margin = margin(t = 5, r = 5, b = 30, l = 5, unit = "mm") 
   )
 
 print(plot_belaege_100a_final)
-ggsave("02_export/plots/check_05_bilanz_100a_belaege_final_blau.png", 
-       plot = plot_belaege_100a_final, width = 10, height = 16, bg = "white")
+
+# 3. Speichern (Hochformat erzwingen)
+ggsave("02_export/plots/Abb_Lebenszyklus_Bilanz_clean.png", 
+       plot = plot_belaege_100a_final, 
+       width = 8,   # Schmaler
+       height = 20, # Extrem hoch (ca. 50 cm)
+       dpi = 300)
 
 # --- PRÜFUNG BLOCK 4 ---
 
@@ -339,22 +373,37 @@ df_belaege_normalized %>%
 Ziel: Überprüfen, ob die Min-Max-Skalierung (Block 5.2) funktioniert hat.
 
 ```{r}
-# Boxplot der normierten Scores
+# Boxplot der normierten Scores (Scientific Style)
 plot_normiert <- ggplot(df_belaege_normalized, aes(x = bewertungskategorie, y = score_normiert)) +
-  geom_boxplot() +
+  geom_boxplot(fill = "grey90", width = 0.6, outlier.colour = "black", outlier.size = 1) +
+  
   coord_flip() +
-  # Setzt die Y-Achse fix auf 0 bis 1
-  scale_y_continuous(limits = c(0, 1)) +
+  
+  # Fixe Skala 0-1
+  scale_y_continuous(limits = c(0, 1), expand = c(0, 0.05)) +
+  
   labs(
-    title = "Verteilung der normierten Scores Beläge (nach Normierung)",
-    subtitle = "Qualitätskontrolle: Alle Kriterien sollten jetzt auf 0-1 skaliert sein.",
-    x = "Kriterium",
-    y = "Normierter Score (0-1)"
+    title = NULL,
+    subtitle = NULL,
+    x = NULL, # Kriterien-Namen stehen an der Achse
+    y = "Normierter Score (0 = schlecht, 1 = ideal)"
   ) +
-  theme_minimal()
+  
+  theme_classic(base_size = 11) +
+  
+  theme(
+    # Gitterlinien: Vertikal wichtig (um 0.5 etc. zu sehen), Horizontal weg
+    panel.grid.major.x = element_line(color = "grey90", linewidth = 0.2),
+    panel.grid.major.y = element_blank(),
+    
+    # Achsen-Texte
+    axis.text.y = element_text(color = "black", size = 10), # Kriterien-Namen
+    axis.text.x = element_text(color = "black", size = 10)  # Zahlen 0-1
+  )
 
 print(plot_normiert)
-ggsave("02_export/plots/check_02_normierte_scores_belaege.png", plot = plot_normiert, width = 10, height = 7)
+ggsave("02_export/plots/check_02_normierte_scores_belaege.png", 
+       plot = plot_normiert, width = 10, height = 7, dpi = 300)
 
 # --- PRÜFUNG BLOCK 6 ---
 
@@ -436,60 +485,113 @@ Ziel: visualisierung der Ergebnisse
 
 ```{r}
 #| label: fig-mca-plots-belaege-s0
-#| fig.width: 13 # Breite wie bei Bäumen
-#| fig.height: 8  # Höhe angepasst (weniger Optionen als Bäume)
+#| fig.width: 13
+#| fig.height: 8
 #| out.width: "95%"
 #| dpi: 300
 
-# --- Datenaufbereitung für Stacked Plot (einmalig) ---
+# --- Datenaufbereitung für Stacked Plot (einmalig & aufgehübscht) ---
 df_mca_groups_belaege_plot <- df_mca_calculated %>%
-  # Ggf. hier auf Kleinbuchstaben umbenennen, falls nötig (siehe Block 7)
-  # rename(belagskategorie = Belagskategorie, option = Option) %>%
   group_by(szenario, belagskategorie, option, group_id) %>%
   summarise(gruppen_score = sum(MCA_score_kriterium, na.rm = TRUE), .groups = 'drop') %>%
-  left_join(df_mca_total, by = c("szenario", "belagskategorie", "option"))
+  left_join(df_mca_total, by = c("szenario", "belagskategorie", "option")) %>%
+  mutate(group_label_clean = case_when(
+    group_id == "langlebigkeit_wirtschaftlichkeit" ~ "Langlebigkeit & Wirtschaftlichkeit",
+    group_id == "multifunktionale_nutzungsqualitaet" ~ "Multifunktionale Nutzungsqualität",
+    group_id == "umweltbelastung" ~ "Umweltbelastung",
+    group_id == "kreislauffaehigkeit" ~ "Kreislauffähigkeit",
+    TRUE ~ group_id
+  ))
 # ----------------------------------------------------
 
-# --- Plot 1: Ranking ---
+# --- Farb-Definitionen (Wissenschaftlich / Blau-Schema) ---
+# 1. Farben für Kategorien (Konsistent mit Block 4)
+colors_kategorie <- c("Asphalt" = "#084594", 
+                      "Pflaster" = "#4292c6", 
+                      "Sickerbeläge" = "#9ecae1")
+
+# 2. Farben für Kriterien-Gruppen (Abgestufte Blautöne/Grau)
+colors_gruppen <- c(
+  "Langlebigkeit & Wirtschaftlichkeit" = "#08306b", # Sehr dunkelblau (Basis)
+  "Multifunktionale Nutzungsqualität" = "#2171b5",  # Mittelblau
+  "Umweltbelastung" = "#6baed6",                    # Hellblau
+  "Kreislauffähigkeit" = "#c6dbef"                  # Sehr hellblau/Grau
+)
+# ----------------------------------------------------
+
+
+# --- Plot 1: Ranking (Szenario 0) ---
 data_s0 <- df_mca_total %>% filter(szenario == "Szenario 0: Baseline (IST)")
 
 plot_s0_rank <- ggplot(data_s0,
        aes(x = MCA_gesamtscore,
-           y = fct_reorder(option, MCA_gesamtscore), # lc
-           fill = belagskategorie)) + # lc
-  geom_col() +
+           y = fct_reorder(option, MCA_gesamtscore), 
+           fill = belagskategorie)) + 
+  geom_col(width = 0.7) +
+  
+  scale_x_continuous(limits = c(0, 1), expand = c(0, 0.05)) + 
+  scale_y_discrete(labels = function(x) stringr::str_wrap(x, width = 40)) +
+  
+  # HIER: Deine Blautöne anwenden!
+  scale_fill_manual(values = colors_kategorie) +
+  
   labs(
-    title = "MCA Ergebnis Beläge: Szenario 0 - Baseline (IST)",
-    subtitle = "Ranking (Höher = Besser)",
-    x = "MCA Gesamtscore", y = "Belagsoption", fill = "Belagskategorie" # lc
+    title = NULL, 
+    x = "MCA Score (0-1)", 
+    y = NULL, 
+    fill = "Kategorie"
   ) +
-  theme_minimal() +
-  theme(legend.position = "top", axis.text.y = element_text(size = 8)) # Etwas grösser als bei Bäumen?
+  theme_classic(base_size = 11) + 
+  theme(
+    legend.position = "bottom",
+    panel.grid.major.y = element_blank(),
+    panel.grid.major.x = element_line(color = "grey90", linewidth = 0.2),
+    axis.text = element_text(color = "black"),
+    plot.margin = margin(t = 5, r = 10, b = 5, l = 5, unit = "mm")
+  )
 
 print(plot_s0_rank)
 ggsave("02_export/plots/mca_gesamtergebnis_s0_belaege.png",
-       plot = plot_s0_rank, width = 13, height = 8, units = "in", dpi = 300)
+       plot = plot_s0_rank, width = 10, height = 7, dpi = 300)
 
-# --- Plot 2: Stacked Detail ---
+
+# --- Plot 2: Stacked Detail (Szenario 0) ---
 data_s0_groups <- df_mca_groups_belaege_plot %>% filter(szenario == "Szenario 0: Baseline (IST)")
 
 plot_s0_stack <- ggplot(data_s0_groups,
        aes(x = gruppen_score,
-           y = fct_reorder(option, MCA_gesamtscore), # lc
-           fill = group_id)) +
-  geom_col(position = "stack") +
+           y = fct_reorder(option, MCA_gesamtscore), 
+           fill = group_label_clean)) + 
+  geom_col(position = "stack", width = 0.7) +
+  
+  scale_x_continuous(limits = c(0, 1), expand = c(0, 0.05)) +
+  scale_y_discrete(labels = function(x) stringr::str_wrap(x, width = 40)) +
+  
+  # HIER: Die neuen Gruppen-Farben anwenden!
+  scale_fill_manual(values = colors_gruppen) +
+  
   labs(
-    title = "MCA Detail Beläge: Szenario 0 - Baseline (IST)",
-    subtitle = "Zusammensetzung des Scores",
-    x = "MCA Score (Anteil)", y = "Belagsoption", fill = "Kriteriengruppe" # lc
+    title = NULL, 
+    x = "Beitrag zum Score", 
+    y = NULL, 
+    fill = "Kriteriengruppe"
   ) +
-  theme_minimal() +
-  theme(legend.position = "top", axis.text.y = element_text(size = 8))
+  theme_classic(base_size = 11) + 
+  theme(
+    legend.position = "bottom",
+    legend.text = element_text(size = 9), 
+    legend.title = element_text(face = "bold"),
+    legend.box = "vertical",
+    panel.grid.major.y = element_blank(),
+    panel.grid.major.x = element_line(color = "grey90", linewidth = 0.2),
+    axis.text = element_text(color = "black"),
+    plot.margin = margin(t = 5, r = 10, b = 5, l = 5, unit = "mm")
+  ) +
+  guides(fill = guide_legend(nrow = 2, byrow = TRUE))
 
 print(plot_s0_stack)
 ggsave("02_export/plots/mca_detail_gruppen_s0_belaege.png",
-       plot = plot_s0_stack, width = 13, height = 8, units = "in", dpi = 300)
-
+       plot = plot_s0_stack, width = 10, height = 7, dpi = 300)
 
 ```
 
@@ -502,45 +604,78 @@ ggsave("02_export/plots/mca_detail_gruppen_s0_belaege.png",
 #| out.width: "95%"
 #| dpi: 300
 
-# --- Plot 1: Ranking ---
+# --- Plot 1: Ranking (Szenario 1) ---
 data_s1 <- df_mca_total %>% filter(szenario == "Szenario 1: Forschungsfokus")
 
 plot_s1_rank <- ggplot(data_s1,
        aes(x = MCA_gesamtscore,
-           y = fct_reorder(option, MCA_gesamtscore), # lc
-           fill = belagskategorie)) + # lc
-  geom_col() +
+           y = fct_reorder(option, MCA_gesamtscore), 
+           fill = belagskategorie)) + 
+  geom_col(width = 0.7) +
+  
+  scale_x_continuous(limits = c(0, 1), expand = c(0, 0.05)) + 
+  scale_y_discrete(labels = function(x) stringr::str_wrap(x, width = 40)) +
+  
+  # Farben wiederverwenden
+  scale_fill_manual(values = colors_kategorie) +
+  
   labs(
-    title = "MCA Ergebnis Beläge: Szenario 1 - Forschungsfokus",
-    subtitle = "Ranking (Höher = Besser)",
-    x = "MCA Gesamtscore", y = "Belagsoption", fill = "Belagskategorie" # lc
+    title = NULL, 
+    x = "MCA Score (0-1)", 
+    y = NULL, 
+    fill = "Kategorie"
   ) +
-  theme_minimal() +
-  theme(legend.position = "top", axis.text.y = element_text(size = 8))
+  theme_classic(base_size = 11) + 
+  theme(
+    legend.position = "bottom",
+    panel.grid.major.y = element_blank(),
+    panel.grid.major.x = element_line(color = "grey90", linewidth = 0.2),
+    axis.text = element_text(color = "black"),
+    plot.margin = margin(t = 5, r = 10, b = 5, l = 5, unit = "mm")
+  )
 
 print(plot_s1_rank)
 ggsave("02_export/plots/mca_gesamtergebnis_s1_belaege.png",
-       plot = plot_s1_rank, width = 13, height = 8, units = "in", dpi = 300)
+       plot = plot_s1_rank, width = 10, height = 7, dpi = 300)
 
-# --- Plot 2: Stacked Detail ---
+
+# --- Plot 2: Stacked Detail (Szenario 1) ---
 data_s1_groups <- df_mca_groups_belaege_plot %>% filter(szenario == "Szenario 1: Forschungsfokus")
 
 plot_s1_stack <- ggplot(data_s1_groups,
        aes(x = gruppen_score,
-           y = fct_reorder(option, MCA_gesamtscore), # lc
-           fill = group_id)) +
-  geom_col(position = "stack") +
+           y = fct_reorder(option, MCA_gesamtscore), 
+           fill = group_label_clean)) + 
+  geom_col(position = "stack", width = 0.7) +
+  
+  scale_x_continuous(limits = c(0, 1), expand = c(0, 0.05)) +
+  scale_y_discrete(labels = function(x) stringr::str_wrap(x, width = 40)) +
+  
+  # Farben wiederverwenden
+  scale_fill_manual(values = colors_gruppen) +
+  
   labs(
-    title = "MCA Detail Beläge: Szenario 1 - Forschungsfokus",
-    subtitle = "Zusammensetzung des Scores",
-    x = "MCA Score (Anteil)", y = "Belagsoption", fill = "Kriteriengruppe" # lc
+    title = NULL, 
+    x = "Beitrag zum Score", 
+    y = NULL, 
+    fill = "Kriteriengruppe"
   ) +
-  theme_minimal() +
-  theme(legend.position = "top", axis.text.y = element_text(size = 8))
+  theme_classic(base_size = 11) + 
+  theme(
+    legend.position = "bottom",
+    legend.text = element_text(size = 9), 
+    legend.title = element_text(face = "bold"),
+    legend.box = "vertical",
+    panel.grid.major.y = element_blank(),
+    panel.grid.major.x = element_line(color = "grey90", linewidth = 0.2),
+    axis.text = element_text(color = "black"),
+    plot.margin = margin(t = 5, r = 10, b = 5, l = 5, unit = "mm")
+  ) +
+  guides(fill = guide_legend(nrow = 2, byrow = TRUE))
 
 print(plot_s1_stack)
 ggsave("02_export/plots/mca_detail_gruppen_s1_belaege.png",
-       plot = plot_s1_stack, width = 13, height = 8, units = "in", dpi = 300)
+       plot = plot_s1_stack, width = 10, height = 7, dpi = 300)
 ```
 
 ### 8.3 Plot: Szenario 2 - Radikale Vermeidung
@@ -552,47 +687,76 @@ ggsave("02_export/plots/mca_detail_gruppen_s1_belaege.png",
 #| out.width: "95%"
 #| dpi: 300
 
-# --- Plot 1: Ranking ---
+# --- Plot 1: Ranking (Szenario 2) ---
 data_s2 <- df_mca_total %>% filter(szenario == "Szenario 2: Radikale Vermeidung")
 
 plot_s2_rank <- ggplot(data_s2,
        aes(x = MCA_gesamtscore,
-           y = fct_reorder(option, MCA_gesamtscore), # lc
-           fill = belagskategorie)) + # lc
-  geom_col() +
+           y = fct_reorder(option, MCA_gesamtscore), 
+           fill = belagskategorie)) + 
+  geom_col(width = 0.7) +
+  
+  scale_x_continuous(limits = c(0, 1), expand = c(0, 0.05)) + 
+  scale_y_discrete(labels = function(x) stringr::str_wrap(x, width = 40)) +
+  
+  scale_fill_manual(values = colors_kategorie) +
+  
   labs(
-    title = "MCA Ergebnis Beläge: Szenario 2 - Radikale Vermeidung",
-    subtitle = "Ranking (Höher = Besser)",
-    x = "MCA Gesamtscore", y = "Belagsoption", fill = "Belagskategorie" # lc
+    title = NULL, 
+    x = "MCA Score (0-1)", 
+    y = NULL, 
+    fill = "Kategorie"
   ) +
-  theme_minimal() +
-  theme(legend.position = "top", axis.text.y = element_text(size = 8))
+  theme_classic(base_size = 11) + 
+  theme(
+    legend.position = "bottom",
+    panel.grid.major.y = element_blank(),
+    panel.grid.major.x = element_line(color = "grey90", linewidth = 0.2),
+    axis.text = element_text(color = "black"),
+    plot.margin = margin(t = 5, r = 10, b = 5, l = 5, unit = "mm")
+  )
 
 print(plot_s2_rank)
 ggsave("02_export/plots/mca_gesamtergebnis_s2_belaege.png",
-       plot = plot_s2_rank, width = 13, height = 8, units = "in", dpi = 300)
+       plot = plot_s2_rank, width = 10, height = 7, dpi = 300)
 
-# --- Plot 2: Stacked Detail ---
+
+# --- Plot 2: Stacked Detail (Szenario 2) ---
 data_s2_groups <- df_mca_groups_belaege_plot %>% filter(szenario == "Szenario 2: Radikale Vermeidung")
 
 plot_s2_stack <- ggplot(data_s2_groups,
        aes(x = gruppen_score,
-           y = fct_reorder(option, MCA_gesamtscore), # lc
-           fill = group_id)) +
-  geom_col(position = "stack") +
+           y = fct_reorder(option, MCA_gesamtscore), 
+           fill = group_label_clean)) + 
+  geom_col(position = "stack", width = 0.7) +
+  
+  scale_x_continuous(limits = c(0, 1), expand = c(0, 0.05)) +
+  scale_y_discrete(labels = function(x) stringr::str_wrap(x, width = 40)) +
+  
+  scale_fill_manual(values = colors_gruppen) +
+  
   labs(
-    title = "MCA Detail Beläge: Szenario 2 - Radikale Vermeidung",
-    subtitle = "Zusammensetzung des Scores",
-    x = "MCA Score (Anteil)", y = "Belagsoption", fill = "Kriteriengruppe" # lc
+    title = NULL, 
+    x = "Beitrag zum Score", 
+    y = NULL, 
+    fill = "Kriteriengruppe"
   ) +
-  theme_minimal() +
-  theme(legend.position = "top", axis.text.y = element_text(size = 8))
+  theme_classic(base_size = 11) + 
+  theme(
+    legend.position = "bottom",
+    legend.text = element_text(size = 9), 
+    legend.title = element_text(face = "bold"),
+    legend.box = "vertical",
+    panel.grid.major.y = element_blank(),
+    panel.grid.major.x = element_line(color = "grey90", linewidth = 0.2),
+    axis.text = element_text(color = "black"),
+    plot.margin = margin(t = 5, r = 10, b = 5, l = 5, unit = "mm")
+  ) +
+  guides(fill = guide_legend(nrow = 2, byrow = TRUE))
 
 print(plot_s2_stack)
 ggsave("02_export/plots/mca_detail_gruppen_s2_belaege.png",
-       plot = plot_s2_stack, width = 13, height = 8, units = "in", dpi = 300)
-
-
+       plot = plot_s2_stack, width = 10, height = 7, dpi = 300)
 
 ```
 
@@ -605,69 +769,76 @@ ggsave("02_export/plots/mca_detail_gruppen_s2_belaege.png",
 #| out.width: "95%"
 #| dpi: 300
 
-# --- Plot 1: Ranking ---
+# --- Plot 1: Ranking (Szenario 3) ---
 data_s3 <- df_mca_total %>% filter(szenario == "Szenario 3: Radikaler Lebenszyklus")
 
 plot_s3_rank <- ggplot(data_s3,
        aes(x = MCA_gesamtscore,
-           y = fct_reorder(option, MCA_gesamtscore), # lc
-           fill = belagskategorie)) + # lc
-  geom_col() +
+           y = fct_reorder(option, MCA_gesamtscore), 
+           fill = belagskategorie)) + 
+  geom_col(width = 0.7) +
+  
+  scale_x_continuous(limits = c(0, 1), expand = c(0, 0.05)) + 
+  scale_y_discrete(labels = function(x) stringr::str_wrap(x, width = 40)) +
+  
+  scale_fill_manual(values = colors_kategorie) +
+  
   labs(
-    title = "MCA Ergebnis Beläge: Szenario 3 - Radikaler Lebenszyklus",
-    subtitle = "Ranking (Höher = Besser)",
-    x = "MCA Gesamtscore", y = "Belagsoption", fill = "Belagskategorie" # lc
+    title = NULL, 
+    x = "MCA Score (0-1)", 
+    y = NULL, 
+    fill = "Kategorie"
   ) +
-  theme_minimal() +
-  theme(legend.position = "top", axis.text.y = element_text(size = 8))
+  theme_classic(base_size = 11) + 
+  theme(
+    legend.position = "bottom",
+    panel.grid.major.y = element_blank(),
+    panel.grid.major.x = element_line(color = "grey90", linewidth = 0.2),
+    axis.text = element_text(color = "black"),
+    plot.margin = margin(t = 5, r = 10, b = 5, l = 5, unit = "mm")
+  )
 
 print(plot_s3_rank)
 ggsave("02_export/plots/mca_gesamtergebnis_s3_belaege.png",
-       plot = plot_s3_rank, width = 13, height = 8, units = "in", dpi = 300)
+       plot = plot_s3_rank, width = 10, height = 7, dpi = 300)
 
-# --- Plot 2: Stacked Detail ---
+
+# --- Plot 2: Stacked Detail (Szenario 3) ---
 data_s3_groups <- df_mca_groups_belaege_plot %>% filter(szenario == "Szenario 3: Radikaler Lebenszyklus")
 
 plot_s3_stack <- ggplot(data_s3_groups,
        aes(x = gruppen_score,
-           y = fct_reorder(option, MCA_gesamtscore), # lc
-           fill = group_id)) +
-  geom_col(position = "stack") +
+           y = fct_reorder(option, MCA_gesamtscore), 
+           fill = group_label_clean)) + 
+  geom_col(position = "stack", width = 0.7) +
+  
+  scale_x_continuous(limits = c(0, 1), expand = c(0, 0.05)) +
+  scale_y_discrete(labels = function(x) stringr::str_wrap(x, width = 40)) +
+  
+  scale_fill_manual(values = colors_gruppen) +
+  
   labs(
-    title = "MCA Detail Beläge: Szenario 3 - Radikaler Lebenszyklus",
-    subtitle = "Zusammensetzung des Scores",
-    x = "MCA Score (Anteil)", y = "Belagsoption", fill = "Kriteriengruppe" # lc
+    title = NULL, 
+    x = "Beitrag zum Score", 
+    y = NULL, 
+    fill = "Kriteriengruppe"
   ) +
-  theme_minimal() +
-  theme(legend.position = "top", axis.text.y = element_text(size = 8))
+  theme_classic(base_size = 11) + 
+  theme(
+    legend.position = "bottom",
+    legend.text = element_text(size = 9), 
+    legend.title = element_text(face = "bold"),
+    legend.box = "vertical",
+    panel.grid.major.y = element_blank(),
+    panel.grid.major.x = element_line(color = "grey90", linewidth = 0.2),
+    axis.text = element_text(color = "black"),
+    plot.margin = margin(t = 5, r = 10, b = 5, l = 5, unit = "mm")
+  ) +
+  guides(fill = guide_legend(nrow = 2, byrow = TRUE))
 
 print(plot_s3_stack)
 ggsave("02_export/plots/mca_detail_gruppen_s3_belaege.png",
-       plot = plot_s3_stack, width = 13, height = 8, units = "in", dpi = 300)
-
-# --- PRÜFUNG BLOCK 8 ---
-
-print("--- Check 1: Stimmt die Summe der Gruppen mit dem Gesamtscore überein? ---")
-# Wir nehmen stichprobenartig den ersten Eintrag
-check_summe <- df_mca_groups_belaege_plot %>%
-  group_by(szenario, option) %>%
-  summarise(
-    summe_gruppen = sum(gruppen_score), 
-    original_total = mean(MCA_gesamtscore), # Sollte überall gleich sein
-    .groups = "drop"
-  ) %>%
-  mutate(differenz = abs(summe_gruppen - original_total)) %>%
-  arrange(desc(differenz)) %>%
-  head(5)
-
-print(check_summe)
-# Die "differenz" sollte 0 (oder fast 0, z.B. 1e-15 wegen Rundung) sein.
-
-print("--- Check 2: Wurden die Daten für S0 korrekt gefiltert? ---")
-df_mca_groups_belaege_plot %>%
-  filter(szenario == "Szenario 0: Baseline (IST)") %>%
-  select(option, group_id, gruppen_score) %>%
-  head(5)
+       plot = plot_s3_stack, width = 10, height = 7, dpi = 300)
 ```
 
 
