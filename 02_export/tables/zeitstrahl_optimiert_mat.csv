@@ -1,0 +1,67 @@
+szenario;kategorie;komponente;lebensdauer;sanierungs_jahr;is_fix;jahr_optimiert;wurde_verschoben
+Szenario 0: Baseline (IST);Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);35,0;35,0;FALSE;35,0;FALSE
+Szenario 0: Baseline (IST);Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);35,0;70,0;FALSE;70,0;FALSE
+Szenario 0: Baseline (IST);Leitung;Elektro (Kabel) (Mat.);80,0;80,0;TRUE;80,0;FALSE
+Szenario 0: Baseline (IST);Leitung;Elektro (Rohrblock) (Mat.);100,0;100,0;TRUE;100,0;FALSE
+Szenario 0: Baseline (IST);Leitung;Fernwärme (Mat.);70,0;70,0;TRUE;70,0;FALSE
+Szenario 0: Baseline (IST);Pflaster;Natursteinpflaster (sickerfähig, 6-10 mm Fugen);45,0;45,0;FALSE;45,0;FALSE
+Szenario 0: Baseline (IST);Pflaster;Natursteinpflaster (sickerfähig, 6-10 mm Fugen);45,0;90,0;FALSE;100,0;TRUE
+Szenario 0: Baseline (IST);Grosskronige Arten;Quercus petraea (Traubeneiche);100,0;100,0;FALSE;100,0;FALSE
+Szenario 0: Baseline (IST);Grosskronige Arten;Quercus robur (Stieleiche);100,0;100,0;FALSE;100,0;FALSE
+Szenario 0: Baseline (IST);Asphalt;Selbstheilender Asphalt;42,5;42,5;FALSE;42,5;FALSE
+Szenario 0: Baseline (IST);Asphalt;Selbstheilender Asphalt;42,5;85,0;FALSE;70,0;TRUE
+Szenario 0: Baseline (IST);Leitung;Telekommunikation (Kabel) (Mat.);50,0;50,0;TRUE;50,0;FALSE
+Szenario 0: Baseline (IST);Leitung;Telekommunikation (Kabel) (Mat.);50,0;100,0;TRUE;100,0;FALSE
+Szenario 0: Baseline (IST);Grosskronige Arten;Tilia × europaea ‘Pallida’ (Kaiser-Linde, Holländische Linde);100,0;100,0;FALSE;100,0;FALSE
+Szenario 0: Baseline (IST);Leitung;Wasser (Mat.);100,0;100,0;TRUE;100,0;FALSE
+Szenario 1: Forschungsfokus;Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);35,0;35,0;FALSE;35,0;FALSE
+Szenario 1: Forschungsfokus;Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);35,0;70,0;FALSE;70,0;FALSE
+Szenario 1: Forschungsfokus;Leitung;Elektro (Kabel) (Mat.);80,0;80,0;TRUE;80,0;FALSE
+Szenario 1: Forschungsfokus;Leitung;Elektro (Rohrblock) (Mat.);100,0;100,0;TRUE;100,0;FALSE
+Szenario 1: Forschungsfokus;Leitung;Fernwärme (Mat.);70,0;70,0;TRUE;70,0;FALSE
+Szenario 1: Forschungsfokus;Pflaster;Natursteinpflaster (sickerfähig, 6-10 mm Fugen);45,0;45,0;FALSE;45,0;FALSE
+Szenario 1: Forschungsfokus;Pflaster;Natursteinpflaster (sickerfähig, 6-10 mm Fugen);45,0;90,0;FALSE;100,0;TRUE
+Szenario 1: Forschungsfokus;Grosskronige Arten;Quercus petraea (Traubeneiche);100,0;100,0;FALSE;100,0;FALSE
+Szenario 1: Forschungsfokus;Grosskronige Arten;Quercus robur (Stieleiche);100,0;100,0;FALSE;100,0;FALSE
+Szenario 1: Forschungsfokus;Asphalt;Selbstheilender Asphalt;42,5;42,5;FALSE;42,5;FALSE
+Szenario 1: Forschungsfokus;Asphalt;Selbstheilender Asphalt;42,5;85,0;FALSE;70,0;TRUE
+Szenario 1: Forschungsfokus;Leitung;Telekommunikation (Kabel) (Mat.);50,0;50,0;TRUE;50,0;FALSE
+Szenario 1: Forschungsfokus;Leitung;Telekommunikation (Kabel) (Mat.);50,0;100,0;TRUE;100,0;FALSE
+Szenario 1: Forschungsfokus;Grosskronige Arten;Tilia × europaea ‘Pallida’ (Kaiser-Linde, Holländische Linde);100,0;100,0;FALSE;100,0;FALSE
+Szenario 1: Forschungsfokus;Leitung;Wasser (Mat.);100,0;100,0;TRUE;100,0;FALSE
+Szenario 2: Radikale Vermeidung;Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);35,0;35,0;FALSE;35,0;FALSE
+Szenario 2: Radikale Vermeidung;Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);35,0;70,0;FALSE;70,0;FALSE
+Szenario 2: Radikale Vermeidung;Sickerbeläge;Chaussierung;12,5;12,5;FALSE;12,5;FALSE
+Szenario 2: Radikale Vermeidung;Sickerbeläge;Chaussierung;12,5;25,0;FALSE;25,0;FALSE
+Szenario 2: Radikale Vermeidung;Sickerbeläge;Chaussierung;12,5;37,5;FALSE;37,5;FALSE
+Szenario 2: Radikale Vermeidung;Sickerbeläge;Chaussierung;12,5;50,0;FALSE;50,0;FALSE
+Szenario 2: Radikale Vermeidung;Sickerbeläge;Chaussierung;12,5;62,5;FALSE;70,0;TRUE
+Szenario 2: Radikale Vermeidung;Sickerbeläge;Chaussierung;12,5;75,0;FALSE;70,0;TRUE
+Szenario 2: Radikale Vermeidung;Sickerbeläge;Chaussierung;12,5;87,5;FALSE;100,0;TRUE
+Szenario 2: Radikale Vermeidung;Sickerbeläge;Chaussierung;12,5;100,0;FALSE;100,0;FALSE
+Szenario 2: Radikale Vermeidung;Leitung;Elektro (Kabel) (Mat.);80,0;80,0;TRUE;80,0;FALSE
+Szenario 2: Radikale Vermeidung;Leitung;Elektro (Rohrblock) (Mat.);100,0;100,0;TRUE;100,0;FALSE
+Szenario 2: Radikale Vermeidung;Leitung;Fernwärme (Mat.);70,0;70,0;TRUE;70,0;FALSE
+Szenario 2: Radikale Vermeidung;Pflaster;Natursteinpflaster (sickerfähig, 6-10 mm Fugen);45,0;45,0;FALSE;45,0;FALSE
+Szenario 2: Radikale Vermeidung;Pflaster;Natursteinpflaster (sickerfähig, 6-10 mm Fugen);45,0;90,0;FALSE;100,0;TRUE
+Szenario 2: Radikale Vermeidung;Grosskronige Arten;Quercus petraea (Traubeneiche);100,0;100,0;FALSE;100,0;FALSE
+Szenario 2: Radikale Vermeidung;Grosskronige Arten;Quercus robur (Stieleiche);100,0;100,0;FALSE;100,0;FALSE
+Szenario 2: Radikale Vermeidung;Leitung;Telekommunikation (Kabel) (Mat.);50,0;50,0;TRUE;50,0;FALSE
+Szenario 2: Radikale Vermeidung;Leitung;Telekommunikation (Kabel) (Mat.);50,0;100,0;TRUE;100,0;FALSE
+Szenario 2: Radikale Vermeidung;Grosskronige Arten;Tilia × europaea ‘Pallida’ (Kaiser-Linde, Holländische Linde);100,0;100,0;FALSE;100,0;FALSE
+Szenario 2: Radikale Vermeidung;Leitung;Wasser (Mat.);100,0;100,0;TRUE;100,0;FALSE
+Szenario 3: Radikaler Lebenszyklus;Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);35,0;35,0;FALSE;35,0;FALSE
+Szenario 3: Radikaler Lebenszyklus;Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);35,0;70,0;FALSE;70,0;FALSE
+Szenario 3: Radikaler Lebenszyklus;Leitung;Elektro (Kabel) (Mat.);80,0;80,0;TRUE;80,0;FALSE
+Szenario 3: Radikaler Lebenszyklus;Leitung;Elektro (Rohrblock) (Mat.);100,0;100,0;TRUE;100,0;FALSE
+Szenario 3: Radikaler Lebenszyklus;Leitung;Fernwärme (Mat.);70,0;70,0;TRUE;70,0;FALSE
+Szenario 3: Radikaler Lebenszyklus;Pflaster;Natursteinpflaster (sickerfähig, 6-10 mm Fugen);45,0;45,0;FALSE;45,0;FALSE
+Szenario 3: Radikaler Lebenszyklus;Pflaster;Natursteinpflaster (sickerfähig, 6-10 mm Fugen);45,0;90,0;FALSE;100,0;TRUE
+Szenario 3: Radikaler Lebenszyklus;Grosskronige Arten;Quercus petraea (Traubeneiche);100,0;100,0;FALSE;100,0;FALSE
+Szenario 3: Radikaler Lebenszyklus;Grosskronige Arten;Quercus robur (Stieleiche);100,0;100,0;FALSE;100,0;FALSE
+Szenario 3: Radikaler Lebenszyklus;Asphalt;Selbstheilender Asphalt;42,5;42,5;FALSE;42,5;FALSE
+Szenario 3: Radikaler Lebenszyklus;Asphalt;Selbstheilender Asphalt;42,5;85,0;FALSE;70,0;TRUE
+Szenario 3: Radikaler Lebenszyklus;Leitung;Telekommunikation (Kabel) (Mat.);50,0;50,0;TRUE;50,0;FALSE
+Szenario 3: Radikaler Lebenszyklus;Leitung;Telekommunikation (Kabel) (Mat.);50,0;100,0;TRUE;100,0;FALSE
+Szenario 3: Radikaler Lebenszyklus;Kleine Arten;Ulmus ‘New Horizon’ (Hybridulme);100,0;100,0;FALSE;100,0;FALSE
+Szenario 3: Radikaler Lebenszyklus;Leitung;Wasser (Mat.);100,0;100,0;TRUE;100,0;FALSE
