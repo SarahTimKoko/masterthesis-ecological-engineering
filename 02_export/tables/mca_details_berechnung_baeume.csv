@@ -23,10 +23,10 @@ Grosskronige Arten;Quercus robur (Stieleiche);kuehlung;5,0;Szenario 0: Baseline 
 Grosskronige Arten;Quercus robur (Stieleiche);kuehlung;5,0;Szenario 1: Forschungsfokus;0,01250;multifunktionale_nutzungsqualitaet;1,5;5,0;1,0000000000000000;0,012500000000000001
 Grosskronige Arten;Quercus robur (Stieleiche);kuehlung;5,0;Szenario 2: Radikale Vermeidung;0,00625;multifunktionale_nutzungsqualitaet;1,5;5,0;1,0000000000000000;0,006250000000000000
 Grosskronige Arten;Quercus robur (Stieleiche);kuehlung;5,0;Szenario 3: Radikaler Lebenszyklus;0,01250;multifunktionale_nutzungsqualitaet;1,5;5,0;1,0000000000000000;0,012500000000000001
-Grosskronige Arten;Quercus robur (Stieleiche);co2_bindung;50,0;Szenario 0: Baseline (IST);0,10000;umweltbelastung;27,5;50,0;1,0000000000000000;0,100000000000000006
-Grosskronige Arten;Quercus robur (Stieleiche);co2_bindung;50,0;Szenario 1: Forschungsfokus;0,25000;umweltbelastung;27,5;50,0;1,0000000000000000;0,250000000000000000
-Grosskronige Arten;Quercus robur (Stieleiche);co2_bindung;50,0;Szenario 2: Radikale Vermeidung;0,45000;umweltbelastung;27,5;50,0;1,0000000000000000;0,450000000000000011
-Grosskronige Arten;Quercus robur (Stieleiche);co2_bindung;50,0;Szenario 3: Radikaler Lebenszyklus;0,05000;umweltbelastung;27,5;50,0;1,0000000000000000;0,050000000000000003
+Grosskronige Arten;Quercus robur (Stieleiche);co2_bindung;50,0;Szenario 0: Baseline (IST);0,10000;umweltwirkung;27,5;50,0;1,0000000000000000;0,100000000000000006
+Grosskronige Arten;Quercus robur (Stieleiche);co2_bindung;50,0;Szenario 1: Forschungsfokus;0,25000;umweltwirkung;27,5;50,0;1,0000000000000000;0,250000000000000000
+Grosskronige Arten;Quercus robur (Stieleiche);co2_bindung;50,0;Szenario 2: Radikale Vermeidung;0,45000;umweltwirkung;27,5;50,0;1,0000000000000000;0,450000000000000011
+Grosskronige Arten;Quercus robur (Stieleiche);co2_bindung;50,0;Szenario 3: Radikaler Lebenszyklus;0,05000;umweltwirkung;27,5;50,0;1,0000000000000000;0,050000000000000003
 Grosskronige Arten;Quercus robur (Stieleiche);regenwasser;325,0;Szenario 0: Baseline (IST);0,05000;multifunktionale_nutzungsqualitaet;115,0;325,0;1,0000000000000000;0,050000000000000003
 Grosskronige Arten;Quercus robur (Stieleiche);regenwasser;325,0;Szenario 1: Forschungsfokus;0,01250;multifunktionale_nutzungsqualitaet;115,0;325,0;1,0000000000000000;0,012500000000000001
 Grosskronige Arten;Quercus robur (Stieleiche);regenwasser;325,0;Szenario 2: Radikale Vermeidung;0,00625;multifunktionale_nutzungsqualitaet;115,0;325,0;1,0000000000000000;0,006250000000000000
@@ -67,10 +67,10 @@ Grosskronige Arten;Quercus petraea (Traubeneiche);kuehlung;5,0;Szenario 0: Basel
 Grosskronige Arten;Quercus petraea (Traubeneiche);kuehlung;5,0;Szenario 1: Forschungsfokus;0,01250;multifunktionale_nutzungsqualitaet;1,5;5,0;1,0000000000000000;0,012500000000000001
 Grosskronige Arten;Quercus petraea (Traubeneiche);kuehlung;5,0;Szenario 2: Radikale Vermeidung;0,00625;multifunktionale_nutzungsqualitaet;1,5;5,0;1,0000000000000000;0,006250000000000000
 Grosskronige Arten;Quercus petraea (Traubeneiche);kuehlung;5,0;Szenario 3: Radikaler Lebenszyklus;0,01250;multifunktionale_nutzungsqualitaet;1,5;5,0;1,0000000000000000;0,012500000000000001
-Grosskronige Arten;Quercus petraea (Traubeneiche);co2_bindung;50,0;Szenario 0: Baseline (IST);0,10000;umweltbelastung;27,5;50,0;1,0000000000000000;0,100000000000000006
-Grosskronige Arten;Quercus petraea (Traubeneiche);co2_bindung;50,0;Szenario 1: Forschungsfokus;0,25000;umweltbelastung;27,5;50,0;1,0000000000000000;0,250000000000000000
-Grosskronige Arten;Quercus petraea (Traubeneiche);co2_bindung;50,0;Szenario 2: Radikale Vermeidung;0,45000;umweltbelastung;27,5;50,0;1,0000000000000000;0,450000000000000011
-Grosskronige Arten;Quercus petraea (Traubeneiche);co2_bindung;50,0;Szenario 3: Radikaler Lebenszyklus;0,05000;umweltbelastung;27,5;50,0;1,0000000000000000;0,050000000000000003
+Grosskronige Arten;Quercus petraea (Traubeneiche);co2_bindung;50,0;Szenario 0: Baseline (IST);0,10000;umweltwirkung;27,5;50,0;1,0000000000000000;0,100000000000000006
+Grosskronige Arten;Quercus petraea (Traubeneiche);co2_bindung;50,0;Szenario 1: Forschungsfokus;0,25000;umweltwirkung;27,5;50,0;1,0000000000000000;0,250000000000000000
+Grosskronige Arten;Quercus petraea (Traubeneiche);co2_bindung;50,0;Szenario 2: Radikale Vermeidung;0,45000;umweltwirkung;27,5;50,0;1,0000000000000000;0,450000000000000011
+Grosskronige Arten;Quercus petraea (Traubeneiche);co2_bindung;50,0;Szenario 3: Radikaler Lebenszyklus;0,05000;umweltwirkung;27,5;50,0;1,0000000000000000;0,050000000000000003
 Grosskronige Arten;Quercus petraea (Traubeneiche);regenwasser;325,0;Szenario 0: Baseline (IST);0,05000;multifunktionale_nutzungsqualitaet;115,0;325,0;1,0000000000000000;0,050000000000000003
 Grosskronige Arten;Quercus petraea (Traubeneiche);regenwasser;325,0;Szenario 1: Forschungsfokus;0,01250;multifunktionale_nutzungsqualitaet;115,0;325,0;1,0000000000000000;0,012500000000000001
 Grosskronige Arten;Quercus petraea (Traubeneiche);regenwasser;325,0;Szenario 2: Radikale Vermeidung;0,00625;multifunktionale_nutzungsqualitaet;115,0;325,0;1,0000000000000000;0,006250000000000000
@@ -111,10 +111,10 @@ Grosskronige Arten;Tilia tomentosa (Silber-Linde);kuehlung;5,0;Szenario 0: Basel
 Grosskronige Arten;Tilia tomentosa (Silber-Linde);kuehlung;5,0;Szenario 1: Forschungsfokus;0,01250;multifunktionale_nutzungsqualitaet;1,5;5,0;1,0000000000000000;0,012500000000000001
 Grosskronige Arten;Tilia tomentosa (Silber-Linde);kuehlung;5,0;Szenario 2: Radikale Vermeidung;0,00625;multifunktionale_nutzungsqualitaet;1,5;5,0;1,0000000000000000;0,006250000000000000
 Grosskronige Arten;Tilia tomentosa (Silber-Linde);kuehlung;5,0;Szenario 3: Radikaler Lebenszyklus;0,01250;multifunktionale_nutzungsqualitaet;1,5;5,0;1,0000000000000000;0,012500000000000001
-Grosskronige Arten;Tilia tomentosa (Silber-Linde);co2_bindung;50,0;Szenario 0: Baseline (IST);0,10000;umweltbelastung;27,5;50,0;1,0000000000000000;0,100000000000000006
-Grosskronige Arten;Tilia tomentosa (Silber-Linde);co2_bindung;50,0;Szenario 1: Forschungsfokus;0,25000;umweltbelastung;27,5;50,0;1,0000000000000000;0,250000000000000000
-Grosskronige Arten;Tilia tomentosa (Silber-Linde);co2_bindung;50,0;Szenario 2: Radikale Vermeidung;0,45000;umweltbelastung;27,5;50,0;1,0000000000000000;0,450000000000000011
-Grosskronige Arten;Tilia tomentosa (Silber-Linde);co2_bindung;50,0;Szenario 3: Radikaler Lebenszyklus;0,05000;umweltbelastung;27,5;50,0;1,0000000000000000;0,050000000000000003
+Grosskronige Arten;Tilia tomentosa (Silber-Linde);co2_bindung;50,0;Szenario 0: Baseline (IST);0,10000;umweltwirkung;27,5;50,0;1,0000000000000000;0,100000000000000006
+Grosskronige Arten;Tilia tomentosa (Silber-Linde);co2_bindung;50,0;Szenario 1: Forschungsfokus;0,25000;umweltwirkung;27,5;50,0;1,0000000000000000;0,250000000000000000
+Grosskronige Arten;Tilia tomentosa (Silber-Linde);co2_bindung;50,0;Szenario 2: Radikale Vermeidung;0,45000;umweltwirkung;27,5;50,0;1,0000000000000000;0,450000000000000011
+Grosskronige Arten;Tilia tomentosa (Silber-Linde);co2_bindung;50,0;Szenario 3: Radikaler Lebenszyklus;0,05000;umweltwirkung;27,5;50,0;1,0000000000000000;0,050000000000000003
 Grosskronige Arten;Tilia tomentosa (Silber-Linde);regenwasser;325,0;Szenario 0: Baseline (IST);0,05000;multifunktionale_nutzungsqualitaet;115,0;325,0;1,0000000000000000;0,050000000000000003
 Grosskronige Arten;Tilia tomentosa (Silber-Linde);regenwasser;325,0;Szenario 1: Forschungsfokus;0,01250;multifunktionale_nutzungsqualitaet;115,0;325,0;1,0000000000000000;0,012500000000000001
 Grosskronige Arten;Tilia tomentosa (Silber-Linde);regenwasser;325,0;Szenario 2: Radikale Vermeidung;0,00625;multifunktionale_nutzungsqualitaet;115,0;325,0;1,0000000000000000;0,006250000000000000
@@ -155,10 +155,10 @@ Mittelgrosse Arten;Tilia cordata (Winterlinde);kuehlung;3,0;Szenario 0: Baseline
 Mittelgrosse Arten;Tilia cordata (Winterlinde);kuehlung;3,0;Szenario 1: Forschungsfokus;0,01250;multifunktionale_nutzungsqualitaet;1,5;5,0;0,4285714285714285;0,005357142857142857
 Mittelgrosse Arten;Tilia cordata (Winterlinde);kuehlung;3,0;Szenario 2: Radikale Vermeidung;0,00625;multifunktionale_nutzungsqualitaet;1,5;5,0;0,4285714285714285;0,002678571428571429
 Mittelgrosse Arten;Tilia cordata (Winterlinde);kuehlung;3,0;Szenario 3: Radikaler Lebenszyklus;0,01250;multifunktionale_nutzungsqualitaet;1,5;5,0;0,4285714285714285;0,005357142857142857
-Mittelgrosse Arten;Tilia cordata (Winterlinde);co2_bindung;37,5;Szenario 0: Baseline (IST);0,10000;umweltbelastung;27,5;50,0;0,4444444444444444;0,044444444444444446
-Mittelgrosse Arten;Tilia cordata (Winterlinde);co2_bindung;37,5;Szenario 1: Forschungsfokus;0,25000;umweltbelastung;27,5;50,0;0,4444444444444444;0,111111111111111105
-Mittelgrosse Arten;Tilia cordata (Winterlinde);co2_bindung;37,5;Szenario 2: Radikale Vermeidung;0,45000;umweltbelastung;27,5;50,0;0,4444444444444444;0,199999999999999983
-Mittelgrosse Arten;Tilia cordata (Winterlinde);co2_bindung;37,5;Szenario 3: Radikaler Lebenszyklus;0,05000;umweltbelastung;27,5;50,0;0,4444444444444444;0,022222222222222223
+Mittelgrosse Arten;Tilia cordata (Winterlinde);co2_bindung;37,5;Szenario 0: Baseline (IST);0,10000;umweltwirkung;27,5;50,0;0,4444444444444444;0,044444444444444446
+Mittelgrosse Arten;Tilia cordata (Winterlinde);co2_bindung;37,5;Szenario 1: Forschungsfokus;0,25000;umweltwirkung;27,5;50,0;0,4444444444444444;0,111111111111111105
+Mittelgrosse Arten;Tilia cordata (Winterlinde);co2_bindung;37,5;Szenario 2: Radikale Vermeidung;0,45000;umweltwirkung;27,5;50,0;0,4444444444444444;0,199999999999999983
+Mittelgrosse Arten;Tilia cordata (Winterlinde);co2_bindung;37,5;Szenario 3: Radikaler Lebenszyklus;0,05000;umweltwirkung;27,5;50,0;0,4444444444444444;0,022222222222222223
 Mittelgrosse Arten;Tilia cordata (Winterlinde);regenwasser;200,0;Szenario 0: Baseline (IST);0,05000;multifunktionale_nutzungsqualitaet;115,0;325,0;0,4047619047619048;0,020238095238095239
 Mittelgrosse Arten;Tilia cordata (Winterlinde);regenwasser;200,0;Szenario 1: Forschungsfokus;0,01250;multifunktionale_nutzungsqualitaet;115,0;325,0;0,4047619047619048;0,005059523809523810
 Mittelgrosse Arten;Tilia cordata (Winterlinde);regenwasser;200,0;Szenario 2: Radikale Vermeidung;0,00625;multifunktionale_nutzungsqualitaet;115,0;325,0;0,4047619047619048;0,002529761904761905
@@ -199,10 +199,10 @@ Grosskronige Arten;Tilia × europaea ‘Pallida’ (Kaiser-Linde, Holländische 
 Grosskronige Arten;Tilia × europaea ‘Pallida’ (Kaiser-Linde, Holländische Linde);kuehlung;5,0;Szenario 1: Forschungsfokus;0,01250;multifunktionale_nutzungsqualitaet;1,5;5,0;1,0000000000000000;0,012500000000000001
 Grosskronige Arten;Tilia × europaea ‘Pallida’ (Kaiser-Linde, Holländische Linde);kuehlung;5,0;Szenario 2: Radikale Vermeidung;0,00625;multifunktionale_nutzungsqualitaet;1,5;5,0;1,0000000000000000;0,006250000000000000
 Grosskronige Arten;Tilia × europaea ‘Pallida’ (Kaiser-Linde, Holländische Linde);kuehlung;5,0;Szenario 3: Radikaler Lebenszyklus;0,01250;multifunktionale_nutzungsqualitaet;1,5;5,0;1,0000000000000000;0,012500000000000001
-Grosskronige Arten;Tilia × europaea ‘Pallida’ (Kaiser-Linde, Holländische Linde);co2_bindung;50,0;Szenario 0: Baseline (IST);0,10000;umweltbelastung;27,5;50,0;1,0000000000000000;0,100000000000000006
-Grosskronige Arten;Tilia × europaea ‘Pallida’ (Kaiser-Linde, Holländische Linde);co2_bindung;50,0;Szenario 1: Forschungsfokus;0,25000;umweltbelastung;27,5;50,0;1,0000000000000000;0,250000000000000000
-Grosskronige Arten;Tilia × europaea ‘Pallida’ (Kaiser-Linde, Holländische Linde);co2_bindung;50,0;Szenario 2: Radikale Vermeidung;0,45000;umweltbelastung;27,5;50,0;1,0000000000000000;0,450000000000000011
-Grosskronige Arten;Tilia × europaea ‘Pallida’ (Kaiser-Linde, Holländische Linde);co2_bindung;50,0;Szenario 3: Radikaler Lebenszyklus;0,05000;umweltbelastung;27,5;50,0;1,0000000000000000;0,050000000000000003
+Grosskronige Arten;Tilia × europaea ‘Pallida’ (Kaiser-Linde, Holländische Linde);co2_bindung;50,0;Szenario 0: Baseline (IST);0,10000;umweltwirkung;27,5;50,0;1,0000000000000000;0,100000000000000006
+Grosskronige Arten;Tilia × europaea ‘Pallida’ (Kaiser-Linde, Holländische Linde);co2_bindung;50,0;Szenario 1: Forschungsfokus;0,25000;umweltwirkung;27,5;50,0;1,0000000000000000;0,250000000000000000
+Grosskronige Arten;Tilia × europaea ‘Pallida’ (Kaiser-Linde, Holländische Linde);co2_bindung;50,0;Szenario 2: Radikale Vermeidung;0,45000;umweltwirkung;27,5;50,0;1,0000000000000000;0,450000000000000011
+Grosskronige Arten;Tilia × europaea ‘Pallida’ (Kaiser-Linde, Holländische Linde);co2_bindung;50,0;Szenario 3: Radikaler Lebenszyklus;0,05000;umweltwirkung;27,5;50,0;1,0000000000000000;0,050000000000000003
 Grosskronige Arten;Tilia × europaea ‘Pallida’ (Kaiser-Linde, Holländische Linde);regenwasser;325,0;Szenario 0: Baseline (IST);0,05000;multifunktionale_nutzungsqualitaet;115,0;325,0;1,0000000000000000;0,050000000000000003
 Grosskronige Arten;Tilia × europaea ‘Pallida’ (Kaiser-Linde, Holländische Linde);regenwasser;325,0;Szenario 1: Forschungsfokus;0,01250;multifunktionale_nutzungsqualitaet;115,0;325,0;1,0000000000000000;0,012500000000000001
 Grosskronige Arten;Tilia × europaea ‘Pallida’ (Kaiser-Linde, Holländische Linde);regenwasser;325,0;Szenario 2: Radikale Vermeidung;0,00625;multifunktionale_nutzungsqualitaet;115,0;325,0;1,0000000000000000;0,006250000000000000
@@ -243,10 +243,10 @@ Grosskronige Arten;Liriodendron tulipifera (Tulpenbaum);kuehlung;5,0;Szenario 0:
 Grosskronige Arten;Liriodendron tulipifera (Tulpenbaum);kuehlung;5,0;Szenario 1: Forschungsfokus;0,01250;multifunktionale_nutzungsqualitaet;1,5;5,0;1,0000000000000000;0,012500000000000001
 Grosskronige Arten;Liriodendron tulipifera (Tulpenbaum);kuehlung;5,0;Szenario 2: Radikale Vermeidung;0,00625;multifunktionale_nutzungsqualitaet;1,5;5,0;1,0000000000000000;0,006250000000000000
 Grosskronige Arten;Liriodendron tulipifera (Tulpenbaum);kuehlung;5,0;Szenario 3: Radikaler Lebenszyklus;0,01250;multifunktionale_nutzungsqualitaet;1,5;5,0;1,0000000000000000;0,012500000000000001
-Grosskronige Arten;Liriodendron tulipifera (Tulpenbaum);co2_bindung;50,0;Szenario 0: Baseline (IST);0,10000;umweltbelastung;27,5;50,0;1,0000000000000000;0,100000000000000006
-Grosskronige Arten;Liriodendron tulipifera (Tulpenbaum);co2_bindung;50,0;Szenario 1: Forschungsfokus;0,25000;umweltbelastung;27,5;50,0;1,0000000000000000;0,250000000000000000
-Grosskronige Arten;Liriodendron tulipifera (Tulpenbaum);co2_bindung;50,0;Szenario 2: Radikale Vermeidung;0,45000;umweltbelastung;27,5;50,0;1,0000000000000000;0,450000000000000011
-Grosskronige Arten;Liriodendron tulipifera (Tulpenbaum);co2_bindung;50,0;Szenario 3: Radikaler Lebenszyklus;0,05000;umweltbelastung;27,5;50,0;1,0000000000000000;0,050000000000000003
+Grosskronige Arten;Liriodendron tulipifera (Tulpenbaum);co2_bindung;50,0;Szenario 0: Baseline (IST);0,10000;umweltwirkung;27,5;50,0;1,0000000000000000;0,100000000000000006
+Grosskronige Arten;Liriodendron tulipifera (Tulpenbaum);co2_bindung;50,0;Szenario 1: Forschungsfokus;0,25000;umweltwirkung;27,5;50,0;1,0000000000000000;0,250000000000000000
+Grosskronige Arten;Liriodendron tulipifera (Tulpenbaum);co2_bindung;50,0;Szenario 2: Radikale Vermeidung;0,45000;umweltwirkung;27,5;50,0;1,0000000000000000;0,450000000000000011
+Grosskronige Arten;Liriodendron tulipifera (Tulpenbaum);co2_bindung;50,0;Szenario 3: Radikaler Lebenszyklus;0,05000;umweltwirkung;27,5;50,0;1,0000000000000000;0,050000000000000003
 Grosskronige Arten;Liriodendron tulipifera (Tulpenbaum);regenwasser;325,0;Szenario 0: Baseline (IST);0,05000;multifunktionale_nutzungsqualitaet;115,0;325,0;1,0000000000000000;0,050000000000000003
 Grosskronige Arten;Liriodendron tulipifera (Tulpenbaum);regenwasser;325,0;Szenario 1: Forschungsfokus;0,01250;multifunktionale_nutzungsqualitaet;115,0;325,0;1,0000000000000000;0,012500000000000001
 Grosskronige Arten;Liriodendron tulipifera (Tulpenbaum);regenwasser;325,0;Szenario 2: Radikale Vermeidung;0,00625;multifunktionale_nutzungsqualitaet;115,0;325,0;1,0000000000000000;0,006250000000000000
@@ -287,10 +287,10 @@ Mittelgrosse Arten;Liquidambar styraciflua ‘Worplesdon’ (Amberbaum);kuehlung
 Mittelgrosse Arten;Liquidambar styraciflua ‘Worplesdon’ (Amberbaum);kuehlung;3,0;Szenario 1: Forschungsfokus;0,01250;multifunktionale_nutzungsqualitaet;1,5;5,0;0,4285714285714285;0,005357142857142857
 Mittelgrosse Arten;Liquidambar styraciflua ‘Worplesdon’ (Amberbaum);kuehlung;3,0;Szenario 2: Radikale Vermeidung;0,00625;multifunktionale_nutzungsqualitaet;1,5;5,0;0,4285714285714285;0,002678571428571429
 Mittelgrosse Arten;Liquidambar styraciflua ‘Worplesdon’ (Amberbaum);kuehlung;3,0;Szenario 3: Radikaler Lebenszyklus;0,01250;multifunktionale_nutzungsqualitaet;1,5;5,0;0,4285714285714285;0,005357142857142857
-Mittelgrosse Arten;Liquidambar styraciflua ‘Worplesdon’ (Amberbaum);co2_bindung;37,5;Szenario 0: Baseline (IST);0,10000;umweltbelastung;27,5;50,0;0,4444444444444444;0,044444444444444446
-Mittelgrosse Arten;Liquidambar styraciflua ‘Worplesdon’ (Amberbaum);co2_bindung;37,5;Szenario 1: Forschungsfokus;0,25000;umweltbelastung;27,5;50,0;0,4444444444444444;0,111111111111111105
-Mittelgrosse Arten;Liquidambar styraciflua ‘Worplesdon’ (Amberbaum);co2_bindung;37,5;Szenario 2: Radikale Vermeidung;0,45000;umweltbelastung;27,5;50,0;0,4444444444444444;0,199999999999999983
-Mittelgrosse Arten;Liquidambar styraciflua ‘Worplesdon’ (Amberbaum);co2_bindung;37,5;Szenario 3: Radikaler Lebenszyklus;0,05000;umweltbelastung;27,5;50,0;0,4444444444444444;0,022222222222222223
+Mittelgrosse Arten;Liquidambar styraciflua ‘Worplesdon’ (Amberbaum);co2_bindung;37,5;Szenario 0: Baseline (IST);0,10000;umweltwirkung;27,5;50,0;0,4444444444444444;0,044444444444444446
+Mittelgrosse Arten;Liquidambar styraciflua ‘Worplesdon’ (Amberbaum);co2_bindung;37,5;Szenario 1: Forschungsfokus;0,25000;umweltwirkung;27,5;50,0;0,4444444444444444;0,111111111111111105
+Mittelgrosse Arten;Liquidambar styraciflua ‘Worplesdon’ (Amberbaum);co2_bindung;37,5;Szenario 2: Radikale Vermeidung;0,45000;umweltwirkung;27,5;50,0;0,4444444444444444;0,199999999999999983
+Mittelgrosse Arten;Liquidambar styraciflua ‘Worplesdon’ (Amberbaum);co2_bindung;37,5;Szenario 3: Radikaler Lebenszyklus;0,05000;umweltwirkung;27,5;50,0;0,4444444444444444;0,022222222222222223
 Mittelgrosse Arten;Liquidambar styraciflua ‘Worplesdon’ (Amberbaum);regenwasser;200,0;Szenario 0: Baseline (IST);0,05000;multifunktionale_nutzungsqualitaet;115,0;325,0;0,4047619047619048;0,020238095238095239
 Mittelgrosse Arten;Liquidambar styraciflua ‘Worplesdon’ (Amberbaum);regenwasser;200,0;Szenario 1: Forschungsfokus;0,01250;multifunktionale_nutzungsqualitaet;115,0;325,0;0,4047619047619048;0,005059523809523810
 Mittelgrosse Arten;Liquidambar styraciflua ‘Worplesdon’ (Amberbaum);regenwasser;200,0;Szenario 2: Radikale Vermeidung;0,00625;multifunktionale_nutzungsqualitaet;115,0;325,0;0,4047619047619048;0,002529761904761905
@@ -331,10 +331,10 @@ Mittelgrosse Arten;Koelreuteria paniculata (Blasenbaum);kuehlung;3,0;Szenario 0:
 Mittelgrosse Arten;Koelreuteria paniculata (Blasenbaum);kuehlung;3,0;Szenario 1: Forschungsfokus;0,01250;multifunktionale_nutzungsqualitaet;1,5;5,0;0,4285714285714285;0,005357142857142857
 Mittelgrosse Arten;Koelreuteria paniculata (Blasenbaum);kuehlung;3,0;Szenario 2: Radikale Vermeidung;0,00625;multifunktionale_nutzungsqualitaet;1,5;5,0;0,4285714285714285;0,002678571428571429
 Mittelgrosse Arten;Koelreuteria paniculata (Blasenbaum);kuehlung;3,0;Szenario 3: Radikaler Lebenszyklus;0,01250;multifunktionale_nutzungsqualitaet;1,5;5,0;0,4285714285714285;0,005357142857142857
-Mittelgrosse Arten;Koelreuteria paniculata (Blasenbaum);co2_bindung;37,5;Szenario 0: Baseline (IST);0,10000;umweltbelastung;27,5;50,0;0,4444444444444444;0,044444444444444446
-Mittelgrosse Arten;Koelreuteria paniculata (Blasenbaum);co2_bindung;37,5;Szenario 1: Forschungsfokus;0,25000;umweltbelastung;27,5;50,0;0,4444444444444444;0,111111111111111105
-Mittelgrosse Arten;Koelreuteria paniculata (Blasenbaum);co2_bindung;37,5;Szenario 2: Radikale Vermeidung;0,45000;umweltbelastung;27,5;50,0;0,4444444444444444;0,199999999999999983
-Mittelgrosse Arten;Koelreuteria paniculata (Blasenbaum);co2_bindung;37,5;Szenario 3: Radikaler Lebenszyklus;0,05000;umweltbelastung;27,5;50,0;0,4444444444444444;0,022222222222222223
+Mittelgrosse Arten;Koelreuteria paniculata (Blasenbaum);co2_bindung;37,5;Szenario 0: Baseline (IST);0,10000;umweltwirkung;27,5;50,0;0,4444444444444444;0,044444444444444446
+Mittelgrosse Arten;Koelreuteria paniculata (Blasenbaum);co2_bindung;37,5;Szenario 1: Forschungsfokus;0,25000;umweltwirkung;27,5;50,0;0,4444444444444444;0,111111111111111105
+Mittelgrosse Arten;Koelreuteria paniculata (Blasenbaum);co2_bindung;37,5;Szenario 2: Radikale Vermeidung;0,45000;umweltwirkung;27,5;50,0;0,4444444444444444;0,199999999999999983
+Mittelgrosse Arten;Koelreuteria paniculata (Blasenbaum);co2_bindung;37,5;Szenario 3: Radikaler Lebenszyklus;0,05000;umweltwirkung;27,5;50,0;0,4444444444444444;0,022222222222222223
 Mittelgrosse Arten;Koelreuteria paniculata (Blasenbaum);regenwasser;200,0;Szenario 0: Baseline (IST);0,05000;multifunktionale_nutzungsqualitaet;115,0;325,0;0,4047619047619048;0,020238095238095239
 Mittelgrosse Arten;Koelreuteria paniculata (Blasenbaum);regenwasser;200,0;Szenario 1: Forschungsfokus;0,01250;multifunktionale_nutzungsqualitaet;115,0;325,0;0,4047619047619048;0,005059523809523810
 Mittelgrosse Arten;Koelreuteria paniculata (Blasenbaum);regenwasser;200,0;Szenario 2: Radikale Vermeidung;0,00625;multifunktionale_nutzungsqualitaet;115,0;325,0;0,4047619047619048;0,002529761904761905
@@ -375,10 +375,10 @@ Mittelgrosse Arten;Zelkova serrata (Japanische Zelkove);kuehlung;3,0;Szenario 0:
 Mittelgrosse Arten;Zelkova serrata (Japanische Zelkove);kuehlung;3,0;Szenario 1: Forschungsfokus;0,01250;multifunktionale_nutzungsqualitaet;1,5;5,0;0,4285714285714285;0,005357142857142857
 Mittelgrosse Arten;Zelkova serrata (Japanische Zelkove);kuehlung;3,0;Szenario 2: Radikale Vermeidung;0,00625;multifunktionale_nutzungsqualitaet;1,5;5,0;0,4285714285714285;0,002678571428571429
 Mittelgrosse Arten;Zelkova serrata (Japanische Zelkove);kuehlung;3,0;Szenario 3: Radikaler Lebenszyklus;0,01250;multifunktionale_nutzungsqualitaet;1,5;5,0;0,4285714285714285;0,005357142857142857
-Mittelgrosse Arten;Zelkova serrata (Japanische Zelkove);co2_bindung;37,5;Szenario 0: Baseline (IST);0,10000;umweltbelastung;27,5;50,0;0,4444444444444444;0,044444444444444446
-Mittelgrosse Arten;Zelkova serrata (Japanische Zelkove);co2_bindung;37,5;Szenario 1: Forschungsfokus;0,25000;umweltbelastung;27,5;50,0;0,4444444444444444;0,111111111111111105
-Mittelgrosse Arten;Zelkova serrata (Japanische Zelkove);co2_bindung;37,5;Szenario 2: Radikale Vermeidung;0,45000;umweltbelastung;27,5;50,0;0,4444444444444444;0,199999999999999983
-Mittelgrosse Arten;Zelkova serrata (Japanische Zelkove);co2_bindung;37,5;Szenario 3: Radikaler Lebenszyklus;0,05000;umweltbelastung;27,5;50,0;0,4444444444444444;0,022222222222222223
+Mittelgrosse Arten;Zelkova serrata (Japanische Zelkove);co2_bindung;37,5;Szenario 0: Baseline (IST);0,10000;umweltwirkung;27,5;50,0;0,4444444444444444;0,044444444444444446
+Mittelgrosse Arten;Zelkova serrata (Japanische Zelkove);co2_bindung;37,5;Szenario 1: Forschungsfokus;0,25000;umweltwirkung;27,5;50,0;0,4444444444444444;0,111111111111111105
+Mittelgrosse Arten;Zelkova serrata (Japanische Zelkove);co2_bindung;37,5;Szenario 2: Radikale Vermeidung;0,45000;umweltwirkung;27,5;50,0;0,4444444444444444;0,199999999999999983
+Mittelgrosse Arten;Zelkova serrata (Japanische Zelkove);co2_bindung;37,5;Szenario 3: Radikaler Lebenszyklus;0,05000;umweltwirkung;27,5;50,0;0,4444444444444444;0,022222222222222223
 Mittelgrosse Arten;Zelkova serrata (Japanische Zelkove);regenwasser;200,0;Szenario 0: Baseline (IST);0,05000;multifunktionale_nutzungsqualitaet;115,0;325,0;0,4047619047619048;0,020238095238095239
 Mittelgrosse Arten;Zelkova serrata (Japanische Zelkove);regenwasser;200,0;Szenario 1: Forschungsfokus;0,01250;multifunktionale_nutzungsqualitaet;115,0;325,0;0,4047619047619048;0,005059523809523810
 Mittelgrosse Arten;Zelkova serrata (Japanische Zelkove);regenwasser;200,0;Szenario 2: Radikale Vermeidung;0,00625;multifunktionale_nutzungsqualitaet;115,0;325,0;0,4047619047619048;0,002529761904761905
@@ -419,10 +419,10 @@ Mittelgrosse Arten;Aesculus flava (Gelbe Rosskastanie);kuehlung;3,0;Szenario 0: 
 Mittelgrosse Arten;Aesculus flava (Gelbe Rosskastanie);kuehlung;3,0;Szenario 1: Forschungsfokus;0,01250;multifunktionale_nutzungsqualitaet;1,5;5,0;0,4285714285714285;0,005357142857142857
 Mittelgrosse Arten;Aesculus flava (Gelbe Rosskastanie);kuehlung;3,0;Szenario 2: Radikale Vermeidung;0,00625;multifunktionale_nutzungsqualitaet;1,5;5,0;0,4285714285714285;0,002678571428571429
 Mittelgrosse Arten;Aesculus flava (Gelbe Rosskastanie);kuehlung;3,0;Szenario 3: Radikaler Lebenszyklus;0,01250;multifunktionale_nutzungsqualitaet;1,5;5,0;0,4285714285714285;0,005357142857142857
-Mittelgrosse Arten;Aesculus flava (Gelbe Rosskastanie);co2_bindung;37,5;Szenario 0: Baseline (IST);0,10000;umweltbelastung;27,5;50,0;0,4444444444444444;0,044444444444444446
-Mittelgrosse Arten;Aesculus flava (Gelbe Rosskastanie);co2_bindung;37,5;Szenario 1: Forschungsfokus;0,25000;umweltbelastung;27,5;50,0;0,4444444444444444;0,111111111111111105
-Mittelgrosse Arten;Aesculus flava (Gelbe Rosskastanie);co2_bindung;37,5;Szenario 2: Radikale Vermeidung;0,45000;umweltbelastung;27,5;50,0;0,4444444444444444;0,199999999999999983
-Mittelgrosse Arten;Aesculus flava (Gelbe Rosskastanie);co2_bindung;37,5;Szenario 3: Radikaler Lebenszyklus;0,05000;umweltbelastung;27,5;50,0;0,4444444444444444;0,022222222222222223
+Mittelgrosse Arten;Aesculus flava (Gelbe Rosskastanie);co2_bindung;37,5;Szenario 0: Baseline (IST);0,10000;umweltwirkung;27,5;50,0;0,4444444444444444;0,044444444444444446
+Mittelgrosse Arten;Aesculus flava (Gelbe Rosskastanie);co2_bindung;37,5;Szenario 1: Forschungsfokus;0,25000;umweltwirkung;27,5;50,0;0,4444444444444444;0,111111111111111105
+Mittelgrosse Arten;Aesculus flava (Gelbe Rosskastanie);co2_bindung;37,5;Szenario 2: Radikale Vermeidung;0,45000;umweltwirkung;27,5;50,0;0,4444444444444444;0,199999999999999983
+Mittelgrosse Arten;Aesculus flava (Gelbe Rosskastanie);co2_bindung;37,5;Szenario 3: Radikaler Lebenszyklus;0,05000;umweltwirkung;27,5;50,0;0,4444444444444444;0,022222222222222223
 Mittelgrosse Arten;Aesculus flava (Gelbe Rosskastanie);regenwasser;200,0;Szenario 0: Baseline (IST);0,05000;multifunktionale_nutzungsqualitaet;115,0;325,0;0,4047619047619048;0,020238095238095239
 Mittelgrosse Arten;Aesculus flava (Gelbe Rosskastanie);regenwasser;200,0;Szenario 1: Forschungsfokus;0,01250;multifunktionale_nutzungsqualitaet;115,0;325,0;0,4047619047619048;0,005059523809523810
 Mittelgrosse Arten;Aesculus flava (Gelbe Rosskastanie);regenwasser;200,0;Szenario 2: Radikale Vermeidung;0,00625;multifunktionale_nutzungsqualitaet;115,0;325,0;0,4047619047619048;0,002529761904761905
@@ -463,10 +463,10 @@ Mittelgrosse Arten;Parrotia persica (Eisenholzbaum);kuehlung;3,0;Szenario 0: Bas
 Mittelgrosse Arten;Parrotia persica (Eisenholzbaum);kuehlung;3,0;Szenario 1: Forschungsfokus;0,01250;multifunktionale_nutzungsqualitaet;1,5;5,0;0,4285714285714285;0,005357142857142857
 Mittelgrosse Arten;Parrotia persica (Eisenholzbaum);kuehlung;3,0;Szenario 2: Radikale Vermeidung;0,00625;multifunktionale_nutzungsqualitaet;1,5;5,0;0,4285714285714285;0,002678571428571429
 Mittelgrosse Arten;Parrotia persica (Eisenholzbaum);kuehlung;3,0;Szenario 3: Radikaler Lebenszyklus;0,01250;multifunktionale_nutzungsqualitaet;1,5;5,0;0,4285714285714285;0,005357142857142857
-Mittelgrosse Arten;Parrotia persica (Eisenholzbaum);co2_bindung;37,5;Szenario 0: Baseline (IST);0,10000;umweltbelastung;27,5;50,0;0,4444444444444444;0,044444444444444446
-Mittelgrosse Arten;Parrotia persica (Eisenholzbaum);co2_bindung;37,5;Szenario 1: Forschungsfokus;0,25000;umweltbelastung;27,5;50,0;0,4444444444444444;0,111111111111111105
-Mittelgrosse Arten;Parrotia persica (Eisenholzbaum);co2_bindung;37,5;Szenario 2: Radikale Vermeidung;0,45000;umweltbelastung;27,5;50,0;0,4444444444444444;0,199999999999999983
-Mittelgrosse Arten;Parrotia persica (Eisenholzbaum);co2_bindung;37,5;Szenario 3: Radikaler Lebenszyklus;0,05000;umweltbelastung;27,5;50,0;0,4444444444444444;0,022222222222222223
+Mittelgrosse Arten;Parrotia persica (Eisenholzbaum);co2_bindung;37,5;Szenario 0: Baseline (IST);0,10000;umweltwirkung;27,5;50,0;0,4444444444444444;0,044444444444444446
+Mittelgrosse Arten;Parrotia persica (Eisenholzbaum);co2_bindung;37,5;Szenario 1: Forschungsfokus;0,25000;umweltwirkung;27,5;50,0;0,4444444444444444;0,111111111111111105
+Mittelgrosse Arten;Parrotia persica (Eisenholzbaum);co2_bindung;37,5;Szenario 2: Radikale Vermeidung;0,45000;umweltwirkung;27,5;50,0;0,4444444444444444;0,199999999999999983
+Mittelgrosse Arten;Parrotia persica (Eisenholzbaum);co2_bindung;37,5;Szenario 3: Radikaler Lebenszyklus;0,05000;umweltwirkung;27,5;50,0;0,4444444444444444;0,022222222222222223
 Mittelgrosse Arten;Parrotia persica (Eisenholzbaum);regenwasser;200,0;Szenario 0: Baseline (IST);0,05000;multifunktionale_nutzungsqualitaet;115,0;325,0;0,4047619047619048;0,020238095238095239
 Mittelgrosse Arten;Parrotia persica (Eisenholzbaum);regenwasser;200,0;Szenario 1: Forschungsfokus;0,01250;multifunktionale_nutzungsqualitaet;115,0;325,0;0,4047619047619048;0,005059523809523810
 Mittelgrosse Arten;Parrotia persica (Eisenholzbaum);regenwasser;200,0;Szenario 2: Radikale Vermeidung;0,00625;multifunktionale_nutzungsqualitaet;115,0;325,0;0,4047619047619048;0,002529761904761905
@@ -507,10 +507,10 @@ Kleine Arten;Ulmus ‘New Horizon’ (Hybridulme);kuehlung;1,5;Szenario 0: Basel
 Kleine Arten;Ulmus ‘New Horizon’ (Hybridulme);kuehlung;1,5;Szenario 1: Forschungsfokus;0,01250;multifunktionale_nutzungsqualitaet;1,5;5,0;0,0000000000000000;0,000000000000000000
 Kleine Arten;Ulmus ‘New Horizon’ (Hybridulme);kuehlung;1,5;Szenario 2: Radikale Vermeidung;0,00625;multifunktionale_nutzungsqualitaet;1,5;5,0;0,0000000000000000;0,000000000000000000
 Kleine Arten;Ulmus ‘New Horizon’ (Hybridulme);kuehlung;1,5;Szenario 3: Radikaler Lebenszyklus;0,01250;multifunktionale_nutzungsqualitaet;1,5;5,0;0,0000000000000000;0,000000000000000000
-Kleine Arten;Ulmus ‘New Horizon’ (Hybridulme);co2_bindung;27,5;Szenario 0: Baseline (IST);0,10000;umweltbelastung;27,5;50,0;0,0000000000000000;0,000000000000000000
-Kleine Arten;Ulmus ‘New Horizon’ (Hybridulme);co2_bindung;27,5;Szenario 1: Forschungsfokus;0,25000;umweltbelastung;27,5;50,0;0,0000000000000000;0,000000000000000000
-Kleine Arten;Ulmus ‘New Horizon’ (Hybridulme);co2_bindung;27,5;Szenario 2: Radikale Vermeidung;0,45000;umweltbelastung;27,5;50,0;0,0000000000000000;0,000000000000000000
-Kleine Arten;Ulmus ‘New Horizon’ (Hybridulme);co2_bindung;27,5;Szenario 3: Radikaler Lebenszyklus;0,05000;umweltbelastung;27,5;50,0;0,0000000000000000;0,000000000000000000
+Kleine Arten;Ulmus ‘New Horizon’ (Hybridulme);co2_bindung;27,5;Szenario 0: Baseline (IST);0,10000;umweltwirkung;27,5;50,0;0,0000000000000000;0,000000000000000000
+Kleine Arten;Ulmus ‘New Horizon’ (Hybridulme);co2_bindung;27,5;Szenario 1: Forschungsfokus;0,25000;umweltwirkung;27,5;50,0;0,0000000000000000;0,000000000000000000
+Kleine Arten;Ulmus ‘New Horizon’ (Hybridulme);co2_bindung;27,5;Szenario 2: Radikale Vermeidung;0,45000;umweltwirkung;27,5;50,0;0,0000000000000000;0,000000000000000000
+Kleine Arten;Ulmus ‘New Horizon’ (Hybridulme);co2_bindung;27,5;Szenario 3: Radikaler Lebenszyklus;0,05000;umweltwirkung;27,5;50,0;0,0000000000000000;0,000000000000000000
 Kleine Arten;Ulmus ‘New Horizon’ (Hybridulme);regenwasser;115,0;Szenario 0: Baseline (IST);0,05000;multifunktionale_nutzungsqualitaet;115,0;325,0;0,0000000000000000;0,000000000000000000
 Kleine Arten;Ulmus ‘New Horizon’ (Hybridulme);regenwasser;115,0;Szenario 1: Forschungsfokus;0,01250;multifunktionale_nutzungsqualitaet;115,0;325,0;0,0000000000000000;0,000000000000000000
 Kleine Arten;Ulmus ‘New Horizon’ (Hybridulme);regenwasser;115,0;Szenario 2: Radikale Vermeidung;0,00625;multifunktionale_nutzungsqualitaet;115,0;325,0;0,0000000000000000;0,000000000000000000
@@ -551,10 +551,10 @@ Kleine Arten;Acer campestre ‘Elsrijk’ (Feldahorn);kuehlung;1,5;Szenario 0: B
 Kleine Arten;Acer campestre ‘Elsrijk’ (Feldahorn);kuehlung;1,5;Szenario 1: Forschungsfokus;0,01250;multifunktionale_nutzungsqualitaet;1,5;5,0;0,0000000000000000;0,000000000000000000
 Kleine Arten;Acer campestre ‘Elsrijk’ (Feldahorn);kuehlung;1,5;Szenario 2: Radikale Vermeidung;0,00625;multifunktionale_nutzungsqualitaet;1,5;5,0;0,0000000000000000;0,000000000000000000
 Kleine Arten;Acer campestre ‘Elsrijk’ (Feldahorn);kuehlung;1,5;Szenario 3: Radikaler Lebenszyklus;0,01250;multifunktionale_nutzungsqualitaet;1,5;5,0;0,0000000000000000;0,000000000000000000
-Kleine Arten;Acer campestre ‘Elsrijk’ (Feldahorn);co2_bindung;27,5;Szenario 0: Baseline (IST);0,10000;umweltbelastung;27,5;50,0;0,0000000000000000;0,000000000000000000
-Kleine Arten;Acer campestre ‘Elsrijk’ (Feldahorn);co2_bindung;27,5;Szenario 1: Forschungsfokus;0,25000;umweltbelastung;27,5;50,0;0,0000000000000000;0,000000000000000000
-Kleine Arten;Acer campestre ‘Elsrijk’ (Feldahorn);co2_bindung;27,5;Szenario 2: Radikale Vermeidung;0,45000;umweltbelastung;27,5;50,0;0,0000000000000000;0,000000000000000000
-Kleine Arten;Acer campestre ‘Elsrijk’ (Feldahorn);co2_bindung;27,5;Szenario 3: Radikaler Lebenszyklus;0,05000;umweltbelastung;27,5;50,0;0,0000000000000000;0,000000000000000000
+Kleine Arten;Acer campestre ‘Elsrijk’ (Feldahorn);co2_bindung;27,5;Szenario 0: Baseline (IST);0,10000;umweltwirkung;27,5;50,0;0,0000000000000000;0,000000000000000000
+Kleine Arten;Acer campestre ‘Elsrijk’ (Feldahorn);co2_bindung;27,5;Szenario 1: Forschungsfokus;0,25000;umweltwirkung;27,5;50,0;0,0000000000000000;0,000000000000000000
+Kleine Arten;Acer campestre ‘Elsrijk’ (Feldahorn);co2_bindung;27,5;Szenario 2: Radikale Vermeidung;0,45000;umweltwirkung;27,5;50,0;0,0000000000000000;0,000000000000000000
+Kleine Arten;Acer campestre ‘Elsrijk’ (Feldahorn);co2_bindung;27,5;Szenario 3: Radikaler Lebenszyklus;0,05000;umweltwirkung;27,5;50,0;0,0000000000000000;0,000000000000000000
 Kleine Arten;Acer campestre ‘Elsrijk’ (Feldahorn);regenwasser;115,0;Szenario 0: Baseline (IST);0,05000;multifunktionale_nutzungsqualitaet;115,0;325,0;0,0000000000000000;0,000000000000000000
 Kleine Arten;Acer campestre ‘Elsrijk’ (Feldahorn);regenwasser;115,0;Szenario 1: Forschungsfokus;0,01250;multifunktionale_nutzungsqualitaet;115,0;325,0;0,0000000000000000;0,000000000000000000
 Kleine Arten;Acer campestre ‘Elsrijk’ (Feldahorn);regenwasser;115,0;Szenario 2: Radikale Vermeidung;0,00625;multifunktionale_nutzungsqualitaet;115,0;325,0;0,0000000000000000;0,000000000000000000
@@ -595,10 +595,10 @@ Mittelgrosse Arten;Celtis australis (Südlicher Zürgelbaum);kuehlung;3,0;Szenar
 Mittelgrosse Arten;Celtis australis (Südlicher Zürgelbaum);kuehlung;3,0;Szenario 1: Forschungsfokus;0,01250;multifunktionale_nutzungsqualitaet;1,5;5,0;0,4285714285714285;0,005357142857142857
 Mittelgrosse Arten;Celtis australis (Südlicher Zürgelbaum);kuehlung;3,0;Szenario 2: Radikale Vermeidung;0,00625;multifunktionale_nutzungsqualitaet;1,5;5,0;0,4285714285714285;0,002678571428571429
 Mittelgrosse Arten;Celtis australis (Südlicher Zürgelbaum);kuehlung;3,0;Szenario 3: Radikaler Lebenszyklus;0,01250;multifunktionale_nutzungsqualitaet;1,5;5,0;0,4285714285714285;0,005357142857142857
-Mittelgrosse Arten;Celtis australis (Südlicher Zürgelbaum);co2_bindung;37,5;Szenario 0: Baseline (IST);0,10000;umweltbelastung;27,5;50,0;0,4444444444444444;0,044444444444444446
-Mittelgrosse Arten;Celtis australis (Südlicher Zürgelbaum);co2_bindung;37,5;Szenario 1: Forschungsfokus;0,25000;umweltbelastung;27,5;50,0;0,4444444444444444;0,111111111111111105
-Mittelgrosse Arten;Celtis australis (Südlicher Zürgelbaum);co2_bindung;37,5;Szenario 2: Radikale Vermeidung;0,45000;umweltbelastung;27,5;50,0;0,4444444444444444;0,199999999999999983
-Mittelgrosse Arten;Celtis australis (Südlicher Zürgelbaum);co2_bindung;37,5;Szenario 3: Radikaler Lebenszyklus;0,05000;umweltbelastung;27,5;50,0;0,4444444444444444;0,022222222222222223
+Mittelgrosse Arten;Celtis australis (Südlicher Zürgelbaum);co2_bindung;37,5;Szenario 0: Baseline (IST);0,10000;umweltwirkung;27,5;50,0;0,4444444444444444;0,044444444444444446
+Mittelgrosse Arten;Celtis australis (Südlicher Zürgelbaum);co2_bindung;37,5;Szenario 1: Forschungsfokus;0,25000;umweltwirkung;27,5;50,0;0,4444444444444444;0,111111111111111105
+Mittelgrosse Arten;Celtis australis (Südlicher Zürgelbaum);co2_bindung;37,5;Szenario 2: Radikale Vermeidung;0,45000;umweltwirkung;27,5;50,0;0,4444444444444444;0,199999999999999983
+Mittelgrosse Arten;Celtis australis (Südlicher Zürgelbaum);co2_bindung;37,5;Szenario 3: Radikaler Lebenszyklus;0,05000;umweltwirkung;27,5;50,0;0,4444444444444444;0,022222222222222223
 Mittelgrosse Arten;Celtis australis (Südlicher Zürgelbaum);regenwasser;200,0;Szenario 0: Baseline (IST);0,05000;multifunktionale_nutzungsqualitaet;115,0;325,0;0,4047619047619048;0,020238095238095239
 Mittelgrosse Arten;Celtis australis (Südlicher Zürgelbaum);regenwasser;200,0;Szenario 1: Forschungsfokus;0,01250;multifunktionale_nutzungsqualitaet;115,0;325,0;0,4047619047619048;0,005059523809523810
 Mittelgrosse Arten;Celtis australis (Südlicher Zürgelbaum);regenwasser;200,0;Szenario 2: Radikale Vermeidung;0,00625;multifunktionale_nutzungsqualitaet;115,0;325,0;0,4047619047619048;0,002529761904761905
@@ -639,10 +639,10 @@ Mittelgrosse Arten;Ostrya carpinifolia (Hopfenbuche);kuehlung;3,0;Szenario 0: Ba
 Mittelgrosse Arten;Ostrya carpinifolia (Hopfenbuche);kuehlung;3,0;Szenario 1: Forschungsfokus;0,01250;multifunktionale_nutzungsqualitaet;1,5;5,0;0,4285714285714285;0,005357142857142857
 Mittelgrosse Arten;Ostrya carpinifolia (Hopfenbuche);kuehlung;3,0;Szenario 2: Radikale Vermeidung;0,00625;multifunktionale_nutzungsqualitaet;1,5;5,0;0,4285714285714285;0,002678571428571429
 Mittelgrosse Arten;Ostrya carpinifolia (Hopfenbuche);kuehlung;3,0;Szenario 3: Radikaler Lebenszyklus;0,01250;multifunktionale_nutzungsqualitaet;1,5;5,0;0,4285714285714285;0,005357142857142857
-Mittelgrosse Arten;Ostrya carpinifolia (Hopfenbuche);co2_bindung;37,5;Szenario 0: Baseline (IST);0,10000;umweltbelastung;27,5;50,0;0,4444444444444444;0,044444444444444446
-Mittelgrosse Arten;Ostrya carpinifolia (Hopfenbuche);co2_bindung;37,5;Szenario 1: Forschungsfokus;0,25000;umweltbelastung;27,5;50,0;0,4444444444444444;0,111111111111111105
-Mittelgrosse Arten;Ostrya carpinifolia (Hopfenbuche);co2_bindung;37,5;Szenario 2: Radikale Vermeidung;0,45000;umweltbelastung;27,5;50,0;0,4444444444444444;0,199999999999999983
-Mittelgrosse Arten;Ostrya carpinifolia (Hopfenbuche);co2_bindung;37,5;Szenario 3: Radikaler Lebenszyklus;0,05000;umweltbelastung;27,5;50,0;0,4444444444444444;0,022222222222222223
+Mittelgrosse Arten;Ostrya carpinifolia (Hopfenbuche);co2_bindung;37,5;Szenario 0: Baseline (IST);0,10000;umweltwirkung;27,5;50,0;0,4444444444444444;0,044444444444444446
+Mittelgrosse Arten;Ostrya carpinifolia (Hopfenbuche);co2_bindung;37,5;Szenario 1: Forschungsfokus;0,25000;umweltwirkung;27,5;50,0;0,4444444444444444;0,111111111111111105
+Mittelgrosse Arten;Ostrya carpinifolia (Hopfenbuche);co2_bindung;37,5;Szenario 2: Radikale Vermeidung;0,45000;umweltwirkung;27,5;50,0;0,4444444444444444;0,199999999999999983
+Mittelgrosse Arten;Ostrya carpinifolia (Hopfenbuche);co2_bindung;37,5;Szenario 3: Radikaler Lebenszyklus;0,05000;umweltwirkung;27,5;50,0;0,4444444444444444;0,022222222222222223
 Mittelgrosse Arten;Ostrya carpinifolia (Hopfenbuche);regenwasser;200,0;Szenario 0: Baseline (IST);0,05000;multifunktionale_nutzungsqualitaet;115,0;325,0;0,4047619047619048;0,020238095238095239
 Mittelgrosse Arten;Ostrya carpinifolia (Hopfenbuche);regenwasser;200,0;Szenario 1: Forschungsfokus;0,01250;multifunktionale_nutzungsqualitaet;115,0;325,0;0,4047619047619048;0,005059523809523810
 Mittelgrosse Arten;Ostrya carpinifolia (Hopfenbuche);regenwasser;200,0;Szenario 2: Radikale Vermeidung;0,00625;multifunktionale_nutzungsqualitaet;115,0;325,0;0,4047619047619048;0,002529761904761905
@@ -683,10 +683,10 @@ Kleine Arten;Sorbus aria ‘Magnifica’ (Mehlbeere);kuehlung;1,5;Szenario 0: Ba
 Kleine Arten;Sorbus aria ‘Magnifica’ (Mehlbeere);kuehlung;1,5;Szenario 1: Forschungsfokus;0,01250;multifunktionale_nutzungsqualitaet;1,5;5,0;0,0000000000000000;0,000000000000000000
 Kleine Arten;Sorbus aria ‘Magnifica’ (Mehlbeere);kuehlung;1,5;Szenario 2: Radikale Vermeidung;0,00625;multifunktionale_nutzungsqualitaet;1,5;5,0;0,0000000000000000;0,000000000000000000
 Kleine Arten;Sorbus aria ‘Magnifica’ (Mehlbeere);kuehlung;1,5;Szenario 3: Radikaler Lebenszyklus;0,01250;multifunktionale_nutzungsqualitaet;1,5;5,0;0,0000000000000000;0,000000000000000000
-Kleine Arten;Sorbus aria ‘Magnifica’ (Mehlbeere);co2_bindung;27,5;Szenario 0: Baseline (IST);0,10000;umweltbelastung;27,5;50,0;0,0000000000000000;0,000000000000000000
-Kleine Arten;Sorbus aria ‘Magnifica’ (Mehlbeere);co2_bindung;27,5;Szenario 1: Forschungsfokus;0,25000;umweltbelastung;27,5;50,0;0,0000000000000000;0,000000000000000000
-Kleine Arten;Sorbus aria ‘Magnifica’ (Mehlbeere);co2_bindung;27,5;Szenario 2: Radikale Vermeidung;0,45000;umweltbelastung;27,5;50,0;0,0000000000000000;0,000000000000000000
-Kleine Arten;Sorbus aria ‘Magnifica’ (Mehlbeere);co2_bindung;27,5;Szenario 3: Radikaler Lebenszyklus;0,05000;umweltbelastung;27,5;50,0;0,0000000000000000;0,000000000000000000
+Kleine Arten;Sorbus aria ‘Magnifica’ (Mehlbeere);co2_bindung;27,5;Szenario 0: Baseline (IST);0,10000;umweltwirkung;27,5;50,0;0,0000000000000000;0,000000000000000000
+Kleine Arten;Sorbus aria ‘Magnifica’ (Mehlbeere);co2_bindung;27,5;Szenario 1: Forschungsfokus;0,25000;umweltwirkung;27,5;50,0;0,0000000000000000;0,000000000000000000
+Kleine Arten;Sorbus aria ‘Magnifica’ (Mehlbeere);co2_bindung;27,5;Szenario 2: Radikale Vermeidung;0,45000;umweltwirkung;27,5;50,0;0,0000000000000000;0,000000000000000000
+Kleine Arten;Sorbus aria ‘Magnifica’ (Mehlbeere);co2_bindung;27,5;Szenario 3: Radikaler Lebenszyklus;0,05000;umweltwirkung;27,5;50,0;0,0000000000000000;0,000000000000000000
 Kleine Arten;Sorbus aria ‘Magnifica’ (Mehlbeere);regenwasser;115,0;Szenario 0: Baseline (IST);0,05000;multifunktionale_nutzungsqualitaet;115,0;325,0;0,0000000000000000;0,000000000000000000
 Kleine Arten;Sorbus aria ‘Magnifica’ (Mehlbeere);regenwasser;115,0;Szenario 1: Forschungsfokus;0,01250;multifunktionale_nutzungsqualitaet;115,0;325,0;0,0000000000000000;0,000000000000000000
 Kleine Arten;Sorbus aria ‘Magnifica’ (Mehlbeere);regenwasser;115,0;Szenario 2: Radikale Vermeidung;0,00625;multifunktionale_nutzungsqualitaet;115,0;325,0;0,0000000000000000;0,000000000000000000
@@ -727,10 +727,10 @@ Kleine Arten;Sorbus latifolia ‘Henk Vink’ (Breitblättrige Mehlbeere);kuehlu
 Kleine Arten;Sorbus latifolia ‘Henk Vink’ (Breitblättrige Mehlbeere);kuehlung;1,5;Szenario 1: Forschungsfokus;0,01250;multifunktionale_nutzungsqualitaet;1,5;5,0;0,0000000000000000;0,000000000000000000
 Kleine Arten;Sorbus latifolia ‘Henk Vink’ (Breitblättrige Mehlbeere);kuehlung;1,5;Szenario 2: Radikale Vermeidung;0,00625;multifunktionale_nutzungsqualitaet;1,5;5,0;0,0000000000000000;0,000000000000000000
 Kleine Arten;Sorbus latifolia ‘Henk Vink’ (Breitblättrige Mehlbeere);kuehlung;1,5;Szenario 3: Radikaler Lebenszyklus;0,01250;multifunktionale_nutzungsqualitaet;1,5;5,0;0,0000000000000000;0,000000000000000000
-Kleine Arten;Sorbus latifolia ‘Henk Vink’ (Breitblättrige Mehlbeere);co2_bindung;27,5;Szenario 0: Baseline (IST);0,10000;umweltbelastung;27,5;50,0;0,0000000000000000;0,000000000000000000
-Kleine Arten;Sorbus latifolia ‘Henk Vink’ (Breitblättrige Mehlbeere);co2_bindung;27,5;Szenario 1: Forschungsfokus;0,25000;umweltbelastung;27,5;50,0;0,0000000000000000;0,000000000000000000
-Kleine Arten;Sorbus latifolia ‘Henk Vink’ (Breitblättrige Mehlbeere);co2_bindung;27,5;Szenario 2: Radikale Vermeidung;0,45000;umweltbelastung;27,5;50,0;0,0000000000000000;0,000000000000000000
-Kleine Arten;Sorbus latifolia ‘Henk Vink’ (Breitblättrige Mehlbeere);co2_bindung;27,5;Szenario 3: Radikaler Lebenszyklus;0,05000;umweltbelastung;27,5;50,0;0,0000000000000000;0,000000000000000000
+Kleine Arten;Sorbus latifolia ‘Henk Vink’ (Breitblättrige Mehlbeere);co2_bindung;27,5;Szenario 0: Baseline (IST);0,10000;umweltwirkung;27,5;50,0;0,0000000000000000;0,000000000000000000
+Kleine Arten;Sorbus latifolia ‘Henk Vink’ (Breitblättrige Mehlbeere);co2_bindung;27,5;Szenario 1: Forschungsfokus;0,25000;umweltwirkung;27,5;50,0;0,0000000000000000;0,000000000000000000
+Kleine Arten;Sorbus latifolia ‘Henk Vink’ (Breitblättrige Mehlbeere);co2_bindung;27,5;Szenario 2: Radikale Vermeidung;0,45000;umweltwirkung;27,5;50,0;0,0000000000000000;0,000000000000000000
+Kleine Arten;Sorbus latifolia ‘Henk Vink’ (Breitblättrige Mehlbeere);co2_bindung;27,5;Szenario 3: Radikaler Lebenszyklus;0,05000;umweltwirkung;27,5;50,0;0,0000000000000000;0,000000000000000000
 Kleine Arten;Sorbus latifolia ‘Henk Vink’ (Breitblättrige Mehlbeere);regenwasser;115,0;Szenario 0: Baseline (IST);0,05000;multifunktionale_nutzungsqualitaet;115,0;325,0;0,0000000000000000;0,000000000000000000
 Kleine Arten;Sorbus latifolia ‘Henk Vink’ (Breitblättrige Mehlbeere);regenwasser;115,0;Szenario 1: Forschungsfokus;0,01250;multifunktionale_nutzungsqualitaet;115,0;325,0;0,0000000000000000;0,000000000000000000
 Kleine Arten;Sorbus latifolia ‘Henk Vink’ (Breitblättrige Mehlbeere);regenwasser;115,0;Szenario 2: Radikale Vermeidung;0,00625;multifunktionale_nutzungsqualitaet;115,0;325,0;0,0000000000000000;0,000000000000000000
@@ -771,10 +771,10 @@ Mittelgrosse Arten;Gleditsia triacanthos ‘Skyline’ (dornenlos);kuehlung;3,0;
 Mittelgrosse Arten;Gleditsia triacanthos ‘Skyline’ (dornenlos);kuehlung;3,0;Szenario 1: Forschungsfokus;0,01250;multifunktionale_nutzungsqualitaet;1,5;5,0;0,4285714285714285;0,005357142857142857
 Mittelgrosse Arten;Gleditsia triacanthos ‘Skyline’ (dornenlos);kuehlung;3,0;Szenario 2: Radikale Vermeidung;0,00625;multifunktionale_nutzungsqualitaet;1,5;5,0;0,4285714285714285;0,002678571428571429
 Mittelgrosse Arten;Gleditsia triacanthos ‘Skyline’ (dornenlos);kuehlung;3,0;Szenario 3: Radikaler Lebenszyklus;0,01250;multifunktionale_nutzungsqualitaet;1,5;5,0;0,4285714285714285;0,005357142857142857
-Mittelgrosse Arten;Gleditsia triacanthos ‘Skyline’ (dornenlos);co2_bindung;37,5;Szenario 0: Baseline (IST);0,10000;umweltbelastung;27,5;50,0;0,4444444444444444;0,044444444444444446
-Mittelgrosse Arten;Gleditsia triacanthos ‘Skyline’ (dornenlos);co2_bindung;37,5;Szenario 1: Forschungsfokus;0,25000;umweltbelastung;27,5;50,0;0,4444444444444444;0,111111111111111105
-Mittelgrosse Arten;Gleditsia triacanthos ‘Skyline’ (dornenlos);co2_bindung;37,5;Szenario 2: Radikale Vermeidung;0,45000;umweltbelastung;27,5;50,0;0,4444444444444444;0,199999999999999983
-Mittelgrosse Arten;Gleditsia triacanthos ‘Skyline’ (dornenlos);co2_bindung;37,5;Szenario 3: Radikaler Lebenszyklus;0,05000;umweltbelastung;27,5;50,0;0,4444444444444444;0,022222222222222223
+Mittelgrosse Arten;Gleditsia triacanthos ‘Skyline’ (dornenlos);co2_bindung;37,5;Szenario 0: Baseline (IST);0,10000;umweltwirkung;27,5;50,0;0,4444444444444444;0,044444444444444446
+Mittelgrosse Arten;Gleditsia triacanthos ‘Skyline’ (dornenlos);co2_bindung;37,5;Szenario 1: Forschungsfokus;0,25000;umweltwirkung;27,5;50,0;0,4444444444444444;0,111111111111111105
+Mittelgrosse Arten;Gleditsia triacanthos ‘Skyline’ (dornenlos);co2_bindung;37,5;Szenario 2: Radikale Vermeidung;0,45000;umweltwirkung;27,5;50,0;0,4444444444444444;0,199999999999999983
+Mittelgrosse Arten;Gleditsia triacanthos ‘Skyline’ (dornenlos);co2_bindung;37,5;Szenario 3: Radikaler Lebenszyklus;0,05000;umweltwirkung;27,5;50,0;0,4444444444444444;0,022222222222222223
 Mittelgrosse Arten;Gleditsia triacanthos ‘Skyline’ (dornenlos);regenwasser;200,0;Szenario 0: Baseline (IST);0,05000;multifunktionale_nutzungsqualitaet;115,0;325,0;0,4047619047619048;0,020238095238095239
 Mittelgrosse Arten;Gleditsia triacanthos ‘Skyline’ (dornenlos);regenwasser;200,0;Szenario 1: Forschungsfokus;0,01250;multifunktionale_nutzungsqualitaet;115,0;325,0;0,4047619047619048;0,005059523809523810
 Mittelgrosse Arten;Gleditsia triacanthos ‘Skyline’ (dornenlos);regenwasser;200,0;Szenario 2: Radikale Vermeidung;0,00625;multifunktionale_nutzungsqualitaet;115,0;325,0;0,4047619047619048;0,002529761904761905
@@ -815,10 +815,10 @@ Mittelgrosse Arten;Juglans nigra (Schwarznuss);kuehlung;3,0;Szenario 0: Baseline
 Mittelgrosse Arten;Juglans nigra (Schwarznuss);kuehlung;3,0;Szenario 1: Forschungsfokus;0,01250;multifunktionale_nutzungsqualitaet;1,5;5,0;0,4285714285714285;0,005357142857142857
 Mittelgrosse Arten;Juglans nigra (Schwarznuss);kuehlung;3,0;Szenario 2: Radikale Vermeidung;0,00625;multifunktionale_nutzungsqualitaet;1,5;5,0;0,4285714285714285;0,002678571428571429
 Mittelgrosse Arten;Juglans nigra (Schwarznuss);kuehlung;3,0;Szenario 3: Radikaler Lebenszyklus;0,01250;multifunktionale_nutzungsqualitaet;1,5;5,0;0,4285714285714285;0,005357142857142857
-Mittelgrosse Arten;Juglans nigra (Schwarznuss);co2_bindung;37,5;Szenario 0: Baseline (IST);0,10000;umweltbelastung;27,5;50,0;0,4444444444444444;0,044444444444444446
-Mittelgrosse Arten;Juglans nigra (Schwarznuss);co2_bindung;37,5;Szenario 1: Forschungsfokus;0,25000;umweltbelastung;27,5;50,0;0,4444444444444444;0,111111111111111105
-Mittelgrosse Arten;Juglans nigra (Schwarznuss);co2_bindung;37,5;Szenario 2: Radikale Vermeidung;0,45000;umweltbelastung;27,5;50,0;0,4444444444444444;0,199999999999999983
-Mittelgrosse Arten;Juglans nigra (Schwarznuss);co2_bindung;37,5;Szenario 3: Radikaler Lebenszyklus;0,05000;umweltbelastung;27,5;50,0;0,4444444444444444;0,022222222222222223
+Mittelgrosse Arten;Juglans nigra (Schwarznuss);co2_bindung;37,5;Szenario 0: Baseline (IST);0,10000;umweltwirkung;27,5;50,0;0,4444444444444444;0,044444444444444446
+Mittelgrosse Arten;Juglans nigra (Schwarznuss);co2_bindung;37,5;Szenario 1: Forschungsfokus;0,25000;umweltwirkung;27,5;50,0;0,4444444444444444;0,111111111111111105
+Mittelgrosse Arten;Juglans nigra (Schwarznuss);co2_bindung;37,5;Szenario 2: Radikale Vermeidung;0,45000;umweltwirkung;27,5;50,0;0,4444444444444444;0,199999999999999983
+Mittelgrosse Arten;Juglans nigra (Schwarznuss);co2_bindung;37,5;Szenario 3: Radikaler Lebenszyklus;0,05000;umweltwirkung;27,5;50,0;0,4444444444444444;0,022222222222222223
 Mittelgrosse Arten;Juglans nigra (Schwarznuss);regenwasser;200,0;Szenario 0: Baseline (IST);0,05000;multifunktionale_nutzungsqualitaet;115,0;325,0;0,4047619047619048;0,020238095238095239
 Mittelgrosse Arten;Juglans nigra (Schwarznuss);regenwasser;200,0;Szenario 1: Forschungsfokus;0,01250;multifunktionale_nutzungsqualitaet;115,0;325,0;0,4047619047619048;0,005059523809523810
 Mittelgrosse Arten;Juglans nigra (Schwarznuss);regenwasser;200,0;Szenario 2: Radikale Vermeidung;0,00625;multifunktionale_nutzungsqualitaet;115,0;325,0;0,4047619047619048;0,002529761904761905
@@ -859,10 +859,10 @@ Kleine Arten;Prunus padus ‘Schloss Tiefurt’ (Traubenkirsche);kuehlung;1,5;Sz
 Kleine Arten;Prunus padus ‘Schloss Tiefurt’ (Traubenkirsche);kuehlung;1,5;Szenario 1: Forschungsfokus;0,01250;multifunktionale_nutzungsqualitaet;1,5;5,0;0,0000000000000000;0,000000000000000000
 Kleine Arten;Prunus padus ‘Schloss Tiefurt’ (Traubenkirsche);kuehlung;1,5;Szenario 2: Radikale Vermeidung;0,00625;multifunktionale_nutzungsqualitaet;1,5;5,0;0,0000000000000000;0,000000000000000000
 Kleine Arten;Prunus padus ‘Schloss Tiefurt’ (Traubenkirsche);kuehlung;1,5;Szenario 3: Radikaler Lebenszyklus;0,01250;multifunktionale_nutzungsqualitaet;1,5;5,0;0,0000000000000000;0,000000000000000000
-Kleine Arten;Prunus padus ‘Schloss Tiefurt’ (Traubenkirsche);co2_bindung;27,5;Szenario 0: Baseline (IST);0,10000;umweltbelastung;27,5;50,0;0,0000000000000000;0,000000000000000000
-Kleine Arten;Prunus padus ‘Schloss Tiefurt’ (Traubenkirsche);co2_bindung;27,5;Szenario 1: Forschungsfokus;0,25000;umweltbelastung;27,5;50,0;0,0000000000000000;0,000000000000000000
-Kleine Arten;Prunus padus ‘Schloss Tiefurt’ (Traubenkirsche);co2_bindung;27,5;Szenario 2: Radikale Vermeidung;0,45000;umweltbelastung;27,5;50,0;0,0000000000000000;0,000000000000000000
-Kleine Arten;Prunus padus ‘Schloss Tiefurt’ (Traubenkirsche);co2_bindung;27,5;Szenario 3: Radikaler Lebenszyklus;0,05000;umweltbelastung;27,5;50,0;0,0000000000000000;0,000000000000000000
+Kleine Arten;Prunus padus ‘Schloss Tiefurt’ (Traubenkirsche);co2_bindung;27,5;Szenario 0: Baseline (IST);0,10000;umweltwirkung;27,5;50,0;0,0000000000000000;0,000000000000000000
+Kleine Arten;Prunus padus ‘Schloss Tiefurt’ (Traubenkirsche);co2_bindung;27,5;Szenario 1: Forschungsfokus;0,25000;umweltwirkung;27,5;50,0;0,0000000000000000;0,000000000000000000
+Kleine Arten;Prunus padus ‘Schloss Tiefurt’ (Traubenkirsche);co2_bindung;27,5;Szenario 2: Radikale Vermeidung;0,45000;umweltwirkung;27,5;50,0;0,0000000000000000;0,000000000000000000
+Kleine Arten;Prunus padus ‘Schloss Tiefurt’ (Traubenkirsche);co2_bindung;27,5;Szenario 3: Radikaler Lebenszyklus;0,05000;umweltwirkung;27,5;50,0;0,0000000000000000;0,000000000000000000
 Kleine Arten;Prunus padus ‘Schloss Tiefurt’ (Traubenkirsche);regenwasser;115,0;Szenario 0: Baseline (IST);0,05000;multifunktionale_nutzungsqualitaet;115,0;325,0;0,0000000000000000;0,000000000000000000
 Kleine Arten;Prunus padus ‘Schloss Tiefurt’ (Traubenkirsche);regenwasser;115,0;Szenario 1: Forschungsfokus;0,01250;multifunktionale_nutzungsqualitaet;115,0;325,0;0,0000000000000000;0,000000000000000000
 Kleine Arten;Prunus padus ‘Schloss Tiefurt’ (Traubenkirsche);regenwasser;115,0;Szenario 2: Radikale Vermeidung;0,00625;multifunktionale_nutzungsqualitaet;115,0;325,0;0,0000000000000000;0,000000000000000000
@@ -903,10 +903,10 @@ Kleine Arten;Malus tschonoskii (Woll-Apfel);kuehlung;1,5;Szenario 0: Baseline (I
 Kleine Arten;Malus tschonoskii (Woll-Apfel);kuehlung;1,5;Szenario 1: Forschungsfokus;0,01250;multifunktionale_nutzungsqualitaet;1,5;5,0;0,0000000000000000;0,000000000000000000
 Kleine Arten;Malus tschonoskii (Woll-Apfel);kuehlung;1,5;Szenario 2: Radikale Vermeidung;0,00625;multifunktionale_nutzungsqualitaet;1,5;5,0;0,0000000000000000;0,000000000000000000
 Kleine Arten;Malus tschonoskii (Woll-Apfel);kuehlung;1,5;Szenario 3: Radikaler Lebenszyklus;0,01250;multifunktionale_nutzungsqualitaet;1,5;5,0;0,0000000000000000;0,000000000000000000
-Kleine Arten;Malus tschonoskii (Woll-Apfel);co2_bindung;27,5;Szenario 0: Baseline (IST);0,10000;umweltbelastung;27,5;50,0;0,0000000000000000;0,000000000000000000
-Kleine Arten;Malus tschonoskii (Woll-Apfel);co2_bindung;27,5;Szenario 1: Forschungsfokus;0,25000;umweltbelastung;27,5;50,0;0,0000000000000000;0,000000000000000000
-Kleine Arten;Malus tschonoskii (Woll-Apfel);co2_bindung;27,5;Szenario 2: Radikale Vermeidung;0,45000;umweltbelastung;27,5;50,0;0,0000000000000000;0,000000000000000000
-Kleine Arten;Malus tschonoskii (Woll-Apfel);co2_bindung;27,5;Szenario 3: Radikaler Lebenszyklus;0,05000;umweltbelastung;27,5;50,0;0,0000000000000000;0,000000000000000000
+Kleine Arten;Malus tschonoskii (Woll-Apfel);co2_bindung;27,5;Szenario 0: Baseline (IST);0,10000;umweltwirkung;27,5;50,0;0,0000000000000000;0,000000000000000000
+Kleine Arten;Malus tschonoskii (Woll-Apfel);co2_bindung;27,5;Szenario 1: Forschungsfokus;0,25000;umweltwirkung;27,5;50,0;0,0000000000000000;0,000000000000000000
+Kleine Arten;Malus tschonoskii (Woll-Apfel);co2_bindung;27,5;Szenario 2: Radikale Vermeidung;0,45000;umweltwirkung;27,5;50,0;0,0000000000000000;0,000000000000000000
+Kleine Arten;Malus tschonoskii (Woll-Apfel);co2_bindung;27,5;Szenario 3: Radikaler Lebenszyklus;0,05000;umweltwirkung;27,5;50,0;0,0000000000000000;0,000000000000000000
 Kleine Arten;Malus tschonoskii (Woll-Apfel);regenwasser;115,0;Szenario 0: Baseline (IST);0,05000;multifunktionale_nutzungsqualitaet;115,0;325,0;0,0000000000000000;0,000000000000000000
 Kleine Arten;Malus tschonoskii (Woll-Apfel);regenwasser;115,0;Szenario 1: Forschungsfokus;0,01250;multifunktionale_nutzungsqualitaet;115,0;325,0;0,0000000000000000;0,000000000000000000
 Kleine Arten;Malus tschonoskii (Woll-Apfel);regenwasser;115,0;Szenario 2: Radikale Vermeidung;0,00625;multifunktionale_nutzungsqualitaet;115,0;325,0;0,0000000000000000;0,000000000000000000
@@ -947,10 +947,10 @@ Mittelgrosse Arten;Corylus colurna (Baumhasel);kuehlung;3,0;Szenario 0: Baseline
 Mittelgrosse Arten;Corylus colurna (Baumhasel);kuehlung;3,0;Szenario 1: Forschungsfokus;0,01250;multifunktionale_nutzungsqualitaet;1,5;5,0;0,4285714285714285;0,005357142857142857
 Mittelgrosse Arten;Corylus colurna (Baumhasel);kuehlung;3,0;Szenario 2: Radikale Vermeidung;0,00625;multifunktionale_nutzungsqualitaet;1,5;5,0;0,4285714285714285;0,002678571428571429
 Mittelgrosse Arten;Corylus colurna (Baumhasel);kuehlung;3,0;Szenario 3: Radikaler Lebenszyklus;0,01250;multifunktionale_nutzungsqualitaet;1,5;5,0;0,4285714285714285;0,005357142857142857
-Mittelgrosse Arten;Corylus colurna (Baumhasel);co2_bindung;37,5;Szenario 0: Baseline (IST);0,10000;umweltbelastung;27,5;50,0;0,4444444444444444;0,044444444444444446
-Mittelgrosse Arten;Corylus colurna (Baumhasel);co2_bindung;37,5;Szenario 1: Forschungsfokus;0,25000;umweltbelastung;27,5;50,0;0,4444444444444444;0,111111111111111105
-Mittelgrosse Arten;Corylus colurna (Baumhasel);co2_bindung;37,5;Szenario 2: Radikale Vermeidung;0,45000;umweltbelastung;27,5;50,0;0,4444444444444444;0,199999999999999983
-Mittelgrosse Arten;Corylus colurna (Baumhasel);co2_bindung;37,5;Szenario 3: Radikaler Lebenszyklus;0,05000;umweltbelastung;27,5;50,0;0,4444444444444444;0,022222222222222223
+Mittelgrosse Arten;Corylus colurna (Baumhasel);co2_bindung;37,5;Szenario 0: Baseline (IST);0,10000;umweltwirkung;27,5;50,0;0,4444444444444444;0,044444444444444446
+Mittelgrosse Arten;Corylus colurna (Baumhasel);co2_bindung;37,5;Szenario 1: Forschungsfokus;0,25000;umweltwirkung;27,5;50,0;0,4444444444444444;0,111111111111111105
+Mittelgrosse Arten;Corylus colurna (Baumhasel);co2_bindung;37,5;Szenario 2: Radikale Vermeidung;0,45000;umweltwirkung;27,5;50,0;0,4444444444444444;0,199999999999999983
+Mittelgrosse Arten;Corylus colurna (Baumhasel);co2_bindung;37,5;Szenario 3: Radikaler Lebenszyklus;0,05000;umweltwirkung;27,5;50,0;0,4444444444444444;0,022222222222222223
 Mittelgrosse Arten;Corylus colurna (Baumhasel);regenwasser;200,0;Szenario 0: Baseline (IST);0,05000;multifunktionale_nutzungsqualitaet;115,0;325,0;0,4047619047619048;0,020238095238095239
 Mittelgrosse Arten;Corylus colurna (Baumhasel);regenwasser;200,0;Szenario 1: Forschungsfokus;0,01250;multifunktionale_nutzungsqualitaet;115,0;325,0;0,4047619047619048;0,005059523809523810
 Mittelgrosse Arten;Corylus colurna (Baumhasel);regenwasser;200,0;Szenario 2: Radikale Vermeidung;0,00625;multifunktionale_nutzungsqualitaet;115,0;325,0;0,4047619047619048;0,002529761904761905
@@ -991,10 +991,10 @@ Kleine Arten;Amelanchier lamarckii (Felsenbirne);kuehlung;1,5;Szenario 0: Baseli
 Kleine Arten;Amelanchier lamarckii (Felsenbirne);kuehlung;1,5;Szenario 1: Forschungsfokus;0,01250;multifunktionale_nutzungsqualitaet;1,5;5,0;0,0000000000000000;0,000000000000000000
 Kleine Arten;Amelanchier lamarckii (Felsenbirne);kuehlung;1,5;Szenario 2: Radikale Vermeidung;0,00625;multifunktionale_nutzungsqualitaet;1,5;5,0;0,0000000000000000;0,000000000000000000
 Kleine Arten;Amelanchier lamarckii (Felsenbirne);kuehlung;1,5;Szenario 3: Radikaler Lebenszyklus;0,01250;multifunktionale_nutzungsqualitaet;1,5;5,0;0,0000000000000000;0,000000000000000000
-Kleine Arten;Amelanchier lamarckii (Felsenbirne);co2_bindung;27,5;Szenario 0: Baseline (IST);0,10000;umweltbelastung;27,5;50,0;0,0000000000000000;0,000000000000000000
-Kleine Arten;Amelanchier lamarckii (Felsenbirne);co2_bindung;27,5;Szenario 1: Forschungsfokus;0,25000;umweltbelastung;27,5;50,0;0,0000000000000000;0,000000000000000000
-Kleine Arten;Amelanchier lamarckii (Felsenbirne);co2_bindung;27,5;Szenario 2: Radikale Vermeidung;0,45000;umweltbelastung;27,5;50,0;0,0000000000000000;0,000000000000000000
-Kleine Arten;Amelanchier lamarckii (Felsenbirne);co2_bindung;27,5;Szenario 3: Radikaler Lebenszyklus;0,05000;umweltbelastung;27,5;50,0;0,0000000000000000;0,000000000000000000
+Kleine Arten;Amelanchier lamarckii (Felsenbirne);co2_bindung;27,5;Szenario 0: Baseline (IST);0,10000;umweltwirkung;27,5;50,0;0,0000000000000000;0,000000000000000000
+Kleine Arten;Amelanchier lamarckii (Felsenbirne);co2_bindung;27,5;Szenario 1: Forschungsfokus;0,25000;umweltwirkung;27,5;50,0;0,0000000000000000;0,000000000000000000
+Kleine Arten;Amelanchier lamarckii (Felsenbirne);co2_bindung;27,5;Szenario 2: Radikale Vermeidung;0,45000;umweltwirkung;27,5;50,0;0,0000000000000000;0,000000000000000000
+Kleine Arten;Amelanchier lamarckii (Felsenbirne);co2_bindung;27,5;Szenario 3: Radikaler Lebenszyklus;0,05000;umweltwirkung;27,5;50,0;0,0000000000000000;0,000000000000000000
 Kleine Arten;Amelanchier lamarckii (Felsenbirne);regenwasser;115,0;Szenario 0: Baseline (IST);0,05000;multifunktionale_nutzungsqualitaet;115,0;325,0;0,0000000000000000;0,000000000000000000
 Kleine Arten;Amelanchier lamarckii (Felsenbirne);regenwasser;115,0;Szenario 1: Forschungsfokus;0,01250;multifunktionale_nutzungsqualitaet;115,0;325,0;0,0000000000000000;0,000000000000000000
 Kleine Arten;Amelanchier lamarckii (Felsenbirne);regenwasser;115,0;Szenario 2: Radikale Vermeidung;0,00625;multifunktionale_nutzungsqualitaet;115,0;325,0;0,0000000000000000;0,000000000000000000
@@ -1035,10 +1035,10 @@ Kleine Arten;Cornus mas (Kornelkirsche);kuehlung;1,5;Szenario 0: Baseline (IST);
 Kleine Arten;Cornus mas (Kornelkirsche);kuehlung;1,5;Szenario 1: Forschungsfokus;0,01250;multifunktionale_nutzungsqualitaet;1,5;5,0;0,0000000000000000;0,000000000000000000
 Kleine Arten;Cornus mas (Kornelkirsche);kuehlung;1,5;Szenario 2: Radikale Vermeidung;0,00625;multifunktionale_nutzungsqualitaet;1,5;5,0;0,0000000000000000;0,000000000000000000
 Kleine Arten;Cornus mas (Kornelkirsche);kuehlung;1,5;Szenario 3: Radikaler Lebenszyklus;0,01250;multifunktionale_nutzungsqualitaet;1,5;5,0;0,0000000000000000;0,000000000000000000
-Kleine Arten;Cornus mas (Kornelkirsche);co2_bindung;27,5;Szenario 0: Baseline (IST);0,10000;umweltbelastung;27,5;50,0;0,0000000000000000;0,000000000000000000
-Kleine Arten;Cornus mas (Kornelkirsche);co2_bindung;27,5;Szenario 1: Forschungsfokus;0,25000;umweltbelastung;27,5;50,0;0,0000000000000000;0,000000000000000000
-Kleine Arten;Cornus mas (Kornelkirsche);co2_bindung;27,5;Szenario 2: Radikale Vermeidung;0,45000;umweltbelastung;27,5;50,0;0,0000000000000000;0,000000000000000000
-Kleine Arten;Cornus mas (Kornelkirsche);co2_bindung;27,5;Szenario 3: Radikaler Lebenszyklus;0,05000;umweltbelastung;27,5;50,0;0,0000000000000000;0,000000000000000000
+Kleine Arten;Cornus mas (Kornelkirsche);co2_bindung;27,5;Szenario 0: Baseline (IST);0,10000;umweltwirkung;27,5;50,0;0,0000000000000000;0,000000000000000000
+Kleine Arten;Cornus mas (Kornelkirsche);co2_bindung;27,5;Szenario 1: Forschungsfokus;0,25000;umweltwirkung;27,5;50,0;0,0000000000000000;0,000000000000000000
+Kleine Arten;Cornus mas (Kornelkirsche);co2_bindung;27,5;Szenario 2: Radikale Vermeidung;0,45000;umweltwirkung;27,5;50,0;0,0000000000000000;0,000000000000000000
+Kleine Arten;Cornus mas (Kornelkirsche);co2_bindung;27,5;Szenario 3: Radikaler Lebenszyklus;0,05000;umweltwirkung;27,5;50,0;0,0000000000000000;0,000000000000000000
 Kleine Arten;Cornus mas (Kornelkirsche);regenwasser;115,0;Szenario 0: Baseline (IST);0,05000;multifunktionale_nutzungsqualitaet;115,0;325,0;0,0000000000000000;0,000000000000000000
 Kleine Arten;Cornus mas (Kornelkirsche);regenwasser;115,0;Szenario 1: Forschungsfokus;0,01250;multifunktionale_nutzungsqualitaet;115,0;325,0;0,0000000000000000;0,000000000000000000
 Kleine Arten;Cornus mas (Kornelkirsche);regenwasser;115,0;Szenario 2: Radikale Vermeidung;0,00625;multifunktionale_nutzungsqualitaet;115,0;325,0;0,0000000000000000;0,000000000000000000
@@ -1079,10 +1079,10 @@ Kleine Arten;Pyrus calleryana ‘Chanticleer’ (Chinesische Zierbirne);kuehlung
 Kleine Arten;Pyrus calleryana ‘Chanticleer’ (Chinesische Zierbirne);kuehlung;1,5;Szenario 1: Forschungsfokus;0,01250;multifunktionale_nutzungsqualitaet;1,5;5,0;0,0000000000000000;0,000000000000000000
 Kleine Arten;Pyrus calleryana ‘Chanticleer’ (Chinesische Zierbirne);kuehlung;1,5;Szenario 2: Radikale Vermeidung;0,00625;multifunktionale_nutzungsqualitaet;1,5;5,0;0,0000000000000000;0,000000000000000000
 Kleine Arten;Pyrus calleryana ‘Chanticleer’ (Chinesische Zierbirne);kuehlung;1,5;Szenario 3: Radikaler Lebenszyklus;0,01250;multifunktionale_nutzungsqualitaet;1,5;5,0;0,0000000000000000;0,000000000000000000
-Kleine Arten;Pyrus calleryana ‘Chanticleer’ (Chinesische Zierbirne);co2_bindung;27,5;Szenario 0: Baseline (IST);0,10000;umweltbelastung;27,5;50,0;0,0000000000000000;0,000000000000000000
-Kleine Arten;Pyrus calleryana ‘Chanticleer’ (Chinesische Zierbirne);co2_bindung;27,5;Szenario 1: Forschungsfokus;0,25000;umweltbelastung;27,5;50,0;0,0000000000000000;0,000000000000000000
-Kleine Arten;Pyrus calleryana ‘Chanticleer’ (Chinesische Zierbirne);co2_bindung;27,5;Szenario 2: Radikale Vermeidung;0,45000;umweltbelastung;27,5;50,0;0,0000000000000000;0,000000000000000000
-Kleine Arten;Pyrus calleryana ‘Chanticleer’ (Chinesische Zierbirne);co2_bindung;27,5;Szenario 3: Radikaler Lebenszyklus;0,05000;umweltbelastung;27,5;50,0;0,0000000000000000;0,000000000000000000
+Kleine Arten;Pyrus calleryana ‘Chanticleer’ (Chinesische Zierbirne);co2_bindung;27,5;Szenario 0: Baseline (IST);0,10000;umweltwirkung;27,5;50,0;0,0000000000000000;0,000000000000000000
+Kleine Arten;Pyrus calleryana ‘Chanticleer’ (Chinesische Zierbirne);co2_bindung;27,5;Szenario 1: Forschungsfokus;0,25000;umweltwirkung;27,5;50,0;0,0000000000000000;0,000000000000000000
+Kleine Arten;Pyrus calleryana ‘Chanticleer’ (Chinesische Zierbirne);co2_bindung;27,5;Szenario 2: Radikale Vermeidung;0,45000;umweltwirkung;27,5;50,0;0,0000000000000000;0,000000000000000000
+Kleine Arten;Pyrus calleryana ‘Chanticleer’ (Chinesische Zierbirne);co2_bindung;27,5;Szenario 3: Radikaler Lebenszyklus;0,05000;umweltwirkung;27,5;50,0;0,0000000000000000;0,000000000000000000
 Kleine Arten;Pyrus calleryana ‘Chanticleer’ (Chinesische Zierbirne);regenwasser;115,0;Szenario 0: Baseline (IST);0,05000;multifunktionale_nutzungsqualitaet;115,0;325,0;0,0000000000000000;0,000000000000000000
 Kleine Arten;Pyrus calleryana ‘Chanticleer’ (Chinesische Zierbirne);regenwasser;115,0;Szenario 1: Forschungsfokus;0,01250;multifunktionale_nutzungsqualitaet;115,0;325,0;0,0000000000000000;0,000000000000000000
 Kleine Arten;Pyrus calleryana ‘Chanticleer’ (Chinesische Zierbirne);regenwasser;115,0;Szenario 2: Radikale Vermeidung;0,00625;multifunktionale_nutzungsqualitaet;115,0;325,0;0,0000000000000000;0,000000000000000000

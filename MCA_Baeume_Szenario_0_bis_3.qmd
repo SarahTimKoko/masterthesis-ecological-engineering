@@ -462,7 +462,7 @@ df_mca_groups_baeume_plot <- df_mca_calculated %>%
   mutate(group_label_clean = case_when(
     group_id == "langlebigkeit_wirtschaftlichkeit" ~ "Langlebigkeit & Wirtschaftlichkeit",
     group_id == "multifunktionale_nutzungsqualitaet" ~ "Multifunktionale Nutzungsqualität",
-    group_id == "umweltbelastung" ~ "Umweltbelastung",
+    group_id == "umweltwirkung" ~ "Umweltwirkung",
     group_id == "kreislauffaehigkeit" ~ "Kreislauffähigkeit",
     TRUE ~ group_id
   ))
@@ -477,7 +477,7 @@ colors_kategorie_baeume <- c(
 colors_gruppen <- c(
   "Langlebigkeit & Wirtschaftlichkeit" = "#08306b", 
   "Multifunktionale Nutzungsqualität" = "#2171b5",  
-  "Umweltbelastung" = "#6baed6",                    
+  "Umweltwirkung" = "#6baed6",                    
   "Kreislauffähigkeit" = "#c6dbef"                  
 )
 ```

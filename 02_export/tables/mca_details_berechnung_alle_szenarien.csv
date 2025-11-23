@@ -23,14 +23,14 @@ Asphalt;Recyclingasphalt;unterhalt_100a;400,00;Szenario 0: Baseline (IST);0,1000
 Asphalt;Recyclingasphalt;unterhalt_100a;400,00;Szenario 1: Forschungsfokus;0,10000000000;langlebigkeit_wirtschaftlichkeit;200,0;700,0;0,6000000000000000;0,059999999999999998
 Asphalt;Recyclingasphalt;unterhalt_100a;400,00;Szenario 2: Radikale Vermeidung;0,01250000000;langlebigkeit_wirtschaftlichkeit;200,0;700,0;0,6000000000000000;0,007500000000000000
 Asphalt;Recyclingasphalt;unterhalt_100a;400,00;Szenario 3: Radikaler Lebenszyklus;0,20000000000;langlebigkeit_wirtschaftlichkeit;200,0;700,0;0,6000000000000000;0,119999999999999996
-Asphalt;Recyclingasphalt;co2_100a;225,00;Szenario 0: Baseline (IST);0,05000000000;umweltbelastung;135,0;480,0;0,7391304347826086;0,036956521739130437
-Asphalt;Recyclingasphalt;co2_100a;225,00;Szenario 1: Forschungsfokus;0,12500000000;umweltbelastung;135,0;480,0;0,7391304347826086;0,092391304347826081
-Asphalt;Recyclingasphalt;co2_100a;225,00;Szenario 2: Radikale Vermeidung;0,22500000000;umweltbelastung;135,0;480,0;0,7391304347826086;0,166304347826086940
-Asphalt;Recyclingasphalt;co2_100a;225,00;Szenario 3: Radikaler Lebenszyklus;0,02500000000;umweltbelastung;135,0;480,0;0,7391304347826086;0,018478260869565218
-Asphalt;Recyclingasphalt;graueEnergie_100a;1225,00;Szenario 0: Baseline (IST);0,05000000000;umweltbelastung;450,0;3280,0;0,7261484098939930;0,036307420494699649
-Asphalt;Recyclingasphalt;graueEnergie_100a;1225,00;Szenario 1: Forschungsfokus;0,12500000000;umweltbelastung;450,0;3280,0;0,7261484098939930;0,090768551236749123
-Asphalt;Recyclingasphalt;graueEnergie_100a;1225,00;Szenario 2: Radikale Vermeidung;0,22500000000;umweltbelastung;450,0;3280,0;0,7261484098939930;0,163383392226148422
-Asphalt;Recyclingasphalt;graueEnergie_100a;1225,00;Szenario 3: Radikaler Lebenszyklus;0,02500000000;umweltbelastung;450,0;3280,0;0,7261484098939930;0,018153710247349825
+Asphalt;Recyclingasphalt;co2_100a;225,00;Szenario 0: Baseline (IST);0,05000000000;umweltwirkung;135,0;480,0;0,7391304347826086;0,036956521739130437
+Asphalt;Recyclingasphalt;co2_100a;225,00;Szenario 1: Forschungsfokus;0,12500000000;umweltwirkung;135,0;480,0;0,7391304347826086;0,092391304347826081
+Asphalt;Recyclingasphalt;co2_100a;225,00;Szenario 2: Radikale Vermeidung;0,22500000000;umweltwirkung;135,0;480,0;0,7391304347826086;0,166304347826086940
+Asphalt;Recyclingasphalt;co2_100a;225,00;Szenario 3: Radikaler Lebenszyklus;0,02500000000;umweltwirkung;135,0;480,0;0,7391304347826086;0,018478260869565218
+Asphalt;Recyclingasphalt;graueEnergie_100a;1225,00;Szenario 0: Baseline (IST);0,05000000000;umweltwirkung;450,0;3280,0;0,7261484098939930;0,036307420494699649
+Asphalt;Recyclingasphalt;graueEnergie_100a;1225,00;Szenario 1: Forschungsfokus;0,12500000000;umweltwirkung;450,0;3280,0;0,7261484098939930;0,090768551236749123
+Asphalt;Recyclingasphalt;graueEnergie_100a;1225,00;Szenario 2: Radikale Vermeidung;0,22500000000;umweltwirkung;450,0;3280,0;0,7261484098939930;0,163383392226148422
+Asphalt;Recyclingasphalt;graueEnergie_100a;1225,00;Szenario 3: Radikaler Lebenszyklus;0,02500000000;umweltwirkung;450,0;3280,0;0,7261484098939930;0,018153710247349825
 Asphalt;Recyclingasphalt;recyclingfaehigkeit;2,00;Szenario 0: Baseline (IST);0,03333333330;kreislauffaehigkeit;0,0;2,0;1,0000000000000000;0,033333333300000004
 Asphalt;Recyclingasphalt;recyclingfaehigkeit;2,00;Szenario 1: Forschungsfokus;0,08333333325;kreislauffaehigkeit;0,0;2,0;1,0000000000000000;0,083333333250000002
 Asphalt;Recyclingasphalt;recyclingfaehigkeit;2,00;Szenario 2: Radikale Vermeidung;0,14999999985;kreislauffaehigkeit;0,0;2,0;1,0000000000000000;0,149999999850000010
@@ -67,14 +67,14 @@ Asphalt;Sickerasphalt;unterhalt_100a;650,00;Szenario 0: Baseline (IST);0,1000000
 Asphalt;Sickerasphalt;unterhalt_100a;650,00;Szenario 1: Forschungsfokus;0,10000000000;langlebigkeit_wirtschaftlichkeit;200,0;700,0;0,1000000000000000;0,009999999999999998
 Asphalt;Sickerasphalt;unterhalt_100a;650,00;Szenario 2: Radikale Vermeidung;0,01250000000;langlebigkeit_wirtschaftlichkeit;200,0;700,0;0,1000000000000000;0,001250000000000000
 Asphalt;Sickerasphalt;unterhalt_100a;650,00;Szenario 3: Radikaler Lebenszyklus;0,20000000000;langlebigkeit_wirtschaftlichkeit;200,0;700,0;0,1000000000000000;0,019999999999999997
-Asphalt;Sickerasphalt;co2_100a;480,00;Szenario 0: Baseline (IST);0,05000000000;umweltbelastung;135,0;480,0;0,0000000000000000;0,000000000000000000
-Asphalt;Sickerasphalt;co2_100a;480,00;Szenario 1: Forschungsfokus;0,12500000000;umweltbelastung;135,0;480,0;0,0000000000000000;0,000000000000000000
-Asphalt;Sickerasphalt;co2_100a;480,00;Szenario 2: Radikale Vermeidung;0,22500000000;umweltbelastung;135,0;480,0;0,0000000000000000;0,000000000000000000
-Asphalt;Sickerasphalt;co2_100a;480,00;Szenario 3: Radikaler Lebenszyklus;0,02500000000;umweltbelastung;135,0;480,0;0,0000000000000000;0,000000000000000000
-Asphalt;Sickerasphalt;graueEnergie_100a;3280,00;Szenario 0: Baseline (IST);0,05000000000;umweltbelastung;450,0;3280,0;0,0000000000000000;0,000000000000000000
-Asphalt;Sickerasphalt;graueEnergie_100a;3280,00;Szenario 1: Forschungsfokus;0,12500000000;umweltbelastung;450,0;3280,0;0,0000000000000000;0,000000000000000000
-Asphalt;Sickerasphalt;graueEnergie_100a;3280,00;Szenario 2: Radikale Vermeidung;0,22500000000;umweltbelastung;450,0;3280,0;0,0000000000000000;0,000000000000000000
-Asphalt;Sickerasphalt;graueEnergie_100a;3280,00;Szenario 3: Radikaler Lebenszyklus;0,02500000000;umweltbelastung;450,0;3280,0;0,0000000000000000;0,000000000000000000
+Asphalt;Sickerasphalt;co2_100a;480,00;Szenario 0: Baseline (IST);0,05000000000;umweltwirkung;135,0;480,0;0,0000000000000000;0,000000000000000000
+Asphalt;Sickerasphalt;co2_100a;480,00;Szenario 1: Forschungsfokus;0,12500000000;umweltwirkung;135,0;480,0;0,0000000000000000;0,000000000000000000
+Asphalt;Sickerasphalt;co2_100a;480,00;Szenario 2: Radikale Vermeidung;0,22500000000;umweltwirkung;135,0;480,0;0,0000000000000000;0,000000000000000000
+Asphalt;Sickerasphalt;co2_100a;480,00;Szenario 3: Radikaler Lebenszyklus;0,02500000000;umweltwirkung;135,0;480,0;0,0000000000000000;0,000000000000000000
+Asphalt;Sickerasphalt;graueEnergie_100a;3280,00;Szenario 0: Baseline (IST);0,05000000000;umweltwirkung;450,0;3280,0;0,0000000000000000;0,000000000000000000
+Asphalt;Sickerasphalt;graueEnergie_100a;3280,00;Szenario 1: Forschungsfokus;0,12500000000;umweltwirkung;450,0;3280,0;0,0000000000000000;0,000000000000000000
+Asphalt;Sickerasphalt;graueEnergie_100a;3280,00;Szenario 2: Radikale Vermeidung;0,22500000000;umweltwirkung;450,0;3280,0;0,0000000000000000;0,000000000000000000
+Asphalt;Sickerasphalt;graueEnergie_100a;3280,00;Szenario 3: Radikaler Lebenszyklus;0,02500000000;umweltwirkung;450,0;3280,0;0,0000000000000000;0,000000000000000000
 Asphalt;Sickerasphalt;recyclingfaehigkeit;1,00;Szenario 0: Baseline (IST);0,03333333330;kreislauffaehigkeit;0,0;2,0;0,5000000000000000;0,016666666650000002
 Asphalt;Sickerasphalt;recyclingfaehigkeit;1,00;Szenario 1: Forschungsfokus;0,08333333325;kreislauffaehigkeit;0,0;2,0;0,5000000000000000;0,041666666625000001
 Asphalt;Sickerasphalt;recyclingfaehigkeit;1,00;Szenario 2: Radikale Vermeidung;0,14999999985;kreislauffaehigkeit;0,0;2,0;0,5000000000000000;0,074999999925000005
@@ -111,14 +111,14 @@ Asphalt;Heller Asphalt;unterhalt_100a;400,00;Szenario 0: Baseline (IST);0,100000
 Asphalt;Heller Asphalt;unterhalt_100a;400,00;Szenario 1: Forschungsfokus;0,10000000000;langlebigkeit_wirtschaftlichkeit;200,0;700,0;0,6000000000000000;0,059999999999999998
 Asphalt;Heller Asphalt;unterhalt_100a;400,00;Szenario 2: Radikale Vermeidung;0,01250000000;langlebigkeit_wirtschaftlichkeit;200,0;700,0;0,6000000000000000;0,007500000000000000
 Asphalt;Heller Asphalt;unterhalt_100a;400,00;Szenario 3: Radikaler Lebenszyklus;0,20000000000;langlebigkeit_wirtschaftlichkeit;200,0;700,0;0,6000000000000000;0,119999999999999996
-Asphalt;Heller Asphalt;co2_100a;250,00;Szenario 0: Baseline (IST);0,05000000000;umweltbelastung;135,0;480,0;0,6666666666666667;0,033333333333333340
-Asphalt;Heller Asphalt;co2_100a;250,00;Szenario 1: Forschungsfokus;0,12500000000;umweltbelastung;135,0;480,0;0,6666666666666667;0,083333333333333343
-Asphalt;Heller Asphalt;co2_100a;250,00;Szenario 2: Radikale Vermeidung;0,22500000000;umweltbelastung;135,0;480,0;0,6666666666666667;0,150000000000000022
-Asphalt;Heller Asphalt;co2_100a;250,00;Szenario 3: Radikaler Lebenszyklus;0,02500000000;umweltbelastung;135,0;480,0;0,6666666666666667;0,016666666666666670
-Asphalt;Heller Asphalt;graueEnergie_100a;1650,00;Szenario 0: Baseline (IST);0,05000000000;umweltbelastung;450,0;3280,0;0,5759717314487632;0,028798586572438164
-Asphalt;Heller Asphalt;graueEnergie_100a;1650,00;Szenario 1: Forschungsfokus;0,12500000000;umweltbelastung;450,0;3280,0;0,5759717314487632;0,071996466431095404
-Asphalt;Heller Asphalt;graueEnergie_100a;1650,00;Szenario 2: Radikale Vermeidung;0,22500000000;umweltbelastung;450,0;3280,0;0,5759717314487632;0,129593639575971725
-Asphalt;Heller Asphalt;graueEnergie_100a;1650,00;Szenario 3: Radikaler Lebenszyklus;0,02500000000;umweltbelastung;450,0;3280,0;0,5759717314487632;0,014399293286219082
+Asphalt;Heller Asphalt;co2_100a;250,00;Szenario 0: Baseline (IST);0,05000000000;umweltwirkung;135,0;480,0;0,6666666666666667;0,033333333333333340
+Asphalt;Heller Asphalt;co2_100a;250,00;Szenario 1: Forschungsfokus;0,12500000000;umweltwirkung;135,0;480,0;0,6666666666666667;0,083333333333333343
+Asphalt;Heller Asphalt;co2_100a;250,00;Szenario 2: Radikale Vermeidung;0,22500000000;umweltwirkung;135,0;480,0;0,6666666666666667;0,150000000000000022
+Asphalt;Heller Asphalt;co2_100a;250,00;Szenario 3: Radikaler Lebenszyklus;0,02500000000;umweltwirkung;135,0;480,0;0,6666666666666667;0,016666666666666670
+Asphalt;Heller Asphalt;graueEnergie_100a;1650,00;Szenario 0: Baseline (IST);0,05000000000;umweltwirkung;450,0;3280,0;0,5759717314487632;0,028798586572438164
+Asphalt;Heller Asphalt;graueEnergie_100a;1650,00;Szenario 1: Forschungsfokus;0,12500000000;umweltwirkung;450,0;3280,0;0,5759717314487632;0,071996466431095404
+Asphalt;Heller Asphalt;graueEnergie_100a;1650,00;Szenario 2: Radikale Vermeidung;0,22500000000;umweltwirkung;450,0;3280,0;0,5759717314487632;0,129593639575971725
+Asphalt;Heller Asphalt;graueEnergie_100a;1650,00;Szenario 3: Radikaler Lebenszyklus;0,02500000000;umweltwirkung;450,0;3280,0;0,5759717314487632;0,014399293286219082
 Asphalt;Heller Asphalt;recyclingfaehigkeit;1,00;Szenario 0: Baseline (IST);0,03333333330;kreislauffaehigkeit;0,0;2,0;0,5000000000000000;0,016666666650000002
 Asphalt;Heller Asphalt;recyclingfaehigkeit;1,00;Szenario 1: Forschungsfokus;0,08333333325;kreislauffaehigkeit;0,0;2,0;0,5000000000000000;0,041666666625000001
 Asphalt;Heller Asphalt;recyclingfaehigkeit;1,00;Szenario 2: Radikale Vermeidung;0,14999999985;kreislauffaehigkeit;0,0;2,0;0,5000000000000000;0,074999999925000005
@@ -155,14 +155,14 @@ Asphalt;Selbstheilender Asphalt;unterhalt_100a;200,00;Szenario 0: Baseline (IST)
 Asphalt;Selbstheilender Asphalt;unterhalt_100a;200,00;Szenario 1: Forschungsfokus;0,10000000000;langlebigkeit_wirtschaftlichkeit;200,0;700,0;1,0000000000000000;0,100000000000000006
 Asphalt;Selbstheilender Asphalt;unterhalt_100a;200,00;Szenario 2: Radikale Vermeidung;0,01250000000;langlebigkeit_wirtschaftlichkeit;200,0;700,0;1,0000000000000000;0,012500000000000001
 Asphalt;Selbstheilender Asphalt;unterhalt_100a;200,00;Szenario 3: Radikaler Lebenszyklus;0,20000000000;langlebigkeit_wirtschaftlichkeit;200,0;700,0;1,0000000000000000;0,200000000000000011
-Asphalt;Selbstheilender Asphalt;co2_100a;232,50;Szenario 0: Baseline (IST);0,05000000000;umweltbelastung;135,0;480,0;0,7173913043478262;0,035869565217391312
-Asphalt;Selbstheilender Asphalt;co2_100a;232,50;Szenario 1: Forschungsfokus;0,12500000000;umweltbelastung;135,0;480,0;0,7173913043478262;0,089673913043478271
-Asphalt;Selbstheilender Asphalt;co2_100a;232,50;Szenario 2: Radikale Vermeidung;0,22500000000;umweltbelastung;135,0;480,0;0,7173913043478262;0,161413043478260881
-Asphalt;Selbstheilender Asphalt;co2_100a;232,50;Szenario 3: Radikaler Lebenszyklus;0,02500000000;umweltbelastung;135,0;480,0;0,7173913043478262;0,017934782608695656
-Asphalt;Selbstheilender Asphalt;graueEnergie_100a;1350,00;Szenario 0: Baseline (IST);0,05000000000;umweltbelastung;450,0;3280,0;0,6819787985865724;0,034098939929328623
-Asphalt;Selbstheilender Asphalt;graueEnergie_100a;1350,00;Szenario 1: Forschungsfokus;0,12500000000;umweltbelastung;450,0;3280,0;0,6819787985865724;0,085247349823321550
-Asphalt;Selbstheilender Asphalt;graueEnergie_100a;1350,00;Szenario 2: Radikale Vermeidung;0,22500000000;umweltbelastung;450,0;3280,0;0,6819787985865724;0,153445229681978795
-Asphalt;Selbstheilender Asphalt;graueEnergie_100a;1350,00;Szenario 3: Radikaler Lebenszyklus;0,02500000000;umweltbelastung;450,0;3280,0;0,6819787985865724;0,017049469964664311
+Asphalt;Selbstheilender Asphalt;co2_100a;232,50;Szenario 0: Baseline (IST);0,05000000000;umweltwirkung;135,0;480,0;0,7173913043478262;0,035869565217391312
+Asphalt;Selbstheilender Asphalt;co2_100a;232,50;Szenario 1: Forschungsfokus;0,12500000000;umweltwirkung;135,0;480,0;0,7173913043478262;0,089673913043478271
+Asphalt;Selbstheilender Asphalt;co2_100a;232,50;Szenario 2: Radikale Vermeidung;0,22500000000;umweltwirkung;135,0;480,0;0,7173913043478262;0,161413043478260881
+Asphalt;Selbstheilender Asphalt;co2_100a;232,50;Szenario 3: Radikaler Lebenszyklus;0,02500000000;umweltwirkung;135,0;480,0;0,7173913043478262;0,017934782608695656
+Asphalt;Selbstheilender Asphalt;graueEnergie_100a;1350,00;Szenario 0: Baseline (IST);0,05000000000;umweltwirkung;450,0;3280,0;0,6819787985865724;0,034098939929328623
+Asphalt;Selbstheilender Asphalt;graueEnergie_100a;1350,00;Szenario 1: Forschungsfokus;0,12500000000;umweltwirkung;450,0;3280,0;0,6819787985865724;0,085247349823321550
+Asphalt;Selbstheilender Asphalt;graueEnergie_100a;1350,00;Szenario 2: Radikale Vermeidung;0,22500000000;umweltwirkung;450,0;3280,0;0,6819787985865724;0,153445229681978795
+Asphalt;Selbstheilender Asphalt;graueEnergie_100a;1350,00;Szenario 3: Radikaler Lebenszyklus;0,02500000000;umweltwirkung;450,0;3280,0;0,6819787985865724;0,017049469964664311
 Asphalt;Selbstheilender Asphalt;recyclingfaehigkeit;0,00;Szenario 0: Baseline (IST);0,03333333330;kreislauffaehigkeit;0,0;2,0;0,0000000000000000;0,000000000000000000
 Asphalt;Selbstheilender Asphalt;recyclingfaehigkeit;0,00;Szenario 1: Forschungsfokus;0,08333333325;kreislauffaehigkeit;0,0;2,0;0,0000000000000000;0,000000000000000000
 Asphalt;Selbstheilender Asphalt;recyclingfaehigkeit;0,00;Szenario 2: Radikale Vermeidung;0,14999999985;kreislauffaehigkeit;0,0;2,0;0,0000000000000000;0,000000000000000000
@@ -199,14 +199,14 @@ Pflaster;Natursteinpflaster (sickerfähig, 6-10 mm Fugen);unterhalt_100a;500,00;
 Pflaster;Natursteinpflaster (sickerfähig, 6-10 mm Fugen);unterhalt_100a;500,00;Szenario 1: Forschungsfokus;0,10000000000;langlebigkeit_wirtschaftlichkeit;200,0;700,0;0,4000000000000000;0,040000000000000008
 Pflaster;Natursteinpflaster (sickerfähig, 6-10 mm Fugen);unterhalt_100a;500,00;Szenario 2: Radikale Vermeidung;0,01250000000;langlebigkeit_wirtschaftlichkeit;200,0;700,0;0,4000000000000000;0,005000000000000001
 Pflaster;Natursteinpflaster (sickerfähig, 6-10 mm Fugen);unterhalt_100a;500,00;Szenario 3: Radikaler Lebenszyklus;0,20000000000;langlebigkeit_wirtschaftlichkeit;200,0;700,0;0,4000000000000000;0,080000000000000016
-Pflaster;Natursteinpflaster (sickerfähig, 6-10 mm Fugen);co2_100a;165,00;Szenario 0: Baseline (IST);0,05000000000;umweltbelastung;135,0;480,0;0,9130434782608696;0,045652173913043485
-Pflaster;Natursteinpflaster (sickerfähig, 6-10 mm Fugen);co2_100a;165,00;Szenario 1: Forschungsfokus;0,12500000000;umweltbelastung;135,0;480,0;0,9130434782608696;0,114130434782608703
-Pflaster;Natursteinpflaster (sickerfähig, 6-10 mm Fugen);co2_100a;165,00;Szenario 2: Radikale Vermeidung;0,22500000000;umweltbelastung;135,0;480,0;0,9130434782608696;0,205434782608695660
-Pflaster;Natursteinpflaster (sickerfähig, 6-10 mm Fugen);co2_100a;165,00;Szenario 3: Radikaler Lebenszyklus;0,02500000000;umweltbelastung;135,0;480,0;0,9130434782608696;0,022826086956521743
-Pflaster;Natursteinpflaster (sickerfähig, 6-10 mm Fugen);graueEnergie_100a;780,00;Szenario 0: Baseline (IST);0,05000000000;umweltbelastung;450,0;3280,0;0,8833922261484100;0,044169611307420503
-Pflaster;Natursteinpflaster (sickerfähig, 6-10 mm Fugen);graueEnergie_100a;780,00;Szenario 1: Forschungsfokus;0,12500000000;umweltbelastung;450,0;3280,0;0,8833922261484100;0,110424028268551244
-Pflaster;Natursteinpflaster (sickerfähig, 6-10 mm Fugen);graueEnergie_100a;780,00;Szenario 2: Radikale Vermeidung;0,22500000000;umweltbelastung;450,0;3280,0;0,8833922261484100;0,198763250883392251
-Pflaster;Natursteinpflaster (sickerfähig, 6-10 mm Fugen);graueEnergie_100a;780,00;Szenario 3: Radikaler Lebenszyklus;0,02500000000;umweltbelastung;450,0;3280,0;0,8833922261484100;0,022084805653710252
+Pflaster;Natursteinpflaster (sickerfähig, 6-10 mm Fugen);co2_100a;165,00;Szenario 0: Baseline (IST);0,05000000000;umweltwirkung;135,0;480,0;0,9130434782608696;0,045652173913043485
+Pflaster;Natursteinpflaster (sickerfähig, 6-10 mm Fugen);co2_100a;165,00;Szenario 1: Forschungsfokus;0,12500000000;umweltwirkung;135,0;480,0;0,9130434782608696;0,114130434782608703
+Pflaster;Natursteinpflaster (sickerfähig, 6-10 mm Fugen);co2_100a;165,00;Szenario 2: Radikale Vermeidung;0,22500000000;umweltwirkung;135,0;480,0;0,9130434782608696;0,205434782608695660
+Pflaster;Natursteinpflaster (sickerfähig, 6-10 mm Fugen);co2_100a;165,00;Szenario 3: Radikaler Lebenszyklus;0,02500000000;umweltwirkung;135,0;480,0;0,9130434782608696;0,022826086956521743
+Pflaster;Natursteinpflaster (sickerfähig, 6-10 mm Fugen);graueEnergie_100a;780,00;Szenario 0: Baseline (IST);0,05000000000;umweltwirkung;450,0;3280,0;0,8833922261484100;0,044169611307420503
+Pflaster;Natursteinpflaster (sickerfähig, 6-10 mm Fugen);graueEnergie_100a;780,00;Szenario 1: Forschungsfokus;0,12500000000;umweltwirkung;450,0;3280,0;0,8833922261484100;0,110424028268551244
+Pflaster;Natursteinpflaster (sickerfähig, 6-10 mm Fugen);graueEnergie_100a;780,00;Szenario 2: Radikale Vermeidung;0,22500000000;umweltwirkung;450,0;3280,0;0,8833922261484100;0,198763250883392251
+Pflaster;Natursteinpflaster (sickerfähig, 6-10 mm Fugen);graueEnergie_100a;780,00;Szenario 3: Radikaler Lebenszyklus;0,02500000000;umweltwirkung;450,0;3280,0;0,8833922261484100;0,022084805653710252
 Pflaster;Natursteinpflaster (sickerfähig, 6-10 mm Fugen);recyclingfaehigkeit;2,00;Szenario 0: Baseline (IST);0,03333333330;kreislauffaehigkeit;0,0;2,0;1,0000000000000000;0,033333333300000004
 Pflaster;Natursteinpflaster (sickerfähig, 6-10 mm Fugen);recyclingfaehigkeit;2,00;Szenario 1: Forschungsfokus;0,08333333325;kreislauffaehigkeit;0,0;2,0;1,0000000000000000;0,083333333250000002
 Pflaster;Natursteinpflaster (sickerfähig, 6-10 mm Fugen);recyclingfaehigkeit;2,00;Szenario 2: Radikale Vermeidung;0,14999999985;kreislauffaehigkeit;0,0;2,0;1,0000000000000000;0,149999999850000010
@@ -243,14 +243,14 @@ Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);unterhalt_100a;500,00;S
 Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);unterhalt_100a;500,00;Szenario 1: Forschungsfokus;0,10000000000;langlebigkeit_wirtschaftlichkeit;200,0;700,0;0,4000000000000000;0,040000000000000008
 Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);unterhalt_100a;500,00;Szenario 2: Radikale Vermeidung;0,01250000000;langlebigkeit_wirtschaftlichkeit;200,0;700,0;0,4000000000000000;0,005000000000000001
 Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);unterhalt_100a;500,00;Szenario 3: Radikaler Lebenszyklus;0,20000000000;langlebigkeit_wirtschaftlichkeit;200,0;700,0;0,4000000000000000;0,080000000000000016
-Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);co2_100a;135,00;Szenario 0: Baseline (IST);0,05000000000;umweltbelastung;135,0;480,0;1,0000000000000000;0,050000000000000003
-Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);co2_100a;135,00;Szenario 1: Forschungsfokus;0,12500000000;umweltbelastung;135,0;480,0;1,0000000000000000;0,125000000000000000
-Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);co2_100a;135,00;Szenario 2: Radikale Vermeidung;0,22500000000;umweltbelastung;135,0;480,0;1,0000000000000000;0,225000000000000006
-Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);co2_100a;135,00;Szenario 3: Radikaler Lebenszyklus;0,02500000000;umweltbelastung;135,0;480,0;1,0000000000000000;0,025000000000000001
-Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);graueEnergie_100a;450,00;Szenario 0: Baseline (IST);0,05000000000;umweltbelastung;450,0;3280,0;1,0000000000000000;0,050000000000000003
-Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);graueEnergie_100a;450,00;Szenario 1: Forschungsfokus;0,12500000000;umweltbelastung;450,0;3280,0;1,0000000000000000;0,125000000000000000
-Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);graueEnergie_100a;450,00;Szenario 2: Radikale Vermeidung;0,22500000000;umweltbelastung;450,0;3280,0;1,0000000000000000;0,225000000000000006
-Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);graueEnergie_100a;450,00;Szenario 3: Radikaler Lebenszyklus;0,02500000000;umweltbelastung;450,0;3280,0;1,0000000000000000;0,025000000000000001
+Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);co2_100a;135,00;Szenario 0: Baseline (IST);0,05000000000;umweltwirkung;135,0;480,0;1,0000000000000000;0,050000000000000003
+Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);co2_100a;135,00;Szenario 1: Forschungsfokus;0,12500000000;umweltwirkung;135,0;480,0;1,0000000000000000;0,125000000000000000
+Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);co2_100a;135,00;Szenario 2: Radikale Vermeidung;0,22500000000;umweltwirkung;135,0;480,0;1,0000000000000000;0,225000000000000006
+Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);co2_100a;135,00;Szenario 3: Radikaler Lebenszyklus;0,02500000000;umweltwirkung;135,0;480,0;1,0000000000000000;0,025000000000000001
+Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);graueEnergie_100a;450,00;Szenario 0: Baseline (IST);0,05000000000;umweltwirkung;450,0;3280,0;1,0000000000000000;0,050000000000000003
+Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);graueEnergie_100a;450,00;Szenario 1: Forschungsfokus;0,12500000000;umweltwirkung;450,0;3280,0;1,0000000000000000;0,125000000000000000
+Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);graueEnergie_100a;450,00;Szenario 2: Radikale Vermeidung;0,22500000000;umweltwirkung;450,0;3280,0;1,0000000000000000;0,225000000000000006
+Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);graueEnergie_100a;450,00;Szenario 3: Radikaler Lebenszyklus;0,02500000000;umweltwirkung;450,0;3280,0;1,0000000000000000;0,025000000000000001
 Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);recyclingfaehigkeit;1,00;Szenario 0: Baseline (IST);0,03333333330;kreislauffaehigkeit;0,0;2,0;0,5000000000000000;0,016666666650000002
 Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);recyclingfaehigkeit;1,00;Szenario 1: Forschungsfokus;0,08333333325;kreislauffaehigkeit;0,0;2,0;0,5000000000000000;0,041666666625000001
 Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);recyclingfaehigkeit;1,00;Szenario 2: Radikale Vermeidung;0,14999999985;kreislauffaehigkeit;0,0;2,0;0,5000000000000000;0,074999999925000005
@@ -287,14 +287,14 @@ Pflaster;Ökopflastersteine (sickerfähig, 6-10 mm Fugen);unterhalt_100a;700,00;
 Pflaster;Ökopflastersteine (sickerfähig, 6-10 mm Fugen);unterhalt_100a;700,00;Szenario 1: Forschungsfokus;0,10000000000;langlebigkeit_wirtschaftlichkeit;200,0;700,0;0,0000000000000000;0,000000000000000000
 Pflaster;Ökopflastersteine (sickerfähig, 6-10 mm Fugen);unterhalt_100a;700,00;Szenario 2: Radikale Vermeidung;0,01250000000;langlebigkeit_wirtschaftlichkeit;200,0;700,0;0,0000000000000000;0,000000000000000000
 Pflaster;Ökopflastersteine (sickerfähig, 6-10 mm Fugen);unterhalt_100a;700,00;Szenario 3: Radikaler Lebenszyklus;0,20000000000;langlebigkeit_wirtschaftlichkeit;200,0;700,0;0,0000000000000000;0,000000000000000000
-Pflaster;Ökopflastersteine (sickerfähig, 6-10 mm Fugen);co2_100a;180,00;Szenario 0: Baseline (IST);0,05000000000;umweltbelastung;135,0;480,0;0,8695652173913043;0,043478260869565216
-Pflaster;Ökopflastersteine (sickerfähig, 6-10 mm Fugen);co2_100a;180,00;Szenario 1: Forschungsfokus;0,12500000000;umweltbelastung;135,0;480,0;0,8695652173913043;0,108695652173913040
-Pflaster;Ökopflastersteine (sickerfähig, 6-10 mm Fugen);co2_100a;180,00;Szenario 2: Radikale Vermeidung;0,22500000000;umweltbelastung;135,0;480,0;0,8695652173913043;0,195652173913043487
-Pflaster;Ökopflastersteine (sickerfähig, 6-10 mm Fugen);co2_100a;180,00;Szenario 3: Radikaler Lebenszyklus;0,02500000000;umweltbelastung;135,0;480,0;0,8695652173913043;0,021739130434782608
-Pflaster;Ökopflastersteine (sickerfähig, 6-10 mm Fugen);graueEnergie_100a;600,00;Szenario 0: Baseline (IST);0,05000000000;umweltbelastung;450,0;3280,0;0,9469964664310954;0,047349823321554768
-Pflaster;Ökopflastersteine (sickerfähig, 6-10 mm Fugen);graueEnergie_100a;600,00;Szenario 1: Forschungsfokus;0,12500000000;umweltbelastung;450,0;3280,0;0,9469964664310954;0,118374558303886920
-Pflaster;Ökopflastersteine (sickerfähig, 6-10 mm Fugen);graueEnergie_100a;600,00;Szenario 2: Radikale Vermeidung;0,22500000000;umweltbelastung;450,0;3280,0;0,9469964664310954;0,213074204946996471
-Pflaster;Ökopflastersteine (sickerfähig, 6-10 mm Fugen);graueEnergie_100a;600,00;Szenario 3: Radikaler Lebenszyklus;0,02500000000;umweltbelastung;450,0;3280,0;0,9469964664310954;0,023674911660777384
+Pflaster;Ökopflastersteine (sickerfähig, 6-10 mm Fugen);co2_100a;180,00;Szenario 0: Baseline (IST);0,05000000000;umweltwirkung;135,0;480,0;0,8695652173913043;0,043478260869565216
+Pflaster;Ökopflastersteine (sickerfähig, 6-10 mm Fugen);co2_100a;180,00;Szenario 1: Forschungsfokus;0,12500000000;umweltwirkung;135,0;480,0;0,8695652173913043;0,108695652173913040
+Pflaster;Ökopflastersteine (sickerfähig, 6-10 mm Fugen);co2_100a;180,00;Szenario 2: Radikale Vermeidung;0,22500000000;umweltwirkung;135,0;480,0;0,8695652173913043;0,195652173913043487
+Pflaster;Ökopflastersteine (sickerfähig, 6-10 mm Fugen);co2_100a;180,00;Szenario 3: Radikaler Lebenszyklus;0,02500000000;umweltwirkung;135,0;480,0;0,8695652173913043;0,021739130434782608
+Pflaster;Ökopflastersteine (sickerfähig, 6-10 mm Fugen);graueEnergie_100a;600,00;Szenario 0: Baseline (IST);0,05000000000;umweltwirkung;450,0;3280,0;0,9469964664310954;0,047349823321554768
+Pflaster;Ökopflastersteine (sickerfähig, 6-10 mm Fugen);graueEnergie_100a;600,00;Szenario 1: Forschungsfokus;0,12500000000;umweltwirkung;450,0;3280,0;0,9469964664310954;0,118374558303886920
+Pflaster;Ökopflastersteine (sickerfähig, 6-10 mm Fugen);graueEnergie_100a;600,00;Szenario 2: Radikale Vermeidung;0,22500000000;umweltwirkung;450,0;3280,0;0,9469964664310954;0,213074204946996471
+Pflaster;Ökopflastersteine (sickerfähig, 6-10 mm Fugen);graueEnergie_100a;600,00;Szenario 3: Radikaler Lebenszyklus;0,02500000000;umweltwirkung;450,0;3280,0;0,9469964664310954;0,023674911660777384
 Pflaster;Ökopflastersteine (sickerfähig, 6-10 mm Fugen);recyclingfaehigkeit;1,00;Szenario 0: Baseline (IST);0,03333333330;kreislauffaehigkeit;0,0;2,0;0,5000000000000000;0,016666666650000002
 Pflaster;Ökopflastersteine (sickerfähig, 6-10 mm Fugen);recyclingfaehigkeit;1,00;Szenario 1: Forschungsfokus;0,08333333325;kreislauffaehigkeit;0,0;2,0;0,5000000000000000;0,041666666625000001
 Pflaster;Ökopflastersteine (sickerfähig, 6-10 mm Fugen);recyclingfaehigkeit;1,00;Szenario 2: Radikale Vermeidung;0,14999999985;kreislauffaehigkeit;0,0;2,0;0,5000000000000000;0,074999999925000005
@@ -331,14 +331,14 @@ Sickerbeläge;Chaussierung;unterhalt_100a;500,00;Szenario 0: Baseline (IST);0,10
 Sickerbeläge;Chaussierung;unterhalt_100a;500,00;Szenario 1: Forschungsfokus;0,10000000000;langlebigkeit_wirtschaftlichkeit;200,0;700,0;0,4000000000000000;0,040000000000000008
 Sickerbeläge;Chaussierung;unterhalt_100a;500,00;Szenario 2: Radikale Vermeidung;0,01250000000;langlebigkeit_wirtschaftlichkeit;200,0;700,0;0,4000000000000000;0,005000000000000001
 Sickerbeläge;Chaussierung;unterhalt_100a;500,00;Szenario 3: Radikaler Lebenszyklus;0,20000000000;langlebigkeit_wirtschaftlichkeit;200,0;700,0;0,4000000000000000;0,080000000000000016
-Sickerbeläge;Chaussierung;co2_100a;224,00;Szenario 0: Baseline (IST);0,05000000000;umweltbelastung;135,0;480,0;0,7420289855072464;0,037101449275362318
-Sickerbeläge;Chaussierung;co2_100a;224,00;Szenario 1: Forschungsfokus;0,12500000000;umweltbelastung;135,0;480,0;0,7420289855072464;0,092753623188405798
-Sickerbeläge;Chaussierung;co2_100a;224,00;Szenario 2: Radikale Vermeidung;0,22500000000;umweltbelastung;135,0;480,0;0,7420289855072464;0,166956521739130448
-Sickerbeläge;Chaussierung;co2_100a;224,00;Szenario 3: Radikaler Lebenszyklus;0,02500000000;umweltbelastung;135,0;480,0;0,7420289855072464;0,018550724637681159
-Sickerbeläge;Chaussierung;graueEnergie_100a;1000,00;Szenario 0: Baseline (IST);0,05000000000;umweltbelastung;450,0;3280,0;0,8056537102473498;0,040282685512367494
-Sickerbeläge;Chaussierung;graueEnergie_100a;1000,00;Szenario 1: Forschungsfokus;0,12500000000;umweltbelastung;450,0;3280,0;0,8056537102473498;0,100706713780918722
-Sickerbeläge;Chaussierung;graueEnergie_100a;1000,00;Szenario 2: Radikale Vermeidung;0,22500000000;umweltbelastung;450,0;3280,0;0,8056537102473498;0,181272084805653710
-Sickerbeläge;Chaussierung;graueEnergie_100a;1000,00;Szenario 3: Radikaler Lebenszyklus;0,02500000000;umweltbelastung;450,0;3280,0;0,8056537102473498;0,020141342756183747
+Sickerbeläge;Chaussierung;co2_100a;224,00;Szenario 0: Baseline (IST);0,05000000000;umweltwirkung;135,0;480,0;0,7420289855072464;0,037101449275362318
+Sickerbeläge;Chaussierung;co2_100a;224,00;Szenario 1: Forschungsfokus;0,12500000000;umweltwirkung;135,0;480,0;0,7420289855072464;0,092753623188405798
+Sickerbeläge;Chaussierung;co2_100a;224,00;Szenario 2: Radikale Vermeidung;0,22500000000;umweltwirkung;135,0;480,0;0,7420289855072464;0,166956521739130448
+Sickerbeläge;Chaussierung;co2_100a;224,00;Szenario 3: Radikaler Lebenszyklus;0,02500000000;umweltwirkung;135,0;480,0;0,7420289855072464;0,018550724637681159
+Sickerbeläge;Chaussierung;graueEnergie_100a;1000,00;Szenario 0: Baseline (IST);0,05000000000;umweltwirkung;450,0;3280,0;0,8056537102473498;0,040282685512367494
+Sickerbeläge;Chaussierung;graueEnergie_100a;1000,00;Szenario 1: Forschungsfokus;0,12500000000;umweltwirkung;450,0;3280,0;0,8056537102473498;0,100706713780918722
+Sickerbeläge;Chaussierung;graueEnergie_100a;1000,00;Szenario 2: Radikale Vermeidung;0,22500000000;umweltwirkung;450,0;3280,0;0,8056537102473498;0,181272084805653710
+Sickerbeläge;Chaussierung;graueEnergie_100a;1000,00;Szenario 3: Radikaler Lebenszyklus;0,02500000000;umweltwirkung;450,0;3280,0;0,8056537102473498;0,020141342756183747
 Sickerbeläge;Chaussierung;recyclingfaehigkeit;2,00;Szenario 0: Baseline (IST);0,03333333330;kreislauffaehigkeit;0,0;2,0;1,0000000000000000;0,033333333300000004
 Sickerbeläge;Chaussierung;recyclingfaehigkeit;2,00;Szenario 1: Forschungsfokus;0,08333333325;kreislauffaehigkeit;0,0;2,0;1,0000000000000000;0,083333333250000002
 Sickerbeläge;Chaussierung;recyclingfaehigkeit;2,00;Szenario 2: Radikale Vermeidung;0,14999999985;kreislauffaehigkeit;0,0;2,0;1,0000000000000000;0,149999999850000010
@@ -375,14 +375,14 @@ Sickerbeläge;Kiesrasen;unterhalt_100a;500,00;Szenario 0: Baseline (IST);0,10000
 Sickerbeläge;Kiesrasen;unterhalt_100a;500,00;Szenario 1: Forschungsfokus;0,10000000000;langlebigkeit_wirtschaftlichkeit;200,0;700,0;0,4000000000000000;0,040000000000000008
 Sickerbeläge;Kiesrasen;unterhalt_100a;500,00;Szenario 2: Radikale Vermeidung;0,01250000000;langlebigkeit_wirtschaftlichkeit;200,0;700,0;0,4000000000000000;0,005000000000000001
 Sickerbeläge;Kiesrasen;unterhalt_100a;500,00;Szenario 3: Radikaler Lebenszyklus;0,20000000000;langlebigkeit_wirtschaftlichkeit;200,0;700,0;0,4000000000000000;0,080000000000000016
-Sickerbeläge;Kiesrasen;co2_100a;210,00;Szenario 0: Baseline (IST);0,05000000000;umweltbelastung;135,0;480,0;0,7826086956521739;0,039130434782608699
-Sickerbeläge;Kiesrasen;co2_100a;210,00;Szenario 1: Forschungsfokus;0,12500000000;umweltbelastung;135,0;480,0;0,7826086956521739;0,097826086956521743
-Sickerbeläge;Kiesrasen;co2_100a;210,00;Szenario 2: Radikale Vermeidung;0,22500000000;umweltbelastung;135,0;480,0;0,7826086956521739;0,176086956521739141
-Sickerbeläge;Kiesrasen;co2_100a;210,00;Szenario 3: Radikaler Lebenszyklus;0,02500000000;umweltbelastung;135,0;480,0;0,7826086956521739;0,019565217391304349
-Sickerbeläge;Kiesrasen;graueEnergie_100a;910,00;Szenario 0: Baseline (IST);0,05000000000;umweltbelastung;450,0;3280,0;0,8374558303886925;0,041872791519434627
-Sickerbeläge;Kiesrasen;graueEnergie_100a;910,00;Szenario 1: Forschungsfokus;0,12500000000;umweltbelastung;450,0;3280,0;0,8374558303886925;0,104681978798586567
-Sickerbeläge;Kiesrasen;graueEnergie_100a;910,00;Szenario 2: Radikale Vermeidung;0,22500000000;umweltbelastung;450,0;3280,0;0,8374558303886925;0,188427561837455820
-Sickerbeläge;Kiesrasen;graueEnergie_100a;910,00;Szenario 3: Radikaler Lebenszyklus;0,02500000000;umweltbelastung;450,0;3280,0;0,8374558303886925;0,020936395759717313
+Sickerbeläge;Kiesrasen;co2_100a;210,00;Szenario 0: Baseline (IST);0,05000000000;umweltwirkung;135,0;480,0;0,7826086956521739;0,039130434782608699
+Sickerbeläge;Kiesrasen;co2_100a;210,00;Szenario 1: Forschungsfokus;0,12500000000;umweltwirkung;135,0;480,0;0,7826086956521739;0,097826086956521743
+Sickerbeläge;Kiesrasen;co2_100a;210,00;Szenario 2: Radikale Vermeidung;0,22500000000;umweltwirkung;135,0;480,0;0,7826086956521739;0,176086956521739141
+Sickerbeläge;Kiesrasen;co2_100a;210,00;Szenario 3: Radikaler Lebenszyklus;0,02500000000;umweltwirkung;135,0;480,0;0,7826086956521739;0,019565217391304349
+Sickerbeläge;Kiesrasen;graueEnergie_100a;910,00;Szenario 0: Baseline (IST);0,05000000000;umweltwirkung;450,0;3280,0;0,8374558303886925;0,041872791519434627
+Sickerbeläge;Kiesrasen;graueEnergie_100a;910,00;Szenario 1: Forschungsfokus;0,12500000000;umweltwirkung;450,0;3280,0;0,8374558303886925;0,104681978798586567
+Sickerbeläge;Kiesrasen;graueEnergie_100a;910,00;Szenario 2: Radikale Vermeidung;0,22500000000;umweltwirkung;450,0;3280,0;0,8374558303886925;0,188427561837455820
+Sickerbeläge;Kiesrasen;graueEnergie_100a;910,00;Szenario 3: Radikaler Lebenszyklus;0,02500000000;umweltwirkung;450,0;3280,0;0,8374558303886925;0,020936395759717313
 Sickerbeläge;Kiesrasen;recyclingfaehigkeit;1,00;Szenario 0: Baseline (IST);0,03333333330;kreislauffaehigkeit;0,0;2,0;0,5000000000000000;0,016666666650000002
 Sickerbeläge;Kiesrasen;recyclingfaehigkeit;1,00;Szenario 1: Forschungsfokus;0,08333333325;kreislauffaehigkeit;0,0;2,0;0,5000000000000000;0,041666666625000001
 Sickerbeläge;Kiesrasen;recyclingfaehigkeit;1,00;Szenario 2: Radikale Vermeidung;0,14999999985;kreislauffaehigkeit;0,0;2,0;0,5000000000000000;0,074999999925000005
@@ -419,14 +419,14 @@ Sickerbeläge;Rasengittersteine;unterhalt_100a;700,00;Szenario 0: Baseline (IST)
 Sickerbeläge;Rasengittersteine;unterhalt_100a;700,00;Szenario 1: Forschungsfokus;0,10000000000;langlebigkeit_wirtschaftlichkeit;200,0;700,0;0,0000000000000000;0,000000000000000000
 Sickerbeläge;Rasengittersteine;unterhalt_100a;700,00;Szenario 2: Radikale Vermeidung;0,01250000000;langlebigkeit_wirtschaftlichkeit;200,0;700,0;0,0000000000000000;0,000000000000000000
 Sickerbeläge;Rasengittersteine;unterhalt_100a;700,00;Szenario 3: Radikaler Lebenszyklus;0,20000000000;langlebigkeit_wirtschaftlichkeit;200,0;700,0;0,0000000000000000;0,000000000000000000
-Sickerbeläge;Rasengittersteine;co2_100a;212,00;Szenario 0: Baseline (IST);0,05000000000;umweltbelastung;135,0;480,0;0,7768115942028986;0,038840579710144929
-Sickerbeläge;Rasengittersteine;co2_100a;212,00;Szenario 1: Forschungsfokus;0,12500000000;umweltbelastung;135,0;480,0;0,7768115942028986;0,097101449275362323
-Sickerbeläge;Rasengittersteine;co2_100a;212,00;Szenario 2: Radikale Vermeidung;0,22500000000;umweltbelastung;135,0;480,0;0,7768115942028986;0,174782608695652181
-Sickerbeläge;Rasengittersteine;co2_100a;212,00;Szenario 3: Radikaler Lebenszyklus;0,02500000000;umweltbelastung;135,0;480,0;0,7768115942028986;0,019420289855072465
-Sickerbeläge;Rasengittersteine;graueEnergie_100a;720,00;Szenario 0: Baseline (IST);0,05000000000;umweltbelastung;450,0;3280,0;0,9045936395759717;0,045229681978798592
-Sickerbeläge;Rasengittersteine;graueEnergie_100a;720,00;Szenario 1: Forschungsfokus;0,12500000000;umweltbelastung;450,0;3280,0;0,9045936395759717;0,113074204946996465
-Sickerbeläge;Rasengittersteine;graueEnergie_100a;720,00;Szenario 2: Radikale Vermeidung;0,22500000000;umweltbelastung;450,0;3280,0;0,9045936395759717;0,203533568904593648
-Sickerbeläge;Rasengittersteine;graueEnergie_100a;720,00;Szenario 3: Radikaler Lebenszyklus;0,02500000000;umweltbelastung;450,0;3280,0;0,9045936395759717;0,022614840989399296
+Sickerbeläge;Rasengittersteine;co2_100a;212,00;Szenario 0: Baseline (IST);0,05000000000;umweltwirkung;135,0;480,0;0,7768115942028986;0,038840579710144929
+Sickerbeläge;Rasengittersteine;co2_100a;212,00;Szenario 1: Forschungsfokus;0,12500000000;umweltwirkung;135,0;480,0;0,7768115942028986;0,097101449275362323
+Sickerbeläge;Rasengittersteine;co2_100a;212,00;Szenario 2: Radikale Vermeidung;0,22500000000;umweltwirkung;135,0;480,0;0,7768115942028986;0,174782608695652181
+Sickerbeläge;Rasengittersteine;co2_100a;212,00;Szenario 3: Radikaler Lebenszyklus;0,02500000000;umweltwirkung;135,0;480,0;0,7768115942028986;0,019420289855072465
+Sickerbeläge;Rasengittersteine;graueEnergie_100a;720,00;Szenario 0: Baseline (IST);0,05000000000;umweltwirkung;450,0;3280,0;0,9045936395759717;0,045229681978798592
+Sickerbeläge;Rasengittersteine;graueEnergie_100a;720,00;Szenario 1: Forschungsfokus;0,12500000000;umweltwirkung;450,0;3280,0;0,9045936395759717;0,113074204946996465
+Sickerbeläge;Rasengittersteine;graueEnergie_100a;720,00;Szenario 2: Radikale Vermeidung;0,22500000000;umweltwirkung;450,0;3280,0;0,9045936395759717;0,203533568904593648
+Sickerbeläge;Rasengittersteine;graueEnergie_100a;720,00;Szenario 3: Radikaler Lebenszyklus;0,02500000000;umweltwirkung;450,0;3280,0;0,9045936395759717;0,022614840989399296
 Sickerbeläge;Rasengittersteine;recyclingfaehigkeit;1,00;Szenario 0: Baseline (IST);0,03333333330;kreislauffaehigkeit;0,0;2,0;0,5000000000000000;0,016666666650000002
 Sickerbeläge;Rasengittersteine;recyclingfaehigkeit;1,00;Szenario 1: Forschungsfokus;0,08333333325;kreislauffaehigkeit;0,0;2,0;0,5000000000000000;0,041666666625000001
 Sickerbeläge;Rasengittersteine;recyclingfaehigkeit;1,00;Szenario 2: Radikale Vermeidung;0,14999999985;kreislauffaehigkeit;0,0;2,0;0,5000000000000000;0,074999999925000005

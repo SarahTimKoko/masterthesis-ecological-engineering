@@ -9,4 +9,4 @@ multifunktionale_nutzungsqualitaet;Multifunktionale Nutzungsqualität;0.4;biodiv
 multifunktionale_nutzungsqualitaet;Multifunktionale Nutzungsqualität;0.4;kuehlung;Kühlung MW [°C];0.125
 multifunktionale_nutzungsqualitaet;Multifunktionale Nutzungsqualität;0.4;regenwasser;Regenwasserspeicherung MW [l/d];0.125
 kreislauffaehigkeit;Kreislauffähigkeit;0.1;recyclingpotential;Recyclingpotential [0-3];1
-umweltbelastung;Umweltbelastung;0.1;co2_bindung;CO2-Bindung MW [kg CO2/a];1
+umweltwirkung;Umweltwirkung;0.1;co2_bindung;CO2-Bindung MW [kg CO2/a];1

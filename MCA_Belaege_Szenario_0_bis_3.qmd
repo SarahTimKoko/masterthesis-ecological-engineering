@@ -17,7 +17,7 @@ Ziel: Wahl der besten drei Beläge nach MCA Berechnung
 
 **Szenario 1:** "Forschungsfokus": Bildet meine zentrale Forschungsfrage (FQ) ab. Dieses Szenario sucht die Balance zwischen den beiden Hauptsäulen meiner Arbeit: dem Lebenszyklus-Fokus (H1/H2) und dem Vermeidungsprinzip (H3).
 
-**Szenario 2:** "Radikale Vermeidung": Testet Hypothese 3 (H3) im Extrem. Es priorisiert radikal die Kriterien des Vermeidungsprinzips, also Umweltbelastung (co2, graueEnergie) und Kreislauffähigkeit (recyclingfaehigkeit, modulareErneuerbarkeit).
+**Szenario 2:** "Radikale Vermeidung": Testet Hypothese 3 (H3) im Extrem. Es priorisiert radikal die Kriterien des Vermeidungsprinzips, also Umweltwirkung (co2, graueEnergie) und Kreislauffähigkeit (recyclingfaehigkeit, modulareErneuerbarkeit).
 
 **Szenario 3:** "Radikaler Lebenszyklus": Testet die Hypothesen 1 und 2 (H1/H2) im Extrem. Es priorisiert radikal die Kriterien der Langlebigkeit & Wirtschaftlichkeit (insb. lebensdauer und unterhalt), um die Anzahl der Sanierungs-Eingriffe über den Zeitstrahl zu minimieren.
 
@@ -495,7 +495,7 @@ df_mca_groups_belaege_plot <- df_mca_calculated %>%
   mutate(group_label_clean = case_when(
     group_id == "langlebigkeit_wirtschaftlichkeit" ~ "Langlebigkeit & Wirtschaftlichkeit",
     group_id == "multifunktionale_nutzungsqualitaet" ~ "Multifunktionale Nutzungsqualität",
-    group_id == "umweltbelastung" ~ "Umweltbelastung",
+    group_id == "umweltwirkung" ~ "Umweltwirkung",
     group_id == "kreislauffaehigkeit" ~ "Kreislauffähigkeit",
     TRUE ~ group_id
   ))
@@ -511,7 +511,7 @@ colors_kategorie <- c("Asphalt" = "#084594",
 colors_gruppen <- c(
   "Langlebigkeit & Wirtschaftlichkeit" = "#08306b", # Sehr dunkelblau (Basis)
   "Multifunktionale Nutzungsqualität" = "#2171b5",  # Mittelblau
-  "Umweltbelastung" = "#6baed6",                    # Hellblau
+  "Umweltwirkung" = "#6baed6",                    # Hellblau
   "Kreislauffähigkeit" = "#c6dbef"                  # Sehr hellblau/Grau
 )
 # ----------------------------------------------------

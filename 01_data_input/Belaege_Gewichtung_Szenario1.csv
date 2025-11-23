@@ -2,8 +2,8 @@
 langlebigkeit_wirtschaftlichkeit;Langlebigkeit & Wirtschaftlichkeit;0.4;lebensdauer;Lebensdauer [a];0.5
 langlebigkeit_wirtschaftlichkeit;Langlebigkeit & Wirtschaftlichkeit;0.4;unterhalt_100a;Unterhaltskosten (100a) [CHF];0.25
 langlebigkeit_wirtschaftlichkeit;Langlebigkeit & Wirtschaftlichkeit;0.4;initialkosten_100a;Initialkosten (100a) [CHF];0.25
-umweltbelastung;Umweltbelastung;0.25;co2_100a;CO2-Emissionen (100a) [kg CO2e];0.5
-umweltbelastung;Umweltbelastung;0.25;graueEnergie_100a;Graue Energie (100a) [kWh];0.5
+umweltwirkung;Umweltwirkung;0.25;co2_100a;CO2-Emissionen (100a) [kg CO2e];0.5
+umweltwirkung;Umweltwirkung;0.25;graueEnergie_100a;Graue Energie (100a) [kWh];0.5
 kreislauffaehigkeit;Kreislauffähigkeit;0.25;recyclingfaehigkeit;Recyclingfähigkeit [0-2];0.333333333
 kreislauffaehigkeit;Kreislauffähigkeit;0.25;lokaleMaterialien;Lokale Materialien [0-1];0.333333333
 kreislauffaehigkeit;Kreislauffähigkeit;0.25;modulareErneuerbarkeit;Modulare Erneuerbarkeit [0-2];0.333333333
