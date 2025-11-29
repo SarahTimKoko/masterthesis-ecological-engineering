@@ -57,19 +57,19 @@ Szenario 2: Radikale Vermeidung;Grosskronige Arten;Tilia × europaea ‘Pallida�
 Szenario 2: Radikale Vermeidung;Leitung;Wasser (Mat.);100,0;100,0;0
 Szenario 2: Radikale Vermeidung;Leitung;Wasser (Techn.);80,0;80,0;0
 Szenario 3: Radikaler Lebenszyklus;Leitung;Abwasser (Techn.);80,0;80,0;0
-Szenario 3: Radikaler Lebenszyklus;Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);35,0;35,0;2
-Szenario 3: Radikaler Lebenszyklus;Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);35,0;70,0;2
+Szenario 3: Radikaler Lebenszyklus;Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);35,0;35,0;3
+Szenario 3: Radikaler Lebenszyklus;Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);35,0;70,0;3
 Szenario 3: Radikaler Lebenszyklus;Leitung;Elektro (Rohrblock) (Mat.);100,0;100,0;0
 Szenario 3: Radikaler Lebenszyklus;Leitung;Elektro (Rohrblock) (Techn.);80,0;80,0;0
 Szenario 3: Radikaler Lebenszyklus;Leitung;Fernwärme (Mat.);70,0;70,0;0
 Szenario 3: Radikaler Lebenszyklus;Leitung;Fernwärme (Techn.);60,0;60,0;0
-Szenario 3: Radikaler Lebenszyklus;Pflaster;Natursteinpflaster (sickerfähig, 6-10 mm Fugen);45,0;45,0;3
-Szenario 3: Radikaler Lebenszyklus;Pflaster;Natursteinpflaster (sickerfähig, 6-10 mm Fugen);45,0;90,0;3
-Szenario 3: Radikaler Lebenszyklus;Grosskronige Arten;Quercus petraea (Traubeneiche);100,0;100,0;2
-Szenario 3: Radikaler Lebenszyklus;Grosskronige Arten;Quercus robur (Stieleiche);100,0;100,0;3
+Szenario 3: Radikaler Lebenszyklus;Pflaster;Natursteinpflaster (sickerfähig, 6-10 mm Fugen);45,0;45,0;1
+Szenario 3: Radikaler Lebenszyklus;Pflaster;Natursteinpflaster (sickerfähig, 6-10 mm Fugen);45,0;90,0;1
+Szenario 3: Radikaler Lebenszyklus;Grosskronige Arten;Quercus petraea (Traubeneiche);100,0;100,0;1
+Szenario 3: Radikaler Lebenszyklus;Grosskronige Arten;Quercus robur (Stieleiche);100,0;100,0;2
 Szenario 3: Radikaler Lebenszyklus;Leitung;Regenwasser (Techn.);80,0;80,0;0
-Szenario 3: Radikaler Lebenszyklus;Asphalt;Selbstheilender Asphalt;42,5;42,5;1
-Szenario 3: Radikaler Lebenszyklus;Asphalt;Selbstheilender Asphalt;42,5;85,0;1
-Szenario 3: Radikaler Lebenszyklus;Kleine Arten;Ulmus ‘New Horizon’ (Hybridulme);100,0;100,0;1
+Szenario 3: Radikaler Lebenszyklus;Asphalt;Selbstheilender Asphalt;42,5;42,5;2
+Szenario 3: Radikaler Lebenszyklus;Asphalt;Selbstheilender Asphalt;42,5;85,0;2
+Szenario 3: Radikaler Lebenszyklus;Grosskronige Arten;Tilia × europaea ‘Pallida’ (Kaiser-Linde, Holländische Linde);100,0;100,0;3
 Szenario 3: Radikaler Lebenszyklus;Leitung;Wasser (Mat.);100,0;100,0;0
 Szenario 3: Radikaler Lebenszyklus;Leitung;Wasser (Techn.);80,0;80,0;0
