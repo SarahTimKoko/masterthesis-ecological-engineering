@@ -518,7 +518,8 @@ df_mca_groups_belaege_plot <- df_mca_calculated %>%
   summarise(gruppen_score = sum(MCA_score_kriterium, na.rm = TRUE), .groups = 'drop') %>%
   left_join(df_mca_total, by = c("szenario", "belagskategorie", "option")) %>%
   mutate(group_label_clean = case_when(
-    group_id == "langlebigkeit_wirtschaftlichkeit" ~ "Langlebigkeit & Wirtschaftlichkeit",
+    group_id == "langlebigkeit" ~ "Langlebigkeit",
+    group_id == "wirtschaftlichkeit" ~ "Wirtschaftlichkeit",
     group_id == "multifunktionale_nutzungsqualitaet" ~ "Multifunktionale Nutzungsqualität",
     group_id == "umweltwirkung" ~ "Umweltwirkung",
     group_id == "kreislauffaehigkeit" ~ "Kreislauffähigkeit",
@@ -533,10 +534,11 @@ colors_kategorie <- c(
 
 # 2. Farben für Kriterien-Gruppen
 colors_gruppen <- c(
-  "Langlebigkeit & Wirtschaftlichkeit" = "#08306b", # Sehr dunkelblau (Basis)
-  "Multifunktionale Nutzungsqualität" = "#2171b5",  # Mittelblau
-  "Umweltwirkung" = "#6baed6",                    # Hellblau
-  "Kreislauffähigkeit" = "#c6dbef"                  # Sehr hellblau/Grau
+  "Langlebigkeit" = "#08306b",                     # Dunkelstes Blau (Zeit)
+  "Wirtschaftlichkeit" = "#2171b5",                # Dunkles Mittelblau (Geld)
+  "Multifunktionale Nutzungsqualität" = "#4292c6", # Mittelblau
+  "Umweltwirkung" = "#9ecae1",                     # Hellblau
+  "Kreislauffähigkeit" = "#deebf7"                 # Sehr helles Blau/Grau
 )
 ```
 

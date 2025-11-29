@@ -1,7 +1,7 @@
 ﻿group_id;group_label;group_weight;criterion_id;criterion_label;within_group_weight
-langlebigkeit_wirtschaftlichkeit;Langlebigkeit & Wirtschaftlichkeit;0.4;lebensdauer;Lebensdauer MW [a];0.5
-langlebigkeit_wirtschaftlichkeit;Langlebigkeit & Wirtschaftlichkeit;0.4;pflegeaufwand;Pflegeaufwand [0-3];0.25
-langlebigkeit_wirtschaftlichkeit;Langlebigkeit & Wirtschaftlichkeit;0.4;groesse_baumrigolen;Grösse Baumrigolen [m³] (Initialkosten);0.25
+langlebigkeit;Langlebigkeit;0.2;lebensdauer;Lebensdauer MW [a];1
+wirtschaftlichkeit;Wirtschaftlichkeit;0.2;pflegeaufwand;Pflegeaufwand [0-3];0.5
+wirtschaftlichkeit;Wirtschaftlichkeit;0.2;groesse_baumrigolen;Grösse Baumrigolen [m³] (Initialkosten);0.5
 multifunktionale_nutzungsqualitaet;Multifunktionale Nutzungsqualität;0.1;klimaangepasst;Klimaangepasst [0-3];0.25
 multifunktionale_nutzungsqualitaet;Multifunktionale Nutzungsqualität;0.1;geeignet_stadtbaum;geeignet als Stadtbaum [0-3];0.25
 multifunktionale_nutzungsqualitaet;Multifunktionale Nutzungsqualität;0.1;kronenbreite;Kronenbreite MW [m];0.125

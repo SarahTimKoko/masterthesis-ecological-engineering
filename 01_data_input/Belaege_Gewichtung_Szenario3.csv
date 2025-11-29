@@ -1,7 +1,7 @@
 ﻿group_id;group_label;group_weight;criterion_id;criterion_label;within_group_weight
-langlebigkeit_wirtschaftlichkeit;Langlebigkeit & Wirtschaftlichkeit;0.8;lebensdauer;Lebensdauer [a];0.5
-langlebigkeit_wirtschaftlichkeit;Langlebigkeit & Wirtschaftlichkeit;0.8;unterhalt_100a;Unterhaltskosten (100a) [CHF];0.25
-langlebigkeit_wirtschaftlichkeit;Langlebigkeit & Wirtschaftlichkeit;0.8;initialkosten_100a;Initialkosten (100a) [CHF];0.25
+langlebigkeit;Langlebigkeit;0.7;lebensdauer;Lebensdauer [a];1
+wirtschaftlichkeit;Wirschaftlichkeit;0.1;unterhalt_100a;Unterhaltskosten (100a) [CHF];0.5
+wirtschaftlichkeit;Wirschaftlichkeit;0.1;initialkosten_100a;Initialkosten (100a) [CHF];0.5
 umweltwirkung;Umweltwirkung;0.05;co2_100a;CO2-Emissionen (100a) [kg CO2e];0.5
 umweltwirkung;Umweltwirkung;0.05;graueEnergie_100a;Graue Energie (100a) [kWh];0.5
 kreislauffaehigkeit;Kreislauffähigkeit;0.05;recyclingfaehigkeit;Recyclingfähigkeit [0-2];0.333333333

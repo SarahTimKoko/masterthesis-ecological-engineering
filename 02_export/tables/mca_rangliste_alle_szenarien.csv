@@ -1,41 +1,41 @@
 szenario;belagskategorie;option;MCA_gesamtscore
-Szenario 0: Baseline (IST);Asphalt;Selbstheilender Asphalt;0,717386919798468
-Szenario 0: Baseline (IST);Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);0,682165241861538
-Szenario 0: Baseline (IST);Pflaster;Natursteinpflaster (sickerfähig, 6-10 mm Fugen);0,608011085353797
-Szenario 0: Baseline (IST);Asphalt;Recyclingasphalt;0,594802403455625
-Szenario 0: Baseline (IST);Asphalt;Heller Asphalt;0,560868286118476
-Szenario 0: Baseline (IST);Sickerbeläge;Rasengittersteine;0,532205459524142
-Szenario 0: Baseline (IST);Pflaster;Ökopflastersteine (sickerfähig, 6-10 mm Fugen);0,489158251758428
-Szenario 0: Baseline (IST);Sickerbeläge;Chaussierung;0,378476540125609
-Szenario 0: Baseline (IST);Sickerbeläge;Kiesrasen;0,361434605450295
-Szenario 0: Baseline (IST);Asphalt;Sickerasphalt;0,166631125938636
-Szenario 1: Forschungsfokus;Pflaster;Natursteinpflaster (sickerfähig, 6-10 mm Fugen);0,759101787859493
-Szenario 1: Forschungsfokus;Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);0,754387464161538
-Szenario 1: Forschungsfokus;Asphalt;Selbstheilender Asphalt;0,622339677718548
-Szenario 1: Forschungsfokus;Pflaster;Ökopflastersteine (sickerfähig, 6-10 mm Fugen);0,619921982988858
-Szenario 1: Forschungsfokus;Sickerbeläge;Rasengittersteine;0,583310852132557
-Szenario 1: Forschungsfokus;Asphalt;Recyclingasphalt;0,579698316931370
-Szenario 1: Forschungsfokus;Sickerbeläge;Chaussierung;0,570324347169703
-Szenario 1: Forschungsfokus;Sickerbeläge;Kiesrasen;0,503927099203360
-Szenario 1: Forschungsfokus;Asphalt;Heller Asphalt;0,465485919252133
-Szenario 1: Forschungsfokus;Asphalt;Sickerasphalt;0,138930508682386
-Szenario 2: Radikale Vermeidung;Pflaster;Natursteinpflaster (sickerfähig, 6-10 mm Fugen);0,906471695571255
-Szenario 2: Radikale Vermeidung;Sickerbeläge;Chaussierung;0,823365156774519
-Szenario 2: Radikale Vermeidung;Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);0,814437321607692
-Szenario 2: Radikale Vermeidung;Pflaster;Ökopflastersteine (sickerfähig, 6-10 mm Fugen);0,750184316180953
-Szenario 2: Radikale Vermeidung;Sickerbeläge;Rasengittersteine;0,725999743704646
-Szenario 2: Radikale Vermeidung;Sickerbeläge;Kiesrasen;0,691235107127726
-Szenario 2: Radikale Vermeidung;Asphalt;Recyclingasphalt;0,613630047486210
-Szenario 2: Radikale Vermeidung;Asphalt;Heller Asphalt;0,414852351946310
-Szenario 2: Radikale Vermeidung;Asphalt;Selbstheilender Asphalt;0,395785574991708
-Szenario 2: Radikale Vermeidung;Asphalt;Sickerasphalt;0,166662223929830
-Szenario 3: Radikaler Lebenszyklus;Asphalt;Selbstheilender Asphalt;0,863154415676857
-Szenario 3: Radikaler Lebenszyklus;Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);0,699515669423077
-Szenario 3: Radikaler Lebenszyklus;Pflaster;Natursteinpflaster (sickerfähig, 6-10 mm Fugen);0,619458217618565
-Szenario 3: Radikaler Lebenszyklus;Asphalt;Recyclingasphalt;0,538042227435505
-Szenario 3: Radikaler Lebenszyklus;Asphalt;Heller Asphalt;0,505184783436627
-Szenario 3: Radikaler Lebenszyklus;Pflaster;Ökopflastersteine (sickerfähig, 6-10 mm Fugen);0,495958122432259
-Szenario 3: Radikaler Lebenszyklus;Sickerbeläge;Rasengittersteine;0,429972193689868
-Szenario 3: Radikaler Lebenszyklus;Sickerbeläge;Chaussierung;0,317677289915456
-Szenario 3: Radikaler Lebenszyklus;Sickerbeläge;Kiesrasen;0,317002231814192
-Szenario 3: Radikaler Lebenszyklus;Asphalt;Sickerasphalt;0,101960811779356
+Szenario 0: Baseline (IST);Asphalt;Selbstheilender Asphalt;0,7173869197984682
+Szenario 0: Baseline (IST);Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);0,6821652418615385
+Szenario 0: Baseline (IST);Pflaster;Natursteinpflaster (sickerfähig, 6-10 mm Fugen);0,6080110853537973
+Szenario 0: Baseline (IST);Asphalt;Recyclingasphalt;0,5948024034556250
+Szenario 0: Baseline (IST);Asphalt;Heller Asphalt;0,5608682861184755
+Szenario 0: Baseline (IST);Sickerbeläge;Rasengittersteine;0,5322054595241417
+Szenario 0: Baseline (IST);Pflaster;Ökopflastersteine (sickerfähig, 6-10 mm Fugen);0,4891582517584277
+Szenario 0: Baseline (IST);Sickerbeläge;Chaussierung;0,3784765401256086
+Szenario 0: Baseline (IST);Sickerbeläge;Kiesrasen;0,3614346054502951
+Szenario 0: Baseline (IST);Asphalt;Sickerasphalt;0,1666311259386364
+Szenario 1: Forschungsfokus;Pflaster;Natursteinpflaster (sickerfähig, 6-10 mm Fugen);0,7591017878594933
+Szenario 1: Forschungsfokus;Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);0,7543874641615385
+Szenario 1: Forschungsfokus;Asphalt;Selbstheilender Asphalt;0,6223396777185481
+Szenario 1: Forschungsfokus;Pflaster;Ökopflastersteine (sickerfähig, 6-10 mm Fugen);0,6199219829888577
+Szenario 1: Forschungsfokus;Sickerbeläge;Rasengittersteine;0,5833108521325570
+Szenario 1: Forschungsfokus;Asphalt;Recyclingasphalt;0,5796983169313701
+Szenario 1: Forschungsfokus;Sickerbeläge;Chaussierung;0,5703243471697034
+Szenario 1: Forschungsfokus;Sickerbeläge;Kiesrasen;0,5039270992033601
+Szenario 1: Forschungsfokus;Asphalt;Heller Asphalt;0,4654859192521327
+Szenario 1: Forschungsfokus;Asphalt;Sickerasphalt;0,1389305086823863
+Szenario 2: Radikale Vermeidung;Pflaster;Natursteinpflaster (sickerfähig, 6-10 mm Fugen);0,9064716955712546
+Szenario 2: Radikale Vermeidung;Sickerbeläge;Chaussierung;0,8233651567745190
+Szenario 2: Radikale Vermeidung;Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);0,8144373216076923
+Szenario 2: Radikale Vermeidung;Pflaster;Ökopflastersteine (sickerfähig, 6-10 mm Fugen);0,7501843161809534
+Szenario 2: Radikale Vermeidung;Sickerbeläge;Rasengittersteine;0,7259997437046456
+Szenario 2: Radikale Vermeidung;Sickerbeläge;Kiesrasen;0,6912351071277264
+Szenario 2: Radikale Vermeidung;Asphalt;Recyclingasphalt;0,6136300474862098
+Szenario 2: Radikale Vermeidung;Asphalt;Heller Asphalt;0,4148523519463098
+Szenario 2: Radikale Vermeidung;Asphalt;Selbstheilender Asphalt;0,3957855749917082
+Szenario 2: Radikale Vermeidung;Asphalt;Sickerasphalt;0,1666622239298295
+Szenario 3: Radikaler Lebenszyklus;Pflaster;Natursteinpflaster (sickerfähig, 6-10 mm Fugen);0,8594582176185653
+Szenario 3: Radikaler Lebenszyklus;Asphalt;Selbstheilender Asphalt;0,8458729471453880
+Szenario 3: Radikaler Lebenszyklus;Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);0,6972079771153846
+Szenario 3: Radikaler Lebenszyklus;Pflaster;Ökopflastersteine (sickerfähig, 6-10 mm Fugen);0,5324965839707202
+Szenario 3: Radikaler Lebenszyklus;Sickerbeläge;Rasengittersteine;0,4385386272563016
+Szenario 3: Radikaler Lebenszyklus;Asphalt;Recyclingasphalt;0,4153499197431971
+Szenario 3: Radikaler Lebenszyklus;Asphalt;Heller Asphalt;0,3938561121079557
+Szenario 3: Radikaler Lebenszyklus;Sickerbeläge;Kiesrasen;0,2005337003456604
+Szenario 3: Radikaler Lebenszyklus;Sickerbeläge;Chaussierung;0,1644954717336377
+Szenario 3: Radikaler Lebenszyklus;Asphalt;Sickerasphalt;0,0574153572339015

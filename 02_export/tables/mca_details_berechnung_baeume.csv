@@ -1,8 +1,8 @@
 baumkategorie;baumart;bewertungskategorie;wert;szenario;gewicht;group_id;min_wert;max_wert;score_normiert;MCA_score_kriterium
-Grosskronige Arten;Quercus robur (Stieleiche);lebensdauer;100,0;Szenario 0: Baseline (IST);0,20000;langlebigkeit_wirtschaftlichkeit;50,0;100,0;1,0000000000000000;0,200000000000000011
-Grosskronige Arten;Quercus robur (Stieleiche);lebensdauer;100,0;Szenario 1: Forschungsfokus;0,20000;langlebigkeit_wirtschaftlichkeit;50,0;100,0;1,0000000000000000;0,200000000000000011
-Grosskronige Arten;Quercus robur (Stieleiche);lebensdauer;100,0;Szenario 2: Radikale Vermeidung;0,02500;langlebigkeit_wirtschaftlichkeit;50,0;100,0;1,0000000000000000;0,025000000000000001
-Grosskronige Arten;Quercus robur (Stieleiche);lebensdauer;100,0;Szenario 3: Radikaler Lebenszyklus;0,40000;langlebigkeit_wirtschaftlichkeit;50,0;100,0;1,0000000000000000;0,400000000000000022
+Grosskronige Arten;Quercus robur (Stieleiche);lebensdauer;100,0;Szenario 0: Baseline (IST);0,20000;langlebigkeit;50,0;100,0;1,0000000000000000;0,200000000000000011
+Grosskronige Arten;Quercus robur (Stieleiche);lebensdauer;100,0;Szenario 1: Forschungsfokus;0,20000;langlebigkeit;50,0;100,0;1,0000000000000000;0,200000000000000011
+Grosskronige Arten;Quercus robur (Stieleiche);lebensdauer;100,0;Szenario 2: Radikale Vermeidung;0,02500;langlebigkeit;50,0;100,0;1,0000000000000000;0,025000000000000001
+Grosskronige Arten;Quercus robur (Stieleiche);lebensdauer;100,0;Szenario 3: Radikaler Lebenszyklus;0,70000;langlebigkeit;50,0;100,0;1,0000000000000000;0,699999999999999956
 Grosskronige Arten;Quercus robur (Stieleiche);klimaangepasst;2,0;Szenario 0: Baseline (IST);0,10000;multifunktionale_nutzungsqualitaet;1,0;3,0;0,5000000000000000;0,050000000000000003
 Grosskronige Arten;Quercus robur (Stieleiche);klimaangepasst;2,0;Szenario 1: Forschungsfokus;0,02500;multifunktionale_nutzungsqualitaet;1,0;3,0;0,5000000000000000;0,012500000000000001
 Grosskronige Arten;Quercus robur (Stieleiche);klimaangepasst;2,0;Szenario 2: Radikale Vermeidung;0,01250;multifunktionale_nutzungsqualitaet;1,0;3,0;0,5000000000000000;0,006250000000000000
@@ -31,22 +31,22 @@ Grosskronige Arten;Quercus robur (Stieleiche);regenwasser;325,0;Szenario 0: Base
 Grosskronige Arten;Quercus robur (Stieleiche);regenwasser;325,0;Szenario 1: Forschungsfokus;0,01250;multifunktionale_nutzungsqualitaet;115,0;325,0;1,0000000000000000;0,012500000000000001
 Grosskronige Arten;Quercus robur (Stieleiche);regenwasser;325,0;Szenario 2: Radikale Vermeidung;0,00625;multifunktionale_nutzungsqualitaet;115,0;325,0;1,0000000000000000;0,006250000000000000
 Grosskronige Arten;Quercus robur (Stieleiche);regenwasser;325,0;Szenario 3: Radikaler Lebenszyklus;0,01250;multifunktionale_nutzungsqualitaet;115,0;325,0;1,0000000000000000;0,012500000000000001
-Grosskronige Arten;Quercus robur (Stieleiche);groesse_baumrigolen;38,0;Szenario 0: Baseline (IST);0,10000;langlebigkeit_wirtschaftlichkeit;6,0;38,0;0,0000000000000000;0,000000000000000000
-Grosskronige Arten;Quercus robur (Stieleiche);groesse_baumrigolen;38,0;Szenario 1: Forschungsfokus;0,10000;langlebigkeit_wirtschaftlichkeit;6,0;38,0;0,0000000000000000;0,000000000000000000
-Grosskronige Arten;Quercus robur (Stieleiche);groesse_baumrigolen;38,0;Szenario 2: Radikale Vermeidung;0,01250;langlebigkeit_wirtschaftlichkeit;6,0;38,0;0,0000000000000000;0,000000000000000000
-Grosskronige Arten;Quercus robur (Stieleiche);groesse_baumrigolen;38,0;Szenario 3: Radikaler Lebenszyklus;0,20000;langlebigkeit_wirtschaftlichkeit;6,0;38,0;0,0000000000000000;0,000000000000000000
-Grosskronige Arten;Quercus robur (Stieleiche);pflegeaufwand;2,0;Szenario 0: Baseline (IST);0,10000;langlebigkeit_wirtschaftlichkeit;1,0;3,0;0,5000000000000000;0,050000000000000003
-Grosskronige Arten;Quercus robur (Stieleiche);pflegeaufwand;2,0;Szenario 1: Forschungsfokus;0,10000;langlebigkeit_wirtschaftlichkeit;1,0;3,0;0,5000000000000000;0,050000000000000003
-Grosskronige Arten;Quercus robur (Stieleiche);pflegeaufwand;2,0;Szenario 2: Radikale Vermeidung;0,01250;langlebigkeit_wirtschaftlichkeit;1,0;3,0;0,5000000000000000;0,006250000000000000
-Grosskronige Arten;Quercus robur (Stieleiche);pflegeaufwand;2,0;Szenario 3: Radikaler Lebenszyklus;0,20000;langlebigkeit_wirtschaftlichkeit;1,0;3,0;0,5000000000000000;0,100000000000000006
+Grosskronige Arten;Quercus robur (Stieleiche);groesse_baumrigolen;38,0;Szenario 0: Baseline (IST);0,10000;wirtschaftlichkeit;6,0;38,0;0,0000000000000000;0,000000000000000000
+Grosskronige Arten;Quercus robur (Stieleiche);groesse_baumrigolen;38,0;Szenario 1: Forschungsfokus;0,10000;wirtschaftlichkeit;6,0;38,0;0,0000000000000000;0,000000000000000000
+Grosskronige Arten;Quercus robur (Stieleiche);groesse_baumrigolen;38,0;Szenario 2: Radikale Vermeidung;0,01250;wirtschaftlichkeit;6,0;38,0;0,0000000000000000;0,000000000000000000
+Grosskronige Arten;Quercus robur (Stieleiche);groesse_baumrigolen;38,0;Szenario 3: Radikaler Lebenszyklus;0,05000;wirtschaftlichkeit;6,0;38,0;0,0000000000000000;0,000000000000000000
+Grosskronige Arten;Quercus robur (Stieleiche);pflegeaufwand;2,0;Szenario 0: Baseline (IST);0,10000;wirtschaftlichkeit;1,0;3,0;0,5000000000000000;0,050000000000000003
+Grosskronige Arten;Quercus robur (Stieleiche);pflegeaufwand;2,0;Szenario 1: Forschungsfokus;0,10000;wirtschaftlichkeit;1,0;3,0;0,5000000000000000;0,050000000000000003
+Grosskronige Arten;Quercus robur (Stieleiche);pflegeaufwand;2,0;Szenario 2: Radikale Vermeidung;0,01250;wirtschaftlichkeit;1,0;3,0;0,5000000000000000;0,006250000000000000
+Grosskronige Arten;Quercus robur (Stieleiche);pflegeaufwand;2,0;Szenario 3: Radikaler Lebenszyklus;0,05000;wirtschaftlichkeit;1,0;3,0;0,5000000000000000;0,025000000000000001
 Grosskronige Arten;Quercus robur (Stieleiche);recyclingpotential;3,0;Szenario 0: Baseline (IST);0,10000;kreislauffaehigkeit;1,0;3,0;1,0000000000000000;0,100000000000000006
 Grosskronige Arten;Quercus robur (Stieleiche);recyclingpotential;3,0;Szenario 1: Forschungsfokus;0,25000;kreislauffaehigkeit;1,0;3,0;1,0000000000000000;0,250000000000000000
 Grosskronige Arten;Quercus robur (Stieleiche);recyclingpotential;3,0;Szenario 2: Radikale Vermeidung;0,45000;kreislauffaehigkeit;1,0;3,0;1,0000000000000000;0,450000000000000011
 Grosskronige Arten;Quercus robur (Stieleiche);recyclingpotential;3,0;Szenario 3: Radikaler Lebenszyklus;0,05000;kreislauffaehigkeit;1,0;3,0;1,0000000000000000;0,050000000000000003
-Grosskronige Arten;Quercus petraea (Traubeneiche);lebensdauer;100,0;Szenario 0: Baseline (IST);0,20000;langlebigkeit_wirtschaftlichkeit;50,0;100,0;1,0000000000000000;0,200000000000000011
-Grosskronige Arten;Quercus petraea (Traubeneiche);lebensdauer;100,0;Szenario 1: Forschungsfokus;0,20000;langlebigkeit_wirtschaftlichkeit;50,0;100,0;1,0000000000000000;0,200000000000000011
-Grosskronige Arten;Quercus petraea (Traubeneiche);lebensdauer;100,0;Szenario 2: Radikale Vermeidung;0,02500;langlebigkeit_wirtschaftlichkeit;50,0;100,0;1,0000000000000000;0,025000000000000001
-Grosskronige Arten;Quercus petraea (Traubeneiche);lebensdauer;100,0;Szenario 3: Radikaler Lebenszyklus;0,40000;langlebigkeit_wirtschaftlichkeit;50,0;100,0;1,0000000000000000;0,400000000000000022
+Grosskronige Arten;Quercus petraea (Traubeneiche);lebensdauer;100,0;Szenario 0: Baseline (IST);0,20000;langlebigkeit;50,0;100,0;1,0000000000000000;0,200000000000000011
+Grosskronige Arten;Quercus petraea (Traubeneiche);lebensdauer;100,0;Szenario 1: Forschungsfokus;0,20000;langlebigkeit;50,0;100,0;1,0000000000000000;0,200000000000000011
+Grosskronige Arten;Quercus petraea (Traubeneiche);lebensdauer;100,0;Szenario 2: Radikale Vermeidung;0,02500;langlebigkeit;50,0;100,0;1,0000000000000000;0,025000000000000001
+Grosskronige Arten;Quercus petraea (Traubeneiche);lebensdauer;100,0;Szenario 3: Radikaler Lebenszyklus;0,70000;langlebigkeit;50,0;100,0;1,0000000000000000;0,699999999999999956
 Grosskronige Arten;Quercus petraea (Traubeneiche);klimaangepasst;2,0;Szenario 0: Baseline (IST);0,10000;multifunktionale_nutzungsqualitaet;1,0;3,0;0,5000000000000000;0,050000000000000003
 Grosskronige Arten;Quercus petraea (Traubeneiche);klimaangepasst;2,0;Szenario 1: Forschungsfokus;0,02500;multifunktionale_nutzungsqualitaet;1,0;3,0;0,5000000000000000;0,012500000000000001
 Grosskronige Arten;Quercus petraea (Traubeneiche);klimaangepasst;2,0;Szenario 2: Radikale Vermeidung;0,01250;multifunktionale_nutzungsqualitaet;1,0;3,0;0,5000000000000000;0,006250000000000000
@@ -75,22 +75,22 @@ Grosskronige Arten;Quercus petraea (Traubeneiche);regenwasser;325,0;Szenario 0: 
 Grosskronige Arten;Quercus petraea (Traubeneiche);regenwasser;325,0;Szenario 1: Forschungsfokus;0,01250;multifunktionale_nutzungsqualitaet;115,0;325,0;1,0000000000000000;0,012500000000000001
 Grosskronige Arten;Quercus petraea (Traubeneiche);regenwasser;325,0;Szenario 2: Radikale Vermeidung;0,00625;multifunktionale_nutzungsqualitaet;115,0;325,0;1,0000000000000000;0,006250000000000000
 Grosskronige Arten;Quercus petraea (Traubeneiche);regenwasser;325,0;Szenario 3: Radikaler Lebenszyklus;0,01250;multifunktionale_nutzungsqualitaet;115,0;325,0;1,0000000000000000;0,012500000000000001
-Grosskronige Arten;Quercus petraea (Traubeneiche);groesse_baumrigolen;38,0;Szenario 0: Baseline (IST);0,10000;langlebigkeit_wirtschaftlichkeit;6,0;38,0;0,0000000000000000;0,000000000000000000
-Grosskronige Arten;Quercus petraea (Traubeneiche);groesse_baumrigolen;38,0;Szenario 1: Forschungsfokus;0,10000;langlebigkeit_wirtschaftlichkeit;6,0;38,0;0,0000000000000000;0,000000000000000000
-Grosskronige Arten;Quercus petraea (Traubeneiche);groesse_baumrigolen;38,0;Szenario 2: Radikale Vermeidung;0,01250;langlebigkeit_wirtschaftlichkeit;6,0;38,0;0,0000000000000000;0,000000000000000000
-Grosskronige Arten;Quercus petraea (Traubeneiche);groesse_baumrigolen;38,0;Szenario 3: Radikaler Lebenszyklus;0,20000;langlebigkeit_wirtschaftlichkeit;6,0;38,0;0,0000000000000000;0,000000000000000000
-Grosskronige Arten;Quercus petraea (Traubeneiche);pflegeaufwand;2,0;Szenario 0: Baseline (IST);0,10000;langlebigkeit_wirtschaftlichkeit;1,0;3,0;0,5000000000000000;0,050000000000000003
-Grosskronige Arten;Quercus petraea (Traubeneiche);pflegeaufwand;2,0;Szenario 1: Forschungsfokus;0,10000;langlebigkeit_wirtschaftlichkeit;1,0;3,0;0,5000000000000000;0,050000000000000003
-Grosskronige Arten;Quercus petraea (Traubeneiche);pflegeaufwand;2,0;Szenario 2: Radikale Vermeidung;0,01250;langlebigkeit_wirtschaftlichkeit;1,0;3,0;0,5000000000000000;0,006250000000000000
-Grosskronige Arten;Quercus petraea (Traubeneiche);pflegeaufwand;2,0;Szenario 3: Radikaler Lebenszyklus;0,20000;langlebigkeit_wirtschaftlichkeit;1,0;3,0;0,5000000000000000;0,100000000000000006
+Grosskronige Arten;Quercus petraea (Traubeneiche);groesse_baumrigolen;38,0;Szenario 0: Baseline (IST);0,10000;wirtschaftlichkeit;6,0;38,0;0,0000000000000000;0,000000000000000000
+Grosskronige Arten;Quercus petraea (Traubeneiche);groesse_baumrigolen;38,0;Szenario 1: Forschungsfokus;0,10000;wirtschaftlichkeit;6,0;38,0;0,0000000000000000;0,000000000000000000
+Grosskronige Arten;Quercus petraea (Traubeneiche);groesse_baumrigolen;38,0;Szenario 2: Radikale Vermeidung;0,01250;wirtschaftlichkeit;6,0;38,0;0,0000000000000000;0,000000000000000000
+Grosskronige Arten;Quercus petraea (Traubeneiche);groesse_baumrigolen;38,0;Szenario 3: Radikaler Lebenszyklus;0,05000;wirtschaftlichkeit;6,0;38,0;0,0000000000000000;0,000000000000000000
+Grosskronige Arten;Quercus petraea (Traubeneiche);pflegeaufwand;2,0;Szenario 0: Baseline (IST);0,10000;wirtschaftlichkeit;1,0;3,0;0,5000000000000000;0,050000000000000003
+Grosskronige Arten;Quercus petraea (Traubeneiche);pflegeaufwand;2,0;Szenario 1: Forschungsfokus;0,10000;wirtschaftlichkeit;1,0;3,0;0,5000000000000000;0,050000000000000003
+Grosskronige Arten;Quercus petraea (Traubeneiche);pflegeaufwand;2,0;Szenario 2: Radikale Vermeidung;0,01250;wirtschaftlichkeit;1,0;3,0;0,5000000000000000;0,006250000000000000
+Grosskronige Arten;Quercus petraea (Traubeneiche);pflegeaufwand;2,0;Szenario 3: Radikaler Lebenszyklus;0,05000;wirtschaftlichkeit;1,0;3,0;0,5000000000000000;0,025000000000000001
 Grosskronige Arten;Quercus petraea (Traubeneiche);recyclingpotential;3,0;Szenario 0: Baseline (IST);0,10000;kreislauffaehigkeit;1,0;3,0;1,0000000000000000;0,100000000000000006
 Grosskronige Arten;Quercus petraea (Traubeneiche);recyclingpotential;3,0;Szenario 1: Forschungsfokus;0,25000;kreislauffaehigkeit;1,0;3,0;1,0000000000000000;0,250000000000000000
 Grosskronige Arten;Quercus petraea (Traubeneiche);recyclingpotential;3,0;Szenario 2: Radikale Vermeidung;0,45000;kreislauffaehigkeit;1,0;3,0;1,0000000000000000;0,450000000000000011
 Grosskronige Arten;Quercus petraea (Traubeneiche);recyclingpotential;3,0;Szenario 3: Radikaler Lebenszyklus;0,05000;kreislauffaehigkeit;1,0;3,0;1,0000000000000000;0,050000000000000003
-Grosskronige Arten;Tilia tomentosa (Silber-Linde);lebensdauer;80,0;Szenario 0: Baseline (IST);0,20000;langlebigkeit_wirtschaftlichkeit;50,0;100,0;0,6000000000000000;0,119999999999999996
-Grosskronige Arten;Tilia tomentosa (Silber-Linde);lebensdauer;80,0;Szenario 1: Forschungsfokus;0,20000;langlebigkeit_wirtschaftlichkeit;50,0;100,0;0,6000000000000000;0,119999999999999996
-Grosskronige Arten;Tilia tomentosa (Silber-Linde);lebensdauer;80,0;Szenario 2: Radikale Vermeidung;0,02500;langlebigkeit_wirtschaftlichkeit;50,0;100,0;0,6000000000000000;0,014999999999999999
-Grosskronige Arten;Tilia tomentosa (Silber-Linde);lebensdauer;80,0;Szenario 3: Radikaler Lebenszyklus;0,40000;langlebigkeit_wirtschaftlichkeit;50,0;100,0;0,6000000000000000;0,239999999999999991
+Grosskronige Arten;Tilia tomentosa (Silber-Linde);lebensdauer;80,0;Szenario 0: Baseline (IST);0,20000;langlebigkeit;50,0;100,0;0,6000000000000000;0,119999999999999996
+Grosskronige Arten;Tilia tomentosa (Silber-Linde);lebensdauer;80,0;Szenario 1: Forschungsfokus;0,20000;langlebigkeit;50,0;100,0;0,6000000000000000;0,119999999999999996
+Grosskronige Arten;Tilia tomentosa (Silber-Linde);lebensdauer;80,0;Szenario 2: Radikale Vermeidung;0,02500;langlebigkeit;50,0;100,0;0,6000000000000000;0,014999999999999999
+Grosskronige Arten;Tilia tomentosa (Silber-Linde);lebensdauer;80,0;Szenario 3: Radikaler Lebenszyklus;0,70000;langlebigkeit;50,0;100,0;0,6000000000000000;0,419999999999999984
 Grosskronige Arten;Tilia tomentosa (Silber-Linde);klimaangepasst;3,0;Szenario 0: Baseline (IST);0,10000;multifunktionale_nutzungsqualitaet;1,0;3,0;1,0000000000000000;0,100000000000000006
 Grosskronige Arten;Tilia tomentosa (Silber-Linde);klimaangepasst;3,0;Szenario 1: Forschungsfokus;0,02500;multifunktionale_nutzungsqualitaet;1,0;3,0;1,0000000000000000;0,025000000000000001
 Grosskronige Arten;Tilia tomentosa (Silber-Linde);klimaangepasst;3,0;Szenario 2: Radikale Vermeidung;0,01250;multifunktionale_nutzungsqualitaet;1,0;3,0;1,0000000000000000;0,012500000000000001
@@ -119,22 +119,22 @@ Grosskronige Arten;Tilia tomentosa (Silber-Linde);regenwasser;325,0;Szenario 0: 
 Grosskronige Arten;Tilia tomentosa (Silber-Linde);regenwasser;325,0;Szenario 1: Forschungsfokus;0,01250;multifunktionale_nutzungsqualitaet;115,0;325,0;1,0000000000000000;0,012500000000000001
 Grosskronige Arten;Tilia tomentosa (Silber-Linde);regenwasser;325,0;Szenario 2: Radikale Vermeidung;0,00625;multifunktionale_nutzungsqualitaet;115,0;325,0;1,0000000000000000;0,006250000000000000
 Grosskronige Arten;Tilia tomentosa (Silber-Linde);regenwasser;325,0;Szenario 3: Radikaler Lebenszyklus;0,01250;multifunktionale_nutzungsqualitaet;115,0;325,0;1,0000000000000000;0,012500000000000001
-Grosskronige Arten;Tilia tomentosa (Silber-Linde);groesse_baumrigolen;38,0;Szenario 0: Baseline (IST);0,10000;langlebigkeit_wirtschaftlichkeit;6,0;38,0;0,0000000000000000;0,000000000000000000
-Grosskronige Arten;Tilia tomentosa (Silber-Linde);groesse_baumrigolen;38,0;Szenario 1: Forschungsfokus;0,10000;langlebigkeit_wirtschaftlichkeit;6,0;38,0;0,0000000000000000;0,000000000000000000
-Grosskronige Arten;Tilia tomentosa (Silber-Linde);groesse_baumrigolen;38,0;Szenario 2: Radikale Vermeidung;0,01250;langlebigkeit_wirtschaftlichkeit;6,0;38,0;0,0000000000000000;0,000000000000000000
-Grosskronige Arten;Tilia tomentosa (Silber-Linde);groesse_baumrigolen;38,0;Szenario 3: Radikaler Lebenszyklus;0,20000;langlebigkeit_wirtschaftlichkeit;6,0;38,0;0,0000000000000000;0,000000000000000000
-Grosskronige Arten;Tilia tomentosa (Silber-Linde);pflegeaufwand;3,0;Szenario 0: Baseline (IST);0,10000;langlebigkeit_wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
-Grosskronige Arten;Tilia tomentosa (Silber-Linde);pflegeaufwand;3,0;Szenario 1: Forschungsfokus;0,10000;langlebigkeit_wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
-Grosskronige Arten;Tilia tomentosa (Silber-Linde);pflegeaufwand;3,0;Szenario 2: Radikale Vermeidung;0,01250;langlebigkeit_wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
-Grosskronige Arten;Tilia tomentosa (Silber-Linde);pflegeaufwand;3,0;Szenario 3: Radikaler Lebenszyklus;0,20000;langlebigkeit_wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
+Grosskronige Arten;Tilia tomentosa (Silber-Linde);groesse_baumrigolen;38,0;Szenario 0: Baseline (IST);0,10000;wirtschaftlichkeit;6,0;38,0;0,0000000000000000;0,000000000000000000
+Grosskronige Arten;Tilia tomentosa (Silber-Linde);groesse_baumrigolen;38,0;Szenario 1: Forschungsfokus;0,10000;wirtschaftlichkeit;6,0;38,0;0,0000000000000000;0,000000000000000000
+Grosskronige Arten;Tilia tomentosa (Silber-Linde);groesse_baumrigolen;38,0;Szenario 2: Radikale Vermeidung;0,01250;wirtschaftlichkeit;6,0;38,0;0,0000000000000000;0,000000000000000000
+Grosskronige Arten;Tilia tomentosa (Silber-Linde);groesse_baumrigolen;38,0;Szenario 3: Radikaler Lebenszyklus;0,05000;wirtschaftlichkeit;6,0;38,0;0,0000000000000000;0,000000000000000000
+Grosskronige Arten;Tilia tomentosa (Silber-Linde);pflegeaufwand;3,0;Szenario 0: Baseline (IST);0,10000;wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
+Grosskronige Arten;Tilia tomentosa (Silber-Linde);pflegeaufwand;3,0;Szenario 1: Forschungsfokus;0,10000;wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
+Grosskronige Arten;Tilia tomentosa (Silber-Linde);pflegeaufwand;3,0;Szenario 2: Radikale Vermeidung;0,01250;wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
+Grosskronige Arten;Tilia tomentosa (Silber-Linde);pflegeaufwand;3,0;Szenario 3: Radikaler Lebenszyklus;0,05000;wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
 Grosskronige Arten;Tilia tomentosa (Silber-Linde);recyclingpotential;2,0;Szenario 0: Baseline (IST);0,10000;kreislauffaehigkeit;1,0;3,0;0,5000000000000000;0,050000000000000003
 Grosskronige Arten;Tilia tomentosa (Silber-Linde);recyclingpotential;2,0;Szenario 1: Forschungsfokus;0,25000;kreislauffaehigkeit;1,0;3,0;0,5000000000000000;0,125000000000000000
 Grosskronige Arten;Tilia tomentosa (Silber-Linde);recyclingpotential;2,0;Szenario 2: Radikale Vermeidung;0,45000;kreislauffaehigkeit;1,0;3,0;0,5000000000000000;0,225000000000000006
 Grosskronige Arten;Tilia tomentosa (Silber-Linde);recyclingpotential;2,0;Szenario 3: Radikaler Lebenszyklus;0,05000;kreislauffaehigkeit;1,0;3,0;0,5000000000000000;0,025000000000000001
-Mittelgrosse Arten;Tilia cordata (Winterlinde);lebensdauer;80,0;Szenario 0: Baseline (IST);0,20000;langlebigkeit_wirtschaftlichkeit;50,0;100,0;0,6000000000000000;0,119999999999999996
-Mittelgrosse Arten;Tilia cordata (Winterlinde);lebensdauer;80,0;Szenario 1: Forschungsfokus;0,20000;langlebigkeit_wirtschaftlichkeit;50,0;100,0;0,6000000000000000;0,119999999999999996
-Mittelgrosse Arten;Tilia cordata (Winterlinde);lebensdauer;80,0;Szenario 2: Radikale Vermeidung;0,02500;langlebigkeit_wirtschaftlichkeit;50,0;100,0;0,6000000000000000;0,014999999999999999
-Mittelgrosse Arten;Tilia cordata (Winterlinde);lebensdauer;80,0;Szenario 3: Radikaler Lebenszyklus;0,40000;langlebigkeit_wirtschaftlichkeit;50,0;100,0;0,6000000000000000;0,239999999999999991
+Mittelgrosse Arten;Tilia cordata (Winterlinde);lebensdauer;80,0;Szenario 0: Baseline (IST);0,20000;langlebigkeit;50,0;100,0;0,6000000000000000;0,119999999999999996
+Mittelgrosse Arten;Tilia cordata (Winterlinde);lebensdauer;80,0;Szenario 1: Forschungsfokus;0,20000;langlebigkeit;50,0;100,0;0,6000000000000000;0,119999999999999996
+Mittelgrosse Arten;Tilia cordata (Winterlinde);lebensdauer;80,0;Szenario 2: Radikale Vermeidung;0,02500;langlebigkeit;50,0;100,0;0,6000000000000000;0,014999999999999999
+Mittelgrosse Arten;Tilia cordata (Winterlinde);lebensdauer;80,0;Szenario 3: Radikaler Lebenszyklus;0,70000;langlebigkeit;50,0;100,0;0,6000000000000000;0,419999999999999984
 Mittelgrosse Arten;Tilia cordata (Winterlinde);klimaangepasst;2,0;Szenario 0: Baseline (IST);0,10000;multifunktionale_nutzungsqualitaet;1,0;3,0;0,5000000000000000;0,050000000000000003
 Mittelgrosse Arten;Tilia cordata (Winterlinde);klimaangepasst;2,0;Szenario 1: Forschungsfokus;0,02500;multifunktionale_nutzungsqualitaet;1,0;3,0;0,5000000000000000;0,012500000000000001
 Mittelgrosse Arten;Tilia cordata (Winterlinde);klimaangepasst;2,0;Szenario 2: Radikale Vermeidung;0,01250;multifunktionale_nutzungsqualitaet;1,0;3,0;0,5000000000000000;0,006250000000000000
@@ -163,22 +163,22 @@ Mittelgrosse Arten;Tilia cordata (Winterlinde);regenwasser;200,0;Szenario 0: Bas
 Mittelgrosse Arten;Tilia cordata (Winterlinde);regenwasser;200,0;Szenario 1: Forschungsfokus;0,01250;multifunktionale_nutzungsqualitaet;115,0;325,0;0,4047619047619048;0,005059523809523810
 Mittelgrosse Arten;Tilia cordata (Winterlinde);regenwasser;200,0;Szenario 2: Radikale Vermeidung;0,00625;multifunktionale_nutzungsqualitaet;115,0;325,0;0,4047619047619048;0,002529761904761905
 Mittelgrosse Arten;Tilia cordata (Winterlinde);regenwasser;200,0;Szenario 3: Radikaler Lebenszyklus;0,01250;multifunktionale_nutzungsqualitaet;115,0;325,0;0,4047619047619048;0,005059523809523810
-Mittelgrosse Arten;Tilia cordata (Winterlinde);groesse_baumrigolen;38,0;Szenario 0: Baseline (IST);0,10000;langlebigkeit_wirtschaftlichkeit;6,0;38,0;0,0000000000000000;0,000000000000000000
-Mittelgrosse Arten;Tilia cordata (Winterlinde);groesse_baumrigolen;38,0;Szenario 1: Forschungsfokus;0,10000;langlebigkeit_wirtschaftlichkeit;6,0;38,0;0,0000000000000000;0,000000000000000000
-Mittelgrosse Arten;Tilia cordata (Winterlinde);groesse_baumrigolen;38,0;Szenario 2: Radikale Vermeidung;0,01250;langlebigkeit_wirtschaftlichkeit;6,0;38,0;0,0000000000000000;0,000000000000000000
-Mittelgrosse Arten;Tilia cordata (Winterlinde);groesse_baumrigolen;38,0;Szenario 3: Radikaler Lebenszyklus;0,20000;langlebigkeit_wirtschaftlichkeit;6,0;38,0;0,0000000000000000;0,000000000000000000
-Mittelgrosse Arten;Tilia cordata (Winterlinde);pflegeaufwand;3,0;Szenario 0: Baseline (IST);0,10000;langlebigkeit_wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
-Mittelgrosse Arten;Tilia cordata (Winterlinde);pflegeaufwand;3,0;Szenario 1: Forschungsfokus;0,10000;langlebigkeit_wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
-Mittelgrosse Arten;Tilia cordata (Winterlinde);pflegeaufwand;3,0;Szenario 2: Radikale Vermeidung;0,01250;langlebigkeit_wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
-Mittelgrosse Arten;Tilia cordata (Winterlinde);pflegeaufwand;3,0;Szenario 3: Radikaler Lebenszyklus;0,20000;langlebigkeit_wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
+Mittelgrosse Arten;Tilia cordata (Winterlinde);groesse_baumrigolen;38,0;Szenario 0: Baseline (IST);0,10000;wirtschaftlichkeit;6,0;38,0;0,0000000000000000;0,000000000000000000
+Mittelgrosse Arten;Tilia cordata (Winterlinde);groesse_baumrigolen;38,0;Szenario 1: Forschungsfokus;0,10000;wirtschaftlichkeit;6,0;38,0;0,0000000000000000;0,000000000000000000
+Mittelgrosse Arten;Tilia cordata (Winterlinde);groesse_baumrigolen;38,0;Szenario 2: Radikale Vermeidung;0,01250;wirtschaftlichkeit;6,0;38,0;0,0000000000000000;0,000000000000000000
+Mittelgrosse Arten;Tilia cordata (Winterlinde);groesse_baumrigolen;38,0;Szenario 3: Radikaler Lebenszyklus;0,05000;wirtschaftlichkeit;6,0;38,0;0,0000000000000000;0,000000000000000000
+Mittelgrosse Arten;Tilia cordata (Winterlinde);pflegeaufwand;3,0;Szenario 0: Baseline (IST);0,10000;wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
+Mittelgrosse Arten;Tilia cordata (Winterlinde);pflegeaufwand;3,0;Szenario 1: Forschungsfokus;0,10000;wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
+Mittelgrosse Arten;Tilia cordata (Winterlinde);pflegeaufwand;3,0;Szenario 2: Radikale Vermeidung;0,01250;wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
+Mittelgrosse Arten;Tilia cordata (Winterlinde);pflegeaufwand;3,0;Szenario 3: Radikaler Lebenszyklus;0,05000;wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
 Mittelgrosse Arten;Tilia cordata (Winterlinde);recyclingpotential;2,0;Szenario 0: Baseline (IST);0,10000;kreislauffaehigkeit;1,0;3,0;0,5000000000000000;0,050000000000000003
 Mittelgrosse Arten;Tilia cordata (Winterlinde);recyclingpotential;2,0;Szenario 1: Forschungsfokus;0,25000;kreislauffaehigkeit;1,0;3,0;0,5000000000000000;0,125000000000000000
 Mittelgrosse Arten;Tilia cordata (Winterlinde);recyclingpotential;2,0;Szenario 2: Radikale Vermeidung;0,45000;kreislauffaehigkeit;1,0;3,0;0,5000000000000000;0,225000000000000006
 Mittelgrosse Arten;Tilia cordata (Winterlinde);recyclingpotential;2,0;Szenario 3: Radikaler Lebenszyklus;0,05000;kreislauffaehigkeit;1,0;3,0;0,5000000000000000;0,025000000000000001
-Grosskronige Arten;Tilia × europaea ‘Pallida’ (Kaiser-Linde, Holländische Linde);lebensdauer;100,0;Szenario 0: Baseline (IST);0,20000;langlebigkeit_wirtschaftlichkeit;50,0;100,0;1,0000000000000000;0,200000000000000011
-Grosskronige Arten;Tilia × europaea ‘Pallida’ (Kaiser-Linde, Holländische Linde);lebensdauer;100,0;Szenario 1: Forschungsfokus;0,20000;langlebigkeit_wirtschaftlichkeit;50,0;100,0;1,0000000000000000;0,200000000000000011
-Grosskronige Arten;Tilia × europaea ‘Pallida’ (Kaiser-Linde, Holländische Linde);lebensdauer;100,0;Szenario 2: Radikale Vermeidung;0,02500;langlebigkeit_wirtschaftlichkeit;50,0;100,0;1,0000000000000000;0,025000000000000001
-Grosskronige Arten;Tilia × europaea ‘Pallida’ (Kaiser-Linde, Holländische Linde);lebensdauer;100,0;Szenario 3: Radikaler Lebenszyklus;0,40000;langlebigkeit_wirtschaftlichkeit;50,0;100,0;1,0000000000000000;0,400000000000000022
+Grosskronige Arten;Tilia × europaea ‘Pallida’ (Kaiser-Linde, Holländische Linde);lebensdauer;100,0;Szenario 0: Baseline (IST);0,20000;langlebigkeit;50,0;100,0;1,0000000000000000;0,200000000000000011
+Grosskronige Arten;Tilia × europaea ‘Pallida’ (Kaiser-Linde, Holländische Linde);lebensdauer;100,0;Szenario 1: Forschungsfokus;0,20000;langlebigkeit;50,0;100,0;1,0000000000000000;0,200000000000000011
+Grosskronige Arten;Tilia × europaea ‘Pallida’ (Kaiser-Linde, Holländische Linde);lebensdauer;100,0;Szenario 2: Radikale Vermeidung;0,02500;langlebigkeit;50,0;100,0;1,0000000000000000;0,025000000000000001
+Grosskronige Arten;Tilia × europaea ‘Pallida’ (Kaiser-Linde, Holländische Linde);lebensdauer;100,0;Szenario 3: Radikaler Lebenszyklus;0,70000;langlebigkeit;50,0;100,0;1,0000000000000000;0,699999999999999956
 Grosskronige Arten;Tilia × europaea ‘Pallida’ (Kaiser-Linde, Holländische Linde);klimaangepasst;2,0;Szenario 0: Baseline (IST);0,10000;multifunktionale_nutzungsqualitaet;1,0;3,0;0,5000000000000000;0,050000000000000003
 Grosskronige Arten;Tilia × europaea ‘Pallida’ (Kaiser-Linde, Holländische Linde);klimaangepasst;2,0;Szenario 1: Forschungsfokus;0,02500;multifunktionale_nutzungsqualitaet;1,0;3,0;0,5000000000000000;0,012500000000000001
 Grosskronige Arten;Tilia × europaea ‘Pallida’ (Kaiser-Linde, Holländische Linde);klimaangepasst;2,0;Szenario 2: Radikale Vermeidung;0,01250;multifunktionale_nutzungsqualitaet;1,0;3,0;0,5000000000000000;0,006250000000000000
@@ -207,22 +207,22 @@ Grosskronige Arten;Tilia × europaea ‘Pallida’ (Kaiser-Linde, Holländische 
 Grosskronige Arten;Tilia × europaea ‘Pallida’ (Kaiser-Linde, Holländische Linde);regenwasser;325,0;Szenario 1: Forschungsfokus;0,01250;multifunktionale_nutzungsqualitaet;115,0;325,0;1,0000000000000000;0,012500000000000001
 Grosskronige Arten;Tilia × europaea ‘Pallida’ (Kaiser-Linde, Holländische Linde);regenwasser;325,0;Szenario 2: Radikale Vermeidung;0,00625;multifunktionale_nutzungsqualitaet;115,0;325,0;1,0000000000000000;0,006250000000000000
 Grosskronige Arten;Tilia × europaea ‘Pallida’ (Kaiser-Linde, Holländische Linde);regenwasser;325,0;Szenario 3: Radikaler Lebenszyklus;0,01250;multifunktionale_nutzungsqualitaet;115,0;325,0;1,0000000000000000;0,012500000000000001
-Grosskronige Arten;Tilia × europaea ‘Pallida’ (Kaiser-Linde, Holländische Linde);groesse_baumrigolen;38,0;Szenario 0: Baseline (IST);0,10000;langlebigkeit_wirtschaftlichkeit;6,0;38,0;0,0000000000000000;0,000000000000000000
-Grosskronige Arten;Tilia × europaea ‘Pallida’ (Kaiser-Linde, Holländische Linde);groesse_baumrigolen;38,0;Szenario 1: Forschungsfokus;0,10000;langlebigkeit_wirtschaftlichkeit;6,0;38,0;0,0000000000000000;0,000000000000000000
-Grosskronige Arten;Tilia × europaea ‘Pallida’ (Kaiser-Linde, Holländische Linde);groesse_baumrigolen;38,0;Szenario 2: Radikale Vermeidung;0,01250;langlebigkeit_wirtschaftlichkeit;6,0;38,0;0,0000000000000000;0,000000000000000000
-Grosskronige Arten;Tilia × europaea ‘Pallida’ (Kaiser-Linde, Holländische Linde);groesse_baumrigolen;38,0;Szenario 3: Radikaler Lebenszyklus;0,20000;langlebigkeit_wirtschaftlichkeit;6,0;38,0;0,0000000000000000;0,000000000000000000
-Grosskronige Arten;Tilia × europaea ‘Pallida’ (Kaiser-Linde, Holländische Linde);pflegeaufwand;2,0;Szenario 0: Baseline (IST);0,10000;langlebigkeit_wirtschaftlichkeit;1,0;3,0;0,5000000000000000;0,050000000000000003
-Grosskronige Arten;Tilia × europaea ‘Pallida’ (Kaiser-Linde, Holländische Linde);pflegeaufwand;2,0;Szenario 1: Forschungsfokus;0,10000;langlebigkeit_wirtschaftlichkeit;1,0;3,0;0,5000000000000000;0,050000000000000003
-Grosskronige Arten;Tilia × europaea ‘Pallida’ (Kaiser-Linde, Holländische Linde);pflegeaufwand;2,0;Szenario 2: Radikale Vermeidung;0,01250;langlebigkeit_wirtschaftlichkeit;1,0;3,0;0,5000000000000000;0,006250000000000000
-Grosskronige Arten;Tilia × europaea ‘Pallida’ (Kaiser-Linde, Holländische Linde);pflegeaufwand;2,0;Szenario 3: Radikaler Lebenszyklus;0,20000;langlebigkeit_wirtschaftlichkeit;1,0;3,0;0,5000000000000000;0,100000000000000006
+Grosskronige Arten;Tilia × europaea ‘Pallida’ (Kaiser-Linde, Holländische Linde);groesse_baumrigolen;38,0;Szenario 0: Baseline (IST);0,10000;wirtschaftlichkeit;6,0;38,0;0,0000000000000000;0,000000000000000000
+Grosskronige Arten;Tilia × europaea ‘Pallida’ (Kaiser-Linde, Holländische Linde);groesse_baumrigolen;38,0;Szenario 1: Forschungsfokus;0,10000;wirtschaftlichkeit;6,0;38,0;0,0000000000000000;0,000000000000000000
+Grosskronige Arten;Tilia × europaea ‘Pallida’ (Kaiser-Linde, Holländische Linde);groesse_baumrigolen;38,0;Szenario 2: Radikale Vermeidung;0,01250;wirtschaftlichkeit;6,0;38,0;0,0000000000000000;0,000000000000000000
+Grosskronige Arten;Tilia × europaea ‘Pallida’ (Kaiser-Linde, Holländische Linde);groesse_baumrigolen;38,0;Szenario 3: Radikaler Lebenszyklus;0,05000;wirtschaftlichkeit;6,0;38,0;0,0000000000000000;0,000000000000000000
+Grosskronige Arten;Tilia × europaea ‘Pallida’ (Kaiser-Linde, Holländische Linde);pflegeaufwand;2,0;Szenario 0: Baseline (IST);0,10000;wirtschaftlichkeit;1,0;3,0;0,5000000000000000;0,050000000000000003
+Grosskronige Arten;Tilia × europaea ‘Pallida’ (Kaiser-Linde, Holländische Linde);pflegeaufwand;2,0;Szenario 1: Forschungsfokus;0,10000;wirtschaftlichkeit;1,0;3,0;0,5000000000000000;0,050000000000000003
+Grosskronige Arten;Tilia × europaea ‘Pallida’ (Kaiser-Linde, Holländische Linde);pflegeaufwand;2,0;Szenario 2: Radikale Vermeidung;0,01250;wirtschaftlichkeit;1,0;3,0;0,5000000000000000;0,006250000000000000
+Grosskronige Arten;Tilia × europaea ‘Pallida’ (Kaiser-Linde, Holländische Linde);pflegeaufwand;2,0;Szenario 3: Radikaler Lebenszyklus;0,05000;wirtschaftlichkeit;1,0;3,0;0,5000000000000000;0,025000000000000001
 Grosskronige Arten;Tilia × europaea ‘Pallida’ (Kaiser-Linde, Holländische Linde);recyclingpotential;2,0;Szenario 0: Baseline (IST);0,10000;kreislauffaehigkeit;1,0;3,0;0,5000000000000000;0,050000000000000003
 Grosskronige Arten;Tilia × europaea ‘Pallida’ (Kaiser-Linde, Holländische Linde);recyclingpotential;2,0;Szenario 1: Forschungsfokus;0,25000;kreislauffaehigkeit;1,0;3,0;0,5000000000000000;0,125000000000000000
 Grosskronige Arten;Tilia × europaea ‘Pallida’ (Kaiser-Linde, Holländische Linde);recyclingpotential;2,0;Szenario 2: Radikale Vermeidung;0,45000;kreislauffaehigkeit;1,0;3,0;0,5000000000000000;0,225000000000000006
 Grosskronige Arten;Tilia × europaea ‘Pallida’ (Kaiser-Linde, Holländische Linde);recyclingpotential;2,0;Szenario 3: Radikaler Lebenszyklus;0,05000;kreislauffaehigkeit;1,0;3,0;0,5000000000000000;0,025000000000000001
-Grosskronige Arten;Liriodendron tulipifera (Tulpenbaum);lebensdauer;80,0;Szenario 0: Baseline (IST);0,20000;langlebigkeit_wirtschaftlichkeit;50,0;100,0;0,6000000000000000;0,119999999999999996
-Grosskronige Arten;Liriodendron tulipifera (Tulpenbaum);lebensdauer;80,0;Szenario 1: Forschungsfokus;0,20000;langlebigkeit_wirtschaftlichkeit;50,0;100,0;0,6000000000000000;0,119999999999999996
-Grosskronige Arten;Liriodendron tulipifera (Tulpenbaum);lebensdauer;80,0;Szenario 2: Radikale Vermeidung;0,02500;langlebigkeit_wirtschaftlichkeit;50,0;100,0;0,6000000000000000;0,014999999999999999
-Grosskronige Arten;Liriodendron tulipifera (Tulpenbaum);lebensdauer;80,0;Szenario 3: Radikaler Lebenszyklus;0,40000;langlebigkeit_wirtschaftlichkeit;50,0;100,0;0,6000000000000000;0,239999999999999991
+Grosskronige Arten;Liriodendron tulipifera (Tulpenbaum);lebensdauer;80,0;Szenario 0: Baseline (IST);0,20000;langlebigkeit;50,0;100,0;0,6000000000000000;0,119999999999999996
+Grosskronige Arten;Liriodendron tulipifera (Tulpenbaum);lebensdauer;80,0;Szenario 1: Forschungsfokus;0,20000;langlebigkeit;50,0;100,0;0,6000000000000000;0,119999999999999996
+Grosskronige Arten;Liriodendron tulipifera (Tulpenbaum);lebensdauer;80,0;Szenario 2: Radikale Vermeidung;0,02500;langlebigkeit;50,0;100,0;0,6000000000000000;0,014999999999999999
+Grosskronige Arten;Liriodendron tulipifera (Tulpenbaum);lebensdauer;80,0;Szenario 3: Radikaler Lebenszyklus;0,70000;langlebigkeit;50,0;100,0;0,6000000000000000;0,419999999999999984
 Grosskronige Arten;Liriodendron tulipifera (Tulpenbaum);klimaangepasst;1,0;Szenario 0: Baseline (IST);0,10000;multifunktionale_nutzungsqualitaet;1,0;3,0;0,0000000000000000;0,000000000000000000
 Grosskronige Arten;Liriodendron tulipifera (Tulpenbaum);klimaangepasst;1,0;Szenario 1: Forschungsfokus;0,02500;multifunktionale_nutzungsqualitaet;1,0;3,0;0,0000000000000000;0,000000000000000000
 Grosskronige Arten;Liriodendron tulipifera (Tulpenbaum);klimaangepasst;1,0;Szenario 2: Radikale Vermeidung;0,01250;multifunktionale_nutzungsqualitaet;1,0;3,0;0,0000000000000000;0,000000000000000000
@@ -251,22 +251,22 @@ Grosskronige Arten;Liriodendron tulipifera (Tulpenbaum);regenwasser;325,0;Szenar
 Grosskronige Arten;Liriodendron tulipifera (Tulpenbaum);regenwasser;325,0;Szenario 1: Forschungsfokus;0,01250;multifunktionale_nutzungsqualitaet;115,0;325,0;1,0000000000000000;0,012500000000000001
 Grosskronige Arten;Liriodendron tulipifera (Tulpenbaum);regenwasser;325,0;Szenario 2: Radikale Vermeidung;0,00625;multifunktionale_nutzungsqualitaet;115,0;325,0;1,0000000000000000;0,006250000000000000
 Grosskronige Arten;Liriodendron tulipifera (Tulpenbaum);regenwasser;325,0;Szenario 3: Radikaler Lebenszyklus;0,01250;multifunktionale_nutzungsqualitaet;115,0;325,0;1,0000000000000000;0,012500000000000001
-Grosskronige Arten;Liriodendron tulipifera (Tulpenbaum);groesse_baumrigolen;38,0;Szenario 0: Baseline (IST);0,10000;langlebigkeit_wirtschaftlichkeit;6,0;38,0;0,0000000000000000;0,000000000000000000
-Grosskronige Arten;Liriodendron tulipifera (Tulpenbaum);groesse_baumrigolen;38,0;Szenario 1: Forschungsfokus;0,10000;langlebigkeit_wirtschaftlichkeit;6,0;38,0;0,0000000000000000;0,000000000000000000
-Grosskronige Arten;Liriodendron tulipifera (Tulpenbaum);groesse_baumrigolen;38,0;Szenario 2: Radikale Vermeidung;0,01250;langlebigkeit_wirtschaftlichkeit;6,0;38,0;0,0000000000000000;0,000000000000000000
-Grosskronige Arten;Liriodendron tulipifera (Tulpenbaum);groesse_baumrigolen;38,0;Szenario 3: Radikaler Lebenszyklus;0,20000;langlebigkeit_wirtschaftlichkeit;6,0;38,0;0,0000000000000000;0,000000000000000000
-Grosskronige Arten;Liriodendron tulipifera (Tulpenbaum);pflegeaufwand;2,0;Szenario 0: Baseline (IST);0,10000;langlebigkeit_wirtschaftlichkeit;1,0;3,0;0,5000000000000000;0,050000000000000003
-Grosskronige Arten;Liriodendron tulipifera (Tulpenbaum);pflegeaufwand;2,0;Szenario 1: Forschungsfokus;0,10000;langlebigkeit_wirtschaftlichkeit;1,0;3,0;0,5000000000000000;0,050000000000000003
-Grosskronige Arten;Liriodendron tulipifera (Tulpenbaum);pflegeaufwand;2,0;Szenario 2: Radikale Vermeidung;0,01250;langlebigkeit_wirtschaftlichkeit;1,0;3,0;0,5000000000000000;0,006250000000000000
-Grosskronige Arten;Liriodendron tulipifera (Tulpenbaum);pflegeaufwand;2,0;Szenario 3: Radikaler Lebenszyklus;0,20000;langlebigkeit_wirtschaftlichkeit;1,0;3,0;0,5000000000000000;0,100000000000000006
+Grosskronige Arten;Liriodendron tulipifera (Tulpenbaum);groesse_baumrigolen;38,0;Szenario 0: Baseline (IST);0,10000;wirtschaftlichkeit;6,0;38,0;0,0000000000000000;0,000000000000000000
+Grosskronige Arten;Liriodendron tulipifera (Tulpenbaum);groesse_baumrigolen;38,0;Szenario 1: Forschungsfokus;0,10000;wirtschaftlichkeit;6,0;38,0;0,0000000000000000;0,000000000000000000
+Grosskronige Arten;Liriodendron tulipifera (Tulpenbaum);groesse_baumrigolen;38,0;Szenario 2: Radikale Vermeidung;0,01250;wirtschaftlichkeit;6,0;38,0;0,0000000000000000;0,000000000000000000
+Grosskronige Arten;Liriodendron tulipifera (Tulpenbaum);groesse_baumrigolen;38,0;Szenario 3: Radikaler Lebenszyklus;0,05000;wirtschaftlichkeit;6,0;38,0;0,0000000000000000;0,000000000000000000
+Grosskronige Arten;Liriodendron tulipifera (Tulpenbaum);pflegeaufwand;2,0;Szenario 0: Baseline (IST);0,10000;wirtschaftlichkeit;1,0;3,0;0,5000000000000000;0,050000000000000003
+Grosskronige Arten;Liriodendron tulipifera (Tulpenbaum);pflegeaufwand;2,0;Szenario 1: Forschungsfokus;0,10000;wirtschaftlichkeit;1,0;3,0;0,5000000000000000;0,050000000000000003
+Grosskronige Arten;Liriodendron tulipifera (Tulpenbaum);pflegeaufwand;2,0;Szenario 2: Radikale Vermeidung;0,01250;wirtschaftlichkeit;1,0;3,0;0,5000000000000000;0,006250000000000000
+Grosskronige Arten;Liriodendron tulipifera (Tulpenbaum);pflegeaufwand;2,0;Szenario 3: Radikaler Lebenszyklus;0,05000;wirtschaftlichkeit;1,0;3,0;0,5000000000000000;0,025000000000000001
 Grosskronige Arten;Liriodendron tulipifera (Tulpenbaum);recyclingpotential;2,0;Szenario 0: Baseline (IST);0,10000;kreislauffaehigkeit;1,0;3,0;0,5000000000000000;0,050000000000000003
 Grosskronige Arten;Liriodendron tulipifera (Tulpenbaum);recyclingpotential;2,0;Szenario 1: Forschungsfokus;0,25000;kreislauffaehigkeit;1,0;3,0;0,5000000000000000;0,125000000000000000
 Grosskronige Arten;Liriodendron tulipifera (Tulpenbaum);recyclingpotential;2,0;Szenario 2: Radikale Vermeidung;0,45000;kreislauffaehigkeit;1,0;3,0;0,5000000000000000;0,225000000000000006
 Grosskronige Arten;Liriodendron tulipifera (Tulpenbaum);recyclingpotential;2,0;Szenario 3: Radikaler Lebenszyklus;0,05000;kreislauffaehigkeit;1,0;3,0;0,5000000000000000;0,025000000000000001
-Mittelgrosse Arten;Liquidambar styraciflua ‘Worplesdon’ (Amberbaum);lebensdauer;70,0;Szenario 0: Baseline (IST);0,20000;langlebigkeit_wirtschaftlichkeit;50,0;100,0;0,4000000000000000;0,080000000000000016
-Mittelgrosse Arten;Liquidambar styraciflua ‘Worplesdon’ (Amberbaum);lebensdauer;70,0;Szenario 1: Forschungsfokus;0,20000;langlebigkeit_wirtschaftlichkeit;50,0;100,0;0,4000000000000000;0,080000000000000016
-Mittelgrosse Arten;Liquidambar styraciflua ‘Worplesdon’ (Amberbaum);lebensdauer;70,0;Szenario 2: Radikale Vermeidung;0,02500;langlebigkeit_wirtschaftlichkeit;50,0;100,0;0,4000000000000000;0,010000000000000002
-Mittelgrosse Arten;Liquidambar styraciflua ‘Worplesdon’ (Amberbaum);lebensdauer;70,0;Szenario 3: Radikaler Lebenszyklus;0,40000;langlebigkeit_wirtschaftlichkeit;50,0;100,0;0,4000000000000000;0,160000000000000031
+Mittelgrosse Arten;Liquidambar styraciflua ‘Worplesdon’ (Amberbaum);lebensdauer;70,0;Szenario 0: Baseline (IST);0,20000;langlebigkeit;50,0;100,0;0,4000000000000000;0,080000000000000016
+Mittelgrosse Arten;Liquidambar styraciflua ‘Worplesdon’ (Amberbaum);lebensdauer;70,0;Szenario 1: Forschungsfokus;0,20000;langlebigkeit;50,0;100,0;0,4000000000000000;0,080000000000000016
+Mittelgrosse Arten;Liquidambar styraciflua ‘Worplesdon’ (Amberbaum);lebensdauer;70,0;Szenario 2: Radikale Vermeidung;0,02500;langlebigkeit;50,0;100,0;0,4000000000000000;0,010000000000000002
+Mittelgrosse Arten;Liquidambar styraciflua ‘Worplesdon’ (Amberbaum);lebensdauer;70,0;Szenario 3: Radikaler Lebenszyklus;0,70000;langlebigkeit;50,0;100,0;0,4000000000000000;0,279999999999999971
 Mittelgrosse Arten;Liquidambar styraciflua ‘Worplesdon’ (Amberbaum);klimaangepasst;2,0;Szenario 0: Baseline (IST);0,10000;multifunktionale_nutzungsqualitaet;1,0;3,0;0,5000000000000000;0,050000000000000003
 Mittelgrosse Arten;Liquidambar styraciflua ‘Worplesdon’ (Amberbaum);klimaangepasst;2,0;Szenario 1: Forschungsfokus;0,02500;multifunktionale_nutzungsqualitaet;1,0;3,0;0,5000000000000000;0,012500000000000001
 Mittelgrosse Arten;Liquidambar styraciflua ‘Worplesdon’ (Amberbaum);klimaangepasst;2,0;Szenario 2: Radikale Vermeidung;0,01250;multifunktionale_nutzungsqualitaet;1,0;3,0;0,5000000000000000;0,006250000000000000
@@ -295,22 +295,22 @@ Mittelgrosse Arten;Liquidambar styraciflua ‘Worplesdon’ (Amberbaum);regenwas
 Mittelgrosse Arten;Liquidambar styraciflua ‘Worplesdon’ (Amberbaum);regenwasser;200,0;Szenario 1: Forschungsfokus;0,01250;multifunktionale_nutzungsqualitaet;115,0;325,0;0,4047619047619048;0,005059523809523810
 Mittelgrosse Arten;Liquidambar styraciflua ‘Worplesdon’ (Amberbaum);regenwasser;200,0;Szenario 2: Radikale Vermeidung;0,00625;multifunktionale_nutzungsqualitaet;115,0;325,0;0,4047619047619048;0,002529761904761905
 Mittelgrosse Arten;Liquidambar styraciflua ‘Worplesdon’ (Amberbaum);regenwasser;200,0;Szenario 3: Radikaler Lebenszyklus;0,01250;multifunktionale_nutzungsqualitaet;115,0;325,0;0,4047619047619048;0,005059523809523810
-Mittelgrosse Arten;Liquidambar styraciflua ‘Worplesdon’ (Amberbaum);groesse_baumrigolen;24,0;Szenario 0: Baseline (IST);0,10000;langlebigkeit_wirtschaftlichkeit;6,0;38,0;0,4375000000000000;0,043750000000000004
-Mittelgrosse Arten;Liquidambar styraciflua ‘Worplesdon’ (Amberbaum);groesse_baumrigolen;24,0;Szenario 1: Forschungsfokus;0,10000;langlebigkeit_wirtschaftlichkeit;6,0;38,0;0,4375000000000000;0,043750000000000004
-Mittelgrosse Arten;Liquidambar styraciflua ‘Worplesdon’ (Amberbaum);groesse_baumrigolen;24,0;Szenario 2: Radikale Vermeidung;0,01250;langlebigkeit_wirtschaftlichkeit;6,0;38,0;0,4375000000000000;0,005468750000000001
-Mittelgrosse Arten;Liquidambar styraciflua ‘Worplesdon’ (Amberbaum);groesse_baumrigolen;24,0;Szenario 3: Radikaler Lebenszyklus;0,20000;langlebigkeit_wirtschaftlichkeit;6,0;38,0;0,4375000000000000;0,087500000000000008
-Mittelgrosse Arten;Liquidambar styraciflua ‘Worplesdon’ (Amberbaum);pflegeaufwand;3,0;Szenario 0: Baseline (IST);0,10000;langlebigkeit_wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
-Mittelgrosse Arten;Liquidambar styraciflua ‘Worplesdon’ (Amberbaum);pflegeaufwand;3,0;Szenario 1: Forschungsfokus;0,10000;langlebigkeit_wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
-Mittelgrosse Arten;Liquidambar styraciflua ‘Worplesdon’ (Amberbaum);pflegeaufwand;3,0;Szenario 2: Radikale Vermeidung;0,01250;langlebigkeit_wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
-Mittelgrosse Arten;Liquidambar styraciflua ‘Worplesdon’ (Amberbaum);pflegeaufwand;3,0;Szenario 3: Radikaler Lebenszyklus;0,20000;langlebigkeit_wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
+Mittelgrosse Arten;Liquidambar styraciflua ‘Worplesdon’ (Amberbaum);groesse_baumrigolen;24,0;Szenario 0: Baseline (IST);0,10000;wirtschaftlichkeit;6,0;38,0;0,4375000000000000;0,043750000000000004
+Mittelgrosse Arten;Liquidambar styraciflua ‘Worplesdon’ (Amberbaum);groesse_baumrigolen;24,0;Szenario 1: Forschungsfokus;0,10000;wirtschaftlichkeit;6,0;38,0;0,4375000000000000;0,043750000000000004
+Mittelgrosse Arten;Liquidambar styraciflua ‘Worplesdon’ (Amberbaum);groesse_baumrigolen;24,0;Szenario 2: Radikale Vermeidung;0,01250;wirtschaftlichkeit;6,0;38,0;0,4375000000000000;0,005468750000000001
+Mittelgrosse Arten;Liquidambar styraciflua ‘Worplesdon’ (Amberbaum);groesse_baumrigolen;24,0;Szenario 3: Radikaler Lebenszyklus;0,05000;wirtschaftlichkeit;6,0;38,0;0,4375000000000000;0,021875000000000002
+Mittelgrosse Arten;Liquidambar styraciflua ‘Worplesdon’ (Amberbaum);pflegeaufwand;3,0;Szenario 0: Baseline (IST);0,10000;wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
+Mittelgrosse Arten;Liquidambar styraciflua ‘Worplesdon’ (Amberbaum);pflegeaufwand;3,0;Szenario 1: Forschungsfokus;0,10000;wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
+Mittelgrosse Arten;Liquidambar styraciflua ‘Worplesdon’ (Amberbaum);pflegeaufwand;3,0;Szenario 2: Radikale Vermeidung;0,01250;wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
+Mittelgrosse Arten;Liquidambar styraciflua ‘Worplesdon’ (Amberbaum);pflegeaufwand;3,0;Szenario 3: Radikaler Lebenszyklus;0,05000;wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
 Mittelgrosse Arten;Liquidambar styraciflua ‘Worplesdon’ (Amberbaum);recyclingpotential;2,0;Szenario 0: Baseline (IST);0,10000;kreislauffaehigkeit;1,0;3,0;0,5000000000000000;0,050000000000000003
 Mittelgrosse Arten;Liquidambar styraciflua ‘Worplesdon’ (Amberbaum);recyclingpotential;2,0;Szenario 1: Forschungsfokus;0,25000;kreislauffaehigkeit;1,0;3,0;0,5000000000000000;0,125000000000000000
 Mittelgrosse Arten;Liquidambar styraciflua ‘Worplesdon’ (Amberbaum);recyclingpotential;2,0;Szenario 2: Radikale Vermeidung;0,45000;kreislauffaehigkeit;1,0;3,0;0,5000000000000000;0,225000000000000006
 Mittelgrosse Arten;Liquidambar styraciflua ‘Worplesdon’ (Amberbaum);recyclingpotential;2,0;Szenario 3: Radikaler Lebenszyklus;0,05000;kreislauffaehigkeit;1,0;3,0;0,5000000000000000;0,025000000000000001
-Mittelgrosse Arten;Koelreuteria paniculata (Blasenbaum);lebensdauer;75,0;Szenario 0: Baseline (IST);0,20000;langlebigkeit_wirtschaftlichkeit;50,0;100,0;0,5000000000000000;0,100000000000000006
-Mittelgrosse Arten;Koelreuteria paniculata (Blasenbaum);lebensdauer;75,0;Szenario 1: Forschungsfokus;0,20000;langlebigkeit_wirtschaftlichkeit;50,0;100,0;0,5000000000000000;0,100000000000000006
-Mittelgrosse Arten;Koelreuteria paniculata (Blasenbaum);lebensdauer;75,0;Szenario 2: Radikale Vermeidung;0,02500;langlebigkeit_wirtschaftlichkeit;50,0;100,0;0,5000000000000000;0,012500000000000001
-Mittelgrosse Arten;Koelreuteria paniculata (Blasenbaum);lebensdauer;75,0;Szenario 3: Radikaler Lebenszyklus;0,40000;langlebigkeit_wirtschaftlichkeit;50,0;100,0;0,5000000000000000;0,200000000000000011
+Mittelgrosse Arten;Koelreuteria paniculata (Blasenbaum);lebensdauer;75,0;Szenario 0: Baseline (IST);0,20000;langlebigkeit;50,0;100,0;0,5000000000000000;0,100000000000000006
+Mittelgrosse Arten;Koelreuteria paniculata (Blasenbaum);lebensdauer;75,0;Szenario 1: Forschungsfokus;0,20000;langlebigkeit;50,0;100,0;0,5000000000000000;0,100000000000000006
+Mittelgrosse Arten;Koelreuteria paniculata (Blasenbaum);lebensdauer;75,0;Szenario 2: Radikale Vermeidung;0,02500;langlebigkeit;50,0;100,0;0,5000000000000000;0,012500000000000001
+Mittelgrosse Arten;Koelreuteria paniculata (Blasenbaum);lebensdauer;75,0;Szenario 3: Radikaler Lebenszyklus;0,70000;langlebigkeit;50,0;100,0;0,5000000000000000;0,349999999999999978
 Mittelgrosse Arten;Koelreuteria paniculata (Blasenbaum);klimaangepasst;1,0;Szenario 0: Baseline (IST);0,10000;multifunktionale_nutzungsqualitaet;1,0;3,0;0,0000000000000000;0,000000000000000000
 Mittelgrosse Arten;Koelreuteria paniculata (Blasenbaum);klimaangepasst;1,0;Szenario 1: Forschungsfokus;0,02500;multifunktionale_nutzungsqualitaet;1,0;3,0;0,0000000000000000;0,000000000000000000
 Mittelgrosse Arten;Koelreuteria paniculata (Blasenbaum);klimaangepasst;1,0;Szenario 2: Radikale Vermeidung;0,01250;multifunktionale_nutzungsqualitaet;1,0;3,0;0,0000000000000000;0,000000000000000000
@@ -339,22 +339,22 @@ Mittelgrosse Arten;Koelreuteria paniculata (Blasenbaum);regenwasser;200,0;Szenar
 Mittelgrosse Arten;Koelreuteria paniculata (Blasenbaum);regenwasser;200,0;Szenario 1: Forschungsfokus;0,01250;multifunktionale_nutzungsqualitaet;115,0;325,0;0,4047619047619048;0,005059523809523810
 Mittelgrosse Arten;Koelreuteria paniculata (Blasenbaum);regenwasser;200,0;Szenario 2: Radikale Vermeidung;0,00625;multifunktionale_nutzungsqualitaet;115,0;325,0;0,4047619047619048;0,002529761904761905
 Mittelgrosse Arten;Koelreuteria paniculata (Blasenbaum);regenwasser;200,0;Szenario 3: Radikaler Lebenszyklus;0,01250;multifunktionale_nutzungsqualitaet;115,0;325,0;0,4047619047619048;0,005059523809523810
-Mittelgrosse Arten;Koelreuteria paniculata (Blasenbaum);groesse_baumrigolen;13,0;Szenario 0: Baseline (IST);0,10000;langlebigkeit_wirtschaftlichkeit;6,0;38,0;0,7812500000000000;0,078125000000000000
-Mittelgrosse Arten;Koelreuteria paniculata (Blasenbaum);groesse_baumrigolen;13,0;Szenario 1: Forschungsfokus;0,10000;langlebigkeit_wirtschaftlichkeit;6,0;38,0;0,7812500000000000;0,078125000000000000
-Mittelgrosse Arten;Koelreuteria paniculata (Blasenbaum);groesse_baumrigolen;13,0;Szenario 2: Radikale Vermeidung;0,01250;langlebigkeit_wirtschaftlichkeit;6,0;38,0;0,7812500000000000;0,009765625000000000
-Mittelgrosse Arten;Koelreuteria paniculata (Blasenbaum);groesse_baumrigolen;13,0;Szenario 3: Radikaler Lebenszyklus;0,20000;langlebigkeit_wirtschaftlichkeit;6,0;38,0;0,7812500000000000;0,156250000000000000
-Mittelgrosse Arten;Koelreuteria paniculata (Blasenbaum);pflegeaufwand;3,0;Szenario 0: Baseline (IST);0,10000;langlebigkeit_wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
-Mittelgrosse Arten;Koelreuteria paniculata (Blasenbaum);pflegeaufwand;3,0;Szenario 1: Forschungsfokus;0,10000;langlebigkeit_wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
-Mittelgrosse Arten;Koelreuteria paniculata (Blasenbaum);pflegeaufwand;3,0;Szenario 2: Radikale Vermeidung;0,01250;langlebigkeit_wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
-Mittelgrosse Arten;Koelreuteria paniculata (Blasenbaum);pflegeaufwand;3,0;Szenario 3: Radikaler Lebenszyklus;0,20000;langlebigkeit_wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
+Mittelgrosse Arten;Koelreuteria paniculata (Blasenbaum);groesse_baumrigolen;13,0;Szenario 0: Baseline (IST);0,10000;wirtschaftlichkeit;6,0;38,0;0,7812500000000000;0,078125000000000000
+Mittelgrosse Arten;Koelreuteria paniculata (Blasenbaum);groesse_baumrigolen;13,0;Szenario 1: Forschungsfokus;0,10000;wirtschaftlichkeit;6,0;38,0;0,7812500000000000;0,078125000000000000
+Mittelgrosse Arten;Koelreuteria paniculata (Blasenbaum);groesse_baumrigolen;13,0;Szenario 2: Radikale Vermeidung;0,01250;wirtschaftlichkeit;6,0;38,0;0,7812500000000000;0,009765625000000000
+Mittelgrosse Arten;Koelreuteria paniculata (Blasenbaum);groesse_baumrigolen;13,0;Szenario 3: Radikaler Lebenszyklus;0,05000;wirtschaftlichkeit;6,0;38,0;0,7812500000000000;0,039062500000000000
+Mittelgrosse Arten;Koelreuteria paniculata (Blasenbaum);pflegeaufwand;3,0;Szenario 0: Baseline (IST);0,10000;wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
+Mittelgrosse Arten;Koelreuteria paniculata (Blasenbaum);pflegeaufwand;3,0;Szenario 1: Forschungsfokus;0,10000;wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
+Mittelgrosse Arten;Koelreuteria paniculata (Blasenbaum);pflegeaufwand;3,0;Szenario 2: Radikale Vermeidung;0,01250;wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
+Mittelgrosse Arten;Koelreuteria paniculata (Blasenbaum);pflegeaufwand;3,0;Szenario 3: Radikaler Lebenszyklus;0,05000;wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
 Mittelgrosse Arten;Koelreuteria paniculata (Blasenbaum);recyclingpotential;1,0;Szenario 0: Baseline (IST);0,10000;kreislauffaehigkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
 Mittelgrosse Arten;Koelreuteria paniculata (Blasenbaum);recyclingpotential;1,0;Szenario 1: Forschungsfokus;0,25000;kreislauffaehigkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
 Mittelgrosse Arten;Koelreuteria paniculata (Blasenbaum);recyclingpotential;1,0;Szenario 2: Radikale Vermeidung;0,45000;kreislauffaehigkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
 Mittelgrosse Arten;Koelreuteria paniculata (Blasenbaum);recyclingpotential;1,0;Szenario 3: Radikaler Lebenszyklus;0,05000;kreislauffaehigkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
-Mittelgrosse Arten;Zelkova serrata (Japanische Zelkove);lebensdauer;100,0;Szenario 0: Baseline (IST);0,20000;langlebigkeit_wirtschaftlichkeit;50,0;100,0;1,0000000000000000;0,200000000000000011
-Mittelgrosse Arten;Zelkova serrata (Japanische Zelkove);lebensdauer;100,0;Szenario 1: Forschungsfokus;0,20000;langlebigkeit_wirtschaftlichkeit;50,0;100,0;1,0000000000000000;0,200000000000000011
-Mittelgrosse Arten;Zelkova serrata (Japanische Zelkove);lebensdauer;100,0;Szenario 2: Radikale Vermeidung;0,02500;langlebigkeit_wirtschaftlichkeit;50,0;100,0;1,0000000000000000;0,025000000000000001
-Mittelgrosse Arten;Zelkova serrata (Japanische Zelkove);lebensdauer;100,0;Szenario 3: Radikaler Lebenszyklus;0,40000;langlebigkeit_wirtschaftlichkeit;50,0;100,0;1,0000000000000000;0,400000000000000022
+Mittelgrosse Arten;Zelkova serrata (Japanische Zelkove);lebensdauer;100,0;Szenario 0: Baseline (IST);0,20000;langlebigkeit;50,0;100,0;1,0000000000000000;0,200000000000000011
+Mittelgrosse Arten;Zelkova serrata (Japanische Zelkove);lebensdauer;100,0;Szenario 1: Forschungsfokus;0,20000;langlebigkeit;50,0;100,0;1,0000000000000000;0,200000000000000011
+Mittelgrosse Arten;Zelkova serrata (Japanische Zelkove);lebensdauer;100,0;Szenario 2: Radikale Vermeidung;0,02500;langlebigkeit;50,0;100,0;1,0000000000000000;0,025000000000000001
+Mittelgrosse Arten;Zelkova serrata (Japanische Zelkove);lebensdauer;100,0;Szenario 3: Radikaler Lebenszyklus;0,70000;langlebigkeit;50,0;100,0;1,0000000000000000;0,699999999999999956
 Mittelgrosse Arten;Zelkova serrata (Japanische Zelkove);klimaangepasst;2,0;Szenario 0: Baseline (IST);0,10000;multifunktionale_nutzungsqualitaet;1,0;3,0;0,5000000000000000;0,050000000000000003
 Mittelgrosse Arten;Zelkova serrata (Japanische Zelkove);klimaangepasst;2,0;Szenario 1: Forschungsfokus;0,02500;multifunktionale_nutzungsqualitaet;1,0;3,0;0,5000000000000000;0,012500000000000001
 Mittelgrosse Arten;Zelkova serrata (Japanische Zelkove);klimaangepasst;2,0;Szenario 2: Radikale Vermeidung;0,01250;multifunktionale_nutzungsqualitaet;1,0;3,0;0,5000000000000000;0,006250000000000000
@@ -383,22 +383,22 @@ Mittelgrosse Arten;Zelkova serrata (Japanische Zelkove);regenwasser;200,0;Szenar
 Mittelgrosse Arten;Zelkova serrata (Japanische Zelkove);regenwasser;200,0;Szenario 1: Forschungsfokus;0,01250;multifunktionale_nutzungsqualitaet;115,0;325,0;0,4047619047619048;0,005059523809523810
 Mittelgrosse Arten;Zelkova serrata (Japanische Zelkove);regenwasser;200,0;Szenario 2: Radikale Vermeidung;0,00625;multifunktionale_nutzungsqualitaet;115,0;325,0;0,4047619047619048;0,002529761904761905
 Mittelgrosse Arten;Zelkova serrata (Japanische Zelkove);regenwasser;200,0;Szenario 3: Radikaler Lebenszyklus;0,01250;multifunktionale_nutzungsqualitaet;115,0;325,0;0,4047619047619048;0,005059523809523810
-Mittelgrosse Arten;Zelkova serrata (Japanische Zelkove);groesse_baumrigolen;38,0;Szenario 0: Baseline (IST);0,10000;langlebigkeit_wirtschaftlichkeit;6,0;38,0;0,0000000000000000;0,000000000000000000
-Mittelgrosse Arten;Zelkova serrata (Japanische Zelkove);groesse_baumrigolen;38,0;Szenario 1: Forschungsfokus;0,10000;langlebigkeit_wirtschaftlichkeit;6,0;38,0;0,0000000000000000;0,000000000000000000
-Mittelgrosse Arten;Zelkova serrata (Japanische Zelkove);groesse_baumrigolen;38,0;Szenario 2: Radikale Vermeidung;0,01250;langlebigkeit_wirtschaftlichkeit;6,0;38,0;0,0000000000000000;0,000000000000000000
-Mittelgrosse Arten;Zelkova serrata (Japanische Zelkove);groesse_baumrigolen;38,0;Szenario 3: Radikaler Lebenszyklus;0,20000;langlebigkeit_wirtschaftlichkeit;6,0;38,0;0,0000000000000000;0,000000000000000000
-Mittelgrosse Arten;Zelkova serrata (Japanische Zelkove);pflegeaufwand;3,0;Szenario 0: Baseline (IST);0,10000;langlebigkeit_wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
-Mittelgrosse Arten;Zelkova serrata (Japanische Zelkove);pflegeaufwand;3,0;Szenario 1: Forschungsfokus;0,10000;langlebigkeit_wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
-Mittelgrosse Arten;Zelkova serrata (Japanische Zelkove);pflegeaufwand;3,0;Szenario 2: Radikale Vermeidung;0,01250;langlebigkeit_wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
-Mittelgrosse Arten;Zelkova serrata (Japanische Zelkove);pflegeaufwand;3,0;Szenario 3: Radikaler Lebenszyklus;0,20000;langlebigkeit_wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
+Mittelgrosse Arten;Zelkova serrata (Japanische Zelkove);groesse_baumrigolen;38,0;Szenario 0: Baseline (IST);0,10000;wirtschaftlichkeit;6,0;38,0;0,0000000000000000;0,000000000000000000
+Mittelgrosse Arten;Zelkova serrata (Japanische Zelkove);groesse_baumrigolen;38,0;Szenario 1: Forschungsfokus;0,10000;wirtschaftlichkeit;6,0;38,0;0,0000000000000000;0,000000000000000000
+Mittelgrosse Arten;Zelkova serrata (Japanische Zelkove);groesse_baumrigolen;38,0;Szenario 2: Radikale Vermeidung;0,01250;wirtschaftlichkeit;6,0;38,0;0,0000000000000000;0,000000000000000000
+Mittelgrosse Arten;Zelkova serrata (Japanische Zelkove);groesse_baumrigolen;38,0;Szenario 3: Radikaler Lebenszyklus;0,05000;wirtschaftlichkeit;6,0;38,0;0,0000000000000000;0,000000000000000000
+Mittelgrosse Arten;Zelkova serrata (Japanische Zelkove);pflegeaufwand;3,0;Szenario 0: Baseline (IST);0,10000;wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
+Mittelgrosse Arten;Zelkova serrata (Japanische Zelkove);pflegeaufwand;3,0;Szenario 1: Forschungsfokus;0,10000;wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
+Mittelgrosse Arten;Zelkova serrata (Japanische Zelkove);pflegeaufwand;3,0;Szenario 2: Radikale Vermeidung;0,01250;wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
+Mittelgrosse Arten;Zelkova serrata (Japanische Zelkove);pflegeaufwand;3,0;Szenario 3: Radikaler Lebenszyklus;0,05000;wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
 Mittelgrosse Arten;Zelkova serrata (Japanische Zelkove);recyclingpotential;3,0;Szenario 0: Baseline (IST);0,10000;kreislauffaehigkeit;1,0;3,0;1,0000000000000000;0,100000000000000006
 Mittelgrosse Arten;Zelkova serrata (Japanische Zelkove);recyclingpotential;3,0;Szenario 1: Forschungsfokus;0,25000;kreislauffaehigkeit;1,0;3,0;1,0000000000000000;0,250000000000000000
 Mittelgrosse Arten;Zelkova serrata (Japanische Zelkove);recyclingpotential;3,0;Szenario 2: Radikale Vermeidung;0,45000;kreislauffaehigkeit;1,0;3,0;1,0000000000000000;0,450000000000000011
 Mittelgrosse Arten;Zelkova serrata (Japanische Zelkove);recyclingpotential;3,0;Szenario 3: Radikaler Lebenszyklus;0,05000;kreislauffaehigkeit;1,0;3,0;1,0000000000000000;0,050000000000000003
-Mittelgrosse Arten;Aesculus flava (Gelbe Rosskastanie);lebensdauer;80,0;Szenario 0: Baseline (IST);0,20000;langlebigkeit_wirtschaftlichkeit;50,0;100,0;0,6000000000000000;0,119999999999999996
-Mittelgrosse Arten;Aesculus flava (Gelbe Rosskastanie);lebensdauer;80,0;Szenario 1: Forschungsfokus;0,20000;langlebigkeit_wirtschaftlichkeit;50,0;100,0;0,6000000000000000;0,119999999999999996
-Mittelgrosse Arten;Aesculus flava (Gelbe Rosskastanie);lebensdauer;80,0;Szenario 2: Radikale Vermeidung;0,02500;langlebigkeit_wirtschaftlichkeit;50,0;100,0;0,6000000000000000;0,014999999999999999
-Mittelgrosse Arten;Aesculus flava (Gelbe Rosskastanie);lebensdauer;80,0;Szenario 3: Radikaler Lebenszyklus;0,40000;langlebigkeit_wirtschaftlichkeit;50,0;100,0;0,6000000000000000;0,239999999999999991
+Mittelgrosse Arten;Aesculus flava (Gelbe Rosskastanie);lebensdauer;80,0;Szenario 0: Baseline (IST);0,20000;langlebigkeit;50,0;100,0;0,6000000000000000;0,119999999999999996
+Mittelgrosse Arten;Aesculus flava (Gelbe Rosskastanie);lebensdauer;80,0;Szenario 1: Forschungsfokus;0,20000;langlebigkeit;50,0;100,0;0,6000000000000000;0,119999999999999996
+Mittelgrosse Arten;Aesculus flava (Gelbe Rosskastanie);lebensdauer;80,0;Szenario 2: Radikale Vermeidung;0,02500;langlebigkeit;50,0;100,0;0,6000000000000000;0,014999999999999999
+Mittelgrosse Arten;Aesculus flava (Gelbe Rosskastanie);lebensdauer;80,0;Szenario 3: Radikaler Lebenszyklus;0,70000;langlebigkeit;50,0;100,0;0,6000000000000000;0,419999999999999984
 Mittelgrosse Arten;Aesculus flava (Gelbe Rosskastanie);klimaangepasst;1,0;Szenario 0: Baseline (IST);0,10000;multifunktionale_nutzungsqualitaet;1,0;3,0;0,0000000000000000;0,000000000000000000
 Mittelgrosse Arten;Aesculus flava (Gelbe Rosskastanie);klimaangepasst;1,0;Szenario 1: Forschungsfokus;0,02500;multifunktionale_nutzungsqualitaet;1,0;3,0;0,0000000000000000;0,000000000000000000
 Mittelgrosse Arten;Aesculus flava (Gelbe Rosskastanie);klimaangepasst;1,0;Szenario 2: Radikale Vermeidung;0,01250;multifunktionale_nutzungsqualitaet;1,0;3,0;0,0000000000000000;0,000000000000000000
@@ -427,22 +427,22 @@ Mittelgrosse Arten;Aesculus flava (Gelbe Rosskastanie);regenwasser;200,0;Szenari
 Mittelgrosse Arten;Aesculus flava (Gelbe Rosskastanie);regenwasser;200,0;Szenario 1: Forschungsfokus;0,01250;multifunktionale_nutzungsqualitaet;115,0;325,0;0,4047619047619048;0,005059523809523810
 Mittelgrosse Arten;Aesculus flava (Gelbe Rosskastanie);regenwasser;200,0;Szenario 2: Radikale Vermeidung;0,00625;multifunktionale_nutzungsqualitaet;115,0;325,0;0,4047619047619048;0,002529761904761905
 Mittelgrosse Arten;Aesculus flava (Gelbe Rosskastanie);regenwasser;200,0;Szenario 3: Radikaler Lebenszyklus;0,01250;multifunktionale_nutzungsqualitaet;115,0;325,0;0,4047619047619048;0,005059523809523810
-Mittelgrosse Arten;Aesculus flava (Gelbe Rosskastanie);groesse_baumrigolen;24,0;Szenario 0: Baseline (IST);0,10000;langlebigkeit_wirtschaftlichkeit;6,0;38,0;0,4375000000000000;0,043750000000000004
-Mittelgrosse Arten;Aesculus flava (Gelbe Rosskastanie);groesse_baumrigolen;24,0;Szenario 1: Forschungsfokus;0,10000;langlebigkeit_wirtschaftlichkeit;6,0;38,0;0,4375000000000000;0,043750000000000004
-Mittelgrosse Arten;Aesculus flava (Gelbe Rosskastanie);groesse_baumrigolen;24,0;Szenario 2: Radikale Vermeidung;0,01250;langlebigkeit_wirtschaftlichkeit;6,0;38,0;0,4375000000000000;0,005468750000000001
-Mittelgrosse Arten;Aesculus flava (Gelbe Rosskastanie);groesse_baumrigolen;24,0;Szenario 3: Radikaler Lebenszyklus;0,20000;langlebigkeit_wirtschaftlichkeit;6,0;38,0;0,4375000000000000;0,087500000000000008
-Mittelgrosse Arten;Aesculus flava (Gelbe Rosskastanie);pflegeaufwand;2,0;Szenario 0: Baseline (IST);0,10000;langlebigkeit_wirtschaftlichkeit;1,0;3,0;0,5000000000000000;0,050000000000000003
-Mittelgrosse Arten;Aesculus flava (Gelbe Rosskastanie);pflegeaufwand;2,0;Szenario 1: Forschungsfokus;0,10000;langlebigkeit_wirtschaftlichkeit;1,0;3,0;0,5000000000000000;0,050000000000000003
-Mittelgrosse Arten;Aesculus flava (Gelbe Rosskastanie);pflegeaufwand;2,0;Szenario 2: Radikale Vermeidung;0,01250;langlebigkeit_wirtschaftlichkeit;1,0;3,0;0,5000000000000000;0,006250000000000000
-Mittelgrosse Arten;Aesculus flava (Gelbe Rosskastanie);pflegeaufwand;2,0;Szenario 3: Radikaler Lebenszyklus;0,20000;langlebigkeit_wirtschaftlichkeit;1,0;3,0;0,5000000000000000;0,100000000000000006
+Mittelgrosse Arten;Aesculus flava (Gelbe Rosskastanie);groesse_baumrigolen;24,0;Szenario 0: Baseline (IST);0,10000;wirtschaftlichkeit;6,0;38,0;0,4375000000000000;0,043750000000000004
+Mittelgrosse Arten;Aesculus flava (Gelbe Rosskastanie);groesse_baumrigolen;24,0;Szenario 1: Forschungsfokus;0,10000;wirtschaftlichkeit;6,0;38,0;0,4375000000000000;0,043750000000000004
+Mittelgrosse Arten;Aesculus flava (Gelbe Rosskastanie);groesse_baumrigolen;24,0;Szenario 2: Radikale Vermeidung;0,01250;wirtschaftlichkeit;6,0;38,0;0,4375000000000000;0,005468750000000001
+Mittelgrosse Arten;Aesculus flava (Gelbe Rosskastanie);groesse_baumrigolen;24,0;Szenario 3: Radikaler Lebenszyklus;0,05000;wirtschaftlichkeit;6,0;38,0;0,4375000000000000;0,021875000000000002
+Mittelgrosse Arten;Aesculus flava (Gelbe Rosskastanie);pflegeaufwand;2,0;Szenario 0: Baseline (IST);0,10000;wirtschaftlichkeit;1,0;3,0;0,5000000000000000;0,050000000000000003
+Mittelgrosse Arten;Aesculus flava (Gelbe Rosskastanie);pflegeaufwand;2,0;Szenario 1: Forschungsfokus;0,10000;wirtschaftlichkeit;1,0;3,0;0,5000000000000000;0,050000000000000003
+Mittelgrosse Arten;Aesculus flava (Gelbe Rosskastanie);pflegeaufwand;2,0;Szenario 2: Radikale Vermeidung;0,01250;wirtschaftlichkeit;1,0;3,0;0,5000000000000000;0,006250000000000000
+Mittelgrosse Arten;Aesculus flava (Gelbe Rosskastanie);pflegeaufwand;2,0;Szenario 3: Radikaler Lebenszyklus;0,05000;wirtschaftlichkeit;1,0;3,0;0,5000000000000000;0,025000000000000001
 Mittelgrosse Arten;Aesculus flava (Gelbe Rosskastanie);recyclingpotential;2,0;Szenario 0: Baseline (IST);0,10000;kreislauffaehigkeit;1,0;3,0;0,5000000000000000;0,050000000000000003
 Mittelgrosse Arten;Aesculus flava (Gelbe Rosskastanie);recyclingpotential;2,0;Szenario 1: Forschungsfokus;0,25000;kreislauffaehigkeit;1,0;3,0;0,5000000000000000;0,125000000000000000
 Mittelgrosse Arten;Aesculus flava (Gelbe Rosskastanie);recyclingpotential;2,0;Szenario 2: Radikale Vermeidung;0,45000;kreislauffaehigkeit;1,0;3,0;0,5000000000000000;0,225000000000000006
 Mittelgrosse Arten;Aesculus flava (Gelbe Rosskastanie);recyclingpotential;2,0;Szenario 3: Radikaler Lebenszyklus;0,05000;kreislauffaehigkeit;1,0;3,0;0,5000000000000000;0,025000000000000001
-Mittelgrosse Arten;Parrotia persica (Eisenholzbaum);lebensdauer;80,0;Szenario 0: Baseline (IST);0,20000;langlebigkeit_wirtschaftlichkeit;50,0;100,0;0,6000000000000000;0,119999999999999996
-Mittelgrosse Arten;Parrotia persica (Eisenholzbaum);lebensdauer;80,0;Szenario 1: Forschungsfokus;0,20000;langlebigkeit_wirtschaftlichkeit;50,0;100,0;0,6000000000000000;0,119999999999999996
-Mittelgrosse Arten;Parrotia persica (Eisenholzbaum);lebensdauer;80,0;Szenario 2: Radikale Vermeidung;0,02500;langlebigkeit_wirtschaftlichkeit;50,0;100,0;0,6000000000000000;0,014999999999999999
-Mittelgrosse Arten;Parrotia persica (Eisenholzbaum);lebensdauer;80,0;Szenario 3: Radikaler Lebenszyklus;0,40000;langlebigkeit_wirtschaftlichkeit;50,0;100,0;0,6000000000000000;0,239999999999999991
+Mittelgrosse Arten;Parrotia persica (Eisenholzbaum);lebensdauer;80,0;Szenario 0: Baseline (IST);0,20000;langlebigkeit;50,0;100,0;0,6000000000000000;0,119999999999999996
+Mittelgrosse Arten;Parrotia persica (Eisenholzbaum);lebensdauer;80,0;Szenario 1: Forschungsfokus;0,20000;langlebigkeit;50,0;100,0;0,6000000000000000;0,119999999999999996
+Mittelgrosse Arten;Parrotia persica (Eisenholzbaum);lebensdauer;80,0;Szenario 2: Radikale Vermeidung;0,02500;langlebigkeit;50,0;100,0;0,6000000000000000;0,014999999999999999
+Mittelgrosse Arten;Parrotia persica (Eisenholzbaum);lebensdauer;80,0;Szenario 3: Radikaler Lebenszyklus;0,70000;langlebigkeit;50,0;100,0;0,6000000000000000;0,419999999999999984
 Mittelgrosse Arten;Parrotia persica (Eisenholzbaum);klimaangepasst;2,0;Szenario 0: Baseline (IST);0,10000;multifunktionale_nutzungsqualitaet;1,0;3,0;0,5000000000000000;0,050000000000000003
 Mittelgrosse Arten;Parrotia persica (Eisenholzbaum);klimaangepasst;2,0;Szenario 1: Forschungsfokus;0,02500;multifunktionale_nutzungsqualitaet;1,0;3,0;0,5000000000000000;0,012500000000000001
 Mittelgrosse Arten;Parrotia persica (Eisenholzbaum);klimaangepasst;2,0;Szenario 2: Radikale Vermeidung;0,01250;multifunktionale_nutzungsqualitaet;1,0;3,0;0,5000000000000000;0,006250000000000000
@@ -471,22 +471,22 @@ Mittelgrosse Arten;Parrotia persica (Eisenholzbaum);regenwasser;200,0;Szenario 0
 Mittelgrosse Arten;Parrotia persica (Eisenholzbaum);regenwasser;200,0;Szenario 1: Forschungsfokus;0,01250;multifunktionale_nutzungsqualitaet;115,0;325,0;0,4047619047619048;0,005059523809523810
 Mittelgrosse Arten;Parrotia persica (Eisenholzbaum);regenwasser;200,0;Szenario 2: Radikale Vermeidung;0,00625;multifunktionale_nutzungsqualitaet;115,0;325,0;0,4047619047619048;0,002529761904761905
 Mittelgrosse Arten;Parrotia persica (Eisenholzbaum);regenwasser;200,0;Szenario 3: Radikaler Lebenszyklus;0,01250;multifunktionale_nutzungsqualitaet;115,0;325,0;0,4047619047619048;0,005059523809523810
-Mittelgrosse Arten;Parrotia persica (Eisenholzbaum);groesse_baumrigolen;24,0;Szenario 0: Baseline (IST);0,10000;langlebigkeit_wirtschaftlichkeit;6,0;38,0;0,4375000000000000;0,043750000000000004
-Mittelgrosse Arten;Parrotia persica (Eisenholzbaum);groesse_baumrigolen;24,0;Szenario 1: Forschungsfokus;0,10000;langlebigkeit_wirtschaftlichkeit;6,0;38,0;0,4375000000000000;0,043750000000000004
-Mittelgrosse Arten;Parrotia persica (Eisenholzbaum);groesse_baumrigolen;24,0;Szenario 2: Radikale Vermeidung;0,01250;langlebigkeit_wirtschaftlichkeit;6,0;38,0;0,4375000000000000;0,005468750000000001
-Mittelgrosse Arten;Parrotia persica (Eisenholzbaum);groesse_baumrigolen;24,0;Szenario 3: Radikaler Lebenszyklus;0,20000;langlebigkeit_wirtschaftlichkeit;6,0;38,0;0,4375000000000000;0,087500000000000008
-Mittelgrosse Arten;Parrotia persica (Eisenholzbaum);pflegeaufwand;3,0;Szenario 0: Baseline (IST);0,10000;langlebigkeit_wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
-Mittelgrosse Arten;Parrotia persica (Eisenholzbaum);pflegeaufwand;3,0;Szenario 1: Forschungsfokus;0,10000;langlebigkeit_wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
-Mittelgrosse Arten;Parrotia persica (Eisenholzbaum);pflegeaufwand;3,0;Szenario 2: Radikale Vermeidung;0,01250;langlebigkeit_wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
-Mittelgrosse Arten;Parrotia persica (Eisenholzbaum);pflegeaufwand;3,0;Szenario 3: Radikaler Lebenszyklus;0,20000;langlebigkeit_wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
+Mittelgrosse Arten;Parrotia persica (Eisenholzbaum);groesse_baumrigolen;24,0;Szenario 0: Baseline (IST);0,10000;wirtschaftlichkeit;6,0;38,0;0,4375000000000000;0,043750000000000004
+Mittelgrosse Arten;Parrotia persica (Eisenholzbaum);groesse_baumrigolen;24,0;Szenario 1: Forschungsfokus;0,10000;wirtschaftlichkeit;6,0;38,0;0,4375000000000000;0,043750000000000004
+Mittelgrosse Arten;Parrotia persica (Eisenholzbaum);groesse_baumrigolen;24,0;Szenario 2: Radikale Vermeidung;0,01250;wirtschaftlichkeit;6,0;38,0;0,4375000000000000;0,005468750000000001
+Mittelgrosse Arten;Parrotia persica (Eisenholzbaum);groesse_baumrigolen;24,0;Szenario 3: Radikaler Lebenszyklus;0,05000;wirtschaftlichkeit;6,0;38,0;0,4375000000000000;0,021875000000000002
+Mittelgrosse Arten;Parrotia persica (Eisenholzbaum);pflegeaufwand;3,0;Szenario 0: Baseline (IST);0,10000;wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
+Mittelgrosse Arten;Parrotia persica (Eisenholzbaum);pflegeaufwand;3,0;Szenario 1: Forschungsfokus;0,10000;wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
+Mittelgrosse Arten;Parrotia persica (Eisenholzbaum);pflegeaufwand;3,0;Szenario 2: Radikale Vermeidung;0,01250;wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
+Mittelgrosse Arten;Parrotia persica (Eisenholzbaum);pflegeaufwand;3,0;Szenario 3: Radikaler Lebenszyklus;0,05000;wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
 Mittelgrosse Arten;Parrotia persica (Eisenholzbaum);recyclingpotential;3,0;Szenario 0: Baseline (IST);0,10000;kreislauffaehigkeit;1,0;3,0;1,0000000000000000;0,100000000000000006
 Mittelgrosse Arten;Parrotia persica (Eisenholzbaum);recyclingpotential;3,0;Szenario 1: Forschungsfokus;0,25000;kreislauffaehigkeit;1,0;3,0;1,0000000000000000;0,250000000000000000
 Mittelgrosse Arten;Parrotia persica (Eisenholzbaum);recyclingpotential;3,0;Szenario 2: Radikale Vermeidung;0,45000;kreislauffaehigkeit;1,0;3,0;1,0000000000000000;0,450000000000000011
 Mittelgrosse Arten;Parrotia persica (Eisenholzbaum);recyclingpotential;3,0;Szenario 3: Radikaler Lebenszyklus;0,05000;kreislauffaehigkeit;1,0;3,0;1,0000000000000000;0,050000000000000003
-Kleine Arten;Ulmus ‘New Horizon’ (Hybridulme);lebensdauer;100,0;Szenario 0: Baseline (IST);0,20000;langlebigkeit_wirtschaftlichkeit;50,0;100,0;1,0000000000000000;0,200000000000000011
-Kleine Arten;Ulmus ‘New Horizon’ (Hybridulme);lebensdauer;100,0;Szenario 1: Forschungsfokus;0,20000;langlebigkeit_wirtschaftlichkeit;50,0;100,0;1,0000000000000000;0,200000000000000011
-Kleine Arten;Ulmus ‘New Horizon’ (Hybridulme);lebensdauer;100,0;Szenario 2: Radikale Vermeidung;0,02500;langlebigkeit_wirtschaftlichkeit;50,0;100,0;1,0000000000000000;0,025000000000000001
-Kleine Arten;Ulmus ‘New Horizon’ (Hybridulme);lebensdauer;100,0;Szenario 3: Radikaler Lebenszyklus;0,40000;langlebigkeit_wirtschaftlichkeit;50,0;100,0;1,0000000000000000;0,400000000000000022
+Kleine Arten;Ulmus ‘New Horizon’ (Hybridulme);lebensdauer;100,0;Szenario 0: Baseline (IST);0,20000;langlebigkeit;50,0;100,0;1,0000000000000000;0,200000000000000011
+Kleine Arten;Ulmus ‘New Horizon’ (Hybridulme);lebensdauer;100,0;Szenario 1: Forschungsfokus;0,20000;langlebigkeit;50,0;100,0;1,0000000000000000;0,200000000000000011
+Kleine Arten;Ulmus ‘New Horizon’ (Hybridulme);lebensdauer;100,0;Szenario 2: Radikale Vermeidung;0,02500;langlebigkeit;50,0;100,0;1,0000000000000000;0,025000000000000001
+Kleine Arten;Ulmus ‘New Horizon’ (Hybridulme);lebensdauer;100,0;Szenario 3: Radikaler Lebenszyklus;0,70000;langlebigkeit;50,0;100,0;1,0000000000000000;0,699999999999999956
 Kleine Arten;Ulmus ‘New Horizon’ (Hybridulme);klimaangepasst;3,0;Szenario 0: Baseline (IST);0,10000;multifunktionale_nutzungsqualitaet;1,0;3,0;1,0000000000000000;0,100000000000000006
 Kleine Arten;Ulmus ‘New Horizon’ (Hybridulme);klimaangepasst;3,0;Szenario 1: Forschungsfokus;0,02500;multifunktionale_nutzungsqualitaet;1,0;3,0;1,0000000000000000;0,025000000000000001
 Kleine Arten;Ulmus ‘New Horizon’ (Hybridulme);klimaangepasst;3,0;Szenario 2: Radikale Vermeidung;0,01250;multifunktionale_nutzungsqualitaet;1,0;3,0;1,0000000000000000;0,012500000000000001
@@ -515,22 +515,22 @@ Kleine Arten;Ulmus ‘New Horizon’ (Hybridulme);regenwasser;115,0;Szenario 0: 
 Kleine Arten;Ulmus ‘New Horizon’ (Hybridulme);regenwasser;115,0;Szenario 1: Forschungsfokus;0,01250;multifunktionale_nutzungsqualitaet;115,0;325,0;0,0000000000000000;0,000000000000000000
 Kleine Arten;Ulmus ‘New Horizon’ (Hybridulme);regenwasser;115,0;Szenario 2: Radikale Vermeidung;0,00625;multifunktionale_nutzungsqualitaet;115,0;325,0;0,0000000000000000;0,000000000000000000
 Kleine Arten;Ulmus ‘New Horizon’ (Hybridulme);regenwasser;115,0;Szenario 3: Radikaler Lebenszyklus;0,01250;multifunktionale_nutzungsqualitaet;115,0;325,0;0,0000000000000000;0,000000000000000000
-Kleine Arten;Ulmus ‘New Horizon’ (Hybridulme);groesse_baumrigolen;13,0;Szenario 0: Baseline (IST);0,10000;langlebigkeit_wirtschaftlichkeit;6,0;38,0;0,7812500000000000;0,078125000000000000
-Kleine Arten;Ulmus ‘New Horizon’ (Hybridulme);groesse_baumrigolen;13,0;Szenario 1: Forschungsfokus;0,10000;langlebigkeit_wirtschaftlichkeit;6,0;38,0;0,7812500000000000;0,078125000000000000
-Kleine Arten;Ulmus ‘New Horizon’ (Hybridulme);groesse_baumrigolen;13,0;Szenario 2: Radikale Vermeidung;0,01250;langlebigkeit_wirtschaftlichkeit;6,0;38,0;0,7812500000000000;0,009765625000000000
-Kleine Arten;Ulmus ‘New Horizon’ (Hybridulme);groesse_baumrigolen;13,0;Szenario 3: Radikaler Lebenszyklus;0,20000;langlebigkeit_wirtschaftlichkeit;6,0;38,0;0,7812500000000000;0,156250000000000000
-Kleine Arten;Ulmus ‘New Horizon’ (Hybridulme);pflegeaufwand;2,0;Szenario 0: Baseline (IST);0,10000;langlebigkeit_wirtschaftlichkeit;1,0;3,0;0,5000000000000000;0,050000000000000003
-Kleine Arten;Ulmus ‘New Horizon’ (Hybridulme);pflegeaufwand;2,0;Szenario 1: Forschungsfokus;0,10000;langlebigkeit_wirtschaftlichkeit;1,0;3,0;0,5000000000000000;0,050000000000000003
-Kleine Arten;Ulmus ‘New Horizon’ (Hybridulme);pflegeaufwand;2,0;Szenario 2: Radikale Vermeidung;0,01250;langlebigkeit_wirtschaftlichkeit;1,0;3,0;0,5000000000000000;0,006250000000000000
-Kleine Arten;Ulmus ‘New Horizon’ (Hybridulme);pflegeaufwand;2,0;Szenario 3: Radikaler Lebenszyklus;0,20000;langlebigkeit_wirtschaftlichkeit;1,0;3,0;0,5000000000000000;0,100000000000000006
+Kleine Arten;Ulmus ‘New Horizon’ (Hybridulme);groesse_baumrigolen;13,0;Szenario 0: Baseline (IST);0,10000;wirtschaftlichkeit;6,0;38,0;0,7812500000000000;0,078125000000000000
+Kleine Arten;Ulmus ‘New Horizon’ (Hybridulme);groesse_baumrigolen;13,0;Szenario 1: Forschungsfokus;0,10000;wirtschaftlichkeit;6,0;38,0;0,7812500000000000;0,078125000000000000
+Kleine Arten;Ulmus ‘New Horizon’ (Hybridulme);groesse_baumrigolen;13,0;Szenario 2: Radikale Vermeidung;0,01250;wirtschaftlichkeit;6,0;38,0;0,7812500000000000;0,009765625000000000
+Kleine Arten;Ulmus ‘New Horizon’ (Hybridulme);groesse_baumrigolen;13,0;Szenario 3: Radikaler Lebenszyklus;0,05000;wirtschaftlichkeit;6,0;38,0;0,7812500000000000;0,039062500000000000
+Kleine Arten;Ulmus ‘New Horizon’ (Hybridulme);pflegeaufwand;2,0;Szenario 0: Baseline (IST);0,10000;wirtschaftlichkeit;1,0;3,0;0,5000000000000000;0,050000000000000003
+Kleine Arten;Ulmus ‘New Horizon’ (Hybridulme);pflegeaufwand;2,0;Szenario 1: Forschungsfokus;0,10000;wirtschaftlichkeit;1,0;3,0;0,5000000000000000;0,050000000000000003
+Kleine Arten;Ulmus ‘New Horizon’ (Hybridulme);pflegeaufwand;2,0;Szenario 2: Radikale Vermeidung;0,01250;wirtschaftlichkeit;1,0;3,0;0,5000000000000000;0,006250000000000000
+Kleine Arten;Ulmus ‘New Horizon’ (Hybridulme);pflegeaufwand;2,0;Szenario 3: Radikaler Lebenszyklus;0,05000;wirtschaftlichkeit;1,0;3,0;0,5000000000000000;0,025000000000000001
 Kleine Arten;Ulmus ‘New Horizon’ (Hybridulme);recyclingpotential;3,0;Szenario 0: Baseline (IST);0,10000;kreislauffaehigkeit;1,0;3,0;1,0000000000000000;0,100000000000000006
 Kleine Arten;Ulmus ‘New Horizon’ (Hybridulme);recyclingpotential;3,0;Szenario 1: Forschungsfokus;0,25000;kreislauffaehigkeit;1,0;3,0;1,0000000000000000;0,250000000000000000
 Kleine Arten;Ulmus ‘New Horizon’ (Hybridulme);recyclingpotential;3,0;Szenario 2: Radikale Vermeidung;0,45000;kreislauffaehigkeit;1,0;3,0;1,0000000000000000;0,450000000000000011
 Kleine Arten;Ulmus ‘New Horizon’ (Hybridulme);recyclingpotential;3,0;Szenario 3: Radikaler Lebenszyklus;0,05000;kreislauffaehigkeit;1,0;3,0;1,0000000000000000;0,050000000000000003
-Kleine Arten;Acer campestre ‘Elsrijk’ (Feldahorn);lebensdauer;80,0;Szenario 0: Baseline (IST);0,20000;langlebigkeit_wirtschaftlichkeit;50,0;100,0;0,6000000000000000;0,119999999999999996
-Kleine Arten;Acer campestre ‘Elsrijk’ (Feldahorn);lebensdauer;80,0;Szenario 1: Forschungsfokus;0,20000;langlebigkeit_wirtschaftlichkeit;50,0;100,0;0,6000000000000000;0,119999999999999996
-Kleine Arten;Acer campestre ‘Elsrijk’ (Feldahorn);lebensdauer;80,0;Szenario 2: Radikale Vermeidung;0,02500;langlebigkeit_wirtschaftlichkeit;50,0;100,0;0,6000000000000000;0,014999999999999999
-Kleine Arten;Acer campestre ‘Elsrijk’ (Feldahorn);lebensdauer;80,0;Szenario 3: Radikaler Lebenszyklus;0,40000;langlebigkeit_wirtschaftlichkeit;50,0;100,0;0,6000000000000000;0,239999999999999991
+Kleine Arten;Acer campestre ‘Elsrijk’ (Feldahorn);lebensdauer;80,0;Szenario 0: Baseline (IST);0,20000;langlebigkeit;50,0;100,0;0,6000000000000000;0,119999999999999996
+Kleine Arten;Acer campestre ‘Elsrijk’ (Feldahorn);lebensdauer;80,0;Szenario 1: Forschungsfokus;0,20000;langlebigkeit;50,0;100,0;0,6000000000000000;0,119999999999999996
+Kleine Arten;Acer campestre ‘Elsrijk’ (Feldahorn);lebensdauer;80,0;Szenario 2: Radikale Vermeidung;0,02500;langlebigkeit;50,0;100,0;0,6000000000000000;0,014999999999999999
+Kleine Arten;Acer campestre ‘Elsrijk’ (Feldahorn);lebensdauer;80,0;Szenario 3: Radikaler Lebenszyklus;0,70000;langlebigkeit;50,0;100,0;0,6000000000000000;0,419999999999999984
 Kleine Arten;Acer campestre ‘Elsrijk’ (Feldahorn);klimaangepasst;3,0;Szenario 0: Baseline (IST);0,10000;multifunktionale_nutzungsqualitaet;1,0;3,0;1,0000000000000000;0,100000000000000006
 Kleine Arten;Acer campestre ‘Elsrijk’ (Feldahorn);klimaangepasst;3,0;Szenario 1: Forschungsfokus;0,02500;multifunktionale_nutzungsqualitaet;1,0;3,0;1,0000000000000000;0,025000000000000001
 Kleine Arten;Acer campestre ‘Elsrijk’ (Feldahorn);klimaangepasst;3,0;Szenario 2: Radikale Vermeidung;0,01250;multifunktionale_nutzungsqualitaet;1,0;3,0;1,0000000000000000;0,012500000000000001
@@ -559,22 +559,22 @@ Kleine Arten;Acer campestre ‘Elsrijk’ (Feldahorn);regenwasser;115,0;Szenario
 Kleine Arten;Acer campestre ‘Elsrijk’ (Feldahorn);regenwasser;115,0;Szenario 1: Forschungsfokus;0,01250;multifunktionale_nutzungsqualitaet;115,0;325,0;0,0000000000000000;0,000000000000000000
 Kleine Arten;Acer campestre ‘Elsrijk’ (Feldahorn);regenwasser;115,0;Szenario 2: Radikale Vermeidung;0,00625;multifunktionale_nutzungsqualitaet;115,0;325,0;0,0000000000000000;0,000000000000000000
 Kleine Arten;Acer campestre ‘Elsrijk’ (Feldahorn);regenwasser;115,0;Szenario 3: Radikaler Lebenszyklus;0,01250;multifunktionale_nutzungsqualitaet;115,0;325,0;0,0000000000000000;0,000000000000000000
-Kleine Arten;Acer campestre ‘Elsrijk’ (Feldahorn);groesse_baumrigolen;13,0;Szenario 0: Baseline (IST);0,10000;langlebigkeit_wirtschaftlichkeit;6,0;38,0;0,7812500000000000;0,078125000000000000
-Kleine Arten;Acer campestre ‘Elsrijk’ (Feldahorn);groesse_baumrigolen;13,0;Szenario 1: Forschungsfokus;0,10000;langlebigkeit_wirtschaftlichkeit;6,0;38,0;0,7812500000000000;0,078125000000000000
-Kleine Arten;Acer campestre ‘Elsrijk’ (Feldahorn);groesse_baumrigolen;13,0;Szenario 2: Radikale Vermeidung;0,01250;langlebigkeit_wirtschaftlichkeit;6,0;38,0;0,7812500000000000;0,009765625000000000
-Kleine Arten;Acer campestre ‘Elsrijk’ (Feldahorn);groesse_baumrigolen;13,0;Szenario 3: Radikaler Lebenszyklus;0,20000;langlebigkeit_wirtschaftlichkeit;6,0;38,0;0,7812500000000000;0,156250000000000000
-Kleine Arten;Acer campestre ‘Elsrijk’ (Feldahorn);pflegeaufwand;3,0;Szenario 0: Baseline (IST);0,10000;langlebigkeit_wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
-Kleine Arten;Acer campestre ‘Elsrijk’ (Feldahorn);pflegeaufwand;3,0;Szenario 1: Forschungsfokus;0,10000;langlebigkeit_wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
-Kleine Arten;Acer campestre ‘Elsrijk’ (Feldahorn);pflegeaufwand;3,0;Szenario 2: Radikale Vermeidung;0,01250;langlebigkeit_wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
-Kleine Arten;Acer campestre ‘Elsrijk’ (Feldahorn);pflegeaufwand;3,0;Szenario 3: Radikaler Lebenszyklus;0,20000;langlebigkeit_wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
+Kleine Arten;Acer campestre ‘Elsrijk’ (Feldahorn);groesse_baumrigolen;13,0;Szenario 0: Baseline (IST);0,10000;wirtschaftlichkeit;6,0;38,0;0,7812500000000000;0,078125000000000000
+Kleine Arten;Acer campestre ‘Elsrijk’ (Feldahorn);groesse_baumrigolen;13,0;Szenario 1: Forschungsfokus;0,10000;wirtschaftlichkeit;6,0;38,0;0,7812500000000000;0,078125000000000000
+Kleine Arten;Acer campestre ‘Elsrijk’ (Feldahorn);groesse_baumrigolen;13,0;Szenario 2: Radikale Vermeidung;0,01250;wirtschaftlichkeit;6,0;38,0;0,7812500000000000;0,009765625000000000
+Kleine Arten;Acer campestre ‘Elsrijk’ (Feldahorn);groesse_baumrigolen;13,0;Szenario 3: Radikaler Lebenszyklus;0,05000;wirtschaftlichkeit;6,0;38,0;0,7812500000000000;0,039062500000000000
+Kleine Arten;Acer campestre ‘Elsrijk’ (Feldahorn);pflegeaufwand;3,0;Szenario 0: Baseline (IST);0,10000;wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
+Kleine Arten;Acer campestre ‘Elsrijk’ (Feldahorn);pflegeaufwand;3,0;Szenario 1: Forschungsfokus;0,10000;wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
+Kleine Arten;Acer campestre ‘Elsrijk’ (Feldahorn);pflegeaufwand;3,0;Szenario 2: Radikale Vermeidung;0,01250;wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
+Kleine Arten;Acer campestre ‘Elsrijk’ (Feldahorn);pflegeaufwand;3,0;Szenario 3: Radikaler Lebenszyklus;0,05000;wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
 Kleine Arten;Acer campestre ‘Elsrijk’ (Feldahorn);recyclingpotential;2,0;Szenario 0: Baseline (IST);0,10000;kreislauffaehigkeit;1,0;3,0;0,5000000000000000;0,050000000000000003
 Kleine Arten;Acer campestre ‘Elsrijk’ (Feldahorn);recyclingpotential;2,0;Szenario 1: Forschungsfokus;0,25000;kreislauffaehigkeit;1,0;3,0;0,5000000000000000;0,125000000000000000
 Kleine Arten;Acer campestre ‘Elsrijk’ (Feldahorn);recyclingpotential;2,0;Szenario 2: Radikale Vermeidung;0,45000;kreislauffaehigkeit;1,0;3,0;0,5000000000000000;0,225000000000000006
 Kleine Arten;Acer campestre ‘Elsrijk’ (Feldahorn);recyclingpotential;2,0;Szenario 3: Radikaler Lebenszyklus;0,05000;kreislauffaehigkeit;1,0;3,0;0,5000000000000000;0,025000000000000001
-Mittelgrosse Arten;Celtis australis (Südlicher Zürgelbaum);lebensdauer;85,0;Szenario 0: Baseline (IST);0,20000;langlebigkeit_wirtschaftlichkeit;50,0;100,0;0,7000000000000000;0,139999999999999986
-Mittelgrosse Arten;Celtis australis (Südlicher Zürgelbaum);lebensdauer;85,0;Szenario 1: Forschungsfokus;0,20000;langlebigkeit_wirtschaftlichkeit;50,0;100,0;0,7000000000000000;0,139999999999999986
-Mittelgrosse Arten;Celtis australis (Südlicher Zürgelbaum);lebensdauer;85,0;Szenario 2: Radikale Vermeidung;0,02500;langlebigkeit_wirtschaftlichkeit;50,0;100,0;0,7000000000000000;0,017499999999999998
-Mittelgrosse Arten;Celtis australis (Südlicher Zürgelbaum);lebensdauer;85,0;Szenario 3: Radikaler Lebenszyklus;0,40000;langlebigkeit_wirtschaftlichkeit;50,0;100,0;0,7000000000000000;0,279999999999999971
+Mittelgrosse Arten;Celtis australis (Südlicher Zürgelbaum);lebensdauer;85,0;Szenario 0: Baseline (IST);0,20000;langlebigkeit;50,0;100,0;0,7000000000000000;0,139999999999999986
+Mittelgrosse Arten;Celtis australis (Südlicher Zürgelbaum);lebensdauer;85,0;Szenario 1: Forschungsfokus;0,20000;langlebigkeit;50,0;100,0;0,7000000000000000;0,139999999999999986
+Mittelgrosse Arten;Celtis australis (Südlicher Zürgelbaum);lebensdauer;85,0;Szenario 2: Radikale Vermeidung;0,02500;langlebigkeit;50,0;100,0;0,7000000000000000;0,017499999999999998
+Mittelgrosse Arten;Celtis australis (Südlicher Zürgelbaum);lebensdauer;85,0;Szenario 3: Radikaler Lebenszyklus;0,70000;langlebigkeit;50,0;100,0;0,7000000000000000;0,489999999999999936
 Mittelgrosse Arten;Celtis australis (Südlicher Zürgelbaum);klimaangepasst;3,0;Szenario 0: Baseline (IST);0,10000;multifunktionale_nutzungsqualitaet;1,0;3,0;1,0000000000000000;0,100000000000000006
 Mittelgrosse Arten;Celtis australis (Südlicher Zürgelbaum);klimaangepasst;3,0;Szenario 1: Forschungsfokus;0,02500;multifunktionale_nutzungsqualitaet;1,0;3,0;1,0000000000000000;0,025000000000000001
 Mittelgrosse Arten;Celtis australis (Südlicher Zürgelbaum);klimaangepasst;3,0;Szenario 2: Radikale Vermeidung;0,01250;multifunktionale_nutzungsqualitaet;1,0;3,0;1,0000000000000000;0,012500000000000001
@@ -603,22 +603,22 @@ Mittelgrosse Arten;Celtis australis (Südlicher Zürgelbaum);regenwasser;200,0;S
 Mittelgrosse Arten;Celtis australis (Südlicher Zürgelbaum);regenwasser;200,0;Szenario 1: Forschungsfokus;0,01250;multifunktionale_nutzungsqualitaet;115,0;325,0;0,4047619047619048;0,005059523809523810
 Mittelgrosse Arten;Celtis australis (Südlicher Zürgelbaum);regenwasser;200,0;Szenario 2: Radikale Vermeidung;0,00625;multifunktionale_nutzungsqualitaet;115,0;325,0;0,4047619047619048;0,002529761904761905
 Mittelgrosse Arten;Celtis australis (Südlicher Zürgelbaum);regenwasser;200,0;Szenario 3: Radikaler Lebenszyklus;0,01250;multifunktionale_nutzungsqualitaet;115,0;325,0;0,4047619047619048;0,005059523809523810
-Mittelgrosse Arten;Celtis australis (Südlicher Zürgelbaum);groesse_baumrigolen;38,0;Szenario 0: Baseline (IST);0,10000;langlebigkeit_wirtschaftlichkeit;6,0;38,0;0,0000000000000000;0,000000000000000000
-Mittelgrosse Arten;Celtis australis (Südlicher Zürgelbaum);groesse_baumrigolen;38,0;Szenario 1: Forschungsfokus;0,10000;langlebigkeit_wirtschaftlichkeit;6,0;38,0;0,0000000000000000;0,000000000000000000
-Mittelgrosse Arten;Celtis australis (Südlicher Zürgelbaum);groesse_baumrigolen;38,0;Szenario 2: Radikale Vermeidung;0,01250;langlebigkeit_wirtschaftlichkeit;6,0;38,0;0,0000000000000000;0,000000000000000000
-Mittelgrosse Arten;Celtis australis (Südlicher Zürgelbaum);groesse_baumrigolen;38,0;Szenario 3: Radikaler Lebenszyklus;0,20000;langlebigkeit_wirtschaftlichkeit;6,0;38,0;0,0000000000000000;0,000000000000000000
-Mittelgrosse Arten;Celtis australis (Südlicher Zürgelbaum);pflegeaufwand;3,0;Szenario 0: Baseline (IST);0,10000;langlebigkeit_wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
-Mittelgrosse Arten;Celtis australis (Südlicher Zürgelbaum);pflegeaufwand;3,0;Szenario 1: Forschungsfokus;0,10000;langlebigkeit_wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
-Mittelgrosse Arten;Celtis australis (Südlicher Zürgelbaum);pflegeaufwand;3,0;Szenario 2: Radikale Vermeidung;0,01250;langlebigkeit_wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
-Mittelgrosse Arten;Celtis australis (Südlicher Zürgelbaum);pflegeaufwand;3,0;Szenario 3: Radikaler Lebenszyklus;0,20000;langlebigkeit_wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
+Mittelgrosse Arten;Celtis australis (Südlicher Zürgelbaum);groesse_baumrigolen;38,0;Szenario 0: Baseline (IST);0,10000;wirtschaftlichkeit;6,0;38,0;0,0000000000000000;0,000000000000000000
+Mittelgrosse Arten;Celtis australis (Südlicher Zürgelbaum);groesse_baumrigolen;38,0;Szenario 1: Forschungsfokus;0,10000;wirtschaftlichkeit;6,0;38,0;0,0000000000000000;0,000000000000000000
+Mittelgrosse Arten;Celtis australis (Südlicher Zürgelbaum);groesse_baumrigolen;38,0;Szenario 2: Radikale Vermeidung;0,01250;wirtschaftlichkeit;6,0;38,0;0,0000000000000000;0,000000000000000000
+Mittelgrosse Arten;Celtis australis (Südlicher Zürgelbaum);groesse_baumrigolen;38,0;Szenario 3: Radikaler Lebenszyklus;0,05000;wirtschaftlichkeit;6,0;38,0;0,0000000000000000;0,000000000000000000
+Mittelgrosse Arten;Celtis australis (Südlicher Zürgelbaum);pflegeaufwand;3,0;Szenario 0: Baseline (IST);0,10000;wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
+Mittelgrosse Arten;Celtis australis (Südlicher Zürgelbaum);pflegeaufwand;3,0;Szenario 1: Forschungsfokus;0,10000;wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
+Mittelgrosse Arten;Celtis australis (Südlicher Zürgelbaum);pflegeaufwand;3,0;Szenario 2: Radikale Vermeidung;0,01250;wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
+Mittelgrosse Arten;Celtis australis (Südlicher Zürgelbaum);pflegeaufwand;3,0;Szenario 3: Radikaler Lebenszyklus;0,05000;wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
 Mittelgrosse Arten;Celtis australis (Südlicher Zürgelbaum);recyclingpotential;2,0;Szenario 0: Baseline (IST);0,10000;kreislauffaehigkeit;1,0;3,0;0,5000000000000000;0,050000000000000003
 Mittelgrosse Arten;Celtis australis (Südlicher Zürgelbaum);recyclingpotential;2,0;Szenario 1: Forschungsfokus;0,25000;kreislauffaehigkeit;1,0;3,0;0,5000000000000000;0,125000000000000000
 Mittelgrosse Arten;Celtis australis (Südlicher Zürgelbaum);recyclingpotential;2,0;Szenario 2: Radikale Vermeidung;0,45000;kreislauffaehigkeit;1,0;3,0;0,5000000000000000;0,225000000000000006
 Mittelgrosse Arten;Celtis australis (Südlicher Zürgelbaum);recyclingpotential;2,0;Szenario 3: Radikaler Lebenszyklus;0,05000;kreislauffaehigkeit;1,0;3,0;0,5000000000000000;0,025000000000000001
-Mittelgrosse Arten;Ostrya carpinifolia (Hopfenbuche);lebensdauer;80,0;Szenario 0: Baseline (IST);0,20000;langlebigkeit_wirtschaftlichkeit;50,0;100,0;0,6000000000000000;0,119999999999999996
-Mittelgrosse Arten;Ostrya carpinifolia (Hopfenbuche);lebensdauer;80,0;Szenario 1: Forschungsfokus;0,20000;langlebigkeit_wirtschaftlichkeit;50,0;100,0;0,6000000000000000;0,119999999999999996
-Mittelgrosse Arten;Ostrya carpinifolia (Hopfenbuche);lebensdauer;80,0;Szenario 2: Radikale Vermeidung;0,02500;langlebigkeit_wirtschaftlichkeit;50,0;100,0;0,6000000000000000;0,014999999999999999
-Mittelgrosse Arten;Ostrya carpinifolia (Hopfenbuche);lebensdauer;80,0;Szenario 3: Radikaler Lebenszyklus;0,40000;langlebigkeit_wirtschaftlichkeit;50,0;100,0;0,6000000000000000;0,239999999999999991
+Mittelgrosse Arten;Ostrya carpinifolia (Hopfenbuche);lebensdauer;80,0;Szenario 0: Baseline (IST);0,20000;langlebigkeit;50,0;100,0;0,6000000000000000;0,119999999999999996
+Mittelgrosse Arten;Ostrya carpinifolia (Hopfenbuche);lebensdauer;80,0;Szenario 1: Forschungsfokus;0,20000;langlebigkeit;50,0;100,0;0,6000000000000000;0,119999999999999996
+Mittelgrosse Arten;Ostrya carpinifolia (Hopfenbuche);lebensdauer;80,0;Szenario 2: Radikale Vermeidung;0,02500;langlebigkeit;50,0;100,0;0,6000000000000000;0,014999999999999999
+Mittelgrosse Arten;Ostrya carpinifolia (Hopfenbuche);lebensdauer;80,0;Szenario 3: Radikaler Lebenszyklus;0,70000;langlebigkeit;50,0;100,0;0,6000000000000000;0,419999999999999984
 Mittelgrosse Arten;Ostrya carpinifolia (Hopfenbuche);klimaangepasst;3,0;Szenario 0: Baseline (IST);0,10000;multifunktionale_nutzungsqualitaet;1,0;3,0;1,0000000000000000;0,100000000000000006
 Mittelgrosse Arten;Ostrya carpinifolia (Hopfenbuche);klimaangepasst;3,0;Szenario 1: Forschungsfokus;0,02500;multifunktionale_nutzungsqualitaet;1,0;3,0;1,0000000000000000;0,025000000000000001
 Mittelgrosse Arten;Ostrya carpinifolia (Hopfenbuche);klimaangepasst;3,0;Szenario 2: Radikale Vermeidung;0,01250;multifunktionale_nutzungsqualitaet;1,0;3,0;1,0000000000000000;0,012500000000000001
@@ -647,22 +647,22 @@ Mittelgrosse Arten;Ostrya carpinifolia (Hopfenbuche);regenwasser;200,0;Szenario 
 Mittelgrosse Arten;Ostrya carpinifolia (Hopfenbuche);regenwasser;200,0;Szenario 1: Forschungsfokus;0,01250;multifunktionale_nutzungsqualitaet;115,0;325,0;0,4047619047619048;0,005059523809523810
 Mittelgrosse Arten;Ostrya carpinifolia (Hopfenbuche);regenwasser;200,0;Szenario 2: Radikale Vermeidung;0,00625;multifunktionale_nutzungsqualitaet;115,0;325,0;0,4047619047619048;0,002529761904761905
 Mittelgrosse Arten;Ostrya carpinifolia (Hopfenbuche);regenwasser;200,0;Szenario 3: Radikaler Lebenszyklus;0,01250;multifunktionale_nutzungsqualitaet;115,0;325,0;0,4047619047619048;0,005059523809523810
-Mittelgrosse Arten;Ostrya carpinifolia (Hopfenbuche);groesse_baumrigolen;24,0;Szenario 0: Baseline (IST);0,10000;langlebigkeit_wirtschaftlichkeit;6,0;38,0;0,4375000000000000;0,043750000000000004
-Mittelgrosse Arten;Ostrya carpinifolia (Hopfenbuche);groesse_baumrigolen;24,0;Szenario 1: Forschungsfokus;0,10000;langlebigkeit_wirtschaftlichkeit;6,0;38,0;0,4375000000000000;0,043750000000000004
-Mittelgrosse Arten;Ostrya carpinifolia (Hopfenbuche);groesse_baumrigolen;24,0;Szenario 2: Radikale Vermeidung;0,01250;langlebigkeit_wirtschaftlichkeit;6,0;38,0;0,4375000000000000;0,005468750000000001
-Mittelgrosse Arten;Ostrya carpinifolia (Hopfenbuche);groesse_baumrigolen;24,0;Szenario 3: Radikaler Lebenszyklus;0,20000;langlebigkeit_wirtschaftlichkeit;6,0;38,0;0,4375000000000000;0,087500000000000008
-Mittelgrosse Arten;Ostrya carpinifolia (Hopfenbuche);pflegeaufwand;3,0;Szenario 0: Baseline (IST);0,10000;langlebigkeit_wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
-Mittelgrosse Arten;Ostrya carpinifolia (Hopfenbuche);pflegeaufwand;3,0;Szenario 1: Forschungsfokus;0,10000;langlebigkeit_wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
-Mittelgrosse Arten;Ostrya carpinifolia (Hopfenbuche);pflegeaufwand;3,0;Szenario 2: Radikale Vermeidung;0,01250;langlebigkeit_wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
-Mittelgrosse Arten;Ostrya carpinifolia (Hopfenbuche);pflegeaufwand;3,0;Szenario 3: Radikaler Lebenszyklus;0,20000;langlebigkeit_wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
+Mittelgrosse Arten;Ostrya carpinifolia (Hopfenbuche);groesse_baumrigolen;24,0;Szenario 0: Baseline (IST);0,10000;wirtschaftlichkeit;6,0;38,0;0,4375000000000000;0,043750000000000004
+Mittelgrosse Arten;Ostrya carpinifolia (Hopfenbuche);groesse_baumrigolen;24,0;Szenario 1: Forschungsfokus;0,10000;wirtschaftlichkeit;6,0;38,0;0,4375000000000000;0,043750000000000004
+Mittelgrosse Arten;Ostrya carpinifolia (Hopfenbuche);groesse_baumrigolen;24,0;Szenario 2: Radikale Vermeidung;0,01250;wirtschaftlichkeit;6,0;38,0;0,4375000000000000;0,005468750000000001
+Mittelgrosse Arten;Ostrya carpinifolia (Hopfenbuche);groesse_baumrigolen;24,0;Szenario 3: Radikaler Lebenszyklus;0,05000;wirtschaftlichkeit;6,0;38,0;0,4375000000000000;0,021875000000000002
+Mittelgrosse Arten;Ostrya carpinifolia (Hopfenbuche);pflegeaufwand;3,0;Szenario 0: Baseline (IST);0,10000;wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
+Mittelgrosse Arten;Ostrya carpinifolia (Hopfenbuche);pflegeaufwand;3,0;Szenario 1: Forschungsfokus;0,10000;wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
+Mittelgrosse Arten;Ostrya carpinifolia (Hopfenbuche);pflegeaufwand;3,0;Szenario 2: Radikale Vermeidung;0,01250;wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
+Mittelgrosse Arten;Ostrya carpinifolia (Hopfenbuche);pflegeaufwand;3,0;Szenario 3: Radikaler Lebenszyklus;0,05000;wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
 Mittelgrosse Arten;Ostrya carpinifolia (Hopfenbuche);recyclingpotential;3,0;Szenario 0: Baseline (IST);0,10000;kreislauffaehigkeit;1,0;3,0;1,0000000000000000;0,100000000000000006
 Mittelgrosse Arten;Ostrya carpinifolia (Hopfenbuche);recyclingpotential;3,0;Szenario 1: Forschungsfokus;0,25000;kreislauffaehigkeit;1,0;3,0;1,0000000000000000;0,250000000000000000
 Mittelgrosse Arten;Ostrya carpinifolia (Hopfenbuche);recyclingpotential;3,0;Szenario 2: Radikale Vermeidung;0,45000;kreislauffaehigkeit;1,0;3,0;1,0000000000000000;0,450000000000000011
 Mittelgrosse Arten;Ostrya carpinifolia (Hopfenbuche);recyclingpotential;3,0;Szenario 3: Radikaler Lebenszyklus;0,05000;kreislauffaehigkeit;1,0;3,0;1,0000000000000000;0,050000000000000003
-Kleine Arten;Sorbus aria ‘Magnifica’ (Mehlbeere);lebensdauer;75,0;Szenario 0: Baseline (IST);0,20000;langlebigkeit_wirtschaftlichkeit;50,0;100,0;0,5000000000000000;0,100000000000000006
-Kleine Arten;Sorbus aria ‘Magnifica’ (Mehlbeere);lebensdauer;75,0;Szenario 1: Forschungsfokus;0,20000;langlebigkeit_wirtschaftlichkeit;50,0;100,0;0,5000000000000000;0,100000000000000006
-Kleine Arten;Sorbus aria ‘Magnifica’ (Mehlbeere);lebensdauer;75,0;Szenario 2: Radikale Vermeidung;0,02500;langlebigkeit_wirtschaftlichkeit;50,0;100,0;0,5000000000000000;0,012500000000000001
-Kleine Arten;Sorbus aria ‘Magnifica’ (Mehlbeere);lebensdauer;75,0;Szenario 3: Radikaler Lebenszyklus;0,40000;langlebigkeit_wirtschaftlichkeit;50,0;100,0;0,5000000000000000;0,200000000000000011
+Kleine Arten;Sorbus aria ‘Magnifica’ (Mehlbeere);lebensdauer;75,0;Szenario 0: Baseline (IST);0,20000;langlebigkeit;50,0;100,0;0,5000000000000000;0,100000000000000006
+Kleine Arten;Sorbus aria ‘Magnifica’ (Mehlbeere);lebensdauer;75,0;Szenario 1: Forschungsfokus;0,20000;langlebigkeit;50,0;100,0;0,5000000000000000;0,100000000000000006
+Kleine Arten;Sorbus aria ‘Magnifica’ (Mehlbeere);lebensdauer;75,0;Szenario 2: Radikale Vermeidung;0,02500;langlebigkeit;50,0;100,0;0,5000000000000000;0,012500000000000001
+Kleine Arten;Sorbus aria ‘Magnifica’ (Mehlbeere);lebensdauer;75,0;Szenario 3: Radikaler Lebenszyklus;0,70000;langlebigkeit;50,0;100,0;0,5000000000000000;0,349999999999999978
 Kleine Arten;Sorbus aria ‘Magnifica’ (Mehlbeere);klimaangepasst;2,0;Szenario 0: Baseline (IST);0,10000;multifunktionale_nutzungsqualitaet;1,0;3,0;0,5000000000000000;0,050000000000000003
 Kleine Arten;Sorbus aria ‘Magnifica’ (Mehlbeere);klimaangepasst;2,0;Szenario 1: Forschungsfokus;0,02500;multifunktionale_nutzungsqualitaet;1,0;3,0;0,5000000000000000;0,012500000000000001
 Kleine Arten;Sorbus aria ‘Magnifica’ (Mehlbeere);klimaangepasst;2,0;Szenario 2: Radikale Vermeidung;0,01250;multifunktionale_nutzungsqualitaet;1,0;3,0;0,5000000000000000;0,006250000000000000
@@ -691,22 +691,22 @@ Kleine Arten;Sorbus aria ‘Magnifica’ (Mehlbeere);regenwasser;115,0;Szenario 
 Kleine Arten;Sorbus aria ‘Magnifica’ (Mehlbeere);regenwasser;115,0;Szenario 1: Forschungsfokus;0,01250;multifunktionale_nutzungsqualitaet;115,0;325,0;0,0000000000000000;0,000000000000000000
 Kleine Arten;Sorbus aria ‘Magnifica’ (Mehlbeere);regenwasser;115,0;Szenario 2: Radikale Vermeidung;0,00625;multifunktionale_nutzungsqualitaet;115,0;325,0;0,0000000000000000;0,000000000000000000
 Kleine Arten;Sorbus aria ‘Magnifica’ (Mehlbeere);regenwasser;115,0;Szenario 3: Radikaler Lebenszyklus;0,01250;multifunktionale_nutzungsqualitaet;115,0;325,0;0,0000000000000000;0,000000000000000000
-Kleine Arten;Sorbus aria ‘Magnifica’ (Mehlbeere);groesse_baumrigolen;13,0;Szenario 0: Baseline (IST);0,10000;langlebigkeit_wirtschaftlichkeit;6,0;38,0;0,7812500000000000;0,078125000000000000
-Kleine Arten;Sorbus aria ‘Magnifica’ (Mehlbeere);groesse_baumrigolen;13,0;Szenario 1: Forschungsfokus;0,10000;langlebigkeit_wirtschaftlichkeit;6,0;38,0;0,7812500000000000;0,078125000000000000
-Kleine Arten;Sorbus aria ‘Magnifica’ (Mehlbeere);groesse_baumrigolen;13,0;Szenario 2: Radikale Vermeidung;0,01250;langlebigkeit_wirtschaftlichkeit;6,0;38,0;0,7812500000000000;0,009765625000000000
-Kleine Arten;Sorbus aria ‘Magnifica’ (Mehlbeere);groesse_baumrigolen;13,0;Szenario 3: Radikaler Lebenszyklus;0,20000;langlebigkeit_wirtschaftlichkeit;6,0;38,0;0,7812500000000000;0,156250000000000000
-Kleine Arten;Sorbus aria ‘Magnifica’ (Mehlbeere);pflegeaufwand;3,0;Szenario 0: Baseline (IST);0,10000;langlebigkeit_wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
-Kleine Arten;Sorbus aria ‘Magnifica’ (Mehlbeere);pflegeaufwand;3,0;Szenario 1: Forschungsfokus;0,10000;langlebigkeit_wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
-Kleine Arten;Sorbus aria ‘Magnifica’ (Mehlbeere);pflegeaufwand;3,0;Szenario 2: Radikale Vermeidung;0,01250;langlebigkeit_wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
-Kleine Arten;Sorbus aria ‘Magnifica’ (Mehlbeere);pflegeaufwand;3,0;Szenario 3: Radikaler Lebenszyklus;0,20000;langlebigkeit_wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
+Kleine Arten;Sorbus aria ‘Magnifica’ (Mehlbeere);groesse_baumrigolen;13,0;Szenario 0: Baseline (IST);0,10000;wirtschaftlichkeit;6,0;38,0;0,7812500000000000;0,078125000000000000
+Kleine Arten;Sorbus aria ‘Magnifica’ (Mehlbeere);groesse_baumrigolen;13,0;Szenario 1: Forschungsfokus;0,10000;wirtschaftlichkeit;6,0;38,0;0,7812500000000000;0,078125000000000000
+Kleine Arten;Sorbus aria ‘Magnifica’ (Mehlbeere);groesse_baumrigolen;13,0;Szenario 2: Radikale Vermeidung;0,01250;wirtschaftlichkeit;6,0;38,0;0,7812500000000000;0,009765625000000000
+Kleine Arten;Sorbus aria ‘Magnifica’ (Mehlbeere);groesse_baumrigolen;13,0;Szenario 3: Radikaler Lebenszyklus;0,05000;wirtschaftlichkeit;6,0;38,0;0,7812500000000000;0,039062500000000000
+Kleine Arten;Sorbus aria ‘Magnifica’ (Mehlbeere);pflegeaufwand;3,0;Szenario 0: Baseline (IST);0,10000;wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
+Kleine Arten;Sorbus aria ‘Magnifica’ (Mehlbeere);pflegeaufwand;3,0;Szenario 1: Forschungsfokus;0,10000;wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
+Kleine Arten;Sorbus aria ‘Magnifica’ (Mehlbeere);pflegeaufwand;3,0;Szenario 2: Radikale Vermeidung;0,01250;wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
+Kleine Arten;Sorbus aria ‘Magnifica’ (Mehlbeere);pflegeaufwand;3,0;Szenario 3: Radikaler Lebenszyklus;0,05000;wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
 Kleine Arten;Sorbus aria ‘Magnifica’ (Mehlbeere);recyclingpotential;2,0;Szenario 0: Baseline (IST);0,10000;kreislauffaehigkeit;1,0;3,0;0,5000000000000000;0,050000000000000003
 Kleine Arten;Sorbus aria ‘Magnifica’ (Mehlbeere);recyclingpotential;2,0;Szenario 1: Forschungsfokus;0,25000;kreislauffaehigkeit;1,0;3,0;0,5000000000000000;0,125000000000000000
 Kleine Arten;Sorbus aria ‘Magnifica’ (Mehlbeere);recyclingpotential;2,0;Szenario 2: Radikale Vermeidung;0,45000;kreislauffaehigkeit;1,0;3,0;0,5000000000000000;0,225000000000000006
 Kleine Arten;Sorbus aria ‘Magnifica’ (Mehlbeere);recyclingpotential;2,0;Szenario 3: Radikaler Lebenszyklus;0,05000;kreislauffaehigkeit;1,0;3,0;0,5000000000000000;0,025000000000000001
-Kleine Arten;Sorbus latifolia ‘Henk Vink’ (Breitblättrige Mehlbeere);lebensdauer;85,0;Szenario 0: Baseline (IST);0,20000;langlebigkeit_wirtschaftlichkeit;50,0;100,0;0,7000000000000000;0,139999999999999986
-Kleine Arten;Sorbus latifolia ‘Henk Vink’ (Breitblättrige Mehlbeere);lebensdauer;85,0;Szenario 1: Forschungsfokus;0,20000;langlebigkeit_wirtschaftlichkeit;50,0;100,0;0,7000000000000000;0,139999999999999986
-Kleine Arten;Sorbus latifolia ‘Henk Vink’ (Breitblättrige Mehlbeere);lebensdauer;85,0;Szenario 2: Radikale Vermeidung;0,02500;langlebigkeit_wirtschaftlichkeit;50,0;100,0;0,7000000000000000;0,017499999999999998
-Kleine Arten;Sorbus latifolia ‘Henk Vink’ (Breitblättrige Mehlbeere);lebensdauer;85,0;Szenario 3: Radikaler Lebenszyklus;0,40000;langlebigkeit_wirtschaftlichkeit;50,0;100,0;0,7000000000000000;0,279999999999999971
+Kleine Arten;Sorbus latifolia ‘Henk Vink’ (Breitblättrige Mehlbeere);lebensdauer;85,0;Szenario 0: Baseline (IST);0,20000;langlebigkeit;50,0;100,0;0,7000000000000000;0,139999999999999986
+Kleine Arten;Sorbus latifolia ‘Henk Vink’ (Breitblättrige Mehlbeere);lebensdauer;85,0;Szenario 1: Forschungsfokus;0,20000;langlebigkeit;50,0;100,0;0,7000000000000000;0,139999999999999986
+Kleine Arten;Sorbus latifolia ‘Henk Vink’ (Breitblättrige Mehlbeere);lebensdauer;85,0;Szenario 2: Radikale Vermeidung;0,02500;langlebigkeit;50,0;100,0;0,7000000000000000;0,017499999999999998
+Kleine Arten;Sorbus latifolia ‘Henk Vink’ (Breitblättrige Mehlbeere);lebensdauer;85,0;Szenario 3: Radikaler Lebenszyklus;0,70000;langlebigkeit;50,0;100,0;0,7000000000000000;0,489999999999999936
 Kleine Arten;Sorbus latifolia ‘Henk Vink’ (Breitblättrige Mehlbeere);klimaangepasst;2,0;Szenario 0: Baseline (IST);0,10000;multifunktionale_nutzungsqualitaet;1,0;3,0;0,5000000000000000;0,050000000000000003
 Kleine Arten;Sorbus latifolia ‘Henk Vink’ (Breitblättrige Mehlbeere);klimaangepasst;2,0;Szenario 1: Forschungsfokus;0,02500;multifunktionale_nutzungsqualitaet;1,0;3,0;0,5000000000000000;0,012500000000000001
 Kleine Arten;Sorbus latifolia ‘Henk Vink’ (Breitblättrige Mehlbeere);klimaangepasst;2,0;Szenario 2: Radikale Vermeidung;0,01250;multifunktionale_nutzungsqualitaet;1,0;3,0;0,5000000000000000;0,006250000000000000
@@ -735,22 +735,22 @@ Kleine Arten;Sorbus latifolia ‘Henk Vink’ (Breitblättrige Mehlbeere);regenw
 Kleine Arten;Sorbus latifolia ‘Henk Vink’ (Breitblättrige Mehlbeere);regenwasser;115,0;Szenario 1: Forschungsfokus;0,01250;multifunktionale_nutzungsqualitaet;115,0;325,0;0,0000000000000000;0,000000000000000000
 Kleine Arten;Sorbus latifolia ‘Henk Vink’ (Breitblättrige Mehlbeere);regenwasser;115,0;Szenario 2: Radikale Vermeidung;0,00625;multifunktionale_nutzungsqualitaet;115,0;325,0;0,0000000000000000;0,000000000000000000
 Kleine Arten;Sorbus latifolia ‘Henk Vink’ (Breitblättrige Mehlbeere);regenwasser;115,0;Szenario 3: Radikaler Lebenszyklus;0,01250;multifunktionale_nutzungsqualitaet;115,0;325,0;0,0000000000000000;0,000000000000000000
-Kleine Arten;Sorbus latifolia ‘Henk Vink’ (Breitblättrige Mehlbeere);groesse_baumrigolen;13,0;Szenario 0: Baseline (IST);0,10000;langlebigkeit_wirtschaftlichkeit;6,0;38,0;0,7812500000000000;0,078125000000000000
-Kleine Arten;Sorbus latifolia ‘Henk Vink’ (Breitblättrige Mehlbeere);groesse_baumrigolen;13,0;Szenario 1: Forschungsfokus;0,10000;langlebigkeit_wirtschaftlichkeit;6,0;38,0;0,7812500000000000;0,078125000000000000
-Kleine Arten;Sorbus latifolia ‘Henk Vink’ (Breitblättrige Mehlbeere);groesse_baumrigolen;13,0;Szenario 2: Radikale Vermeidung;0,01250;langlebigkeit_wirtschaftlichkeit;6,0;38,0;0,7812500000000000;0,009765625000000000
-Kleine Arten;Sorbus latifolia ‘Henk Vink’ (Breitblättrige Mehlbeere);groesse_baumrigolen;13,0;Szenario 3: Radikaler Lebenszyklus;0,20000;langlebigkeit_wirtschaftlichkeit;6,0;38,0;0,7812500000000000;0,156250000000000000
-Kleine Arten;Sorbus latifolia ‘Henk Vink’ (Breitblättrige Mehlbeere);pflegeaufwand;3,0;Szenario 0: Baseline (IST);0,10000;langlebigkeit_wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
-Kleine Arten;Sorbus latifolia ‘Henk Vink’ (Breitblättrige Mehlbeere);pflegeaufwand;3,0;Szenario 1: Forschungsfokus;0,10000;langlebigkeit_wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
-Kleine Arten;Sorbus latifolia ‘Henk Vink’ (Breitblättrige Mehlbeere);pflegeaufwand;3,0;Szenario 2: Radikale Vermeidung;0,01250;langlebigkeit_wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
-Kleine Arten;Sorbus latifolia ‘Henk Vink’ (Breitblättrige Mehlbeere);pflegeaufwand;3,0;Szenario 3: Radikaler Lebenszyklus;0,20000;langlebigkeit_wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
+Kleine Arten;Sorbus latifolia ‘Henk Vink’ (Breitblättrige Mehlbeere);groesse_baumrigolen;13,0;Szenario 0: Baseline (IST);0,10000;wirtschaftlichkeit;6,0;38,0;0,7812500000000000;0,078125000000000000
+Kleine Arten;Sorbus latifolia ‘Henk Vink’ (Breitblättrige Mehlbeere);groesse_baumrigolen;13,0;Szenario 1: Forschungsfokus;0,10000;wirtschaftlichkeit;6,0;38,0;0,7812500000000000;0,078125000000000000
+Kleine Arten;Sorbus latifolia ‘Henk Vink’ (Breitblättrige Mehlbeere);groesse_baumrigolen;13,0;Szenario 2: Radikale Vermeidung;0,01250;wirtschaftlichkeit;6,0;38,0;0,7812500000000000;0,009765625000000000
+Kleine Arten;Sorbus latifolia ‘Henk Vink’ (Breitblättrige Mehlbeere);groesse_baumrigolen;13,0;Szenario 3: Radikaler Lebenszyklus;0,05000;wirtschaftlichkeit;6,0;38,0;0,7812500000000000;0,039062500000000000
+Kleine Arten;Sorbus latifolia ‘Henk Vink’ (Breitblättrige Mehlbeere);pflegeaufwand;3,0;Szenario 0: Baseline (IST);0,10000;wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
+Kleine Arten;Sorbus latifolia ‘Henk Vink’ (Breitblättrige Mehlbeere);pflegeaufwand;3,0;Szenario 1: Forschungsfokus;0,10000;wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
+Kleine Arten;Sorbus latifolia ‘Henk Vink’ (Breitblättrige Mehlbeere);pflegeaufwand;3,0;Szenario 2: Radikale Vermeidung;0,01250;wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
+Kleine Arten;Sorbus latifolia ‘Henk Vink’ (Breitblättrige Mehlbeere);pflegeaufwand;3,0;Szenario 3: Radikaler Lebenszyklus;0,05000;wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
 Kleine Arten;Sorbus latifolia ‘Henk Vink’ (Breitblättrige Mehlbeere);recyclingpotential;2,0;Szenario 0: Baseline (IST);0,10000;kreislauffaehigkeit;1,0;3,0;0,5000000000000000;0,050000000000000003
 Kleine Arten;Sorbus latifolia ‘Henk Vink’ (Breitblättrige Mehlbeere);recyclingpotential;2,0;Szenario 1: Forschungsfokus;0,25000;kreislauffaehigkeit;1,0;3,0;0,5000000000000000;0,125000000000000000
 Kleine Arten;Sorbus latifolia ‘Henk Vink’ (Breitblättrige Mehlbeere);recyclingpotential;2,0;Szenario 2: Radikale Vermeidung;0,45000;kreislauffaehigkeit;1,0;3,0;0,5000000000000000;0,225000000000000006
 Kleine Arten;Sorbus latifolia ‘Henk Vink’ (Breitblättrige Mehlbeere);recyclingpotential;2,0;Szenario 3: Radikaler Lebenszyklus;0,05000;kreislauffaehigkeit;1,0;3,0;0,5000000000000000;0,025000000000000001
-Mittelgrosse Arten;Gleditsia triacanthos ‘Skyline’ (dornenlos);lebensdauer;80,0;Szenario 0: Baseline (IST);0,20000;langlebigkeit_wirtschaftlichkeit;50,0;100,0;0,6000000000000000;0,119999999999999996
-Mittelgrosse Arten;Gleditsia triacanthos ‘Skyline’ (dornenlos);lebensdauer;80,0;Szenario 1: Forschungsfokus;0,20000;langlebigkeit_wirtschaftlichkeit;50,0;100,0;0,6000000000000000;0,119999999999999996
-Mittelgrosse Arten;Gleditsia triacanthos ‘Skyline’ (dornenlos);lebensdauer;80,0;Szenario 2: Radikale Vermeidung;0,02500;langlebigkeit_wirtschaftlichkeit;50,0;100,0;0,6000000000000000;0,014999999999999999
-Mittelgrosse Arten;Gleditsia triacanthos ‘Skyline’ (dornenlos);lebensdauer;80,0;Szenario 3: Radikaler Lebenszyklus;0,40000;langlebigkeit_wirtschaftlichkeit;50,0;100,0;0,6000000000000000;0,239999999999999991
+Mittelgrosse Arten;Gleditsia triacanthos ‘Skyline’ (dornenlos);lebensdauer;80,0;Szenario 0: Baseline (IST);0,20000;langlebigkeit;50,0;100,0;0,6000000000000000;0,119999999999999996
+Mittelgrosse Arten;Gleditsia triacanthos ‘Skyline’ (dornenlos);lebensdauer;80,0;Szenario 1: Forschungsfokus;0,20000;langlebigkeit;50,0;100,0;0,6000000000000000;0,119999999999999996
+Mittelgrosse Arten;Gleditsia triacanthos ‘Skyline’ (dornenlos);lebensdauer;80,0;Szenario 2: Radikale Vermeidung;0,02500;langlebigkeit;50,0;100,0;0,6000000000000000;0,014999999999999999
+Mittelgrosse Arten;Gleditsia triacanthos ‘Skyline’ (dornenlos);lebensdauer;80,0;Szenario 3: Radikaler Lebenszyklus;0,70000;langlebigkeit;50,0;100,0;0,6000000000000000;0,419999999999999984
 Mittelgrosse Arten;Gleditsia triacanthos ‘Skyline’ (dornenlos);klimaangepasst;3,0;Szenario 0: Baseline (IST);0,10000;multifunktionale_nutzungsqualitaet;1,0;3,0;1,0000000000000000;0,100000000000000006
 Mittelgrosse Arten;Gleditsia triacanthos ‘Skyline’ (dornenlos);klimaangepasst;3,0;Szenario 1: Forschungsfokus;0,02500;multifunktionale_nutzungsqualitaet;1,0;3,0;1,0000000000000000;0,025000000000000001
 Mittelgrosse Arten;Gleditsia triacanthos ‘Skyline’ (dornenlos);klimaangepasst;3,0;Szenario 2: Radikale Vermeidung;0,01250;multifunktionale_nutzungsqualitaet;1,0;3,0;1,0000000000000000;0,012500000000000001
@@ -779,22 +779,22 @@ Mittelgrosse Arten;Gleditsia triacanthos ‘Skyline’ (dornenlos);regenwasser;2
 Mittelgrosse Arten;Gleditsia triacanthos ‘Skyline’ (dornenlos);regenwasser;200,0;Szenario 1: Forschungsfokus;0,01250;multifunktionale_nutzungsqualitaet;115,0;325,0;0,4047619047619048;0,005059523809523810
 Mittelgrosse Arten;Gleditsia triacanthos ‘Skyline’ (dornenlos);regenwasser;200,0;Szenario 2: Radikale Vermeidung;0,00625;multifunktionale_nutzungsqualitaet;115,0;325,0;0,4047619047619048;0,002529761904761905
 Mittelgrosse Arten;Gleditsia triacanthos ‘Skyline’ (dornenlos);regenwasser;200,0;Szenario 3: Radikaler Lebenszyklus;0,01250;multifunktionale_nutzungsqualitaet;115,0;325,0;0,4047619047619048;0,005059523809523810
-Mittelgrosse Arten;Gleditsia triacanthos ‘Skyline’ (dornenlos);groesse_baumrigolen;38,0;Szenario 0: Baseline (IST);0,10000;langlebigkeit_wirtschaftlichkeit;6,0;38,0;0,0000000000000000;0,000000000000000000
-Mittelgrosse Arten;Gleditsia triacanthos ‘Skyline’ (dornenlos);groesse_baumrigolen;38,0;Szenario 1: Forschungsfokus;0,10000;langlebigkeit_wirtschaftlichkeit;6,0;38,0;0,0000000000000000;0,000000000000000000
-Mittelgrosse Arten;Gleditsia triacanthos ‘Skyline’ (dornenlos);groesse_baumrigolen;38,0;Szenario 2: Radikale Vermeidung;0,01250;langlebigkeit_wirtschaftlichkeit;6,0;38,0;0,0000000000000000;0,000000000000000000
-Mittelgrosse Arten;Gleditsia triacanthos ‘Skyline’ (dornenlos);groesse_baumrigolen;38,0;Szenario 3: Radikaler Lebenszyklus;0,20000;langlebigkeit_wirtschaftlichkeit;6,0;38,0;0,0000000000000000;0,000000000000000000
-Mittelgrosse Arten;Gleditsia triacanthos ‘Skyline’ (dornenlos);pflegeaufwand;3,0;Szenario 0: Baseline (IST);0,10000;langlebigkeit_wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
-Mittelgrosse Arten;Gleditsia triacanthos ‘Skyline’ (dornenlos);pflegeaufwand;3,0;Szenario 1: Forschungsfokus;0,10000;langlebigkeit_wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
-Mittelgrosse Arten;Gleditsia triacanthos ‘Skyline’ (dornenlos);pflegeaufwand;3,0;Szenario 2: Radikale Vermeidung;0,01250;langlebigkeit_wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
-Mittelgrosse Arten;Gleditsia triacanthos ‘Skyline’ (dornenlos);pflegeaufwand;3,0;Szenario 3: Radikaler Lebenszyklus;0,20000;langlebigkeit_wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
+Mittelgrosse Arten;Gleditsia triacanthos ‘Skyline’ (dornenlos);groesse_baumrigolen;38,0;Szenario 0: Baseline (IST);0,10000;wirtschaftlichkeit;6,0;38,0;0,0000000000000000;0,000000000000000000
+Mittelgrosse Arten;Gleditsia triacanthos ‘Skyline’ (dornenlos);groesse_baumrigolen;38,0;Szenario 1: Forschungsfokus;0,10000;wirtschaftlichkeit;6,0;38,0;0,0000000000000000;0,000000000000000000
+Mittelgrosse Arten;Gleditsia triacanthos ‘Skyline’ (dornenlos);groesse_baumrigolen;38,0;Szenario 2: Radikale Vermeidung;0,01250;wirtschaftlichkeit;6,0;38,0;0,0000000000000000;0,000000000000000000
+Mittelgrosse Arten;Gleditsia triacanthos ‘Skyline’ (dornenlos);groesse_baumrigolen;38,0;Szenario 3: Radikaler Lebenszyklus;0,05000;wirtschaftlichkeit;6,0;38,0;0,0000000000000000;0,000000000000000000
+Mittelgrosse Arten;Gleditsia triacanthos ‘Skyline’ (dornenlos);pflegeaufwand;3,0;Szenario 0: Baseline (IST);0,10000;wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
+Mittelgrosse Arten;Gleditsia triacanthos ‘Skyline’ (dornenlos);pflegeaufwand;3,0;Szenario 1: Forschungsfokus;0,10000;wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
+Mittelgrosse Arten;Gleditsia triacanthos ‘Skyline’ (dornenlos);pflegeaufwand;3,0;Szenario 2: Radikale Vermeidung;0,01250;wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
+Mittelgrosse Arten;Gleditsia triacanthos ‘Skyline’ (dornenlos);pflegeaufwand;3,0;Szenario 3: Radikaler Lebenszyklus;0,05000;wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
 Mittelgrosse Arten;Gleditsia triacanthos ‘Skyline’ (dornenlos);recyclingpotential;2,0;Szenario 0: Baseline (IST);0,10000;kreislauffaehigkeit;1,0;3,0;0,5000000000000000;0,050000000000000003
 Mittelgrosse Arten;Gleditsia triacanthos ‘Skyline’ (dornenlos);recyclingpotential;2,0;Szenario 1: Forschungsfokus;0,25000;kreislauffaehigkeit;1,0;3,0;0,5000000000000000;0,125000000000000000
 Mittelgrosse Arten;Gleditsia triacanthos ‘Skyline’ (dornenlos);recyclingpotential;2,0;Szenario 2: Radikale Vermeidung;0,45000;kreislauffaehigkeit;1,0;3,0;0,5000000000000000;0,225000000000000006
 Mittelgrosse Arten;Gleditsia triacanthos ‘Skyline’ (dornenlos);recyclingpotential;2,0;Szenario 3: Radikaler Lebenszyklus;0,05000;kreislauffaehigkeit;1,0;3,0;0,5000000000000000;0,025000000000000001
-Mittelgrosse Arten;Juglans nigra (Schwarznuss);lebensdauer;85,0;Szenario 0: Baseline (IST);0,20000;langlebigkeit_wirtschaftlichkeit;50,0;100,0;0,7000000000000000;0,139999999999999986
-Mittelgrosse Arten;Juglans nigra (Schwarznuss);lebensdauer;85,0;Szenario 1: Forschungsfokus;0,20000;langlebigkeit_wirtschaftlichkeit;50,0;100,0;0,7000000000000000;0,139999999999999986
-Mittelgrosse Arten;Juglans nigra (Schwarznuss);lebensdauer;85,0;Szenario 2: Radikale Vermeidung;0,02500;langlebigkeit_wirtschaftlichkeit;50,0;100,0;0,7000000000000000;0,017499999999999998
-Mittelgrosse Arten;Juglans nigra (Schwarznuss);lebensdauer;85,0;Szenario 3: Radikaler Lebenszyklus;0,40000;langlebigkeit_wirtschaftlichkeit;50,0;100,0;0,7000000000000000;0,279999999999999971
+Mittelgrosse Arten;Juglans nigra (Schwarznuss);lebensdauer;85,0;Szenario 0: Baseline (IST);0,20000;langlebigkeit;50,0;100,0;0,7000000000000000;0,139999999999999986
+Mittelgrosse Arten;Juglans nigra (Schwarznuss);lebensdauer;85,0;Szenario 1: Forschungsfokus;0,20000;langlebigkeit;50,0;100,0;0,7000000000000000;0,139999999999999986
+Mittelgrosse Arten;Juglans nigra (Schwarznuss);lebensdauer;85,0;Szenario 2: Radikale Vermeidung;0,02500;langlebigkeit;50,0;100,0;0,7000000000000000;0,017499999999999998
+Mittelgrosse Arten;Juglans nigra (Schwarznuss);lebensdauer;85,0;Szenario 3: Radikaler Lebenszyklus;0,70000;langlebigkeit;50,0;100,0;0,7000000000000000;0,489999999999999936
 Mittelgrosse Arten;Juglans nigra (Schwarznuss);klimaangepasst;1,0;Szenario 0: Baseline (IST);0,10000;multifunktionale_nutzungsqualitaet;1,0;3,0;0,0000000000000000;0,000000000000000000
 Mittelgrosse Arten;Juglans nigra (Schwarznuss);klimaangepasst;1,0;Szenario 1: Forschungsfokus;0,02500;multifunktionale_nutzungsqualitaet;1,0;3,0;0,0000000000000000;0,000000000000000000
 Mittelgrosse Arten;Juglans nigra (Schwarznuss);klimaangepasst;1,0;Szenario 2: Radikale Vermeidung;0,01250;multifunktionale_nutzungsqualitaet;1,0;3,0;0,0000000000000000;0,000000000000000000
@@ -823,22 +823,22 @@ Mittelgrosse Arten;Juglans nigra (Schwarznuss);regenwasser;200,0;Szenario 0: Bas
 Mittelgrosse Arten;Juglans nigra (Schwarznuss);regenwasser;200,0;Szenario 1: Forschungsfokus;0,01250;multifunktionale_nutzungsqualitaet;115,0;325,0;0,4047619047619048;0,005059523809523810
 Mittelgrosse Arten;Juglans nigra (Schwarznuss);regenwasser;200,0;Szenario 2: Radikale Vermeidung;0,00625;multifunktionale_nutzungsqualitaet;115,0;325,0;0,4047619047619048;0,002529761904761905
 Mittelgrosse Arten;Juglans nigra (Schwarznuss);regenwasser;200,0;Szenario 3: Radikaler Lebenszyklus;0,01250;multifunktionale_nutzungsqualitaet;115,0;325,0;0,4047619047619048;0,005059523809523810
-Mittelgrosse Arten;Juglans nigra (Schwarznuss);groesse_baumrigolen;24,0;Szenario 0: Baseline (IST);0,10000;langlebigkeit_wirtschaftlichkeit;6,0;38,0;0,4375000000000000;0,043750000000000004
-Mittelgrosse Arten;Juglans nigra (Schwarznuss);groesse_baumrigolen;24,0;Szenario 1: Forschungsfokus;0,10000;langlebigkeit_wirtschaftlichkeit;6,0;38,0;0,4375000000000000;0,043750000000000004
-Mittelgrosse Arten;Juglans nigra (Schwarznuss);groesse_baumrigolen;24,0;Szenario 2: Radikale Vermeidung;0,01250;langlebigkeit_wirtschaftlichkeit;6,0;38,0;0,4375000000000000;0,005468750000000001
-Mittelgrosse Arten;Juglans nigra (Schwarznuss);groesse_baumrigolen;24,0;Szenario 3: Radikaler Lebenszyklus;0,20000;langlebigkeit_wirtschaftlichkeit;6,0;38,0;0,4375000000000000;0,087500000000000008
-Mittelgrosse Arten;Juglans nigra (Schwarznuss);pflegeaufwand;1,0;Szenario 0: Baseline (IST);0,10000;langlebigkeit_wirtschaftlichkeit;1,0;3,0;1,0000000000000000;0,100000000000000006
-Mittelgrosse Arten;Juglans nigra (Schwarznuss);pflegeaufwand;1,0;Szenario 1: Forschungsfokus;0,10000;langlebigkeit_wirtschaftlichkeit;1,0;3,0;1,0000000000000000;0,100000000000000006
-Mittelgrosse Arten;Juglans nigra (Schwarznuss);pflegeaufwand;1,0;Szenario 2: Radikale Vermeidung;0,01250;langlebigkeit_wirtschaftlichkeit;1,0;3,0;1,0000000000000000;0,012500000000000001
-Mittelgrosse Arten;Juglans nigra (Schwarznuss);pflegeaufwand;1,0;Szenario 3: Radikaler Lebenszyklus;0,20000;langlebigkeit_wirtschaftlichkeit;1,0;3,0;1,0000000000000000;0,200000000000000011
+Mittelgrosse Arten;Juglans nigra (Schwarznuss);groesse_baumrigolen;24,0;Szenario 0: Baseline (IST);0,10000;wirtschaftlichkeit;6,0;38,0;0,4375000000000000;0,043750000000000004
+Mittelgrosse Arten;Juglans nigra (Schwarznuss);groesse_baumrigolen;24,0;Szenario 1: Forschungsfokus;0,10000;wirtschaftlichkeit;6,0;38,0;0,4375000000000000;0,043750000000000004
+Mittelgrosse Arten;Juglans nigra (Schwarznuss);groesse_baumrigolen;24,0;Szenario 2: Radikale Vermeidung;0,01250;wirtschaftlichkeit;6,0;38,0;0,4375000000000000;0,005468750000000001
+Mittelgrosse Arten;Juglans nigra (Schwarznuss);groesse_baumrigolen;24,0;Szenario 3: Radikaler Lebenszyklus;0,05000;wirtschaftlichkeit;6,0;38,0;0,4375000000000000;0,021875000000000002
+Mittelgrosse Arten;Juglans nigra (Schwarznuss);pflegeaufwand;1,0;Szenario 0: Baseline (IST);0,10000;wirtschaftlichkeit;1,0;3,0;1,0000000000000000;0,100000000000000006
+Mittelgrosse Arten;Juglans nigra (Schwarznuss);pflegeaufwand;1,0;Szenario 1: Forschungsfokus;0,10000;wirtschaftlichkeit;1,0;3,0;1,0000000000000000;0,100000000000000006
+Mittelgrosse Arten;Juglans nigra (Schwarznuss);pflegeaufwand;1,0;Szenario 2: Radikale Vermeidung;0,01250;wirtschaftlichkeit;1,0;3,0;1,0000000000000000;0,012500000000000001
+Mittelgrosse Arten;Juglans nigra (Schwarznuss);pflegeaufwand;1,0;Szenario 3: Radikaler Lebenszyklus;0,05000;wirtschaftlichkeit;1,0;3,0;1,0000000000000000;0,050000000000000003
 Mittelgrosse Arten;Juglans nigra (Schwarznuss);recyclingpotential;3,0;Szenario 0: Baseline (IST);0,10000;kreislauffaehigkeit;1,0;3,0;1,0000000000000000;0,100000000000000006
 Mittelgrosse Arten;Juglans nigra (Schwarznuss);recyclingpotential;3,0;Szenario 1: Forschungsfokus;0,25000;kreislauffaehigkeit;1,0;3,0;1,0000000000000000;0,250000000000000000
 Mittelgrosse Arten;Juglans nigra (Schwarznuss);recyclingpotential;3,0;Szenario 2: Radikale Vermeidung;0,45000;kreislauffaehigkeit;1,0;3,0;1,0000000000000000;0,450000000000000011
 Mittelgrosse Arten;Juglans nigra (Schwarznuss);recyclingpotential;3,0;Szenario 3: Radikaler Lebenszyklus;0,05000;kreislauffaehigkeit;1,0;3,0;1,0000000000000000;0,050000000000000003
-Kleine Arten;Prunus padus ‘Schloss Tiefurt’ (Traubenkirsche);lebensdauer;65,0;Szenario 0: Baseline (IST);0,20000;langlebigkeit_wirtschaftlichkeit;50,0;100,0;0,3000000000000000;0,059999999999999998
-Kleine Arten;Prunus padus ‘Schloss Tiefurt’ (Traubenkirsche);lebensdauer;65,0;Szenario 1: Forschungsfokus;0,20000;langlebigkeit_wirtschaftlichkeit;50,0;100,0;0,3000000000000000;0,059999999999999998
-Kleine Arten;Prunus padus ‘Schloss Tiefurt’ (Traubenkirsche);lebensdauer;65,0;Szenario 2: Radikale Vermeidung;0,02500;langlebigkeit_wirtschaftlichkeit;50,0;100,0;0,3000000000000000;0,007500000000000000
-Kleine Arten;Prunus padus ‘Schloss Tiefurt’ (Traubenkirsche);lebensdauer;65,0;Szenario 3: Radikaler Lebenszyklus;0,40000;langlebigkeit_wirtschaftlichkeit;50,0;100,0;0,3000000000000000;0,119999999999999996
+Kleine Arten;Prunus padus ‘Schloss Tiefurt’ (Traubenkirsche);lebensdauer;65,0;Szenario 0: Baseline (IST);0,20000;langlebigkeit;50,0;100,0;0,3000000000000000;0,059999999999999998
+Kleine Arten;Prunus padus ‘Schloss Tiefurt’ (Traubenkirsche);lebensdauer;65,0;Szenario 1: Forschungsfokus;0,20000;langlebigkeit;50,0;100,0;0,3000000000000000;0,059999999999999998
+Kleine Arten;Prunus padus ‘Schloss Tiefurt’ (Traubenkirsche);lebensdauer;65,0;Szenario 2: Radikale Vermeidung;0,02500;langlebigkeit;50,0;100,0;0,3000000000000000;0,007500000000000000
+Kleine Arten;Prunus padus ‘Schloss Tiefurt’ (Traubenkirsche);lebensdauer;65,0;Szenario 3: Radikaler Lebenszyklus;0,70000;langlebigkeit;50,0;100,0;0,3000000000000000;0,209999999999999992
 Kleine Arten;Prunus padus ‘Schloss Tiefurt’ (Traubenkirsche);klimaangepasst;1,0;Szenario 0: Baseline (IST);0,10000;multifunktionale_nutzungsqualitaet;1,0;3,0;0,0000000000000000;0,000000000000000000
 Kleine Arten;Prunus padus ‘Schloss Tiefurt’ (Traubenkirsche);klimaangepasst;1,0;Szenario 1: Forschungsfokus;0,02500;multifunktionale_nutzungsqualitaet;1,0;3,0;0,0000000000000000;0,000000000000000000
 Kleine Arten;Prunus padus ‘Schloss Tiefurt’ (Traubenkirsche);klimaangepasst;1,0;Szenario 2: Radikale Vermeidung;0,01250;multifunktionale_nutzungsqualitaet;1,0;3,0;0,0000000000000000;0,000000000000000000
@@ -867,22 +867,22 @@ Kleine Arten;Prunus padus ‘Schloss Tiefurt’ (Traubenkirsche);regenwasser;115
 Kleine Arten;Prunus padus ‘Schloss Tiefurt’ (Traubenkirsche);regenwasser;115,0;Szenario 1: Forschungsfokus;0,01250;multifunktionale_nutzungsqualitaet;115,0;325,0;0,0000000000000000;0,000000000000000000
 Kleine Arten;Prunus padus ‘Schloss Tiefurt’ (Traubenkirsche);regenwasser;115,0;Szenario 2: Radikale Vermeidung;0,00625;multifunktionale_nutzungsqualitaet;115,0;325,0;0,0000000000000000;0,000000000000000000
 Kleine Arten;Prunus padus ‘Schloss Tiefurt’ (Traubenkirsche);regenwasser;115,0;Szenario 3: Radikaler Lebenszyklus;0,01250;multifunktionale_nutzungsqualitaet;115,0;325,0;0,0000000000000000;0,000000000000000000
-Kleine Arten;Prunus padus ‘Schloss Tiefurt’ (Traubenkirsche);groesse_baumrigolen;13,0;Szenario 0: Baseline (IST);0,10000;langlebigkeit_wirtschaftlichkeit;6,0;38,0;0,7812500000000000;0,078125000000000000
-Kleine Arten;Prunus padus ‘Schloss Tiefurt’ (Traubenkirsche);groesse_baumrigolen;13,0;Szenario 1: Forschungsfokus;0,10000;langlebigkeit_wirtschaftlichkeit;6,0;38,0;0,7812500000000000;0,078125000000000000
-Kleine Arten;Prunus padus ‘Schloss Tiefurt’ (Traubenkirsche);groesse_baumrigolen;13,0;Szenario 2: Radikale Vermeidung;0,01250;langlebigkeit_wirtschaftlichkeit;6,0;38,0;0,7812500000000000;0,009765625000000000
-Kleine Arten;Prunus padus ‘Schloss Tiefurt’ (Traubenkirsche);groesse_baumrigolen;13,0;Szenario 3: Radikaler Lebenszyklus;0,20000;langlebigkeit_wirtschaftlichkeit;6,0;38,0;0,7812500000000000;0,156250000000000000
-Kleine Arten;Prunus padus ‘Schloss Tiefurt’ (Traubenkirsche);pflegeaufwand;1,0;Szenario 0: Baseline (IST);0,10000;langlebigkeit_wirtschaftlichkeit;1,0;3,0;1,0000000000000000;0,100000000000000006
-Kleine Arten;Prunus padus ‘Schloss Tiefurt’ (Traubenkirsche);pflegeaufwand;1,0;Szenario 1: Forschungsfokus;0,10000;langlebigkeit_wirtschaftlichkeit;1,0;3,0;1,0000000000000000;0,100000000000000006
-Kleine Arten;Prunus padus ‘Schloss Tiefurt’ (Traubenkirsche);pflegeaufwand;1,0;Szenario 2: Radikale Vermeidung;0,01250;langlebigkeit_wirtschaftlichkeit;1,0;3,0;1,0000000000000000;0,012500000000000001
-Kleine Arten;Prunus padus ‘Schloss Tiefurt’ (Traubenkirsche);pflegeaufwand;1,0;Szenario 3: Radikaler Lebenszyklus;0,20000;langlebigkeit_wirtschaftlichkeit;1,0;3,0;1,0000000000000000;0,200000000000000011
+Kleine Arten;Prunus padus ‘Schloss Tiefurt’ (Traubenkirsche);groesse_baumrigolen;13,0;Szenario 0: Baseline (IST);0,10000;wirtschaftlichkeit;6,0;38,0;0,7812500000000000;0,078125000000000000
+Kleine Arten;Prunus padus ‘Schloss Tiefurt’ (Traubenkirsche);groesse_baumrigolen;13,0;Szenario 1: Forschungsfokus;0,10000;wirtschaftlichkeit;6,0;38,0;0,7812500000000000;0,078125000000000000
+Kleine Arten;Prunus padus ‘Schloss Tiefurt’ (Traubenkirsche);groesse_baumrigolen;13,0;Szenario 2: Radikale Vermeidung;0,01250;wirtschaftlichkeit;6,0;38,0;0,7812500000000000;0,009765625000000000
+Kleine Arten;Prunus padus ‘Schloss Tiefurt’ (Traubenkirsche);groesse_baumrigolen;13,0;Szenario 3: Radikaler Lebenszyklus;0,05000;wirtschaftlichkeit;6,0;38,0;0,7812500000000000;0,039062500000000000
+Kleine Arten;Prunus padus ‘Schloss Tiefurt’ (Traubenkirsche);pflegeaufwand;1,0;Szenario 0: Baseline (IST);0,10000;wirtschaftlichkeit;1,0;3,0;1,0000000000000000;0,100000000000000006
+Kleine Arten;Prunus padus ‘Schloss Tiefurt’ (Traubenkirsche);pflegeaufwand;1,0;Szenario 1: Forschungsfokus;0,10000;wirtschaftlichkeit;1,0;3,0;1,0000000000000000;0,100000000000000006
+Kleine Arten;Prunus padus ‘Schloss Tiefurt’ (Traubenkirsche);pflegeaufwand;1,0;Szenario 2: Radikale Vermeidung;0,01250;wirtschaftlichkeit;1,0;3,0;1,0000000000000000;0,012500000000000001
+Kleine Arten;Prunus padus ‘Schloss Tiefurt’ (Traubenkirsche);pflegeaufwand;1,0;Szenario 3: Radikaler Lebenszyklus;0,05000;wirtschaftlichkeit;1,0;3,0;1,0000000000000000;0,050000000000000003
 Kleine Arten;Prunus padus ‘Schloss Tiefurt’ (Traubenkirsche);recyclingpotential;2,0;Szenario 0: Baseline (IST);0,10000;kreislauffaehigkeit;1,0;3,0;0,5000000000000000;0,050000000000000003
 Kleine Arten;Prunus padus ‘Schloss Tiefurt’ (Traubenkirsche);recyclingpotential;2,0;Szenario 1: Forschungsfokus;0,25000;kreislauffaehigkeit;1,0;3,0;0,5000000000000000;0,125000000000000000
 Kleine Arten;Prunus padus ‘Schloss Tiefurt’ (Traubenkirsche);recyclingpotential;2,0;Szenario 2: Radikale Vermeidung;0,45000;kreislauffaehigkeit;1,0;3,0;0,5000000000000000;0,225000000000000006
 Kleine Arten;Prunus padus ‘Schloss Tiefurt’ (Traubenkirsche);recyclingpotential;2,0;Szenario 3: Radikaler Lebenszyklus;0,05000;kreislauffaehigkeit;1,0;3,0;0,5000000000000000;0,025000000000000001
-Kleine Arten;Malus tschonoskii (Woll-Apfel);lebensdauer;80,0;Szenario 0: Baseline (IST);0,20000;langlebigkeit_wirtschaftlichkeit;50,0;100,0;0,6000000000000000;0,119999999999999996
-Kleine Arten;Malus tschonoskii (Woll-Apfel);lebensdauer;80,0;Szenario 1: Forschungsfokus;0,20000;langlebigkeit_wirtschaftlichkeit;50,0;100,0;0,6000000000000000;0,119999999999999996
-Kleine Arten;Malus tschonoskii (Woll-Apfel);lebensdauer;80,0;Szenario 2: Radikale Vermeidung;0,02500;langlebigkeit_wirtschaftlichkeit;50,0;100,0;0,6000000000000000;0,014999999999999999
-Kleine Arten;Malus tschonoskii (Woll-Apfel);lebensdauer;80,0;Szenario 3: Radikaler Lebenszyklus;0,40000;langlebigkeit_wirtschaftlichkeit;50,0;100,0;0,6000000000000000;0,239999999999999991
+Kleine Arten;Malus tschonoskii (Woll-Apfel);lebensdauer;80,0;Szenario 0: Baseline (IST);0,20000;langlebigkeit;50,0;100,0;0,6000000000000000;0,119999999999999996
+Kleine Arten;Malus tschonoskii (Woll-Apfel);lebensdauer;80,0;Szenario 1: Forschungsfokus;0,20000;langlebigkeit;50,0;100,0;0,6000000000000000;0,119999999999999996
+Kleine Arten;Malus tschonoskii (Woll-Apfel);lebensdauer;80,0;Szenario 2: Radikale Vermeidung;0,02500;langlebigkeit;50,0;100,0;0,6000000000000000;0,014999999999999999
+Kleine Arten;Malus tschonoskii (Woll-Apfel);lebensdauer;80,0;Szenario 3: Radikaler Lebenszyklus;0,70000;langlebigkeit;50,0;100,0;0,6000000000000000;0,419999999999999984
 Kleine Arten;Malus tschonoskii (Woll-Apfel);klimaangepasst;1,0;Szenario 0: Baseline (IST);0,10000;multifunktionale_nutzungsqualitaet;1,0;3,0;0,0000000000000000;0,000000000000000000
 Kleine Arten;Malus tschonoskii (Woll-Apfel);klimaangepasst;1,0;Szenario 1: Forschungsfokus;0,02500;multifunktionale_nutzungsqualitaet;1,0;3,0;0,0000000000000000;0,000000000000000000
 Kleine Arten;Malus tschonoskii (Woll-Apfel);klimaangepasst;1,0;Szenario 2: Radikale Vermeidung;0,01250;multifunktionale_nutzungsqualitaet;1,0;3,0;0,0000000000000000;0,000000000000000000
@@ -911,22 +911,22 @@ Kleine Arten;Malus tschonoskii (Woll-Apfel);regenwasser;115,0;Szenario 0: Baseli
 Kleine Arten;Malus tschonoskii (Woll-Apfel);regenwasser;115,0;Szenario 1: Forschungsfokus;0,01250;multifunktionale_nutzungsqualitaet;115,0;325,0;0,0000000000000000;0,000000000000000000
 Kleine Arten;Malus tschonoskii (Woll-Apfel);regenwasser;115,0;Szenario 2: Radikale Vermeidung;0,00625;multifunktionale_nutzungsqualitaet;115,0;325,0;0,0000000000000000;0,000000000000000000
 Kleine Arten;Malus tschonoskii (Woll-Apfel);regenwasser;115,0;Szenario 3: Radikaler Lebenszyklus;0,01250;multifunktionale_nutzungsqualitaet;115,0;325,0;0,0000000000000000;0,000000000000000000
-Kleine Arten;Malus tschonoskii (Woll-Apfel);groesse_baumrigolen;6,0;Szenario 0: Baseline (IST);0,10000;langlebigkeit_wirtschaftlichkeit;6,0;38,0;1,0000000000000000;0,100000000000000006
-Kleine Arten;Malus tschonoskii (Woll-Apfel);groesse_baumrigolen;6,0;Szenario 1: Forschungsfokus;0,10000;langlebigkeit_wirtschaftlichkeit;6,0;38,0;1,0000000000000000;0,100000000000000006
-Kleine Arten;Malus tschonoskii (Woll-Apfel);groesse_baumrigolen;6,0;Szenario 2: Radikale Vermeidung;0,01250;langlebigkeit_wirtschaftlichkeit;6,0;38,0;1,0000000000000000;0,012500000000000001
-Kleine Arten;Malus tschonoskii (Woll-Apfel);groesse_baumrigolen;6,0;Szenario 3: Radikaler Lebenszyklus;0,20000;langlebigkeit_wirtschaftlichkeit;6,0;38,0;1,0000000000000000;0,200000000000000011
-Kleine Arten;Malus tschonoskii (Woll-Apfel);pflegeaufwand;1,0;Szenario 0: Baseline (IST);0,10000;langlebigkeit_wirtschaftlichkeit;1,0;3,0;1,0000000000000000;0,100000000000000006
-Kleine Arten;Malus tschonoskii (Woll-Apfel);pflegeaufwand;1,0;Szenario 1: Forschungsfokus;0,10000;langlebigkeit_wirtschaftlichkeit;1,0;3,0;1,0000000000000000;0,100000000000000006
-Kleine Arten;Malus tschonoskii (Woll-Apfel);pflegeaufwand;1,0;Szenario 2: Radikale Vermeidung;0,01250;langlebigkeit_wirtschaftlichkeit;1,0;3,0;1,0000000000000000;0,012500000000000001
-Kleine Arten;Malus tschonoskii (Woll-Apfel);pflegeaufwand;1,0;Szenario 3: Radikaler Lebenszyklus;0,20000;langlebigkeit_wirtschaftlichkeit;1,0;3,0;1,0000000000000000;0,200000000000000011
+Kleine Arten;Malus tschonoskii (Woll-Apfel);groesse_baumrigolen;6,0;Szenario 0: Baseline (IST);0,10000;wirtschaftlichkeit;6,0;38,0;1,0000000000000000;0,100000000000000006
+Kleine Arten;Malus tschonoskii (Woll-Apfel);groesse_baumrigolen;6,0;Szenario 1: Forschungsfokus;0,10000;wirtschaftlichkeit;6,0;38,0;1,0000000000000000;0,100000000000000006
+Kleine Arten;Malus tschonoskii (Woll-Apfel);groesse_baumrigolen;6,0;Szenario 2: Radikale Vermeidung;0,01250;wirtschaftlichkeit;6,0;38,0;1,0000000000000000;0,012500000000000001
+Kleine Arten;Malus tschonoskii (Woll-Apfel);groesse_baumrigolen;6,0;Szenario 3: Radikaler Lebenszyklus;0,05000;wirtschaftlichkeit;6,0;38,0;1,0000000000000000;0,050000000000000003
+Kleine Arten;Malus tschonoskii (Woll-Apfel);pflegeaufwand;1,0;Szenario 0: Baseline (IST);0,10000;wirtschaftlichkeit;1,0;3,0;1,0000000000000000;0,100000000000000006
+Kleine Arten;Malus tschonoskii (Woll-Apfel);pflegeaufwand;1,0;Szenario 1: Forschungsfokus;0,10000;wirtschaftlichkeit;1,0;3,0;1,0000000000000000;0,100000000000000006
+Kleine Arten;Malus tschonoskii (Woll-Apfel);pflegeaufwand;1,0;Szenario 2: Radikale Vermeidung;0,01250;wirtschaftlichkeit;1,0;3,0;1,0000000000000000;0,012500000000000001
+Kleine Arten;Malus tschonoskii (Woll-Apfel);pflegeaufwand;1,0;Szenario 3: Radikaler Lebenszyklus;0,05000;wirtschaftlichkeit;1,0;3,0;1,0000000000000000;0,050000000000000003
 Kleine Arten;Malus tschonoskii (Woll-Apfel);recyclingpotential;1,0;Szenario 0: Baseline (IST);0,10000;kreislauffaehigkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
 Kleine Arten;Malus tschonoskii (Woll-Apfel);recyclingpotential;1,0;Szenario 1: Forschungsfokus;0,25000;kreislauffaehigkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
 Kleine Arten;Malus tschonoskii (Woll-Apfel);recyclingpotential;1,0;Szenario 2: Radikale Vermeidung;0,45000;kreislauffaehigkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
 Kleine Arten;Malus tschonoskii (Woll-Apfel);recyclingpotential;1,0;Szenario 3: Radikaler Lebenszyklus;0,05000;kreislauffaehigkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
-Mittelgrosse Arten;Corylus colurna (Baumhasel);lebensdauer;80,0;Szenario 0: Baseline (IST);0,20000;langlebigkeit_wirtschaftlichkeit;50,0;100,0;0,6000000000000000;0,119999999999999996
-Mittelgrosse Arten;Corylus colurna (Baumhasel);lebensdauer;80,0;Szenario 1: Forschungsfokus;0,20000;langlebigkeit_wirtschaftlichkeit;50,0;100,0;0,6000000000000000;0,119999999999999996
-Mittelgrosse Arten;Corylus colurna (Baumhasel);lebensdauer;80,0;Szenario 2: Radikale Vermeidung;0,02500;langlebigkeit_wirtschaftlichkeit;50,0;100,0;0,6000000000000000;0,014999999999999999
-Mittelgrosse Arten;Corylus colurna (Baumhasel);lebensdauer;80,0;Szenario 3: Radikaler Lebenszyklus;0,40000;langlebigkeit_wirtschaftlichkeit;50,0;100,0;0,6000000000000000;0,239999999999999991
+Mittelgrosse Arten;Corylus colurna (Baumhasel);lebensdauer;80,0;Szenario 0: Baseline (IST);0,20000;langlebigkeit;50,0;100,0;0,6000000000000000;0,119999999999999996
+Mittelgrosse Arten;Corylus colurna (Baumhasel);lebensdauer;80,0;Szenario 1: Forschungsfokus;0,20000;langlebigkeit;50,0;100,0;0,6000000000000000;0,119999999999999996
+Mittelgrosse Arten;Corylus colurna (Baumhasel);lebensdauer;80,0;Szenario 2: Radikale Vermeidung;0,02500;langlebigkeit;50,0;100,0;0,6000000000000000;0,014999999999999999
+Mittelgrosse Arten;Corylus colurna (Baumhasel);lebensdauer;80,0;Szenario 3: Radikaler Lebenszyklus;0,70000;langlebigkeit;50,0;100,0;0,6000000000000000;0,419999999999999984
 Mittelgrosse Arten;Corylus colurna (Baumhasel);klimaangepasst;3,0;Szenario 0: Baseline (IST);0,10000;multifunktionale_nutzungsqualitaet;1,0;3,0;1,0000000000000000;0,100000000000000006
 Mittelgrosse Arten;Corylus colurna (Baumhasel);klimaangepasst;3,0;Szenario 1: Forschungsfokus;0,02500;multifunktionale_nutzungsqualitaet;1,0;3,0;1,0000000000000000;0,025000000000000001
 Mittelgrosse Arten;Corylus colurna (Baumhasel);klimaangepasst;3,0;Szenario 2: Radikale Vermeidung;0,01250;multifunktionale_nutzungsqualitaet;1,0;3,0;1,0000000000000000;0,012500000000000001
@@ -955,22 +955,22 @@ Mittelgrosse Arten;Corylus colurna (Baumhasel);regenwasser;200,0;Szenario 0: Bas
 Mittelgrosse Arten;Corylus colurna (Baumhasel);regenwasser;200,0;Szenario 1: Forschungsfokus;0,01250;multifunktionale_nutzungsqualitaet;115,0;325,0;0,4047619047619048;0,005059523809523810
 Mittelgrosse Arten;Corylus colurna (Baumhasel);regenwasser;200,0;Szenario 2: Radikale Vermeidung;0,00625;multifunktionale_nutzungsqualitaet;115,0;325,0;0,4047619047619048;0,002529761904761905
 Mittelgrosse Arten;Corylus colurna (Baumhasel);regenwasser;200,0;Szenario 3: Radikaler Lebenszyklus;0,01250;multifunktionale_nutzungsqualitaet;115,0;325,0;0,4047619047619048;0,005059523809523810
-Mittelgrosse Arten;Corylus colurna (Baumhasel);groesse_baumrigolen;24,0;Szenario 0: Baseline (IST);0,10000;langlebigkeit_wirtschaftlichkeit;6,0;38,0;0,4375000000000000;0,043750000000000004
-Mittelgrosse Arten;Corylus colurna (Baumhasel);groesse_baumrigolen;24,0;Szenario 1: Forschungsfokus;0,10000;langlebigkeit_wirtschaftlichkeit;6,0;38,0;0,4375000000000000;0,043750000000000004
-Mittelgrosse Arten;Corylus colurna (Baumhasel);groesse_baumrigolen;24,0;Szenario 2: Radikale Vermeidung;0,01250;langlebigkeit_wirtschaftlichkeit;6,0;38,0;0,4375000000000000;0,005468750000000001
-Mittelgrosse Arten;Corylus colurna (Baumhasel);groesse_baumrigolen;24,0;Szenario 3: Radikaler Lebenszyklus;0,20000;langlebigkeit_wirtschaftlichkeit;6,0;38,0;0,4375000000000000;0,087500000000000008
-Mittelgrosse Arten;Corylus colurna (Baumhasel);pflegeaufwand;3,0;Szenario 0: Baseline (IST);0,10000;langlebigkeit_wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
-Mittelgrosse Arten;Corylus colurna (Baumhasel);pflegeaufwand;3,0;Szenario 1: Forschungsfokus;0,10000;langlebigkeit_wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
-Mittelgrosse Arten;Corylus colurna (Baumhasel);pflegeaufwand;3,0;Szenario 2: Radikale Vermeidung;0,01250;langlebigkeit_wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
-Mittelgrosse Arten;Corylus colurna (Baumhasel);pflegeaufwand;3,0;Szenario 3: Radikaler Lebenszyklus;0,20000;langlebigkeit_wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
+Mittelgrosse Arten;Corylus colurna (Baumhasel);groesse_baumrigolen;24,0;Szenario 0: Baseline (IST);0,10000;wirtschaftlichkeit;6,0;38,0;0,4375000000000000;0,043750000000000004
+Mittelgrosse Arten;Corylus colurna (Baumhasel);groesse_baumrigolen;24,0;Szenario 1: Forschungsfokus;0,10000;wirtschaftlichkeit;6,0;38,0;0,4375000000000000;0,043750000000000004
+Mittelgrosse Arten;Corylus colurna (Baumhasel);groesse_baumrigolen;24,0;Szenario 2: Radikale Vermeidung;0,01250;wirtschaftlichkeit;6,0;38,0;0,4375000000000000;0,005468750000000001
+Mittelgrosse Arten;Corylus colurna (Baumhasel);groesse_baumrigolen;24,0;Szenario 3: Radikaler Lebenszyklus;0,05000;wirtschaftlichkeit;6,0;38,0;0,4375000000000000;0,021875000000000002
+Mittelgrosse Arten;Corylus colurna (Baumhasel);pflegeaufwand;3,0;Szenario 0: Baseline (IST);0,10000;wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
+Mittelgrosse Arten;Corylus colurna (Baumhasel);pflegeaufwand;3,0;Szenario 1: Forschungsfokus;0,10000;wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
+Mittelgrosse Arten;Corylus colurna (Baumhasel);pflegeaufwand;3,0;Szenario 2: Radikale Vermeidung;0,01250;wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
+Mittelgrosse Arten;Corylus colurna (Baumhasel);pflegeaufwand;3,0;Szenario 3: Radikaler Lebenszyklus;0,05000;wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
 Mittelgrosse Arten;Corylus colurna (Baumhasel);recyclingpotential;2,0;Szenario 0: Baseline (IST);0,10000;kreislauffaehigkeit;1,0;3,0;0,5000000000000000;0,050000000000000003
 Mittelgrosse Arten;Corylus colurna (Baumhasel);recyclingpotential;2,0;Szenario 1: Forschungsfokus;0,25000;kreislauffaehigkeit;1,0;3,0;0,5000000000000000;0,125000000000000000
 Mittelgrosse Arten;Corylus colurna (Baumhasel);recyclingpotential;2,0;Szenario 2: Radikale Vermeidung;0,45000;kreislauffaehigkeit;1,0;3,0;0,5000000000000000;0,225000000000000006
 Mittelgrosse Arten;Corylus colurna (Baumhasel);recyclingpotential;2,0;Szenario 3: Radikaler Lebenszyklus;0,05000;kreislauffaehigkeit;1,0;3,0;0,5000000000000000;0,025000000000000001
-Kleine Arten;Amelanchier lamarckii (Felsenbirne);lebensdauer;50,0;Szenario 0: Baseline (IST);0,20000;langlebigkeit_wirtschaftlichkeit;50,0;100,0;0,0000000000000000;0,000000000000000000
-Kleine Arten;Amelanchier lamarckii (Felsenbirne);lebensdauer;50,0;Szenario 1: Forschungsfokus;0,20000;langlebigkeit_wirtschaftlichkeit;50,0;100,0;0,0000000000000000;0,000000000000000000
-Kleine Arten;Amelanchier lamarckii (Felsenbirne);lebensdauer;50,0;Szenario 2: Radikale Vermeidung;0,02500;langlebigkeit_wirtschaftlichkeit;50,0;100,0;0,0000000000000000;0,000000000000000000
-Kleine Arten;Amelanchier lamarckii (Felsenbirne);lebensdauer;50,0;Szenario 3: Radikaler Lebenszyklus;0,40000;langlebigkeit_wirtschaftlichkeit;50,0;100,0;0,0000000000000000;0,000000000000000000
+Kleine Arten;Amelanchier lamarckii (Felsenbirne);lebensdauer;50,0;Szenario 0: Baseline (IST);0,20000;langlebigkeit;50,0;100,0;0,0000000000000000;0,000000000000000000
+Kleine Arten;Amelanchier lamarckii (Felsenbirne);lebensdauer;50,0;Szenario 1: Forschungsfokus;0,20000;langlebigkeit;50,0;100,0;0,0000000000000000;0,000000000000000000
+Kleine Arten;Amelanchier lamarckii (Felsenbirne);lebensdauer;50,0;Szenario 2: Radikale Vermeidung;0,02500;langlebigkeit;50,0;100,0;0,0000000000000000;0,000000000000000000
+Kleine Arten;Amelanchier lamarckii (Felsenbirne);lebensdauer;50,0;Szenario 3: Radikaler Lebenszyklus;0,70000;langlebigkeit;50,0;100,0;0,0000000000000000;0,000000000000000000
 Kleine Arten;Amelanchier lamarckii (Felsenbirne);klimaangepasst;2,0;Szenario 0: Baseline (IST);0,10000;multifunktionale_nutzungsqualitaet;1,0;3,0;0,5000000000000000;0,050000000000000003
 Kleine Arten;Amelanchier lamarckii (Felsenbirne);klimaangepasst;2,0;Szenario 1: Forschungsfokus;0,02500;multifunktionale_nutzungsqualitaet;1,0;3,0;0,5000000000000000;0,012500000000000001
 Kleine Arten;Amelanchier lamarckii (Felsenbirne);klimaangepasst;2,0;Szenario 2: Radikale Vermeidung;0,01250;multifunktionale_nutzungsqualitaet;1,0;3,0;0,5000000000000000;0,006250000000000000
@@ -999,22 +999,22 @@ Kleine Arten;Amelanchier lamarckii (Felsenbirne);regenwasser;115,0;Szenario 0: B
 Kleine Arten;Amelanchier lamarckii (Felsenbirne);regenwasser;115,0;Szenario 1: Forschungsfokus;0,01250;multifunktionale_nutzungsqualitaet;115,0;325,0;0,0000000000000000;0,000000000000000000
 Kleine Arten;Amelanchier lamarckii (Felsenbirne);regenwasser;115,0;Szenario 2: Radikale Vermeidung;0,00625;multifunktionale_nutzungsqualitaet;115,0;325,0;0,0000000000000000;0,000000000000000000
 Kleine Arten;Amelanchier lamarckii (Felsenbirne);regenwasser;115,0;Szenario 3: Radikaler Lebenszyklus;0,01250;multifunktionale_nutzungsqualitaet;115,0;325,0;0,0000000000000000;0,000000000000000000
-Kleine Arten;Amelanchier lamarckii (Felsenbirne);groesse_baumrigolen;6,0;Szenario 0: Baseline (IST);0,10000;langlebigkeit_wirtschaftlichkeit;6,0;38,0;1,0000000000000000;0,100000000000000006
-Kleine Arten;Amelanchier lamarckii (Felsenbirne);groesse_baumrigolen;6,0;Szenario 1: Forschungsfokus;0,10000;langlebigkeit_wirtschaftlichkeit;6,0;38,0;1,0000000000000000;0,100000000000000006
-Kleine Arten;Amelanchier lamarckii (Felsenbirne);groesse_baumrigolen;6,0;Szenario 2: Radikale Vermeidung;0,01250;langlebigkeit_wirtschaftlichkeit;6,0;38,0;1,0000000000000000;0,012500000000000001
-Kleine Arten;Amelanchier lamarckii (Felsenbirne);groesse_baumrigolen;6,0;Szenario 3: Radikaler Lebenszyklus;0,20000;langlebigkeit_wirtschaftlichkeit;6,0;38,0;1,0000000000000000;0,200000000000000011
-Kleine Arten;Amelanchier lamarckii (Felsenbirne);pflegeaufwand;3,0;Szenario 0: Baseline (IST);0,10000;langlebigkeit_wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
-Kleine Arten;Amelanchier lamarckii (Felsenbirne);pflegeaufwand;3,0;Szenario 1: Forschungsfokus;0,10000;langlebigkeit_wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
-Kleine Arten;Amelanchier lamarckii (Felsenbirne);pflegeaufwand;3,0;Szenario 2: Radikale Vermeidung;0,01250;langlebigkeit_wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
-Kleine Arten;Amelanchier lamarckii (Felsenbirne);pflegeaufwand;3,0;Szenario 3: Radikaler Lebenszyklus;0,20000;langlebigkeit_wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
+Kleine Arten;Amelanchier lamarckii (Felsenbirne);groesse_baumrigolen;6,0;Szenario 0: Baseline (IST);0,10000;wirtschaftlichkeit;6,0;38,0;1,0000000000000000;0,100000000000000006
+Kleine Arten;Amelanchier lamarckii (Felsenbirne);groesse_baumrigolen;6,0;Szenario 1: Forschungsfokus;0,10000;wirtschaftlichkeit;6,0;38,0;1,0000000000000000;0,100000000000000006
+Kleine Arten;Amelanchier lamarckii (Felsenbirne);groesse_baumrigolen;6,0;Szenario 2: Radikale Vermeidung;0,01250;wirtschaftlichkeit;6,0;38,0;1,0000000000000000;0,012500000000000001
+Kleine Arten;Amelanchier lamarckii (Felsenbirne);groesse_baumrigolen;6,0;Szenario 3: Radikaler Lebenszyklus;0,05000;wirtschaftlichkeit;6,0;38,0;1,0000000000000000;0,050000000000000003
+Kleine Arten;Amelanchier lamarckii (Felsenbirne);pflegeaufwand;3,0;Szenario 0: Baseline (IST);0,10000;wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
+Kleine Arten;Amelanchier lamarckii (Felsenbirne);pflegeaufwand;3,0;Szenario 1: Forschungsfokus;0,10000;wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
+Kleine Arten;Amelanchier lamarckii (Felsenbirne);pflegeaufwand;3,0;Szenario 2: Radikale Vermeidung;0,01250;wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
+Kleine Arten;Amelanchier lamarckii (Felsenbirne);pflegeaufwand;3,0;Szenario 3: Radikaler Lebenszyklus;0,05000;wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
 Kleine Arten;Amelanchier lamarckii (Felsenbirne);recyclingpotential;1,0;Szenario 0: Baseline (IST);0,10000;kreislauffaehigkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
 Kleine Arten;Amelanchier lamarckii (Felsenbirne);recyclingpotential;1,0;Szenario 1: Forschungsfokus;0,25000;kreislauffaehigkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
 Kleine Arten;Amelanchier lamarckii (Felsenbirne);recyclingpotential;1,0;Szenario 2: Radikale Vermeidung;0,45000;kreislauffaehigkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
 Kleine Arten;Amelanchier lamarckii (Felsenbirne);recyclingpotential;1,0;Szenario 3: Radikaler Lebenszyklus;0,05000;kreislauffaehigkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
-Kleine Arten;Cornus mas (Kornelkirsche);lebensdauer;80,0;Szenario 0: Baseline (IST);0,20000;langlebigkeit_wirtschaftlichkeit;50,0;100,0;0,6000000000000000;0,119999999999999996
-Kleine Arten;Cornus mas (Kornelkirsche);lebensdauer;80,0;Szenario 1: Forschungsfokus;0,20000;langlebigkeit_wirtschaftlichkeit;50,0;100,0;0,6000000000000000;0,119999999999999996
-Kleine Arten;Cornus mas (Kornelkirsche);lebensdauer;80,0;Szenario 2: Radikale Vermeidung;0,02500;langlebigkeit_wirtschaftlichkeit;50,0;100,0;0,6000000000000000;0,014999999999999999
-Kleine Arten;Cornus mas (Kornelkirsche);lebensdauer;80,0;Szenario 3: Radikaler Lebenszyklus;0,40000;langlebigkeit_wirtschaftlichkeit;50,0;100,0;0,6000000000000000;0,239999999999999991
+Kleine Arten;Cornus mas (Kornelkirsche);lebensdauer;80,0;Szenario 0: Baseline (IST);0,20000;langlebigkeit;50,0;100,0;0,6000000000000000;0,119999999999999996
+Kleine Arten;Cornus mas (Kornelkirsche);lebensdauer;80,0;Szenario 1: Forschungsfokus;0,20000;langlebigkeit;50,0;100,0;0,6000000000000000;0,119999999999999996
+Kleine Arten;Cornus mas (Kornelkirsche);lebensdauer;80,0;Szenario 2: Radikale Vermeidung;0,02500;langlebigkeit;50,0;100,0;0,6000000000000000;0,014999999999999999
+Kleine Arten;Cornus mas (Kornelkirsche);lebensdauer;80,0;Szenario 3: Radikaler Lebenszyklus;0,70000;langlebigkeit;50,0;100,0;0,6000000000000000;0,419999999999999984
 Kleine Arten;Cornus mas (Kornelkirsche);klimaangepasst;2,0;Szenario 0: Baseline (IST);0,10000;multifunktionale_nutzungsqualitaet;1,0;3,0;0,5000000000000000;0,050000000000000003
 Kleine Arten;Cornus mas (Kornelkirsche);klimaangepasst;2,0;Szenario 1: Forschungsfokus;0,02500;multifunktionale_nutzungsqualitaet;1,0;3,0;0,5000000000000000;0,012500000000000001
 Kleine Arten;Cornus mas (Kornelkirsche);klimaangepasst;2,0;Szenario 2: Radikale Vermeidung;0,01250;multifunktionale_nutzungsqualitaet;1,0;3,0;0,5000000000000000;0,006250000000000000
@@ -1043,22 +1043,22 @@ Kleine Arten;Cornus mas (Kornelkirsche);regenwasser;115,0;Szenario 0: Baseline (
 Kleine Arten;Cornus mas (Kornelkirsche);regenwasser;115,0;Szenario 1: Forschungsfokus;0,01250;multifunktionale_nutzungsqualitaet;115,0;325,0;0,0000000000000000;0,000000000000000000
 Kleine Arten;Cornus mas (Kornelkirsche);regenwasser;115,0;Szenario 2: Radikale Vermeidung;0,00625;multifunktionale_nutzungsqualitaet;115,0;325,0;0,0000000000000000;0,000000000000000000
 Kleine Arten;Cornus mas (Kornelkirsche);regenwasser;115,0;Szenario 3: Radikaler Lebenszyklus;0,01250;multifunktionale_nutzungsqualitaet;115,0;325,0;0,0000000000000000;0,000000000000000000
-Kleine Arten;Cornus mas (Kornelkirsche);groesse_baumrigolen;6,0;Szenario 0: Baseline (IST);0,10000;langlebigkeit_wirtschaftlichkeit;6,0;38,0;1,0000000000000000;0,100000000000000006
-Kleine Arten;Cornus mas (Kornelkirsche);groesse_baumrigolen;6,0;Szenario 1: Forschungsfokus;0,10000;langlebigkeit_wirtschaftlichkeit;6,0;38,0;1,0000000000000000;0,100000000000000006
-Kleine Arten;Cornus mas (Kornelkirsche);groesse_baumrigolen;6,0;Szenario 2: Radikale Vermeidung;0,01250;langlebigkeit_wirtschaftlichkeit;6,0;38,0;1,0000000000000000;0,012500000000000001
-Kleine Arten;Cornus mas (Kornelkirsche);groesse_baumrigolen;6,0;Szenario 3: Radikaler Lebenszyklus;0,20000;langlebigkeit_wirtschaftlichkeit;6,0;38,0;1,0000000000000000;0,200000000000000011
-Kleine Arten;Cornus mas (Kornelkirsche);pflegeaufwand;3,0;Szenario 0: Baseline (IST);0,10000;langlebigkeit_wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
-Kleine Arten;Cornus mas (Kornelkirsche);pflegeaufwand;3,0;Szenario 1: Forschungsfokus;0,10000;langlebigkeit_wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
-Kleine Arten;Cornus mas (Kornelkirsche);pflegeaufwand;3,0;Szenario 2: Radikale Vermeidung;0,01250;langlebigkeit_wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
-Kleine Arten;Cornus mas (Kornelkirsche);pflegeaufwand;3,0;Szenario 3: Radikaler Lebenszyklus;0,20000;langlebigkeit_wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
+Kleine Arten;Cornus mas (Kornelkirsche);groesse_baumrigolen;6,0;Szenario 0: Baseline (IST);0,10000;wirtschaftlichkeit;6,0;38,0;1,0000000000000000;0,100000000000000006
+Kleine Arten;Cornus mas (Kornelkirsche);groesse_baumrigolen;6,0;Szenario 1: Forschungsfokus;0,10000;wirtschaftlichkeit;6,0;38,0;1,0000000000000000;0,100000000000000006
+Kleine Arten;Cornus mas (Kornelkirsche);groesse_baumrigolen;6,0;Szenario 2: Radikale Vermeidung;0,01250;wirtschaftlichkeit;6,0;38,0;1,0000000000000000;0,012500000000000001
+Kleine Arten;Cornus mas (Kornelkirsche);groesse_baumrigolen;6,0;Szenario 3: Radikaler Lebenszyklus;0,05000;wirtschaftlichkeit;6,0;38,0;1,0000000000000000;0,050000000000000003
+Kleine Arten;Cornus mas (Kornelkirsche);pflegeaufwand;3,0;Szenario 0: Baseline (IST);0,10000;wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
+Kleine Arten;Cornus mas (Kornelkirsche);pflegeaufwand;3,0;Szenario 1: Forschungsfokus;0,10000;wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
+Kleine Arten;Cornus mas (Kornelkirsche);pflegeaufwand;3,0;Szenario 2: Radikale Vermeidung;0,01250;wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
+Kleine Arten;Cornus mas (Kornelkirsche);pflegeaufwand;3,0;Szenario 3: Radikaler Lebenszyklus;0,05000;wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
 Kleine Arten;Cornus mas (Kornelkirsche);recyclingpotential;3,0;Szenario 0: Baseline (IST);0,10000;kreislauffaehigkeit;1,0;3,0;1,0000000000000000;0,100000000000000006
 Kleine Arten;Cornus mas (Kornelkirsche);recyclingpotential;3,0;Szenario 1: Forschungsfokus;0,25000;kreislauffaehigkeit;1,0;3,0;1,0000000000000000;0,250000000000000000
 Kleine Arten;Cornus mas (Kornelkirsche);recyclingpotential;3,0;Szenario 2: Radikale Vermeidung;0,45000;kreislauffaehigkeit;1,0;3,0;1,0000000000000000;0,450000000000000011
 Kleine Arten;Cornus mas (Kornelkirsche);recyclingpotential;3,0;Szenario 3: Radikaler Lebenszyklus;0,05000;kreislauffaehigkeit;1,0;3,0;1,0000000000000000;0,050000000000000003
-Kleine Arten;Pyrus calleryana ‘Chanticleer’ (Chinesische Zierbirne);lebensdauer;65,0;Szenario 0: Baseline (IST);0,20000;langlebigkeit_wirtschaftlichkeit;50,0;100,0;0,3000000000000000;0,059999999999999998
-Kleine Arten;Pyrus calleryana ‘Chanticleer’ (Chinesische Zierbirne);lebensdauer;65,0;Szenario 1: Forschungsfokus;0,20000;langlebigkeit_wirtschaftlichkeit;50,0;100,0;0,3000000000000000;0,059999999999999998
-Kleine Arten;Pyrus calleryana ‘Chanticleer’ (Chinesische Zierbirne);lebensdauer;65,0;Szenario 2: Radikale Vermeidung;0,02500;langlebigkeit_wirtschaftlichkeit;50,0;100,0;0,3000000000000000;0,007500000000000000
-Kleine Arten;Pyrus calleryana ‘Chanticleer’ (Chinesische Zierbirne);lebensdauer;65,0;Szenario 3: Radikaler Lebenszyklus;0,40000;langlebigkeit_wirtschaftlichkeit;50,0;100,0;0,3000000000000000;0,119999999999999996
+Kleine Arten;Pyrus calleryana ‘Chanticleer’ (Chinesische Zierbirne);lebensdauer;65,0;Szenario 0: Baseline (IST);0,20000;langlebigkeit;50,0;100,0;0,3000000000000000;0,059999999999999998
+Kleine Arten;Pyrus calleryana ‘Chanticleer’ (Chinesische Zierbirne);lebensdauer;65,0;Szenario 1: Forschungsfokus;0,20000;langlebigkeit;50,0;100,0;0,3000000000000000;0,059999999999999998
+Kleine Arten;Pyrus calleryana ‘Chanticleer’ (Chinesische Zierbirne);lebensdauer;65,0;Szenario 2: Radikale Vermeidung;0,02500;langlebigkeit;50,0;100,0;0,3000000000000000;0,007500000000000000
+Kleine Arten;Pyrus calleryana ‘Chanticleer’ (Chinesische Zierbirne);lebensdauer;65,0;Szenario 3: Radikaler Lebenszyklus;0,70000;langlebigkeit;50,0;100,0;0,3000000000000000;0,209999999999999992
 Kleine Arten;Pyrus calleryana ‘Chanticleer’ (Chinesische Zierbirne);klimaangepasst;2,0;Szenario 0: Baseline (IST);0,10000;multifunktionale_nutzungsqualitaet;1,0;3,0;0,5000000000000000;0,050000000000000003
 Kleine Arten;Pyrus calleryana ‘Chanticleer’ (Chinesische Zierbirne);klimaangepasst;2,0;Szenario 1: Forschungsfokus;0,02500;multifunktionale_nutzungsqualitaet;1,0;3,0;0,5000000000000000;0,012500000000000001
 Kleine Arten;Pyrus calleryana ‘Chanticleer’ (Chinesische Zierbirne);klimaangepasst;2,0;Szenario 2: Radikale Vermeidung;0,01250;multifunktionale_nutzungsqualitaet;1,0;3,0;0,5000000000000000;0,006250000000000000
@@ -1087,14 +1087,14 @@ Kleine Arten;Pyrus calleryana ‘Chanticleer’ (Chinesische Zierbirne);regenwas
 Kleine Arten;Pyrus calleryana ‘Chanticleer’ (Chinesische Zierbirne);regenwasser;115,0;Szenario 1: Forschungsfokus;0,01250;multifunktionale_nutzungsqualitaet;115,0;325,0;0,0000000000000000;0,000000000000000000
 Kleine Arten;Pyrus calleryana ‘Chanticleer’ (Chinesische Zierbirne);regenwasser;115,0;Szenario 2: Radikale Vermeidung;0,00625;multifunktionale_nutzungsqualitaet;115,0;325,0;0,0000000000000000;0,000000000000000000
 Kleine Arten;Pyrus calleryana ‘Chanticleer’ (Chinesische Zierbirne);regenwasser;115,0;Szenario 3: Radikaler Lebenszyklus;0,01250;multifunktionale_nutzungsqualitaet;115,0;325,0;0,0000000000000000;0,000000000000000000
-Kleine Arten;Pyrus calleryana ‘Chanticleer’ (Chinesische Zierbirne);groesse_baumrigolen;6,0;Szenario 0: Baseline (IST);0,10000;langlebigkeit_wirtschaftlichkeit;6,0;38,0;1,0000000000000000;0,100000000000000006
-Kleine Arten;Pyrus calleryana ‘Chanticleer’ (Chinesische Zierbirne);groesse_baumrigolen;6,0;Szenario 1: Forschungsfokus;0,10000;langlebigkeit_wirtschaftlichkeit;6,0;38,0;1,0000000000000000;0,100000000000000006
-Kleine Arten;Pyrus calleryana ‘Chanticleer’ (Chinesische Zierbirne);groesse_baumrigolen;6,0;Szenario 2: Radikale Vermeidung;0,01250;langlebigkeit_wirtschaftlichkeit;6,0;38,0;1,0000000000000000;0,012500000000000001
-Kleine Arten;Pyrus calleryana ‘Chanticleer’ (Chinesische Zierbirne);groesse_baumrigolen;6,0;Szenario 3: Radikaler Lebenszyklus;0,20000;langlebigkeit_wirtschaftlichkeit;6,0;38,0;1,0000000000000000;0,200000000000000011
-Kleine Arten;Pyrus calleryana ‘Chanticleer’ (Chinesische Zierbirne);pflegeaufwand;3,0;Szenario 0: Baseline (IST);0,10000;langlebigkeit_wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
-Kleine Arten;Pyrus calleryana ‘Chanticleer’ (Chinesische Zierbirne);pflegeaufwand;3,0;Szenario 1: Forschungsfokus;0,10000;langlebigkeit_wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
-Kleine Arten;Pyrus calleryana ‘Chanticleer’ (Chinesische Zierbirne);pflegeaufwand;3,0;Szenario 2: Radikale Vermeidung;0,01250;langlebigkeit_wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
-Kleine Arten;Pyrus calleryana ‘Chanticleer’ (Chinesische Zierbirne);pflegeaufwand;3,0;Szenario 3: Radikaler Lebenszyklus;0,20000;langlebigkeit_wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
+Kleine Arten;Pyrus calleryana ‘Chanticleer’ (Chinesische Zierbirne);groesse_baumrigolen;6,0;Szenario 0: Baseline (IST);0,10000;wirtschaftlichkeit;6,0;38,0;1,0000000000000000;0,100000000000000006
+Kleine Arten;Pyrus calleryana ‘Chanticleer’ (Chinesische Zierbirne);groesse_baumrigolen;6,0;Szenario 1: Forschungsfokus;0,10000;wirtschaftlichkeit;6,0;38,0;1,0000000000000000;0,100000000000000006
+Kleine Arten;Pyrus calleryana ‘Chanticleer’ (Chinesische Zierbirne);groesse_baumrigolen;6,0;Szenario 2: Radikale Vermeidung;0,01250;wirtschaftlichkeit;6,0;38,0;1,0000000000000000;0,012500000000000001
+Kleine Arten;Pyrus calleryana ‘Chanticleer’ (Chinesische Zierbirne);groesse_baumrigolen;6,0;Szenario 3: Radikaler Lebenszyklus;0,05000;wirtschaftlichkeit;6,0;38,0;1,0000000000000000;0,050000000000000003
+Kleine Arten;Pyrus calleryana ‘Chanticleer’ (Chinesische Zierbirne);pflegeaufwand;3,0;Szenario 0: Baseline (IST);0,10000;wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
+Kleine Arten;Pyrus calleryana ‘Chanticleer’ (Chinesische Zierbirne);pflegeaufwand;3,0;Szenario 1: Forschungsfokus;0,10000;wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
+Kleine Arten;Pyrus calleryana ‘Chanticleer’ (Chinesische Zierbirne);pflegeaufwand;3,0;Szenario 2: Radikale Vermeidung;0,01250;wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
+Kleine Arten;Pyrus calleryana ‘Chanticleer’ (Chinesische Zierbirne);pflegeaufwand;3,0;Szenario 3: Radikaler Lebenszyklus;0,05000;wirtschaftlichkeit;1,0;3,0;0,0000000000000000;0,000000000000000000
 Kleine Arten;Pyrus calleryana ‘Chanticleer’ (Chinesische Zierbirne);recyclingpotential;2,0;Szenario 0: Baseline (IST);0,10000;kreislauffaehigkeit;1,0;3,0;0,5000000000000000;0,050000000000000003
 Kleine Arten;Pyrus calleryana ‘Chanticleer’ (Chinesische Zierbirne);recyclingpotential;2,0;Szenario 1: Forschungsfokus;0,25000;kreislauffaehigkeit;1,0;3,0;0,5000000000000000;0,125000000000000000
 Kleine Arten;Pyrus calleryana ‘Chanticleer’ (Chinesische Zierbirne);recyclingpotential;2,0;Szenario 2: Radikale Vermeidung;0,45000;kreislauffaehigkeit;1,0;3,0;0,5000000000000000;0,225000000000000006
