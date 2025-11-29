@@ -489,7 +489,7 @@ df_sieger_baeume <- df_mca_total %>%
   # Ordnen für bessere Lesbarkeit
   arrange(szenario, desc(MCA_gesamtscore))
 
-# Anzeigen der 12 Sieger-Optionen (4 Szenarien * 3 Bäume)
+# Anzeigen der 12 Sieger-Bäume (4 Szenarien * 3 Bäume)
 print(paste("--- Top", N_BAEUME, "Bäume pro Szenario (für Zeitstrahl-Analyse) ---"))
 print(df_sieger_baeume)
 
@@ -522,7 +522,7 @@ print("--- Check: Plausibilität Ergebnisse (S0 Baseline) ---")
 # Zeig mir die Top 3 von Szenario 0
 df_sieger_baeume %>% 
   filter(szenario == "Szenario 0: Baseline (IST)") %>%
-  select(option, MCA_gesamtscore)
+  select(baumart, MCA_gesamtscore)
 
 ```
 
