@@ -330,6 +330,8 @@ ggsave("02_export/plots/check_03_zielkonflikt_baeume_4fach.png",
 
 ```
 
+![Zielkonflikt](02_export/plots/check_03_zielkonflikt_baeume_4fach.png)
+
 
 ## 5. MCA - Normalisierung
 
