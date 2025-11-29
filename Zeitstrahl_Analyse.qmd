@@ -56,26 +56,23 @@ Ziel: Alle Komponenten (Leitungen, Beläge, Bäume) in ein einheitliches Format 
 
 ## 2. Daten harmonisieren
 
-# --- 2.1 Leitungen aufbereiten (MIT VARIANTENVERGLEICH) ---
-# Wir nehmen Graben UND Kabelzug
-# Und wir nehmen BEIDE Lebensdauern (Technisch & Material)
-
+# --- 2.1 Leitungen aufbereiten (Nur Graben = Konflikt) ---
 df_leitungen <- df_leitungen_roh %>%
-  # 1. Filter
-  filter(Eingriffs_Typ %in% c("Graben", "Kabelzug")) %>%
+  # WICHTIG: Wir filtern streng auf "Graben".
+  # "Kabelzug" ist kein Konflikt für Bäume/Beläge und wird ignoriert.
+  filter(Eingriffs_Typ == "Graben") %>%
   
-  # 2. Pivotieren: Aus 2 Spalten werden 2 Zeilen pro Leitung
+  # Pivotieren für Sensitivitätsanalyse (Technisch vs. Material)
   pivot_longer(
     cols = c(Techn_Nutzungsdauer_a, Material_Lebensdauer_a),
     names_to = "lebensdauer_typ",
     values_to = "lebensdauer_wert"
   ) %>%
   
-  # 3. Namen anpassen (damit man sie im Plot unterscheidet)
   mutate(
     szenario = "Alle Szenarien", 
     kategorie = "Leitung",
-    # Neuer Name z.B.: "Abwasser (Techn.)" vs. "Abwasser (Mat.)"
+    # Unterscheidung im Namen
     komponente = paste0(Leitungstyp, " (", 
                         if_else(lebensdauer_typ == "Techn_Nutzungsdauer_a", "Techn.", "Mat."), 
                         ")")
@@ -83,24 +80,15 @@ df_leitungen <- df_leitungen_roh %>%
   
   select(szenario, kategorie, komponente, lebensdauer = lebensdauer_wert)
 
-# --- 2.2 Beläge aufbereiten ---
+# --- 2.2 Beläge aufbereiten (Unverändert) ---
 df_sieger_belaege_ld <- df_sieger_belaege_roh %>%
   left_join(df_belaege_stammdaten %>% select(option, lebensdauer), by = "option") %>%
   select(szenario, kategorie = belagskategorie, komponente = option, lebensdauer)
 
-# --- 2.3 Bäume aufbereiten ---
+# --- 2.3 Bäume aufbereiten (Unverändert) ---
 df_sieger_baeume_ld <- df_sieger_baeume_roh %>%
   left_join(df_baeume_stammdaten %>% select(baumart, lebensdauer), by = "baumart") %>%
   select(szenario, kategorie = baumkategorie, komponente = baumart, lebensdauer)
-
-
-# --- PRÜFUNG BLOCK 2 ---
-print("--- Check 1: Sind die Leitungen verdoppelt? ---")
-# Du solltest jetzt z.B. "Abwasser (Techn.)" UND "Abwasser (Mat.)" sehen
-table(df_leitungen$komponente)
-
-print("--- Check 2: Haben alle eine Lebensdauer? ---")
-summary(df_leitungen$lebensdauer)
 
 ```
 
@@ -110,28 +98,35 @@ Ziel: Eine "Master-Tabelle" erstellen, die Jede Komponente für Jedes Szenario e
 ```{r}
 ## 3. Master-Tabelle erstellen
 
-# Ziel: Eine grosse Tabelle bauen, die für jedes Szenario (S0-S3) alle Akteure enthält.
-# NEU: Wir nehmen jetzt ALLE Top-3-Kandidaten mit, nicht nur den Sieger.
+# Ziel: Master-Tabelle mit Info, wer der "Sieger" (Rang 1) ist.
 
-# 1. Liste der Szenarien aus den Siegern holen
+# 1. Liste der Szenarien
 szenario_liste <- unique(df_sieger_belaege_ld$szenario)
 
-# 2. Leitungen für jedes Szenario duplizieren
-# (Wir haben 14 Leitungs-Varianten und kopieren sie für S0, S1, S2, S3)
+# 2. Leitungen (Rang 0 = Boss)
 df_leitungen_final <- df_leitungen %>%
   select(-szenario) %>% 
   crossing(szenario = szenario_liste) %>% 
-  select(szenario, kategorie, komponente, lebensdauer)
+  select(szenario, kategorie, komponente, lebensdauer) %>%
+  mutate(rang = 0) # Leitungen haben immer Vorrang
 
-# 3. Die Sieger zusammenfügen (ALLE Top 3)
-# Wir nehmen einfach die Tabellen, die wir in Block 2 vorbereitet haben.
-# Da die Input-CSVs ('mca_top3_...') bereits genau 3 Einträge pro Szenario haben,
-# müssen wir hier NICHTS mehr filtern oder slicen.
+# 3. Sieger (Wir fügen den Rang hinzu)
+# Wir gehen davon aus, dass die Input-CSVs sortiert sind (Platz 1 oben)
+df_belaege_mit_rang <- df_sieger_belaege_ld %>%
+  group_by(szenario) %>%
+  mutate(rang = row_number()) %>% # Erstellt 1, 2, 3
+  ungroup()
 
+df_baeume_mit_rang <- df_sieger_baeume_ld %>%
+  group_by(szenario) %>%
+  mutate(rang = row_number()) %>%
+  ungroup()
+
+# 4. Zusammenfügen
 df_master <- bind_rows(
   df_leitungen_final,
-  df_sieger_belaege_ld, # Enthält jetzt Rang 1, 2 und 3
-  df_sieger_baeume_ld   # Enthält jetzt Rang 1, 2 und 3
+  df_belaege_mit_rang,
+  df_baeume_mit_rang
 )
 
 
@@ -155,6 +150,9 @@ df_master %>%
   filter(szenario == "Szenario 0: Baseline (IST)") %>%
   count(kategorie)
 
+print("--- Check: Existiert die Spalte 'rang'? ---")
+head(df_master)
+
 ```
 
 ## 4. Sanierungs-Events berechnen
@@ -162,29 +160,18 @@ Ziel: Den 100-Jahres-Zeitstrahl mit allen Sanierungs-Punkten berechnen.
 
 ```{r}
 ## 4. Sanierungs-Events berechnen
-# Ziel: Den 100-Jahres-Zeitstrahl mit allen Sanierungs-Punkten berechnen.
 
-# --- Schritt 4.1: Alle Sanierungs-Events berechnen ---
-# WICHTIG: Wir nutzen 'df_master' aus Block 3!
 zeitstrahl_events <- df_master %>%
-  # Erstellt für jede Komponente eine Liste von Events (z.B. 0, 40, 80)
   mutate(sanierungs_jahr = map(lebensdauer, ~ seq(from = 0, to = 100, by = .x))) %>%
-  # Klappt die Listen-Spalte in Zeilen aus
   unnest(sanierungs_jahr) %>%
-  # Entfernt das Baujahr (0) und alles nach 100 (wir wollen nur Sanierungen sehen)
   filter(sanierungs_jahr > 0, sanierungs_jahr <= 100) %>%
-  # Sortieren und Auswählen
-  select(szenario, kategorie, komponente, lebensdauer, sanierungs_jahr) %>%
-  arrange(szenario, komponente, sanierungs_jahr)
   
-# --- Schritt 4.2: Speichern ---
-print("--- Zeitstrahl-Event-Liste (Auszug) ---")
-print(zeitstrahl_events, n = 20)
+  # WICHTIG: 'rang' muss hier im select stehen!
+  select(szenario, kategorie, komponente, lebensdauer, sanierungs_jahr, rang) %>%
+  
+  arrange(szenario, komponente, sanierungs_jahr)
 
-write_csv2(
-  zeitstrahl_events,
-  file = "02_export/tables/zeitstrahl_events_100a.csv"
-)
+write_csv2(zeitstrahl_events, "02_export/tables/zeitstrahl_events_100a.csv")
 
 # --- PRÜFUNG BLOCK 4 ---
 
@@ -271,42 +258,76 @@ plot_zeitstrahl_split(events_mat, "Szenario 3: Radikaler Lebenszyklus", "Mat_S0_
 Ziel: Lösungsdarstellung für so wenige Sanierungszyklen wie möglich
 
 ```{r}
-## 6. Optimierung: Bündelung (Getrennt nach Logik)
+## 6. Optimierung: Hierarchische Bündelung (Leitungen > Sieger-Belag)
 
-# Funktion zur Berechnung der Bündelung
-optimize_events <- function(data, anchors, toleranz = 15) {
-  data %>%
+optimize_events_hierarchisch <- function(data, anchors_tiefbau, toleranz = 15) {
+  
+  # Schritt A: Wir identifizieren die Jahre, in denen der Sieger-Belag (Rang 1) saniert wird.
+  # KORREKTUR: Wir filtern alles, was NICHT Leitung und NICHT Baum ist.
+  surface_anchors_df <- data %>%
+    filter(!str_detect(kategorie, "Leitung|Arten"), rang == 1) %>%
+    select(szenario, anker_belag = sanierungs_jahr)
+  
+  # Wir fügen diese Info an den Hauptdatensatz an
+  data_joined <- data %>%
+    left_join(surface_anchors_df, by = "szenario", relationship = "many-to-many")
+  
+  # Schritt B: Die Optimierung
+  data_joined %>%
     mutate(
-      is_fix = kategorie == "Leitung",
+      # 1. Wer ist fix? NUR die tiefen Leitungen
+      is_fix_tiefbau = str_detect(komponente, "Abwasser|Regenwasser"),
+      
       jahr_optimiert = case_when(
-        is_fix ~ sanierungs_jahr,
-        # Dynamische Prüfung gegen alle Ankerjahre
+        # Fall A: Tiefe Leitungen bleiben fix
+        is_fix_tiefbau ~ sanierungs_jahr,
+        
+        # Fall B: Alle prüfen zuerst gegen TIEFBAU-ANKER
         TRUE ~ {
-          # Finde den nächsten Anker
-          closest_anchor <- map_dbl(sanierungs_jahr, ~ {
-            diffs <- .x - anchors
-            # Nur Anker in der Zukunft oder Gegenwart betrachten, 
-            # zu denen man "vorziehen" kann?
-            # Hier: Einfache Nähe (+/- Toleranz)
-            valid_anchors <- anchors[abs(diffs) <= toleranz]
-            if(length(valid_anchors) > 0) valid_anchors[1] else .x
+          # Suche Tiefbau-Anker in Toleranz
+          closest_tief <- map_dbl(sanierungs_jahr, ~ {
+            diffs <- .x - anchors_tiefbau
+            valid <- anchors_tiefbau[abs(diffs) <= toleranz]
+            if(length(valid) > 0) valid[1] else NA
           })
-          closest_anchor
+          
+          # Fall C: Wenn kein Tiefbau-Anker, prüfe gegen BELAGS-ANKER
+          # Aber nur für Beläge (nicht für Bäume oder Leitungen)
+          is_belag = !str_detect(kategorie, "Leitung|Arten")
+          
+          closest_belag <- if_else(is.na(closest_tief) & is_belag,
+             map2_dbl(sanierungs_jahr, anker_belag, ~ {
+               # Ist der aktuelle Punkt nah am Sieger-Belag-Jahr?
+               if(abs(.x - .y) <= 10) .y else NA # Kleinere Toleranz (10J) für Oberfläche
+             }),
+             NA_real_)
+          
+          # ENTSCHEIDUNG:
+          coalesce(closest_tief, closest_belag, sanierungs_jahr)
         }
       ),
+      
       wurde_verschoben = sanierungs_jahr != jahr_optimiert
-    )
+    ) %>%
+    # Deduplizieren
+    group_by(szenario, kategorie, komponente, lebensdauer, sanierungs_jahr) %>%
+    slice(1) %>%
+    ungroup()
 }
 
-# 1. Optimierung TECHNISCH (Anker 50, 80)
-df_opt_techn <- optimize_events(events_techn, anchors = c(50, 80))
+# --- ANWENDUNG ---
 
-# 2. Optimierung MATERIAL (Anker 70, 100 - Längere Zyklen!)
-df_opt_mat   <- optimize_events(events_mat, anchors = c(70, 100))
+# 1. Technisch (Anker 60, 80)
+df_opt_techn <- optimize_events_hierarchisch(events_techn, anchors_tiefbau = c(60, 80))
+
+# 2. Material (Anker 70, 100)
+df_opt_mat   <- optimize_events_hierarchisch(events_mat, anchors_tiefbau = c(70, 100))
 
 # Speichern
 write_csv2(df_opt_techn, "02_export/tables/zeitstrahl_optimiert_techn.csv")
 write_csv2(df_opt_mat, "02_export/tables/zeitstrahl_optimiert_mat.csv")
+
+print("Hierarchische Optimierung abgeschlossen.")
 
 ```
 
@@ -330,13 +351,13 @@ plot_opt_split <- function(data, szenario_name, anchors, filename) {
                  color = "grey60",
                  data = filter(data_plot, wurde_verschoben)) +
     
-    # 3. Ghost-Punkte (Original-Zeitpunkt) - HIER ANGEPASST!
+    # 3. Ghost-Punkte (Original-Zeitpunkt)
     geom_point(aes(x = sanierungs_jahr), 
-               shape = 21,          # Kreis mit Rand und Füllung
-               color = "grey30",    # Rand: Dunkelgrau/Fast Schwarz (gut sichtbar)
-               fill = "white",      # Füllung: Weiss (oder "grey95")
+               shape = 21,          # Kreis mit Rand
+               color = "grey30",    # Rand dunkelgrau
+               fill = "white",      # Innen weiss
                size = 2.5, 
-               alpha = 0.7) +       # Leicht transparent
+               alpha = 0.7) +
     
     # 4. Optimierte Punkte (Finaler Zeitpunkt)
     geom_point(aes(x = jahr_optimiert, 
@@ -356,7 +377,6 @@ plot_opt_split <- function(data, szenario_name, anchors, filename) {
          subtitle = paste(szenario_name), 
          x = "Jahr (Pfeil zeigt Bündelung)", y = NULL, color = NULL) +
     
-    # Theme Classic
     theme_classic(base_size = 11) +
     theme(
       legend.position = "bottom",
@@ -369,13 +389,15 @@ plot_opt_split <- function(data, szenario_name, anchors, filename) {
   print(p)
 }
 
-# --- PLOTS TECHNISCH (Anker 50/80) ---
-plot_opt_split(df_opt_techn, "Szenario 0: Baseline (IST)", c(50, 80), "02_export/plots/Optimierung_Techn_S0.png")
-plot_opt_split(df_opt_techn, "Szenario 1: Forschungsfokus", c(50, 80), "02_export/plots/Optimierung_Techn_S1.png")
-plot_opt_split(df_opt_techn, "Szenario 2: Radikale Vermeidung", c(50, 80), "02_export/plots/Optimierung_Techn_S2.png")
-plot_opt_split(df_opt_techn, "Szenario 3: Radikaler Lebenszyklus", c(50, 80), "02_export/plots/Optimierung_Techn_S3.png")
+# --- PLOTS TECHNISCH (Anker 60/80) ---
+# WICHTIG: Hier haben wir von 50 auf 60 korrigiert!
+plot_opt_split(df_opt_techn, "Szenario 0: Baseline (IST)", c(60, 80), "02_export/plots/Optimierung_Techn_S0.png")
+plot_opt_split(df_opt_techn, "Szenario 1: Forschungsfokus", c(60, 80), "02_export/plots/Optimierung_Techn_S1.png")
+plot_opt_split(df_opt_techn, "Szenario 2: Radikale Vermeidung", c(60, 80), "02_export/plots/Optimierung_Techn_S2.png")
+plot_opt_split(df_opt_techn, "Szenario 3: Radikaler Lebenszyklus", c(60, 80), "02_export/plots/Optimierung_Techn_S3.png")
 
 # --- PLOTS MATERIAL (Anker 70/100) ---
+# Hier bleibt es bei 70/100
 plot_opt_split(df_opt_mat, "Szenario 0: Baseline (IST)", c(70, 100), "02_export/plots/Optimierung_Mat_S0.png")
 plot_opt_split(df_opt_mat, "Szenario 1: Forschungsfokus", c(70, 100), "02_export/plots/Optimierung_Mat_S1.png")
 plot_opt_split(df_opt_mat, "Szenario 2: Radikale Vermeidung", c(70, 100), "02_export/plots/Optimierung_Mat_S2.png")
