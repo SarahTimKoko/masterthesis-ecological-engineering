@@ -1,5 +1,5 @@
 ---
-title: "MCA Anaylse Beläge"
+title: "MCA Analyse Beläge"
 author: "Sarah Pfeiffer"
 date: today
 format: 
@@ -65,7 +65,10 @@ weights_s3_raw <- read_delim(
   "01_data_input/Belaege_Gewichtung_Szenario3.csv",
   delim = ";"
 )
+```
 
+```{r}
+#| include: false
 # --- PRÜFUNG BLOCK 1 ---
 
 print("--- 1. Check: Spaltennamen Beläge (Sind alle Spaltennamen da?) ---")
@@ -84,7 +87,6 @@ head(weights_s3_raw)
 Ziel: Daten für den Join und die MCA Berechnung vorbereiten.
 
 ```{r}
-
 # A. Bereinigung der Rohdaten (Belaege_normiert.csv)
 df_belaege <- df_belaege_raw %>%
   select(belagskategorie, option, everything()) 
@@ -102,30 +104,25 @@ df_weights_s3 <- weights_s3_raw %>%
 
 # Jetzt binden wir sie zu einer finalen Gewichtungs-Tabelle zusammen
 df_weights <- bind_rows(df_weights_s0, df_weights_s1, df_weights_s2, df_weights_s3) %>%
+  # Berechne das Gesamtgewicht (gewicht) aus den Rohspalten,
+  mutate(
+    gewicht = group_weight * within_group_weight
+  ) %>%
+   # umbenennen für den Join
+  rename(
+    bewertungskategorie = criterion_id
+  ) %>%
+  # Auswählen der Spalten, die der Rest des Skripts braucht
+  select(szenario, bewertungskategorie, gewicht, group_id)
 
-# Berechne das Gesamtgewicht (gewicht) aus den Rohspalten,
-mutate(
-  gewicht = group_weight * within_group_weight
-) %>%
- 
-# umbenennen für den Join
-rename(
-  bewertungskategorie = criterion_id
-) %>%
-  
-# Auswählen der Spalten, die der Rest des Skripts braucht
-select(szenario, bewertungskategorie, gewicht, group_id)
+```
 
-print(df_weights, n = 48)
 
+```{r}
+#| include: false
 # --- PRÜFUNG BLOCK 2 ---
 
-print("--- Check: Haben wir die richtigen Namen in den Gewichten? ---")
-# Wir filtern mal nach allem was mit "kosten" zu tun hat
-df_weights %>% 
-  filter(grepl("kosten", bewertungskategorie, ignore.case = TRUE)) %>%
-  select(bewertungskategorie) %>%
-  distinct()
+print(df_weights, n = 44)
 
 print("--- Check: Stichprobe der Gewichte ---")
 # Zeig mir mal S0 und S3 im Vergleich für Kosten
@@ -154,18 +151,15 @@ df_belaege_long <- df_belaege %>%
 df_belaege_joined <- df_belaege_long %>%
   left_join(df_weights, by = "bewertungskategorie", relationship = "many-to-many")
 
-df_belaege_joined
 
+```
+
+
+```{r}
+#| include: false
 # --- PRÜFUNG BLOCK 3 ---
 
-# Wir geben kurz aus, was kein Gewicht hat zur Kontrolle
-missing_weights <- df_belaege_joined %>% 
-  filter(is.na(gewicht)) %>% 
-  select(bewertungskategorie) %>% 
-  distinct()
-
-print("Diese Kriterien haben kein Gewicht (werden nur visualisiert):")
-print(missing_weights)
+print(df_belaege_joined, n = 44)
 
 print("--- Check: Hat 'initialkosten' KEIN Gewicht (NA)? ---")
 df_belaege_joined %>%
@@ -191,10 +185,9 @@ Dies zeigt, warum eine Normierung (Block 4) zwingend notwendig ist,
 da die Skalen (Jahre, CHF, kg) völlig unterschiedlich sind.
 
 ```{r}
-
 # Boxplot der Rohwerte (Scientific Style - Korrigiert)
 # Hinweis: Da die Einheiten gemischt sind, nutzen wir facet_wrap mit freien Skalen.
-plot_rohwerte <- ggplot(df_belaege_joined, aes(y = wert)) +
+plot_rohwerte <- ggplot(df_belaege_long, aes(y = wert)) +
   geom_boxplot(fill = "grey95", width = 0.5, outlier.size = 1) +
   
   # Facetten für jedes Kriterium
@@ -218,7 +211,6 @@ plot_rohwerte <- ggplot(df_belaege_joined, aes(y = wert)) +
     strip.background = element_rect(fill = "grey95", color = NA),
     strip.text = element_text(face = "bold", size = 9),
     
-    # --- KORREKTUR ---
     # Y-Achse (Werte) MUSS sichtbar sein:
     axis.text.y = element_text(size = 8, color = "black"), 
     
@@ -229,10 +221,19 @@ plot_rohwerte <- ggplot(df_belaege_joined, aes(y = wert)) +
 
 print(plot_rohwerte)
 
-# Neuer Dateiname: _belaege am Ende!
+```
+
+
+```{r}
+#| include: false
+# Speicher des Plots
 ggsave("02_export/plots/check_01_rohwerte_verteilung_belaege.png", 
        plot = plot_rohwerte, width = 10, height = 8, dpi = 300)
 
+```
+
+
+```{r}
 # -------------------------------------------------------
 # PLOT B: Lebenszyklus-Bilanz Beläge (100 Jahre)
 # -------------------------------------------------------
@@ -313,7 +314,6 @@ Ziel:
 -Wie gut ist der entsprechende Belag im entsprechenden Kriterium im Vergleich zu allen anderen Belägen? (Min-Max-Skalierung)
 
 ```{r}
-
 # 5.1 Definieren: Wo ist "weniger" besser?
 kriterien_lower_is_better <- c(
   "initialkosten", 
@@ -338,13 +338,18 @@ df_belaege_normalized <- df_belaege_joined %>%
       bewertungskategorie %in% kriterien_lower_is_better ~ 1 - ((wert - min_wert) / (max_wert - min_wert))
     )
   ) %>%
-  ungroup()
+ungroup()
 
+```
+
+
+```{r}
+#| include: false
 # --- PRÜFUNG BLOCK 5 ---
 
-print("--- Check: Sind alle Kriterien da (auch die ohne Gewicht)? ---")
+print("--- Check: Sind alle Kriterien da (auch die ohne Gewicht) und ist der Score Normiert zwischen 0 und 1? ---")
 df_min_max_check <- df_belaege_normalized %>%
-  select(bewertungskategorie, min_wert, max_wert) %>%
+  select(bewertungskategorie, min_wert, max_wert, score_normiert) %>%
   distinct()
 
 print(df_min_max_check)
@@ -398,7 +403,15 @@ plot_normiert <- ggplot(df_belaege_normalized, aes(x = bewertungskategorie, y = 
     axis.text.x = element_text(color = "black", size = 10)  # Zahlen 0-1
   )
 
+
 print(plot_normiert)
+
+```
+
+
+
+```{r}
+#| include: false
 ggsave("02_export/plots/check_02_normierte_scores_belaege.png", 
        plot = plot_normiert, width = 10, height = 7, dpi = 300)
 
@@ -420,7 +433,6 @@ df_belaege_normalized %>%
 Ziel: Berechnung der besten geeigneten Beläge auf Basis Kriterienbewertung (score_normiert * gewicht)
 
 ```{r}
-
 # 7.1 Berechnung Score pro Kriterium
 df_mca_calculated <- df_belaege_normalized %>%
   # HIER filtern wir jetzt alles raus, was kein Gewicht hat (z.B. reine Initialkosten)
@@ -454,6 +466,11 @@ df_sieger_belaege <- df_mca_total %>%
 print(paste("--- Top", N_BELAEGE_AUSWAEHLEN, "Beläge pro Szenario (für Zeitstrahl-Analyse) ---"))
 print(df_sieger_belaege, n = 12)
 
+```
+
+
+```{r}
+#| include: false
 # Diese Auswahl auch exportieren
 write_csv2(
   df_sieger_belaege,
@@ -515,8 +532,11 @@ colors_gruppen <- c(
   "Kreislauffähigkeit" = "#c6dbef"                  # Sehr hellblau/Grau
 )
 # ----------------------------------------------------
+```
 
 
+
+```{r}
 # --- Plot 1: Ranking (Szenario 0) ---
 data_s0 <- df_mca_total %>% filter(szenario == "Szenario 0: Baseline (IST)")
 
@@ -547,9 +567,11 @@ plot_s0_rank <- ggplot(data_s0,
     plot.margin = margin(t = 5, r = 10, b = 5, l = 5, unit = "mm")
   )
 
-print(plot_s0_rank)
+print(plot_s0_rank, width = 10, height = 7)
 ggsave("02_export/plots/mca_gesamtergebnis_s0_belaege.png",
        plot = plot_s0_rank, width = 10, height = 7, dpi = 300)
+
+#------
 
 
 # --- Plot 2: Stacked Detail (Szenario 0) ---
@@ -590,7 +612,11 @@ print(plot_s0_stack)
 ggsave("02_export/plots/mca_detail_gruppen_s0_belaege.png",
        plot = plot_s0_stack, width = 10, height = 7, dpi = 300)
 
+# ![Alternative Bildunterschrift](02_export/plots/mca_detail_gruppen_s0_belaege.png)
+
 ```
+
+
 
 ### 8.2 Plot: Szenario 1 - Forschungsfokus
 
@@ -870,4 +896,3 @@ print("--- Check 3: Existiert der Ordner? (Optional) ---")
 dir.exists("02_export/tables")
  
 ```
-
