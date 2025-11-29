@@ -6,6 +6,7 @@ format:
     html:
         toc: true
         code-fold: false
+
 ---
 
 ## MCA Analyse für Szenario 0 bis 3
@@ -17,15 +18,16 @@ Ziel: Wahl der besten Bäume pro Szenario nach MCA Berechnung.
 - **Szenario 2:** "Radikale Vermeidung": Testet Hypothese 3 (H3) im Extrem (Fokus Umwelt & Kreislauf).
 - **Szenario 3:** "Radikaler Lebenszyklus": Testet Hypothesen 1 & 2 (H1/H2) im Extrem (Fokus Langlebigkeit).
 
+
 ## Libraries laden
 
 ```{r}
+
 library(tidyverse)
 library(readr)
 library(ggplot2)
 library(forcats)
 library(tidytext)
-
 
 ```
 
@@ -34,6 +36,7 @@ library(tidytext)
 Einlesen der Rohdaten für Belaege und Gewichtung für Szenario 0 bis 3
 
 ```{r}
+
 ## 1. Daten Importieren
 
 # Liest die Rohdaten für die Bäume ein
@@ -43,22 +46,37 @@ df_baeume_raw <- read_delim(
 )
 
 # Liest die Gewichtungen ein (jetzt mit "baeume" im Variablennamen)
-weights_baeume_s0_raw <- read_delim("01_data_input/Baeume_Gewichtung_Szenario0.csv", delim = ";")
-weights_baeume_s1_raw <- read_delim("01_data_input/Baeume_Gewichtung_Szenario1.csv", delim = ";")
-weights_baeume_s2_raw <- read_delim("01_data_input/Baeume_Gewichtung_Szenario2.csv", delim = ";")
-weights_baeume_s3_raw <- read_delim("01_data_input/Baeume_Gewichtung_Szenario3.csv", delim = ";")
+weights_baeume_s0_raw <- read_delim(
+  "01_data_input/Baeume_Gewichtung_Szenario0.csv", 
+  delim = ";"
+)
+weights_baeume_s1_raw <- read_delim(
+  "01_data_input/Baeume_Gewichtung_Szenario1.csv",
+  delim = ";"
+)
+weights_baeume_s2_raw <- read_delim(
+  "01_data_input/Baeume_Gewichtung_Szenario2.csv",
+  delim = ";"
+)
+weights_baeume_s3_raw <- read_delim(
+  "01_data_input/Baeume_Gewichtung_Szenario3.csv",
+  delim = ";"
+)
+```
 
-
+```{r}
+#| include: false
 # --- PRÜFUNG BLOCK 1 (Bäume) ---
 
-print("--- Check 1: Spaltennamen Bäume ---")
+print("--- 1. Check: Spaltennamen Bäume (Sind alle Spaltennamen da?) ---")
 colnames(df_baeume_raw)
 
-print("--- Check 2: Stichprobe Daten ---")
-head(df_baeume_raw) 
+print("--- 2. Check: Gewichtung S0 (Wurden Spalten getrennt?) ---")
+head(weights_baeume_s0_raw) 
 
-print("--- Check 4: Gewichtung S0 (Wurden Spalten getrennt?) ---")
-head(weights_baeume_s0_raw)
+print("--- 3. Check: Gewichtung S3 (Zur Sicherheit) ---")
+head(weights_baeume_s3_raw)
+
 ```
 
 ## 2. Daten bereinigen und harmonisieren
@@ -66,30 +84,40 @@ head(weights_baeume_s0_raw)
 Ziel: Daten für den Join und die MCA Berechnung vorbereiten.
 
 ```{r}
-## 2. Daten bereinigen und harmonisieren
-
 # A. Bereinigung der Rohdaten
 df_baeume <- df_baeume_raw %>%
   select(baumkategorie, baumart, everything()) 
 
 # B. Bereinigung der Gewichtungen (ALLE SZENARIEN)
-# Hier greifen wir jetzt auf die neuen Variablennamen zu
-df_weights_s0 <- weights_baeume_s0_raw %>% mutate(szenario = "Szenario 0: Baseline (IST)")
-df_weights_s1 <- weights_baeume_s1_raw %>% mutate(szenario = "Szenario 1: Forschungsfokus")
-df_weights_s2 <- weights_baeume_s2_raw %>% mutate(szenario = "Szenario 2: Radikale Vermeidung")
-df_weights_s3 <- weights_baeume_s3_raw %>% mutate(szenario = "Szenario 3: Radikaler Lebenszyklus")
+# Wir fügen den Roh-Dateien die Szenario-Namen hinzu
+df_weights_s0 <- weights_baeume_s0_raw %>%
+  mutate(szenario = "Szenario 0: Baseline (IST)")
+df_weights_s1 <- weights_baeume_s1_raw %>%
+  mutate(szenario = "Szenario 1: Forschungsfokus")
+df_weights_s2 <- weights_baeume_s2_raw %>%
+  mutate(szenario = "Szenario 2: Radikale Vermeidung")
+df_weights_s3 <- weights_baeume_s3_raw %>%
+  mutate(szenario = "Szenario 3: Radikaler Lebenszyklus")
 
-# Zusammenführen
+# Jetzt binden wir sie zu einer finalen Gewichtungs-Tabelle zusammen
 df_weights <- bind_rows(df_weights_s0, df_weights_s1, df_weights_s2, df_weights_s3) %>%
+  # Berechne das Gesamtgewicht (gewicht) aus den Rohspalten,
   mutate(
     gewicht = group_weight * within_group_weight
   ) %>%
+   # umbenennen für den Join
   rename(
     bewertungskategorie = criterion_id
   ) %>%
+  # Auswählen der Spalten, die der Rest des Skripts braucht
   select(szenario, bewertungskategorie, gewicht, group_id)
 
-# --- CHECK ---
+```
+
+
+```{r}
+#| include: false
+# --- PRÜFUNG BLOCK 2 ---
 print("--- Check: Stimmen Kriterien überein? ---")
 kriterien_gewichte <- unique(df_weights$bewertungskategorie)
 spalten_baeume <- colnames(df_baeume)
@@ -106,13 +134,10 @@ if(length(missing) > 0) {
 
 ## 3. Datentransformation
 
-Ziel: Transformation der Tabelle df_baeume von Wide-to-Long und Verknüpfung mit df_weights.
+Ziel: Transformation der Tabelle df_baeume von Wide-to-Long und anschliessende Verknüpfung mit der Tabelle df_weights über join
 
 ```{r}
-## 3. Datentransformation
-
 # 3.1 Wide-to-Long
-# Wir nutzen where(is.numeric), das ist robuster und konsistent mit dem Belags-Skript.
 df_baeume_long <- df_baeume %>%
   pivot_longer(
     cols = where(is.numeric), 
@@ -121,17 +146,22 @@ df_baeume_long <- df_baeume %>%
   )
 
 # 3.2 JOIN mit Gewichtung
-# Verknüpft die Baumdaten mit den 4 Szenarien
+# WICHTIG: Wir nutzen left_join. 
 df_baeume_joined <- df_baeume_long %>%
   left_join(df_weights, by = "bewertungskategorie", relationship = "many-to-many")
+
+```
+
+
+```{r}
+#| include: false
+# --- PRÜFUNG BLOCK 3 (Bäume) ---
 
 # Sicherheits-Check im Skript:
 # Bei Bäumen erwarten wir eigentlich für ALLE Kriterien ein Gewicht (anders als bei Belägen mit den Info-Kosten).
 if(any(is.na(df_baeume_joined$gewicht))) {
   warning("ACHTUNG: Einige Baum-Kriterien haben kein Gewicht gefunden! Bitte prüfen.")
 }
-
-# --- PRÜFUNG BLOCK 3 (Bäume) ---
 
 print("--- Check 1: Dimensionen (Sollte riesig sein) ---")
 # Erwartung: Anzahl Bäume (25) * Kriterien (ca. 11) * Szenarien (4)
@@ -151,6 +181,7 @@ df_baeume_joined %>%
   filter(baumart == "Quercus petraea (Traubeneiche)", szenario == "Szenario 2: Radikale Vermeidung") %>%
   filter(bewertungskategorie == "co2_bindung") %>%
   select(szenario, bewertungskategorie, wert, gewicht)
+  
 ```
 
 ## 4. Explorative Datenanalyse
@@ -166,19 +197,19 @@ da die Skalen (Jahre,m2,0-3 etc.) völlig unterschiedlich sind.
 #| out.width: "100%"
 #| warning: false
 
-## 4. Explorative Datenanalyse und Zielkonflikte
-
 # -------------------------------------------------------
-# TEIL 1: Boxplot der Rohwerte (Überblick)
+# TEIL 1: Boxplot der Rohwerte (Überblick)  (Scientific Style)
 # -------------------------------------------------------
+# Hinweis: Da die Einheiten gemischt sind, nutzen wir facet_wrap mit freien Skalen.
 plot_rohwerte_baeume <- ggplot(df_baeume_joined, aes(y = wert)) +
   geom_boxplot(fill = "grey95", width = 0.5, outlier.size = 1) +
   
-  # Facetten, da Einheiten unterschiedlich sind (Jahre vs kg CO2)
+  # Facetten für jedes Kriterium
   facet_wrap(~bewertungskategorie, scales = "free", ncol = 3) +
   
   labs(
-    title = NULL, # Titel in Word
+    title = NULL, # Titel kommt in Word
+    subtitle = NULL,
     x = NULL,
     y = "Rohwert (unterschiedliche Einheiten)"
   ) +
@@ -186,19 +217,37 @@ plot_rohwerte_baeume <- ggplot(df_baeume_joined, aes(y = wert)) +
   theme_classic(base_size = 11) +
   
   theme(
+    # Nur horizontale Gitterlinien (y) sind wichtig zum Ablesen der Werte
     panel.grid.major.y = element_line(color = "grey90", linewidth = 0.2),
     panel.grid.major.x = element_blank(),
+    
+    # Facetten-Label
     strip.background = element_rect(fill = "grey95", color = NA),
     strip.text = element_text(face = "bold", size = 9),
+    
+    # Y-Achse (Werte) MUSS sichtbar sein:
+    axis.text.y = element_text(size = 8, color = "black"), 
+    
+    # X-Achse (unten) kann leer sein:
     axis.text.x = element_blank(),
     axis.ticks.x = element_blank()
   )
 
 print(plot_rohwerte_baeume)
+
+```
+
+
+```{r}
+#| include: false
+# Speicher des Plots
 ggsave("02_export/plots/check_01_rohwerte_verteilung_baeume.png", 
        plot = plot_rohwerte_baeume, width = 10, height = 8, dpi = 300)
 
+```
 
+
+```{r}
 # -------------------------------------------------------
 # TEIL 2: Zielkonflikt Leistung vs. Kosten (Breiter & Lesbar)
 # -------------------------------------------------------
@@ -290,9 +339,7 @@ Ziel:
 
 
 ```{r}
-## 5. MCA - Normalisierung (Bäume)
-
-# 5.1 Definieren: Welche Kriterien sind 'schlechter', wenn sie 'höher' sind?
+# 5.1 Definieren: Wo ist "weniger" besser?
 kriterien_lower_is_better_baeume <- c(
   "pflegeaufwand",
   "groesse_baumrigolen"
@@ -300,29 +347,31 @@ kriterien_lower_is_better_baeume <- c(
 
 # 5.2 Min-Max-Skalierung
 # Wir normieren ALLES (auch ungewichtete Infos), damit wir sie plotten können.
+# WICHTIG: Hier NICHT nach Gewicht filtern!
 df_baeume_normalized <- df_baeume_joined %>%
-  filter(!is.na(wert)) %>% # Nur fehlende Werte entfernen
-  # KEIN Filter nach Gewicht hier!
-  
+  filter(!is.na(wert)) %>% # Nur Zeilen ohne Werte löschen 
   group_by(bewertungskategorie) %>%
   mutate(
     min_wert = min(wert, na.rm = TRUE),
     max_wert = max(wert, na.rm = TRUE),
     # Berechnung des Scores
     score_normiert = case_when(
-      # Sonderfall: Wenn Min und Max gleich sind (alle Bäume gleich gut) -> Score 1
+      # Sonderfall: Wenn Min und Max gleich sind (alle gleich gut) -> Score 1
       (max_wert - min_wert) == 0 ~ 1,
-      
       # Normale Skalierung (higher is better)
       !(bewertungskategorie %in% kriterien_lower_is_better_baeume) ~ (wert - min_wert) / (max_wert - min_wert),
-      
       # Invertierte Skalierung (lower is better)
       bewertungskategorie %in% kriterien_lower_is_better_baeume ~ 1 - ((wert - min_wert) / (max_wert - min_wert))
     )
   ) %>%
   ungroup()
 
-# --- PRÜFUNG BLOCK 5 (Bäume) ---
+```
+
+
+```{r}
+#| include: false
+# --- PRÜFUNG BLOCK 5 ---
 
 print("--- Check 1: Scores im Bereich 0-1? ---")
 summary(df_baeume_normalized$score_normiert)
@@ -347,8 +396,7 @@ Ziel: Überprüfen, ob die Min-Max-Skalierung (Block 5.2) funktioniert hat.
 #| out.width: "100%"
 #| warning: false
 
-## 6. Explorative Datenanalyse (Qualitätskontrolle)
-
+# Boxplot der normierten Scores (Scientific Style)
 # Ziel: Überprüfen, ob die Min-Max-Skalierung funktioniert hat.
 # Alle Boxplots müssen zwischen 0 und 1 liegen.
 
@@ -357,13 +405,13 @@ plot_normiert_baeume <- ggplot(df_baeume_normalized, aes(x = bewertungskategorie
   
   coord_flip() +
   
-  # Fixe Skala 0-1 (Das ist der wichtigste Check!)
+  # Fixe Skala 0-1 
   scale_y_continuous(limits = c(0, 1), expand = c(0, 0.05)) +
   
   labs(
-    title = NULL, # Titel kommt in Word
+    title = NULL,
     subtitle = NULL,
-    x = NULL, 
+    x = NULL, # Kriterien-Namen stehen an der Achse
     y = "Normierter Score (0 = schlecht, 1 = ideal)"
   ) +
   
@@ -379,12 +427,17 @@ plot_normiert_baeume <- ggplot(df_baeume_normalized, aes(x = bewertungskategorie
     axis.text.x = element_text(color = "black", size = 10)  # Zahlen 0-1
   )
 
+
 print(plot_normiert_baeume)
 
+```
+
+```{r}
+#| include: false
 ggsave("02_export/plots/check_02_normierte_scores_baeume.png", 
        plot = plot_normiert_baeume, width = 10, height = 7, dpi = 300)
 
-# --- PRÜFUNG BLOCK 6 (Bäume) ---
+# --- PRÜFUNG BLOCK 6 ---
 
 print("--- Check: Liegen alle Scores zwischen 0 und 1? ---")
 summary(df_baeume_normalized$score_normiert)
@@ -406,11 +459,9 @@ df_baeume_normalized %>%
 Ziel: Berechnung der besten geeigneten Bäume auf Basis Kriterienbewertung (score_normiert * gewicht)
 
 ```{r}
-## 7. MCA Berechnung & Ergebnisse
-
 # 7.1 Berechnung Score pro Kriterium
 df_mca_calculated <- df_baeume_normalized %>%
-  # HIER filtern wir alles raus, was kein Gewicht hat (Sicherheitsnetz)
+  # HIER filtern wir alles raus, was kein Gewicht hat
   filter(!is.na(gewicht)) %>% 
   mutate(MCA_score_kriterium = score_normiert * gewicht)
 
@@ -426,35 +477,62 @@ df_mca_total <- df_mca_calculated %>%
 print("--- MCA Gesamtergebnis (Auszug) ---")
 print(df_mca_total, n = 20)
 
-# 7.3 Auswahl Top 3 pro Szenario
+# 7.3 - Auswahl der "Top 3 Sieger"
+# Ziel: Für jedes der 4 Szenarien die Top 3 Bäume aus dem Gesamtranking
 N_BAEUME <- 3
 
 df_sieger_baeume <- df_mca_total %>%
   group_by(szenario) %>%
+  # Wählt die N besten Bäume innerhalb jedes Szenarios aus
   slice_max(MCA_gesamtscore, n = N_BAEUME) %>%
   ungroup() %>%
+  # Ordnen für bessere Lesbarkeit
   arrange(szenario, desc(MCA_gesamtscore))
 
-print("--- Die TOP 3 Bäume pro Szenario ---")
+# Anzeigen der 12 Sieger-Optionen (4 Szenarien * 3 Bäume)
+print(paste("--- Top", N_BAEUME, "Bäume pro Szenario (für Zeitstrahl-Analyse) ---"))
 print(df_sieger_baeume)
 
-# 7.4 Export der Tabellen
-write_csv2(df_sieger_baeume, "02_export/tables/mca_top3_baeume_pro_szenario.csv")
-write_csv2(df_mca_total, "02_export/tables/mca_rangliste_baeume_alle_szenarien.csv")
-write_csv2(df_mca_calculated, "02_export/tables/mca_details_berechnung_baeume.csv")
 ```
 
+
+```{r}
+#| include: false
+# 7.4 Export der Tabellen
+write_csv2(
+  df_sieger_baeume, 
+  file = "02_export/tables/mca_top3_baeume_pro_szenario.csv"
+)
+write_csv2(
+  df_mca_total, 
+  file = "02_export/tables/mca_rangliste_baeume_alle_szenarien.csv"
+)
+write_csv2(
+  df_mca_calculated, 
+  file = "02_export/tables/mca_details_berechnung_baeume.csv"
+)
+
+# --- PRÜFUNG BLOCK 7 ---
+
+print("--- Check: Enthält die Berechnung noch Zeilen ohne Gewicht? ---")
+# Sollte 0 Zeilen ergeben
+df_mca_calculated %>% filter(is.na(gewicht)) %>% count()
+
+print("--- Check: Plausibilität Ergebnisse (S0 Baseline) ---")
+# Zeig mir die Top 3 von Szenario 0
+df_sieger_baeume %>% 
+  filter(szenario == "Szenario 0: Baseline (IST)") %>%
+  select(option, MCA_gesamtscore)
+
+```
 
 ## 8. Darstellung
 
 Ziel: visualisierung der Ergebnisse 
 
 ```{r}
-## 8. Darstellung der Ergebnisse (Scientific Style)
 
-# --- 8.0 Vorbereitung & Farben ---
-
-# 1. Daten für Stacked Plots aufbereiten (mit schönen Gruppennamen)
+# --- Datenaufbereitung für Stacked Plot (einmalig & aufgehübscht) ---
 df_mca_groups_baeume_plot <- df_mca_calculated %>%
   group_by(szenario, baumkategorie, baumart, group_id) %>%
   summarise(gruppen_score = sum(MCA_score_kriterium, na.rm = TRUE), .groups = 'drop') %>%
@@ -467,13 +545,13 @@ df_mca_groups_baeume_plot <- df_mca_calculated %>%
     TRUE ~ group_id
   ))
 
-# 2. Farben definieren (Einheitlich zur gesamten Arbeit)
+# 1. Farben definieren (Einheitlich zur gesamten Arbeit)
 colors_kategorie_baeume <- c(
   "Grosskronige Arten" = "#084594",  # Dunkelblau
   "Mittelgrosse Arten" = "#4292c6",  # Mittelblau
   "Kleine Arten" = "#9ecae1"         # Hellblau
 )
-
+# 2. Farben für Kriterien-Gruppen
 colors_gruppen <- c(
   "Langlebigkeit & Wirtschaftlichkeit" = "#08306b", 
   "Multifunktionale Nutzungsqualität" = "#2171b5",  
@@ -486,7 +564,6 @@ colors_gruppen <- c(
 ### 8.1 Plot: Szenario 0 - Baseline (IST)
 
 ```{r}
-
 #| label: fig-mca-plots-baeume-s0
 #| fig.width: 13
 #| fig.height: 10
@@ -520,11 +597,10 @@ plot_s0_rank <- ggplot(data_s0,
     panel.grid.major.y = element_blank(),
     panel.grid.major.x = element_line(color = "grey90", linewidth = 0.2),
     axis.text = element_text(color = "black"),
-    # Rand links vergrössern für lange Baumnamen
     plot.margin = margin(t = 5, r = 10, b = 5, l = 5, unit = "mm")
   )
 
-print(plot_s0_rank)
+print(plot_s0_rank, width = 10, height = 7)
 ggsave("02_export/plots/mca_baeume_rank_s0.png",
        plot = plot_s0_rank, width = 10, height = 10, dpi = 300)
 
@@ -548,9 +624,7 @@ plot_s0_stack <- ggplot(data_s0_groups,
     y = NULL, 
     fill = "Kriteriengruppe"
   ) +
-  
   theme_classic(base_size = 11) + 
-  
   theme(
     legend.position = "bottom",
     legend.text = element_text(size = 9),
@@ -565,12 +639,14 @@ plot_s0_stack <- ggplot(data_s0_groups,
 print(plot_s0_stack)
 ggsave("02_export/plots/mca_baeume_detail_s0.png",
        plot = plot_s0_stack, width = 10, height = 10, dpi = 300)
+
+# ![Alternative Bildunterschrift](02_export/plots/mca_detail_gruppen_s0_belaege.png)
+
 ```
 
 ### 8.2 Plot: Szenario 1 - Forschungsfokus
 
 ```{r}
-
 #| label: fig-mca-plots-baeume-s1
 #| fig.width: 13
 #| fig.height: 10
@@ -588,7 +664,12 @@ plot_s1_rank <- ggplot(data_s1,
   scale_x_continuous(limits = c(0, 1), expand = c(0, 0.05)) + 
   scale_y_discrete(labels = function(x) stringr::str_wrap(x, width = 40)) +
   scale_fill_manual(values = colors_kategorie_baeume) +
-  labs(title = NULL, x = "MCA Score (0-1)", y = NULL, fill = "Baumkategorie") +
+  labs(
+    title = NULL,
+    x = "MCA Score (0-1)",
+    y = NULL,
+    fill = "Baumkategorie"
+  ) +
   theme_classic(base_size = 11) + 
   theme(
     legend.position = "bottom",
@@ -599,7 +680,8 @@ plot_s1_rank <- ggplot(data_s1,
   )
 
 print(plot_s1_rank)
-ggsave("02_export/plots/mca_baeume_rank_s1.png", plot = plot_s1_rank, width = 10, height = 10, dpi = 300)
+ggsave("02_export/plots/mca_baeume_rank_s1.png",
+      plot = plot_s1_rank, width = 10, height = 10, dpi = 300)
 
 # --- Plot 2: Stacked Detail (Szenario 1) ---
 data_s1_groups <- df_mca_groups_baeume_plot %>% filter(szenario == "Szenario 1: Forschungsfokus")
@@ -612,7 +694,12 @@ plot_s1_stack <- ggplot(data_s1_groups,
   scale_x_continuous(limits = c(0, 1), expand = c(0, 0.05)) +
   scale_y_discrete(labels = function(x) stringr::str_wrap(x, width = 40)) +
   scale_fill_manual(values = colors_gruppen) +
-  labs(title = NULL, x = "Beitrag zum Score", y = NULL, fill = "Kriteriengruppe") +
+  labs(
+    title = NULL,
+    x = "Beitrag zum Score",
+    y = NULL,
+    fill = "Kriteriengruppe"
+  ) +
   theme_classic(base_size = 11) + 
   theme(
     legend.position = "bottom",
@@ -626,7 +713,8 @@ plot_s1_stack <- ggplot(data_s1_groups,
   guides(fill = guide_legend(nrow = 2, byrow = TRUE))
 
 print(plot_s1_stack)
-ggsave("02_export/plots/mca_baeume_detail_s1.png", plot = plot_s1_stack, width = 10, height = 10, dpi = 300)
+ggsave("02_export/plots/mca_baeume_detail_s1.png",
+      plot = plot_s1_stack, width = 10, height = 10, dpi = 300)
 ```
 
 
@@ -650,7 +738,12 @@ plot_s2_rank <- ggplot(data_s2,
   scale_x_continuous(limits = c(0, 1), expand = c(0, 0.05)) + 
   scale_y_discrete(labels = function(x) stringr::str_wrap(x, width = 40)) +
   scale_fill_manual(values = colors_kategorie_baeume) +
-  labs(title = NULL, x = "MCA Score (0-1)", y = NULL, fill = "Baumkategorie") +
+  labs(
+    title = NULL,
+    x = "MCA Score (0-1)",
+    y = NULL,
+    fill = "Baumkategorie"
+  ) +
   theme_classic(base_size = 11) + 
   theme(
     legend.position = "bottom",
@@ -661,7 +754,8 @@ plot_s2_rank <- ggplot(data_s2,
   )
 
 print(plot_s2_rank)
-ggsave("02_export/plots/mca_baeume_rank_s2.png", plot = plot_s2_rank, width = 10, height = 10, dpi = 300)
+ggsave("02_export/plots/mca_baeume_rank_s2.png",
+       plot = plot_s2_rank, width = 10, height = 10, dpi = 300)
 
 # --- Plot 2: Stacked Detail (Szenario 2) ---
 data_s2_groups <- df_mca_groups_baeume_plot %>% filter(szenario == "Szenario 2: Radikale Vermeidung")
@@ -674,7 +768,12 @@ plot_s2_stack <- ggplot(data_s2_groups,
   scale_x_continuous(limits = c(0, 1), expand = c(0, 0.05)) +
   scale_y_discrete(labels = function(x) stringr::str_wrap(x, width = 40)) +
   scale_fill_manual(values = colors_gruppen) +
-  labs(title = NULL, x = "Beitrag zum Score", y = NULL, fill = "Kriteriengruppe") +
+  labs(
+    title = NULL,
+    x = "Beitrag zum Score",
+    y = NULL,
+    fill = "Kriteriengruppe"
+  ) +
   theme_classic(base_size = 11) + 
   theme(
     legend.position = "bottom",
@@ -688,13 +787,13 @@ plot_s2_stack <- ggplot(data_s2_groups,
   guides(fill = guide_legend(nrow = 2, byrow = TRUE))
 
 print(plot_s2_stack)
-ggsave("02_export/plots/mca_baeume_detail_s2.png", plot = plot_s2_stack, width = 10, height = 10, dpi = 300)
+ggsave("02_export/plots/mca_baeume_detail_s2.png",
+       plot = plot_s2_stack, width = 10, height = 10, dpi = 300)
 ```
 
 ### 8.4 Plot: Szenario 3 - Radikaler Lebenszyklus
 
 ```{r}
-
 #| label: fig-mca-plots-baeume-s3
 #| fig.width: 13
 #| fig.height: 10
@@ -712,7 +811,12 @@ plot_s3_rank <- ggplot(data_s3,
   scale_x_continuous(limits = c(0, 1), expand = c(0, 0.05)) + 
   scale_y_discrete(labels = function(x) stringr::str_wrap(x, width = 40)) +
   scale_fill_manual(values = colors_kategorie_baeume) +
-  labs(title = NULL, x = "MCA Score (0-1)", y = NULL, fill = "Baumkategorie") +
+  labs(
+    title = NULL,
+    x = "MCA Score (0-1)",
+    y = NULL,
+    fill = "Baumkategorie"
+  ) +
   theme_classic(base_size = 11) + 
   theme(
     legend.position = "bottom",
@@ -723,7 +827,9 @@ plot_s3_rank <- ggplot(data_s3,
   )
 
 print(plot_s3_rank)
-ggsave("02_export/plots/mca_baeume_rank_s3.png", plot = plot_s3_rank, width = 10, height = 10, dpi = 300)
+ggsave("02_export/plots/mca_baeume_rank_s3.png",
+       plot = plot_s3_rank, width = 10, height = 10, dpi = 300)
+
 
 # --- Plot 2: Stacked Detail (Szenario 3) ---
 data_s3_groups <- df_mca_groups_baeume_plot %>% filter(szenario == "Szenario 3: Radikaler Lebenszyklus")
@@ -736,7 +842,12 @@ plot_s3_stack <- ggplot(data_s3_groups,
   scale_x_continuous(limits = c(0, 1), expand = c(0, 0.05)) +
   scale_y_discrete(labels = function(x) stringr::str_wrap(x, width = 40)) +
   scale_fill_manual(values = colors_gruppen) +
-  labs(title = NULL, x = "Beitrag zum Score", y = NULL, fill = "Kriteriengruppe") +
+  labs(
+    title = NULL,
+    x = "Beitrag zum Score",
+    y = NULL,
+    fill = "Kriteriengruppe"
+  ) +
   theme_classic(base_size = 11) + 
   theme(
     legend.position = "bottom",
@@ -750,7 +861,8 @@ plot_s3_stack <- ggplot(data_s3_groups,
   guides(fill = guide_legend(nrow = 2, byrow = TRUE))
 
 print(plot_s3_stack)
-ggsave("02_export/plots/mca_baeume_detail_s3.png", plot = plot_s3_stack, width = 10, height = 10, dpi = 300)
+ggsave("02_export/plots/mca_baeume_detail_s3.png",
+       plot = plot_s3_stack, width = 10, height = 10, dpi = 300)
 
 # --- PRÜFUNG BLOCK 8 (Bäume) ---
 
@@ -779,46 +891,5 @@ df_mca_total %>%
   select(baumart, MCA_gesamtscore)
 
 ```
-
-## 9. Ergebnistabellen exportieren
-
-```{r}
-
-# 1. Speichern der "Top 3" Sieger pro Szenario
-# (Diese Tabelle ist der Input für Phase 4 / Zeitstrahl!)
-write_csv2(
-  df_sieger_baeume,
-  file = "02_export/tables/mca_top3_baeume_pro_szenario.csv"
-)
-
-# 2. Speichern der kompletten Rangliste (für den Anhang)
-write_csv2(
-  df_mca_total,
-  file = "02_export/tables/mca_rangliste_baeume_alle_szenarien.csv"
-)
-
-# 3. Speichern der Berechnungs-Details (falls du Score-Details prüfen musst)
-write_csv2(
-  df_mca_calculated,
-  file = "02_export/tables/mca_details_berechnung_baeume.csv"
-)
-
-print("--- Export erfolgreich abgeschlossen! ---")
-
-# --- PRÜFUNG BLOCK 9 ---
-print("--- Check: Wurden die Dateien erstellt? ---")
-list.files("02_export/tables", pattern = "baeume")
-
-
-```
-
-
-
-
-
-
-
-
-
 
 
