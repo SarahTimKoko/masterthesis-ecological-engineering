@@ -318,7 +318,8 @@ plot_tradeoff_4fach <- ggplot(df_plot_tradeoff,
     plot.margin = margin(t = 5, r = 5, b = 35, l = 5, unit = "mm")
   )
 
-print(plot_tradeoff_4fach)
+# alternativ direkt im Markdown anzeigen des gespeicherten plots
+# print(plot_tradeoff_4fach)
 
 # 3. Speichern (ANPASSUNG 3: Viel breiter!)
 ggsave("02_export/plots/check_03_zielkonflikt_baeume_4fach.png", 

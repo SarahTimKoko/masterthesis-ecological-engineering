@@ -38,7 +38,11 @@ df_baeume_stammdaten  <- read_delim("01_data_input/Baeume_tidy.csv", delim = ";"
 # --- C. Input 3: Die "Konstanten" (Leitungen) ---
 df_leitungen_roh <- read_csv2("01_data_input/Leitungen_IST.csv")
 
+```
 
+
+```{r}
+#| include: false
 # --- PRÜFUNG BLOCK 1 ---
 print("--- Check: Wurden die Sieger geladen? ---")
 head(df_sieger_belaege_roh, 6)
@@ -110,7 +114,7 @@ df_leitungen_final <- df_leitungen %>%
   select(szenario, kategorie, komponente, lebensdauer) %>%
   mutate(rang = 0) # Leitungen haben immer Vorrang
 
-# 3. Sieger (Wir fügen den Rang hinzu)
+# 3. Sieger Beläge und Bäume (Wir fügen den Rang hinzu)
 # Wir gehen davon aus, dass die Input-CSVs sortiert sind (Platz 1 oben)
 df_belaege_mit_rang <- df_sieger_belaege_ld %>%
   group_by(szenario) %>%
@@ -129,15 +133,19 @@ df_master <- bind_rows(
   df_baeume_mit_rang
 )
 
+```
 
+
+
+```{r}
+#| include: false
 # --- PRÜFUNG BLOCK 3 ---
-
 print("--- Check 1: Stimmt die Anzahl Zeilen? ---")
 # Rechnung NEU:
-# Leitungen: 14 Typen * 4 Szenarien = 56
+# Leitungen: 10 Typen * 4 Szenarien = 40
 # Beläge:     3 Typen * 4 Szenarien = 12
 # Bäume:      3 Typen * 4 Szenarien = 12
-# TOTAL:      56 + 12 + 12 = 80 Zeilen
+# TOTAL:      40 + 12 + 12 = 64 Zeilen
 nrow(df_master)
 
 print("--- Check 2: Sind pro Szenario 3 Bäume da? ---")
@@ -172,12 +180,14 @@ zeitstrahl_events <- df_master %>%
   arrange(szenario, komponente, sanierungs_jahr)
 
 write_csv2(zeitstrahl_events, "02_export/tables/zeitstrahl_events_100a.csv")
+```
 
+
+```{r}
 # --- PRÜFUNG BLOCK 4 ---
-
+#| include: false
 print("--- Check 1: Anzahl Events insgesamt ---")
 nrow(zeitstrahl_events) 
-# Sollte einige Hundert sein (80 Komponenten * ca. 1-2 Eingriffe)
 
 print("--- Check 2: Beispiel Selbstheilender Asphalt (S0) ---")
 # Der hält ca. 42-45 Jahre. Wir erwarten Eingriffe bei ca. 45 und 90.
