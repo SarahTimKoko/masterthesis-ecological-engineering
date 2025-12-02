@@ -249,14 +249,7 @@ plot_zeitstrahl_split <- function(data, szenario_titel, filename_suffix) {
       axis.text = element_text(color = "black")
     )
   
-  # print(p)
-```
-
-
-```{r}
-#| include: false
-# Speichern
-  ggsave(paste0("02_export/plots/Zeitstrahl_", filename_suffix, ".png"), 
+   ggsave(paste0("02_export/plots/Zeitstrahl_", filename_suffix, ".png"), 
          plot = p, width = 10, height = 10, dpi = 300)
   print(p)
 }
@@ -271,14 +264,6 @@ plot_zeitstrahl_split(events_mat, "Szenario 1: Forschungsfokus", "Mat_S0_vs_S1")
 plot_zeitstrahl_split(events_mat, "Szenario 2: Radikale Vermeidung", "Mat_S0_vs_S2")
 plot_zeitstrahl_split(events_mat, "Szenario 3: Radikaler Lebenszyklus", "Mat_S0_vs_S3")
 ```
-
-![Alternative Bildunterschrift](02_export/plots/Zeitstrahl_Techn_S0_vs_S1.png)
-![Alternative Bildunterschrift](02_export/plots/Zeitstrahl_Techn_S0_vs_S2.png)
-![Alternative Bildunterschrift](02_export/plots/Zeitstrahl_Techn_S0_vs_S3.png)
-![Alternative Bildunterschrift](02_export/plots/Zeitstrahl_Mat_S0_vs_S1.png)
-![Alternative Bildunterschrift](02_export/plots/Zeitstrahl_Mat_S0_vs_S2.png)
-![Alternative Bildunterschrift](02_export/plots/Zeitstrahl_Mat_S0_vs_S3.png)
-
 
 ## 6. Optimierter Zeitstrahl
 Ziel: Lösungsdarstellung für so wenige Sanierungszyklen wie möglich
@@ -414,15 +399,15 @@ plot_opt_split <- function(data, szenario_name, anchors, filename) {
       panel.grid.major.x = element_blank(),
       axis.text = element_text(color = "black")
     )
- # print(p)
+ ggsave(filename, plot = p, width = 10, height = 7, dpi = 300)
+  print(p)
+
+}
 ```
 
 
 ```{r}
 #| include: false
-ggsave(filename, plot = p, width = 10, height = 7, dpi = 300)
-  print(p)
-}
 
 # --- PLOTS TECHNISCH (Anker 60/80) ---
 plot_opt_split(df_opt_techn, "Szenario 0: Baseline (IST)", c(60, 80), "02_export/plots/Optimierung_Techn_S0.png")
@@ -437,17 +422,8 @@ plot_opt_split(df_opt_mat, "Szenario 2: Radikale Vermeidung", c(70, 100), "02_ex
 plot_opt_split(df_opt_mat, "Szenario 3: Radikaler Lebenszyklus", c(70, 100), "02_export/plots/Optimierung_Mat_S3.png")
 ```
 
-![Alternative Bildunterschrift](02_export/plots/Optimierung_Techn_S0.png)
-![Alternative Bildunterschrift](02_export/plots/Optimierung_Techn_S1.png)
-![Alternative Bildunterschrift](02_export/plots/Optimierung_Techn_S2.png)
 
-![Alternative Bildunterschrift](02_export/plots/Optimierung_Techn_S3.png)
 
-![Alternative Bildunterschrift](02_export/plots/Optimierung_Mat_S0.png)
-![Alternative Bildunterschrift](02_export/plots/Optimierung_Mat_S1.png)
-![Alternative Bildunterschrift](02_export/plots/Optimierung_Mat_S2.png)
-
-![Alternative Bildunterschrift](02_export/plots/Optimierung_Mat_S3.png)
 
 
 
