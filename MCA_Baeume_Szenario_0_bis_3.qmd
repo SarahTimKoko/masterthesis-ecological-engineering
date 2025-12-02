@@ -223,7 +223,7 @@ plot_rohwerte_baeume <- ggplot(df_baeume_joined, aes(y = wert)) +
     
     # Facetten-Label
     strip.background = element_rect(fill = "grey95", color = NA),
-    strip.text = element_text(face = "bold", size = 9),
+    strip.text = element_text(face = "plain", size = 9),
     
     # Y-Achse (Werte) MUSS sichtbar sein:
     axis.text.y = element_text(size = 8, color = "black"), 
@@ -248,86 +248,144 @@ ggsave("02_export/plots/check_01_rohwerte_verteilung_baeume.png",
 
 
 ```{r}
+
+#| label: fig-baeume-scientific-clean
+#| fig.width: 12
+#| fig.height: 10
+#| out.width: "100%"
+#| warning: false
+
+## 4. Explorative Datenanalyse (Scientific Style - Clean)
+
+library(patchwork)
+
 # -------------------------------------------------------
-# TEIL 2: Zielkonflikt Leistung vs. Kosten (Breiter & Lesbar)
+# DATEN VORBEREITEN (Gemeinsame Basis)
 # -------------------------------------------------------
 
-# 1. Daten vorbereiten (Bleibt gleich)
-df_plot_tradeoff <- df_baeume_long %>%
-  filter(bewertungskategorie %in% c("co2_bindung", "kuehlung", "regenwasser", "groesse_baumrigolen")) %>%
+levels_kategorie <- c("Grosskronige Arten", "Mittelgrosse Arten", "Kleine Arten")
+
+colors_baeume <- c(
+  "Grosskronige Arten" = "#084594", 
+  "Mittelgrosse Arten" = "#4292c6", 
+  "Kleine Arten" = "#9ecae1"
+)
+
+# -------------------------------------------------------
+# TEIL 1: RAUMBEDARF (Ohne Text im Balken)
+# -------------------------------------------------------
+
+# 1. Daten filtern & Bereinigen
+df_raum <- df_baeume_joined %>%
+  filter(bewertungskategorie == "groesse_baumrigolen") %>%
   mutate(wert = as.numeric(wert)) %>%
-  mutate(facet_label = case_when(
-    bewertungskategorie == "co2_bindung" ~ "Leistung: CO2-Bindung [kg CO₂/a]",
-    bewertungskategorie == "kuehlung" ~ "Leistung: Kühlung [°C]",
-    bewertungskategorie == "regenwasser" ~ "Leistung: Regenwasser [l/Tag]", 
-    bewertungskategorie == "groesse_baumrigolen" ~ "Kosten: Grösse Baumrigolen [m³]"
-  )) %>%
-  filter(!is.na(facet_label)) %>%
-  mutate(facet_label = fct_relevel(facet_label, 
-                                   "Leistung: CO2-Bindung [kg CO₂/a]",
-                                   "Leistung: Kühlung [°C]",
-                                   "Leistung: Regenwasser [l/Tag]",
-                                   "Kosten: Grösse Baumrigolen [m³]")) %>%
-  mutate(baumkategorie = fct_relevel(baumkategorie, 
-                                     "Grosskronige Arten", 
-                                     "Mittelgrosse Arten", 
-                                     "Kleine Arten")) %>%
+  distinct(baumart, wert, baumkategorie) %>%
+  mutate(baumkategorie = fct_relevel(baumkategorie, levels_kategorie)) %>%
   arrange(baumkategorie, baumart) %>%
   mutate(baumart_sortiert = factor(baumart, levels = unique(baumart)))
 
 # 2. Plot erstellen
-plot_tradeoff_4fach <- ggplot(df_plot_tradeoff, 
+plot_raum <- ggplot(df_raum, 
+       aes(x = baumart_sortiert, y = wert, fill = baumkategorie)) +
+  
+  # HIER GEÄNDERT: Nur Balken, kein Text
+  geom_col(width = 0.7) +
+  
+  scale_fill_manual(values = colors_baeume) +
+  scale_x_discrete(labels = function(x) stringr::str_wrap(x, width = 25)) +
+  
+  # Skala feinrastern
+  scale_y_continuous(breaks = seq(0, 100, 5)) +
+  
+  labs(
+    title = NULL,
+    subtitle = NULL,
+    x = NULL,
+    y = "Volumen [m\u00B3]",
+    fill = "Baumkategorie"
+  ) +
+  
+  theme_classic(base_size = 11) +
+  
+  theme(
+    legend.position = "bottom",
+    plot.title = element_text(face = "plain", size = 12, hjust = 0),
+    panel.grid.major.y = element_line(color = "grey90", linewidth = 0.2),
+    axis.text.x = element_text(angle = 45, hjust = 1, size = 8, color = "black"),
+    plot.margin = margin(t = 5, r = 5, b = 10, l = 5, unit = "mm")
+  )
+
+print(plot_raum)
+ggsave("02_export/plots/Abb_Baeume_Raumbedarf_clean.png", 
+       plot = plot_raum, width = 10, height = 8, dpi = 300)
+
+
+# -------------------------------------------------------
+# TEIL 2: ÖKOLOGISCHE LEISTUNG (Optimiert für Lesbarkeit)
+# -------------------------------------------------------
+
+# 1. Daten filtern
+df_leistung <- df_baeume_joined %>%
+  filter(bewertungskategorie %in% c("co2_bindung", "kuehlung", "regenwasser")) %>%
+  mutate(wert = as.numeric(wert)) %>%
+  distinct(baumart, bewertungskategorie, wert, baumkategorie) %>%
+  mutate(facet_label = case_when(
+    bewertungskategorie == "co2_bindung" ~ "CO\u2082-Bindung [kg/a]",
+    bewertungskategorie == "kuehlung" ~ "Kühlleistung [\u00B0C]", 
+    bewertungskategorie == "regenwasser" ~ "Regenwasser [l/Tag]"
+  )) %>%
+  mutate(facet_label = fct_relevel(facet_label, 
+                                   "CO\u2082-Bindung [kg/a]", 
+                                   "Kühlleistung [\u00B0C]", 
+                                   "Regenwasser [l/Tag]")) %>%
+  mutate(baumkategorie = fct_relevel(baumkategorie, levels_kategorie)) %>%
+  arrange(baumkategorie, baumart) %>%
+  mutate(baumart_sortiert = factor(baumart, levels = unique(baumart)))
+
+# 2. Plot erstellen
+plot_leistung <- ggplot(df_leistung, 
        aes(x = baumart_sortiert, y = wert, fill = baumkategorie)) +
   
   geom_col(width = 0.7) +
   
-  # Facetten untereinander
-  facet_wrap(~facet_label, ncol = 1, scales = "free_y") +
+  facet_wrap(~facet_label, ncol = 1, scales = "free_y", strip.position = "top") +
   
-  scale_fill_manual(values = c(
-    "Grosskronige Arten" = "#084594", 
-    "Mittelgrosse Arten" = "#4292c6", 
-    "Kleine Arten" = "#9ecae1"
-  )) +
+  scale_fill_manual(values = colors_baeume) +
   
-  # Textumbruch (etwas enger fassen, damit es nicht zu breit wird)
-  scale_x_discrete(labels = function(x) stringr::str_wrap(x, width = 25)) +
+  # HIER GEÄNDERT: Früherer Umbruch (width = 15) gegen breite Textblöcke
+  scale_x_discrete(labels = function(x) stringr::str_wrap(x, width = 30)) +
   
   labs(
     title = NULL, 
     x = NULL,
-    y = "Wert",
+    y = NULL, 
     fill = "Baumkategorie"
   ) +
   
-  theme_classic(base_size = 11) + 
+  theme_classic(base_size = 11) +
   
   theme(
     legend.position = "bottom",
+    plot.title = element_text(face = "plain", size = 12, hjust = 0),
+    
     panel.grid.major.y = element_line(color = "grey90", linewidth = 0.2),
     panel.grid.major.x = element_blank(),
     
-    # ANPASSUNG 1: Schrift etwas kleiner, damit sie nicht überlappt
-    axis.text.x = element_text(angle = 45, hjust = 1, size = 8, color = "black"),
-    axis.text.y = element_text(size = 9, color = "black"),
-    
     strip.background = element_rect(fill = "grey95", color = NA),
-    strip.text = element_text(face = "bold", size = 10, hjust = 0),
+    strip.text = element_text(face = "plain", size = 10, hjust = 0),
     
-    # ANPASSUNG 2: Mehr Platz unten (b=35mm) für die schrägen Texte
-    plot.margin = margin(t = 5, r = 5, b = 35, l = 5, unit = "mm")
+    # HIER GEÄNDERT: Schrift kleiner (7) und vjust=1 für sauberen 45-Grad-Anschluss
+    axis.text.x = element_text(angle = 45, hjust = 1, vjust = 1, size = 9, color = "black"),
+    
+    # Ränder: Unten und Links genug Platz
+    plot.margin = margin(t = 5, r = 10, b = 40, l = 10, unit = "mm")
   )
 
-# alternativ direkt im Markdown anzeigen des gespeicherten plots
-# print(plot_tradeoff_4fach)
+print(plot_leistung)
 
-# 3. Speichern (ANPASSUNG 3: Viel breiter!)
-ggsave("02_export/plots/check_03_zielkonflikt_baeume_4fach.png", 
-       plot = plot_tradeoff_4fach, 
-       width = 14,  # <--- HIER VERGRÖSSERT (war 10)
-       height = 16, 
-       dpi = 300)
-
+# Speichern (Breite 12 reicht oft, wenn die Schrift klein genug ist)
+ggsave("02_export/plots/Abb_Baeume_Leistung_clean.png", 
+       plot = plot_leistung, width = 12, height = 14, dpi = 300)
 
 ```
 
