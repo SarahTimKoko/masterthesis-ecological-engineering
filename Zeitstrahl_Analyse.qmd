@@ -403,11 +403,6 @@ plot_opt_split <- function(data, szenario_name, anchors, filename) {
   print(p)
 
 }
-```
-
-
-```{r}
-#| include: false
 
 # --- PLOTS TECHNISCH (Anker 60/80) ---
 plot_opt_split(df_opt_techn, "Szenario 0: Baseline (IST)", c(60, 80), "02_export/plots/Optimierung_Techn_S0.png")
