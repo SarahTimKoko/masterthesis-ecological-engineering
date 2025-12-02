@@ -28,6 +28,7 @@ library(readr)
 library(ggplot2)
 library(forcats)
 library(tidytext)
+library(patchwork)
 
 ```
 
@@ -233,7 +234,7 @@ plot_rohwerte_baeume <- ggplot(df_baeume_joined, aes(y = wert)) +
     axis.ticks.x = element_blank()
   )
 
-print(plot_rohwerte_baeume)
+# print(plot_rohwerte_baeume)
 
 ```
 
@@ -245,10 +246,9 @@ ggsave("02_export/plots/check_01_rohwerte_verteilung_baeume.png",
        plot = plot_rohwerte_baeume, width = 10, height = 8, dpi = 300)
 
 ```
-
+![Alternative Bildunterschrift](02_export/plots/check_01_rohwerte_verteilung_baeume.png)
 
 ```{r}
-
 #| label: fig-baeume-scientific-clean
 #| fig.width: 12
 #| fig.height: 10
@@ -315,11 +315,18 @@ plot_raum <- ggplot(df_raum,
     plot.margin = margin(t = 5, r = 5, b = 10, l = 5, unit = "mm")
   )
 
-print(plot_raum)
+# print(plot_raum)
+```
+
+
+```{r}
+#| include: false
 ggsave("02_export/plots/Abb_Baeume_Raumbedarf_clean.png", 
        plot = plot_raum, width = 10, height = 8, dpi = 300)
+```
+![Alternative Bildunterschrift](02_export/plots/Abb_Baeume_Raumbedarf_clean.png)
 
-
+```{r}
 # -------------------------------------------------------
 # TEIL 2: ÖKOLOGISCHE LEISTUNG (Optimiert für Lesbarkeit)
 # -------------------------------------------------------
@@ -381,15 +388,19 @@ plot_leistung <- ggplot(df_leistung,
     plot.margin = margin(t = 5, r = 10, b = 40, l = 10, unit = "mm")
   )
 
-print(plot_leistung)
+# print(plot_leistung)
+```
 
+
+```{r}
+#| include: false
 # Speichern (Breite 12 reicht oft, wenn die Schrift klein genug ist)
 ggsave("02_export/plots/Abb_Baeume_Leistung_clean.png", 
        plot = plot_leistung, width = 12, height = 14, dpi = 300)
 
 ```
 
-![Zielkonflikt](02_export/plots/check_03_zielkonflikt_baeume_4fach.png)
+![Alternative Bildunterschrift](02_export/plots/Abb_Baeume_Leistung_clean.png)
 
 
 ## 5. MCA - Normalisierung
@@ -489,7 +500,7 @@ plot_normiert_baeume <- ggplot(df_baeume_normalized, aes(x = bewertungskategorie
   )
 
 
-print(plot_normiert_baeume)
+# print(plot_normiert_baeume)
 
 ```
 
@@ -497,7 +508,10 @@ print(plot_normiert_baeume)
 #| include: false
 ggsave("02_export/plots/check_02_normierte_scores_baeume.png", 
        plot = plot_normiert_baeume, width = 10, height = 7, dpi = 300)
+```
 
+![Alternative Bildunterschrift](02_export/plots/check_02_normierte_scores_baeume.png)
+```{r}
 # --- PRÜFUNG BLOCK 6 ---
 
 print("--- Check: Liegen alle Scores zwischen 0 und 1? ---")
@@ -663,11 +677,18 @@ plot_s0_rank <- ggplot(data_s0,
     plot.margin = margin(t = 5, r = 10, b = 5, l = 5, unit = "mm")
   )
 
-print(plot_s0_rank, width = 10, height = 7)
+# print(plot_s0_rank, width = 10, height = 7)
+```
+
+
+```{r}
+#| include: false
 ggsave("02_export/plots/mca_baeume_rank_s0.png",
        plot = plot_s0_rank, width = 10, height = 10, dpi = 300)
+```
 
-
+![Alternative Bildunterschrift](02_export/plots/mca_baeume_rank_s0.png)
+```{r}
 # --- Plot 2: Stacked Detail (Szenario 0) ---
 data_s0_groups <- df_mca_groups_baeume_plot %>% filter(szenario == "Szenario 0: Baseline (IST)")
 
@@ -699,13 +720,17 @@ plot_s0_stack <- ggplot(data_s0_groups,
   ) +
   guides(fill = guide_legend(nrow = 2, byrow = TRUE))
 
-print(plot_s0_stack)
+# print(plot_s0_stack)
+```
+
+
+```{r}
+#| include: false
 ggsave("02_export/plots/mca_baeume_detail_s0.png",
        plot = plot_s0_stack, width = 10, height = 10, dpi = 300)
-
-# ![Alternative Bildunterschrift](02_export/plots/mca_detail_gruppen_s0_belaege.png)
-
 ```
+![Alternative Bildunterschrift](02_export/plots/mca_baeume_detail_s0.png)
+
 
 ### 8.2 Plot: Szenario 1 - Forschungsfokus
 
@@ -775,11 +800,16 @@ plot_s1_stack <- ggplot(data_s1_groups,
   ) +
   guides(fill = guide_legend(nrow = 2, byrow = TRUE))
 
-print(plot_s1_stack)
+# print(plot_s1_stack)
+```
+
+
+```{r}
+#| include: false
 ggsave("02_export/plots/mca_baeume_detail_s1.png",
       plot = plot_s1_stack, width = 10, height = 10, dpi = 300)
 ```
-
+![Alternative Bildunterschrift](02_export/plots/mca_baeume_detail_s1.png)
 
 ### 8.3 Plot: Szenario 2 - Radikale Vermeidung
 
@@ -816,10 +846,18 @@ plot_s2_rank <- ggplot(data_s2,
     plot.margin = margin(t = 5, r = 10, b = 5, l = 5, unit = "mm")
   )
 
-print(plot_s2_rank)
+# print(plot_s2_rank)
+```
+
+
+```{r}
+#| include: false
 ggsave("02_export/plots/mca_baeume_rank_s2.png",
        plot = plot_s2_rank, width = 10, height = 10, dpi = 300)
+```
+![Alternative Bildunterschrift](02_export/plots/mca_baeume_rank_s2.png)
 
+```{r}
 # --- Plot 2: Stacked Detail (Szenario 2) ---
 data_s2_groups <- df_mca_groups_baeume_plot %>% filter(szenario == "Szenario 2: Radikale Vermeidung")
 
@@ -849,10 +887,18 @@ plot_s2_stack <- ggplot(data_s2_groups,
   ) +
   guides(fill = guide_legend(nrow = 2, byrow = TRUE))
 
-print(plot_s2_stack)
+# print(plot_s2_stack)
+```
+
+
+```{r}
+#| include: false
 ggsave("02_export/plots/mca_baeume_detail_s2.png",
        plot = plot_s2_stack, width = 10, height = 10, dpi = 300)
 ```
+
+![Alternative Bildunterschrift](02_export/plots/mca_baeume_detail_s2.png)
+
 
 ### 8.4 Plot: Szenario 3 - Radikaler Lebenszyklus
 
@@ -923,10 +969,19 @@ plot_s3_stack <- ggplot(data_s3_groups,
   ) +
   guides(fill = guide_legend(nrow = 2, byrow = TRUE))
 
-print(plot_s3_stack)
+# print(plot_s3_stack)
+```
+
+
+```{r}
+#| include: false
 ggsave("02_export/plots/mca_baeume_detail_s3.png",
        plot = plot_s3_stack, width = 10, height = 10, dpi = 300)
+```
 
+![Alternative Bildunterschrift](02_export/plots/mca_baeume_detail_s3.png)
+
+```{r}
 # --- PRÜFUNG BLOCK 8 (Bäume) ---
 
 print("--- Check 1: Stimmt die Mathematik der Stacked Plots? ---")
@@ -954,5 +1009,3 @@ df_mca_total %>%
   select(baumart, MCA_gesamtscore)
 
 ```
-
-

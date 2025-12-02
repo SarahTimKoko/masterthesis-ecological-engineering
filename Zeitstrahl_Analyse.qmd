@@ -183,9 +183,10 @@ write_csv2(zeitstrahl_events, "02_export/tables/zeitstrahl_events_100a.csv")
 ```
 
 
+
 ```{r}
-# --- PRÜFUNG BLOCK 4 ---
 #| include: false
+# --- PRÜFUNG BLOCK 4 ---
 print("--- Check 1: Anzahl Events insgesamt ---")
 nrow(zeitstrahl_events) 
 
@@ -201,6 +202,7 @@ zeitstrahl_events %>% filter(sanierungs_jahr == 0)
 
 ## 5. Finale Synthese: Zeitstrahl-Visualisierung
 Ziel: Vergleich der Sanierungs-Szenarien zur Beantwortung von H1 & H2.
+
 ```{r}
 ## 5. Finale Synthese: Zeitstrahl-Visualisierung (Getrennt)
 
@@ -247,7 +249,13 @@ plot_zeitstrahl_split <- function(data, szenario_titel, filename_suffix) {
       axis.text = element_text(color = "black")
     )
   
-  # Speichern
+  # print(p)
+```
+
+
+```{r}
+#| include: false
+# Speichern
   ggsave(paste0("02_export/plots/Zeitstrahl_", filename_suffix, ".png"), 
          plot = p, width = 10, height = 10, dpi = 300)
   print(p)
@@ -263,6 +271,14 @@ plot_zeitstrahl_split(events_mat, "Szenario 1: Forschungsfokus", "Mat_S0_vs_S1")
 plot_zeitstrahl_split(events_mat, "Szenario 2: Radikale Vermeidung", "Mat_S0_vs_S2")
 plot_zeitstrahl_split(events_mat, "Szenario 3: Radikaler Lebenszyklus", "Mat_S0_vs_S3")
 ```
+
+![Alternative Bildunterschrift](02_export/plots/Zeitstrahl_Techn_S0_vs_S1.png)
+![Alternative Bildunterschrift](02_export/plots/Zeitstrahl_Techn_S0_vs_S2.png)
+![Alternative Bildunterschrift](02_export/plots/Zeitstrahl_Techn_S0_vs_S3.png)
+![Alternative Bildunterschrift](02_export/plots/Zeitstrahl_Mat_S0_vs_S1.png)
+![Alternative Bildunterschrift](02_export/plots/Zeitstrahl_Mat_S0_vs_S2.png)
+![Alternative Bildunterschrift](02_export/plots/Zeitstrahl_Mat_S0_vs_S3.png)
+
 
 ## 6. Optimierter Zeitstrahl
 Ziel: Lösungsdarstellung für so wenige Sanierungszyklen wie möglich
@@ -332,7 +348,11 @@ df_opt_techn <- optimize_events_hierarchisch(events_techn, anchors_tiefbau = c(6
 
 # 2. Material (Anker 70, 100)
 df_opt_mat   <- optimize_events_hierarchisch(events_mat, anchors_tiefbau = c(70, 100))
+```
 
+
+```{r}
+#| include: false
 # Speichern
 write_csv2(df_opt_techn, "02_export/tables/zeitstrahl_optimiert_techn.csv")
 write_csv2(df_opt_mat, "02_export/tables/zeitstrahl_optimiert_mat.csv")
@@ -394,25 +414,40 @@ plot_opt_split <- function(data, szenario_name, anchors, filename) {
       panel.grid.major.x = element_blank(),
       axis.text = element_text(color = "black")
     )
-  
-  ggsave(filename, plot = p, width = 10, height = 7, dpi = 300)
+ # print(p)
+```
+
+
+```{r}
+#| include: false
+ggsave(filename, plot = p, width = 10, height = 7, dpi = 300)
   print(p)
 }
 
 # --- PLOTS TECHNISCH (Anker 60/80) ---
-# WICHTIG: Hier haben wir von 50 auf 60 korrigiert!
 plot_opt_split(df_opt_techn, "Szenario 0: Baseline (IST)", c(60, 80), "02_export/plots/Optimierung_Techn_S0.png")
 plot_opt_split(df_opt_techn, "Szenario 1: Forschungsfokus", c(60, 80), "02_export/plots/Optimierung_Techn_S1.png")
 plot_opt_split(df_opt_techn, "Szenario 2: Radikale Vermeidung", c(60, 80), "02_export/plots/Optimierung_Techn_S2.png")
 plot_opt_split(df_opt_techn, "Szenario 3: Radikaler Lebenszyklus", c(60, 80), "02_export/plots/Optimierung_Techn_S3.png")
 
 # --- PLOTS MATERIAL (Anker 70/100) ---
-# Hier bleibt es bei 70/100
 plot_opt_split(df_opt_mat, "Szenario 0: Baseline (IST)", c(70, 100), "02_export/plots/Optimierung_Mat_S0.png")
 plot_opt_split(df_opt_mat, "Szenario 1: Forschungsfokus", c(70, 100), "02_export/plots/Optimierung_Mat_S1.png")
 plot_opt_split(df_opt_mat, "Szenario 2: Radikale Vermeidung", c(70, 100), "02_export/plots/Optimierung_Mat_S2.png")
 plot_opt_split(df_opt_mat, "Szenario 3: Radikaler Lebenszyklus", c(70, 100), "02_export/plots/Optimierung_Mat_S3.png")
 ```
+
+![Alternative Bildunterschrift](02_export/plots/Optimierung_Techn_S0.png)
+![Alternative Bildunterschrift](02_export/plots/Optimierung_Techn_S1.png)
+![Alternative Bildunterschrift](02_export/plots/Optimierung_Techn_S2.png)
+
+![Alternative Bildunterschrift](02_export/plots/Optimierung_Techn_S3.png)
+
+![Alternative Bildunterschrift](02_export/plots/Optimierung_Mat_S0.png)
+![Alternative Bildunterschrift](02_export/plots/Optimierung_Mat_S1.png)
+![Alternative Bildunterschrift](02_export/plots/Optimierung_Mat_S2.png)
+
+![Alternative Bildunterschrift](02_export/plots/Optimierung_Mat_S3.png)
 
 
 

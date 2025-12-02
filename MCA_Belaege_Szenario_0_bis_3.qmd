@@ -28,6 +28,7 @@ library(readr)
 library(ggplot2)
 library(forcats)
 library(tidytext)
+library(patchwork)
 
 ```
 
@@ -217,7 +218,7 @@ plot_rohwerte <- ggplot(df_belaege_long, aes(y = wert)) +
     axis.ticks.x = element_blank()
   )
 
-print(plot_rohwerte)
+# print(plot_rohwerte)
 
 ```
 
@@ -230,6 +231,7 @@ ggsave("02_export/plots/check_01_rohwerte_verteilung_belaege.png",
 
 ```
 
+![Alternative Bildunterschrift](02_export/plots/check_01_rohwerte_verteilung_belaege.png)
 
 ```{r}
 #| label: fig-lebenszyklus-final-clean
@@ -238,13 +240,9 @@ ggsave("02_export/plots/check_01_rohwerte_verteilung_belaege.png",
 #| out.width: "100%"
 #| warning: false
 
-## 4. Explorative Datenanalyse (Scientific Style - Final)
-
-if(!require(patchwork)) install.packages("patchwork")
-library(patchwork)
 
 # -------------------------------------------------------
-# TEIL 1: KOSTEN (Gestapelt: Erneuerungszyklen + Unterhalt)
+# TEIL 2: KOSTEN (Gestapelt: Erneuerungszyklen + Unterhalt)
 # -------------------------------------------------------
 
 # 1. Daten vorbereiten
@@ -317,14 +315,22 @@ plot_kosten_stacked <- ggplot(df_plot_kosten_final,
   ) +
   guides(fill = guide_legend(reverse = TRUE))
 
+# print(plot_kosten_stacked)
+```
+
+
+```{r}
+#| include: false
 # Speichern Kosten
-print(plot_kosten_stacked)
 ggsave("02_export/plots/Abb_Lebenszyklus_Kosten_Stacked_Zyklen.png", 
        plot = plot_kosten_stacked, width = 8, height = 8, dpi = 300)
+```
 
+![Alternative Bildunterschrift](02_export/plots/Abb_Lebenszyklus_Kosten_Stacked_Zyklen.png)
 
+```{r}
 # -------------------------------------------------------
-# TEIL 2: UMWELT (Clean & Feines Raster)
+# TEIL 3: UMWELT (Clean & Feines Raster)
 # -------------------------------------------------------
 
 # --- Plot A: CO2-Emissionen ---
@@ -390,10 +396,17 @@ p_grau <- ggplot(df_grau, aes(x = option_sortiert, y = wert, fill = kategorie)) 
 # --- Zusammenfügen ---
 plot_umwelt_combined <- p_co2 / p_grau
 
-print(plot_umwelt_combined)
+# print(plot_umwelt_combined)
+```
+
+
+```{r}
+#| include: false
 ggsave("02_export/plots/Abb_Lebenszyklus_Umwelt_clean.png", 
        plot = plot_umwelt_combined, width = 8, height = 12, dpi = 300) # Höhe auf 12 erhöht für Platz
 ```
+
+![Alternative Bildunterschrift](02_export/plots/Abb_Lebenszyklus_Umwelt_clean.png)
 
 ## 5. MCA - Normalisierung
 
@@ -501,15 +514,19 @@ plot_normiert <- ggplot(df_belaege_normalized, aes(x = bewertungskategorie, y = 
   )
 
 
-print(plot_normiert)
+#print(plot_normiert)
 
 ```
+
 
 ```{r}
 #| include: false
 ggsave("02_export/plots/check_02_normierte_scores_belaege.png", 
        plot = plot_normiert, width = 10, height = 7, dpi = 300)
+```
 
+![Alternative Bildunterschrift](02_export/plots/check_02_normierte_scores_belaege.png)
+```{r}
 # --- PRÜFUNG BLOCK 6 ---
 
 print("--- Check: Liegen alle Scores zwischen 0 und 1? ---")
@@ -672,11 +689,19 @@ plot_s0_rank <- ggplot(data_s0,
     plot.margin = margin(t = 5, r = 10, b = 5, l = 5, unit = "mm")
   )
 
-print(plot_s0_rank, width = 10, height = 7)
+# print(plot_s0_rank, width = 10, height = 7)
+```
+
+
+```{r}
+#| include: false
 ggsave("02_export/plots/mca_gesamtergebnis_s0_belaege.png",
        plot = plot_s0_rank, width = 10, height = 7, dpi = 300)
+```
 
+![Alternative Bildunterschrift](02_export/plots/mca_gesamtergebnis_s0_belaege.png)
 
+```{r}
 # --- Plot 2: Stacked Detail (Szenario 0) ---
 data_s0_groups <- df_mca_groups_belaege_plot %>% filter(szenario == "Szenario 0: Baseline (IST)")
 
@@ -708,13 +733,18 @@ plot_s0_stack <- ggplot(data_s0_groups,
   ) +
   guides(fill = guide_legend(nrow = 2, byrow = TRUE))
 
-print(plot_s0_stack)
+# print(plot_s0_stack)
+```
+
+
+```{r}
+#| include: false
 ggsave("02_export/plots/mca_detail_gruppen_s0_belaege.png",
        plot = plot_s0_stack, width = 10, height = 7, dpi = 300)
-
-# ![Alternative Bildunterschrift](02_export/plots/mca_detail_gruppen_s0_belaege.png)
-
 ```
+
+![Alternative Bildunterschrift](02_export/plots/mca_detail_gruppen_s0_belaege.png)
+
 
 ### 8.2 Plot: Szenario 1 - Forschungsfokus
 
@@ -751,11 +781,19 @@ plot_s1_rank <- ggplot(data_s1,
     plot.margin = margin(t = 5, r = 10, b = 5, l = 5, unit = "mm")
   )
 
-print(plot_s1_rank)
+# print(plot_s1_rank)
+```
+
+
+```{r}
+#| include: false
 ggsave("02_export/plots/mca_gesamtergebnis_s1_belaege.png",
        plot = plot_s1_rank, width = 10, height = 7, dpi = 300)
+```
+![Alternative Bildunterschrift](02_export/plots/mca_gesamtergebnis_s1_belaege.png)
 
 
+```{r}
 # --- Plot 2: Stacked Detail (Szenario 1) ---
 data_s1_groups <- df_mca_groups_belaege_plot %>% filter(szenario == "Szenario 1: Forschungsfokus")
 
@@ -785,10 +823,17 @@ plot_s1_stack <- ggplot(data_s1_groups,
   ) +
   guides(fill = guide_legend(nrow = 2, byrow = TRUE))
 
-print(plot_s1_stack)
+# print(plot_s1_stack)
+```
+
+
+```{r}
+#| include: false
 ggsave("02_export/plots/mca_detail_gruppen_s1_belaege.png",
        plot = plot_s1_stack, width = 10, height = 7, dpi = 300)
 ```
+
+![Alternative Bildunterschrift](02_export/plots/mca_detail_gruppen_s1_belaege.png)
 
 ### 8.3 Plot: Szenario 2 - Radikale Vermeidung
 
@@ -825,11 +870,19 @@ plot_s2_rank <- ggplot(data_s2,
     plot.margin = margin(t = 5, r = 10, b = 5, l = 5, unit = "mm")
   )
 
-print(plot_s2_rank)
+#print(plot_s2_rank)
+
+```
+
+
+```{r}
+#| include: false
 ggsave("02_export/plots/mca_gesamtergebnis_s2_belaege.png",
        plot = plot_s2_rank, width = 10, height = 7, dpi = 300)
+```
 
-
+![Alternative Bildunterschrift](02_export/plots/mca_gesamtergebnis_s2_belaege.png)
+```{r}
 # --- Plot 2: Stacked Detail (Szenario 2) ---
 data_s2_groups <- df_mca_groups_belaege_plot %>% filter(szenario == "Szenario 2: Radikale Vermeidung")
 
@@ -859,11 +912,18 @@ plot_s2_stack <- ggplot(data_s2_groups,
   ) +
   guides(fill = guide_legend(nrow = 2, byrow = TRUE))
 
-print(plot_s2_stack)
+# print(plot_s2_stack)
+```
+
+
+```{r}
+#| include: false
 ggsave("02_export/plots/mca_detail_gruppen_s2_belaege.png",
        plot = plot_s2_stack, width = 10, height = 7, dpi = 300)
 
 ```
+
+![Alternative Bildunterschrift](02_export/plots/mca_detail_gruppen_s2_belaege.png)
 
 ### 8.4 Plot: Szenario 3 - Radikaler Lebenszyklus
 
@@ -900,11 +960,18 @@ plot_s3_rank <- ggplot(data_s3,
     plot.margin = margin(t = 5, r = 10, b = 5, l = 5, unit = "mm")
   )
 
-print(plot_s3_rank)
+# print(plot_s3_rank)
+```
+
+
+```{r}
+#| include: false
 ggsave("02_export/plots/mca_gesamtergebnis_s3_belaege.png",
        plot = plot_s3_rank, width = 10, height = 7, dpi = 300)
+```
+![Alternative Bildunterschrift](02_export/plots/mca_gesamtergebnis_s3_belaege.png)
 
-
+```{r}
 # --- Plot 2: Stacked Detail (Szenario 3) ---
 data_s3_groups <- df_mca_groups_belaege_plot %>% filter(szenario == "Szenario 3: Radikaler Lebenszyklus")
 
@@ -934,8 +1001,14 @@ plot_s3_stack <- ggplot(data_s3_groups,
   ) +
   guides(fill = guide_legend(nrow = 2, byrow = TRUE))
 
-print(plot_s3_stack)
-ggsave("02_export/plots/mca_detail_gruppen_s3_belaege.png",
-       plot = plot_s3_stack, width = 10, height = 7, dpi = 300)
+# print(plot_s3_stack)
 ```
 
+
+```{r}
+#| include: false
+ggsave("02_export/plots/mca_detail_gruppen_s3_belaege.png",
+       plot = plot_s3_stack, width = 10, height = 7, dpi = 300)
+
+```
+![Alternative Bildunterschrift](02_export/plots/mca_detail_gruppen_s3_belaege.png)
