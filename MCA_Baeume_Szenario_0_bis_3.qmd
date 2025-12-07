@@ -311,7 +311,7 @@ plot_raum <- ggplot(df_raum,
     legend.position = "bottom",
     plot.title = element_text(face = "plain", size = 12, hjust = 0),
     panel.grid.major.y = element_line(color = "grey90", linewidth = 0.2),
-    axis.text.x = element_text(angle = 45, hjust = 1, size = 8, color = "black"),
+    axis.text.x = element_text(angle = 45, hjust = 1, size = 10, color = "black"),
     plot.margin = margin(t = 5, r = 5, b = 10, l = 5, unit = "mm")
   )
 
@@ -322,16 +322,16 @@ plot_raum <- ggplot(df_raum,
 ```{r}
 #| include: false
 ggsave("02_export/plots/Abb_Baeume_Raumbedarf_clean.png", 
-       plot = plot_raum, width = 10, height = 8, dpi = 300)
+       plot = plot_raum, width = 20, height = 8, dpi = 300)
 ```
 ![Alternative Bildunterschrift](02_export/plots/Abb_Baeume_Raumbedarf_clean.png)
 
 ```{r}
 # -------------------------------------------------------
-# TEIL 2: ÖKOLOGISCHE LEISTUNG (Optimiert für Lesbarkeit)
+# TEIL 2: ÖKOLOGISCHE LEISTUNG (Gedreht & Optimiert)
 # -------------------------------------------------------
 
-# 1. Daten filtern
+# 1. Daten filtern (bleibt gleich)
 df_leistung <- df_baeume_joined %>%
   filter(bewertungskategorie %in% c("co2_bindung", "kuehlung", "regenwasser")) %>%
   mutate(wert = as.numeric(wert)) %>%
@@ -355,12 +355,16 @@ plot_leistung <- ggplot(df_leistung,
   
   geom_col(width = 0.7) +
   
-  facet_wrap(~facet_label, ncol = 1, scales = "free_y", strip.position = "top") +
+  # HIER DIE WICHTIGSTE ÄNDERUNG: Drehen!
+  coord_flip() +
+  
+  # Facetten nebeneinander (ncol = 3) statt untereinander, 
+  # damit man die Baumnamen nur EINMAL links hat (besserer Vergleich)
+  facet_wrap(~facet_label, ncol = 3, scales = "free_x") + 
   
   scale_fill_manual(values = colors_baeume) +
   
-  # HIER GEÄNDERT: Früherer Umbruch (width = 15) gegen breite Textblöcke
-  scale_x_discrete(labels = function(x) stringr::str_wrap(x, width = 30)) +
+  scale_x_discrete(labels = function(x) stringr::str_wrap(x, width = 40)) +
   
   labs(
     title = NULL, 
@@ -375,28 +379,33 @@ plot_leistung <- ggplot(df_leistung,
     legend.position = "bottom",
     plot.title = element_text(face = "plain", size = 12, hjust = 0),
     
-    panel.grid.major.y = element_line(color = "grey90", linewidth = 0.2),
-    panel.grid.major.x = element_blank(),
+    # Gitterlinien anpassen (jetzt vertikal wichtig)
+    panel.grid.major.x = element_line(color = "grey90", linewidth = 0.2),
+    panel.grid.major.y = element_blank(),
     
     strip.background = element_rect(fill = "grey95", color = NA),
-    strip.text = element_text(face = "plain", size = 10, hjust = 0),
+    strip.text = element_text(face = "bold", size = 10, hjust = 0.5),
     
-    # HIER GEÄNDERT: Schrift kleiner (7) und vjust=1 für sauberen 45-Grad-Anschluss
-    axis.text.x = element_text(angle = 45, hjust = 1, vjust = 1, size = 9, color = "black"),
+    # Achsenbeschriftung: Horizontal und lesbar
+    axis.text.y = element_text(size = 9, color = "black"), # Baumnamen
+    axis.text.x = element_text(size = 9, color = "black"), # Werte
     
-    # Ränder: Unten und Links genug Platz
-    plot.margin = margin(t = 5, r = 10, b = 40, l = 10, unit = "mm")
+    # Abstände zwischen den Facetten etwas erhöhen
+    panel.spacing = unit(1, "cm"),
+    
+    plot.margin = margin(t = 5, r = 10, b = 10, l = 5, unit = "mm")
   )
 
-# print(plot_leistung)
+
+print(plot_leistung)
 ```
 
 
 ```{r}
 #| include: false
-# Speichern (Breite 12 reicht oft, wenn die Schrift klein genug ist)
+# Speichern (Jetzt brauchen wir Höhe für die vielen Bäume und Breite für die 3 Spalten)
 ggsave("02_export/plots/Abb_Baeume_Leistung_clean.png", 
-       plot = plot_leistung, width = 12, height = 14, dpi = 300)
+       plot = plot_leistung, width = 14, height = 10, dpi = 300)
 
 ```
 
