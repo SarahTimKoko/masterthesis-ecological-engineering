@@ -272,10 +272,10 @@ colors_baeume <- c(
 )
 
 # -------------------------------------------------------
-# TEIL 1: RAUMBEDARF (Ohne Text im Balken)
+# TEIL 1: RAUMBEDARF (Horizontal & Lesbar)
 # -------------------------------------------------------
 
-# 1. Daten filtern & Bereinigen
+# 1. Daten filtern & Bereinigen (bleibt gleich)
 df_raum <- df_baeume_joined %>%
   filter(bewertungskategorie == "groesse_baumrigolen") %>%
   mutate(wert = as.numeric(wert)) %>%
@@ -288,11 +288,15 @@ df_raum <- df_baeume_joined %>%
 plot_raum <- ggplot(df_raum, 
        aes(x = baumart_sortiert, y = wert, fill = baumkategorie)) +
   
-  # HIER GEÄNDERT: Nur Balken, kein Text
   geom_col(width = 0.7) +
   
+  # HIER DIE ÄNDERUNG: Diagramm drehen
+  coord_flip() +
+  
   scale_fill_manual(values = colors_baeume) +
-  scale_x_discrete(labels = function(x) stringr::str_wrap(x, width = 25)) +
+  
+  # Text darf jetzt breiter laufen (da horizontal)
+  scale_x_discrete(labels = function(x) stringr::str_wrap(x, width = 40)) +
   
   # Skala feinrastern
   scale_y_continuous(breaks = seq(0, 100, 5)) +
@@ -310,19 +314,30 @@ plot_raum <- ggplot(df_raum,
   theme(
     legend.position = "bottom",
     plot.title = element_text(face = "plain", size = 12, hjust = 0),
-    panel.grid.major.y = element_line(color = "grey90", linewidth = 0.2),
-    axis.text.x = element_text(angle = 45, hjust = 1, size = 10, color = "black"),
-    plot.margin = margin(t = 5, r = 5, b = 10, l = 5, unit = "mm")
+    
+    # WICHTIG: Gitterlinien tauschen! 
+    # Durch coord_flip() ist die x-Achse jetzt optisch die vertikale Linie.
+    # Wir brauchen aber Gitterlinien für die Werte (jetzt horizontal unten), also panel.grid.major.x
+    panel.grid.major.x = element_line(color = "grey90", linewidth = 0.2),
+    panel.grid.major.y = element_blank(),
+    
+    # Achsenbeschriftung: Gerade stellen (kein Winkel mehr nötig)
+    axis.text.y = element_text(size = 10, color = "black"), # Baumnamen
+    axis.text.x = element_text(size = 10, color = "black"), # Werte
+    
+    plot.margin = margin(t = 5, r = 10, b = 5, l = 5, unit = "mm")
   )
 
-# print(plot_raum)
+ print(plot_raum)
 ```
 
 
 ```{r}
 #| include: false
+# Speichern: 
+# Breite normal (10-12), aber HÖHE (height) gross genug machen für die Liste!
 ggsave("02_export/plots/Abb_Baeume_Raumbedarf_clean.png", 
-       plot = plot_raum, width = 20, height = 8, dpi = 300)
+       plot = plot_raum, width = 10, height = 10, dpi = 300)
 ```
 ![Alternative Bildunterschrift](02_export/plots/Abb_Baeume_Raumbedarf_clean.png)
 
