@@ -328,7 +328,7 @@ plot_raum <- ggplot(df_raum,
     plot.margin = margin(t = 5, r = 10, b = 5, l = 5, unit = "mm")
   )
 
- print(plot_raum)
+ # print(plot_raum)
 ```
 
 
@@ -412,7 +412,7 @@ plot_leistung <- ggplot(df_leistung,
   )
 
 
-print(plot_leistung)
+# print(plot_leistung)
 ```
 
 

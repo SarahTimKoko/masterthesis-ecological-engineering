@@ -402,7 +402,7 @@ p_grau <- ggplot(df_grau, aes(x = option_sortiert, y = wert, fill = kategorie)) 
 # Da p_co2 jetzt Text unten hat, brauchen wir ggf. etwas mehr Gesamthöhe beim Speichern.
 plot_umwelt_combined <- p_co2 / p_grau
 
-print(plot_umwelt_combined)
+# print(plot_umwelt_combined)
 ```
 
 
