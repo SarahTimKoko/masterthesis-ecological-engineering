@@ -20,6 +20,7 @@ library(ggplot2)
 library(forcats) # Für fct_rev()
 library(tidyr)   # Für complete()
 library(purrr)   # Für map()
+library(ggtext)
 
 ```
 
@@ -209,36 +210,53 @@ Ziel: Vergleich der Sanierungs-Szenarien zur Beantwortung von H1 & H2.
 # Ziel: Vergleich der Sanierungs-Szenarien (Technisch vs. Material getrennt).
 
 # 1. Datensätze trennen
-# Wir behalten IMMER alle Bäume/Beläge, aber filtern die Leitungen
 events_techn <- zeitstrahl_events %>%
   filter(kategorie != "Leitung" | grepl("\\(Techn\\.\\)", komponente))
 
 events_mat <- zeitstrahl_events %>%
   filter(kategorie != "Leitung" | grepl("\\(Mat\\.\\)", komponente))
 
-# 2. Plot-Funktion (angepasst für Split)
+# 2. Plot-Funktion (angepasst mit Kursivschrift)
 plot_zeitstrahl_split <- function(data, szenario_titel, filename_suffix) {
   
-  # Filtern der relevanten Szenarien (S0 vs. Vergleich)
+  # A. Daten filtern & Labels formatieren
   data_plot <- data %>%
     filter(szenario %in% c("Szenario 0: Baseline (IST)", szenario_titel)) %>%
-    mutate(Hauptgruppe = case_when(
-      kategorie == "Leitung" ~ "Leitungen",
-      grepl("Arten", kategorie) ~ "Bäume",
-      TRUE ~ "Beläge"
-    ))
+    mutate(
+      Hauptgruppe = case_when(
+        kategorie == "Leitung" ~ "Leitungen",
+        grepl("Arten", kategorie) ~ "Bäume",
+        TRUE ~ "Beläge"
+      ),
+      # 1. HTML-Formatierung für Kursivschrift (gleiche Logik wie oben)
+      label_raw = case_when(
+        str_detect(kategorie, "Arten") ~ str_replace(komponente, "^([^(]+)(.*)$", "<i>\\1</i>\\2"),
+        TRUE ~ komponente
+      ),
+      # 2. Sortierung beibehalten
+      label_formatted = fct_reorder(label_raw, lebensdauer)
+    )
   
+  # B. Plot erstellen
   p <- ggplot(data_plot, aes(x = sanierungs_jahr, 
-                             y = fct_reorder(komponente, lebensdauer), 
+                             y = label_formatted, # Hier die formatierte Spalte nutzen
                              color = Hauptgruppe)) +
+    
     geom_vline(xintercept = seq(0, 100, 10), color = "grey92") +
     geom_point(size = 3.5, alpha = 0.9) +
+    
     facet_wrap(~szenario, ncol = 1, scales = "free_y") +
+    
     scale_x_continuous(breaks = seq(0, 100, 10), limits = c(0, 105)) +
+    # WICHTIG: Damit HTML nicht kaputt geht
+    scale_y_discrete(labels = function(x) x) +
+    
     scale_color_manual(values = c("Leitungen" = "black", 
                                   "Bäume" = "#2ca02c", 
                                   "Beläge" = "#084594")) +
+    
     labs(title = NULL, x = "Jahr", y = NULL, color = NULL) +
+    
     theme_classic(base_size = 11) +
     theme(
       legend.position = "bottom",
@@ -246,10 +264,13 @@ plot_zeitstrahl_split <- function(data, szenario_titel, filename_suffix) {
       panel.grid.major.x = element_blank(),
       strip.background = element_blank(),
       strip.text = element_text(face = "plain", hjust = 0, size = 11),
-      axis.text = element_text(color = "black")
+      
+      axis.text = element_text(color = "black"),
+      # WICHTIG: Markdown aktivieren!
+      axis.text.y = ggtext::element_markdown(color = "black")
     )
   
-   ggsave(paste0("02_export/plots/Zeitstrahl_", filename_suffix, ".png"), 
+  ggsave(paste0("02_export/plots/Zeitstrahl_", filename_suffix, ".png"), 
          plot = p, width = 10, height = 10, dpi = 300)
   print(p)
 }
@@ -269,31 +290,26 @@ plot_zeitstrahl_split(events_mat, "Szenario 3: Radikaler Lebenszyklus", "Mat_S0_
 Ziel: Lösungsdarstellung für so wenige Sanierungszyklen wie möglich
 
 ```{r}
+# 1. DEFINITION DER LOGIK-FUNKTION
 optimize_events_final <- function(data, anchors_tiefbau, tol_tiefbau = 15, tol_oberflaeche = 10) {
   
   # --- HILFSFUNKTION: Berechnung einer einzelnen Komponente ---
   process_single_component <- function(comp_df, anchors_tief, anchors_surface = NULL) {
-    # Sortieren nach Jahr
     comp_df <- comp_df %>% arrange(sanierungs_jahr)
     
-    # Metadaten
     is_fix_pipe <- str_detect(comp_df$komponente[1], "Abwasser|Regenwasser")
     is_belag    <- !str_detect(comp_df$kategorie[1], "Leitung|Arten")
     lebensdauer <- comp_df$lebensdauer[1]
     
-    # Ergebnis-Vektoren initialisieren
     theo_vec <- numeric(nrow(comp_df))
     opt_vec  <- numeric(nrow(comp_df))
-    
     last_optimized_year <- 0
     
     for(i in 1:nrow(comp_df)) {
-      # 1. THEORETISCHER BEDARF (Weisser Punkt)
+      # 1. THEORIE (Weisser Punkt): Immer vom letzten blauen Punkt aus!
       if (is_fix_pipe) {
-        # Fixe Leitungen behalten ihr Jahr
         bedarf <- comp_df$sanierungs_jahr[i]
       } else {
-        # Dynamisch: Letzter Blauer Punkt + Lebensdauer
         bedarf <- last_optimized_year + lebensdauer
       }
       
@@ -302,135 +318,80 @@ optimize_events_final <- function(data, anchors_tiefbau, tol_tiefbau = 15, tol_o
         opt <- bedarf
       } else {
         opt <- NA_real_
-        
-        # A) Check gegen Tiefbau (Stufe 1)
-        # Toleranzwahl: Beläge strikt 10, Rest 15
+        # A) Check Tiefbau
         tol_val <- if(is_belag) tol_oberflaeche else tol_tiefbau
-        
         diffs_t <- bedarf - anchors_tief
         matches_t <- anchors_tief[abs(diffs_t) <= tol_val]
+        if(length(matches_t) > 0) opt <- matches_t[which.min(abs(bedarf - matches_t))]
         
-        if(length(matches_t) > 0) {
-          # Nimm den nächsten
-          opt <- matches_t[which.min(abs(bedarf - matches_t))]
-        }
-        
-        # B) Check gegen Oberfläche (Stufe 2) - NUR wenn Stufe 1 leer UND wir Surface-Anker haben
+        # B) Check Oberfläche (nur Beläge)
         if(is.na(opt) && is_belag && !is.null(anchors_surface)) {
           diffs_s <- bedarf - anchors_surface
-          matches_s <- anchors_surface[abs(diffs_s) <= tol_oberflaeche] # Strikt 10
-          
-          if(length(matches_s) > 0) {
-            opt <- matches_s[which.min(abs(bedarf - matches_s))]
-          }
+          matches_s <- anchors_surface[abs(diffs_s) <= tol_oberflaeche]
+          if(length(matches_s) > 0) opt <- matches_s[which.min(abs(bedarf - matches_s))]
         }
-        
-        # C) Fallback: Keine Verschiebung
-        if(is.na(opt)) {
-          opt <- bedarf
-        }
+        if(is.na(opt)) opt <- bedarf
       }
-      
-      # Speichern für nächste Iteration
       theo_vec[i] <- bedarf
       opt_vec[i]  <- opt
       last_optimized_year <- opt
     }
-    
     comp_df$theoretischer_bedarf <- theo_vec
     comp_df$jahr_optimiert       <- opt_vec
     return(comp_df)
   }
   
   # --- HAUPTABLAUF ---
+  drivers <- data %>% filter(str_detect(kategorie, "Leitung|Arten") | rang == 1)
+  followers <- data %>% filter(!str_detect(kategorie, "Leitung|Arten") & rang > 1)
   
-  # Schritt 1: Trennung der Daten
-  # Gruppe A: Treiber (Leitungen, Bäume, Beläge Rang 1)
-  drivers <- data %>% 
-    filter(str_detect(kategorie, "Leitung|Arten") | rang == 1)
-  
-  # Gruppe B: Follower (Beläge Rang 2 & 3)
-  followers <- data %>% 
-    filter(!str_detect(kategorie, "Leitung|Arten") & rang > 1)
-  
-  # Schritt 2: Treiber berechnen (Phase 1)
-  # Hier gibt es noch keine Surface-Anker, nur Tiefbau-Anker
   drivers_processed <- drivers %>%
     group_by(szenario, komponente) %>%
     group_split() %>%
     map_dfr(~ process_single_component(.x, anchors_tiefbau, anchors_surface = NULL))
   
-  # Schritt 3: Neue Surface-Anker aus den optimierten Treibern extrahieren
-  # Wir nehmen die optimierten Jahre der Rang-1 Beläge
-  new_surface_anchors_list <- drivers_processed %>%
+  new_surface_anchors <- drivers_processed %>%
     filter(!str_detect(kategorie, "Leitung|Arten"), rang == 1) %>%
     group_by(szenario) %>%
     summarise(anchors = list(unique(jahr_optimiert))) %>%
     deframe()
   
-  # Schritt 4: Follower berechnen (Phase 2)
-  # Diese nutzen Tiefbau-Anker UND die eben berechneten Surface-Anker
   if(nrow(followers) > 0) {
     followers_processed <- followers %>%
       group_by(szenario, komponente) %>%
       group_split() %>%
       map_dfr(function(df) {
         sz <- df$szenario[1]
-        surf_anchors <- if(sz %in% names(new_surface_anchors_list)) new_surface_anchors_list[[sz]] else NULL
+        surf_anchors <- if(sz %in% names(new_surface_anchors)) new_surface_anchors[[sz]] else NULL
         process_single_component(df, anchors_tiefbau, anchors_surface = surf_anchors)
       })
-    
-    # Zusammenfügen
     result <- bind_rows(drivers_processed, followers_processed)
   } else {
     result <- drivers_processed
   }
   
-  # Schritt 5: Finalisierung für Grafik
-  result <- result %>%
+  result %>%
     mutate(
-      # Überschreibe das Original-Jahr für den Plot (Weisser Punkt)
-      sanierungs_jahr = theoretischer_bedarf,
+      sanierungs_jahr = theoretischer_bedarf, 
       wurde_verschoben = abs(sanierungs_jahr - jahr_optimiert) > 0.1,
       differenz = jahr_optimiert - sanierungs_jahr
     )
-  
-  return(result)
 }
 
-# --- TEST-LAUF & DEBUGGING ---
-
-# Führe die Funktion aus
+# 2. BERECHNUNG DURCHFÜHREN
 df_opt_techn <- optimize_events_final(events_techn, anchors_tiefbau = c(60, 80))
-
-# DEBUG CHECK: Schauen wir uns EXAKT die kritischen Werte an
-debug_view <- df_opt_techn %>%
-  filter(szenario == "Szenario 0: Baseline (IST)", 
-         str_detect(komponente, "Naturstein|Betonpflaster")) %>%
-  select(komponente, rang, theoretischer_bedarf, jahr_optimiert, differenz) %>%
-  arrange(komponente, theoretischer_bedarf)
-
-print("--- DEBUGGING ERGEBNISSE ---")
-print(debug_view)
-# --- ANWENDUNG ---
-
-# 1. Technisch (Anker 60, 80)
-# WICHTIG: Hier 'optimize_events_final' nutzen!
-df_opt_techn <- optimize_events_final(events_techn, anchors_tiefbau = c(60, 80))
-
-# 2. Material (Anker 70, 100)
 df_opt_mat   <- optimize_events_final(events_mat, anchors_tiefbau = c(70, 100))
 
-# --- DEBUGGING AUSGABE ---
-# Das hier zeigt dir den Beweis, dass es geklappt hat
-debug_view <- df_opt_techn %>%
-  filter(szenario == "Szenario 0: Baseline (IST)", 
-         str_detect(komponente, "Naturstein|Betonpflaster")) %>%
-  select(komponente, rang, theoretischer_bedarf, jahr_optimiert, differenz) %>%
-  arrange(komponente, theoretischer_bedarf)
+# 3. EXPORT
+write_csv2(df_opt_techn, "02_export/tables/zeitstrahl_optimiert_techn.csv")
+write_csv2(df_opt_mat, "02_export/tables/zeitstrahl_optimiert_mat.csv")
 
-print("--- ERGEBNIS CHECK (Sollte 77.5 -> 80 und 87.5 -> 80 zeigen) ---")
-print(debug_view)
+# 4. CHECK (Nur zur Sicherheit in der Konsole)
+print("Check Naturstein S0 (Sollte bei ca. 87.5 -> 80 liegen):")
+df_opt_techn %>% 
+  filter(szenario == "Szenario 0: Baseline (IST)", str_detect(komponente, "Naturstein")) %>%
+  select(komponente, theoretischer_bedarf, jahr_optimiert) %>% 
+  print()
 ```
 
 
@@ -447,32 +408,43 @@ print("Hierarchische Optimierung abgeschlossen.")
 ## 7. Visualisierung
 
 ```{r}
-## 7. Visualisierung: Optimierter Zeitstrahl (Scientific Style)
+## 7. Visualisierung
 
+# 1. DEFINITION DER PLOT-FUNKTION (Mit HTML-Tags für Kursivschrift)
 plot_opt_split <- function(data, szenario_name, anchors, filename) {
   
-  data_plot <- data %>% filter(szenario == szenario_name)
-  
-  p <- ggplot(data_plot, aes(y = fct_reorder(komponente, lebensdauer))) +
+  # A. Labels formatieren
+  data_plot <- data %>% 
+    filter(szenario == szenario_name) %>%
+    mutate(
+      # 1. HTML-Formatierung: <i>...</i> statt Sternchen *...*
+      # Regex: Nimm alles vor der ersten Klammer und packe es in <i> Tags
+      label_raw = case_when(
+        str_detect(kategorie, "Arten") ~ str_replace(komponente, "^([^(]+)(.*)$", "<i>\\1</i>\\2"),
+        TRUE ~ komponente
+      ),
+      # 2. Faktor erstellen für Sortierung
+      label_formatted = fct_reorder(label_raw, lebensdauer)
+    )
+
+  # B. Plot erstellen
+  p <- ggplot(data_plot, aes(y = label_formatted)) + 
     
-    # 1. Anker-Linien (Die "Magnete")
+    # Anker
     geom_vline(xintercept = anchors, color = "firebrick", linetype = "dashed", alpha = 0.6) +
     
-    # 2. Pfeile (Verschiebung)
-    geom_segment(aes(x = sanierungs_jahr, xend = jahr_optimiert, yend = komponente),
+    # Pfeile
+    geom_segment(aes(x = sanierungs_jahr, xend = jahr_optimiert, yend = label_formatted),
+                 linewidth = 0.8, 
+                 color = "grey30", 
                  arrow = arrow(length = unit(0.25, "cm"), type = "closed"), 
-                 color = "grey30",
                  data = filter(data_plot, wurde_verschoben)) +
     
-    # 3. Ghost-Punkte (Original-Zeitpunkt)
+    # Weisse Punkte
     geom_point(aes(x = sanierungs_jahr), 
-               shape = 21,          # Kreis mit Rand
-               color = "grey30",    # Rand dunkelgrau
-               fill = "white",      # Innen weiss
-               size = 2.5, 
-               alpha = 0.7) +
+               shape = 21, color = "grey30", fill = "white", size = 2.5, alpha = 0.7) +
     
-    # 4. Optimierte Punkte (Finaler Zeitpunkt)
+    # Farbige Punkte
     geom_point(aes(x = jahr_optimiert, 
                    color = case_when(kategorie == "Leitung" ~ "Leitungen",
                                      grepl("Arten", kategorie) ~ "Bäume",
@@ -481,34 +453,35 @@ plot_opt_split <- function(data, szenario_name, anchors, filename) {
     
     # Skalen & Farben
     scale_x_continuous(breaks = seq(0, 100, 10), limits = c(0, 105)) +
-    scale_color_manual(values = c("Leitungen" = "black", 
-                                  "Bäume" = "#2ca02c", 
-                                  "Beläge" = "#084594")) +
+    # WICHTIG: Das hier stellt sicher, dass die HTML-Tags nicht "kaputt" gemacht werden
+    scale_y_discrete(labels = function(x) x) + 
+    scale_color_manual(values = c("Leitungen" = "black", "Bäume" = "#2ca02c", "Beläge" = "#084594")) +
     
-    # Clean Labels
-    labs(title = NULL, 
-         subtitle = NULL, 
-         x = "Jahr (Pfeil zeigt Bündelung)", y = NULL, color = NULL) +
+    # Labels
+    labs(title = NULL, subtitle = NULL, x = "Jahr", y = NULL, color = NULL) +
     
+    # Theme
     theme_classic(base_size = 11) +
     theme(
       legend.position = "bottom",
       panel.grid.major.y = element_line(color = "grey90", linewidth = 0.2),
       panel.grid.major.x = element_blank(),
-      axis.text = element_text(color = "black")
+      axis.text = element_text(color = "black"),
+      # WICHTIG: Markdown aktivieren!
+      axis.text.y = ggtext::element_markdown(color = "black")
     )
- ggsave(filename, plot = p, width = 10, height = 7, dpi = 300)
-  print(p)
 
+  ggsave(filename, plot = p, width = 10, height = 7, dpi = 300)
+  print(p)
 }
 
-# --- PLOTS TECHNISCH (Anker 60/80) ---
+# 2. PLOTS GENERIEREN (Technisch)
 plot_opt_split(df_opt_techn, "Szenario 0: Baseline (IST)", c(60, 80), "02_export/plots/Optimierung_Techn_S0.png")
 plot_opt_split(df_opt_techn, "Szenario 1: Forschungsfokus", c(60, 80), "02_export/plots/Optimierung_Techn_S1.png")
 plot_opt_split(df_opt_techn, "Szenario 2: Radikale Vermeidung", c(60, 80), "02_export/plots/Optimierung_Techn_S2.png")
 plot_opt_split(df_opt_techn, "Szenario 3: Radikaler Lebenszyklus", c(60, 80), "02_export/plots/Optimierung_Techn_S3.png")
 
-# --- PLOTS MATERIAL (Anker 70/100) ---
+# 3. PLOTS GENERIEREN (Material)
 plot_opt_split(df_opt_mat, "Szenario 0: Baseline (IST)", c(70, 100), "02_export/plots/Optimierung_Mat_S0.png")
 plot_opt_split(df_opt_mat, "Szenario 1: Forschungsfokus", c(70, 100), "02_export/plots/Optimierung_Mat_S1.png")
 plot_opt_split(df_opt_mat, "Szenario 2: Radikale Vermeidung", c(70, 100), "02_export/plots/Optimierung_Mat_S2.png")
