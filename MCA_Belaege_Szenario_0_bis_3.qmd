@@ -207,7 +207,7 @@ plot_rohwerte <- ggplot(df_belaege_long, aes(y = wert)) +
     panel.grid.major.x = element_blank(),
     
     # Facetten-Label
-    strip.background = element_rect(fill = "grey95", color = NA),
+    strip.background = element_blank(),
     strip.text = element_text(face = "plain", size = 9),
     
     # Y-Achse (Werte) MUSS sichtbar sein:

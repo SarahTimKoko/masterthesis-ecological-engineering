@@ -29,6 +29,7 @@ library(ggplot2)
 library(forcats)
 library(tidytext)
 library(patchwork)
+library(ggtext)
 
 ```
 
@@ -192,75 +193,25 @@ Dies zeigt, warum eine Normierung (Block 4) zwingend notwendig ist,
 da die Skalen (Jahre,m2,0-3 etc.) völlig unterschiedlich sind.
 
 ```{r}
-#| label: fig-baeume-analysis
-#| fig.width: 10
-#| fig.height: 16
-#| out.width: "100%"
-#| warning: false
-
-# -------------------------------------------------------
-# TEIL 1: Boxplot der Rohwerte (Überblick)  (Scientific Style)
-# -------------------------------------------------------
-# Hinweis: Da die Einheiten gemischt sind, nutzen wir facet_wrap mit freien Skalen.
-plot_rohwerte_baeume <- ggplot(df_baeume_joined, aes(y = wert)) +
-  geom_boxplot(fill = "grey95", width = 0.5, outlier.size = 1) +
-  
-  # Facetten für jedes Kriterium
-  facet_wrap(~bewertungskategorie, scales = "free", ncol = 3) +
-  
-  labs(
-    title = NULL, # Titel kommt in Word
-    subtitle = NULL,
-    x = NULL,
-    y = "Rohwert (unterschiedliche Einheiten)"
-  ) +
-  
-  theme_classic(base_size = 11) +
-  
-  theme(
-    # Nur horizontale Gitterlinien (y) sind wichtig zum Ablesen der Werte
-    panel.grid.major.y = element_line(color = "grey90", linewidth = 0.2),
-    panel.grid.major.x = element_blank(),
-    
-    # Facetten-Label
-    strip.background = element_rect(fill = "grey95", color = NA),
-    strip.text = element_text(face = "plain", size = 9),
-    
-    # Y-Achse (Werte) MUSS sichtbar sein:
-    axis.text.y = element_text(size = 8, color = "black"), 
-    
-    # X-Achse (unten) kann leer sein:
-    axis.text.x = element_blank(),
-    axis.ticks.x = element_blank()
-  )
-
-# print(plot_rohwerte_baeume)
-
-```
-
-
-```{r}
-#| include: false
-# Speicher des Plots
-ggsave("02_export/plots/check_01_rohwerte_verteilung_baeume.png", 
-       plot = plot_rohwerte_baeume, width = 10, height = 8, dpi = 300)
-
-```
-![Alternative Bildunterschrift](02_export/plots/check_01_rohwerte_verteilung_baeume.png)
-
-```{r}
 #| label: fig-baeume-scientific-clean
 #| fig.width: 12
-#| fig.height: 10
+#| fig.height: 14
 #| out.width: "100%"
 #| warning: false
 
 ## 4. Explorative Datenanalyse (Scientific Style - Clean)
 
 library(patchwork)
+library(ggtext)
+
+# --- HILFSFUNKTION: Labels formatieren ---
+format_labels_kursiv <- function(x) {
+  x_wrapped <- stringr::str_wrap(x, width = 40)
+  stringr::str_replace(x_wrapped, "^([^(]+)(.*)$", "<i>\\1</i>\\2")
+}
 
 # -------------------------------------------------------
-# DATEN VORBEREITEN (Gemeinsame Basis)
+# DATEN VORBEREITEN
 # -------------------------------------------------------
 
 levels_kategorie <- c("Grosskronige Arten", "Mittelgrosse Arten", "Kleine Arten")
@@ -272,10 +223,42 @@ colors_baeume <- c(
 )
 
 # -------------------------------------------------------
-# TEIL 1: RAUMBEDARF (Horizontal & Lesbar)
+# TEIL 1: ROHWERTE-VERTEILUNG (Boxplots)
 # -------------------------------------------------------
 
-# 1. Daten filtern & Bereinigen (bleibt gleich)
+plot_rohwerte_baeume <- ggplot(df_baeume_joined, aes(y = wert)) +
+  geom_boxplot(fill = "grey95", width = 0.5, outlier.size = 1) +
+  
+  # Facetten für jedes Kriterium
+  facet_wrap(~bewertungskategorie, scales = "free", ncol = 3) +
+  
+  labs(
+    title = NULL,
+    subtitle = NULL,
+    x = NULL,
+    y = "Rohwert (unterschiedliche Einheiten)"
+  ) +
+  
+  theme_classic(base_size = 11) +
+  
+  theme(
+    panel.grid.major.y = element_line(color = "grey90", linewidth = 0.2),
+    panel.grid.major.x = element_blank(),
+    
+    # ---  Grau, nicht fett, mittig ---
+    strip.background = element_blank(),
+    strip.text = element_text(face = "plain", size = 11, hjust = 0.5), # plain = nicht fett
+    # ------------------------------------------------
+    
+    axis.text.y = element_text(size = 8, color = "black"), 
+    axis.text.x = element_blank(),
+    axis.ticks.x = element_blank()
+  )
+
+# -------------------------------------------------------
+# TEIL 2: RAUMBEDARF (Horizontal & Lesbar)
+# -------------------------------------------------------
+
 df_raum <- df_baeume_joined %>%
   filter(bewertungskategorie == "groesse_baumrigolen") %>%
   mutate(wert = as.numeric(wert)) %>%
@@ -284,69 +267,29 @@ df_raum <- df_baeume_joined %>%
   arrange(baumkategorie, baumart) %>%
   mutate(baumart_sortiert = factor(baumart, levels = unique(baumart)))
 
-# 2. Plot erstellen
 plot_raum <- ggplot(df_raum, 
        aes(x = baumart_sortiert, y = wert, fill = baumkategorie)) +
-  
   geom_col(width = 0.7) +
-  
-  # HIER DIE ÄNDERUNG: Diagramm drehen
   coord_flip() +
-  
   scale_fill_manual(values = colors_baeume) +
-  
-  # Text darf jetzt breiter laufen (da horizontal)
-  scale_x_discrete(labels = function(x) stringr::str_wrap(x, width = 40)) +
-  
-  # Skala feinrastern
+  scale_x_discrete(labels = format_labels_kursiv) +
   scale_y_continuous(breaks = seq(0, 100, 5)) +
-  
-  labs(
-    title = NULL,
-    subtitle = NULL,
-    x = NULL,
-    y = "Volumen [m\u00B3]",
-    fill = "Baumkategorie"
-  ) +
-  
+  labs(title = NULL, subtitle = NULL, x = NULL, y = "Volumen [m\u00B3]", fill = "Baumkategorie") +
   theme_classic(base_size = 11) +
-  
   theme(
     legend.position = "bottom",
-    plot.title = element_text(face = "plain", size = 12, hjust = 0),
-    
-    # WICHTIG: Gitterlinien tauschen! 
-    # Durch coord_flip() ist die x-Achse jetzt optisch die vertikale Linie.
-    # Wir brauchen aber Gitterlinien für die Werte (jetzt horizontal unten), also panel.grid.major.x
     panel.grid.major.x = element_line(color = "grey90", linewidth = 0.2),
     panel.grid.major.y = element_blank(),
-    
-    # Achsenbeschriftung: Gerade stellen (kein Winkel mehr nötig)
-    axis.text.y = element_text(size = 10, color = "black"), # Baumnamen
-    axis.text.x = element_text(size = 10, color = "black"), # Werte
-    
+    # Markdown für Kursivschrift
+    axis.text.y = ggtext::element_markdown(size = 10, color = "black"), 
+    axis.text.x = element_text(size = 10, color = "black"),
     plot.margin = margin(t = 5, r = 10, b = 5, l = 5, unit = "mm")
   )
 
- # print(plot_raum)
-```
-
-
-```{r}
-#| include: false
-# Speichern: 
-# Breite normal (10-12), aber HÖHE (height) gross genug machen für die Liste!
-ggsave("02_export/plots/Abb_Baeume_Raumbedarf_clean.png", 
-       plot = plot_raum, width = 10, height = 10, dpi = 300)
-```
-![Alternative Bildunterschrift](02_export/plots/Abb_Baeume_Raumbedarf_clean.png)
-
-```{r}
 # -------------------------------------------------------
-# TEIL 2: ÖKOLOGISCHE LEISTUNG (Gedreht & Optimiert)
+# TEIL 3: ÖKOLOGISCHE LEISTUNG (Gedreht & Optimiert)
 # -------------------------------------------------------
 
-# 1. Daten filtern (bleibt gleich)
 df_leistung <- df_baeume_joined %>%
   filter(bewertungskategorie %in% c("co2_bindung", "kuehlung", "regenwasser")) %>%
   mutate(wert = as.numeric(wert)) %>%
@@ -364,65 +307,52 @@ df_leistung <- df_baeume_joined %>%
   arrange(baumkategorie, baumart) %>%
   mutate(baumart_sortiert = factor(baumart, levels = unique(baumart)))
 
-# 2. Plot erstellen
 plot_leistung <- ggplot(df_leistung, 
        aes(x = baumart_sortiert, y = wert, fill = baumkategorie)) +
-  
   geom_col(width = 0.7) +
-  
-  # HIER DIE WICHTIGSTE ÄNDERUNG: Drehen!
   coord_flip() +
-  
-  # Facetten nebeneinander (ncol = 3) statt untereinander, 
-  # damit man die Baumnamen nur EINMAL links hat (besserer Vergleich)
   facet_wrap(~facet_label, ncol = 3, scales = "free_x") + 
-  
   scale_fill_manual(values = colors_baeume) +
-  
-  scale_x_discrete(labels = function(x) stringr::str_wrap(x, width = 40)) +
-  
-  labs(
-    title = NULL, 
-    x = NULL,
-    y = NULL, 
-    fill = "Baumkategorie"
-  ) +
-  
+  scale_x_discrete(labels = format_labels_kursiv) +
+  labs(title = NULL, x = NULL, y = NULL, fill = "Baumkategorie") +
   theme_classic(base_size = 11) +
-  
   theme(
     legend.position = "bottom",
-    plot.title = element_text(face = "plain", size = 12, hjust = 0),
-    
-    # Gitterlinien anpassen (jetzt vertikal wichtig)
     panel.grid.major.x = element_line(color = "grey90", linewidth = 0.2),
     panel.grid.major.y = element_blank(),
     
+    # Hier behalten wir Grau + Fett bei (sah schöner aus)
     strip.background = element_rect(fill = "grey95", color = NA),
     strip.text = element_text(face = "bold", size = 10, hjust = 0.5),
     
-    # Achsenbeschriftung: Horizontal und lesbar
-    axis.text.y = element_text(size = 9, color = "black"), # Baumnamen
-    axis.text.x = element_text(size = 9, color = "black"), # Werte
-    
-    # Abstände zwischen den Facetten etwas erhöhen
+    axis.text.y = ggtext::element_markdown(size = 9, color = "black"), 
+    axis.text.x = element_text(size = 9, color = "black"),
     panel.spacing = unit(1, "cm"),
-    
     plot.margin = margin(t = 5, r = 10, b = 10, l = 5, unit = "mm")
   )
-
-
-# print(plot_leistung)
 ```
 
 
 ```{r}
+
 #| include: false
-# Speichern (Jetzt brauchen wir Höhe für die vielen Bäume und Breite für die 3 Spalten)
+# Speichern aller 3 Plots
+ggsave("02_export/plots/check_01_rohwerte_verteilung_baeume.png", 
+       plot = plot_rohwerte_baeume, width = 10, height = 8, dpi = 300)
+
+ggsave("02_export/plots/Abb_Baeume_Raumbedarf_clean.png", 
+       plot = plot_raum, width = 10, height = 10, dpi = 300)
+
 ggsave("02_export/plots/Abb_Baeume_Leistung_clean.png", 
        plot = plot_leistung, width = 14, height = 10, dpi = 300)
 
 ```
+![Alternative Bildunterschrift](02_export/plots/check_01_rohwerte_verteilung_baeume.png)
+
+
+![Alternative Bildunterschrift](02_export/plots/Abb_Baeume_Raumbedarf_clean.png)
+
+
 
 ![Alternative Bildunterschrift](02_export/plots/Abb_Baeume_Leistung_clean.png)
 
@@ -631,7 +561,16 @@ Ziel: visualisierung der Ergebnisse
 
 ```{r}
 
-# --- Datenaufbereitung für Stacked Plot (einmalig & aufgehübscht) ---
+# --- HILFSFUNKTION: Labels formatieren ---
+# Kombiniert Zeilenumbruch + Kursivschrift für Latein
+format_labels_kursiv <- function(x) {
+  # 1. Erst umbrechen
+  x_wrapped <- stringr::str_wrap(x, width = 40)
+  # 2. Dann HTML-Tags <i> einfügen (Alles vor der ersten Klammer)
+  stringr::str_replace(x_wrapped, "^([^(]+)(.*)$", "<i>\\1</i>\\2")
+}
+
+# --- Datenaufbereitung für Stacked Plot ---
 df_mca_groups_baeume_plot <- df_mca_calculated %>%
   group_by(szenario, baumkategorie, baumart, group_id) %>%
   summarise(gruppen_score = sum(MCA_score_kriterium, na.rm = TRUE), .groups = 'drop') %>%
@@ -645,19 +584,18 @@ df_mca_groups_baeume_plot <- df_mca_calculated %>%
     TRUE ~ group_id
   ))
 
-# 1. Farben definieren (Einheitlich zur gesamten Arbeit)
+# Farben definieren
 colors_kategorie_baeume <- c(
-  "Grosskronige Arten" = "#084594",  # Dunkelblau
-  "Mittelgrosse Arten" = "#4292c6",  # Mittelblau
-  "Kleine Arten" = "#9ecae1"         # Hellblau
+  "Grosskronige Arten" = "#084594", 
+  "Mittelgrosse Arten" = "#4292c6", 
+  "Kleine Arten" = "#9ecae1"
 )
-# 2. Farben für Kriterien-Gruppen
 colors_gruppen <- c(
-  "Langlebigkeit" = "#08306b",                     # Dunkelstes Blau (Zeit)
-  "Wirtschaftlichkeit" = "#2171b5",                # Dunkles Mittelblau (Geld)
-  "Multifunktionale Nutzungsqualität" = "#4292c6", # Mittelblau
-  "Umweltwirkung" = "#9ecae1",                     # Hellblau
-  "Kreislauffähigkeit" = "#deebf7"                 # Sehr helles Blau/Grau
+  "Langlebigkeit" = "#08306b", 
+  "Wirtschaftlichkeit" = "#2171b5", 
+  "Multifunktionale Nutzungsqualität" = "#4292c6",
+  "Umweltwirkung" = "#9ecae1", 
+  "Kreislauffähigkeit" = "#deebf7"
 )
 ```
 
@@ -671,7 +609,7 @@ colors_gruppen <- c(
 #| out.width: "95%"
 #| dpi: 300
 
-# --- Plot 1: Ranking (Szenario 0) ---
+# --- Plot 1: Ranking (S0) ---
 data_s0 <- df_mca_total %>% filter(szenario == "Szenario 0: Baseline (IST)")
 
 plot_s0_rank <- ggplot(data_s0,
@@ -679,29 +617,23 @@ plot_s0_rank <- ggplot(data_s0,
            y = fct_reorder(baumart, MCA_gesamtscore), 
            fill = baumkategorie)) + 
   geom_col(width = 0.7) +
-  
   scale_x_continuous(limits = c(0, 1), expand = c(0, 0.05)) + 
-  scale_y_discrete(labels = function(x) stringr::str_wrap(x, width = 40)) +
+  
+  # Formatierung nutzen
+  scale_y_discrete(labels = format_labels_kursiv) +
+  
   scale_fill_manual(values = colors_kategorie_baeume) +
-  
-  labs(
-    title = NULL, 
-    x = "MCA Score (0-1)", 
-    y = NULL, 
-    fill = "Baumkategorie"
-  ) +
-  
+  labs(title = NULL, x = "MCA Score (0-1)", y = NULL, fill = "Baumkategorie") +
   theme_classic(base_size = 11) + 
-  
   theme(
     legend.position = "bottom",
     panel.grid.major.y = element_blank(),
     panel.grid.major.x = element_line(color = "grey90", linewidth = 0.2),
+    # Markdown aktivieren
+    axis.text.y = ggtext::element_markdown(color = "black"),
     axis.text = element_text(color = "black"),
     plot.margin = margin(t = 5, r = 10, b = 5, l = 5, unit = "mm")
   )
-
-# print(plot_s0_rank, width = 10, height = 7)
 ```
 
 
@@ -721,17 +653,13 @@ plot_s0_stack <- ggplot(data_s0_groups,
            y = fct_reorder(baumart, MCA_gesamtscore), 
            fill = group_label_clean)) + 
   geom_col(position = "stack", width = 0.7) +
-  
   scale_x_continuous(limits = c(0, 1), expand = c(0, 0.05)) +
-  scale_y_discrete(labels = function(x) stringr::str_wrap(x, width = 40)) +
-  scale_fill_manual(values = colors_gruppen) +
   
-  labs(
-    title = NULL, 
-    x = "Beitrag zum Score", 
-    y = NULL, 
-    fill = "Kriteriengruppe"
-  ) +
+  # Formatierung nutzen
+  scale_y_discrete(labels = format_labels_kursiv) +
+  
+  scale_fill_manual(values = colors_gruppen) +
+  labs(title = NULL, x = "Beitrag zum Score", y = NULL, fill = "Kriteriengruppe") +
   theme_classic(base_size = 11) + 
   theme(
     legend.position = "bottom",
@@ -739,12 +667,12 @@ plot_s0_stack <- ggplot(data_s0_groups,
     legend.box = "vertical",
     panel.grid.major.y = element_blank(),
     panel.grid.major.x = element_line(color = "grey90", linewidth = 0.2),
+    # Markdown aktivieren
+    axis.text.y = ggtext::element_markdown(color = "black"),
     axis.text = element_text(color = "black"),
     plot.margin = margin(t = 5, r = 10, b = 5, l = 5, unit = "mm")
   ) +
   guides(fill = guide_legend(nrow = 2, byrow = TRUE))
-
-# print(plot_s0_stack)
 ```
 
 
@@ -765,7 +693,7 @@ ggsave("02_export/plots/mca_baeume_detail_s0.png",
 #| out.width: "95%"
 #| dpi: 300
 
-# --- Plot 1: Ranking (Szenario 1) ---
+# --- Plot 1: Ranking (S1) ---
 data_s1 <- df_mca_total %>% filter(szenario == "Szenario 1: Forschungsfokus")
 
 plot_s1_rank <- ggplot(data_s1,
@@ -774,28 +702,32 @@ plot_s1_rank <- ggplot(data_s1,
            fill = baumkategorie)) + 
   geom_col(width = 0.7) +
   scale_x_continuous(limits = c(0, 1), expand = c(0, 0.05)) + 
-  scale_y_discrete(labels = function(x) stringr::str_wrap(x, width = 40)) +
+  
+  # Formatierung
+  scale_y_discrete(labels = format_labels_kursiv) +
+  
   scale_fill_manual(values = colors_kategorie_baeume) +
-  labs(
-    title = NULL,
-    x = "MCA Score (0-1)",
-    y = NULL,
-    fill = "Baumkategorie"
-  ) +
+  labs(title = NULL, x = "MCA Score (0-1)", y = NULL, fill = "Baumkategorie") +
   theme_classic(base_size = 11) + 
   theme(
     legend.position = "bottom",
     panel.grid.major.y = element_blank(),
     panel.grid.major.x = element_line(color = "grey90", linewidth = 0.2),
+    # Markdown aktivieren
+    axis.text.y = ggtext::element_markdown(color = "black"),
     axis.text = element_text(color = "black"),
     plot.margin = margin(t = 5, r = 10, b = 5, l = 5, unit = "mm")
   )
+```
 
-print(plot_s1_rank)
+```{r}
+#| include: false
 ggsave("02_export/plots/mca_baeume_rank_s1.png",
-      plot = plot_s1_rank, width = 10, height = 10, dpi = 300)
+       plot = plot_s1_rank, width = 10, height = 10, dpi = 300)
+```
 
-# --- Plot 2: Stacked Detail (Szenario 1) ---
+```{r}
+# --- Plot 2: Stacked Detail (S1) ---
 data_s1_groups <- df_mca_groups_baeume_plot %>% filter(szenario == "Szenario 1: Forschungsfokus")
 
 plot_s1_stack <- ggplot(data_s1_groups,
@@ -803,15 +735,13 @@ plot_s1_stack <- ggplot(data_s1_groups,
            y = fct_reorder(baumart, MCA_gesamtscore), 
            fill = group_label_clean)) + 
   geom_col(position = "stack", width = 0.7) +
-  scale_x_continuous(limits = c(0, 1), expand = c(0, 0.05)) +
-  scale_y_discrete(labels = function(x) stringr::str_wrap(x, width = 40)) +
+  scale_x_continuous(limits = c(0, 1), expand = c(0, 0.05)) + 
+  
+  # Formatierung
+  scale_y_discrete(labels = format_labels_kursiv) +
+  
   scale_fill_manual(values = colors_gruppen) +
-  labs(
-    title = NULL,
-    x = "Beitrag zum Score",
-    y = NULL,
-    fill = "Kriteriengruppe"
-  ) +
+  labs(title = NULL, x = "Beitrag zum Score", y = NULL, fill = "Kriteriengruppe") +
   theme_classic(base_size = 11) + 
   theme(
     legend.position = "bottom",
@@ -819,21 +749,20 @@ plot_s1_stack <- ggplot(data_s1_groups,
     legend.box = "vertical",
     panel.grid.major.y = element_blank(),
     panel.grid.major.x = element_line(color = "grey90", linewidth = 0.2),
+    # Markdown aktivieren
+    axis.text.y = ggtext::element_markdown(color = "black"),
     axis.text = element_text(color = "black"),
     plot.margin = margin(t = 5, r = 10, b = 5, l = 5, unit = "mm")
   ) +
   guides(fill = guide_legend(nrow = 2, byrow = TRUE))
-
-# print(plot_s1_stack)
 ```
 
 
 ```{r}
 #| include: false
 ggsave("02_export/plots/mca_baeume_detail_s1.png",
-      plot = plot_s1_stack, width = 10, height = 10, dpi = 300)
+       plot = plot_s1_stack, width = 10, height = 10, dpi = 300)
 ```
-![Alternative Bildunterschrift](02_export/plots/mca_baeume_detail_s1.png)
 
 ### 8.3 Plot: Szenario 2 - Radikale Vermeidung
 
@@ -844,7 +773,7 @@ ggsave("02_export/plots/mca_baeume_detail_s1.png",
 #| out.width: "95%"
 #| dpi: 300
 
-# --- Plot 1: Ranking (Szenario 2) ---
+# --- Plot 1: Ranking (S2) ---
 data_s2 <- df_mca_total %>% filter(szenario == "Szenario 2: Radikale Vermeidung")
 
 plot_s2_rank <- ggplot(data_s2,
@@ -853,24 +782,22 @@ plot_s2_rank <- ggplot(data_s2,
            fill = baumkategorie)) + 
   geom_col(width = 0.7) +
   scale_x_continuous(limits = c(0, 1), expand = c(0, 0.05)) + 
-  scale_y_discrete(labels = function(x) stringr::str_wrap(x, width = 40)) +
+  
+  # Formatierung
+  scale_y_discrete(labels = format_labels_kursiv) +
+  
   scale_fill_manual(values = colors_kategorie_baeume) +
-  labs(
-    title = NULL,
-    x = "MCA Score (0-1)",
-    y = NULL,
-    fill = "Baumkategorie"
-  ) +
+  labs(title = NULL, x = "MCA Score (0-1)", y = NULL, fill = "Baumkategorie") +
   theme_classic(base_size = 11) + 
   theme(
     legend.position = "bottom",
     panel.grid.major.y = element_blank(),
     panel.grid.major.x = element_line(color = "grey90", linewidth = 0.2),
+    # Markdown aktivieren
+    axis.text.y = ggtext::element_markdown(color = "black"),
     axis.text = element_text(color = "black"),
     plot.margin = margin(t = 5, r = 10, b = 5, l = 5, unit = "mm")
   )
-
-# print(plot_s2_rank)
 ```
 
 
@@ -882,7 +809,7 @@ ggsave("02_export/plots/mca_baeume_rank_s2.png",
 ![Alternative Bildunterschrift](02_export/plots/mca_baeume_rank_s2.png)
 
 ```{r}
-# --- Plot 2: Stacked Detail (Szenario 2) ---
+# --- Plot 2: Stacked Detail (S2) ---
 data_s2_groups <- df_mca_groups_baeume_plot %>% filter(szenario == "Szenario 2: Radikale Vermeidung")
 
 plot_s2_stack <- ggplot(data_s2_groups,
@@ -890,15 +817,13 @@ plot_s2_stack <- ggplot(data_s2_groups,
            y = fct_reorder(baumart, MCA_gesamtscore), 
            fill = group_label_clean)) + 
   geom_col(position = "stack", width = 0.7) +
-  scale_x_continuous(limits = c(0, 1), expand = c(0, 0.05)) +
-  scale_y_discrete(labels = function(x) stringr::str_wrap(x, width = 40)) +
+  scale_x_continuous(limits = c(0, 1), expand = c(0, 0.05)) + 
+  
+  # Formatierung
+  scale_y_discrete(labels = format_labels_kursiv) +
+  
   scale_fill_manual(values = colors_gruppen) +
-  labs(
-    title = NULL,
-    x = "Beitrag zum Score",
-    y = NULL,
-    fill = "Kriteriengruppe"
-  ) +
+  labs(title = NULL, x = "Beitrag zum Score", y = NULL, fill = "Kriteriengruppe") +
   theme_classic(base_size = 11) + 
   theme(
     legend.position = "bottom",
@@ -906,20 +831,20 @@ plot_s2_stack <- ggplot(data_s2_groups,
     legend.box = "vertical",
     panel.grid.major.y = element_blank(),
     panel.grid.major.x = element_line(color = "grey90", linewidth = 0.2),
+    # Markdown aktivieren
+    axis.text.y = ggtext::element_markdown(color = "black"),
     axis.text = element_text(color = "black"),
     plot.margin = margin(t = 5, r = 10, b = 5, l = 5, unit = "mm")
   ) +
   guides(fill = guide_legend(nrow = 2, byrow = TRUE))
-
-# print(plot_s2_stack)
 ```
-
 
 ```{r}
 #| include: false
 ggsave("02_export/plots/mca_baeume_detail_s2.png",
        plot = plot_s2_stack, width = 10, height = 10, dpi = 300)
 ```
+
 
 ![Alternative Bildunterschrift](02_export/plots/mca_baeume_detail_s2.png)
 
@@ -933,7 +858,7 @@ ggsave("02_export/plots/mca_baeume_detail_s2.png",
 #| out.width: "95%"
 #| dpi: 300
 
-# --- Plot 1: Ranking (Szenario 3) ---
+# --- Plot 1: Ranking (S3) ---
 data_s3 <- df_mca_total %>% filter(szenario == "Szenario 3: Radikaler Lebenszyklus")
 
 plot_s3_rank <- ggplot(data_s3,
@@ -942,29 +867,34 @@ plot_s3_rank <- ggplot(data_s3,
            fill = baumkategorie)) + 
   geom_col(width = 0.7) +
   scale_x_continuous(limits = c(0, 1), expand = c(0, 0.05)) + 
-  scale_y_discrete(labels = function(x) stringr::str_wrap(x, width = 40)) +
+  
+  # Formatierung
+  scale_y_discrete(labels = format_labels_kursiv) +
+  
   scale_fill_manual(values = colors_kategorie_baeume) +
-  labs(
-    title = NULL,
-    x = "MCA Score (0-1)",
-    y = NULL,
-    fill = "Baumkategorie"
-  ) +
+  labs(title = NULL, x = "MCA Score (0-1)", y = NULL, fill = "Baumkategorie") +
   theme_classic(base_size = 11) + 
   theme(
     legend.position = "bottom",
     panel.grid.major.y = element_blank(),
     panel.grid.major.x = element_line(color = "grey90", linewidth = 0.2),
+    # Markdown aktivieren
+    axis.text.y = ggtext::element_markdown(color = "black"),
     axis.text = element_text(color = "black"),
     plot.margin = margin(t = 5, r = 10, b = 5, l = 5, unit = "mm")
   )
+```
 
-print(plot_s3_rank)
+
+```{r}
+#| include: false
 ggsave("02_export/plots/mca_baeume_rank_s3.png",
        plot = plot_s3_rank, width = 10, height = 10, dpi = 300)
+```
 
 
-# --- Plot 2: Stacked Detail (Szenario 3) ---
+```{r}
+# --- Plot 2: Stacked Detail (S3) ---
 data_s3_groups <- df_mca_groups_baeume_plot %>% filter(szenario == "Szenario 3: Radikaler Lebenszyklus")
 
 plot_s3_stack <- ggplot(data_s3_groups,
@@ -972,15 +902,13 @@ plot_s3_stack <- ggplot(data_s3_groups,
            y = fct_reorder(baumart, MCA_gesamtscore), 
            fill = group_label_clean)) + 
   geom_col(position = "stack", width = 0.7) +
-  scale_x_continuous(limits = c(0, 1), expand = c(0, 0.05)) +
-  scale_y_discrete(labels = function(x) stringr::str_wrap(x, width = 40)) +
+  scale_x_continuous(limits = c(0, 1), expand = c(0, 0.05)) + 
+  
+  # Formatierung
+  scale_y_discrete(labels = format_labels_kursiv) +
+  
   scale_fill_manual(values = colors_gruppen) +
-  labs(
-    title = NULL,
-    x = "Beitrag zum Score",
-    y = NULL,
-    fill = "Kriteriengruppe"
-  ) +
+  labs(title = NULL, x = "Beitrag zum Score", y = NULL, fill = "Kriteriengruppe") +
   theme_classic(base_size = 11) + 
   theme(
     legend.position = "bottom",
@@ -988,12 +916,12 @@ plot_s3_stack <- ggplot(data_s3_groups,
     legend.box = "vertical",
     panel.grid.major.y = element_blank(),
     panel.grid.major.x = element_line(color = "grey90", linewidth = 0.2),
+    # Markdown aktivieren
+    axis.text.y = ggtext::element_markdown(color = "black"),
     axis.text = element_text(color = "black"),
     plot.margin = margin(t = 5, r = 10, b = 5, l = 5, unit = "mm")
   ) +
   guides(fill = guide_legend(nrow = 2, byrow = TRUE))
-
-# print(plot_s3_stack)
 ```
 
 
