@@ -244,8 +244,8 @@ plot_zeitstrahl_split <- function(data, szenario_titel, filename_suffix) {
       legend.position = "bottom",
       panel.grid.major.y = element_line(color = "grey90", linewidth = 0.2),
       panel.grid.major.x = element_blank(),
-      strip.background = element_rect(fill = "grey95", color = NA),
-      strip.text = element_text(face = "bold", hjust = 0),
+      strip.background = element_blank(),
+      strip.text = element_text(face = "plain", hjust = 0, size = 11),
       axis.text = element_text(color = "black")
     )
   
@@ -487,7 +487,7 @@ plot_opt_split <- function(data, szenario_name, anchors, filename) {
     
     # Clean Labels
     labs(title = NULL, 
-         subtitle = paste(szenario_name), 
+         subtitle = NULL, 
          x = "Jahr (Pfeil zeigt Bündelung)", y = NULL, color = NULL) +
     
     theme_classic(base_size = 11) +
