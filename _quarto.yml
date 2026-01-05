@@ -10,9 +10,9 @@ website:
       - href: index.qmd
         text: Home
       - href: MCA_Belaege_Szenario_0_bis_3.qmd
-        text: "MCA Analyse Beläge"
+        text: "MCA Beläge"
       - href: MCA_Baeume_Szenario_0_bis_3.qmd
-        text: "MCA Analyse Bäume"
+        text: "MCA Bäume"
       - href: Zeitstrahl_Analyse.qmd
         text: "Zeitstrahl Analyse"
 format:

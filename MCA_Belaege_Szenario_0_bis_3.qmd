@@ -1,5 +1,5 @@
 ---
-title: "MCA Analyse Beläge"
+title: "MCA Beläge"
 author: "Sarah Pfeiffer"
 date: today
 format: 
@@ -9,7 +9,7 @@ format:
 
 ---
 
-## MCA Analyse für Szenario 0 bis 3
+## MCA für Szenario 0 bis 3
 
 **Ziel:** Wahl der am besten geeigneten Beläge pro Szenario mit Hilfe einer MCA Berechnung.
 

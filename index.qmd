@@ -8,7 +8,45 @@ format:
         code-fold: false
 ---
 
-# Welcome
+<div style="text-align: center;">
 
-Welcome
+### ZÜRCHER HOCHSCHULE FÜR ANGEWANDTE WISSENSCHAFTEN
+**DEPARTEMENT LIFE SCIENCES UND FACILITY MANAGEMENT** **INSTITUT UMWELT UND NATÜRLICHE RESSOURCEN**
 
+<br>
+
+# Nachhaltige Bauplanung im öffentlichen Raum:
+## Lifecycle-Management von Schwammstadt-Komponenten nach dem Ecological Engineering im Projekt Viererfeld/Mittelfeld Bern
+
+<br>
+
+**Master Thesis, MSc ENR** von  
+**Sarah Pfeiffer**
+
+<br>
+
+Masterstudiengang Umwelt und Natürliche Ressourcen  
+Studienrichtung: Ökotechnologie  
+Abgabetermin: 08. Januar 2026
+
+<br>
+<br>
+
+![**Abbildung 1:** Zukunftsbild Viererfeld/Mittelfeld Bern. Quelle: (Eggen, 2023)](images/titelbild.jpg){width=80%}
+
+<br>
+<br>
+<hr>
+<br>
+
+### Fachkorrektoren/Fachkorrektorinnen
+
+**Leitung** Forschungsgruppe Ökotechnologie, Dozent, Andreas Schönborn  
+Institut für Umwelt und Natürliche Ressourcen, Grüentalstrasse 14, 8820 Wädenswil
+
+<br>
+
+**Wissenschaftlicher Mitarbeiter** Forschungsgruppe Pflanzenverwendung, Stefan Stevanovic  
+Institut für Umwelt und Natürliche Ressourcen, Grüentalstrasse 14, 8820 Wädenswil
+
+</div>

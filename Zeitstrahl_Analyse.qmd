@@ -1,5 +1,5 @@
 ---
-title: "Zeitstrahl_Analyse"
+title: "Zeitstrahl Analyse"
 author: "Sarah Pfeiffer"
 date: today
 format: 
@@ -8,9 +8,7 @@ format:
         code-fold: false
 
 ---
-# Zeitstrahl-Analyse
-
-Ziel: 
+**Ziel:** Modellierung und Optimierung der Sanierungszyklen von Belägen und Leitungen über 100 Jahre zur Identifikation von Synergien und Konflikten.  
 
 ## Libraries Laden
 
@@ -18,18 +16,29 @@ Ziel:
 library(tidyverse)
 library(readr)
 library(ggplot2)
-library(forcats) # Für fct_rev()
-library(tidyr)   # Für complete()
-library(purrr)   # Für map()
+library(forcats) 
+library(tidyr)   
+library(purrr)   
 library(ggtext)
 
 ```
 
 ## 1. Daten importieren
-Ziel: Lädt alle 5 CSV-Dateien, die für diese Analyse notwendig sind
+
+- Einlesen der in den MCA Bäume und Beläge generierten outputfiles *mca_top3_baeume_pro_szenario.csv* und *mca_top3_bealege_pro_szenario.csv* zur Anzeige der "Gewinner" Bäume und Beläge pro Szenario. 
+- Einlesen der tidy Daten für Bäume und Beläge für den Abruf der Lebensdauer
+- Einlesen der tidy Daten der Leitungen für die Berechnung der Ankerjahre und die Bündelungen
+
+Input: 
+
+- [mca_top3_belaege_pro_szenario.csv](02_export/tables/mca_top3_belaege_pro_szenario.csv)
+- [mca_top3_baeume_pro_szenario.csv](02_export/tables/mca_top3_baeume_pro_szenario.csv)
+- [Belaege_tidy.csv](01_data_input/Belaege_tidy.csv)
+- [Baeume_tidy.csv](01_data_input/Baeume_tidy.csv)
+- [Leitungen_IST.csv](01_data_input/Leitungen_IST.csv)
 
 ```{r}
-# --- A. Input 1: Die "Sieger" (Ergebnis aus MCA) ---
+# --- A. Input 1: Die "Sieger" (Ergebnis aus MCA Bäume und Beläge) ---
 df_sieger_belaege_roh <- read_csv2("02_export/tables/mca_top3_belaege_pro_szenario.csv")
 df_sieger_baeume_roh  <- read_csv2("02_export/tables/mca_top3_baeume_pro_szenario.csv")
 
@@ -50,13 +59,13 @@ print("--- Check: Wurden die Sieger geladen? ---")
 head(df_sieger_belaege_roh, 6)
 
 print("--- Check: Sind die Leitungen da? ---")
-# Hier müssen Spalten wie 'Leitungstyp' und 'Techn_Nutzungsdauer_a' (oder ähnlich) stehen
+# Hier müssen Spalten wie 'Leitungstyp' und 'Techn_Nutzungsdauer_a' stehen
 colnames(df_leitungen_roh)
 
 ```
 
 ## 2. Daten Aufbereiten
-Ziel: Alle Komponenten (Leitungen, Beläge, Bäume) in ein einheitliches Format bringen (szenario, kategorie, komponente, lebensdauer).
+Ziel: Die Daten aller Komponenten (Bäume, Beläge, Leitungen) für die Verrechnung vorbereiten.
 
 ```{r}
 
@@ -65,7 +74,7 @@ Ziel: Alle Komponenten (Leitungen, Beläge, Bäume) in ein einheitliches Format 
 # --- 2.1 Leitungen aufbereiten (Nur Graben = Konflikt) ---
 df_leitungen <- df_leitungen_roh %>%
   # WICHTIG: Wir filtern streng auf "Graben".
-  # "Kabelzug" ist kein Konflikt für Bäume/Beläge und wird ignoriert.
+  # "Grabenlos" ist kein Konflikt für Bäume/Beläge und wird ignoriert.
   filter(Eingriffs_Typ == "Graben") %>%
   
   # Pivotieren für Sensitivitätsanalyse (Technisch vs. Material)
@@ -99,12 +108,10 @@ df_sieger_baeume_ld <- df_sieger_baeume_roh %>%
 ```
 
 ## 3. Master-Tabelle erstellen
-Ziel: Eine "Master-Tabelle" erstellen, die Jede Komponente für Jedes Szenario enthält.
+Ziel: Eine *Master-Tabelle* erstellen, die Jede Komponente (Bäume, Beläge, Leitungen) für Jedes Szenario enthält und die Information enhält wer der *Sieger-Belag* des Szenarios ist. 
 
 ```{r}
 ## 3. Master-Tabelle erstellen
-
-# Ziel: Master-Tabelle mit Info, wer der "Sieger" (Rang 1) ist.
 
 # 1. Liste der Szenarien
 szenario_liste <- unique(df_sieger_belaege_ld$szenario)
@@ -166,7 +173,7 @@ head(df_master)
 ```
 
 ## 4. Sanierungs-Events berechnen
-Ziel: Den 100-Jahres-Zeitstrahl mit allen Sanierungs-Punkten berechnen.
+Ziel: Alle Sanierungsevents pro Szenario für alle Komponenten (Bäume, Beläge, Leitungen) für 100 Jahre berechnen.
 
 ```{r}
 ## 4. Sanierungs-Events berechnen
@@ -182,6 +189,8 @@ zeitstrahl_events <- df_master %>%
   arrange(szenario, komponente, sanierungs_jahr)
 
 write_csv2(zeitstrahl_events, "02_export/tables/zeitstrahl_events_100a.csv")
+
+print(zeitstrahl_events, n=40)
 ```
 
 
@@ -203,7 +212,7 @@ zeitstrahl_events %>% filter(sanierungs_jahr == 0)
 ```
 
 ## 5. Finale Synthese: Zeitstrahl-Visualisierung
-Ziel: Vergleich der Sanierungs-Szenarien zur Beantwortung von H1 & H2.
+Ziel: Vergleich der Sanierungs-Szenarien zur Beantwortung von H1 & H2. Der Vergleich erfolgt jeweils für die technische Nutzungsdauer und die materielle Lebensdauer. 
 
 ```{r}
 ## 5. Finale Synthese: Zeitstrahl-Visualisierung (Getrennt)
@@ -288,7 +297,7 @@ plot_zeitstrahl_split(events_mat, "Szenario 3: Radikaler Lebenszyklus", "Mat_S0_
 ```
 
 ## 6. Optimierter Zeitstrahl
-Ziel: Lösungsdarstellung für so wenige Sanierungszyklen wie möglich
+Ziel: Anwendung des zweistufigen Optimierungs-Algorithmus zur Bündelung der Sanierungszeitpunkte: Synchronisation flexibler Komponenten mit Tiefbau-Ankern (vertikal) und Abstimmung der Beläge untereinander (horizontal) zur Minimierung der Strassenaufbrüche.
 
 ```{r}
 # 1. DEFINITION DER LOGIK-FUNKTION
@@ -383,6 +392,11 @@ optimize_events_final <- function(data, anchors_tiefbau, tol_tiefbau = 15, tol_o
 df_opt_techn <- optimize_events_final(events_techn, anchors_tiefbau = c(60, 80))
 df_opt_mat   <- optimize_events_final(events_mat, anchors_tiefbau = c(70, 100))
 
+```
+
+
+```{r}
+#| include: false
 # 3. EXPORT
 write_csv2(df_opt_techn, "02_export/tables/zeitstrahl_optimiert_techn.csv")
 write_csv2(df_opt_mat, "02_export/tables/zeitstrahl_optimiert_mat.csv")
@@ -393,17 +407,6 @@ df_opt_techn %>%
   filter(szenario == "Szenario 0: Baseline (IST)", str_detect(komponente, "Naturstein")) %>%
   select(komponente, theoretischer_bedarf, jahr_optimiert) %>% 
   print()
-```
-
-
-```{r}
-#| include: false
-# Speichern
-write_csv2(df_opt_techn, "02_export/tables/zeitstrahl_optimiert_techn.csv")
-write_csv2(df_opt_mat, "02_export/tables/zeitstrahl_optimiert_mat.csv")
-
-print("Hierarchische Optimierung abgeschlossen.")
-
 ```
 
 ## 7. Visualisierung
