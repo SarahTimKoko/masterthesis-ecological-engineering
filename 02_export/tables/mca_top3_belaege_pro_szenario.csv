@@ -1,13 +1,13 @@
 szenario;belagskategorie;option;MCA_gesamtscore
-Szenario 0: Baseline (IST);Asphalt;Selbstheilender Asphalt;0,717386919798468
-Szenario 0: Baseline (IST);Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);0,682165241861538
-Szenario 0: Baseline (IST);Pflaster;Natursteinpflaster (sickerfähig, 6-10 mm Fugen);0,608011085353797
-Szenario 1: Forschungsfokus;Pflaster;Natursteinpflaster (sickerfähig, 6-10 mm Fugen);0,759101787859493
-Szenario 1: Forschungsfokus;Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);0,754387464161538
-Szenario 1: Forschungsfokus;Asphalt;Selbstheilender Asphalt;0,622339677718548
-Szenario 2: Radikale Vermeidung;Pflaster;Natursteinpflaster (sickerfähig, 6-10 mm Fugen);0,906471695571255
-Szenario 2: Radikale Vermeidung;Sickerbeläge;Chaussierung;0,823365156774519
-Szenario 2: Radikale Vermeidung;Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);0,814437321607692
-Szenario 3: Radikaler Lebenszyklus;Pflaster;Natursteinpflaster (sickerfähig, 6-10 mm Fugen);0,859458217618565
-Szenario 3: Radikaler Lebenszyklus;Asphalt;Selbstheilender Asphalt;0,845872947145388
-Szenario 3: Radikaler Lebenszyklus;Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);0,697207977115385
+Szenario 0: Baseline (IST);Asphalt;Selbstheilender Asphalt;0,71739
+Szenario 0: Baseline (IST);Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);0,68217
+Szenario 0: Baseline (IST);Pflaster;Natursteinpflaster (sickerfähig, 6-10 mm Fugen);0,60801
+Szenario 1: Forschungsfokus;Pflaster;Natursteinpflaster (sickerfähig, 6-10 mm Fugen);0,75910
+Szenario 1: Forschungsfokus;Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);0,75439
+Szenario 1: Forschungsfokus;Asphalt;Selbstheilender Asphalt;0,62234
+Szenario 2: Radikale Vermeidung;Pflaster;Natursteinpflaster (sickerfähig, 6-10 mm Fugen);0,90647
+Szenario 2: Radikale Vermeidung;Sickerbeläge;Chaussierung;0,82337
+Szenario 2: Radikale Vermeidung;Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);0,81444
+Szenario 3: Radikaler Lebenszyklus;Pflaster;Natursteinpflaster (sickerfähig, 6-10 mm Fugen);0,85946
+Szenario 3: Radikaler Lebenszyklus;Asphalt;Selbstheilender Asphalt;0,84587
+Szenario 3: Radikaler Lebenszyklus;Pflaster;Betonpflastersteine (geschlossen, 2-4 mm Fugen);0,69721

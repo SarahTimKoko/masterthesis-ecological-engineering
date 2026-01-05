@@ -563,6 +563,7 @@ df_mca_calculated <- df_belaege_normalized %>%
 df_mca_total <- df_mca_calculated %>%
   group_by(szenario, belagskategorie, option) %>%
   summarise(MCA_gesamtscore = sum(MCA_score_kriterium, na.rm = TRUE), .groups = 'drop') %>%
+  mutate(MCA_gesamtscore = round(MCA_gesamtscore, 5)) %>%
   # Sortierung: Erst nach Szenario, dann nach Punktzahl
   arrange(szenario, desc(MCA_gesamtscore)) 
 

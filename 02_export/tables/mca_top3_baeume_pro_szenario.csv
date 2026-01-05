@@ -1,13 +1,13 @@
 szenario;baumkategorie;baumart;MCA_gesamtscore
-Szenario 0: Baseline (IST);Grosskronige Arten;Quercus petraea (Traubeneiche);0,745454545454545
-Szenario 0: Baseline (IST);Grosskronige Arten;Tilia × europaea ‘Pallida’ (Kaiser-Linde, Holländische Linde);0,730773249738767
-Szenario 0: Baseline (IST);Grosskronige Arten;Quercus robur (Stieleiche);0,700000000000000
-Szenario 1: Forschungsfokus;Grosskronige Arten;Quercus petraea (Traubeneiche);0,823863636363636
-Szenario 1: Forschungsfokus;Grosskronige Arten;Quercus robur (Stieleiche);0,812500000000000
-Szenario 1: Forschungsfokus;Grosskronige Arten;Tilia × europaea ‘Pallida’ (Kaiser-Linde, Holländische Linde);0,707693312434692
-Szenario 2: Radikale Vermeidung;Grosskronige Arten;Quercus petraea (Traubeneiche);0,968181818181818
-Szenario 2: Radikale Vermeidung;Grosskronige Arten;Quercus robur (Stieleiche);0,962500000000000
-Szenario 2: Radikale Vermeidung;Grosskronige Arten;Tilia × europaea ‘Pallida’ (Kaiser-Linde, Holländische Linde);0,747596656217346
-Szenario 3: Radikaler Lebenszyklus;Grosskronige Arten;Quercus petraea (Traubeneiche);0,898863636363636
-Szenario 3: Radikaler Lebenszyklus;Grosskronige Arten;Quercus robur (Stieleiche);0,887500000000000
-Szenario 3: Radikaler Lebenszyklus;Grosskronige Arten;Tilia × europaea ‘Pallida’ (Kaiser-Linde, Holländische Linde);0,882693312434692
+Szenario 0: Baseline (IST);Grosskronige Arten;Quercus petraea (Traubeneiche);0,74545
+Szenario 0: Baseline (IST);Grosskronige Arten;Tilia × europaea ‘Pallida’ (Kaiser-Linde, Holländische Linde);0,73077
+Szenario 0: Baseline (IST);Grosskronige Arten;Quercus robur (Stieleiche);0,70000
+Szenario 1: Forschungsfokus;Grosskronige Arten;Quercus petraea (Traubeneiche);0,82386
+Szenario 1: Forschungsfokus;Grosskronige Arten;Quercus robur (Stieleiche);0,81250
+Szenario 1: Forschungsfokus;Grosskronige Arten;Tilia × europaea ‘Pallida’ (Kaiser-Linde, Holländische Linde);0,70769
+Szenario 2: Radikale Vermeidung;Grosskronige Arten;Quercus petraea (Traubeneiche);0,96818
+Szenario 2: Radikale Vermeidung;Grosskronige Arten;Quercus robur (Stieleiche);0,96250
+Szenario 2: Radikale Vermeidung;Grosskronige Arten;Tilia × europaea ‘Pallida’ (Kaiser-Linde, Holländische Linde);0,74760
+Szenario 3: Radikaler Lebenszyklus;Grosskronige Arten;Quercus petraea (Traubeneiche);0,89886
+Szenario 3: Radikaler Lebenszyklus;Grosskronige Arten;Quercus robur (Stieleiche);0,88750
+Szenario 3: Radikaler Lebenszyklus;Grosskronige Arten;Tilia × europaea ‘Pallida’ (Kaiser-Linde, Holländische Linde);0,88269

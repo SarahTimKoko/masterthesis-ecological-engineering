@@ -11,12 +11,15 @@ format:
 
 ## MCA Analyse für Szenario 0 bis 3
 
-Ziel: Wahl der besten Bäume pro Szenario nach MCA Berechnung.
+**Ziel:** Wahl der am besten geeigneten Bäume pro Szenario mit Hilfe einer MCA Berechnung.
 
-- **Szenario 0:** "Baseline (IST-Analyse)": Simuliert die aktuellen Projektanforderungen. Fokus auf Wirtschaftlichkeit und Nutzungsqualität.
-- **Szenario 1:** "Forschungsfokus": Balanciert Lebenszyklus-Fokus (H1/H2) und Vermeidungsprinzip (H3).
-- **Szenario 2:** "Radikale Vermeidung": Testet Hypothese 3 (H3) im Extrem (Fokus Umwelt & Kreislauf).
-- **Szenario 3:** "Radikaler Lebenszyklus": Testet Hypothesen 1 & 2 (H1/H2) im Extrem (Fokus Langlebigkeit).
+- **Szenario 0:** Baseline (IST-Analyse): Simuliert die aktuellen Projektanforderungen. Fokus auf Nutzungsqualität, Wirtschaftlichkeit und Langlebigkeit.
+
+- **Szenario 1:** Forschungsfokus: Balanciert Lebenszyklus-Fokus (H1/H2) und Vermeidungsprinzip (H3).
+
+- **Szenario 2:** Radikale Vermeidung: Testet Hypothese 3 (H3) im Extrem (Fokus Umwelt & Kreislauf).
+
+- **Szenario 3:** Radikaler Lebenszyklus: Testet Hypothesen 1 & 2 (H1/H2) im Extrem (Fokus Langlebigkeit).
 
 
 ## Libraries laden
@@ -27,15 +30,23 @@ library(tidyverse)
 library(readr)
 library(ggplot2)
 library(forcats)
-library(tidytext)
-library(patchwork)
 library(ggtext)
+library(patchwork)
+
 
 ```
 
 ## 1. Daten Importieren
 
-Einlesen der Rohdaten für Belaege und Gewichtung für Szenario 0 bis 3
+Einlesen der Rohdaten für Bäume und Gewichtungen pro Szenario 0 bis 3
+
+Input: 
+
+- Baeume_tidy.csv
+- Baeume_Gewichtung_Szenario0.csv
+- Baeume_Gewichtung_Szenario.csv
+- Baeume_Gewichtung_Szenario2.csv
+- Baeume_Gewichtung_Szenario3.csv
 
 ```{r}
 
@@ -47,7 +58,7 @@ df_baeume_raw <- read_delim(
   delim = ";"
 )
 
-# Liest die Gewichtungen ein (jetzt mit "baeume" im Variablennamen)
+# Liest die Gewichtungen pro Szenarien ein 
 weights_baeume_s0_raw <- read_delim(
   "01_data_input/Baeume_Gewichtung_Szenario0.csv", 
   delim = ";"
@@ -83,14 +94,14 @@ head(weights_baeume_s3_raw)
 
 ## 2. Daten bereinigen und harmonisieren
 
-Ziel: Daten für den Join und die MCA Berechnung vorbereiten.
+Ziel: Daten für den Join und anschliessend für die MCA Berechnungen vorbereiten.
 
 ```{r}
 # A. Bereinigung der Rohdaten
 df_baeume <- df_baeume_raw %>%
   select(baumkategorie, baumart, everything()) 
 
-# B. Bereinigung der Gewichtungen (ALLE SZENARIEN)
+# B. Bereinigung der Gewichtungen (alle Szenarien)
 # Wir fügen den Roh-Dateien die Szenario-Namen hinzu
 df_weights_s0 <- weights_baeume_s0_raw %>%
   mutate(szenario = "Szenario 0: Baseline (IST)")
@@ -103,7 +114,7 @@ df_weights_s3 <- weights_baeume_s3_raw %>%
 
 # Jetzt binden wir sie zu einer finalen Gewichtungs-Tabelle zusammen
 df_weights <- bind_rows(df_weights_s0, df_weights_s1, df_weights_s2, df_weights_s3) %>%
-  # Berechne das Gesamtgewicht (gewicht) aus den Rohspalten,
+  # Berechne das Gesamtgewicht (gewicht) aus den Rohspalten: group_weight * within_group_weight
   mutate(
     gewicht = group_weight * within_group_weight
   ) %>%
@@ -136,7 +147,7 @@ if(length(missing) > 0) {
 
 ## 3. Datentransformation
 
-Ziel: Transformation der Tabelle df_baeume von Wide-to-Long und anschliessende Verknüpfung mit der Tabelle df_weights über join
+Ziel: Transformation der Tabelle *df_baeume* von Wide-to-Long und anschliessende Verknüpfung mit der Tabelle *df_weights* über join.
 
 ```{r}
 # 3.1 Wide-to-Long
@@ -148,7 +159,7 @@ df_baeume_long <- df_baeume %>%
   )
 
 # 3.2 JOIN mit Gewichtung
-# WICHTIG: Wir nutzen left_join. 
+# Wir nutzen left_join. 
 df_baeume_joined <- df_baeume_long %>%
   left_join(df_weights, by = "bewertungskategorie", relationship = "many-to-many")
 
@@ -160,13 +171,13 @@ df_baeume_joined <- df_baeume_long %>%
 # --- PRÜFUNG BLOCK 3 (Bäume) ---
 
 # Sicherheits-Check im Skript:
-# Bei Bäumen erwarten wir eigentlich für ALLE Kriterien ein Gewicht (anders als bei Belägen mit den Info-Kosten).
+# Bei Bäumen erwarten wir für alle Kriterien ein Gewicht.
 if(any(is.na(df_baeume_joined$gewicht))) {
   warning("ACHTUNG: Einige Baum-Kriterien haben kein Gewicht gefunden! Bitte prüfen.")
 }
 
-print("--- Check 1: Dimensionen (Sollte riesig sein) ---")
-# Erwartung: Anzahl Bäume (25) * Kriterien (ca. 11) * Szenarien (4)
+print("--- Check 1: Dimensionen (Sollte 1100 sein) ---")
+# Erwartung: Anzahl Bäume (25) * Kriterien (11) * Szenarien (4)
 dim(df_baeume_joined)
 
 print("--- Check 2: Gibt es Kriterien ohne Gewicht? ---")
@@ -178,7 +189,7 @@ df_baeume_joined %>%
   distinct()
 
 print("--- Check 3: Stichprobe (Eiche in S2) ---")
-# Zeig mir, ob die Gewichtung für Szenario 2 (Umwelt) bei CO2 hoch ist
+# Zeig mir, ob die Gewichtung für Szenario 2 (Vermeidung) bei CO2 hoch ist
 df_baeume_joined %>%
   filter(baumart == "Quercus petraea (Traubeneiche)", szenario == "Szenario 2: Radikale Vermeidung") %>%
   filter(bewertungskategorie == "co2_bindung") %>%
@@ -188,9 +199,12 @@ df_baeume_joined %>%
 
 ## 4. Explorative Datenanalyse
 
+### Rohwerte Verteilung
+
 Ziel: Die Verteilung der Rohwerte pro Kriterium ansehen.
-Dies zeigt, warum eine Normierung (Block 4) zwingend notwendig ist,
-da die Skalen (Jahre,m2,0-3 etc.) völlig unterschiedlich sind.
+Dies zeigt, warum eine Normierung (Block 5) zwingend notwendig ist,
+da die Skalen mit Jahre, m2, 0-3 etc. völlig unterschiedlich sind und somit nicht miteinander verglichen werden können. 
+
 
 ```{r}
 #| label: fig-baeume-scientific-clean
@@ -200,9 +214,6 @@ da die Skalen (Jahre,m2,0-3 etc.) völlig unterschiedlich sind.
 #| warning: false
 
 ## 4. Explorative Datenanalyse (Scientific Style - Clean)
-
-library(patchwork)
-library(ggtext)
 
 # --- HILFSFUNKTION: Labels formatieren ---
 format_labels_kursiv <- function(x) {
@@ -254,7 +265,14 @@ plot_rohwerte_baeume <- ggplot(df_baeume_joined, aes(y = wert)) +
     axis.text.x = element_blank(),
     axis.ticks.x = element_blank()
   )
+```
+![Alternative Bildunterschrift](02_export/plots/check_01_rohwerte_verteilung_baeume.png)
 
+#### Raumbedarf pro Baumart
+
+Ziel: Den Raumbedarf (groesse_baumrigolen) pro Baum ansehen. Diese Variable dient als Kosten-Proxy bei den Bäumen und ist interessant für Kosten-Nutzen Abschätzungen. 
+
+```{r}
 # -------------------------------------------------------
 # TEIL 2: RAUMBEDARF (Horizontal & Lesbar)
 # -------------------------------------------------------
@@ -285,7 +303,13 @@ plot_raum <- ggplot(df_raum,
     axis.text.x = element_text(size = 10, color = "black"),
     plot.margin = margin(t = 5, r = 10, b = 5, l = 5, unit = "mm")
   )
+```
+![Alternative Bildunterschrift](02_export/plots/Abb_Baeume_Raumbedarf_clean.png)
 
+#### Ökologische Leistung pro Baumart
+Ziel: Darstellung der ökologischen Leistung pro Baumart: CO2-Bindung, Küehlung und Regenwasserspeicherung. 
+
+```{r}
 # -------------------------------------------------------
 # TEIL 3: ÖKOLOGISCHE LEISTUNG (Gedreht & Optimiert)
 # -------------------------------------------------------
@@ -320,11 +344,8 @@ plot_leistung <- ggplot(df_leistung,
     legend.position = "bottom",
     panel.grid.major.x = element_line(color = "grey90", linewidth = 0.2),
     panel.grid.major.y = element_blank(),
-    
-    # Hier behalten wir Grau + Fett bei (sah schöner aus)
-    strip.background = element_rect(fill = "grey95", color = NA),
-    strip.text = element_text(face = "bold", size = 10, hjust = 0.5),
-    
+    strip.background = element_blank(),
+    strip.text = element_text(face = "plain", size = 10, hjust = 0),
     axis.text.y = ggtext::element_markdown(size = 9, color = "black"), 
     axis.text.x = element_text(size = 9, color = "black"),
     panel.spacing = unit(1, "cm"),
@@ -333,8 +354,9 @@ plot_leistung <- ggplot(df_leistung,
 ```
 
 
-```{r}
+![Alternative Bildunterschrift](02_export/plots/Abb_Baeume_Leistung_clean.png)
 
+```{r}
 #| include: false
 # Speichern aller 3 Plots
 ggsave("02_export/plots/check_01_rohwerte_verteilung_baeume.png", 
@@ -347,21 +369,12 @@ ggsave("02_export/plots/Abb_Baeume_Leistung_clean.png",
        plot = plot_leistung, width = 14, height = 10, dpi = 300)
 
 ```
-![Alternative Bildunterschrift](02_export/plots/check_01_rohwerte_verteilung_baeume.png)
-
-
-![Alternative Bildunterschrift](02_export/plots/Abb_Baeume_Raumbedarf_clean.png)
-
-
-
-![Alternative Bildunterschrift](02_export/plots/Abb_Baeume_Leistung_clean.png)
-
 
 ## 5. MCA - Normalisierung
 
 Ziel: 
--Normalisierung: Die Wert-Spalte (Jahre, m2, 0-3 etc.) muss auf eine einheitliche Skala (0-1) gebracht werden
--Wie gut ist der entsprechende Baum im entsprechenden Kriterium im Vergleich zu allen anderen Bäumen? (Min-Max-Skalierung)
+- Normalisierung: Die Wert-Spalte die aktuell Jahre, m2, 0-3 etc. als Einheiten hat, muss auf eine einheitliche Skala (0-1) gebracht werden
+- Anschliessend wird eine Min-Max-Skalierung gemacht. Wie gut ist ein Baum im entsprechenden Kriterium im Vergleich zu allen anderen Bäumen? 
 
 
 ```{r}
@@ -373,7 +386,6 @@ kriterien_lower_is_better_baeume <- c(
 
 # 5.2 Min-Max-Skalierung
 # Wir normieren ALLES (auch ungewichtete Infos), damit wir sie plotten können.
-# WICHTIG: Hier NICHT nach Gewicht filtern!
 df_baeume_normalized <- df_baeume_joined %>%
   filter(!is.na(wert)) %>% # Nur Zeilen ohne Werte löschen 
   group_by(bewertungskategorie) %>%
@@ -411,7 +423,7 @@ df_baeume_normalized %>%
   head(5)
 ```
 
-## 6. Explorative Datenanalyse
+### 6. Explorative Datenanalyse
 
 Ziel: Überprüfen, ob die Min-Max-Skalierung (Block 5.2) funktioniert hat.
 
@@ -466,6 +478,7 @@ ggsave("02_export/plots/check_02_normierte_scores_baeume.png",
 
 ![Alternative Bildunterschrift](02_export/plots/check_02_normierte_scores_baeume.png)
 ```{r}
+#| include: false
 # --- PRÜFUNG BLOCK 6 ---
 
 print("--- Check: Liegen alle Scores zwischen 0 und 1? ---")
@@ -485,12 +498,12 @@ df_baeume_normalized %>%
 
 ## 7. MCA Berechnung
 
-Ziel: Berechnung der besten geeigneten Bäume auf Basis Kriterienbewertung (score_normiert * gewicht)
+Ziel: Berechnung der besten geeigneten Bäume auf Basis der Kriterienbewertung (score_normiert * gewicht)
 
 ```{r}
 # 7.1 Berechnung Score pro Kriterium
 df_mca_calculated <- df_baeume_normalized %>%
-  # HIER filtern wir alles raus, was kein Gewicht hat
+  # Hier filtern wir alles raus, was kein Gewicht hat
   filter(!is.na(gewicht)) %>% 
   mutate(MCA_score_kriterium = score_normiert * gewicht)
 
@@ -499,12 +512,13 @@ df_mca_calculated <- df_baeume_normalized %>%
 df_mca_total <- df_mca_calculated %>%
   group_by(szenario, baumkategorie, baumart) %>%
   summarise(MCA_gesamtscore = sum(MCA_score_kriterium, na.rm = TRUE), .groups = 'drop') %>%
+  mutate(MCA_gesamtscore = round(MCA_gesamtscore, 5)) %>%
   # Sortierung: Erst nach Szenario, dann nach Punktzahl
   arrange(szenario, desc(MCA_gesamtscore)) 
 
 # Anzeigen der Ergebnisse
 print("--- MCA Gesamtergebnis (Auszug) ---")
-print(df_mca_total, n = 20)
+print(df_mca_total, n = 10)
 
 # 7.3 - Auswahl der "Top 3 Sieger"
 # Ziel: Für jedes der 4 Szenarien die Top 3 Bäume aus dem Gesamtranking
@@ -557,7 +571,8 @@ df_sieger_baeume %>%
 
 ## 8. Darstellung
 
-Ziel: visualisierung der Ergebnisse 
+Ziel: Visualisierung der Ergebnisse 
+- Datenaufbereitung für die Plots
 
 ```{r}
 
@@ -725,6 +740,7 @@ plot_s1_rank <- ggplot(data_s1,
 ggsave("02_export/plots/mca_baeume_rank_s1.png",
        plot = plot_s1_rank, width = 10, height = 10, dpi = 300)
 ```
+![Alternative Bildunterschrift](02_export/plots/mca_baeume_rank_s1.png)
 
 ```{r}
 # --- Plot 2: Stacked Detail (S1) ---
@@ -763,6 +779,8 @@ plot_s1_stack <- ggplot(data_s1_groups,
 ggsave("02_export/plots/mca_baeume_detail_s1.png",
        plot = plot_s1_stack, width = 10, height = 10, dpi = 300)
 ```
+
+![Alternative Bildunterschrift](02_export/plots/mca_baeume_detail_s1.png)
 
 ### 8.3 Plot: Szenario 2 - Radikale Vermeidung
 
@@ -891,7 +909,7 @@ plot_s3_rank <- ggplot(data_s3,
 ggsave("02_export/plots/mca_baeume_rank_s3.png",
        plot = plot_s3_rank, width = 10, height = 10, dpi = 300)
 ```
-
+![Alternative Bildunterschrift](02_export/plots/mca_baeume_rank_s3.png)
 
 ```{r}
 # --- Plot 2: Stacked Detail (S3) ---
