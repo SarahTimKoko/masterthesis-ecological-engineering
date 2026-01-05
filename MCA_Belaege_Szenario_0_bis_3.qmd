@@ -11,13 +11,15 @@ format:
 
 ## MCA Analyse für Szenario 0 bis 3
 
-Ziel: Wahl der besten drei Beläge nach MCA Berechnung
+**Ziel:** Wahl der am besten geeigneten Beläge pro Szenario mit Hilfe einer MCA Berechnung.
 
-- **Szenario 0:** "Baseline (IST-Analyse)": Simuliert die aktuellen Projektanforderungen (deir IST-Analyse). Der Fokus liegt primär auf Wirtschaftlichkeit (insb. kosten) und hoher Nutzungsqualität (insb. befahrbarkeit und barrierefreiheit). Ökologische Aspekte sind sekundär.
-- **Szenario 1:** "Forschungsfokus": Bildet meine zentrale Forschungsfrage (FQ) ab. Dieses Szenario sucht die Balance zwischen den beiden Hauptsäulen meiner Arbeit: dem Lebenszyklus-Fokus (H1/H2) und dem Vermeidungsprinzip (H3).
-- **Szenario 2:** "Radikale Vermeidung": Testet Hypothese 3 (H3) im Extrem. Es priorisiert radikal die Kriterien des Vermeidungsprinzips, also Umweltwirkung (co2, graueEnergie) und Kreislauffähigkeit (recyclingfaehigkeit, modulareErneuerbarkeit).
-- **Szenario 3:** "Radikaler Lebenszyklus": Testet die Hypothesen 1 und 2 (H1/H2) im Extrem. Es priorisiert radikal die Kriterien der Langlebigkeit & Wirtschaftlichkeit (insb. lebensdauer und unterhalt), um die Anzahl der Sanierungs-Eingriffe über den Zeitstrahl zu minimieren.
+- **Szenario 0:** Baseline (IST-Analyse): Simuliert die aktuellen Projektanforderungen. Fokus auf Nutzungsqualität, Wirtschaftlichkeit und Langlebigkeit.
 
+- **Szenario 1:** Forschungsfokus: Balanciert Lebenszyklus-Fokus (H1/H2) und Vermeidungsprinzip (H3).
+
+- **Szenario 2:** Radikale Vermeidung: Testet Hypothese 3 (H3) im Extrem (Fokus Umwelt & Kreislauf).
+
+- **Szenario 3:** Radikaler Lebenszyklus: Testet Hypothesen 1 & 2 (H1/H2) im Extrem (Fokus Langlebigkeit).
 
 ## Libraries laden
 
@@ -27,6 +29,7 @@ library(tidyverse)
 library(readr)
 library(ggplot2)
 library(forcats)
+library(ggtext)
 library(tidytext)
 library(patchwork)
 
@@ -34,7 +37,15 @@ library(patchwork)
 
 ## 1. Daten Importieren
 
-Einlesen der Rohdaten für Belaege und Gewichtung für Szenario 0 bis 3
+Einlesen der Rohdaten für Beläge und Gewichtung für Szenario 0 bis 3
+
+Input: 
+
+- [Belaege_tidy.csv](01_data_input/Belaege_tidy.csv)
+- [Belaege_Gewichtung_Szenario0.csv](01_data_input/Belaege_Gewichtung_Szenario0.csv)
+- [Belaege_Gewichtung_Szenario1.csv](01_data_input/Belaege_Gewichtung_Szenario1.csv)
+- [Belaege_Gewichtung_Szenario2.csv](01_data_input/Belaege_Gewichtung_Szenario2.csv)
+- [Belaege_Gewichtung_Szenario3.csv](01_data_input/Belaege_Gewichtung_Szenario3.csv)
 
 ```{r}
 
@@ -46,7 +57,7 @@ df_belaege_raw <- read_delim(
   delim = ";"
 )
 
-# Liest die Gewichtungen für alle vier Szenarien ein
+# Liest die Gewichtungen pro Szenarien ein
 weights_s0_raw <- read_delim(
   "01_data_input/Belaege_Gewichtung_Szenario0.csv",
   delim = ";"
@@ -82,14 +93,14 @@ head(weights_s3_raw)
 
 ## 2. Daten bereinigen und harmonisieren
 
-Ziel: Daten für den Join und die MCA Berechnung vorbereiten.
+Ziel: Daten für den Join und anschliessend für die MCA Berechnung vorbereiten.
 
 ```{r}
-# A. Bereinigung der Rohdaten (Belaege_normiert.csv)
+# A. Bereinigung der Rohdaten
 df_belaege <- df_belaege_raw %>%
   select(belagskategorie, option, everything()) 
 
-# B. Bereinigung der Gewichtungen (ALLE SZENARIEN)
+# B. Bereinigung der Gewichtungen (alle Szenarien)
 # Wir fügen den Roh-Dateien die Szenario-Namen hinzu
 df_weights_s0 <- weights_s0_raw %>%
   mutate(szenario = "Szenario 0: Baseline (IST)")
@@ -132,7 +143,7 @@ df_weights %>%
 
 ## 3. Datentransformation
 
-Ziel: Transformation der Tabelle df_belaege von Wide-to-Long und anschliessende Verknüpfung mit der Tabelle df_weights über join
+Ziel: Transformation der Tabelle *df_belaege* von Wide-to-Long und anschliessende Verknüpfung mit der Tabelle *df_weights* über join.
 
 ```{r}
 # 3.1 Wide-to-Long
@@ -144,8 +155,8 @@ df_belaege_long <- df_belaege %>%
   )
 
 # 3.2 JOIN mit Gewichtung
-# WICHTIG: Wir nutzen left_join. 
-# Alles was in der Gewichtungstabelle fehlt (wie 'initialkosten'), bekommt hier gewicht = NA.
+# Wir nutzen left_join. 
+# Alles was in der Gewichtungstabelle fehlt (wie initialkosten), bekommt hier gewicht = NA.
 df_belaege_joined <- df_belaege_long %>%
   left_join(df_weights, by = "bewertungskategorie", relationship = "many-to-many")
 
@@ -177,9 +188,11 @@ df_belaege_joined %>%
 
 ## 4. Explorative Datenanalyse
 
+### Rohwerte Verteilung
+
 Ziel: Die Verteilung der Rohwerte pro Kriterium ansehen.
-Dies zeigt, warum eine Normierung (Block 4) zwingend notwendig ist,
-da die Skalen (Jahre, CHF, kg) völlig unterschiedlich sind.
+Dies zeigt, warum eine Normierung (Block 5) zwingend notwendig ist,
+da die Skalen Jahre, CHF, kg völlig unterschiedlich sind und somit nicht miteinander verglichen werden können.
 
 ```{r}
 # -------------------------------------------------------
@@ -231,7 +244,12 @@ ggsave("02_export/plots/check_01_rohwerte_verteilung_belaege.png",
 
 ```
 
-![Alternative Bildunterschrift](02_export/plots/check_01_rohwerte_verteilung_belaege.png)
+![Rohdaten-Indikatoren der 10 Belagsoptionen vor Normierung](02_export/plots/check_01_rohwerte_verteilung_belaege.png)
+
+### Kosten pro Belag auf 100 Jahre
+
+Ziel: Die Initialkosten und Unterhaltskosten pro Belag auf 100 Jahre hochgerechnet ansehen. Erst die Hochrechnung auf 100 Jahre (mehrere Sanierungszyklen) zeigt die wahren Kosten. 
+
 
 ```{r}
 #| label: fig-lebenszyklus-final-clean
@@ -326,11 +344,16 @@ ggsave("02_export/plots/Abb_Lebenszyklus_Kosten_Stacked_Zyklen.png",
        plot = plot_kosten_stacked, width = 8, height = 8, dpi = 300)
 ```
 
-![Alternative Bildunterschrift](02_export/plots/Abb_Lebenszyklus_Kosten_Stacked_Zyklen.png)
+![Investitions- und Unterhaltskosten pro Belag auf 100 Jahre](02_export/plots/Abb_Lebenszyklus_Kosten_Stacked_Zyklen.png)
+
+### Ökologische Bilanz po Belag auf 100 Jahre
+
+Ziel: Die ökologischen Auswirkungen (CO2-Emissionen und Graue Energie) pro Belag hochgerechnet auf 100 Jahre ansehen. Erst die Hochrechnung auf 100 Jahre zeigt die wahren ökologischen Einflüsse. 
+
 
 ```{r}
 # -------------------------------------------------------
-# TEIL 3: UMWELT (Korrigiert: Beschriftung überall an)
+# TEIL 3: UMWELT 
 # -------------------------------------------------------
 
 # --- Plot A: CO2-Emissionen ---
@@ -348,7 +371,6 @@ p_co2 <- ggplot(df_co2, aes(x = option_sortiert, y = wert, fill = kategorie)) +
   
   scale_x_discrete(labels = function(x) stringr::str_wrap(x, width = 20)) +
   
-  # Titel angepasst (kein X-Titel, aber Y-Titel)
   labs(title = "CO\u2082-Emissionen (100a)", y = "kg CO\u2082-eq/m\u00B2", x = NULL) +
   
   theme_classic(base_size = 11) +
@@ -358,10 +380,7 @@ p_co2 <- ggplot(df_co2, aes(x = option_sortiert, y = wert, fill = kategorie)) +
     axis.title.y = element_text(face = "plain", size = 10, color = "black"),
     panel.grid.major.y = element_line(color = "grey90", linewidth = 0.2), 
     panel.grid.major.x = element_blank(),
-    
-    # HIER GEÄNDERT: Beschriftung wieder EINSCHALTEN!
     axis.text.x = element_text(angle = 45, hjust = 1, size = 10, color = "black"),
-    
     # Margin unten erhöhen, damit Platz für den Text ist
     plot.margin = margin(t = 5, r = 5, b = 10, l = 5, unit = "mm")
   )
@@ -399,7 +418,6 @@ p_grau <- ggplot(df_grau, aes(x = option_sortiert, y = wert, fill = kategorie)) 
 
 # --- Zusammenfügen ---
 # Patchwork regelt das Layout automatisch. 
-# Da p_co2 jetzt Text unten hat, brauchen wir ggf. etwas mehr Gesamthöhe beim Speichern.
 plot_umwelt_combined <- p_co2 / p_grau
 
 # print(plot_umwelt_combined)
@@ -412,13 +430,14 @@ ggsave("02_export/plots/Abb_Belaege_Umwelt_clean.png",
        plot = plot_umwelt_combined, width = 10, height = 14, dpi = 300)
 ```
 
-![Alternative Bildunterschrift](02_export/plots/Abb_Lebenszyklus_Umwelt_clean.png)
+![Ökologische Lebenszyklusbilanz der Belagsoptionen](02_export/plots/Abb_Lebenszyklus_Umwelt_clean.png)
 
 ## 5. MCA - Normalisierung
 
 Ziel: 
--Normalisierung: Die Wert-Spalte (Jahre, CHF, etc.) muss auf eine einheitliche Skala (0-1) gebracht werden
--Wie gut ist der entsprechende Belag im entsprechenden Kriterium im Vergleich zu allen anderen Belägen? (Min-Max-Skalierung)
+
+- Normalisierung: Die Wert-Spalte die aktuell Jahre, CHF, etc. als Einheiten hat, muss auf eine einheitliche Skala (0-1) gebracht werden.
+- Anschliessend wird eine Min-Max-Skalierung gemacht.Wie gut ist ein Belag im entsprechenden Kriterium im Vergleich zu allen anderen Belägen? 
 
 
 ```{r}
@@ -434,7 +453,6 @@ kriterien_lower_is_better <- c(
 
 # 5.2 Min-Max-Skalierung
 # Wir normieren ALLES (auch ungewichtete Infos), damit wir sie plotten können.
-# WICHTIG: Hier NICHT nach Gewicht filtern, sonst verschwinden die Initialkosten!
 df_belaege_normalized <- df_belaege_joined %>%
   filter(!is.na(wert)) %>% # Nur Zeilen ohne Werte löschen
   group_by(bewertungskategorie) %>%
@@ -531,8 +549,9 @@ ggsave("02_export/plots/check_02_normierte_scores_belaege.png",
        plot = plot_normiert, width = 10, height = 7, dpi = 300)
 ```
 
-![Alternative Bildunterschrift](02_export/plots/check_02_normierte_scores_belaege.png)
+![Normierte Scores der Belags-Kriterien (Min-Max-Skalierung)](02_export/plots/check_02_normierte_scores_belaege.png)
 ```{r}
+#| include: false
 # --- PRÜFUNG BLOCK 6 ---
 
 print("--- Check: Liegen alle Scores zwischen 0 und 1? ---")
@@ -549,17 +568,17 @@ df_belaege_normalized %>%
 
 ## 7. MCA Berechnung
 
-Ziel: Berechnung der besten geeigneten Beläge auf Basis Kriterienbewertung (score_normiert * gewicht)
+Ziel: Berechnung der besten geeigneten Beläge auf Basis der Kriterienbewertung (score_normiert * gewicht).
 
 ```{r}
 # 7.1 Berechnung Score pro Kriterium
 df_mca_calculated <- df_belaege_normalized %>%
-  # HIER filtern wir alles raus, was kein Gewicht hat (z.B. reine Initialkosten)
+  # Hier filtern wir alles raus, was kein Gewicht hat (z.B. reine Initialkosten)
   filter(!is.na(gewicht)) %>% 
   mutate(MCA_score_kriterium = score_normiert * gewicht)
 
 # 7.2 Aggregation pro Szenario
-# Wir summieren die Scores pro Baum und Szenario
+# Wir summieren die Scores pro Belag und Szenario
 df_mca_total <- df_mca_calculated %>%
   group_by(szenario, belagskategorie, option) %>%
   summarise(MCA_gesamtscore = sum(MCA_score_kriterium, na.rm = TRUE), .groups = 'drop') %>%
@@ -569,7 +588,7 @@ df_mca_total <- df_mca_calculated %>%
 
 # Anzeigen der Ergebnisse
 print("--- MCA Gesamtergebnis (Auszug) ---")
-print(df_mca_total, n = 20)
+print(df_mca_total, n = 10)
 
 # 7.3 - Auswahl der "Top 3 Sieger"
 # Ziel: Für jedes der 4 Szenarien die Top 3 Beläge aus dem Gesamtranking
@@ -585,7 +604,7 @@ df_sieger_belaege <- df_mca_total %>%
 
 # Anzeigen der 12 Sieger-Optionen (4 Szenarien * 3 Beläge)
 print(paste("--- Top", N_BELAEGE_AUSWAEHLEN, "Beläge pro Szenario (für Zeitstrahl-Analyse) ---"))
-print(df_sieger_belaege, n = 12)
+print(df_sieger_belaege)
 
 ```
 
@@ -622,7 +641,7 @@ df_sieger_belaege %>%
 
 ## 8. Darstellung
 
-Ziel: visualisierung der Ergebnisse 
+Ziel: Visualisierung der Ergebnisse - Datenaufbereitung für Plots 
 
 ```{r}
 
@@ -706,7 +725,7 @@ ggsave("02_export/plots/mca_gesamtergebnis_s0_belaege.png",
        plot = plot_s0_rank, width = 10, height = 7, dpi = 300)
 ```
 
-![Alternative Bildunterschrift](02_export/plots/mca_gesamtergebnis_s0_belaege.png)
+![Gesamtranking der Beläge im Szenario 0](02_export/plots/mca_gesamtergebnis_s0_belaege.png)
 
 ```{r}
 # --- Plot 2: Stacked Detail (Szenario 0) ---
@@ -750,7 +769,7 @@ ggsave("02_export/plots/mca_detail_gruppen_s0_belaege.png",
        plot = plot_s0_stack, width = 10, height = 7, dpi = 300)
 ```
 
-![Alternative Bildunterschrift](02_export/plots/mca_detail_gruppen_s0_belaege.png)
+![Detailanalyse der Belags-Scores im Szenario 0](02_export/plots/mca_detail_gruppen_s0_belaege.png)
 
 
 ### 8.2 Plot: Szenario 1 - Forschungsfokus
@@ -797,7 +816,7 @@ plot_s1_rank <- ggplot(data_s1,
 ggsave("02_export/plots/mca_gesamtergebnis_s1_belaege.png",
        plot = plot_s1_rank, width = 10, height = 7, dpi = 300)
 ```
-![Alternative Bildunterschrift](02_export/plots/mca_gesamtergebnis_s1_belaege.png)
+![Gesamtranking der Beläge im Szenario 1](02_export/plots/mca_gesamtergebnis_s1_belaege.png)
 
 
 ```{r}
@@ -840,7 +859,7 @@ ggsave("02_export/plots/mca_detail_gruppen_s1_belaege.png",
        plot = plot_s1_stack, width = 10, height = 7, dpi = 300)
 ```
 
-![Alternative Bildunterschrift](02_export/plots/mca_detail_gruppen_s1_belaege.png)
+![Detailanalyse der Belags-Scores im Szenario 1](02_export/plots/mca_detail_gruppen_s1_belaege.png)
 
 ### 8.3 Plot: Szenario 2 - Radikale Vermeidung
 
@@ -888,7 +907,7 @@ ggsave("02_export/plots/mca_gesamtergebnis_s2_belaege.png",
        plot = plot_s2_rank, width = 10, height = 7, dpi = 300)
 ```
 
-![Alternative Bildunterschrift](02_export/plots/mca_gesamtergebnis_s2_belaege.png)
+![Gesamtranking der Beläge im Szenario 2](02_export/plots/mca_gesamtergebnis_s2_belaege.png)
 ```{r}
 # --- Plot 2: Stacked Detail (Szenario 2) ---
 data_s2_groups <- df_mca_groups_belaege_plot %>% filter(szenario == "Szenario 2: Radikale Vermeidung")
@@ -930,7 +949,7 @@ ggsave("02_export/plots/mca_detail_gruppen_s2_belaege.png",
 
 ```
 
-![Alternative Bildunterschrift](02_export/plots/mca_detail_gruppen_s2_belaege.png)
+![Detailanalyse der Belags-Scores im Szenario 2](02_export/plots/mca_detail_gruppen_s2_belaege.png)
 
 ### 8.4 Plot: Szenario 3 - Radikaler Lebenszyklus
 
@@ -976,7 +995,7 @@ plot_s3_rank <- ggplot(data_s3,
 ggsave("02_export/plots/mca_gesamtergebnis_s3_belaege.png",
        plot = plot_s3_rank, width = 10, height = 7, dpi = 300)
 ```
-![Alternative Bildunterschrift](02_export/plots/mca_gesamtergebnis_s3_belaege.png)
+![Gesamtranking der Beläge im Szenario 3](02_export/plots/mca_gesamtergebnis_s3_belaege.png)
 
 ```{r}
 # --- Plot 2: Stacked Detail (Szenario 3) ---
@@ -1018,4 +1037,4 @@ ggsave("02_export/plots/mca_detail_gruppen_s3_belaege.png",
        plot = plot_s3_stack, width = 10, height = 7, dpi = 300)
 
 ```
-![Alternative Bildunterschrift](02_export/plots/mca_detail_gruppen_s3_belaege.png)
+![Detailanalyse der Belags-Scores im Szenario 3](02_export/plots/mca_detail_gruppen_s3_belaege.png)

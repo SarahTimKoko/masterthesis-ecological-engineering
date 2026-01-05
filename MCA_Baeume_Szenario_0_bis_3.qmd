@@ -42,11 +42,11 @@ Einlesen der Rohdaten für Bäume und Gewichtungen pro Szenario 0 bis 3
 
 Input: 
 
-- Baeume_tidy.csv
-- Baeume_Gewichtung_Szenario0.csv
-- Baeume_Gewichtung_Szenario.csv
-- Baeume_Gewichtung_Szenario2.csv
-- Baeume_Gewichtung_Szenario3.csv
+- [Baeume_tidy.csv](01_data_input/Baeume_tidy.csv)
+- [Baeume_Gewichtung_Szenario0.csv](01_data_input/Baeume_Gewichtung_Szenario0.csv)
+- [Baeume_Gewichtung_Szenario1.csv](01_data_input/Baeume_Gewichtung_Szenario1.csv)
+- [Baeume_Gewichtung_Szenario2.csv](01_data_input/Baeume_Gewichtung_Szenario2.csv)
+- [Baeume_Gewichtung_Szenario3.csv](01_data_input/Baeume_Gewichtung_Szenario3.csv)
 
 ```{r}
 
@@ -266,9 +266,9 @@ plot_rohwerte_baeume <- ggplot(df_baeume_joined, aes(y = wert)) +
     axis.ticks.x = element_blank()
   )
 ```
-![Alternative Bildunterschrift](02_export/plots/check_01_rohwerte_verteilung_baeume.png)
+![Rohdaten-Indikatoren der 25 Baumarten vor Normierung](02_export/plots/check_01_rohwerte_verteilung_baeume.png)
 
-#### Raumbedarf pro Baumart
+### Raumbedarf pro Baumart
 
 Ziel: Den Raumbedarf (groesse_baumrigolen) pro Baum ansehen. Diese Variable dient als Kosten-Proxy bei den Bäumen und ist interessant für Kosten-Nutzen Abschätzungen. 
 
@@ -304,9 +304,9 @@ plot_raum <- ggplot(df_raum,
     plot.margin = margin(t = 5, r = 10, b = 5, l = 5, unit = "mm")
   )
 ```
-![Alternative Bildunterschrift](02_export/plots/Abb_Baeume_Raumbedarf_clean.png)
+![Grösse Baumrigolen pro Baumart](02_export/plots/Abb_Baeume_Raumbedarf_clean.png)
 
-#### Ökologische Leistung pro Baumart
+### Ökologische Leistung pro Baumart
 Ziel: Darstellung der ökologischen Leistung pro Baumart: CO2-Bindung, Küehlung und Regenwasserspeicherung. 
 
 ```{r}
@@ -354,7 +354,7 @@ plot_leistung <- ggplot(df_leistung,
 ```
 
 
-![Alternative Bildunterschrift](02_export/plots/Abb_Baeume_Leistung_clean.png)
+![Ökologische Diskrepanz der Bäume](02_export/plots/Abb_Baeume_Leistung_clean.png)
 
 ```{r}
 #| include: false
@@ -373,6 +373,7 @@ ggsave("02_export/plots/Abb_Baeume_Leistung_clean.png",
 ## 5. MCA - Normalisierung
 
 Ziel: 
+
 - Normalisierung: Die Wert-Spalte die aktuell Jahre, m2, 0-3 etc. als Einheiten hat, muss auf eine einheitliche Skala (0-1) gebracht werden
 - Anschliessend wird eine Min-Max-Skalierung gemacht. Wie gut ist ein Baum im entsprechenden Kriterium im Vergleich zu allen anderen Bäumen? 
 
@@ -476,7 +477,7 @@ ggsave("02_export/plots/check_02_normierte_scores_baeume.png",
        plot = plot_normiert_baeume, width = 10, height = 7, dpi = 300)
 ```
 
-![Alternative Bildunterschrift](02_export/plots/check_02_normierte_scores_baeume.png)
+![Normierte Scores der Baum-Kriterien (Min-Max-Skalierung)](02_export/plots/check_02_normierte_scores_baeume.png)
 ```{r}
 #| include: false
 # --- PRÜFUNG BLOCK 6 ---
@@ -498,7 +499,7 @@ df_baeume_normalized %>%
 
 ## 7. MCA Berechnung
 
-Ziel: Berechnung der besten geeigneten Bäume auf Basis der Kriterienbewertung (score_normiert * gewicht)
+Ziel: Berechnung der besten geeigneten Bäume auf Basis der Kriterienbewertung (score_normiert * gewicht).
 
 ```{r}
 # 7.1 Berechnung Score pro Kriterium
@@ -658,7 +659,7 @@ ggsave("02_export/plots/mca_baeume_rank_s0.png",
        plot = plot_s0_rank, width = 10, height = 10, dpi = 300)
 ```
 
-![Alternative Bildunterschrift](02_export/plots/mca_baeume_rank_s0.png)
+![Gesamtranking der Baumarten im Szenario 0](02_export/plots/mca_baeume_rank_s0.png)
 ```{r}
 # --- Plot 2: Stacked Detail (Szenario 0) ---
 data_s0_groups <- df_mca_groups_baeume_plot %>% filter(szenario == "Szenario 0: Baseline (IST)")
@@ -696,7 +697,7 @@ plot_s0_stack <- ggplot(data_s0_groups,
 ggsave("02_export/plots/mca_baeume_detail_s0.png",
        plot = plot_s0_stack, width = 10, height = 10, dpi = 300)
 ```
-![Alternative Bildunterschrift](02_export/plots/mca_baeume_detail_s0.png)
+![Detailanalyse der Scores im Szenario 0	](02_export/plots/mca_baeume_detail_s0.png)
 
 
 ### 8.2 Plot: Szenario 1 - Forschungsfokus
@@ -740,7 +741,7 @@ plot_s1_rank <- ggplot(data_s1,
 ggsave("02_export/plots/mca_baeume_rank_s1.png",
        plot = plot_s1_rank, width = 10, height = 10, dpi = 300)
 ```
-![Alternative Bildunterschrift](02_export/plots/mca_baeume_rank_s1.png)
+![Gesamtranking der Baumarten im Szenario 1](02_export/plots/mca_baeume_rank_s1.png)
 
 ```{r}
 # --- Plot 2: Stacked Detail (S1) ---
@@ -780,7 +781,7 @@ ggsave("02_export/plots/mca_baeume_detail_s1.png",
        plot = plot_s1_stack, width = 10, height = 10, dpi = 300)
 ```
 
-![Alternative Bildunterschrift](02_export/plots/mca_baeume_detail_s1.png)
+![Detailanalyse der Scores im Szenario 1](02_export/plots/mca_baeume_detail_s1.png)
 
 ### 8.3 Plot: Szenario 2 - Radikale Vermeidung
 
@@ -824,7 +825,7 @@ plot_s2_rank <- ggplot(data_s2,
 ggsave("02_export/plots/mca_baeume_rank_s2.png",
        plot = plot_s2_rank, width = 10, height = 10, dpi = 300)
 ```
-![Alternative Bildunterschrift](02_export/plots/mca_baeume_rank_s2.png)
+![Gesamtranking der Baumarten im Szenario 2](02_export/plots/mca_baeume_rank_s2.png)
 
 ```{r}
 # --- Plot 2: Stacked Detail (S2) ---
@@ -864,7 +865,7 @@ ggsave("02_export/plots/mca_baeume_detail_s2.png",
 ```
 
 
-![Alternative Bildunterschrift](02_export/plots/mca_baeume_detail_s2.png)
+![Detailanalyse der Scores im Szenario 2](02_export/plots/mca_baeume_detail_s2.png)
 
 
 ### 8.4 Plot: Szenario 3 - Radikaler Lebenszyklus
@@ -909,7 +910,7 @@ plot_s3_rank <- ggplot(data_s3,
 ggsave("02_export/plots/mca_baeume_rank_s3.png",
        plot = plot_s3_rank, width = 10, height = 10, dpi = 300)
 ```
-![Alternative Bildunterschrift](02_export/plots/mca_baeume_rank_s3.png)
+![Gesamtranking der Baumarten im Szenario 3](02_export/plots/mca_baeume_rank_s3.png)
 
 ```{r}
 # --- Plot 2: Stacked Detail (S3) ---
@@ -949,9 +950,10 @@ ggsave("02_export/plots/mca_baeume_detail_s3.png",
        plot = plot_s3_stack, width = 10, height = 10, dpi = 300)
 ```
 
-![Alternative Bildunterschrift](02_export/plots/mca_baeume_detail_s3.png)
+![Detailanalyse der Scores im Szenario 3](02_export/plots/mca_baeume_detail_s3.png)
 
 ```{r}
+#| include: false
 # --- PRÜFUNG BLOCK 8 (Bäume) ---
 
 print("--- Check 1: Stimmt die Mathematik der Stacked Plots? ---")
