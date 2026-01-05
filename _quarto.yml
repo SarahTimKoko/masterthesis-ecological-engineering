@@ -10,11 +10,11 @@ website:
       - href: index.qmd
         text: Home
       - href: MCA_Belaege_Szenario_0_bis_3.qmd
-        text: "MCA Szenarien - Beläge"
+        text: "MCA Analyse Beläge"
       - href: MCA_Baeume_Szenario_0_bis_3.qmd
-        text: "MCA Szenarien - Bäume"
+        text: "MCA Analyse Bäume"
       - href: Zeitstrahl_Analyse.qmd
-        text: "Sanierungszyklen Zeitstrahl"
+        text: "Zeitstrahl Analyse"
 format:
   html:
     theme: darky
