@@ -1,5 +1,6 @@
 ---
-title: "Master Thesis Ecological Engineering"
+title: ""
+pagetitle: "Master Thesis - Nachhaltige Bauplanung im öffentlichen Raum: Lifecycle-Management von Schwammstadt-Komponenten nach dem Ecological Engineering im Projekt Viererfeld/Mittelfeld Bern"
 author: "Sarah Pfeiffer"
 date: today
 format: 

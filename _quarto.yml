@@ -3,7 +3,7 @@ project:
   output-dir: _site
 
 website:
-  title: "Master Thesis Ecological Engineering"
+  title: "Master Thesis - Sarah Pfeiffer"
   navbar:
     search: true
     left:
@@ -17,7 +17,7 @@ website:
         text: "Zeitstrahl Analyse"
 format:
   html:
-    theme: darky
+    theme: cosmo
     toc: true
     code-fold: false
     code-tools: true
