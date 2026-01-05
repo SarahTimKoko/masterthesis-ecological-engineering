@@ -3,7 +3,7 @@ project:
   output-dir: _site
 
 website:
-  title: "Master Thesis - Sarah Pfeiffer"
+  title: ""
   navbar:
     search: true
     left:
@@ -15,9 +15,11 @@ website:
         text: "MCA Bäume"
       - href: Zeitstrahl_Analyse.qmd
         text: "Zeitstrahl Analyse"
+  page-footer: 
+    left: "Master Thesis 2026 | Sarah Pfeiffer"
+    right: "ZHAW | Institut IUNR"      
 format:
   html:
-    theme: cosmo
     toc: true
     code-fold: false
     code-tools: true

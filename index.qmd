@@ -1,12 +1,13 @@
 ---
 title: ""
 pagetitle: "Master Thesis - Nachhaltige Bauplanung im öffentlichen Raum: Lifecycle-Management von Schwammstadt-Komponenten nach dem Ecological Engineering im Projekt Viererfeld/Mittelfeld Bern"
-author: "Sarah Pfeiffer"
-date: today
+
 format: 
     html:
         toc: false
         code-fold: false
+        code-tools: false
+        
 ---
 
 <div style="text-align: center;">
@@ -21,7 +22,8 @@ format:
 
 <br>
 
-**Master Thesis, MSc ENR** von  
+Master Thesis, MSc ENR
+
 **Sarah Pfeiffer**
 
 <br>
@@ -35,19 +37,19 @@ Abgabetermin: 08. Januar 2026
 
 ![**Abbildung 1:** Zukunftsbild Viererfeld/Mittelfeld Bern. Quelle: (Eggen, 2023)](images/titelbild.jpg){width=80%}
 
-<br>
+</div>
 <br>
 <hr>
 <br>
 
 ### Fachkorrektoren/Fachkorrektorinnen
 
-**Leitung** Forschungsgruppe Ökotechnologie, Dozent, Andreas Schönborn  
+
+Leitung Forschungsgruppe Ökotechnologie, Dozent, Andreas Schönborn  
 Institut für Umwelt und Natürliche Ressourcen, Grüentalstrasse 14, 8820 Wädenswil
 
-<br>
 
-**Wissenschaftlicher Mitarbeiter** Forschungsgruppe Pflanzenverwendung, Stefan Stevanovic  
+Wissenschaftlicher Mitarbeiter Forschungsgruppe Pflanzenverwendung, Stefan Stevanovic  
 Institut für Umwelt und Natürliche Ressourcen, Grüentalstrasse 14, 8820 Wädenswil
 
-</div>
+

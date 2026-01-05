@@ -188,7 +188,7 @@ df_belaege_joined %>%
 
 ## 4. Explorative Datenanalyse
 
-### Rohwerte Verteilung
+### 4.1 Rohwerte Verteilung
 
 Ziel: Die Verteilung der Rohwerte pro Kriterium ansehen.
 Dies zeigt, warum eine Normierung (Block 5) zwingend notwendig ist,
@@ -246,7 +246,7 @@ ggsave("02_export/plots/check_01_rohwerte_verteilung_belaege.png",
 
 ![Rohdaten-Indikatoren der 10 Belagsoptionen vor Normierung](02_export/plots/check_01_rohwerte_verteilung_belaege.png)
 
-### Kosten pro Belag auf 100 Jahre
+### 4.2 Kosten pro Belag auf 100 Jahre
 
 Ziel: Die Initialkosten und Unterhaltskosten pro Belag auf 100 Jahre hochgerechnet ansehen. Erst die Hochrechnung auf 100 Jahre (mehrere Sanierungszyklen) zeigt die wahren Kosten. 
 
@@ -346,7 +346,7 @@ ggsave("02_export/plots/Abb_Lebenszyklus_Kosten_Stacked_Zyklen.png",
 
 ![Investitions- und Unterhaltskosten pro Belag auf 100 Jahre](02_export/plots/Abb_Lebenszyklus_Kosten_Stacked_Zyklen.png)
 
-### Ökologische Bilanz po Belag auf 100 Jahre
+### 4.3 Ökologische Bilanz po Belag auf 100 Jahre
 
 Ziel: Die ökologischen Auswirkungen (CO2-Emissionen und Graue Energie) pro Belag hochgerechnet auf 100 Jahre ansehen. Erst die Hochrechnung auf 100 Jahre zeigt die wahren ökologischen Einflüsse. 
 

@@ -199,7 +199,7 @@ df_baeume_joined %>%
 
 ## 4. Explorative Datenanalyse
 
-### Rohwerte Verteilung
+### 4.1 Rohwerte Verteilung
 
 Ziel: Die Verteilung der Rohwerte pro Kriterium ansehen.
 Dies zeigt, warum eine Normierung (Block 5) zwingend notwendig ist,
@@ -268,7 +268,7 @@ plot_rohwerte_baeume <- ggplot(df_baeume_joined, aes(y = wert)) +
 ```
 ![Rohdaten-Indikatoren der 25 Baumarten vor Normierung](02_export/plots/check_01_rohwerte_verteilung_baeume.png)
 
-### Raumbedarf pro Baumart
+### 4.2 Raumbedarf pro Baumart
 
 Ziel: Den Raumbedarf (groesse_baumrigolen) pro Baum ansehen. Diese Variable dient als Kosten-Proxy bei den Bäumen und ist interessant für Kosten-Nutzen Abschätzungen. 
 
@@ -306,7 +306,7 @@ plot_raum <- ggplot(df_raum,
 ```
 ![Grösse Baumrigolen pro Baumart](02_export/plots/Abb_Baeume_Raumbedarf_clean.png)
 
-### Ökologische Leistung pro Baumart
+### 4.3 Ökologische Leistung pro Baumart
 Ziel: Darstellung der ökologischen Leistung pro Baumart: CO2-Bindung, Küehlung und Regenwasserspeicherung. 
 
 ```{r}
@@ -424,7 +424,7 @@ df_baeume_normalized %>%
   head(5)
 ```
 
-### 6. Explorative Datenanalyse
+## 6. Explorative Datenanalyse
 
 Ziel: Überprüfen, ob die Min-Max-Skalierung (Block 5.2) funktioniert hat.
 
