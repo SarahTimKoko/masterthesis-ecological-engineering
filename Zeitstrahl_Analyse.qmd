@@ -124,7 +124,7 @@ df_leitungen_final <- df_leitungen %>%
   mutate(rang = 0) # Leitungen haben immer Vorrang
 
 # 3. Sieger Beläge und Bäume (Wir fügen den Rang hinzu)
-# Wir gehen davon aus, dass die Input-CSVs sortiert sind (Platz 1 oben)
+# Die Input-CSVs sind sortiert (Platz 1 oben)
 df_belaege_mit_rang <- df_sieger_belaege_ld %>%
   group_by(szenario) %>%
   mutate(rang = row_number()) %>% # Erstellt 1, 2, 3
@@ -252,7 +252,6 @@ plot_zeitstrahl_split <- function(data, szenario_titel, filename_suffix) {
                              y = label_formatted, # Hier die formatierte Spalte nutzen
                              color = Hauptgruppe)) +
     
-    geom_vline(xintercept = seq(0, 100, 10), color = "grey92") +
     geom_point(size = 3.5, alpha = 0.9) +
     
     facet_wrap(~szenario, ncol = 1, scales = "free_y") +
@@ -297,7 +296,7 @@ plot_zeitstrahl_split(events_mat, "Szenario 3: Radikaler Lebenszyklus", "Mat_S0_
 ```
 
 ## 6. Optimierter Zeitstrahl
-Ziel: Anwendung des zweistufigen Optimierungs-Algorithmus zur Bündelung der Sanierungszeitpunkte: Synchronisation flexibler Komponenten mit Tiefbau-Ankern (vertikal) und Abstimmung der Beläge untereinander (horizontal) zur Minimierung der Strassenaufbrüche.
+Ziel: Anwendung des zweistufigen Optimierungs-Algorithmus zur Bündelung der Sanierungszeitpunkte. Synchronisation flexibler Komponenten mit Tiefbau-Ankern (vertikal) und Abstimmung der Beläge untereinander (horizontal) zur Minimierung der Strassenaufbrüche.
 
 ```{r}
 # 1. DEFINITION DER LOGIK-FUNKTION
